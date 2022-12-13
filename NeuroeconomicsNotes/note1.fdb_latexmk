@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1670944956 "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.pdf" "note1" 1670944957
-  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.aux" 1670944957 699 3b0b1034aaf0dece7590714f6deffef5 ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.tex" 1670944955 5974 36f854dfd2d69ee074af9efa4773ea3c ""
+["pdflatex"] 1670945056 "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.pdf" "note1" 1670945058
+  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.aux" 1670945057 699 3b0b1034aaf0dece7590714f6deffef5 ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.tex" 1670945056 5976 dcd67a358be533197da2741753c87f65 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1480098669 3114 c0955c0c37273eb0777b164cf69ec765 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -215,13 +215,13 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note1.aux" 1670944957 699 3b0b1034aaf0dece7590714f6deffef5 ""
-  "note1.out" 1670944957 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "note1.tex" 1670944955 5974 36f854dfd2d69ee074af9efa4773ea3c ""
+  "note1.aux" 1670945057 699 3b0b1034aaf0dece7590714f6deffef5 ""
+  "note1.out" 1670945057 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "note1.tex" 1670945056 5976 dcd67a358be533197da2741753c87f65 ""
   (generated)
-  "note1.pdf"
-  "note1.out"
-  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.log"
-  "note1.aux"
-  "note1.log"
   "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.pdf"
+  "note1.log"
+  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.log"
+  "note1.out"
+  "note1.aux"
+  "note1.pdf"
