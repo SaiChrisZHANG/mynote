@@ -1,9 +1,9 @@
-PWD /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes
+PWD /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.tex
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.log
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex
+OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.log
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
@@ -303,9 +303,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypg
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zpltlf.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zpltlf.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux
+OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxexa.fd
@@ -322,14 +322,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.pdf
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -346,9 +346,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qplr.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-BoldItalic-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb
