@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1671325811 "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf" "note1" 1671325813
-  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux" 1671325812 788 989b1d7f604ec8ca612f6444cf95d9cf ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" 1671325809 6074 af4de86b4f89d030b9e3db23ed8da565 ""
+["pdflatex"] 1671348068 "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf" "note1" 1671348070
+  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux" 1671348069 870 b6b3fd5da78ee7a25c4a8a4e5a8bc03d ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" 1671348067 6091 8a4901037fb385d24d7dbbb36eb6977e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1480098669 3114 c0955c0c37273eb0777b164cf69ec765 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -217,13 +217,13 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note1.aux" 1671325812 788 989b1d7f604ec8ca612f6444cf95d9cf ""
-  "note1.out" 1671325812 47 2f9e0f8043060e0bfcd305ff77a8480a ""
-  "note1.tex" 1671325809 6074 af4de86b4f89d030b9e3db23ed8da565 ""
+  "note1.aux" 1671348069 870 b6b3fd5da78ee7a25c4a8a4e5a8bc03d ""
+  "note1.out" 1671348069 87 eee330aa19fbed5fc9f79420cf9022d4 ""
+  "note1.tex" 1671348067 6091 8a4901037fb385d24d7dbbb36eb6977e ""
   (generated)
-  "note1.log"
-  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.log"
   "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf"
-  "note1.out"
+  "note1.log"
   "note1.pdf"
+  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.log"
   "note1.aux"
+  "note1.out"
