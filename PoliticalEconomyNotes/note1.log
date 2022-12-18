@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  14 DEC 2022 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  17 DEC 2022 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1139,31 +1139,35 @@ LaTeX Font Info:    Font shape `T1/zpltlf/bx/it' in size <10> not available
 (Font)              Font shape `T1/zpltlf/b/it' tried instead on input line 166.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/it' will be
 (Font)              scaled to size 10.0pt on input line 166.
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 169.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 169.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
  (/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
 Package rerunfilecheck Info: File `note1.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
+(rerunfilecheck)             Checksum: 2F9E0F8043060E0BFCD305FF77A8480A;47.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  ) 
 Here is how much of TeX's memory you used:
- 34575 strings out of 492649
- 814971 string characters out of 6129623
+ 34583 strings out of 492649
+ 815074 string characters out of 6129623
  1052862 words of memory out of 5000000
- 37889 multiletter control sequences out of 15000+600000
- 19088 words of font info for 21 fonts, out of 8000000 for 9000
+ 37896 multiletter control sequences out of 15000+600000
+ 21979 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,6n,136p,1036b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf" (1 page, 74763 bytes).
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf" (1 page, 75730 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 44 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
