@@ -1,0 +1,28 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Gerber and Green(2000)]{gerber2000effects}
+Alan~S Gerber and Donald~P Green.
+\newblock The effects of canvassing, telephone calls, and direct mail on voter
+  turnout: A field experiment.
+\newblock \emph{American political science review}, 94\penalty0 (3):\penalty0
+  653--663, 2000.
+
+\bibitem[Gerber et~al.(2008)Gerber, Green, and Larimer]{gerber2008social}
+Alan~S Gerber, Donald~P Green, and Christopher~W Larimer.
+\newblock Social pressure and voter turnout: Evidence from a large-scale field
+  experiment.
+\newblock \emph{American political Science review}, 102\penalty0 (1):\penalty0
+  33--48, 2008.
+
+\bibitem[Washington(2006)]{washington2006black}
+Ebonya Washington.
+\newblock How black candidates affect voter turnout.
+\newblock \emph{The Quarterly Journal of Economics}, 121\penalty0 (3):\penalty0
+  973--998, 2006.
+
+\end{thebibliography}
