@@ -14,6 +14,8 @@
 \usepackage{palatino}
 \usepackage{marginnote}
 \usepackage{multirow}
+\usepackage{multicol,array}
+\usepackage{xltabular}
 \usepackage{easybmat,bigdelim,arydshln}
 \usepackage[authoryear,round]{natbib}
 \usepackage{amssymb,amsmath,amsthm,amsfonts}
@@ -182,6 +184,24 @@ Some related works are
         \item[-] Adams and Smith (1980), Miller et al. (1981). \textbf{\textit{Small sample}}: results are not statistically reliable
     \end{itemize}
 \end{itemize}
+
+\paragraph*{Empirical details} This paper designed an experiment as in table
+
+\begin{table}[ht]
+\caption{Experiment Design of \citet{gerber2000effects}}
+\centering
+    \begin{tabular}{ccccccc}
+             & & \multicolumn{4}{c}{No. direct mailings sent} & \\ \cline{3-6}
+            & & 0 & 1 & 2 & 3 & Total\\ 
+        \hline
+        \multirow{2}{*}{No phone call} & \textbf{without} in-person &  10800 & 2406 & 2588 & 2375 & 18169 \\
+         & \textbf{with} in-person & 2686 & 519 & 625 & 627 & 4457\\
+         \multirow{2}{*}{Phone call} & \textbf{without} in-person &  958 & 1451 & 1486 & 1522 & 5417 \\
+         & \textbf{with} in-person & 217 & 385 & 352 & 383 & 1337\\
+        \hline
+        \multicolumn{2}{c}{Total} & 14661 & 4761 & 5051 & 4907 & 29380\\
+    \end{tabular}
+\end{table}
 
 
 

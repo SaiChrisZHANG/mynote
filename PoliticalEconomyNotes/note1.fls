@@ -18,6 +18,18 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/marginnote/marginnote.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/marginnote/marginnote.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xltabular/xltabular.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/xltabular/xltabular.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ltablex/ltablex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ltablex/ltablex.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/easy/easybmat.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/easy/easybmat.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/easy/easy.sty
@@ -56,6 +68,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/ltcaption.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
@@ -216,8 +230,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/newpxmath.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/newpxmath.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/kastrup/binhex.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/kastrup/binhex.tex
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/pgfplots/pgfplots.sty
@@ -316,8 +328,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/ltcaption.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -348,10 +358,52 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-BoldItalic-t
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-ot1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-ot1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-ot1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplmi.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplmi.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplmi.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsy.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsy.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsy.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexx.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexx.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexx.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxmia.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxmia.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsym.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsym.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsym.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsym.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsym.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsyc.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsyc.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsyc.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsyc.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsyc.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.bbl
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.bbl
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-th-t1.tfm
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.bbl
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.bbl
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.out
