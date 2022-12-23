@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note1"] 1671756394 "note1.aux" "note1.bbl" "note1" 1671756400
+["bibtex note1"] 1671756394 "note1.aux" "note1.bbl" "note1" 1671756755
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "note1.aux" 1671756399 1725 fb6baeedb768bfd0750331a665cd4950 ""
+  "note1.aux" 1671756720 1725 fb6baeedb768bfd0750331a665cd4950 ""
   "ref.bib" 1671591139 9069 b2e8ef9778a8c1a160604c75373de934 ""
   (generated)
-  "note1.bbl"
   "note1.blg"
-["pdflatex"] 1671756398 "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf" "note1" 1671756400
-  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux" 1671756399 1725 fb6baeedb768bfd0750331a665cd4950 ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" 1671756397 9044 321204cca13daeb7e6a44c292e8b559f ""
+  "note1.bbl"
+["pdflatex"] 1671756718 "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf" "note1" 1671756755
+  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.aux" 1671756720 1725 fb6baeedb768bfd0750331a665cd4950 ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.tex" 1671756718 10425 07f63115481e5cec6f02ea0f62a0c65f ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -265,14 +265,14 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note1.aux" 1671756399 1725 fb6baeedb768bfd0750331a665cd4950 ""
+  "note1.aux" 1671756720 1725 fb6baeedb768bfd0750331a665cd4950 ""
   "note1.bbl" 1671756395 1108 d8cb7e6e7b664203277ef04bd3441494 "bibtex note1"
-  "note1.out" 1671756399 178 8e4d862bc7e2d59ea2c325b4341db556 ""
-  "note1.tex" 1671756397 9044 321204cca13daeb7e6a44c292e8b559f ""
+  "note1.out" 1671756720 178 8e4d862bc7e2d59ea2c325b4341db556 ""
+  "note1.tex" 1671756718 10425 07f63115481e5cec6f02ea0f62a0c65f ""
   (generated)
-  "note1.log"
-  "note1.pdf"
   "note1.aux"
+  "note1.log"
   "note1.out"
   "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.pdf"
   "/Users/admin/Dropbox/SAI presentations/mynote/PoliticalEconomyNotes/note1.log"
+  "note1.pdf"
