@@ -1,9 +1,23 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Coate and Conlin(2004)]{coate2004group}
+Stephen Coate and Michael Conlin.
+\newblock A group rule-utilitarian approach to voter turnout: Theory and
+  evidence.
+\newblock \emph{American Economic Review}, 94\penalty0 (5):\penalty0
+  1476--1504, 2004.
+
+\bibitem[Coate et~al.(2008)Coate, Conlin, and Moro]{coate2008performance}
+Stephen Coate, Michael Conlin, and Andrea Moro.
+\newblock The performance of pivotal-voter models in small-scale elections:
+  Evidence from texas liquor referenda.
+\newblock \emph{Journal of Public Economics}, 92\penalty0 (3-4):\penalty0
+  582--596, 2008.
 
 \bibitem[Gerber and Green(2000)]{gerber2000effects}
 Alan~S Gerber and Donald~P Green.
