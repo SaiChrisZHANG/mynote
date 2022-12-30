@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -18,6 +18,19 @@ Stephen Coate, Michael Conlin, and Andrea Moro.
   Evidence from texas liquor referenda.
 \newblock \emph{Journal of Public Economics}, 92\penalty0 (3-4):\penalty0
   582--596, 2008.
+
+\bibitem[DellaVigna et~al.(2016)DellaVigna, List, Malmendier, and
+  Rao]{dellavigna2016voting}
+Stefano DellaVigna, John~A List, Ulrike Malmendier, and Gautam Rao.
+\newblock Voting to tell others.
+\newblock \emph{The Review of Economic Studies}, 84\penalty0 (1):\penalty0
+  143--181, 2016.
+
+\bibitem[Fujiwara et~al.(2016)Fujiwara, Meng, and Vogl]{fujiwara2016habit}
+Thomas Fujiwara, Kyle Meng, and Tom Vogl.
+\newblock Habit formation in voting: Evidence from rainy elections.
+\newblock \emph{American Economic Journal: Applied Economics}, 8\penalty0
+  (4):\penalty0 160--88, 2016.
 
 \bibitem[Gerber and Green(2000)]{gerber2000effects}
 Alan~S Gerber and Donald~P Green.
