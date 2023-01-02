@@ -129,7 +129,7 @@
    \markboth{Week #1: #2}{Week #1: #2}
 
    {\bf Key points}: {\begin{itemize}
-    \item
+    \item 
    \end{itemize}}
 
    {\bf Disclaimer}: {\it These notes are written by Sai Zhang (\href{mailto:saizhang.econ@gmail.com}{email me} or check my \href{https://github.com/SaiChrisZHANG}{Github page}). The main reference for this topic is \citet*{armstrong2020bias}, I thank Prof. Armstrong for his valuable advice.}
@@ -163,9 +163,15 @@ use tangent/.style={
 use tangent/.default=1}
 
 \begin{document}
-\lecture{3}{Bias-Aware Inference}{}{Sai Zhang}
+\lecture{3}{\textit{Moving the Goalposts} Approach}{}{Sai Zhang}
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
+\section{Finite Sample Bias-Variance Tradeoffs}
+\subsection{Setup}
+Consider the fixed design regression model
+\begin{equation}
+  y_i = w_i\beta\left(z_i\right) + h\left(z_i\right) + \epsilon_i
+\end{equation}
 
 \newpage
 \bibliographystyle{plainnat}
