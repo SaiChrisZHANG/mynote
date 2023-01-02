@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  28 DEC 2022 23:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  1 JAN 2023 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.tex"
-(/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.tex
+**"/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.tex"
+(/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -1022,8 +1022,8 @@ File: t1zpltlf.fd 2015/01/17 v1.0 font definition file for T1/zpl/tlf
 )
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 165.
- (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux)
-\openout1 = `note1.aux'.
+ (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.aux)
+\openout1 = `note3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 165.
 LaTeX Font Info:    Try loading font information for OML+npxmi on input line 165.
@@ -1087,9 +1087,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 165.
 LaTeX Info: Redefining \pageref on input line 165.
 LaTeX Info: Redefining \nameref on input line 165.
- (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out) (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out)
+ (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.out) (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.out)
 \@outlinefile=\write6
-\openout6 = `note1.out'.
+\openout6 = `note3.out'.
 
  ABD: EveryShipout initializing macros (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1135,28 +1135,35 @@ File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 166.
- [1
+
+
+Package natbib Warning: Citation `armstrong2020bias' on page 3-1 undefined on input line 166.
+
+
+Package natbib Warning: There were undefined citations.
+
+[1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
- (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux)
+ (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
-Package rerunfilecheck Info: File `note1.out' has not changed.
+Package rerunfilecheck Info: File `note3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
  ) 
 Here is how much of TeX's memory you used:
  34572 strings out of 492649
  814863 string characters out of 6129623
- 1051862 words of memory out of 5000000
+ 1052862 words of memory out of 5000000
  37887 multiletter control sequences out of 15000+600000
  16700 words of font info for 20 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,6n,136p,1032b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.pdf" (1 page, 59702 bytes).
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.pdf" (1 page, 61852 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  27 compressed objects within 1 object stream
