@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Armstrong et~al.(2020)Armstrong, Koles{\'a}r, and
+  Kwon]{armstrong2020bias}
+Timothy~B Armstrong, Michal Koles{\'a}r, and Soonwoo Kwon.
+\newblock Bias-aware inference in regularized regression models.
+\newblock \emph{arXiv preprint arXiv:2012.14823}, 2020.
+
+\end{thebibliography}
