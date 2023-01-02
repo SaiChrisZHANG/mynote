@@ -175,8 +175,31 @@ Consider the fixed design regression model
 where
 \begin{itemize}
   \item $w_i,z_i$ are treated as \textbf{fixed}
-  \item $\epsilon_i$ is \myhl[blue!45!black]{\textbf{independent}}, with $\mathbb{E}\left[\epsilon_i\right]=0,\mathbb{E}\left[\epsilon^2_i\right]=\sigma^2_i$
+  \item $\epsilon_i$ is {\textbf{independent}}, with $\mathbb{E}\left[\epsilon_i\right]=0,\mathbb{E}\left[\epsilon^2_i\right]=\sigma^2_i$
+  \item observation: $\left\{ \left(y_i,w_i,z_i^{\prime}\right)^{\prime} \right\}^n_{i=1}$
 \end{itemize}
+one example is the case where $w_i$ is \myhl[blue!45!black]{\textbf{binary}}, then 
+$$
+\beta(z) = f(1,z)-f(0,z)
+$$
+which is just the ATE conditional on $z$ under the unconfoundedness assumption. This includes the RD design, where $z_i$ is the running variable and $w_i$ is the treatment assignment.
+
+Now, consider for the weighted average treatment effect
+$$
+L_{\mu}\left[\beta(\cdot)\right] = \int \beta(z)\mathrm{d}\mu(z)
+$$
+where $\int\mu(z)=1$ is a \myhl[blue!45!black]{\textbf{signed}} measure (weight, allowing \textbf{negative} weights), construct a linear estimator
+$$
+\hat{L}_a = \sum^n_{i=1}a_iy_i
+$$
+where the estimation weights $a_i$ can depend on $\left\{ z_i,w_i,\sigma^2_i \right\}^n_{i=1}$, but \textbf{not} on $y_i$. Together, the bias of $\hat{L}_a$ for $L_{\mu}\left[\beta(\cdot)\right]$, \underline{given the regression function $\beta(\cdot),h(\cdot)$}, is 
+$$
+\mathbb{E}_{\beta(\cdot),h(\cdot)}\left[\hat{L}_a\right] - L_{\mu}\left[\beta(\cdot)\right] = \sum^n_{i=1}a_i\left[w_i\beta(z_i)+h(z_i)\right] - \int\beta(z)\mathrm{d}\mu(z)
+$$
+and its variance, \underline{given the regression function $\beta(\cdot),h(\cdot)$}, is just
+$$
+\mathrm{Var}_{\beta(\cdot),h(\cdot)}\left[\hat{L}_a\right] = \sum^n_{i=1}a_i^2\sigma^2_i
+$$
 
 \newpage
 \bibliographystyle{plainnat}
