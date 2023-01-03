@@ -201,7 +201,15 @@ $$
 \mathrm{Var}_{\beta(\cdot),h(\cdot)}\left[\hat{L}_a\right] = \sum^n_{i=1}a_i^2\sigma^2_i
 $$
 
-To bound the bias, assume $h(\cdot)$ is known to belong in a class of functions $\mathcal{H}$
+To bound the bias, assume $h(\cdot)$ is known to belong in a class of functions $\mathcal{H}$, then two approaches can be adopted, for the regularity of $\beta(\cdot)$ and the choice of $\mu(\cdot)$:
+\begin{itemize}
+  \item[1] arbitrary $\beta(\cdot)$, optimizing weights $\mu$ by \textit{moving the goalposts}, s.t. $L_{\mu}\left[\beta(\cdot)\right]$ is easy to estimate \citep{crump2006moving,imbens2019optimized}
+  which gives the worst-case bias
+  \begin{align*}
+    \inf_{\mu} &\sup_{\beta(\cdot),h(\cdot)}\left\vert \sum^n_{i=1}a_i\left[w_i\beta(z_i)+h(z_i)\right] - \int\beta(z)\mathrm{d}\mu(z) \right\vert &\text{s.t. } & h(\cdot)\in\mathcal{H},\int \mathrm{d}\mu(z)=1
+  \end{align*}
+  \item[2] assume constant treatment effects
+\end{itemize}
 
 
 \newpage
