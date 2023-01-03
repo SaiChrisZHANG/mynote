@@ -205,11 +205,15 @@ To bound the bias, assume $h(\cdot)$ is known to belong in a class of functions 
 \begin{itemize}
   \item[1] arbitrary $\beta(\cdot)$, optimizing weights $\mu$ by \textit{moving the goalposts}, s.t. $L_{\mu}\left[\beta(\cdot)\right]$ is easy to estimate \citep{crump2006moving,imbens2019optimized}
   which gives the worst-case bias
-  \begin{align*}
+  \begin{align}\label{eq:worstbias1}
     \inf_{\mu} &\sup_{\beta(\cdot),h(\cdot)}\left\vert \sum^n_{i=1}a_i\left[w_i\beta(z_i)+h(z_i)\right] - \int\beta(z)\mathrm{d}\mu(z) \right\vert &\text{s.t. } & h(\cdot)\in\mathcal{H},\int \mathrm{d}\mu(z)=1
-  \end{align*}
-  \item[2] assume constant treatment effects
+  \end{align}
+  \item[2] assume constant treatment effects, i.e., $\beta(z)=\beta,\forall z$, which means that $L_{\mu}\left[\beta(\cdot)\right]=\beta$ regardless of $\mu$, and the worst-case bias is 
+  \begin{align}\label{eq:worstbias2}
+    \sup_{\beta,h(\cdot)}&\left\vert \sum^n_{i=1}a_i\left[w_i\beta + h(z_i)\right] -\beta \right\vert & \text{s.t. } & h(\cdot)\in\mathcal{H}
+  \end{align}
 \end{itemize}
+
 
 
 \newpage
