@@ -208,12 +208,20 @@ To bound the bias, assume $h(\cdot)$ is known to belong in a class of functions 
   \begin{align}\label{eq:worstbias1}
     \inf_{\mu} &\sup_{\beta(\cdot),h(\cdot)}\left\vert \sum^n_{i=1}a_i\left[w_i\beta(z_i)+h(z_i)\right] - \int\beta(z)\mathrm{d}\mu(z) \right\vert &\text{s.t. } & h(\cdot)\in\mathcal{H},\int \mathrm{d}\mu(z)=1
   \end{align}
-  \item[2] assume constant treatment effects, i.e., $\beta(z)=\beta,\forall z$, which means that $L_{\mu}\left[\beta(\cdot)\right]=\beta$ regardless of $\mu$, and the worst-case bias is 
+  \item[2] assume constant treatment effects, i.e., $\beta(z)=\beta,\forall z$, which means that $L_{\mu}\left[\beta(\cdot)\right]=\beta$ regardless of $\mu$ \citep{armstrong2020bias}, and the worst-case bias is 
   \begin{align}\label{eq:worstbias2}
     \sup_{\beta,h(\cdot)}&\left\vert \sum^n_{i=1}a_i\left[w_i\beta + h(z_i)\right] -\beta \right\vert & \text{s.t. } & h(\cdot)\in\mathcal{H}
   \end{align}
 \end{itemize}
 
+And, the two approaches can be linked as such:
+\begin{itemize}
+  \item[-] If $\sum^n_{i=1}a_iw_i=1$, \ref{eq:worstbias1} and \ref{eq:worstbias2} are both equal to
+  $$
+  \sup_{h(\cdot)}\left\vert \sum^n_{i=1}a_ih(z_i) \right\vert\ \text{s.t. } h(\cdot)\in\mathcal{H}
+  $$
+  \item[-] Otherwise, \ref{eq:worstbias1} and \ref{eq:worstbias2} are both infinite
+\end{itemize}
 
 
 \newpage
