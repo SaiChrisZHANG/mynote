@@ -216,11 +216,20 @@ To bound the bias, assume $h(\cdot)$ is known to belong in a class of functions 
 
 And, the two approaches can be linked as such:
 \begin{itemize}
-  \item[-] \underline{If $\sum^n_{i=1}a_iw_i=1$}, \ref{eq:worstbias1} and \ref{eq:worstbias2} are both equal to
-  $$
-  \sup_{h(\cdot)}\left\vert \sum^n_{i=1}a_ih(z_i) \right\vert\ \text{s.t. } h(\cdot)\in\mathcal{H}
-  $$
-  \item[-] Otherwise, \ref{eq:worstbias1} and \ref{eq:worstbias2} are both infinite
+  \item \underline{If $\sum^n_{i=1}a_iw_i=1$}, \ref{eq:worstbias1} and \ref{eq:worstbias2} are both equal to
+  \begin{equation}\label{eq:equalboth}
+    \sup_{h(\cdot)}\left\vert \sum^n_{i=1}a_ih(z_i) \right\vert\ \text{s.t. } h(\cdot)\in\mathcal{H}
+  \end{equation}
+  \begin{itemize}
+    \item[-] \ref{eq:worstbias1} automatically equals \ref{eq:equalboth}
+    \item[-] \ref{eq:worstbias2}
+  \end{itemize}
+
+  \item Otherwise, \ref{eq:worstbias1} and \ref{eq:worstbias2} are both infinite:
+  \begin{itemize}
+    \item[-] \ref{eq:worstbias2} can be made arbitrarily large by choosing large enough $\beta$ 
+    \item[-] \ref{eq:worstbias1} can be made arbitrarily large by making $\beta(\cdot)$ constant (as in \ref{eq:worstbias2}) and large enough
+  \end{itemize}
 \end{itemize}
 
 
