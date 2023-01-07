@@ -244,16 +244,16 @@ First, consider
 \end{equation}
 where
 \begin{itemize}
-  \item $\beta\in\mathbb{R}$ is the constant treatment effect to be estimated 
-  \item $\gamma \in \Gamma$ is the control coefficients, subject to the restriction (i.e., the function class $\mathcal{H}$)
+  \item[-] $\beta\in\mathbb{R}$ is the constant treatment effect to be estimated 
+  \item[-] $\gamma \in \Gamma$ is the control coefficients, subject to the restriction (i.e., the function class $\mathcal{H}$)
   \begin{equation}
     \Gamma = \Gamma(C) = \left\{\gamma \in \mathcal{G}:\mathrm{Pen}(\gamma)\leq C \right\}
   \end{equation}
   where $\mathrm{Pen}(\cdot)$ is a seminorm\footnote{Seminorm satisfies
   \myhl[blue!45!black]{\textbf{triangle inequality} $\mathrm{Pen}\left(\gamma+\tilde{\gamma}\right)\leq \mathrm{Pen}(\gamma)$} and \myhl[blue!45!black]{\textbf{homogeneity} $\mathrm{Pen}\left(c\gamma\right)=\lvert c\rvert \mathrm{Pen}(\gamma),\forall c$}, but \textbf{NOT} necessarily positive definite ($\mathrm{Pen}(\gamma)=0$ does not imply $\gamma=0$). Essentially, any convex set $\Gamma$ that is symmetric satisfies this definition.
   } on some linear subspace $\mathcal{G}$ of $\mathbb{R}^k$.
-  \item $w= \left(w_1,\cdots,w_n\right)^{\prime}\in\mathbb{R}^n$ and $Z=\left(z_1^{\prime},\cdots,z_n^{\prime}\right)^{\prime}\in\mathbb{R}^{n\times k}$ are defined as before
-  \item $\epsilon \sim \mathcal{N}\left(0,\sigma^2 I_n\right)$ is assumed \myhl[blue!45!black]{\textbf{normal and homoskedastic}}, with $\sigma^2$ known
+  \item[-] $w= \left(w_1,\cdots,w_n\right)^{\prime}\in\mathbb{R}^n$ and $Z=\left(z_1^{\prime},\cdots,z_n^{\prime}\right)^{\prime}\in\mathbb{R}^{n\times k}$ are defined as before
+  \item[-] $\epsilon \sim \mathcal{N}\left(0,\sigma^2 I_n\right)$ is assumed \myhl[blue!45!black]{\textbf{normal and homoskedastic}}, with $\sigma^2$ known
 \end{itemize}
 
 For estimation, the goal is to construct estimators and CIs for $\beta$:
@@ -262,6 +262,7 @@ For estimation, the goal is to construct estimators and CIs for $\beta$:
   $$
   R_{MSE}\left(\hat{\beta};\Gamma\right)=\sup_{\beta\in\mathbb{R},\gamma\in\Gamma}\mathbb{E}_{\beta,\gamma}\left[\left(\hat{\beta}-\beta\right)^2\right]
   $$
+  \item 
 \end{itemize}
 
 
