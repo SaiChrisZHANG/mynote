@@ -271,7 +271,12 @@ For estimation, the goal is to construct estimators and CIs for $\beta$:
 \end{itemize}
 
 \subsubsection*{Linear estimators and CIs}
-
+Again, consider estimators that are \textbf{linear} in the outcomes $Y$, $\hat{\beta}=a'Y$, where $a$ is the $n-$vector weights. In the vector form, the worst-case bias (as \ref{eq:worstbias2}) is 
+\begin{equation}
+  \bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right) = \sup_{\beta\in\mathbb{R},\gamma\in\Gamma} a'\left( w\beta + Z\gamma \right)-\beta
+\end{equation}
+and the variance, under the assumption of homoskedasticity, is $$ \mathrm{Var} \left(\hat{\beta}\right) = \sigma^2a'a $$
+The $t-$statistic $$ \frac{\hat{\beta}-\beta}{\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}} \sim \mathcal{N}(b,1),\ \ \lvert b\rvert\leq \frac{\bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)}{\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}}$$
 
 \newpage
 \bibliographystyle{plainnat}
