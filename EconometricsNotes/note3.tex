@@ -276,12 +276,28 @@ Again, consider estimators that are \textbf{linear} in the outcomes $Y$, $\hat{\
   \bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right) = \sup_{\beta\in\mathbb{R},\gamma\in\Gamma} a'\left( w\beta + Z\gamma \right)-\beta
 \end{equation}
 and the variance, under the assumption of homoskedasticity, is $$ \mathrm{Var} \left(\hat{\beta}\right) = \sigma^2a'a $$
+Then the MSE is 
+$$
+  R_{MSE}\left(\hat{\beta};\Gamma\right)=\sup_{\beta\in\mathbb{R},\gamma\in\Gamma}\mathbb{E}_{\beta,\gamma}\left[\left(\hat{\beta}-\beta\right)^2\right]=\bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)^2 +\mathrm{Var}\left(\hat{\beta}\right)
+$$
 The $t-$statistic is $$ \frac{\hat{\beta}-\beta}{\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}} \sim \mathcal{N}(b,1),\ \lvert b\rvert\leq \frac{\bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)}{\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}}$$
 and a two-sided CI can then be formed as
-\begin{align*}
+\begin{align}
   \hat{\beta} &\pm \chi, &\text{where }\chi=\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}\cdot \mathrm{cv}_{\alpha}\left( \frac{\bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)}{\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}} \right)
-\end{align*}
+\end{align}
 and the $\mathrm{cv}_{\alpha}(B)$ denotes the $1-\alpha$ quantile of a $\lvert \mathcal{N}(B,1) \rvert$. This is a \textbf{fixed-length confidence interval} (FLCI), with a fixed length of $2\chi$. It depends on $X$ and $\sigma^2$, but not on $Y$ or $(\beta,\gamma)^{\prime}$.
+
+\subsubsection*{Optimal weights}
+We have two optimization goals
+\begin{itemize}
+  \item minimizing MSE: $ R_{MSE}\left(\hat{\beta};\Gamma\right)=\bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)^2 +\mathrm{Var}\left(\hat{\beta}\right)$
+  \item minimizing CI length: $\chi=\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}\cdot \mathrm{cv}_{\alpha}\left( \bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)/\sqrt{\mathrm{Var}\left(\hat{\beta}\right)} \right)$
+\end{itemize}
+They both increasing in $\mathrm{Var}\left(\hat{\beta}\right)$ and $\bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)$, hence to find the optimal weights, it suffices to minimize variance subject to a bound $B$ on worst-case bias, which can be written as:
+\begin{equation}
+  \min_{a\in\mathbb{R}}a'a\ \text{s.t.}\ \sup_{\beta\in\mathbb{R},\gamma\in\Gamma}a'\left(w\beta+Z\gamma \right)-\beta \leq B
+\end{equation}
+
 
 \newpage
 \bibliographystyle{plainnat}
