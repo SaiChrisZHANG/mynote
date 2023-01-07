@@ -262,7 +262,11 @@ For estimation, the goal is to construct estimators and CIs for $\beta$:
   $$
   R_{MSE}\left(\hat{\beta};\Gamma\right)=\sup_{\beta\in\mathbb{R},\gamma\in\Gamma}\mathbb{E}_{\beta,\gamma}\left[\left(\hat{\beta}-\beta\right)^2\right]
   $$
-  \item 
+  \item for CIs, we have 2 requirements:
+  \begin{itemize}
+    \item[A] \underline{\textbf{coverage}}: A $100\cdot(1-\alpha)\%$ CI with half-length $\hat{\chi}=\hat{\chi}(Y,X)$ is an interval $\left\{\hat{\beta}\pm \hat{\chi}\right\}$ s.t.$$ \inf_{\beta\in\mathbb{R},\gamma\in\Gamma} \mathrm{P}_{\beta,\gamma}\left(\beta\in\left\{\hat{\beta}\pm\hat{\chi}\right\}\right) \geq 1-\alpha $$
+    \item[B] \underline{\textbf{length}}: 
+  \end{itemize}
 \end{itemize}
 
 
