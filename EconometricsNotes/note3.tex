@@ -300,7 +300,8 @@ They both increasing in $\mathrm{Var}\left(\hat{\beta}\right)$ and $\bar{\mathrm
 
 The optimal weight is then given by:
 \begin{theorem}{Optimal Weight}{optimal_weight}
-  
+  Let $\pi^*_{\lambda}$ be a solution to\footnote{This regression can be refered to as a regularized propensity score regression (but $w_i$ need not be binary)} with penalty $\mathrm{Pen}(\pi)$
+  $$ \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda} $$
 \end{theorem}
 
 \newpage
