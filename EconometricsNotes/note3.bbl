@@ -1,9 +1,14 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Armstrong and Koles{\'a}r(2018)]{armstrong2018optimal}
+Timothy~B Armstrong and Michal Koles{\'a}r.
+\newblock Optimal inference in a class of regression models.
+\newblock \emph{Econometrica}, 86\penalty0 (2):\penalty0 655--683, 2018.
 
 \bibitem[Armstrong et~al.(2020)Armstrong, Koles{\'a}r, and
   Kwon]{armstrong2020bias}
