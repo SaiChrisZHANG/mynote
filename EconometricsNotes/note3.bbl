@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -21,10 +21,22 @@ Richard~K Crump, V~Joseph Hotz, Guido Imbens, and Oscar Mitnik.
 \newblock Moving the goalposts: Addressing limited overlap in the estimation of
   average treatment effects by changing the estimand, 2006.
 
+\bibitem[Donoho(1994)]{donoho1994statistical}
+David~L Donoho.
+\newblock Statistical estimation and optimal recovery.
+\newblock \emph{The Annals of Statistics}, 22\penalty0 (1):\penalty0 238--270,
+  1994.
+
 \bibitem[Imbens and Wager(2019)]{imbens2019optimized}
 Guido Imbens and Stefan Wager.
 \newblock Optimized regression discontinuity designs.
 \newblock \emph{Review of Economics and Statistics}, 101\penalty0 (2):\penalty0
   264--278, 2019.
+
+\bibitem[Low(1995)]{low1995bias}
+Mark~G Low.
+\newblock Bias-variance tradeoffs in functional estimation problems.
+\newblock \emph{The Annals of Statistics}, 23\penalty0 (3):\penalty0 824--835,
+  1995.
 
 \end{thebibliography}
