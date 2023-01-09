@@ -294,14 +294,22 @@ We have two optimization goals
   \item minimizing CI length: $\chi=\sqrt{\mathrm{Var}\left(\hat{\beta}\right)}\cdot \mathrm{cv}_{\alpha}\left( \bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)/\sqrt{\mathrm{Var}\left(\hat{\beta}\right)} \right)$
 \end{itemize}
 They both increasing in $\mathrm{Var}\left(\hat{\beta}\right)$ and $\bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}\right)$, hence to find the optimal weights, it suffices to minimize variance subject to a bound $B$ on worst-case bias, which can be written as:
-\begin{equation}
+\begin{equation}\label{eq:solve_optimalweight}
   \min_{a\in\mathbb{R}}a'a\ \text{s.t.}\ \sup_{\beta\in\mathbb{R},\gamma\in\Gamma}a'\left(w\beta+Z\gamma \right)-\beta \leq B
 \end{equation}
 
 The optimal weight is then given by:
 \begin{theorem}{Optimal Weight}{optimal_weight}
-  Let $\pi^*_{\lambda}$ be a solution to\footnote{This regression can be refered to as a regularized propensity score regression (but $w_i$ need not be binary)} with penalty $\mathrm{Pen}(\pi)$
+  Let $\pi^*_{\lambda}$ be a solution to\footnote{This regression can be refered to as a regularized propensity score regression (but $w_i$ need not be binary) with penalty $\mathrm{Pen}(\pi)$}
   $$ \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda} $$
+  and suppose that $\lVert w-Z\pi \rVert_2>0$, then the optimal weight solving \ref{eq:solve_optimalweight} is $$ a^*_{\lambda}=\frac{w-Z\pi_{\lambda}^*}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
+  with the bound $$ B=\frac{C}{t_{\lambda}}\cdot \frac{\left(w-Z\pi_{\lambda}^*\right)' Z\pi^*_{\lambda}}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
+  Consequently, we have 
+  \begin{itemize}
+    \item estimator $$ \hat{\beta}_{\lambda} = {a^*_{\lambda}}' Y= \frac{\left( w-Z\pi_{\lambda}^* \right)'Y}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
+    \item worst-case bias: $$ \bar{\mathrm{bias}}_{\Gamma}\left(\hat{\beta}_{\lambda}\right) = C\bar{B}_{\lambda} = \frac{C}{\mathrm{Pen}(\pi^*_{\lambda})}  \frac{\left( w-Z\pi_{\lambda}^* \right)'Z\pi^*_{\lambda}}{\left(w-Z\pi_{\lambda}^*\right)'w}$$
+    \item variance of estimator:
+  \end{itemize}
 \end{theorem}
 
 \newpage
