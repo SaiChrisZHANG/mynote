@@ -318,7 +318,14 @@ This result follows by applying \citet{donoho1994statistical}, \citet{low1995bia
 \appendix
 \section{Proofs}
 \subsection{Proof of Theorem \ref{thm:optimal_weight}}
-Following \citet[Equation (25)]{armstrong2018optimal}, the modulus of continuity 
+Following \citet[Equation (25)]{armstrong2018optimal}, the modulus of continuity is given by 
+\begin{align*}
+  \omega(\delta) &=\sup_{\beta,\gamma}2\beta &\text{s.t.\ }&\lVert w\beta+Z\gamma \rVert_2 \leq \frac{\delta}{2}, &\mathrm{Pen}(\gamma) &\leq C
+\end{align*}
+Introducing a substitution (rescaling $\gamma$ by $\beta$) $\pi = -\frac{\gamma}{\beta}$, get 
+\begin{align}
+  \omega(\delta) &=\sup_{\beta,\pi}2\beta &\text{s.t.\ }&\lVert w\beta+Z\gamma \rVert_2 \leq \frac{\delta}{2}, &\mathrm{Pen}(\gamma) &\leq C
+\end{align}
 
 \newpage
 \bibliographystyle{plainnat}
