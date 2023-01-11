@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1671240798 "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.pdf" "note1" 1671240800
+["pdflatex"] 1671240798 "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.tex" "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.pdf" "note1" 1673449205
   "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.aux" 1671240800 699 3b0b1034aaf0dece7590714f6deffef5 ""
   "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.tex" 1671240798 5980 6a195a900a384cd49c4852065fe86ff3 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -220,8 +220,8 @@
   "note1.tex" 1671240798 5980 6a195a900a384cd49c4852065fe86ff3 ""
   (generated)
   "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.log"
-  "note1.out"
-  "note1.aux"
-  "note1.pdf"
-  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.pdf"
   "note1.log"
+  "/Users/admin/Dropbox/SAI presentations/mynote/NeuroeconomicsNotes/note1.pdf"
+  "note1.aux"
+  "note1.out"
+  "note1.pdf"
