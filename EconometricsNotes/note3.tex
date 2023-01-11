@@ -80,6 +80,9 @@
 \newtcbtheorem[use counter*=defin, number within=section]{proposition}{Proposition}{enhanced, breakable,
     colback = white, colframe = teal, colbacktitle = teal, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries}{prop}
 
+\newtcbtheorem[use counter*=defin, number within=section]{lemma}{Lemma}{enhanced, breakable,
+    colback = white, colframe = orange!65!black, colbacktitle = orange!65!black, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries}{lemma}
+
 \newtcolorbox{example}[1]{enhanced, breakable, colback = white, colframe = orange!85!black, colbacktitle = orange!85!black, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries, title={Example: #1}}
 
 \newtcbox{\myhl}[1][white]
@@ -324,10 +327,10 @@ Following \citet[Equation (25)]{armstrong2018optimal}, the modulus of continuity
 \end{align*}
 Introducing a substitution (rescaling $\gamma$ by $\beta$) $\pi = -\frac{\gamma}{\beta}$, get 
 \begin{align}
-  \omega(\delta) &=\sup_{\beta,\pi}2\beta &\text{s.t.\ }&\lVert w\beta+Z\gamma \rVert_2 \leq \frac{\delta}{2}, &\mathrm{Pen}(\gamma) &\leq C
+  \omega(\delta) &=\sup_{\beta,\pi}2\beta &\text{s.t.\ }&\beta\lVert w-Z\pi \rVert_2 \leq \frac{\delta}{2}, &\beta\mathrm{Pen}(\pi) &\leq C
 \end{align}
-
-
+this relates to the optimization problem in \ref{thm:optimal_weight}:
+$$ \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda} $$
 
 \newpage
 \bibliographystyle{plainnat}
