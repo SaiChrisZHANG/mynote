@@ -333,8 +333,14 @@ recall the optimization problem in \ref{thm:optimal_weight}:
 $$ \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda} $$
 
 We can relate the two problems via the following logic: we want to make $\lVert w-Z\pi \rVert_2$ and $\mathrm{Pen}(\pi)$ small so that large values of $\beta$ satisfy the constraint of \ref{eq:continuity_modulus}. Formally:
-\begin{lemma}{}{}
-  
+\begin{lemma}{}{A1}
+  \begin{itemize}
+    \item If $\exists \pi \in\mathcal{G}$ s.t. $w=Z\pi$ and $\mathrm{Pen}(\pi)=0$, then $w(\delta)=\infty,\forall \delta\geq 0$ \hfill (automatic)
+    \item \textbf{\underline{Otherwise}}:
+    \begin{itemize}
+      \item[(i)] $\forall \delta>0$, the problem \ref{eq:continuity_modulus} has a solution  
+    \end{itemize}
+  \end{itemize}
 \end{lemma}
 
 
