@@ -345,10 +345,17 @@ We can relate the two problems via the following logic: we want to make $\lVert 
       with optimized objective 
       $$ \lVert w-Z\pi \rVert_2 = \frac{\delta}{2\beta_{\delta}^{mod}}=\frac{\delta}{w(\delta)} >0$$
 
-      \item[(ii)] $\forall t_{\lambda}>0$, the penalized regression above has a solution $\pi^{\star}_{\lambda}$. Setting $\beta^*_{\lambda}=\frac{C}{t_{\lambda}}$ and $\delta_{\lambda}=2\beta^*_{\lambda}\lVert w-Z\pi \rVert_2 = \frac{2C}{t_{\lambda}}\lVert w-Z\pi \rVert_2$, the pair $\left(\beta^*_{\lambda},\pi^*_{\lambda}\right)$ solves the modulus problem \ref{eq:continuity_modulus} at $\delta=\delta_{\lambda}$, with optimized objective $w(\delta_{\lambda})=\frac{2C}{t_{\lambda}}$, as long as $\lVert w-Z\pi \rVert_2 >0$
+      \item[(ii)] $\forall t_{\lambda}>0$, the penalized regression above has a solution $\pi^{\star}_{\lambda}$. Setting
+      \begin{align*}
+        \beta^*_{\lambda} &=\frac{C}{t_{\lambda}} \\
+        \delta_{\lambda} &=2\beta^*_{\lambda}\lVert w-Z\pi \rVert_2 = \frac{2C}{t_{\lambda}}\lVert w-Z\pi \rVert_2
+      \end{align*}
+      the pair $\left(\beta^*_{\lambda},\pi^*_{\lambda}\right)$ solves the modulus problem \ref{eq:continuity_modulus} at $\delta=\delta_{\lambda}$, with optimized objective $w(\delta_{\lambda})=\frac{2C}{t_{\lambda}}$, as long as $\lVert w-Z\pi \rVert_2 >0$
     \end{itemize}
   \end{itemize}
 \end{lemma}
+
+\underline{\textbf{Proof of \ref{lemma:A1}}}: 
 
 
 \newpage
