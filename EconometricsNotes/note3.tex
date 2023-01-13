@@ -304,7 +304,9 @@ They both increasing in $\mathrm{Var}\left(\hat{\beta}\right)$ and $\bar{\mathrm
 The optimal weight is then given by:
 \begin{theorem}{Optimal Weight}{optimal_weight}
   Let $\pi^*_{\lambda}$ be a solution to\footnote{This regression can be refered to as a regularized propensity score regression (but $w_i$ need not be binary) with penalty $\mathrm{Pen}(\pi)$}
-  $$ \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda} $$
+  \begin{equation}\label{eq:penalizedreg}
+    \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda}
+  \end{equation}
   and suppose that $\lVert w-Z\pi \rVert_2>0$, then the optimal weight solving \ref{eq:solve_optimalweight} is $$ a^*_{\lambda}=\frac{w-Z\pi_{\lambda}^*}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
   with the bound $$ B=\frac{C}{t_{\lambda}}\cdot \frac{\left(w-Z\pi_{\lambda}^*\right)' Z\pi^*_{\lambda}}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
   Consequently, we have 
@@ -343,7 +345,7 @@ We can relate the two problems via the following logic: we want to make $\lVert 
       with optimized objective 
       $$ \lVert w-Z\pi \rVert_2 = \frac{\delta}{2\beta_{\delta}^{mod}}=\frac{\delta}{w(\delta)} >0$$
 
-      \item[(ii)]
+      \item[(ii)] $\forall t_{\lambda}>0$, the penalized regression above 
     \end{itemize}
   \end{itemize}
 \end{lemma}
