@@ -331,7 +331,7 @@ Introducing a substitution (rescaling $\gamma$ by $\beta$) $\pi = -\frac{\gamma}
 \begin{align}\label{eq:continuity_modulus}
   \omega(\delta) &=\sup_{\beta,\pi}2\beta &\text{s.t.\ }&\beta\lVert w-Z\pi \rVert_2 \leq \frac{\delta}{2}, &\beta\mathrm{Pen}(\pi) &\leq C
 \end{align}
-recall the optimization problem in \ref{thm:optimal_weight}:
+recall the optimization problem in Theorem \ref{thm:optimal_weight}:
 $$ \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda} $$
 
 We can relate the two problems via the following logic: we want to make $\lVert w-Z\pi \rVert_2$ and $\mathrm{Pen}(\pi)$ small so that large values of $\beta$ satisfy the constraint of \ref{eq:continuity_modulus}. Formally:
@@ -340,12 +340,12 @@ We can relate the two problems via the following logic: we want to make $\lVert 
     \item If $\exists \pi \in\mathcal{G}$ s.t. $w=Z\pi$ and $\mathrm{Pen}(\pi)=0$, then $w(\delta)=\infty,\forall \delta\geq 0$ \hfill (automatic)
     \item \textbf{\underline{Otherwise}}:
     \begin{itemize}
-      \item[(i)] $\forall \delta>0$, the problem \ref{eq:continuity_modulus} has a solution $\beta^{mod}_{\delta},\pi^{mod}_{\delta}$ with $\beta^{mod}_{\delta}>0$. For $t_{\lambda}=\frac{C}{\beta^{mod}_{\delta}}=\frac{2C}{w(\delta)}$, $\pi^{mod}_{\delta}$ is also a solution to the penalized regression
+      \item[(i)] $\forall \delta>0$, the problem \ref{eq:continuity_modulus} has a solution $\beta^{mod}_{\delta},\pi^{mod}_{\delta}$ with $\beta^{mod}_{\delta}>0$. For $t_{\lambda}=\frac{C}{\beta^{mod}_{\delta}}=\frac{2C}{w(\delta)}$, $\pi^{mod}_{\delta}$ is also a solution to the penalized regression (\ref{eq:penalizedreg})
       $$ \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda} $$
       with optimized objective 
       $$ \lVert w-Z\pi \rVert_2 = \frac{\delta}{2\beta_{\delta}^{mod}}=\frac{\delta}{w(\delta)} >0$$
 
-      \item[(ii)] $\forall t_{\lambda}>0$, the penalized regression above 
+      \item[(ii)] $\forall t_{\lambda}>0$, the penalized regression above has a solution $\pi^{\star}_{\lambda}$. Setting $\beta^*_{\lambda}=\frac{C}{t_{\lambda}}$ and $\delta_{\lambda}=2\beta^*_{\lambda}\lVert w-Z\pi \rVert_2 = \frac{2C}{t_{\lambda}}\lVert w-Z\pi \rVert_2$, the pair $\left(\beta^*_{\lambda},\pi^*_{\lambda}\right)$ solves the modulus problem \ref{eq:continuity_modulus} at $\delta=\delta_{\lambda}$, with optimized objective $w(\delta_{\lambda})=\frac{2C}{t_{\lambda}}$, as long as $\lVert w-Z\pi \rVert_2 >0$
     \end{itemize}
   \end{itemize}
 \end{lemma}
