@@ -307,7 +307,7 @@ The optimal weight is then given by:
   \begin{equation}\label{eq:penalizedreg}
     \min_{\pi}\lVert w-Z\pi \rVert^2_2 \ \text{ s.t. }\ \mathrm{Pen}(\pi)\leq t_{\lambda}
   \end{equation}
-  and suppose that $\lVert w-Z\pi \rVert_2>0$, then the optimal weight solving \ref{eq:solve_optimalweight} is $$ a^*_{\lambda}=\frac{w-Z\pi_{\lambda}^*}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
+  and suppose that $\lVert w-Z\pi \rVert_2>0$, $\mathrm{Pen}(\cdot)$ is continuous, then the optimal weight solving \ref{eq:solve_optimalweight} is $$ a^*_{\lambda}=\frac{w-Z\pi_{\lambda}^*}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
   with the bound $$ B=\frac{C}{t_{\lambda}}\cdot \frac{\left(w-Z\pi_{\lambda}^*\right)' Z\pi^*_{\lambda}}{\left(w-Z\pi_{\lambda}^*\right)'w} $$
   Consequently, we have 
   \begin{itemize}
@@ -367,7 +367,11 @@ We can relate the two problems via the following logic: we want to make $\lVert 
   \end{aligned} \Rightarrow \mathrm{Pen}(\pi^{(1)}) = \mathrm{Pen}(\pi)
   $$
   THen, \ref{eq:penalizedreg} can be wriiten in terms of $\pi^{(1)}\in\mathcal{G}^{(1)}$ only. The level sets of this optimization problem are bounded and closed (by continuity of the seminorm $\mathrm{Pen}(\cdot)$), so it has a solution, which is also the solution to the original problem.
-  \item[B] \underline{the modulus problem \ref{eq:continuity_modulus} has a solution}:
+  \item[B] \underline{the modulus problem \ref{eq:continuity_modulus} has a solution}: for the problem \ref{eq:continuity_modulus}, feasible values of $\beta$ are bounded as:
+  \begin{align*}
+    \beta &\leq \frac{\delta}{2}\cdot \frac{1}{\lVert w-Z\pi \rVert_2} & \beta \leq C \cdot\frac{1}{\mathrm{Pen}(\pi)}
+  \end{align*}
+  i.e., $\beta$ is bounded by the inverse of the minimum of $\max \{ \lVert w-Z\pi \rVert_2,\mathrm{Pen}(\pi) \}$ over $\pi$, and it is strictly positive. Hence, $\beta,\tilde{\pi}^{(1)}$ can be restricted to a compact set without changing the optimization problem.
   \item[C] \underline{proof of statement (i)}:
   \item[D] \underline{proof of statement (ii)}:
 \end{itemize}
