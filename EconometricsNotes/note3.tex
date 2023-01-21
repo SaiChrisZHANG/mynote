@@ -372,11 +372,10 @@ We can relate the two problems via the following logic: we want to make $\lVert 
     \beta &\leq \frac{\delta}{2}\cdot \frac{1}{\lVert w-Z\pi \rVert_2} & \beta \leq C \cdot\frac{1}{\mathrm{Pen}(\pi)}
   \end{align*}
   i.e., $\beta$ is bounded by the inverse of the minimum of $\max \{ \lVert w-Z\pi \rVert_2,\mathrm{Pen}(\pi) \}$ over $\pi$, and it is strictly positive. Hence, $\beta,\tilde{\pi}^{(1)}$ can be restricted to a compact set without changing the optimization problem.
-  \item[C] \underline{proof of statement (i)}: Proof by contradiction, if it's not true, then 
-  $$
-  \exists \tilde{\pi}\ \text{s.t. } $\mathrm{Pen}(\tilde{\pi})\leq \frac{C}{\beta_{\delta}^{mod}}\equiv t_{\lambda}$
-  $$
-  
+  \item[C] \underline{proof of statement (i)}: Proof by contradiction, if it's not true, then $\exists \tilde{\pi}$ s.t.
+  \begin{align*}
+    \mathrm{Pen}(\tilde{\pi})&\leq \frac{C}{\beta_{\delta}^{mod}}\equiv t_{\lambda}, & \lVert w-Z\tilde{\pi} \rVert_2 \leq \lVert w-Z \pi_{\delta}^{mod} \rVert_2 - \nu
+  \end{align*}
    and that $\lVert w-Z\pi^{mod}_{\delta} \rVert_2>0$, otherwise a strictly large $\beta$ could be achieved by multiplying $\pi^{mod}_{\delta}$ by $1-\eta$ for $\eta>0$ small enough.
   \item[D] \underline{proof of statement (ii)}:
 \end{itemize}
