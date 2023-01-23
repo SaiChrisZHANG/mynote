@@ -1,0 +1,174 @@
+\documentclass[twoside]{article}
+\setlength{\oddsidemargin}{0 in}
+\setlength{\evensidemargin}{0 in}
+\setlength{\topmargin}{-0.6 in}
+\setlength{\textwidth}{6.5 in}
+\setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.75 in}
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+\usepackage{url}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{3}
+\usepackage{palatino}
+\usepackage{marginnote}
+\usepackage{multirow}
+\usepackage{easybmat,bigdelim,arydshln}
+\usepackage[authoryear,round]{natbib}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{newpxtext,newpxmath}
+\usepackage{longtable}
+\usepackage{enumitem}
+\makeatletter
+
+\let\bar\overline
+
+\setlist[itemize]{topsep=0pt,leftmargin=10pt,itemsep=-0.2em}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+\usetikzlibrary{patterns,decorations.pathreplacing,decorations.markings}
+\usepgfplotslibrary{fillbetween}
+
+\hypersetup{
+    colorlinks,
+    citecolor=red,
+    filecolor=black,
+    linkcolor=violet,
+    urlcolor=blue
+}
+
+\makeatletter
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\newtheoremstyle{indented}
+  {3pt}% space before
+  {3pt}% space after
+  {\addtolength{\@totalleftmargin}{3.5em}
+   \addtolength{\linewidth}{-3.5em}
+   \parshape 1 3.5em \linewidth}% body font
+  {}% indent
+  {\bfseries}% header font
+  {.}% punctuation
+  {.5em}% after theorem header
+  {}% header specification (empty for default)
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{defin}{Definition}[section] % Creates a new counter, number within section
+\newtheorem{prt}[defin]{Remark} 
+\newtheorem{prts}[defin]{Remarks} % Again share defin's counter
+\newtheorem{exmp}[defin]{Example} % etc.
+\newtheorem{exmps}[defin]{Examples}
+\newtheorem*{note}{Note}
+\tcbuselibrary{theorems}
+
+% use counter*=defin to make each tcbtheorem share defin's counter
+
+\newtcbtheorem[use counter*=defin, number within=section]{definition}{Key takeaways}{enhanced, breakable,
+    colback = white, colframe = red!55!black, colbacktitle = red!55!black, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries}{takeaway}
+
+\newtcbtheorem[use counter*=defin, number within=section]{theorem}{Theorem}{enhanced, breakable,
+    colback = white, colframe = blue!45!black, colbacktitle = blue!45!black, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries}{thm}
+    
+\newtcbtheorem[use counter*=defin, number within=section]{proposition}{Proposition}{enhanced, breakable,
+    colback = white, colframe = teal, colbacktitle = teal, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries}{prop}
+
+\newtcolorbox{example}[1]{enhanced, breakable, colback = white, colframe = orange!85!black, colbacktitle = orange!85!black, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries, title={Example: #1}}
+
+\newtcbox{\myhl}[1][white]
+  {on line, arc = 0pt, outer arc = 0pt,
+    colback = #1!20!white, colframe = #1!50!black,
+    boxsep = 0pt, left = 1pt, right = 1pt, top = 1pt, bottom = 1pt, boxrule = 0pt, bottomrule =0pt, toprule =0pt}
+    
+\newtcbox{\myhlrule}[1][white]
+  {on line, arc = 0pt, outer arc = 0pt,
+    colback = #1!20!white, colframe = #1!50!black,
+    boxsep = 0pt, left = 1pt, right = 1pt, top = 1pt, bottom = 1pt, boxrule = 0pt, bottomrule =0.5pt, toprule =0.5pt}
+%
+% The following commands set up the lecnum (lecture number)
+% counter and make various numbering schemes work relative
+% to the lecture number.
+%
+\newcounter{lecnum}
+\renewcommand{\thepage}{\thelecnum-\arabic{page}}
+\renewcommand{\thesection}{\thelecnum.\arabic{section}}
+\renewcommand{\theequation}{\thelecnum.\arabic{equation}}
+\renewcommand{\thefigure}{\thelecnum.\arabic{figure}}
+\renewcommand{\thetable}{\thelecnum.\arabic{table}}
+
+\newcommand{\sidenotes}[1]{\marginnote{\raggedright\scriptsize#1}}
+%
+% The following macro is used to generate the header.
+%
+\newcommand{\lecture}[4]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{lecnum}{#1}
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf Econometrics
+	\hfill \today} }
+       \vspace{4mm}
+       \hbox to 6.28in { {\Large \hfill Topic #1: #2  \hfill} }
+       \vspace{2mm}
+       \hbox to 6.28in { {\it #3 \hfill by #4} }
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{Week #1: #2}{Week #1: #2}
+
+   {\bf Key points}: {\begin{itemize}
+    \item
+   \end{itemize}}
+
+   {\bf Disclaimer}: {\it These notes are written by Sai Zhang (\href{mailto:saizhang.econ@gmail.com}{email me})}
+   \vspace*{4mm}
+}
+%
+
+\tikzset{-stealth-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{stealth}}},postaction={decorate}}}
+
+  \tikzset{tangent/.style={
+    decoration={
+        markings,% switch on markings
+        mark=
+            at position #1
+            with
+            {
+                \coordinate (tangent point-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,0pt);
+                \coordinate (tangent unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (1,0pt);
+                \coordinate (tangent orthogonal unit vector-\pgfkeysvalueof{/pgf/decoration/mark info/sequence number}) at (0pt,1);
+            }
+    },
+    postaction=decorate
+},
+use tangent/.style={
+    shift=(tangent point-#1),
+    x=(tangent unit vector-#1),
+    y=(tangent orthogonal unit vector-#1)
+},
+use tangent/.default=1}
+
+\begin{document}
+\lecture{2}{Random Matrix Theory}{}{Sai Zhang}
+%\footnotetext{These notes are partially based on those of Nigel Mansell.}
+
+
+%\newpage
+%\bibliographystyle{plainnat}
+%\bibliography{ref.bib}
+
+\end{document}
