@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1674510110 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.pdf" "note4" 1674510112
+["pdflatex"] 1674510110 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.pdf" "note4" 1674510113
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.aux" 1674510111 699 3b0b1034aaf0dece7590714f6deffef5 ""
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.tex" 1674510109 5974 68d9c8977adb412ac7dc02fa661fb578 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -219,9 +219,9 @@
   "note4.out" 1674510111 0 d41d8cd98f00b204e9800998ecf8427e ""
   "note4.tex" 1674510109 5974 68d9c8977adb412ac7dc02fa661fb578 ""
   (generated)
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.pdf"
   "note4.log"
+  "note4.aux"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.log"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.pdf"
   "note4.out"
   "note4.pdf"
-  "note4.aux"
