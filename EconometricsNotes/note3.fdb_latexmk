@@ -4,8 +4,8 @@
   "note3.aux" 1675197246 2695 8b76c5f45b1534ab623c6fecc3d18e6e ""
   "ref.bib" 1673224231 2069 ea6480cc5cc4bb56f1090377e03c37a2 ""
   (generated)
-  "note3.blg"
   "note3.bbl"
+  "note3.blg"
 ["pdflatex"] 1675197244 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.pdf" "note3" 1675197247
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.aux" 1675197246 2695 8b76c5f45b1534ab623c6fecc3d18e6e ""
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.tex" 1675197243 24065 d49be6cad9c0e1ffdf2bcf56777e6f83 ""
@@ -294,9 +294,9 @@
   "note3.out" 1675197246 400 062c78cc856fd7f78344abf000b8afc5 ""
   "note3.tex" 1675197243 24065 d49be6cad9c0e1ffdf2bcf56777e6f83 ""
   (generated)
+  "note3.aux"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.pdf"
+  "note3.pdf"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.log"
   "note3.log"
   "note3.out"
-  "note3.aux"
-  "note3.pdf"
