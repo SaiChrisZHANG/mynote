@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex note3"] 1674954295 "note3.aux" "note3.bbl" "note3" 1675061763
+["bibtex note3"] 1674954295 "note3.aux" "note3.bbl" "note3" 1675061805
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "note3.aux" 1675061762 2695 8b76c5f45b1534ab623c6fecc3d18e6e ""
   "ref.bib" 1673224231 2069 ea6480cc5cc4bb56f1090377e03c37a2 ""
   (generated)
   "note3.bbl"
   "note3.blg"
-["pdflatex"] 1675061761 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.pdf" "note3" 1675061763
+["pdflatex"] 1675061761 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.pdf" "note3" 1675061805
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.aux" 1675061762 2695 8b76c5f45b1534ab623c6fecc3d18e6e ""
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.tex" 1675061761 24053 fbad4a3ab6143ac41ec036bc545b33ff ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -296,7 +296,7 @@
   (generated)
   "note3.out"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.pdf"
-  "note3.pdf"
-  "note3.aux"
   "note3.log"
+  "note3.aux"
+  "note3.pdf"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note3.log"
