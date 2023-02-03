@@ -8,6 +8,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/settings.tex
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/settings.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
