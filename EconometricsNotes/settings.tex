@@ -79,6 +79,9 @@
 \newtcbtheorem[use counter*=defin, number within=section]{proposition}{Proposition}{enhanced, breakable,
     colback = white, colframe = teal, colbacktitle = teal, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries}{prop}
 
+\newtcbtheorem[use counter*=defin, number within=section]{lemma}{Lemma}{enhanced, breakable,
+    colback = white, colframe = orange!80!black, colbacktitle = orange!80!black, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries}{lemma}
+
 \newtcolorbox{example}[1]{enhanced, breakable, colback = white, colframe = orange!85!black, colbacktitle = orange!85!black, attach boxed title to top left = {yshift = -2.5mm, xshift = 3mm}, boxed title style = {sharp corners},fonttitle=\bfseries, title={Example: #1}}
 
 \newtcbox{\myhl}[1][white]
@@ -128,10 +131,10 @@
    \markboth{Week #1: #2}{Week #1: #2}
 
    {\bf Key points}: {\begin{itemize}
-    \item
+    \item 
    \end{itemize}}
 
-   {\bf Disclaimer}: {\it These notes are written by Sai Zhang (\href{mailto:saizhang.econ@gmail.com}{email me})}
+   {\bf Disclaimer}: {\it These notes are written by Sai Zhang (\href{mailto:saizhang.econ@gmail.com}{email me} or check my \href{https://github.com/SaiChrisZHANG}{Github page}). The main references for this topic are \citet{armstrong2020bias,armstrong2018optimal}, I thank Prof. Armstrong for his valuable advice.}
    \vspace*{4mm}
 }
 %
