@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  4 FEB 2023 17:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  4 FEB 2023 17:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.tex"
-(/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.tex
+**"/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.tex"
+(/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -1017,55 +1017,55 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 45.
 \c@defin=\count173
 \c@lecnum=\count174
 )
-LaTeX Font Info:    Try loading font information for T1+zpltlf on input line 5.
+LaTeX Font Info:    Try loading font information for T1+zpltlf on input line 4.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zpltlf.fd
 File: t1zpltlf.fd 2015/01/17 v1.0 font definition file for T1/zpl/tlf
 )
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 5.
- (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.aux)
-\openout1 = `note4.aux'.
+(Font)              scaled to size 10.0pt on input line 4.
+ (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux)
+\openout1 = `note1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 5.
-LaTeX Font Info:    Try loading font information for OML+npxmi on input line 5.
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 4.
+LaTeX Font Info:    Try loading font information for OML+npxmi on input line 4.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 5.
-LaTeX Font Info:    Try loading font information for U+npxexa on input line 5.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 4.
+LaTeX Font Info:    Try loading font information for U+npxexa on input line 4.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxexa.fd
 File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
 )
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 5.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 4.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 5.
-LaTeX Font Info:    Try loading font information for LMS+npxsy on input line 5.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 4.
+LaTeX Font Info:    Try loading font information for LMS+npxsy on input line 4.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 File: lmsnpxsy.fd 2016/08/13 Fontinst v1.933 font definitions for LMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 5.
-LaTeX Font Info:    Try loading font information for LMX+npxexx on input line 5.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 4.
+LaTeX Font Info:    Try loading font information for LMX+npxexx on input line 4.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 File: lmxnpxexx.fd 2016/08/13 Fontinst v1.933 font definitions for LMX/npxexx.
 )
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    ... okay on input line 4.
 Package marginnote Info: \pdfoutput not 0 or unimportant and
 (marginnote)             \pdflastxpos or \lastxpos available.
 (marginnote)             Extended position detection mode activated.
@@ -1077,7 +1077,7 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 5.
+Package hyperref Info: Link coloring ON on input line 4.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1085,12 +1085,12 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count175
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
- (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.out) (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.out)
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+LaTeX Info: Redefining \nameref on input line 4.
+ (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out) (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.out)
 \@outlinefile=\write6
-\openout6 = `note4.out'.
+\openout6 = `note1.out'.
 
  ABD: EveryShipout initializing macros (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1123,54 +1123,38 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <10> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 6.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 6.
+(Font)              scaled to size 10.0pt on input line 8.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 6.
+(Font)              scaled to size 14.4pt on input line 8.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 6.
-LaTeX Font Info:    Try loading font information for TS1+zpltlf on input line 6.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
-File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
-)
-LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 6.
-
-
-Package natbib Warning: Citation `armstrong2020bias' on page 4-1 undefined on input line 6.
-
-
-Package natbib Warning: Citation `armstrong2018optimal' on page 4-1 undefined on input line 6.
-
-
-Package natbib Warning: There were undefined citations.
-
+(Font)              scaled to size 10.0pt on input line 8.
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 14.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 14.
- (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 14.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 14.
-Package rerunfilecheck Info: File `note4.out' has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 13.
+ (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 13.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 13.
+Package rerunfilecheck Info: File `note1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 14.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13.
  ) 
 Here is how much of TeX's memory you used:
- 34585 strings out of 492649
- 815120 string characters out of 6129623
- 1052890 words of memory out of 5000000
- 37897 multiletter control sequences out of 15000+600000
- 16700 words of font info for 20 fonts, out of 8000000 for 9000
+ 34553 strings out of 492649
+ 814518 string characters out of 6129623
+ 1051890 words of memory out of 5000000
+ 37869 multiletter control sequences out of 15000+600000
+ 16323 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,6n,136p,1053b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note4.pdf" (1 page, 64570 bytes).
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note1.pdf" (1 page, 55546 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 29 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

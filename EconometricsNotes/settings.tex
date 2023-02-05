@@ -109,7 +109,7 @@
 %
 % The following macro is used to generate the header.
 %
-\newcommand{\lecture}[4]{
+\newcommand{\lecture}[6]{
    \pagestyle{myheadings}
    \thispagestyle{plain}
    \newpage
@@ -130,11 +130,9 @@
    \end{center}
    \markboth{Week #1: #2}{Week #1: #2}
 
-   {\bf Key points}: {\begin{itemize}
-    \item 
-   \end{itemize}}
+   {\bf Key points}: {#5}
 
-   {\bf Disclaimer}: {\it These notes are written by Sai Zhang (\href{mailto:saizhang.econ@gmail.com}{email me} or check my \href{https://github.com/SaiChrisZHANG}{Github page}). The main references for this topic are \citet{armstrong2020bias,armstrong2018optimal}, I thank Prof. Armstrong for his valuable advice.}
+   {\bf Disclaimer}: {\it #6}
    \vspace*{4mm}
 }
 %
