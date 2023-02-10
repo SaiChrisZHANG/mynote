@@ -12,7 +12,10 @@ For data $\left(\mathbf{x}_i,y_i\right)^n_{i=1}$, where
     \item[-] $y_i$ is the outcome for individual $i$
     \item[-] $\mathbf{x}_i = \left(x_{i1},\cdots,x_{ip}\right)'$ is the $p\times 1$ vector of predictors
 \end{itemize}
-
+Then the Lasso estimator $\left(\hat{\alpha},\hat{\boldsymbol{\beta}}\right)$ is defined as 
+\begin{align*}
+    \left(\hat{\alpha},\hat{\boldsymbol{\beta}}\right) &= \arg\min_{\alpha,\boldsymbol{\beta}}\left\{ \sum^n_{i=1}\left(y_i-\alpha-\sum^p_{j=1}\beta_jx_{ij}\right)^2 \right\} & \text{s.t. }\sum^p_{j=1}\lvert \beta_j \rvert\leq t
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
