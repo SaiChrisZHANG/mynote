@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  10 FEB 2023 14:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  10 FEB 2023 14:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1168,34 +1168,40 @@ LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 9.
+LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 10.
+LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
+(Font)              scaled to size 7.3pt on input line 10.
+LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
+(Font)              scaled to size 5.5pt on input line 10.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.bbl)
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
-(Font)              scaled to size 10.0pt on input line 16.
+(Font)              scaled to size 10.0pt on input line 21.
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 16.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 16.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 21.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 21.
  (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 16.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 16.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 21.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 21.
 Package rerunfilecheck Info: File `note11.out' has not changed.
 (rerunfilecheck)             Checksum: 84C2C3C24EE1040F1C42C1FCEF0BA255;41.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 16.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 21.
  ) 
 Here is how much of TeX's memory you used:
- 34720 strings out of 492649
- 817942 string characters out of 6129623
- 1052890 words of memory out of 5000000
- 37991 multiletter control sequences out of 15000+600000
- 38910 words of font info for 57 fonts, out of 8000000 for 9000
+ 34738 strings out of 492649
+ 818109 string characters out of 6129623
+ 1053890 words of memory out of 5000000
+ 37995 multiletter control sequences out of 15000+600000
+ 45779 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,6n,136p,1054b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.pdf" (2 pages, 103349 bytes).
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.pdf" (2 pages, 115296 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
