@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  11 FEB 2023 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  11 FEB 2023 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1182,16 +1182,16 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.bbl)
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
-(Font)              scaled to size 10.0pt on input line 33.
+(Font)              scaled to size 10.0pt on input line 35.
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 33.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 33.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 35.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 35.
  (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 33.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 33.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 35.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 35.
 Package rerunfilecheck Info: File `note11.out' has not changed.
 (rerunfilecheck)             Checksum: 8312CB500B4C45B0E118098A9CB0EB17;109.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 33.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 35.
  ) 
 Here is how much of TeX's memory you used:
  34782 strings out of 492649
