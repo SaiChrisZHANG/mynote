@@ -33,8 +33,12 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat = newest}
-\usetikzlibrary{patterns,decorations.pathreplacing,decorations.markings,fit}
+\usetikzlibrary{patterns,decorations.pathreplacing,decorations.markings,fit,shapes.geometric}
 \usepgfplotslibrary{fillbetween}
+
+\pgfdeclarelayer{ft}
+\pgfdeclarelayer{bg}
+\pgfsetlayers{bg,main,ft}
 
 \hypersetup{
     colorlinks,
@@ -43,6 +47,12 @@
     linkcolor=violet,
     urlcolor=blue
 }
+
+\definecolor{myblue}{cmyk}{1,.72,0,.38}
+\definecolor{mypurple}{cmyk}{.57,1,0,.58}
+\definecolor{myred}{cmyk}{0,.88,.88,.58}
+\definecolor{mygreen}{cmyk}{1,0,.69,.66}
+\definecolor{myorange}{cmyk}{0,.58,100,.20}
 
 \makeatletter
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
