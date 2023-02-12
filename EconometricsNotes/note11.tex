@@ -26,7 +26,36 @@ $$
 \min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 + \sum^p_{j=1}p_{\lambda}\left( \lvert \beta_j \rvert \right) \right\}
 $$
 
-
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+      \begin{tikzpicture}[scale=1.4]
+          % basics
+          \draw [-stealth,color=black,thick] (0,2) -- (4,2);
+          \draw [-stealth,color=black,thick] (2,0) -- (2,4);
+          \draw [-,color=black,thick] (2,3) -- (3,2) -- (2,1) -- (1,2) -- (2,3);
+          %\draw [-,color=black,thick,densely dashed] (1.5,1.5) -- (1.5,0);
+          %\draw [-,color=red!55!black,thick,densely dashed] (0,2.5) -- (2.5,2.5);
+          %\draw [-,color=red!55!black,thick,densely dashed] (2.5,2.5) -- (2.5,0);
+          %\draw [-stealth, color=red!55!black,thick] (0.2,1.5) -- (0.2,2.5);
+          
+      \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+      \begin{tikzpicture}[scale=1.4]
+        \draw [-stealth,color=black,thick] (0,2) -- (4,2);
+        \draw [-stealth,color=black,thick] (2,0) -- (2,4);%\draw[domain=0.2:3.1, black, thick, variable=\x] plot ({\x}, {\x});
+          %\draw[domain=0.2:1.6, red!55!black, thick, variable=\x] plot ({\x}, {1.5+\x});
+          %\draw [-,color=black,thick,densely dashed] (0,1.8) -- (1.8,1.8);
+          %\draw [-,color=black,thick,densely dashed] (1.8,1.8) -- (1.8,0);
+          %\draw [-,color=red!55!black,thick,densely dashed] (0,2.3) -- (0.8,2.3);
+          %\draw [-,color=red!55!black,thick,densely dashed] (0.8,2.3) -- (0.8,0);
+          %\draw [-stealth, color=red!55!black,thick] (0.2,1.8) -- (0.2,2.3);
+      \end{tikzpicture}
+      \caption*{Ridge}
+    \end{minipage}
+  \end{figure}
 
 \newpage
 \bibliographystyle{plainnat}
