@@ -18,8 +18,13 @@ Then the Lasso estimator $\left(\hat{\alpha},\hat{\boldsymbol{\beta}}\right)$ is
 \end{align*}
 
 
+for the $n\times 1$ response vector $\mathbf{y}=\left( y_1,\cdots,y_n \right)'$, the $n\times p$ design matrix $\mathbf{X}=\left(\mathbf{x}_1,\cdots,\mathbf{x}_n\right)'$ where $\mathbf{x}_i= \left( x_{i1},cdots,x_{ip} \right)' $ is a $p\times 1$ vector.
+
 \section{Penalized Least Square Estimation}
-Lasso is one special class of Penalized Least Square (PLS) Estimation,
+Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
+$$
+\min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 + \sum^p_{j=1}p_{\lambda}\left( \lvert \beta_j \rvert \right) \right\}
+$$
 
 \newpage
 \bibliographystyle{plainnat}
