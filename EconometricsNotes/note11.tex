@@ -36,11 +36,12 @@ $$
           \draw [name path=lup,color=black,thick] (1,2) -- (2,3) -- (3,2);
           \draw [name path=ldown,color=black,thick]  (3,2) -- (2,1) node[right,xshift=2pt, yshift=-2pt] {Lasso} -- (1,2);
           \draw [name path=lmid, color=black, thick] (1,2) -- (3,2);
-          \tikzfillbetween[of=lup and ldown, on layer=main]{blue!45!black};
+          \tikzfillbetween[of=lup and ldown, on layer=main]{myblue};
           \draw [rotate=45, thick, color=myred] (5.05,0.7) ellipse (1.5cm and 0.5cm);
           \draw [rotate=45, thick, color=myred] (5.05,0.7) ellipse (1.2cm and 0.4cm);
           \draw [rotate=45, thick, color=myred] (5.05,0.7) ellipse (0.75cm and 0.25cm);
           \filldraw [color=myred] (3.05,4.05) circle (1pt) node[right] {$\hat{\boldsymbol{\beta}}$};
+          \filldraw [color=black] (2,3) circle (2pt);
       \end{tikzpicture}
     \end{minipage}
     \hfill
@@ -49,14 +50,15 @@ $$
             % basics
             \draw [-stealth,color=black,thick] (0,2) -- (4,2);
             \draw [-stealth,color=black,thick] (2,0) -- (2,4);
-            \draw [name path=lup,color=black,thick] (1,2) -- (2,3) -- (3,2);
-            \draw [name path=ldown,color=black,thick]  (3,2) -- (2,1) node[right,xshift=2pt, yshift=-2pt] {Lasso} -- (1,2);
-            \draw [name path=lmid, color=black, thick] (1,2) -- (3,2);
-            \tikzfillbetween[of=lup and ldown, on layer=main]{blue!45!black};
-            \draw [rotate=45, thick, color=myred] (5.05,0.7) ellipse (1.5cm and 0.5cm);
-            \draw [rotate=45, thick, color=myred] (5.05,0.7) ellipse (1.2cm and 0.4cm);
-            \draw [rotate=45, thick, color=myred] (5.05,0.7) ellipse (0.75cm and 0.25cm);
+            \draw [color=black,thick] (2,2) -- (2,1) node[right,xshift=5pt,yshift=-5pt] {Ridge};
+            %\draw [name path=ldown,color=black,thick]  (3,2) -- (2,1) node[right,xshift=2pt, yshift=-2pt] {Lasso} -- (1,2);
+            %\draw [name path=lmid, color=black, thick] (1,2) -- (3,2);
+            \node[circle,draw,minimum size=3.2cm, fill =myblue] (c) at (2,2){};
+            \draw [rotate=45, thick, color=myred] (5.1,0.72) ellipse (1.5cm and 0.5cm);
+            \draw [rotate=45, thick, color=myred] (5.1,0.72) ellipse (1.2cm and 0.4cm);
+            \draw [rotate=45, thick, color=myred] (5.1,0.72) ellipse (0.75cm and 0.25cm);
             \filldraw [color=myred] (3.05,4.05) circle (1pt) node[right] {$\hat{\boldsymbol{\beta}}$};
+            \filldraw [color=black] (2,3) circle (2pt);
         \end{tikzpicture}
     \end{minipage}
   \end{figure}

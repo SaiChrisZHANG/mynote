@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  12 FEB 2023 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  12 FEB 2023 11:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1189,32 +1189,31 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 5.5pt on input line 18.
 Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.bbl)
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
-(Font)              scaled to size 10.0pt on input line 68.
+(Font)              scaled to size 10.0pt on input line 70.
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `note11.out' has not changed.
 (rerunfilecheck)             Checksum: 8312CB500B4C45B0E118098A9CB0EB17;109.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 35359 strings out of 492649
- 832893 string characters out of 6129623
+ 35375 strings out of 492649
+ 833233 string characters out of 6129623
  1059890 words of memory out of 5000000
- 38585 multiletter control sequences out of 15000+600000
+ 38601 multiletter control sequences out of 15000+600000
  65649 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,14n,136p,1054b,730s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,14n,136p,1054b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.pdf" (2 pages, 130816 bytes).
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.pdf" (2 pages, 131466 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
