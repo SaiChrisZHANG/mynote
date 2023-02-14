@@ -30,6 +30,11 @@ In matrix form, we have
         \hat{\boldsymbol{\beta}}(\lambda) &= \arg\min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 +\lambda \lVert \boldsymbol{\beta} \rVert_1 \right\}
     \end{align*}
 \end{itemize}
+where the regularization parameter $\lambda \geq 0$:
+\begin{itemize}
+    \item[-] $\lambda \rightarrow \infty$: $\hat{\boldsymbol{\beta}}_{lasso}\rightarrow\hat{\boldsymbol{\beta}}_{OLS}$
+    \item[-] $\lambda = 0$: $\hat{\boldsymbol{\beta}}_{lasso}=\mathbf{0}$
+\end{itemize}
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
