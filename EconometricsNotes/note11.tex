@@ -14,17 +14,26 @@ For data $\left(\mathbf{x}_i,y_i\right)^n_{i=1}$, where
 \end{itemize}
 Then the Lasso estimator $\left(\hat{\alpha},\hat{\boldsymbol{\beta}}\right)$ is defined as 
 \begin{align*}
-    \left(\hat{\alpha},\hat{\boldsymbol{\beta}}\right) &= \arg\min_{\alpha,\boldsymbol{\beta}}\left\{ \sum^n_{i=1}\left(y_i-\alpha-\sum^p_{j=1}\beta_jx_{ij}\right)^2 \right\} & \text{s.t. }\sum^p_{j=1}\lvert \beta_j \rvert\leq t
+    \left(\hat{\alpha},\hat{\boldsymbol{\beta}}\right) &= \arg\min_{\alpha,\boldsymbol{\beta}}\left\{ \sum^n_{i=1}\left(y_i-\alpha-\sum^p_{j=1}\beta_jx_{ij}\right)^2 \right\} & \text{s.t. }\sum^p_{j=1}\lvert \beta_j \rvert\leq \lambda
 \end{align*}
 
+for the $n\times 1$ response vector $\mathbf{y}=\left( y_1,\cdots,y_n \right)'$, the $n\times p$ design matrix $\mathbf{X}=\left(\mathbf{x}_1,\cdots,\mathbf{x}_n\right)'$ where $\mathbf{x}_i= \left( x_{i1},\cdots,x_{ip} \right)' $ is a $p\times 1$ vector. Here $\hat{\alpha}=\bar{y}$, w.l.o.g., let $\bar{y}=0$ and omit $\alpha$ for simplicity.
 
-for the $n\times 1$ response vector $\mathbf{y}=\left( y_1,\cdots,y_n \right)'$, the $n\times p$ design matrix $\mathbf{X}=\left(\mathbf{x}_1,\cdots,\mathbf{x}_n\right)'$ where $\mathbf{x}_i= \left( x_{i1},cdots,x_{ip} \right)' $ is a $p\times 1$ vector.
+In matrix form, we have
+\begin{itemize}
+    \item constrained form:
+    \begin{align*}
+        \hat{\boldsymbol{\beta}} = \min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 \right\}
+    \end{align*}
+    \item unconstrained form:
+\end{itemize}
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
 $$
 \min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 + \sum^p_{j=1}p_{\lambda}\left( \lvert \beta_j \rvert \right) \right\}
 $$
+where $p_{\lambda}(\cdot)$ is a penalty function indexed by the regularization parameter $\lambda \geq 0$
 
 
 \begin{figure}[ht]
