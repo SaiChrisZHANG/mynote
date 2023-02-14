@@ -23,9 +23,12 @@ In matrix form, we have
 \begin{itemize}
     \item constrained form:
     \begin{align*}
-        \hat{\boldsymbol{\beta}} = \min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 \right\}
+        \hat{\boldsymbol{\beta}} &= \arg\min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 \right\} & \text{s.t.\ } & \lVert \boldsymbol{\beta} \rVert_1 \leq \lambda
     \end{align*}
     \item unconstrained form:
+    \begin{align*}
+        \hat{\boldsymbol{\beta}}(\lambda) &= \arg\min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 +\lambda \lVert \boldsymbol{\beta} \rVert_1 \right\}
+    \end{align*}
 \end{itemize}
 
 \section{Penalized Least Square Estimation}
