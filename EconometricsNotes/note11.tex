@@ -2,11 +2,12 @@
 \input{settings.tex}
 
 \begin{document}
-\lecture{11}{Lasso}{}{Sai Zhang}{}{}
+\lecture{11}{Lasso And Beyond: Convex Learning}{}{Sai Zhang}{}{}
 
+\section{Lasso}
 Lasso (Least absolute Shrinkage and Selection Operator), proposed by \citet{tibshirani1996regression}, aims to minimize the \myhl[blue!45!black]{\textbf{SSR \textit{(sum of residual squares)}}} subject to the \myhl[red!55!black]{\textbf{$L1-$norm \textit{(sum of the absolute value)}}} of the coefficients being less than a constant.
 
-\section{Set up}
+\subsection{Set up}
 For data $\left(\mathbf{x}_i,y_i\right)^n_{i=1}$, where
 \begin{itemize}
     \item[-] $y_i$ is the outcome for individual $i$
@@ -36,10 +37,11 @@ where the regularization parameter $\lambda \geq 0$:
     \item[-] $\lambda = 0$: $\hat{\boldsymbol{\beta}}_{lasso}=\mathbf{0}$
 \end{itemize}
 
-\section{Solving Lasso}
+\subsection{Solving Lasso}
 Lasso is essentially a quadratic optimization problem. Hence, the solution is given by taking the derivative (of the unconstrainted question) and set it equal to 0
 \begin{align*}
-   \frac{\mathrm{d}}{\mathrm{d}\boldsymbol{\beta}} \left( \frac{1}{2n}  \right)
+   && \frac{\mathrm{d}}{\mathrm{d}\boldsymbol{\beta}} \left( \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 +\lambda \lVert \boldsymbol{\beta} \rVert_1 \right) = 0 \\
+   \Rightarrow && \underbrace{\mathbf{X}'}_{p\times n} \underbrace{ \left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right)}_{=\boldsymbol{\epsilon}, n \times 1} = 
 \end{align*}
 
 
