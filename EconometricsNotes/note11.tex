@@ -41,7 +41,10 @@ where the regularization parameter $\lambda \geq 0$:
 Lasso is essentially a quadratic optimization problem. Hence, the solution is given by taking the derivative (of the unconstrainted question) and set it equal to 0
 \begin{align*}
    && \frac{\mathrm{d}}{\mathrm{d}\boldsymbol{\beta}} \left( \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 +\lambda \lVert \boldsymbol{\beta} \rVert_1 \right) = 0 \\
-   \Rightarrow && \underbrace{\mathbf{X}'}_{p\times n} \underbrace{ \left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right)}_{=\boldsymbol{\epsilon}, n \times 1} = 
+   \Rightarrow && \frac{1}{n} \underbrace{\mathbf{X}'}_{p\times n} \underbrace{ \left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right)}_{=\boldsymbol{\epsilon}, n \times 1} = \lambda \begin{cases}
+    \mathrm{sign}\left(\beta_j\right), & \beta_j\neq 0\\
+    \left[ -1,1 \right], & \beta_j =0
+   \end{cases}
 \end{align*}
 
 
