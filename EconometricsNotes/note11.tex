@@ -78,6 +78,16 @@ this result follows the fact the L-1 norm $\lVert \boldsymbol{\beta} \rVert$ is 
     which gives the results stated above.
 \end{minipage}
 
+Take another look at this result 
+$$
+\frac{1}{n} \mathbf{X}'  \left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right) =\frac{1}{n} \mathbf{X}'\boldsymbol{\epsilon}  = \lambda \begin{cases}
+    \mathrm{sign}\left(\beta_j\right), & \beta_j\neq 0\\
+    \left[ -1,1 \right], & \beta_j =0
+   \end{cases}
+$$
+which gives the parameter selection criterion: for $\beta_j \neq 0$, $\mathrm{sign}(\beta_j)$ \myhl[myred]{\textbf{must agree}} with, $\mathrm{Corr}(X_j,\boldsymbol{\epsilon})$ , the correlation between the $j$-th variable $\mathbf{X}_j$ and (full-model) residuals $\boldsymbol{\epsilon}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}$.
+
+
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
 $$
