@@ -46,7 +46,22 @@ Lasso is essentially a quadratic optimization problem. Hence, the solution is gi
     \left[ -1,1 \right], & \beta_j =0
    \end{cases}
 \end{align*}
+this result follows the fact the L-1 norm $\lVert \boldsymbol{\beta} \rVert$ is piecewise linear:
 
+\begin{minipage}{0.45\textwidth}
+    \centering
+        \begin{tikzpicture}[scale=1.4]
+            % basics
+            \draw [-stealth,color=black,thick] (2,-1) -- (2,2);
+            \draw [-stealth,color=black,thick] (0,0) -- (4,0);
+            \draw [color = myblue, thick] (0,2) -- (2,0);
+            \draw [color = myred, thick] (2,0) -- (4,2);
+        \end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    something
+\end{minipage}
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
