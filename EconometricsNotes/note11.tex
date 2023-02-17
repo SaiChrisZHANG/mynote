@@ -54,15 +54,22 @@ this result follows the fact the L-1 norm $\lVert \boldsymbol{\beta} \rVert$ is 
             % basics
             \draw [-stealth,color=black,very thick] (2,-1) -- (2,2);
             \draw [-stealth,color=black,very thick] (0,0) -- (4,0);
-            \draw [color = myblue, very thick] (0,2) -- (2,0);
-            \draw [color = myred, very thick] (2,0) -- (4,2);
-            \draw [color = myblue, very thick, densely dashed] (2.5,-0.5) -- (2,0);
-            \draw [color = myred, very thick, densely dashed] (2,0) -- (1.5,-0.5);
+            \draw [name path = neg_up, color = myblue, very thick] (0,2) -- (2,0);
+            \draw [name path = pos_up, color = myred, very thick] (2,0) -- (4,2);
+            \draw [name path = pos_down, color = myblue, very thick, densely dashed] (2.8,-0.8) -- (2,0);
+            \draw [name path = neg_down, color = myred, very thick, densely dashed] (2,0) -- (1.2,-0.8);
+            \filldraw [color=black] (2,0) circle (2pt);
+            \draw [color = black, very thick, densely dashed] (0.5,-0.25) -- (3.5,0.25);
+            \draw [color = black, very thick, densely dashed] (0.5,0.75) -- (3.5,-0.75);
+            \tikzfillbetween[of=neg_up and neg_down, on layer=bg]{black!20!white};
+            \tikzfillbetween[of=pos_up and pos_down, on layer=bg]{black!20!white};
         \end{tikzpicture}
+
+        L1-norm (1-dimension)
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
-    something
+    For L-1 norm, ()
 \end{minipage}
 
 \section{Penalized Least Square Estimation}
