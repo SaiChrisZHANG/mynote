@@ -99,6 +99,11 @@ where $p_{\lambda}(\cdot)$ is a penalty function indexed by the regularization p
     \item \textbf{\underline{approximate unbiasedness}}: if $p'_{\lambda}(t)=0$ for $t$ large enough
     \item \textbf{\underline{continuity}}: iff $\arg \min_{t\geq 0}\left\{ t+p'_{\lambda}(t) \right\}=0$
 \end{itemize}
+In general
+\begin{itemize}
+    \item[-] the \myhl[red!55!black]{\textbf{sigularity}} of penalty function at the origin, $p'_{\lambda}(0_+)>0$ is needed for generating \textbf{sparsity} in variable selection
+    \item[-] the \myhl[red!55!black]{\textbf{concavity}} is needed to reduce the bias
+\end{itemize}
 
 
 \begin{figure}[ht]
