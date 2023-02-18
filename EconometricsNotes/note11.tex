@@ -95,8 +95,8 @@ $$
 $$
 where $p_{\lambda}(\cdot)$ is a penalty function indexed by the regularization parameter $\lambda \geq 0$. \citet{antoniadis2001regularization} showed that the PLS estimator $\hat{\boldsymbol{\beta}}$ has the following properties:
 \begin{itemize}
-    \item \textbf{\underline{sparsity}}:
-    \item \textbf{\underline{approximate unbiasedness}}:
+    \item \textbf{\underline{sparsity}}: if $\min_{t\geq 0}\left\{ t+p'_{\lambda}(t) \right\}>0$
+    \item \textbf{\underline{approximate unbiasedness}}: if $p'_{\lambda}(t)=0$ for $t$ large enough
     \item \textbf{\underline{continuity}}:
 \end{itemize}
 
