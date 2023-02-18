@@ -93,7 +93,12 @@ Lasso is one special class of Penalized Least Square (PLS) Estimation. For the l
 $$
 \min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 + \sum^p_{j=1}p_{\lambda}\left( \lvert \beta_j \rvert \right) \right\}
 $$
-where $p_{\lambda}(\cdot)$ is a penalty function indexed by the regularization parameter $\lambda \geq 0$
+where $p_{\lambda}(\cdot)$ is a penalty function indexed by the regularization parameter $\lambda \geq 0$. \citet{antoniadis2001regularization} showed that the PLS estimator $\hat{\boldsymbol{\beta}}$ has the following properties:
+\begin{itemize}
+    \item \textbf{\underline{sparsity}}:
+    \item \textbf{\underline{approximate unbiasedness}}:
+    \item \textbf{\underline{continuity}}:
+\end{itemize}
 
 
 \begin{figure}[ht]
