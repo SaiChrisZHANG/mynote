@@ -85,7 +85,12 @@ $$
     \left[ -1,1 \right], & \beta_j =0
    \end{cases}
 $$
-which gives the parameter selection criterion: for $\beta_j \neq 0$, $\mathrm{sign}(\beta_j)$ \myhl[myred]{\textbf{must agree}} with, $\mathrm{Corr}(X_j,\boldsymbol{\epsilon})$ , the correlation between the $j$-th variable $\mathbf{X}_j$ and (full-model) residuals $\boldsymbol{\epsilon}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}$.
+which gives the parameter selection criterion
+\begin{proposition}{Lasso Parameter Selection Rule}{lasso-math}
+    for $\beta_j \neq 0$, $\mathrm{sign}(\beta_j)$ \myhl[myred]{\textbf{must agree}} with, $\mathrm{Corr}(X_j,\boldsymbol{\epsilon})$ , the correlation between the $j$-th variable $\mathbf{X}_j$ and (full-model) residuals $\boldsymbol{\epsilon}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}$
+\end{proposition}
+
+
 
 
 \section{Penalized Least Square Estimation}

@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note11"] 1676755204 "note11.aux" "note11.bbl" "note11" 1676940633
+["bibtex note11"] 1676940901 "note11.aux" "note11.bbl" "note11" 1676940960
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "note11.aux" 1676940633 1346 56b143770dc2a2a9c9035d4ee597064e ""
+  "note11.aux" 1676940903 1434 73cdbd12db16ab6431a6defb63ab0f71 ""
   "ref.bib" 1676755155 2681 1d894de4a29db68e54ef8334cc88b4e7 ""
   (generated)
-  "note11.bbl"
   "note11.blg"
-["pdflatex"] 1676940631 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.pdf" "note11" 1676940633
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.aux" 1676940633 1346 56b143770dc2a2a9c9035d4ee597064e ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.tex" 1676940631 8898 45ddd904ddb2da96c620e1db8a0f0be3 ""
+  "note11.bbl"
+["pdflatex"] 1676940902 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.pdf" "note11" 1676940960
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.aux" 1676940903 1434 73cdbd12db16ab6431a6defb63ab0f71 ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.tex" 1676940960 8984 b4fb6ac0caf1545bef08264774d669c4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -307,15 +307,15 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note11.aux" 1676940633 1346 56b143770dc2a2a9c9035d4ee597064e ""
-  "note11.bbl" 1676755205 805 e36db2b67f0b0320b54ea614a5e6cc54 "bibtex note11"
-  "note11.out" 1676940633 225 984751a80f4f0bdc3311d8fe4de8bb8d ""
-  "note11.tex" 1676940631 8898 45ddd904ddb2da96c620e1db8a0f0be3 ""
+  "note11.aux" 1676940903 1434 73cdbd12db16ab6431a6defb63ab0f71 ""
+  "note11.bbl" 1676940902 805 e36db2b67f0b0320b54ea614a5e6cc54 "bibtex note11"
+  "note11.out" 1676940903 225 984751a80f4f0bdc3311d8fe4de8bb8d ""
+  "note11.tex" 1676940960 8984 b4fb6ac0caf1545bef08264774d669c4 ""
   "settings.tex" 1676224517 6199 146f1eb1ede800a8b7cc1c766992fe74 ""
   (generated)
-  "note11.out"
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.log"
   "note11.pdf"
-  "note11.aux"
+  "note11.out"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.pdf"
+  "note11.aux"
   "note11.log"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.log"
