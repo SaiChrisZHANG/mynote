@@ -89,7 +89,8 @@ Take another look at this result
     which gives a parameter selection criterion: for $\beta_j \neq 0$, \myhl[myred]{$\mathrm{sign}(\beta_j)$ \textbf{must agree} with $\mathrm{Corr}(X_j,\boldsymbol{\epsilon})$}, the correlation between the $j$-th variable $\mathbf{X}_j$ and (full-model) residuals $\boldsymbol{\epsilon}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}$.
 \end{proposition}
 
-
+\subsection{Algorithm: from LARS to Lasso}
+Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an alogrithm that takes steps from a all-0 model to the biggest model, OLS
 
 
 \section{Penalized Least Square Estimation}
