@@ -90,7 +90,9 @@ Take another look at this result
 \end{proposition}
 
 \subsection{Algorithm: from LARS to Lasso}
-Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an alogrithm that takes steps from a all-0 model to the biggest model (OLS), that is, 
+Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an alogrithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
+
+\subsubsection*{Forward Selection}
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
