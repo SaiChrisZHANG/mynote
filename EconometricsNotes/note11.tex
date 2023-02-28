@@ -92,8 +92,10 @@ Take another look at this result
 \subsection{Algorithm: from LARS to Lasso}
 Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an alogrithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
 
-\subsubsection*{Intuition: Forward Selection}
-The basic intuition of LARS echos a classic model-selection method, \textbf{Forward Selection} (forward stepwise regression). T
+\subsubsection*{Intuition}
+The basic intuition of LARS is quite straight-forward: that is, covariates are considered from the highest corerlation with $\mathbf{y}$
+
+echos a classic model-selection method, \textbf{Forward Selection} (forward stepwise regression):
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
