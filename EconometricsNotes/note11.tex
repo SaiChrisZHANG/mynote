@@ -93,7 +93,45 @@ Take another look at this result
 Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an alogrithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
 
 \subsubsection*{Intuition}
-The basic intuition of LARS is quite straight-forward: that is, covariates are considered from the \myhl[myred]{\textbf{\textit{highest}}} corerlation with $\mathbf{y}$ to the \myhl[myblue]{\textbf{\textit{least}}} correlated one.
+The basic intuition of LARS is quite straight-forward: covariates are considered from the \myhl[myred]{\textbf{\textit{highest}}} corerlation with $\mathbf{y}$ (\textit{smallest} angle from $\mathbf{y}$) to the \myhl[myblue]{\textbf{\textit{least}}} correlated one (\textit{largest} angle from $\mathbf{y}$).
+
+\tdplotsetmaincoords{60}{120}
+\begin{tikzpicture}
+	[scale=3,
+		tdplot_main_coords,
+		axis/.style={->,blue,thick},
+		vector/.style={-stealth,red,very thick},
+		vector guide/.style={dashed,red,thick}]
+
+	%standard tikz coordinate definition using x, y, z coords
+	\coordinate (O) at (0,0,0);
+	
+	%tikz-3dplot coordinate definition using r, theta, phi coords
+	\tdplotsetcoord{P}{.8}{55}{60}
+	
+	%draw axes
+	\draw[axis] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+	\draw[axis] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+	\draw[axis] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+	
+	%draw a vector from O to P
+	\draw[vector] (O) -- (P);
+	
+	%draw guide lines to components
+	\draw[vector guide] (O) -- (Pxy);
+	\draw[vector guide] (Pxy) -- (P);
+\end{tikzpicture}
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[scale = 1.5]
+        \draw [-stealth,color=black,thick] (0,2) -- (4,2);
+          \draw [-stealth,color=black,thick] (2,0) node[below] {Lasso} -- (2,4);
+          \draw [color=black,thick] (1,2) -- (2,3) -- (3,2);
+          \draw [color=black,thick]  (3,2) -- (2,1) -- (1,2);
+          \draw [color=black, thick] (1,2) -- (3,2);
+    \end{tikzpicture}
+\end{figure}
 
 echos a classic model-selection method, \textbf{Forward Selection} (forward stepwise regression):
 
