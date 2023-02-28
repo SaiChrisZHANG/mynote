@@ -90,10 +90,10 @@ Take another look at this result
 \end{proposition}
 
 \subsection{Algorithm: from LARS to Lasso}
-Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an alogrithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
+Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an algorithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
 
 \subsubsection*{Intuition}
-The basic intuition of LARS is quite straight-forward: covariates are considered from the \myhl[myred]{\textbf{\textit{highest}}} corerlation with $\mathbf{y}$ (\textit{smallest} angle from $\mathbf{y}$) to the \myhl[myblue]{\textbf{\textit{least}}} correlated one (\textit{largest} angle from $\mathbf{y}$).
+The basic intuition of LARS is quite straight-forward: covariates are considered from the \myhl[myred]{\textbf{\textit{highest}}} corerlation with $\mathbf{y}$ (\textit{smallest} angle from $\mathbf{y}$) to the \myhl[myblue]{\textbf{\textit{least}}} correlated one (\textit{largest} angle from $\mathbf{y}$) (illustrated below).
 
 \begin{figure}[ht]
     \begin{minipage}[b]{0.45\textwidth}
@@ -156,6 +156,13 @@ The basic intuition of LARS is quite straight-forward: covariates are considered
         \end{tikzpicture}
     \end{minipage}
 \end{figure}
+
+And the steps of the LARS algorithm are
+\begin{itemize}
+    \item[1] start with the null model $\hat{\boldsymbol{\beta}}=\mathbf{0}$: $\hat{\mu} = \mathbf{X}'\mathbf{0}=0$ 
+    \item[2] calculate residual vector $\mathbf{r} = \mathbf{y}-\hat{\mu}$
+    \item[3] determine the correlation vector between $\mathbf{r}$ and each parameter $\mathbf{x}_j,\forall j=1,\cdots,p$
+\end{itemize}
 
 echos a classic model-selection method, \textbf{Forward Selection} (forward stepwise regression):
 
