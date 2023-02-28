@@ -95,42 +95,66 @@ Mathematically, Lasso is quite intuitive, but computionally, it can be quite con
 \subsubsection*{Intuition}
 The basic intuition of LARS is quite straight-forward: covariates are considered from the \myhl[myred]{\textbf{\textit{highest}}} corerlation with $\mathbf{y}$ (\textit{smallest} angle from $\mathbf{y}$) to the \myhl[myblue]{\textbf{\textit{least}}} correlated one (\textit{largest} angle from $\mathbf{y}$).
 
-\tdplotsetmaincoords{60}{120}
-\begin{tikzpicture}
-	[scale=3,
-		tdplot_main_coords,
-		axis/.style={->,blue,thick},
-		vector/.style={-stealth,red,very thick},
-		vector guide/.style={dashed,red,thick}]
-
-	%standard tikz coordinate definition using x, y, z coords
-	\coordinate (O) at (0,0,0);
-	
-	%tikz-3dplot coordinate definition using r, theta, phi coords
-	\tdplotsetcoord{P}{.8}{55}{60}
-	
-	%draw axes
-	\draw[axis] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
-	\draw[axis] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
-	\draw[axis] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
-	
-	%draw a vector from O to P
-	\draw[vector] (O) -- (P);
-	
-	%draw guide lines to components
-	\draw[vector guide] (O) -- (Pxy);
-	\draw[vector guide] (Pxy) -- (P);
-\end{tikzpicture}
-
 \begin{figure}[ht]
+    \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \begin{tikzpicture}[scale = 1.5]
-        \draw [-stealth,color=black,thick] (0,2) -- (4,2);
-          \draw [-stealth,color=black,thick] (2,0) node[below] {Lasso} -- (2,4);
-          \draw [color=black,thick] (1,2) -- (2,3) -- (3,2);
-          \draw [color=black,thick]  (3,2) -- (2,1) -- (1,2);
-          \draw [color=black, thick] (1,2) -- (3,2);
-    \end{tikzpicture}
+      \begin{tikzpicture}[scale=1.4]
+          % basics
+          \draw [-stealth,color=black,thin] (-0.5,0) -- (4,0) node[right] {$x_1$};
+          \draw [-stealth,color=black,thin] (0,-0.5) -- (0,4) node[above] {$x_2$};
+          \draw [color=black, ultra thick] (0,0) -- (3.5,1.5) node[above] {OLS};
+          \draw [color=myred, ultra thick] (0,0) -- (2.5,0) node[below] {Step 1};
+          \draw [color=myblue, ultra thick] (2.5,0) -- (3.5,1.5) node[below,xshift=15pt] {Step 2};
+      \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \tdplotsetmaincoords{60}{45}
+        \begin{tikzpicture}
+            [scale=5,
+                tdplot_main_coords,
+                axis/.style={-stealth,black,thin},
+                vector/.style={black,very thick},
+                LARS/.style={ultra thick}]
+
+            %standard tikz coordinate definition using x, y, z coords
+            \coordinate (O) at (0,0,0);
+            
+            \coordinate (P) at (0.8, 0.6, 0.2);
+
+            \coordinate (P12) at (0.8, 0.6, 0);
+            \coordinate (P23) at (0, 0.6, 0.2);
+            \coordinate (P13) at (0.8, 0, 0.2);
+            \coordinate (P1) at (0.8, 0, 0);
+            \coordinate (P2) at (0, 0.6, 0);
+            \coordinate (P3) at (0, 0, 0.2);
+            
+            %draw axes
+            \draw[axis] (0,0,0) -- (1,0,0) node[anchor=north east]{$x_1$};
+            \draw[axis] (0,0,0) -- (0,1,0) node[anchor=north west]{$x_2$};
+            \draw[axis] (0,0,0) -- (0,0,1) node[anchor=south]{$x_3$};
+
+            % projection dash line
+            \draw[thin, black, densely dashed] (P12)--(P1);
+            \draw[thin, black, densely dashed] (P12)--(P2);
+            \draw[thin, black, densely dashed] (P)--(P13);
+            \draw[thin, black, densely dashed] (P)--(P23);
+            \draw[thin, black, densely dashed] (P23)--(P3);
+            \draw[thin, black, densely dashed] (P13)--(P3);
+            \draw[thin, black, densely dashed] (P23)--(P2);
+            \draw[thin, black, densely dashed] (P13)--(P1);
+            \draw[thin, black, densely dashed] (P)--(P12);
+            
+            %draw a vector from O to P
+            \draw[vector] (O) -- (P);
+
+            % draw LARS steps
+            \draw[LARS, myred] (O) -- (0.45,0,0) node[left,xshift=-10pt] {Step 1};
+            \draw[LARS, myblue] (0.45,0,0) -- (0.6,0.45,0) node[below] {Step 2};
+            \draw[LARS, teal] (0.6,0.45,0) -- (P) node[above] {Step 3};
+        \end{tikzpicture}
+    \end{minipage}
 \end{figure}
 
 echos a classic model-selection method, \textbf{Forward Selection} (forward stepwise regression):
@@ -156,6 +180,7 @@ In general
 \begin{figure}[ht]
     \centering
     \begin{minipage}[b]{0.45\textwidth}
+    \centering
       \begin{tikzpicture}[scale=1.6]
           % basics
           \draw [-stealth,color=black,thick] (0,2) -- (4,2);
@@ -173,6 +198,7 @@ In general
     \end{minipage}
     \hfill
     \begin{minipage}[b]{0.45\textwidth}
+        \centering
         \begin{tikzpicture}[scale=1.6]
             % basics
             \draw [-stealth,color=black,thick] (0,2) -- (4,2);
@@ -188,7 +214,7 @@ In general
             \filldraw [color=myred] (2.14,2.97) circle (2pt);
         \end{tikzpicture}
     \end{minipage}
-  \end{figure}
+\end{figure}
 
 \newpage
 \bibliographystyle{plainnat}
