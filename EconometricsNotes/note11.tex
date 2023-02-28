@@ -103,8 +103,16 @@ The basic intuition of LARS is quite straight-forward: covariates are considered
           \draw [-stealth,color=black,thin] (-0.5,0) -- (4,0) node[right] {$x_1$};
           \draw [-stealth,color=black,thin] (0,-0.5) -- (0,4) node[above] {$x_2$};
           \draw [color=black, ultra thick] (0,0) -- (3.5,1.5) node[above] {OLS};
-          \draw [color=myred, ultra thick] (0,0) -- (2.5,0) node[below] {Step 1};
-          \draw [color=myblue, ultra thick] (2.5,0) -- (3.5,1.5) node[below,xshift=15pt] {Step 2};
+          \draw [color=myred, ultra thick] (0,0) -- (2,0) node[below] {Step 1};
+          \draw [color=myblue, ultra thick] (2,0) -- (3.5,1.5) node[below,xshift=15pt] {Step 2};
+          
+          \coordinate (X) at (3.5,1.5);
+            \coordinate (A) at (2,0);
+            \coordinate (Y) at (3,0);
+
+            % Draw Angle
+            \draw[thin] (Y) -- (A) -- (X)
+            pic ["$45^{\circ}$", draw, thin, angle eccentricity=1.8] {angle = Y--A--X};
       \end{tikzpicture}
     \end{minipage}
     \hfill
@@ -150,21 +158,50 @@ The basic intuition of LARS is quite straight-forward: covariates are considered
             \draw[vector] (O) -- (P);
 
             % draw LARS steps
-            \draw[LARS, myred] (O) -- (0.45,0,0) node[left,xshift=-10pt] {Step 1};
-            \draw[LARS, myblue] (0.45,0,0) -- (0.6,0.45,0) node[below] {Step 2};
-            \draw[LARS, teal] (0.6,0.45,0) -- (P) node[above] {Step 3};
+            \draw[LARS, myred] (O) -- (0.2,0,0) node[left,xshift=-10pt] {Step 1};
+            \draw[LARS, myblue] (0.2,0,0) -- (0.6,0.4,0) node[below] {Step 2};
+            \draw[LARS, teal] (0.6,0.4,0) -- (P) node[right] {Step 3};
+
+            % approaching, but not exactly reach OLS
+            %\draw[thin, teal, densely dashed] (P13)--(0.8,0.35,0.2);
+            %\draw[thin, teal, densely dashed] (0.8,0.35,0.2)--(0,0.35,0.2);
         \end{tikzpicture}
     \end{minipage}
 \end{figure}
 
 And the steps of the LARS algorithm are
 \begin{itemize}
-    \item[1] start with the null model $\hat{\boldsymbol{\beta}}=\mathbf{0}$: $\hat{\mu} = \mathbf{X}'\mathbf{0}=0$ 
-    \item[2] calculate residual vector $\mathbf{r} = \mathbf{y}-\hat{\mu}$
-    \item[3] determine the correlation vector between $\mathbf{r}$ and each parameter $\mathbf{x}_j,\forall j=1,\cdots,p$
+    \item[1] start with the null model $\hat{\boldsymbol{\beta}}=\mathbf{0}$: $\hat{\boldsymbol{\mu}} = \mathbf{X}'\mathbf{0}=\mathbf{0}$ 
+    \item[2] calculate residual vector $\mathbf{r} = \mathbf{y}-\hat{\boldsymbol{\mu}}$
+    \item[3] determine the correlation vector between $\mathbf{r}$ and each parameter $\mathbf{x}_j,\forall j=1,\cdots,p$: $\mathbf{X}'\mathbf{r}$
+    \item[4] pick the largest correlation $\mathbf{x}^*_{\text{step}1,1}$, increase its $\hat{{\beta}}$ to the point where its correlation with $\mathbf{r}$ will be \myhl[red!55!black]{\textbf{equal}} with that of another parameter $\mathbf{x}^*_{\text{step1},2}$ 
+    \item[5] next, increase the $\hat{\beta}$ for both $\mathbf{x}^*_{\text{step1},1},\mathbf{x}^*_{\text{step1},2}$ in an \myhl[red!55!black]{\textbf{equiangular}} direction between these two, until a third parameter becomes equally important
 \end{itemize}
+And keep looping this way, until all the predictors enter the model and eventually $\mathbf{X}'\mathbf{r}=\mathbf{0}$
 
-echos a classic model-selection method, \textbf{Forward Selection} (forward stepwise regression):
+\subsubsection*{Properties of LARS}
+LARS has several properties:
+\begin{itemize}
+    \item geometrically travels in the direction of \textbf{equal} angle to all active covariates
+    \item assume all covariates are independent
+    \item computationally quick: only take $m$ steps, where $m$ is the number of parameters being considered
+\end{itemize}
+And it is in between 2 classic model-selection methods: \textbf{Forward Selection} and \textbf{Stagewise Selection}:
+\begin{itemize}
+    \item \myhl[red!55!black]{\textbf{Forward Selection}}
+    \begin{itemize}
+        \item for $\mathbf{y}$, select the most correlated $\mathbf{x}_{j_1}$
+        \item regress $\mathbf{x}_{j_1}$ on $\mathbf{y}$, get the residuals
+        \item select the most correlated $\mathbf{x}_{j_2}$ with the redisual of $\mathbf{y}$ net of $\mathbf{x}_{j_1}$
+    \end{itemize}
+    looping this, for a $k-$parameter linear model, it takes $k$ steps. Forward Selection is an aggressive fitting technique, can be overly greedy (some important predictors may be eliminated due to correlation with already selected variables).
+    \item \myhl[red!55!black]{\textbf{Forward Stagewise}}
+    \begin{itemize}
+        \item also begin with $\hat{\boldsymbol{\mu}}=0$
+        \item for a current Stagewise estimate $\hat{\boldsymbol{\mu}}$, the current residual vector is then $\mathbf{y}-\hat{\boldsymbol{\mu}}$, its correlation with $\mathbf{X}$ is then  $\mathbf{X'}(\mathbf{y}-\hat{\boldsymbol{\mu}})\equiv \hat{\mathbf{c}}$
+        \item next, heavily computational, go in the direction of the greatest current correlation, but by only a \myhl[red!55!black]{\textbf{small}} step $$ \hat{j}= \arg\max\lvert \hat{c}_j \rvert, \ \hat{\boldsymbol{\mu}}\rightarrow \hat{\boldsymbol{\mu}}+\epsilon\cdot \mathrm{sign}(\hat{c}_{\hat{j}})\cdot \mathbf{x}_{\hat{j}} $$
+    \end{itemize}
+\end{itemize}
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
