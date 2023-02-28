@@ -93,7 +93,7 @@ Take another look at this result
 Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an alogrithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
 
 \subsubsection*{Intuition}
-The basic intuition of LARS is quite straight-forward: that is, covariates are considered from the highest corerlation with $\mathbf{y}$
+The basic intuition of LARS is quite straight-forward: that is, covariates are considered from the \myhl[myred]{\textbf{\textit{highest}}} corerlation with $\mathbf{y}$ to the \myhl[myblue]{\textbf{\textit{least}}} correlated one.
 
 echos a classic model-selection method, \textbf{Forward Selection} (forward stepwise regression):
 
