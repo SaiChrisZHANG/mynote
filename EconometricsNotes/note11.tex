@@ -86,10 +86,10 @@ Take another look at this result
         \left[ -1,1 \right], & \beta_j =0
     \end{cases}
     $$
-    which gives a parameter selection criterion: for $\beta_j \neq 0$, \myhl[myred]{$\mathrm{sign}(\beta_j)$ \textbf{must agree} with $\mathrm{Corr}(X_j,\boldsymbol{\epsilon})$}, the correlation between the $j$-th variable $\mathbf{X}_j$ and (full-model) residuals $\boldsymbol{\epsilon}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}$.
+    which gives a parameter selection criterion: for $\beta_j \neq 0$, \myhl[myred]{$\mathrm{sign}(\beta_j)$ \textbf{must agree} with $\mathrm{Corr}(\mathbf{x}_j,\boldsymbol{\epsilon})$}, the correlation between the $j$-th variable $\mathbf{x}_j$ and (full-model) residuals $\boldsymbol{\epsilon}=\mathbf{y}-\mathbf{X}\boldsymbol{\beta}$.
 \end{proposition}
 
-\subsection{Algorithm: from LARS to Lasso}
+\subsection{Algorithm: LARS}
 Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an algorithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
 
 \subsubsection*{Intuition}
@@ -200,8 +200,22 @@ And it is in between 2 classic model-selection methods: \textbf{Forward Selectio
         \item also begin with $\hat{\boldsymbol{\mu}}=0$
         \item for a current Stagewise estimate $\hat{\boldsymbol{\mu}}$, the current residual vector is then $\mathbf{y}-\hat{\boldsymbol{\mu}}$, its correlation with $\mathbf{X}$ is then  $\mathbf{X'}(\mathbf{y}-\hat{\boldsymbol{\mu}})\equiv \hat{\mathbf{c}}$
         \item next, heavily computational, go in the direction of the greatest current correlation, but by only a \myhl[red!55!black]{\textbf{small}} step $$ \hat{j}= \arg\max\lvert \hat{c}_j \rvert, \ \hat{\boldsymbol{\mu}}\rightarrow \hat{\boldsymbol{\mu}}+\epsilon\cdot \mathrm{sign}(\hat{c}_{\hat{j}})\cdot \mathbf{x}_{\hat{j}} $$
+        here, $\epsilon$ is a \textbf{small} constant, hence avoiding the greediness of Forward Selection, at a cost of computational efficiency\footnote{Forward Selection is essentially choosing $\epsilon=\lvert \hat{c}_{\hat{j}} \rvert$}.
     \end{itemize}
 \end{itemize}
+LARS avoids the over-greediness of Forward Selection and computational heaviness of Forward Stagewise.
+
+\subsection{From LARS to Lasso}
+The Lasso algorithm is built upon LARS, with the constraint from the mathematical condition of Proposition \ref{prop:lasso-math}: \myhl[myblue]{$\mathrm{sign}(\beta_j)$ \textbf{must agree} with $\mathrm{Corr}(\mathbf{x}_j,\boldsymbol{\epsilon})$}. 
+
+\begin{theorem}{Lasso Modification Condition}{lasso-modif}
+    If $\tilde{\gamma}< \hat{\gamma}$, stop the onging LARS step at $\gamma = \tilde{\gamma}$ and remove $j$ from the calculation of the next equiangular direction, where
+    \begin{itemize}
+        \item the path at any LARS step is $$\boldsymbol{\beta}(\gamma),\ \beta_j(\gamma) = \hat{\beta}_j + \gamma\hat{d}_j$$ $\hat{d}_j$ specifies the \myhl[blue!45!black]{\textbf{direction}} to take the $j$-th component, $\gamma$ is \myhl[blue!45!black]{\textbf{how far}} to travel in the direction of $\hat{d}_j$ before adding in a new covariate
+        \item $\hat{\gamma}$ represents the smallest \myhl[red!55!black]{\textbf{positive}} value of $\gamma$ s.t. some new covariate joins the active set (the set of covariates used on path)
+        \item $\tilde{\gamma}$ represents the first time $\beta_j(\gamma)$ \myhl[red!55!black]{\textbf{changes signs}}.
+    \end{itemize}
+\end{theorem}
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
