@@ -230,6 +230,7 @@ The key point of \ref{thm:lasso-modif} is that Lasso does \textbf{NOT} allow the
 
 Again, LARS requires the least steps but is most greedy, Stagewise is computationally consuming but robust. Lasso is in between.
 
+\section{}
 
 \section{Variants of Lasso}
 
@@ -246,7 +247,7 @@ There are also some other useful variants of Lasso
         \item Step 1: run LARS for a model, considering \textbf{only} main effects 
         \item Step 2: run LARS again, with the chosen main effects, and \textbf{all possible interactions} between them
     \end{itemize}
-    \item \textbf{\underline{Backward Lasso}}:
+    \item \textbf{\underline{Backward Lasso}}: start from the \textbf{full} OLS model, and eliminate covariates \textbf{backwards} (by the order of correlation going 0 the earliest)
 \end{itemize}
 
 \section{Penalized Least Square Estimation}
