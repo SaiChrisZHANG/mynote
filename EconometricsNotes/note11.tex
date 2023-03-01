@@ -231,6 +231,23 @@ The key point of \ref{thm:lasso-modif} is that Lasso does \textbf{NOT} allow the
 Again, LARS requires the least steps but is most greedy, Stagewise is computationally consuming but robust. Lasso is in between.
 
 
+\section{Variants of Lasso}
+
+\subsection{Other Variants}
+There are also some other useful variants of Lasso
+\begin{itemize}
+    \item \textbf{\underline{Positive Lasso}}: Constrains the $\hat{\beta}_j$ to enter the prediction equation in their \textbf{defined} directions, non-negative here 
+    \begin{align*}
+        \hat{\boldsymbol{\beta}} &= \arg\min_{\boldsymbol{\beta}\in \mathbb{R}^p}\left\{ \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 \right\} & \text{s.t.\ } & \lVert \boldsymbol{\beta} \rVert _1 \leq t \textcolor{myred}{\text{ and } \beta_j>0, \forall j}
+    \end{align*}
+    \item \textbf{\underline{LARS-OLS hybrid}}: Use the covariates selected by LARS, but use $\hat{\boldsymbol{\beta}}$ from the OLS model 
+    \item \textbf{\underline{Main effects first}}:
+    \begin{itemize}
+        \item Step 1: run LARS for a model, considering \textbf{only} main effects 
+        \item Step 2: run LARS again, with the chosen main effects, and \textbf{all possible interactions} between them
+    \end{itemize}
+    \item \textbf{\underline{Backward Lasso}}:
+\end{itemize}
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
