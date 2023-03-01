@@ -90,7 +90,7 @@ Take another look at this result
 \end{proposition}
 
 \subsection{Algorithm: LARS}
-Mathematically, Lasso is quite intuitive, but computionally, it can be quite consuming. \citet{efron2004least} propose an algorithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
+Mathematically, Lasso is quite intuitive, but computationally, it can be quite consuming. \citet{efron2004least} propose an algorithm that takes steps from a all-0 model to the biggest model (OLS), that is, \textbf{Least Angle Regression (LARS)}. 
 
 \subsubsection*{Intuition}
 The basic intuition of LARS is quite straight-forward: covariates are considered from the \myhl[myred]{\textbf{\textit{highest}}} corerlation with $\mathbf{y}$ (\textit{smallest} angle from $\mathbf{y}$) to the \myhl[myblue]{\textbf{\textit{least}}} correlated one (\textit{largest} angle from $\mathbf{y}$) (illustrated below).
@@ -216,6 +216,21 @@ The Lasso algorithm is built upon LARS, with the constraint from the mathematica
         \item $\tilde{\gamma}$ represents the first time $\beta_j(\gamma)$ \myhl[red!55!black]{\textbf{changes signs}}.
     \end{itemize}
 \end{theorem}
+The key point of \ref{thm:lasso-modif} is that Lasso does \textbf{NOT} allow the $\hat{\beta}_j$ to change signs, if it changes sign, it will be substracted from the active set. Now, from this point of view, we can compare the 3 algorithms:
+
+\begin{center}
+    \begin{tabular}{ r|l } 
+     \hline
+     LARS & no sign restrictions  \\ 
+     Lasso &  $\hat{\beta}_j$ agrees in sign with $\hat{c}_j$ \\
+     Stagewise & successive differences of $\hat{\beta}_j $ agree in sign with the current correlation $\hat{c}=\mathbf{x}_j'(\mathbf{y}-\hat{\boldsymbol{\mu}})$\\
+     \hline
+    \end{tabular}
+\end{center}
+
+Again, LARS requires the least steps but is most greedy, Stagewise is computationally consuming but robust. Lasso is in between.
+
+
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as
