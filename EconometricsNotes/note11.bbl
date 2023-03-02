@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,6 +19,11 @@ Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani.
   499, 2004.
 \newblock \doi{10.1214/009053604000000067}.
 \newblock URL \url{https://doi.org/10.1214/009053604000000067}.
+
+\bibitem[Meinshausen and B{\"u}hlmann(2006)]{meinshausen2006variable}
+Nicolai Meinshausen and Peter B{\"u}hlmann.
+\newblock Variable selection and high-dimensional graphs with the lasso.
+\newblock \emph{Ann Stat}, 34:\penalty0 1436--1462, 2006.
 
 \bibitem[Tibshirani(1996)]{tibshirani1996regression}
 Robert Tibshirani.

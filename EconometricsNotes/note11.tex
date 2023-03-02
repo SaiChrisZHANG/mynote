@@ -230,7 +230,51 @@ The key point of \ref{thm:lasso-modif} is that Lasso does \textbf{NOT} allow the
 
 Again, LARS requires the least steps but is most greedy, Stagewise is computationally consuming but robust. Lasso is in between.
 
-\section{}
+\section{Consistency of Lasso}
+Next, we want to establish the consistency of Lasso, by showing that Lasso selects exactly the relevant covariates asymptotically. We do this in 2 steps:
+\begin{itemize}
+    \item show that Lasso at least captures all the relevant covariates
+    \item asymptotically, under some conditions, Lasso selects exactly all the relevant covariates, not more
+\end{itemize}
+
+\subsection{Overestimation}
+First, Lasso tends to select a superset of the relevant covariates.
+
+Define the true relevant set Lasso selection estimation $\hat{S}_0$ aim to select as
+    $$ S_0 = \left\{ j:\beta^0_j \neq 0,j \neq 1,\cdots,p \right\} $$
+    and for some $C>0$, define the relevant set w.r.t. $C$ as $$ S_0^{\text{relevant}(C)} = \left\{ j: \lvert \beta^0_j \rvert \geq C, j=1,\cdots,p \right\} $$ then we have
+\begin{theorem}{Lasso Overestimation Condition}{lasso-overest}
+    $\forall 0<C<\infty$ $$ \mathbb{P}\left[ \hat{S}_0(\lambda) \supset S_0^{\text{relevant}(C)} \right] \xrightarrow{n\rightarrow \infty}1 $$
+\end{theorem}
+
+\subsection*{Consistency}
+The consistency of Lasso is established by \citet{meinshausen2006variable} as
+\begin{theorem}{Consistency of Lasso}{lasso_consistency}
+    For a suitable $\lambda = \lambda_n \gg \sqrt{s_0\log(p)/n}$, Lasso is consistent, i.e. $$ \mathbb{P}\left[ \hat{S}(\lambda)=S_0 \right] \xrightarrow{n\rightarrow\infty}1 $$
+    if and only if it satisfies the 2 properties:
+    \begin{itemize}
+        \item $\beta-$min condition (unselected coefficients non-trivial): $\inf_{j\in S^c_0}\lvert \beta^0_j \rvert \gg \sqrt{s_0 \log(p)/n}$
+        \item \myhl[blue!45!black]{\textbf{irrepresentable} condition}: $\mathbf{X}$ should \textbf{NOT} exhibit too strong a degree of linear dependence w.r.t. the selected covariates
+    \end{itemize}
+\end{theorem}
+
+\paragraph*{discussion on the irrepresentable condition} denote $\hat{\Sigma}=n^{-1}\mathbf{XX}'$, and let the active set $S_0=\left\{ j:\beta^0_j\neq 0 \right\}=\left\{ 1,\cdots, s_0 \right\}$ consists of the first $s_0$ variables, let 
+$$ \hat{\Sigma} = \left( \begin{matrix}
+    \hat{\Sigma}_{1,1} & \hat{\Sigma}_{1,2} \\
+    \hat{\Sigma}_{2,1} & \hat{\Sigma}_{2,2}
+\end{matrix} \right) $$
+
+\subsection{Oracle}
+Next, we want show Lasso has the oracle procedure, which gives the consistency.
+\begin{definition}{Oracle Property}{oracle}
+    For a fitting procedure $\delta$, and the estimation $\hat{\beta}(\delta)$, then if $\delta$ is an oracle procedure if $\hat{\beta}(\delta)$ asymptotically has the following properties 
+    \begin{itemize}
+        \item \myhl[red!55!black]{\textbf{consistency}} (identifying right subset model): $\left\{ j:\hat{\beta}_j \neq 0 \right\} = S_0$
+        \item \myhl[red!55!black]{\textbf{optimal estimation rate}} (asymptotically normal): $\sqrt{n}\left( \beta(\delta)_{S_0} - \beta^0_{S_0} \right) \xrightarrow{d} \mathcal{N}(0,\Sigma_0)$, where $\Sigma_0$ is the \textit{true} subset covariance matrix
+    \end{itemize}
+\end{definition}
+
+
 
 \section{Variants of Lasso}
 
