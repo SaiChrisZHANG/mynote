@@ -41,12 +41,12 @@ where the regularization parameter $\lambda \geq 0$:
 Lasso is essentially a quadratic optimization problem. Hence, the solution is given by taking the derivative (of the unconstrainted question) and set it equal to 0
 \begin{align*}
    && \frac{\mathrm{d}}{\mathrm{d}\boldsymbol{\beta}} \left( \frac{1}{2n} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 +\lambda \lVert \boldsymbol{\beta} \rVert_1 \right) = 0 \\
-   \Rightarrow && \frac{1}{n} \underbrace{\mathbf{X}'}_{p\times n} \underbrace{ \left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right)}_{=\boldsymbol{\epsilon}, n \times 1} &= \lambda \begin{cases}
+   \xRightarrow{\text{KKT condition}} && \frac{1}{n} \underbrace{\mathbf{X}'}_{p\times n} \underbrace{ \left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right)}_{=\boldsymbol{\epsilon}, n \times 1} &= \lambda \begin{cases}
     \mathrm{sign}\left(\beta_j\right), & \beta_j\neq 0\\
     \left[ -1,1 \right], & \beta_j =0
    \end{cases}
 \end{align*}
-this result follows the fact the L-1 norm $\lVert \boldsymbol{\beta} \rVert$ is piecewise linear:
+this result follows the fact the L-1 norm $\lVert \boldsymbol{\beta} \rVert$ is piecewise linear (convex)\footnote{KKT condition gives the analytical optimization rule for \myhl[red!55!black]{\textbf{convex}} function.}:
 
 \begin{minipage}{0.45\textwidth}
     \centering
