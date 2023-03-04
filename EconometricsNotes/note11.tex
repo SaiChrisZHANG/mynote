@@ -254,7 +254,7 @@ The consistency of Lasso is established by \citet{meinshausen2006variable} as
     if and only if it satisfies the 2 properties:
     \begin{itemize}
         \item $\beta-$min condition (unselected coefficients non-trivial): $\inf_{j\in S^c_0}\lvert \beta^0_j \rvert \gg \sqrt{s_0 \log(p)/n}$
-        \item \myhl[blue!45!black]{\textbf{irrepresentable} condition}: $\mathbf{X}$ should \textbf{NOT} exhibit too strong a degree of linear dependence w.r.t. the selected covariates
+        \item \myhl[blue!45!black]{\textbf{irrepresentable} condition}: $\mathbf{X}$ should \textbf{NOT} exhibit too strong a degree of linear dependence w.r.t. the selected covariates, that is, for some $0<\theta<1$ $$ \left\Vert \hat{\Sigma}_{2,1}\hat{\Sigma}_{1,1}^{-1}\mathrm{sign}\left( \beta^0_1,\cdots,\beta^0_{s_0}\right) \right\Vert _{\infty} \leq\theta $$
     \end{itemize}
 \end{theorem}
 
@@ -263,13 +263,13 @@ $$ \hat{\Sigma} = \left( \begin{matrix}
     \hat{\Sigma}_{1,1} & \hat{\Sigma}_{1,2} \\
     \hat{\Sigma}_{2,1} & \hat{\Sigma}_{2,2}
 \end{matrix} \right) $$
-where $\hat{\Sigma}_{1,1}$ is a $s_0\times s_0$ var-cov matrix of the active variables $\mathbf{X}_1$, $\hat{\Sigma}_{2,2}$ is a $(p-s_0)\times (p-s_0)$ cov-var matrix of the other variables $\mathbf{X}_2$\footnote{Here, $\mathbf{X}_1$ is $n\times s_0$, $\mathbf{X}_2$ is $n\times p-s_0$}, then we for a Lasso estimation $\hat{\boldsymbol{\beta}}$ that assign non-zero coefficients \textbf{only} to $\mathbf{X}_1$, we can, following the Lasso result in proposition \ref{prop:lasso-math}, have\sidenotes{$ \lVert \cdot \rVert$ is the \\ component-wise \\ max-norm}
-$$
-\begin{cases}
-    \frac{1}{n}\mathbf{X}_1'\left(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}\right) &= \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1)\\
-    \lVert \frac{1}{n}\mathbf{X}_2'\left(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}\right) \rVert _{\infty} &\leq \lambda
-\end{cases}
-$$
+where $\hat{\Sigma}_{1,1}$ is a $s_0\times s_0$ var-cov matrix of the active variables $\mathbf{X}_1$, $\hat{\Sigma}_{2,2}$ is a $(p-s_0)\times (p-s_0)$ cov-var matrix of the other variables $\mathbf{X}_2$\footnote{Here, $\mathbf{X}_1$ is $n\times s_0$, $\mathbf{X}_2$ is $n\times p-s_0$}, then for a Lasso estimation $\hat{\boldsymbol{\beta}}$ that assign non-zero coefficients \textbf{only} to $\mathbf{X}_1$, we can, following the Lasso result in Proposition \ref{prop:lasso-math}, have\sidenotes{$ \lVert \cdot \rVert$ is the \\ component-wise \\ max-norm}
+\begin{equation}\label{eq:lasso_consist}
+    \begin{aligned}
+        \frac{1}{n}\mathbf{X}'\left(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}\right) &= \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) & \Rightarrow \frac{1}{n}\mathbf{X}_1'\left(\mathbf{y}-\mathbf{X}_1\hat{\boldsymbol{\beta}}_1\right) &= \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) \\
+        \lVert \frac{1}{n}\mathbf{X}_2'\left(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}\right) \rVert _{\infty} &\leq \lambda & \Rightarrow \lVert \frac{1}{n}\mathbf{X}_2'\left(\mathbf{y}-\mathbf{X}_1\hat{\boldsymbol{\beta}}_1\right) \rVert _{\infty} &\leq \lambda
+    \end{aligned}
+\end{equation}
 Now, let's assume $ \mathrm{supp}(\hat{\boldsymbol{\beta}}) = \mathrm{supp}(\boldsymbol{\beta}) = S_0 $, then the true model is
 $$
 \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} = \begin{bmatrix}
@@ -278,6 +278,24 @@ $$
     \boldsymbol{\beta}_1 \\ \mathbf{0}
 \end{bmatrix} + \boldsymbol{\epsilon} = \mathbf{X}_1\boldsymbol{\beta}_1+\boldsymbol{\epsilon}
 $$
+Put this back to the results in Equation \ref{eq:lasso_consist}, we have
+\begin{itemize}
+    \item for the selected covariates $\mathbf{X}_1$ 
+    \begin{align*}
+        &\frac{1}{n}\mathbf{X}_1'\left(\mathbf{y}-\mathbf{X}_1\hat{\boldsymbol{\beta}}_1\right) = \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1)\\
+        \Rightarrow & \frac{1}{n}\mathbf{X}_1'\left(\mathbf{X}_1\boldsymbol{\beta}_1+\boldsymbol{\epsilon}-\mathbf{X}_1\hat{\boldsymbol{\beta}}_1\right) = \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1)\\
+        \Rightarrow & \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \left( \hat{\boldsymbol{\beta}}_1- \boldsymbol{\beta}_1\right) = \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon}- \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) \\
+        \Rightarrow & \hat{\boldsymbol{\beta}}_1- \boldsymbol{\beta}_1 = \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \left[ \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon}- \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) \right] \\
+        \Rightarrow & \hat{\boldsymbol{\beta}}_1 = \boldsymbol{\beta}_1 + \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} -  \underbrace{\left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1)}_{\text{L1-norm regularization}}
+    \end{align*}
+    \item for the non-selected covariates $\mathbf{X}_2$\footnote{Here, additionally assume \myhl[myred]{\textbf{sign consistency}}: \begin{align*} \mathrm{sign}(\hat{\beta}_j)&=\mathrm{\beta_j}\neq 0, \forall j\in S_0 &\text{selected coviates} \\ \mathrm{sign}(\hat{\beta}_j)&=\mathrm{\beta_j}= 0, \forall j\in S_0^C &\text{non-selected coviates} \end{align*} }
+    \begin{align*}
+        & \left\Vert \frac{1}{n}\mathbf{X}_2'\left(\mathbf{y}-\mathbf{X}_1\hat{\boldsymbol{\beta}}_1\right) \right\Vert _{\infty} \leq \lambda \\
+        \Rightarrow & \left\Vert \frac{1}{n}\mathbf{X}_2'\left[ \mathbf{X}_1 \left(\hat{\boldsymbol{\beta}}_1- \boldsymbol{\beta}_1\right) -\boldsymbol{\epsilon} \right] \right\Vert _{\infty} \leq \lambda \\
+        \Rightarrow & \left\Vert \frac{1}{n}\mathbf{X}_2'\left\{ \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) \right] -\boldsymbol{\epsilon} \right\} \right\Vert _{\infty} \leq \lambda \\
+        \xRightarrow{\text{assume sign consistency}} & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \textcolor{myred}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right]  - \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \leq \lambda 
+    \end{align*}
+\end{itemize}
 
 \subsection{Oracle}
 Next, we want show Lasso has the oracle procedure, which gives the consistency.
