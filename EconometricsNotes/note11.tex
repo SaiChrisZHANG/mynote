@@ -266,9 +266,17 @@ $$ \hat{\Sigma} = \left( \begin{matrix}
 where $\hat{\Sigma}_{1,1}$ is a $s_0\times s_0$ var-cov matrix of the active variables $\mathbf{X}_1$, $\hat{\Sigma}_{2,2}$ is a $(p-s_0)\times (p-s_0)$ cov-var matrix of the other variables $\mathbf{X}_2$\footnote{Here, $\mathbf{X}_1$ is $n\times s_0$, $\mathbf{X}_2$ is $n\times p-s_0$}, then we for a Lasso estimation $\hat{\boldsymbol{\beta}}$ that assign non-zero coefficients \textbf{only} to $\mathbf{X}_1$, we can, following the Lasso result in proposition \ref{prop:lasso-math}, have\sidenotes{$ \lVert \cdot \rVert$ is the \\ component-wise \\ max-norm}
 $$
 \begin{cases}
-    \frac{1}{n}\mathbf{X}_1'\left(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}\right) &= \lambda \mathrm{sign}(\hat{\boldsymbol{\beta}}_1)\\
+    \frac{1}{n}\mathbf{X}_1'\left(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}\right) &= \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1)\\
     \lVert \frac{1}{n}\mathbf{X}_2'\left(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}\right) \rVert _{\infty} &\leq \lambda
 \end{cases}
+$$
+Now, let's assume $ \mathrm{supp}(\hat{\boldsymbol{\beta}}) = \mathrm{supp}(\boldsymbol{\beta}) = S_0 $, then the true model is
+$$
+\mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} = \begin{bmatrix}
+    \mathbf{X}_1 &\mathbf{X}_2
+\end{bmatrix}\cdot \begin{bmatrix}
+    \boldsymbol{\beta}_1 \\ \mathbf{0}
+\end{bmatrix} + \boldsymbol{\epsilon} = \mathbf{X}_1\boldsymbol{\beta}_1+\boldsymbol{\epsilon}
 $$
 
 \subsection{Oracle}
