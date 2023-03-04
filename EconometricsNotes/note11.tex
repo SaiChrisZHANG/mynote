@@ -312,10 +312,8 @@ Put this back to the results in Equation \ref{eq:lasso_consist}, we have
     $$
     now go back to the condition of non-selected covariates $\mathbf{X}_2$
     \begin{align*}
-        & \left\Vert \frac{1}{n}\mathbf{X}_2'\left(\mathbf{y}-\mathbf{X}_1\hat{\boldsymbol{\beta}}_1\right) \right\Vert _{\infty} \leq \lambda \\
-        \Rightarrow & \left\Vert \frac{1}{n}\mathbf{X}_2'\left[ \mathbf{X}_1 \left(\hat{\boldsymbol{\beta}}_1- \boldsymbol{\beta}_1\right) -\boldsymbol{\epsilon} \right] \right\Vert _{\infty} \leq \lambda \\
-        \Rightarrow & \left\Vert \frac{1}{n}\mathbf{X}_2'\left\{ \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) \right] -\boldsymbol{\epsilon} \right\} \right\Vert _{\infty} \leq \lambda \\
-        \xRightarrow{\text{assume sign consistency}} & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \textcolor{myred}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right]  - \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \leq \lambda 
+         &\left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \textcolor{myred}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right]  - \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \leq \lambda \\
+        \Rightarrow &
     \end{align*}
 \end{itemize}
 
