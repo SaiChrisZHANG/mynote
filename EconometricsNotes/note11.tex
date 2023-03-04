@@ -312,8 +312,14 @@ Put this back to the results in Equation \ref{eq:lasso_consist}, we have
     $$
     now go back to the condition of non-selected covariates $\mathbf{X}_2$
     \begin{align*}
-         &\left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \textcolor{myred}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right]  - \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \leq \lambda \\
-        \Rightarrow &
+         & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \textcolor{myred}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right]  - \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \\
+        \leq & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} \right\Vert _{\infty}  +  \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1  \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right\Vert _{\infty}\cdot \lambda + \left\Vert \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \\
+        \leq & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \right\Vert _{\infty} \cdot \underbrace{\left\Vert \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} \right\Vert _{\infty}}_{\leq \frac{1}{3}\lambda}  +  \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1  \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \right\Vert _{\infty} \cdot \underbrace{\left\Vert {\mathrm{sign}({\boldsymbol{\beta}}_1)}\right\Vert _{\infty}}_{= 1} \cdot \lambda +  \underbrace{\left\Vert \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty}}_{\leq \frac{1}{3}\lambda}\\
+        \leq & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \right\Vert _{\infty} \cdot \frac{4}{3}\lambda + \frac{1}{3}\lambda \textcolor{myred}{\leq \lambda}
+    \end{align*}
+    for the last part ($\leq \lambda$) to stand, a necessary condition is $\left\Vert \mathbf{X}_2' \mathbf{X}_1 \left( \mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \right\Vert _{\infty} \leq \frac{1}{2}$, or more generally, the \myhl[myred]{\textbf{irrepresentable condition}}:
+    \begin{align*}
+        \left\Vert \mathbf{X}_2' \mathbf{X}_1 \left( \mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \cdot \mathrm{sign}(\boldsymbol{\beta}_1) \right\Vert \leq \left\Vert \mathbf{X}_2' \mathbf{X}_1 \left( \mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \right\Vert _{\infty}\cdot \left\Vert \mathrm{sign}(\boldsymbol{\beta}_1) \right\Vert = \left\Vert \hat{\Sigma}_{2,1}\hat{\Sigma}_{1,1}^{-1}\mathrm{sign}\left( \beta^0_1,\cdots,\beta^0_{s_0}\right) \right\Vert _{\infty} \leq\theta
     \end{align*}
 \end{itemize}
 
