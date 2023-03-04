@@ -295,7 +295,30 @@ Put this back to the results in Equation \ref{eq:lasso_consist}, we have
         \Rightarrow & \left\Vert \frac{1}{n}\mathbf{X}_2'\left\{ \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) \right] -\boldsymbol{\epsilon} \right\} \right\Vert _{\infty} \leq \lambda \\
         \xRightarrow{\text{assume sign consistency}} & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \textcolor{myred}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right]  - \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \leq \lambda 
     \end{align*}
+    if we assume $\boldsymbol{\epsilon}\sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, i.e., $\epsilon_i$ i.i.d. $\sim \mathcal{N}({0},\sigma^2)$, and for each variable in the design matrix, we also assume standard normal $\mathbf{x}_j\sim \mathcal{N}(\mathbf{0},\mathbf{I}_n)$ (think this as normalizing each variable), then we have 
+    $$
+    \frac{1}{n}\mathbf{x}_j'\boldsymbol{\epsilon}\sim \mathcal{N}\left(0,\frac{\sigma^2}{n}\right),\forall j=1,\cdots,p
+    $$
+    and also $ \max_{1\leq j\leq p}\mathbf{x}_j \sim \sqrt{2\log p}$. This gives
+    $$
+    \left\Vert \frac{1}{n}\mathbf{X}'\boldsymbol{\epsilon} \right\Vert _{\infty} \sim \sqrt{2 \log p}\cdot \frac{\sigma}{\sqrt{n}} = \sqrt{\frac{2\log p}{n}}\sigma
+    $$
+    hence, it can be bounded by $\lambda = \sqrt{\frac{C\log p}{n}}\sigma $, where the constant $C\geq 2$, then with large probability
+    $$
+    \left\Vert \frac{1}{n}\mathbf{X}'\boldsymbol{\epsilon} \right\Vert _{\infty} \leq \frac{1}{3}\lambda \Rightarrow \begin{aligned}
+        \left\Vert \frac{1}{n}\mathbf{X}'_1\boldsymbol{\epsilon} \right\Vert _{\infty} &\leq \frac{1}{3}\lambda \\
+        \left\Vert \frac{1}{n}\mathbf{X}'_2\boldsymbol{\epsilon} \right\Vert _{\infty} &\leq \frac{1}{3}\lambda 
+    \end{aligned}
+    $$
+    now go back to the condition of non-selected covariates $\mathbf{X}_2$
+    \begin{align*}
+        & \left\Vert \frac{1}{n}\mathbf{X}_2'\left(\mathbf{y}-\mathbf{X}_1\hat{\boldsymbol{\beta}}_1\right) \right\Vert _{\infty} \leq \lambda \\
+        \Rightarrow & \left\Vert \frac{1}{n}\mathbf{X}_2'\left[ \mathbf{X}_1 \left(\hat{\boldsymbol{\beta}}_1- \boldsymbol{\beta}_1\right) -\boldsymbol{\epsilon} \right] \right\Vert _{\infty} \leq \lambda \\
+        \Rightarrow & \left\Vert \frac{1}{n}\mathbf{X}_2'\left\{ \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \mathrm{sign}(\hat{\boldsymbol{\beta}}_1) \right] -\boldsymbol{\epsilon} \right\} \right\Vert _{\infty} \leq \lambda \\
+        \xRightarrow{\text{assume sign consistency}} & \left\Vert \frac{1}{n}\mathbf{X}_2' \mathbf{X}_1 \left[ \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \frac{1}{n}\mathbf{X}_1'\boldsymbol{\epsilon} - \left( \frac{1}{n}\mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \lambda \cdot \textcolor{myred}{\mathrm{sign}({\boldsymbol{\beta}}_1)} \right]  - \frac{1}{n}\mathbf{X}_2'\boldsymbol{\epsilon} \right\Vert _{\infty} \leq \lambda 
+    \end{align*}
 \end{itemize}
+
 
 \subsection{Oracle}
 Next, we want show Lasso has the oracle procedure, which gives the consistency.
