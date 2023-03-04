@@ -322,10 +322,10 @@ Put this back to the results in Equation \ref{eq:lasso_consist}, we have
         \left\Vert \mathbf{X}_2' \mathbf{X}_1 \left( \mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \cdot \mathrm{sign}(\boldsymbol{\beta}_1) \right\Vert \leq \left\Vert \mathbf{X}_2' \mathbf{X}_1 \left( \mathbf{X}_1' \mathbf{X}_1 \right)^{-1} \right\Vert _{\infty}\cdot \left\Vert \mathrm{sign}(\boldsymbol{\beta}_1) \right\Vert = \left\Vert \hat{\Sigma}_{2,1}\hat{\Sigma}_{1,1}^{-1}\mathrm{sign}\left( \beta^0_1,\cdots,\beta^0_{s_0}\right) \right\Vert _{\infty} \leq\theta
     \end{align*}
 \end{itemize}
-
+The idea of \myhl[myred]{\textit{\textbf{irrepresentable}}} is that the \textbf{maximum} correlation between \underline{noise features} and important variables needs to be \myhl[myred]{\textbf{bounded}}.
 
 \subsection{Oracle}
-Next, we want show Lasso has the oracle procedure, which gives the consistency.
+Consistency is part of the requirements of an oracle procedure
 \begin{definition}{Oracle Property}{oracle}
     For a fitting procedure $\delta$, and the estimation $\hat{\beta}(\delta)$, then if $\delta$ is an oracle procedure if $\hat{\beta}(\delta)$ asymptotically has the following properties 
     \begin{itemize}
@@ -333,10 +333,10 @@ Next, we want show Lasso has the oracle procedure, which gives the consistency.
         \item \myhl[red!55!black]{\textbf{optimal estimation rate}} (asymptotically normal): $\sqrt{n}\left( \beta(\delta)_{S_0} - \beta^0_{S_0} \right) \xrightarrow{d} \mathcal{N}(0,\Sigma_0)$, where $\Sigma_0$ is the \textit{true} subset covariance matrix
     \end{itemize}
 \end{definition}
-
-
+The oracle property gives consistency, and asymptotic normality. Ideally, this is what you need.
 
 \section{Variants of Lasso}
+Lasso is great, but there is still space for improvement. Here are some 
 
 \subsection{Other Variants}
 There are also some other useful variants of Lasso
