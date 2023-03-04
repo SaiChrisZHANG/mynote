@@ -336,7 +336,106 @@ Consistency is part of the requirements of an oracle procedure
 The oracle property gives consistency, and asymptotic normality. Ideally, this is what you need.
 
 \section{Variants of Lasso}
-Lasso is great, but there is still space for improvement. Here are some 
+Lasso is great, but there is still space for improvement
+\begin{itemize}
+    \item for high dimension $p>n$ cases, lasso selects \myhl[myred]{\textbf{at most}} $n$ variables 
+    \item for a group of variables with large \myhl[myred]{\textbf{pairwise correlation}}, then the lasso tends to select \textbf{only one}
+    \item for $n>p$ cases, if there are high correlations between predictors, lasso is dominated by ridge regression
+\end{itemize}
+Here are some popular variants people came up with to tackle these issues.
+
+\subsection{Adaptive Lasso}
+Adaptive Lasso replaces the $L_1-$penalty for a \myhl[myblue]{\textbf{re-weighted}} version:
+\begin{align*}
+    \hat{\boldsymbol{\beta}}(\lambda) = \arg\min_{\boldsymbol{\beta}} \left( \frac{1}{n} \left\Vert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right\Vert ^2_2 + \lambda_n \sum^p_{j=1}\frac{\lvert \beta_j \rvert}{ \lvert \hat{\beta}_{init,j} \rvert^{\gamma} } \right)
+\end{align*}
+this is a 2-step procedure:
+\begin{itemize}
+    \item Step 1: run an initial estimation (could be OLS or Lasso) as $\hat{\boldsymbol{\beta}}_{init}$, if $\hat{\beta}_{init,j}=0$, then $\hat{\beta}_{adapt,j}=0$
+    \item Step 2: run the reweighted estimation, which is still an $L1-$penalization, still a \textbf{convex} optimization problem (allowing the same Lasso algorithm to solve)
+\end{itemize}
+\begin{theorem}{Properties of Adaptive Lasso}{adapt_lasso}
+    The adaptive Lasso has the following properties
+    \begin{itemize}
+        \item If $\lvert \hat{\beta}_{init,j} \rvert$ is large (\textit{important} features), then the adaptive Lasso uses a small penalty
+        \item The adaptive lasso enjoys the oracle properties 
+        \begin{itemize}
+            \item \myhl[myblue]{\textbf{consistency}}: $\lim_n \mathbb{P}\left(\hat{S}(\lambda)=S_0\right)=1$
+            \item \myhl[myblue]{\textbf{asymptotic normality}}: $\sqrt{n}\left(\beta_{S_0}-\beta^*_{S_0}\right) \xrightarrow{d} \mathcal{N}(0,\sigma^2\times C^{-1}_{1,1}) $
+        \end{itemize}
+        if $\lambda_n$ is chosen properly, i.e., $\frac{\lambda_n}{\sqrt{n}}\rightarrow 0$ and $\lambda_n n^{(\gamma-1)/2}\rightarrow \infty$. Notice: the adaptive lasso's consistency \myhl[myred]{\textbf{DOES NOT}} require the irrepresentable condition.
+    \end{itemize}
+
+\end{theorem}
+
+\subsection{Elastic Net}
+The idea is to do a convex combination of Lasso and Ridge: $\forall \lambda_1,\lambda_2 \geq 0$, the naive elastic net criterion is
+\begin{align*}
+    \mathcal{L}(\lambda_1,\lambda_2,\boldsymbol{\beta}) = \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert _2^2 + \lambda_1 \underbrace{\lVert \boldsymbol{\beta} \rVert _1}_{=\sum^p_{j=1}\lvert \beta_j \rvert} + \lambda_2 \underbrace{\lVert \boldsymbol{\beta} \rVert^2_2}_{=\sum^p_{j=1} \beta_j^2}
+\end{align*}
+Now, notice that both $\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert _2^2$ and $\lVert \boldsymbol{\beta} \rVert^2_2$ are both \textbf{quadratic}, hence, we can reframe the qeustion as a lasso-type optimization, with an augmented data $(\mathbf{X}^*,\mathbf{y}^*)$ where 
+\begin{align*}
+    \mathbf{X}^*_{(n+p)\times p} &= \frac{1}{\sqrt{1+\lambda_2}} \begin{pmatrix} \mathbf{X} \\ \sqrt{\lambda_2}\mathbf{I} \end{pmatrix} & \mathbf{y}^*_{n+p} =  \begin{pmatrix} \mathbf{y} \\ \mathbf{0} \end{pmatrix}
+\end{align*}
+then we have 
+\begin{lemma}{Naive elastic net solution}{elastic_net}
+    Let $\gamma = \frac{\lambda_1}{\sqrt{1+\lambda_2}}$, then the naive elastic net criterion can be rewritten as
+    $$
+    \mathcal{L}(\gamma,\boldsymbol{\beta}) = \mathcal{L}(\gamma,\boldsymbol{\beta}^*) = \lVert \mathbf{y}^*-\mathbf{X}^*\boldsymbol{\beta}^* \rVert _2^2 + \gamma \lVert \boldsymbol{\beta}^* \rVert _1 
+    $$
+    which gives use the estimation for the augmented data
+    $$
+    \hat{\boldsymbol{\beta}}^* = \arg\min_{\boldsymbol{\beta}^*} \mathcal{L}(\gamma,\boldsymbol{\beta}^*)
+    $$
+    and the estimation for the true model of the original data $(\mathbf{X},\mathbf{y})$ is 
+    $$
+    \hat{\boldsymbol{\beta}} = \frac{1}{\sqrt{1+\lambda_2}}\hat{\boldsymbol{\beta}}^*
+    $$
+\end{lemma}
+Elastic Net enjoys 2 advantages:
+\begin{itemize}
+    \item The estimation is done on the augemented data $(\mathbf{X}^*,\mathbf{y}^*)$, and now $\mathbf{X}^*$ is $(n+p)\times p$, therefore, $\mathrm{rank}(\mathbf{X}^*)=p$, hence all $p$ predictors \textbf{can} be selected, instead of just $n$, like in Lasso.
+    \item Computationally, it is similarly efficient as Lasso
+\end{itemize}
+
+If we further assume an orthogonal design ($\mathbf{X}'\mathbf{X}=\mathbf{I}_p$), we can easily compare the 3 estimations
+\begin{align*}
+    \hat{{\beta}}_j\left(\text{naive elastic net}\right) &= \frac{\left( \left\vert \hat{\beta}_i^{OLS}\right\vert -\frac{\lambda_1}{2} \right)_+}{1+\lambda_2} \cdot \mathrm{sign}\left[ \hat{\beta}_j^{OLS}\right] \\
+    \hat{{\beta}}_j\left(\text{ridge}\right) &= \frac{\hat{\beta}_j^{OLS}}{1+\lambda_2}\\
+    \hat{\beta}_j \left(\text{lasso}\right) &= \left( \left\vert \hat{\beta}_i^{OLS}\right\vert -\frac{\lambda_1}{2} \right)_+\cdot \mathrm{sign}\left[ \hat{\beta}_j^{OLS}\right]
+\end{align*}
+
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+    \centering
+      \begin{tikzpicture}[scale=1.6]
+          % basics
+          \draw [-stealth,color=black,thick] (0,2) -- (4,2) node[right]{$\beta_1$};
+          \draw [-stealth,color=black,thick] (2,0) -- (2,4) node[right]{$\beta_2$};
+          \draw [color=black,thick, densely dashed] (1,2) -- (2,3) -- (3,2);
+          \draw [color=black,thick, densely dashed]  (3,2) -- (2,1) -- (1,2);
+          \draw [color=black, thick, densely dashed] (1,2) -- (3,2);
+          \node[circle,draw,minimum size=3.2cm, thick, densely dashed] (c) at (2,2){};
+          \draw [color=myred, very thick] plot [smooth] coordinates {(2,3) (2.23,2.9) (2.6,2.6) (2.9,2.23) (3,2) (2.9,1.77) (2.6,1.4) (2.23,1.1) (2,1)} node[below,xshift=40pt]{Naive elastic net};
+          \draw [color=myred, very thick] plot [smooth] coordinates {(2,3) (1.77,2.9) (1.4,2.6) (1.1,2.23) (1,2) (1.1,1.77) (1.4,1.4) (1.77,1.1) (2,1)};
+      \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \begin{tikzpicture}[scale=1.6]
+            % basics
+            \draw [-stealth,color=black,thick] (0,2) -- (4,2) node[right]{$\boldsymbol{\beta}$};
+            \draw [-stealth,color=black,thick] (2,0) -- (2,4) node[right]{$\hat{\boldsymbol{\beta}}$};
+            \draw [color=black,thick] (2,2) -- (2,1);
+            \draw [color=black, dotted, thick] (0.5,0.5) -- (3.5,3.5) node[right]{OLS};
+            \draw [color=black, densely dashed, thick] (0.5,1.25) -- (3.5,2.75) node[right]{Ridge};
+            \draw [color=black, thick] (0.5,1) -- (1.5,2) -- (2.5,2) -- (3.5,3) node[right]{Lasso};
+            \draw [color=myred, very thick] (0.5,1.5) -- (1.5,2) -- (2.5,2) -- (3.5,2.5) node[right]{elastic net};
+        \end{tikzpicture}
+    \end{minipage}
+\end{figure}
 
 \subsection{Other Variants}
 There are also some other useful variants of Lasso
@@ -410,6 +509,7 @@ In general
         \end{tikzpicture}
     \end{minipage}
 \end{figure}
+
 
 \newpage
 \bibliographystyle{plainnat}
