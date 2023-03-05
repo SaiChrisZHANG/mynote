@@ -10,5 +10,8 @@
 \BOOKMARK [2][-]{subsection.3.1}{Adaptive Lasso}{section.3}% 10
 \BOOKMARK [2][-]{subsection.3.2}{Naive Elastic Net}{section.3}% 11
 \BOOKMARK [2][-]{subsection.3.3}{Elastic Net}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Other Variants}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Penalized Least Square Estimation}{}% 14
+\BOOKMARK [2][-]{subsection.3.4}{Group Lasso}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.5}{Other Variants}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Dantzig Selector and Lasso}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Connecting Dantzig Selector and Lasso}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Penalized Least Square Estimation}{}% 17

@@ -503,6 +503,58 @@ which leads to a Lasso-looking rewritting of the elastic net estimation
     $$
     hence, elastic net is a \myhl[myblue]{\textbf{stabilized} version} of Lasso.
 \end{theorem}
+With the \textit{stabilizing} term, elastic net dominates Lasso under collinearity.
+
+\subsection{Group Lasso}
+So far, all the variants are built on the model with one big set of covariates $\mathbf{X}$ ($n\times p$) and a long vector of coefficient $\boldsymbol{\beta}$ ($p\times 1$), with a strong assumption of orthogonal design: $\mathbf{X}'\mathbf{X}=\mathbf{I}_p$, what if we can pool some covariates into a factor, and do a group estimation? This is the idea of group lasso. Consider 
+$$
+\mathbf{y} = \sum^J_{j=1}\mathbf{X}_j\boldsymbol{\beta}_j + \boldsymbol{\epsilon}
+$$
+where $\mathbf{y}$ is still a $n\times 1$ vector, $\boldsymbol{\epsilon}\sim \mathcal{N}(0,\sigma^2\mathbf{I}_n)$, and $\mathbf{X}_j$ ($j=1\cdots,J$) are a decomposition of $\mathbf{X}$ into $J$ submatrix (factors): 
+$$
+\mathbf{X} = \begin{bmatrix}
+    \underbrace{\mathbf{X}_1}_{n\times p_1} \cdots  \underbrace{\mathbf{X}_j}_{n\times p_j} \cdots \underbrace{\mathbf{X}_J}_{n\times p_J}
+\end{bmatrix}
+$$
+Here, each $\mathbf{X}_j$ is orthonormal: $\mathbf{X}_j'\mathbf{X}_j=\mathbf{I}_{p_j}$\footnote{This is a much weaker assumption than the full orthogonal design $\mathbf{X}'\mathbf{X}=\mathbf{I}_p$}. Similarly, the vector of coefficients will be decomposed into $$\boldsymbol{\beta} = \begin{bmatrix}
+    \boldsymbol{\beta}_1' \cdots \boldsymbol{\beta}_j' \cdots \boldsymbol{\beta}_J'
+\end{bmatrix}'$$
+ within which each component $\boldsymbol{\beta}_j$ ($p_j\times 1$) corresponds to a factor.
+
+ Now for this problem, we have the \textbf{\underline{group Lasso}} estimation
+ \begin{definition}{Group Lasso}{group_lasso}
+    The group Lasso estimate is defined as
+    $$
+    \min_{\boldsymbol{\beta}_j} \frac{1}{2}\lVert \mathbf{y} - \sum^J_{j=1} \mathbf{X}_j\boldsymbol{\beta}_j \rVert ^2_2 + \lambda \sum^J_{j=1}\lVert \boldsymbol{\beta}_j \rVert _{\mathbf{K}_j}$$
+    where the matrix norm $\lVert \cdot \rVert _{\mathbf{K}}$ is defined as 
+    $$
+    \lVert \boldsymbol{\eta} \rVert = \sqrt{ \boldsymbol{\eta}'\mathbf{K}\boldsymbol{\eta} }
+    $$
+    with a symmetric $d\times d$ positive definite matrix $\mathbf{K}$, for a vector $\boldsymbol{\eta}\in \mathbb{R}^d$
+ \end{definition}
+In Definition \ref{def:group_lasso}, the problem is reduced to Lasso when $p_1=\cdots=p_J=1$. 
+
+\paragraph*{How to solve this?} Notice that this is still a convex optimization problem, hence KKT condition still holds, and assume the kernel $\mathbf{K}_j = p_j \mathbf{I}_{p_j}$, we have the estimation
+\begin{align*}
+    \boldsymbol{\beta}_j = \left( 1- \frac{\lambda \sqrt{p_j}}{\lVert \mathbf{S}_j \rVert _1} \right)_+ \mathbf{S}_j
+\end{align*}
+where 
+$$
+\mathbf{S}_j = \mathbf{X}_j'\left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}_{-j} \right), \ \text{ with }\boldsymbol{\beta}_{-j}=\begin{bmatrix}
+    \boldsymbol{\beta}'_1, \cdots, \boldsymbol{\beta}'_{j-1}, \mathbf{0}, \boldsymbol{\beta}'_{j+1}, \cdots, \boldsymbol{\beta}'_j
+\end{bmatrix}'
+$$
+if and only if
+\begin{align*}
+    -\mathbf{X}_j'\left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right) + \frac{\lambda \boldsymbol{\beta}_j\sqrt{p_j}}{\lVert \boldsymbol{\beta}_j \rVert _1} &=0, &\forall \boldsymbol{\beta}_j\neq \mathbf{0} \\
+    \lVert -\mathbf{X}_j'\left(\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right)\rVert _1 & \leq \lambda \sqrt{p_j}, & \forall \boldsymbol{\beta}_j = \mathbf{0}
+\end{align*}
+
+\paragraph*{Group LARS} similar to LARS, group LARS also finds factor that has the smallest angle with $\mathbf{y}$ and proceeds equiangularly each time a new factor is selected. But the angle (between a vector $\mathbf{r}$ and a factor matrix $\mathbf{X}_j$), is constructed as 
+$$
+\cos^2\left( \theta(\mathbf{r},\mathbf{X}_j) \right) = \frac{\lVert \mathbf{X}_j'\mathbf{r} \rVert _2^2}{\lVert \mathbf{r} \rVert _2^2}
+$$
+when $p_j=\bar{p},\forall j$\footnote{Otherwise, use the scaled angle $\lVert \mathbf{X}_j'\mathbf{r} \rVert _2^2/p_j$}.
 
 \subsection{Other Variants}
 There are also some other useful variants of Lasso
@@ -519,6 +571,77 @@ There are also some other useful variants of Lasso
     \end{itemize}
     \item \textbf{\underline{Backward Lasso}}: start from the \textbf{full} OLS model, and eliminate covariates \textbf{backwards} (by the order of correlation going 0 the earliest)
 \end{itemize}
+
+\section{Dantzig Selector and Lasso}
+Now, back to the basic problem 
+$$
+\mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}
+$$
+We consider another way of estimation, \myhl[myred]{\textbf{Dantzig Selector}}
+\begin{definition}{Dantzig Selector}{dentzig}
+    The Dantzig selector is a solution to the $L1-$regularization problem 
+    $$
+    \min_{\boldsymbol{\beta}\in\mathbb{R}^p}\lVert \boldsymbol{\beta} \rVert _1 \ \text{ s.t. }\ \lVert n^{-1}\mathbf{X}'(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) \rVert _{\infty} \leq \lambda
+    $$
+    similarly, $n^{-1}\mathbf{X}'(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) = n^{-1}\mathbf{X}'\boldsymbol{\epsilon}$, the constraint aims to bound the correlation of covariates and residual. 
+\end{definition}
+Though not exactly, Dantzig selector can be thought as the dual problem of Lasso, hence has similar performance in certain scenarios. 
+
+\paragraph*{Why constrain $\lVert n^{-1}\mathbf{X}'(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) \rVert _{\infty}$} There are 2 justifications for constraining $\lVert n^{-1}\mathbf{X}'(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) \rVert _{\infty}$ instead of just the size of the residuals $\lVert\mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert _{\infty}$
+\begin{itemize}
+    \item Stability: Dantzig constraint is \textbf{invariant} over any \myhl[myblue]{\textbf{orthonormal}} transformation $$ n^{-1}(\mathbf{UX})'(\mathbf{Uy}-\mathbf{UX}\boldsymbol{\beta}) = n^{-1}\mathbf{X}'(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) $$
+    \item No accidental neglection: some important covariates might be noisy, could be mis-eliminated if using $\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert _{\infty} \leq \lambda$
+\end{itemize}
+\paragraph*{How to solve?} Dantzig selector problem can be recast as a linear programming (LP) problem
+$$
+\min_{\mathbf{u}\in\mathbb{R}^p}\sum^p_{i=1}u_i
+$$
+s.t.
+\begin{align*}
+    -\mathbf{u}\leq& \boldsymbol{\beta} \leq \mathbf{u} \\
+    -\lambda_p \sigma \mathbf{1} \leq& n^{-1}\mathbf{X}'(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) \leq \lambda_p\sigma\mathbf{1}
+\end{align*}
+In their elegant work, \citet{candes2007dantzig} illustrated some properties of Dantzig selector
+\begin{theorem}{Properties of the Dantzig Selector \citep{candes2007dantzig}}{dantzig_property}
+    \begin{itemize}
+        \item Suppose $\boldsymbol{\beta}_0\in\mathbb{R}^p$ is any $S-$sparse vector of parameter obeying $\delta_{2S}+\theta_{S,2S}<1$. Choose $\lambda_p=\sqrt{2\log p}$. Then with large probability, $\hat{\boldsymbol{\beta}}$ obeys $$ \lVert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \rVert ^2_2 \leq C_1^2\cdot (2\log p)\cdot \textcolor{myred}{S\cdot \sigma^2} $$ 
+        with $C_1 = \frac{4}{1-\delta_S - \theta_{S,2S}}$. Hence, for small value of $\delta_S+ \theta_{S,2S},C_1\simeq 4$\footnote{$\delta_S$ refers to the smallest quantity ($S-$restricted isometry constant) s.t. $$ (1-\delta_S) \lVert \mathbf{c}\rVert^2_2 \leq \lVert \mathbf{X_J} \mathbf{c}\rVert^2_2 \leq (1+\delta_S)\lVert \mathbf{c}\rVert^2_2 $$ for all subsets $J$ with $\lvert J\rvert\leq S$ and coefficient sequences $(c_j)_{j\in J}$. Notice that $[1-\delta_S,1+\delta_S]$ is the smallest inteval that is symmetric around 1 and includes all eigenvalues of $\mathbf{X}'_J\mathbf{X}_J$.}. 
+        For concreteness, if one chooses $\lambda_p \coloneq \sqrt{2(1+a)\log p},\forall a\geq 0$, the bound holds with probability exceeding $1-\left(\sqrt{\pi\log p}\cdot p^a\right)^{-1}$ with the provisio that $\lambda^2_p$ substitutes $2\log p$.
+        \item $\theta_{S,2S}$ refers to the restricted orthogonality constant for $S+S'\leq p$ to be the smallest quantities s.t. $$ \lvert \langle \mathbf{X}_T\mathbf{c},\mathbf{X}_{T'}\mathbf{c}' \rangle \rvert \leq \theta_{S,S'}\cdot \lVert \mathbf{c}\rVert _2 \lVert \mathbf{c}'\rVert _2 $$
+    \end{itemize}
+\end{theorem}
+Theorem \ref{thm:dantzig_property} gives that the \textbf{\underline{oracle LS estimator}}, $ \hat{\boldsymbol{\beta}}_S $, with the location of the $S$ non-zero entries of the parameter vector
+$$
+\mathbb{E}\lVert \hat{\boldsymbol{\beta}}_S-\boldsymbol{\beta}_0 \rVert^2_2 \geq \frac{1}{1+\delta_S}\mathbb{E} \lVert \mathbf{X}_S \left(\hat{\boldsymbol{\beta}}_S-\boldsymbol{\beta}_0\right) \rVert^2_2 = \frac{1}{1+\delta_S}\cdot \lvert S \rvert \cdot \sigma^2
+$$
+which gives that 
+\begin{itemize}
+    \item the mean squared error is simply proportional, up to a logarithmic factor, to the \textbf{true number} of unknowns times the noise level $\sigma^2$
+    \item reliable estimate of $\boldsymbol{\beta}$ can be achieved only by a \textbf{\underline{simply linear program}}
+\end{itemize}
+
+But what about the idea risk, $\min_{I\subset \left\{1,\cdots,p\right\}}\mathbb{E}\lVert \boldsymbol{\beta} -\hat{\boldsymbol{\beta}}_I \rVert^2$?
+\begin{theorem}{Bound of Risk of the Dantzig Selector}{dantzig_bound}
+Choose $t>0$, and set $\lambda_p \coloneq (1+t^{-1})\sqrt{2\log p}$. Then if $\boldsymbol{\beta}$ is $S-$sparse with $\delta_{2S}+\theta_{S,2S}<1-t$, then Dantzig selector obeys 
+$$
+\lVert \hat{\boldsymbol{\beta}} - \boldsymbol{\beta} \rVert^2_2 \leq C^2_2 \cdot \lambda_p^2 \cdot \left( \sigma^2 + \textcolor{myred}{\sum^p_{i=1}\min \left(\beta^2_i,\sigma^2\right)} \right)
+$$
+with large probability. Here, $C_2$ may only depend on $\delta{2S}$ and $\theta_{S,2S}$ and the additional $C_2^2\lambda_p^2\sigma^2$ reflects bias due to regularization.
+\end{theorem}
+
+\subsection{Connecting Dantzig Selector and Lasso}
+The equivalence of Lasso and Dantzig was established by \citet{james2009dasso}, by introducing the following theorem:
+\begin{theorem}{Equivalence of Lasso and Dantzig}{lasso_dantzig}
+    Denote the support of Lasso estimate $\hat{\boldsymbol{\beta}}_{\text{Lasso}}$ as $I_L$, and construct a $n \times \lvert I_L\rvert$ matrix $\mathbf{X}_L$ by taking $\mathbf{X}_{I_L}$ and multiplying its columns by the signs of the corresponding coefficients in $\hat{\boldsymbol{\beta}}_L$.
+    
+    \textbf{Assume} that $\mathbf{X}_L$ has \myhl[myblue]{\textbf{full rank} $\lvert I_L \rvert$} and $\lambda_D =\lambda_L$, then $\hat{\boldsymbol{\beta}}_D=\hat{\boldsymbol{\beta}}_L $ if 
+    \begin{align*}
+        \mathbf{u} = \left(\mathbf{X}_L'\mathbf{X}_L\right)^{-1}\mathbf{1} &\geq 0 \\
+        \lVert \mathbf{X}_L'\mathbf{X}_L\mathbf{u} \rVert _{\infty} &\leq 1
+    \end{align*}
+    where $\mathbf{1} = (1,\cdots,1)'$, with the length $\lvert I_L \rvert$.
+\end{theorem}
+Naturally from this theorem, if $\mathbf{X}'\mathbf{X}=\mathbf{I}_p$ (orthonormal design matrix), then Lasso and Dantzig coefficient paths are identical.
 
 \section{Penalized Least Square Estimation}
 Lasso is one special class of Penalized Least Square (PLS) Estimation. For the linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, if $\boldsymbol{\epsilon} \sim \mathcal{N}(\mathbf{0},\sigma^2 \mathbf{I}_n)$, we have PLS as

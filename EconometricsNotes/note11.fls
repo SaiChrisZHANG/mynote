@@ -579,6 +579,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplr-x.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplsy.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/pxsys.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.bbl
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.bbl
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1npxtt.fd
