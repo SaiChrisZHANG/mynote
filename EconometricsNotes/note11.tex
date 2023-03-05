@@ -368,7 +368,7 @@ this is a 2-step procedure:
 
 \end{theorem}
 
-\subsection{Elastic Net}
+\subsection{Naive Elastic Net}
 The idea is to do a convex combination of Lasso and Ridge: $\forall \lambda_1,\lambda_2 \geq 0$, the naive elastic net criterion is
 \begin{align*}
     \mathcal{L}(\lambda_1,\lambda_2,\boldsymbol{\beta}) = \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert _2^2 + \lambda_1 \underbrace{\lVert \boldsymbol{\beta} \rVert _1}_{=\sum^p_{j=1}\lvert \beta_j \rvert} + \lambda_2 \underbrace{\lVert \boldsymbol{\beta} \rVert^2_2}_{=\sum^p_{j=1} \beta_j^2}
@@ -378,7 +378,7 @@ Now, notice that both $\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert _2^
     \mathbf{X}^*_{(n+p)\times p} &= \frac{1}{\sqrt{1+\lambda_2}} \begin{pmatrix} \mathbf{X} \\ \sqrt{\lambda_2}\mathbf{I} \end{pmatrix} & \mathbf{y}^*_{n+p} =  \begin{pmatrix} \mathbf{y} \\ \mathbf{0} \end{pmatrix}
 \end{align*}
 then we have 
-\begin{lemma}{Naive elastic net solution}{elastic_net}
+\begin{definition}{Naive elastic net solution}{naive_elastic_net}
     Let $\gamma = \frac{\lambda_1}{\sqrt{1+\lambda_2}}$, then the naive elastic net criterion can be rewritten as
     $$
     \mathcal{L}(\gamma,\boldsymbol{\beta}) = \mathcal{L}(\gamma,\boldsymbol{\beta}^*) = \lVert \mathbf{y}^*-\mathbf{X}^*\boldsymbol{\beta}^* \rVert _2^2 + \gamma \lVert \boldsymbol{\beta}^* \rVert _1 
@@ -391,8 +391,8 @@ then we have
     $$
     \hat{\boldsymbol{\beta}} = \frac{1}{\sqrt{1+\lambda_2}}\hat{\boldsymbol{\beta}}^*
     $$
-\end{lemma}
-Elastic Net enjoys 2 advantages:
+\end{definition}
+Naive elastic net enjoys 2 advantages:
 \begin{itemize}
     \item The estimation is done on the augemented data $(\mathbf{X}^*,\mathbf{y}^*)$, and now $\mathbf{X}^*$ is $(n+p)\times p$, therefore, $\mathrm{rank}(\mathbf{X}^*)=p$, hence all $p$ predictors \textbf{can} be selected, instead of just $n$, like in Lasso.
     \item Computationally, it is similarly efficient as Lasso
@@ -400,10 +400,12 @@ Elastic Net enjoys 2 advantages:
 
 If we further assume an orthogonal design ($\mathbf{X}'\mathbf{X}=\mathbf{I}_p$), we can easily compare the 3 estimations
 \begin{align*}
-    \hat{{\beta}}_j\left(\text{naive elastic net}\right) &= \frac{\left( \left\vert \hat{\beta}_i^{OLS}\right\vert -\frac{\lambda_1}{2} \right)_+}{1+\lambda_2} \cdot \mathrm{sign}\left[ \hat{\beta}_j^{OLS}\right] \\
+    \hat{{\beta}}_j\left(\text{naive elastic net}\right) &= \frac{\left( \left\vert \hat{\beta}_j^{OLS}\right\vert -\frac{\lambda_1}{2} \right)_+}{1+\lambda_2} \cdot \mathrm{sign}\left[ \hat{\beta}_j^{OLS}\right] \\
     \hat{{\beta}}_j\left(\text{ridge}\right) &= \frac{\hat{\beta}_j^{OLS}}{1+\lambda_2}\\
-    \hat{\beta}_j \left(\text{lasso}\right) &= \left( \left\vert \hat{\beta}_i^{OLS}\right\vert -\frac{\lambda_1}{2} \right)_+\cdot \mathrm{sign}\left[ \hat{\beta}_j^{OLS}\right]
+    \hat{\beta}_j \left(\text{lasso}\right) &= \left( \left\vert \hat{\beta}_j^{OLS}\right\vert -\frac{\lambda_1}{2} \right)_+\cdot \mathrm{sign}\left[ \hat{\beta}_j^{OLS}\right]
 \end{align*}
+
+This comparison is illustrated graphically below.
 
 \begin{figure}[ht]
     \centering
@@ -432,10 +434,75 @@ If we further assume an orthogonal design ($\mathbf{X}'\mathbf{X}=\mathbf{I}_p$)
             \draw [color=black, dotted, thick] (0.5,0.5) -- (3.5,3.5) node[right]{OLS};
             \draw [color=black, densely dashed, thick] (0.5,1.25) -- (3.5,2.75) node[right]{Ridge};
             \draw [color=black, thick] (0.5,1) -- (1.5,2) -- (2.5,2) -- (3.5,3) node[right]{Lasso};
-            \draw [color=myred, very thick] (0.5,1.5) -- (1.5,2) -- (2.5,2) -- (3.5,2.5) node[right]{elastic net};
+            \draw [color=myred, very thick] (0.5,1.5) -- (1.5,2) -- (2.5,2) -- (3.5,2.5) node[right]{NEN};
         \end{tikzpicture}
     \end{minipage}
 \end{figure}
+
+Now consider another problem: \textit{\textbf{\underline{grouping effect}}}, that is, for a generic penalization method 
+$$
+\hat{\boldsymbol{\beta}} =\arg\min_{\boldsymbol{\beta}} \left\Vert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \right\Vert^2_2 + \lambda J(\boldsymbol{\beta})
+$$
+where $J(\cdot)$ is positive valued for $\boldsymbol{\beta}\neq 0$, then for a group of highly correlated variables, the regression coeffeicients tend to be \textbf{equal}.
+
+\begin{lemma}{Grouping effect}{group_effect}
+    Assume $\mathbf{x}_i=\mathbf{x}_j,i,j\in\left\{ 1,\cdots,p \right\}$, then
+    \begin{itemize}
+        \item If $J(\cdot)$ is \textbf{strictly convex}, then $\hat{\beta}_i = \hat{\beta}_j,\forall \lambda >0$
+        \item If $J(\boldsymbol{\beta})=\lvert \boldsymbol{\beta} \rvert _1$, then $\hat{\beta}_1,\hat{\beta}_2\geq 0$ and $\hat{\boldsymbol{\beta}}^*$ is another minimizer of the generic penalization function, where 
+        $$ \hat{\beta}^*_k = \begin{cases}
+            \hat{\beta}_k & \text{if }k\neq i \text{ and }k\neq j\\
+            \left(\hat{\beta}_i + \hat{\beta}_j\right)\cdot s & \text{if }k=i \\
+            \left(\hat{\beta}_i + \hat{\beta}_j\right)\cdot (1-s) & \text{if }k=j
+        \end{cases} $$ for any $s\in [0,1]$
+    \end{itemize}
+\end{lemma}
+As shown in Lemma \ref{lemma:group_effect}, there is a clear distinction between \textbf{\textit{strictly convex}} penalty functions and the Lasso penalty (not strictly convex). For the naive elastic net penalty, $\lambda_2>0$ gives strict convexity. 
+
+And now, to take this grouping effect into consideration, we want: for two variables $\mathbf{x}_i,\mathbf{x}_j$ that are closely correlated, we should expect the coefficient paths of them to converge, that is 
+\begin{theorem}{Grouping effect requirement}{group_effect}
+    For the naive elastic net estimate $\hat{\boldsymbol{\beta}}(\lambda_1,\lambda_2)$, WLOG, suppose that $\hat{\beta}_j(\lambda_1,\lambda_2),\hat{\beta}(\lambda_1,\lambda_2)>0$, then define the \textbf{\textit{difference}} between the coefficient paths of predictors $i$ and $j$ as 
+    $$
+    D_{\lambda_1,\lambda_2}(i,j) = \frac{1}{\lVert \mathbf{y}\rVert _1}\lvert \hat{\beta}_i(\lambda_1,\lambda_2)-\hat{\beta}_j(\lambda_1,\lambda_2) \rvert
+    $$
+    then the grouping effect requires 
+    $$
+    D_{\lambda_1,\lambda_2}(i,j)\leq \frac{1}{\lambda_2}\sqrt{2(1-\rho)}
+    $$
+    where $\rho = \mathbf{x}_i'\mathbf{x}_j$ is the sample correlation.
+\end{theorem}
+
+\subsection{Elastic Net}
+One downfall of naive elastic net estimation is that it incurs \textbf{double} shrinkage (2-stage procedure, with each stage having a regularizer). To address this issue, we can rescale the naive elastic net estimation to get the \textbf{elastic net estimate}:
+\begin{definition}{Elastic net solution}{elastic_net}
+    Again for $\gamma = \frac{\lambda_1}{\sqrt{1+\lambda_2}}$, we have
+
+    $$
+    \hat{\boldsymbol{\beta}}^* = \arg\min_{\boldsymbol{\beta}^*} \mathcal{L}(\gamma,\boldsymbol{\beta}^*) = \arg\min_{\boldsymbol{\beta}^*} \lVert \mathbf{y}^*-\mathbf{X}^*\boldsymbol{\beta}^* \rVert _2^2 + \gamma \lVert \boldsymbol{\beta}^* \rVert _1 
+    $$
+    and the elastic estimate of $\mathbf{\beta}$ is 
+    $$
+    \hat{\boldsymbol{\beta}}_{\text{elastic net}} = \sqrt{1+\lambda_2}\hat{\boldsymbol{\beta}}^* = (1+\lambda_2)\hat{\boldsymbol{\beta}}_{\text{naive elastic net}}
+    $$
+\end{definition}
+The rescaling from $\hat{\boldsymbol{\beta}}_{\text{naive elastic net}}$ to $\hat{\boldsymbol{\beta}}_{\text{elastic net}}$ preseves the variable selection property (able to select all $p$ variables), while solve the double-regularization shrinkage problem. 
+
+But how do we make sense of the scaler $1+\lambda_2$? Remember the ridge estimator is
+$$
+\hat{\boldsymbol{\beta}}_{\text{ridge}} = \left( \mathbf{X}'\mathbf{X}+\lambda_2 \mathbf{I} \right)^{-1}\mathbf{X}'\mathbf{y}
+$$
+which leads to a Lasso-looking rewritting of the elastic net estimation
+\begin{theorem}{Elastic net solution: A modified version of Lasso}{elastic_net_lasso}
+    Given data $(\mathbf{y},\mathbf{X})$ and regularization parameters $(\lambda_1,\lambda_2)$, then the elastic net estimation is
+    $$
+\hat{\boldsymbol{\beta}}_{\text{elastic net}} = \arg\min_{\boldsymbol{\beta}}\boldsymbol{\beta}'\left(\frac{\mathbf{X}'\mathbf{X}+\lambda_2 \mathbf{I} }{1+\lambda_2}\right)\boldsymbol{\beta} - 2\mathbf{y}'\mathbf{X}\boldsymbol{\beta} + \lambda_1\lVert \boldsymbol{\beta} \rVert _1
+    $$
+    comparing to Lasso estimation
+    $$
+    \hat{\boldsymbol{\beta}}_{\text{Lasso}} = \arg\min_{\boldsymbol{\beta}}\boldsymbol{\beta}'\left(\mathbf{X}'\mathbf{X}\right)\boldsymbol{\beta} - 2\mathbf{y}'\mathbf{X}\boldsymbol{\beta} + \lambda_1\lVert \boldsymbol{\beta} \rVert _1
+    $$
+    hence, elastic net is a \myhl[myblue]{\textbf{stabilized} version} of Lasso.
+\end{theorem}
 
 \subsection{Other Variants}
 There are also some other useful variants of Lasso
