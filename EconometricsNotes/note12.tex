@@ -1,0 +1,77 @@
+\documentclass[twoside]{article}
+\input{settings.tex}
+
+\begin{document}
+\lecture{12}{Non-convex Learning}{}{Sai Zhang}{}{The note is built on Prof. \hyperlink{http://faculty.marshall.usc.edu/jinchi-lv/}{Jinchi Lv}'s lectures of the course at USC, DSO 607, High-Dimensional Statistics and Big Data Problems.}
+
+\section{L0 Penalized Likelihood}
+Consider the model selection problem of choosing a parameter vector $\boldsymbol{\theta}$ that maximizes the penalized likelihood 
+\begin{equation}\label{eq:l0}
+    \mathcal{L}_n(\boldsymbol{\theta}) - \lambda \lVert \boldsymbol{\theta} \rVert _0
+\end{equation}
+where the $L_0$-norm $\lVert c\dot \rVert _0$ denotes the \myhl[myblue]{\textbf{the number of nonzero components}}, and $\lambda\geq 0$ is still the regularization parameter.
+
+The $L_0-$penalized likelihood method is equivalent to \myhl[myred]{\textbf{the best subset selection}}
+\begin{itemize}
+    \item given $\lVert \boldsymbol{\theta}_0\rVert _0=m$, the solution to Problem \ref{eq:l0} is the \myhl[myblue]{\textbf{best subset}} that has the \textbf{\underline{largest}} maximum likelihood among all subsets of size $m$
+    \item then, choose the model size $m$ among the $p$ size-$m$ best subsets ($1\leq m\leq p$) by maximizing \ref{eq:l0}
+\end{itemize}
+hence it's a combinatorial problem, computationally complex.
+
+\paragraph*{$L_0$-Penalized Empirical Risk Minimization} More generally, consider a unified approach of $L_0-$penalized empirical risk minimization for variable selection:
+\begin{equation}\label{eq:empirical-l0}
+    \min_{\boldsymbol{\theta}\in\mathbb{R}^p}\left\{\hat{R}(\boldsymbol{\theta}) + \lambda\lVert \boldsymbol{\theta} \rVert _0 \right\}
+\end{equation}
+where $\hat{R}(\boldsymbol{\theta})$ is the empirical risk function, which could be of different forms
+\begin{itemize}
+    \item \underline{\textbf{negative log-likelihood loss}}: equivalent t $L_0$-penalized likelihood 
+    \item \textbf{\underline{squared error (quadratic) loss}}: $L_0$-penalized least squares
+    \item \underline{selection via \textbf{RSS} (residual sum of squares)}: for the adjusted $R^2$
+    $$
+    R^2_{\text{adj}} = 1-\frac{n-1}{n-d}\frac{RSS_d}{TSS}
+    $$
+    it's clear that $\max R^2_{\text{adj}}\Leftrightarrow \min\log\left(\frac{RSS_d}{n-d}\right)$, and since $\frac{RSS_d}{n}\simeq \sigma^2$, then $$ n\log \frac{RSS_d}{n-d}\simeq \frac{RSS_d}{\sigma^2} + d + n(\log \sigma^2 -1) $$ which shows that adjusted $R^2$ method is approximately equivalent to \ref{eq:empirical-l0} with $\lambda =1/2$
+    \item \underline{\textbf{generalized corss-validation} (GCV)}, \underline{\textbf{corss-validation} (CV)}
+    \item \underline{\textbf{risk inflation factor} (RIC)}: use $\lambda = \log p$, adjusting for the inflation of prediction risk caused by searching $p$ variables\footnote{The $\log p$ is, once again, from the fact that for Gaussian random variables $$ \max_{1\leq j\leq p}\lvert Z_i\rvert \simeq \sqrt{2\log p} $$ for $(Z_1,\cdots,Z_p)'\sim\mathcal{N}(0,\mathbf{I}_p)$}
+    \item \underline{\textbf{AIC}} ($\lambda=1$), \underline{\textbf{BIC}} ($\lambda=\frac{\log n}{2}$)
+\end{itemize}
+
+\subsection{Properties of L0-Regularization Methods}
+\paragraph*{\myhl[myred]{\textbf{risk bounds}}}
+for model selection \citep{barron1999risk}: for a family of models $\left\{ S_m: m\in\mathcal{M}_p \right\}$, The penalty term generally takes the form of $$ \frac{\kappa L_m D_m}{n} $$ where 
+    \begin{itemize}
+        \item $\kappa$: a positive constant
+        \item $D_m = \lvert S_m \rvert$: the model dimension, account for the difficulty to estimate \textbf{\underline{within}} the model $S_m$
+        \item $L_m\geq 1$: a weight that satisfies: $\sum_{m\in \mathcal{M}_p}\exp(-L_mD_m)\leq 1$, accounting for the noise due to \textbf{\underline{the size}} of the list of models
+    \end{itemize}
+hence, in the linear model, the $L_0$-regularized estimator $\hat{\boldsymbol{\beta}}$ satisfies that 
+$$
+\mathbb{E}\left[ n^{-1}\lVert \mathbf{X}\hat{\boldsymbol{\beta}}- \mathbf{X}{\boldsymbol{\beta}}_0 \rVert^2_2 \right] \leq C \inf_{m\in \mathcal{M}_p}\left\{ \min_{\boldsymbol{\beta}\in\text{model }S_m} \left[ n^{-1}\lVert \mathbf{X}{\boldsymbol{\beta}}- \mathbf{X}{\boldsymbol{\beta}}_0 \rVert^2_2 \right] + \frac{\kappa L_m D_m}{n}\right\}
+$$
+where \textit{\underline{\textbf{the tradeoff}}}: approximation error $ n^{-1}\lVert \mathbf{X}\hat{\boldsymbol{\beta}}- \mathbf{X}{\boldsymbol{\beta}}_0 \rVert^2_2 $, and the cost of searching $\frac{\kappa L_m D_m}{n}$
+
+\paragraph*{\myhl[myred]{\textbf{computational complexity}}} $L_0-$regularization methods are appealing w.r.t. risk properties, but in high-dimensional settings, the computation is infeasible (combinatorial), and discontinuous, non-convex penalty function $\lambda \lVert \boldsymbol{\beta}\rVert _0$
+
+\subsection{Generalizations of L0-Regularization Methods}
+Consider continuous or convex relaxation of the $L_0$-regularization method 
+\begin{equation}\label{eq:relaxed-l0}
+    \min_{\boldsymbol{\beta}\in\mathbb{R}^p} \left\{ \hat{R}(\boldsymbol{\beta}) + \sum^p_{j=1}p_{\lambda}\left(\lvert \beta_j \rvert\right) \right\}
+\end{equation}
+where, as in Problem \ref{eq:empirical-l0}
+\begin{itemize}
+    \item $\hat{R}(\boldsymbol{\beta})$: the empirical risk function 
+    \item $p_{\lambda}(t),t\geq 0$: the nonnegative penalty function indexed by the regularization parameter $\lambda \geq 0$ with $p_{\lambda}(0)=0$
+\end{itemize}
+
+\paragraph*{Choices of penalty function} In general, the choices of penalty function can be up for the researchers to decide. \citet{fan2001variable} proposed 3 criteria for penalty function selection
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Sparsity}}: sets small estimated coefficients to 0, for \textit{variable selection} and \textit{reduction of model complexity}
+    \item \myhl[myblue]{\textbf{Approximate unbiasedness}}: nearly unbiased, especially when the true coefficient $\beta_j$ is large
+    \item \myhl[myblue]{\textbf{Continuity}}: continuous in data to reduce instability in model selection
+\end{itemize}
+
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{ref.bib}
+
+\end{document}
