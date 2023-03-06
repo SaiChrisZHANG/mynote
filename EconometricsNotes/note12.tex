@@ -209,9 +209,24 @@ Next, we extend this global optimality result to high-dimensional cases, where $
 The regularity conditions for concave penalty are
 \begin{itemize}
     \item the true sub design matrix $\mathbf{X}_1$ should be well conditioned $$ \left\Vert \left[\mathbf{X}_1'\boldsymbol{\Sigma}(\boldsymbol{\theta}_0)\mathbf{X}_1\right]^{-1} \right\Vert _{\infty} = O(b_sn^{-1})$$
-    \item A generalized version of the irrepresentable condition $$ \left\Vert \mathbf{X}_2' \boldsymbol{\Sigma}(\boldsymbol{\theta}_0) \mathbf{X}_1 \left[\mathbf{X}_1'\boldsymbol{\Sigma}(\boldsymbol{\theta}_0)\mathbf{X}_1\right]^{-1} \right\Vert _{\infty} \leq \min \left\{ C\frac{\rho'(0+)}{\rho'(d_n)}, O(n^{\alpha_1})\right\} $$
+    \item A generalized version of the irrepresentable condition \begin{equation}\label{eq:generalized_ic}
+        \left\Vert \mathbf{X}_2' \boldsymbol{\Sigma}(\boldsymbol{\theta}_0) \mathbf{X}_1 \left[\mathbf{X}_1'\boldsymbol{\Sigma}(\boldsymbol{\theta}_0)\mathbf{X}_1\right]^{-1} \right\Vert _{\infty} \leq \min \left\{ C\frac{\rho'(0+)}{\rho'(d_n)}, O(n^{\alpha_1})\right\}
+    \end{equation}
     \item also $$\max_{\boldsymbol{\delta}\in\mathcal{N}_0}\max^p_{j=1} \lambda_{\max}\left[ \mathbf{X}_1' \mathrm{diag} \left\{ \lvert \mathbf{x}_j \rvert \circ \lvert \boldsymbol{\mu}''(\mathbf{X}_1\boldsymbol{\delta}) \rvert \right\} \mathbf{X}_1 \right] = O(n)$$
 \end{itemize}
+Here, $b_s \rightarrow \infty$ with $s=\lVert \boldsymbol{\beta}_0 \rVert _0 = O(n^{\alpha_0})$, $\alpha_1\in [0,1/2]$, $C\in(0,1)$, $\mathcal{N}_0 = \left\{ \boldsymbol{\delta}\in\mathbb{R}^s: \lVert \boldsymbol{\delta}-\boldsymbol{\beta}_1 \rVert _{\infty} \leq d_n \right\}$; $\alpha = \min(\frac{1}{2},2\gamma-\alpha_0)-\alpha_1$, $d_n\geq n^{-\gamma}\log n $ for some $\gamma \in (0, 1/2]$.
+
+Notice that in a linear model, Condition \ref{eq:generalized_ic} becomes 
+$$
+\left\Vert \mathbf{X}_2' \mathbf{X}_1 \left(\mathbf{X}_1'\mathbf{X}_1\right)^{-1} \right\Vert _{\infty} \leq \min \left\{ C\frac{\rho'(0+)}{\rho'(d_n)}, O(n^{\alpha_1})\right\}
+$$
+\begin{itemize}
+    \item For $L_1$ penalty, this becomes ($\rho'(0+)=\rho'(d_n)=1$) a \textbf{stronger} form of the irrepresentable condition $$ \left\Vert \mathbf{X}_2' \mathbf{X}_1 \left(\mathbf{X}_1'\mathbf{X}_1\right)^{-1} \right\Vert _{\infty} \leq C <1 $$, this speaks about the restrictive nature of $L_1$ penalty in higher dimensions
+    \item For concave penalty, $\frac{\rho'(0+)}{\rho'(d_n)}$ \textbf{can grow} to $\infty$, hence, it is a much weaker condition: \myhl[myred]{\textbf{the flexibility}} of concave penalty.
+\end{itemize}
+
+\subsection{Properties of Concave Penalty}
+
 
 \newpage
 \bibliographystyle{plainnat}
