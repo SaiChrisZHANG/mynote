@@ -542,6 +542,17 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplexx.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxexx.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbmia.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxbmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxbmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplb-x.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplmia.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplr-x.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbsy.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/pxbsys.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txbex-bar.tfm
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.bbl
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.bbl
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.aux
@@ -554,6 +565,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxbmia.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxbsys.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb

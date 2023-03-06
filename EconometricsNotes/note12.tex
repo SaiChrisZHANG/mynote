@@ -63,12 +63,129 @@ where, as in Problem \ref{eq:empirical-l0}
     \item $p_{\lambda}(t),t\geq 0$: the nonnegative penalty function indexed by the regularization parameter $\lambda \geq 0$ with $p_{\lambda}(0)=0$
 \end{itemize}
 
-\paragraph*{Choices of penalty function} In general, the choices of penalty function can be up for the researchers to decide. \citet{fan2001variable} proposed 3 criteria for penalty function selection
+\paragraph*{Choices of penalty function} In general, the choices of penalty function can be up for the researchers to decide. \citet{fan2001variable} proposed 3 criteria for the selection of penalty function $p_\lambda(t)$
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{Sparsity}}: sets small estimated coefficients to 0, for \textit{variable selection} and \textit{reduction of model complexity}
+    \item \myhl[myblue]{\textbf{Sparsity}}: $p'_{\lambda}(0+)>0$, sets small coefficients to 0, for \textit{variable selection} and \textit{reducing model complexity}
     \item \myhl[myblue]{\textbf{Approximate unbiasedness}}: nearly unbiased, especially when the true coefficient $\beta_j$ is large
     \item \myhl[myblue]{\textbf{Continuity}}: continuous in data to reduce instability in model selection
 \end{itemize}
+To elaborate the 3 criterion, consider a class of penalty function, $L_q$-penalty 
+$$
+p_{\lambda}(t) = \lambda t^q, t\geq 0 \Rightarrow p'_{\lambda}(t) = \lambda qt^{q-1}
+$$
+then we can compare
+\begin{center}
+    \begin{tabular}{ r|ccc } 
+        & Sparsity & Approx. unbiasedness & Continuity \\
+     \hline
+     $0<q<1$ & Y & Y & N \\
+     $q=1$ & Y & N & Y \\
+     $1<q\leq 2$ & N & N & Y \\
+     \hline
+    \end{tabular}
+\end{center}
+this class of penalty functions includes:
+\begin{itemize}
+    \item $q=0$: $L_0-$ regression (best subset selection)
+    \item $q=1$: Lasso
+    \item $q=2$: Ridge
+    \item $0<q<2$: Bridge estimator
+\end{itemize}
+
+\section{High Dimensional Variable Selection}
+For a generalized linear model 
+$$
+f_n(\mathbf{y};\mathbf{X},\boldsymbol{\beta}) = \prod_{i=1}^n \left\{ c(y_i)\exp\left( \frac{y_i\theta_i-b(\theta_i)}{\phi} \right) \right\}
+$$
+where $\boldsymbol{\theta}=(\theta_1,\cdots,\theta_n)' = \mathbf{X}\boldsymbol{\beta}$ is the \myhl[myred]{\textbf{natural parameter vector}}, which can a very challenging problem. Instead of the penalized least squares, now we examine \myhl[myred]{\textbf{penalized likelihood}}
+\begin{equation}\label{eq:penal_likelihood}
+    \max_{\boldsymbol{\beta}\in\mathbb{R}^p}\mathcal{L}_n(\boldsymbol{\beta}) -\sum^p_{j=1}p_{\lambda_n}\left( \lvert \beta_j \rvert \right)
+\end{equation}
+where $\mathcal{L}_n(\boldsymbol{\beta}) = n^{-1} \left[ \mathbf{y}'\mathbf{X}\boldsymbol{\beta} - \mathbf{1}'\mathbf{b}(\mathbf{X}\boldsymbol{\beta}) \right]$ is the \textit{\underline{affine transformation}} of log-likelihood, $$ \mathbf{b}(\boldsymbol{\theta})= \mathbf{b}(\mathbf{X}\boldsymbol{\beta}) = \left( b(\theta_1),\cdots,b(\theta_n) \right)'$$
+So the natural question is, when can we find the solution to Problem \ref{eq:penal_likelihood}, s.t. $\mathrm{supp}(\hat{\boldsymbol{\beta}}) = \mathrm{supp}(\boldsymbol{\beta}_0)$, that is, covering exactly the ture underlying sparse model?
+
+\section{Penalized Likelihood with Concave Penalties}
+$$
+    \max_{\boldsymbol{\beta}\in\mathbb{R}^p}\mathcal{L}_n(\boldsymbol{\beta}) -\sum^p_{j=1}p_{\lambda_n}\left( \lvert \beta_j \rvert \right)
+$$
+where $\mathcal{L}_n(\boldsymbol{\beta}) = n^{-1} \left[ \mathbf{y}'\mathbf{X}\boldsymbol{\beta} - \mathbf{1}'\mathbf{b}(\mathbf{X}\boldsymbol{\beta}) \right]$, and $p_{\lambda}(\cdot)$ is a concave penalty function. Let $\rho(t;\lambda)=\lambda^{-1}p_{\lambda}(t),t\geq 0$, we aim for penalty functions that satisfy
+\begin{itemize}
+    \item $\rho(t)$ is \myhl[myred]{\textbf{increasing and concave}} in $t$
+    \item $\rho'(t)$ is \myhl[myred]{\textbf{continuous}} with $\rho'(0+)>0$
+    \item if $\rho(t)$ depends on $\lambda$, $\rho'(t;\lambda)$ is \myhl[myred]{\textbf{increasing} in $\lambda$} and $\rho'(0_+;\lambda)$ is \myhl[myred]{\textbf{independent}} of $\lambda$
+\end{itemize}
+
+Here are some notations
+\begin{itemize}
+    \item Moment property: $k-$th component-wise derivative corresponds to $k-$th moment
+    \begin{itemize}
+        \item $\boldsymbol{\mu}(\boldsymbol{\theta}) = (b'(\theta_1),\cdots,b'(\theta_n))'$: $\mathbb{E}(\mathbf{y})$
+        \item $\boldsymbol{\Sigma}(\boldsymbol{\theta}) = \mathrm{diag}\left\{ b''(\theta_1),\cdots,b''(\theta_n) \right\} $
+    \end{itemize}
+    \item local concavity of $\rho$ at $\mathbf{v}=(v_1,\cdots,v_q)'\in\mathbb{R}^q$, with $\lVert \mathbf{v} \rVert _0 = q$, that is 
+    $$ 
+    \kappa(\rho;\mathbf{v}) = \lim_{\epsilon\rightarrow 0_+} \max_{1\leq j\leq q} \sup_{t_1<t_2\in (|v_j|-\epsilon,|v_j|+\epsilon)} - \frac{\rho'(t_2)-\rho'(t_1)}{t_2-t_1}
+    $$
+    if $\rho''(t)$ is continuous, this becomes
+    $$
+    \max_{1\leq j\leq q} -\rho''(|v_j|)
+    $$
+\end{itemize}
+And the solution is given by the following theorem 
+\begin{theorem}{Penalized Likelihood estimator}{penal_ll_est}
+    $\hat{\boldsymbol{\beta}}$ is \textbf{strict \myhl[myblue]{local}} maximizer of penalized likelihood if
+    \begin{align*}
+        \mathbf{X}_1'\mathbf{y} - \mathbf{X}_1'\boldsymbol{\mu}(\boldsymbol{\hat{\theta}})-n\lambda_n \mathrm{sign}(\hat{\boldsymbol{\beta}}_1)\circ \rho'(\lvert \hat{\boldsymbol{\beta}}_1 \rvert) &= \mathbf{0} \\
+        \lVert (n\lambda_n)^{-1}\mathbf{X}_2'[\mathbf{y}-\boldsymbol{\mu}(\hat{\boldsymbol{\theta}})] \rVert _{\infty} &< \rho'(0_+) \\
+        \lambda_{\min}\left[\mathbf{X}_1'\boldsymbol{\Sigma}(\hat{\boldsymbol{\theta}})\mathbf{X}_1\right] &> n\lambda_n \kappa(\rho;\hat{\boldsymbol{\beta}}_1)
+    \end{align*}
+    where $\circ$ is the component-wise multiplication, $\lambda_{\min}(\cdot)$ is the smallest eigenvalue.
+\end{theorem}
+
+\subsection{Global Optimality}
+Theorem \ref{thm:penal_ll_est} gives the rule to find local maximizers, but what about global optimality?
+
+\begin{proposition}{Global Optimality of Penalized Likelihood Estimator}{llest_global}
+    Assume that $\mathbf{X}$ has rank $p$, and satisfies 
+    $$
+    \min_{\boldsymbol{\beta}\in \mathcal{L}_c} \lambda_{\min} \left[n^{-1} \mathbf{X}'\boldsymbol{\Sigma}(\mathbf{X}\boldsymbol{\beta})\mathbf{X} \right] \geq \kappa(p_{\lambda_n})
+    $$
+    where 
+    \begin{itemize}
+        \item NOT high-dimensional: $p\leq n$
+        \item for some $c< \mathcal{L}_n (\mathbf{0})$, $$ \mathcal{L}_c = \left\{ \boldsymbol{\beta}\in \mathbb{R}^p: \mathcal{L}_n(\boldsymbol{\beta})\geq c \right\} $$ is a sublevel set of $-\mathcal{L}_n(\boldsymbol{\beta})$
+        \item maximum concavity $$ \kappa(p_{\lambda}) = \sup_{t_1<t_2\in(0,\infty)}-\frac{p'_{\lambda}(t_2)-p'_{\lambda}(t_1)}{t_2-t_1} $$
+    \end{itemize}
+\end{proposition}
+
+\subsection{SCAD penalty}
+
+Now, consider a penalized likelihood model: \myhl[myblue]{\textbf{SCAD}} \citep[smoothly clipped
+absolute deviation]{fan2001variable}
+$$
+\min_{\boldsymbol{\beta}} \lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert^2_2 + p(\boldsymbol{\beta})
+$$
+where the derivative of the penalty function
+$$
+p_{\lambda}^{\text{SCAD}}(\beta_j) = \begin{cases}
+    \lambda \lvert \beta_j  \rvert & \lvert \beta_j \rvert \leq \lambda \\
+    -\left( \frac{\lvert \beta_j \rvert^2 - 2a\lambda \lvert \beta_j \rvert + \lambda^2}{2(a-1)} \right) & \lambda <\lvert \beta_j \rvert \leq a\lambda\\
+    \frac{(a+1)\lambda^2}{2} & \lvert \beta_j \rvert > a\lambda
+\end{cases}
+$$
+and its derivative
+$$
+p'(\boldsymbol{\beta}) = \lambda \left[ I(\boldsymbol{\beta} \leq \lambda) + \frac{(a\lambda - \boldsymbol{\beta})_+}{(a-1)\lambda} I(\boldsymbol{\beta}>\lambda) \right]
+$$
+the solution to SCAD penalty model is
+$$
+\hat{\beta}_j^{\text{SCAD}} = \begin{cases}
+    (\lvert \hat{\beta}_j \rvert)_+\mathrm{sign}(\hat{\beta}_j) & \lvert \hat{\beta}_j \rvert< 2\lambda \\
+    \frac{(a-1)\hat{\beta}_j-\mathrm{sign}(\hat{\beta}_j)a\lambda}{a-2} & 2\lambda < \lvert \hat{\beta}_j \rvert \leq a\lambda \\
+    \hat{\beta}_j & \lvert \hat{\beta}_j \rvert> a\lambda
+\end{cases}
+$$
+the SCAD penalty is continuously differentiable on $(-\infty,0)\cup (0,\infty)$, singular at $0$.
 
 \newpage
 \bibliographystyle{plainnat}
