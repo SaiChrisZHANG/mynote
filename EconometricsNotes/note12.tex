@@ -185,7 +185,33 @@ $$
     \hat{\beta}_j & \lvert \hat{\beta}_j \rvert> a\lambda
 \end{cases}
 $$
-the SCAD penalty is continuously differentiable on $(-\infty,0)\cup (0,\infty)$, singular at $0$.
+the SCAD penalty is continuously differentiable on $(-\infty,0)\cup (0,\infty)$, singular at $0$. SCAD has some great properties, one of them is robustness.
+\begin{proposition}{Robustness of SCAD}{scad_robust}
+    Assume that $\mathbf{X}$ has rank $p=s$, and $\exists c< \mathcal{L}_n(\mathbf{0})$ s.t. for some $c_0 > 0$
+    $$
+    \min_{\boldsymbol{\beta}\in \mathcal{L}_c} \lambda_{\min} \left[n^{-1} \mathbf{X}'\boldsymbol{\Sigma}(\mathbf{X}\boldsymbol{\beta})\mathbf{X} \right]\geq c_0
+    $$
+    then the SCAD penalized likelihood estimator $\hat{\boldsymbol{\beta}}^{\text{SCAD}}$ is the \textbf{global} maximizer and equals the oracle MLE $\boldsymbol{\beta}^*$, if $\hat{\boldsymbol{\beta}}^{\text{SCAD}}$ and 
+    $$
+    \min_{j=1}^p \lvert \hat{\beta}^{\text{SCAD}}_j \rvert > \left( a + \frac{1}{2c_0} \right) \lambda_n
+    $$
+\end{proposition}
+Next, we extend this global optimality result to high-dimensional cases, where $p>n$
+\begin{proposition}{Global Optimality, $p>n$}{scad_highdimen}
+    On the union of all $s-$dimensional coordinate subspaces of $\mathbb{R}^p$
+    \begin{itemize}
+        \item Under Proposition \ref{prop:llest_global} for each $n\times 2s$ submatrix of $\mathbf{X}$, then the NCPMLE $\hat{\boldsymbol{\beta}}$ is a global maximizer on $\mathbb{S}_s$
+        \item Under Proposition \ref{prop:scad_robust} for $n\times s$ submatrix of $\mathbf{X}$ formed by columns in $\mathrm{supp}(\boldsymbol{\beta}_0)$, the true model is $\delta$-identifiable for some $ \delta > \frac{(a+1)s\lambda^2_n}{2} $, and $\mathrm{supp}(\hat{\boldsymbol{\beta}}) = \mathrm{supp}(\boldsymbol{\beta}_0)$. Then the SCAD penalized likelihood estimator $\hat{\boldsymbol{\beta}}$ is the global maximizer on $\mathbb{S}_s$ and \textbf{equals} to the oracle MLE $\boldsymbol{\beta}^*$
+    \end{itemize}
+\end{proposition}
+
+\subsection{Regularity Conditions for Concave Penalties}
+The regularity conditions for concave penalty are
+\begin{itemize}
+    \item the true sub design matrix $\mathbf{X}_1$ should be well conditioned $$ \left\Vert \left[\mathbf{X}_1'\boldsymbol{\Sigma}(\boldsymbol{\theta}_0)\mathbf{X}_1\right]^{-1} \right\Vert _{\infty} = O(b_sn^{-1})$$
+    \item A generalized version of the irrepresentable condition $$ \left\Vert \mathbf{X}_2' \boldsymbol{\Sigma}(\boldsymbol{\theta}_0) \mathbf{X}_1 \left[\mathbf{X}_1'\boldsymbol{\Sigma}(\boldsymbol{\theta}_0)\mathbf{X}_1\right]^{-1} \right\Vert _{\infty} \leq \min \left\{ C\frac{\rho'(0+)}{\rho'(d_n)}, O(n^{\alpha_1})\right\} $$
+    \item also $$\max_{\boldsymbol{\delta}\in\mathcal{N}_0}\max^p_{j=1} \lambda_{\max}\left[ \mathbf{X}_1' \mathrm{diag} \left\{ \lvert \mathbf{x}_j \rvert \circ \lvert \boldsymbol{\mu}''(\mathbf{X}_1\boldsymbol{\delta}) \rvert \right\} \mathbf{X}_1 \right] = O(n)$$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
