@@ -236,6 +236,20 @@ Next, we establish the nonasymptotic weak oracle property for estimator with con
 \end{theorem}
 This theorem shows that concave penalties can reduce biases of estimates.
 
+\begin{theorem}{Non-Concave Penalized Likelihood Estimator}{nonconcave_penal}
+    Under some regularity conditions, $s\ll n$ and $\log p = O(n^{\alpha})$ for some $\alpha \in (0,1/2)$, there exists a strict local maximizer $\hat{\boldsymbol{\beta}}$ of penalized likelihood such that $that{\boldsymbol{\beta}}_2=\mathbf{0}$ with probability tending to 1 as $n\rightarrow \infty$ and $\lVert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \rVert _2=O_P(\sqrt{s}n^{-1/2})$.
+\end{theorem}
+These conditions are incompatible for $L_1$ penalty, suggesting that $L_1$ penalized likelihood estimator generally \textbf{cannot} achieve consistency rate $O_P(\sqrt{s}n^{-1/2})$ and \textbf{does not} have oracle property, when dimensionality $p$ is diverging with sample size $n$.
+
+\begin{theorem}{Oracle Property of Non-Concave Penalty}{nonconcave_oracle}
+    Under some regularity conditions and $s=o(n^{1/3})$, then with probability tending to 1 as $n\rightarrow \infty$, then non-concave penalized likelihood estimator $\hat{\boldsymbol{\beta}}$ in Theorem \ref{thm:nonconcave_penal} must satisfies 
+    \begin{itemize}
+        \item \textbf{Sparsity} $$\hat{\boldsymbol{\beta}}_2 =\mathbf{0}$$
+        \item \textbf{Asymptotic normality} $$ \mathbf{A}_n \left[ \mathbf{X}_1' \boldsymbol{\Sigma}(\boldsymbol{\theta}_0)\mathbf{X}_1 \right]^{1/2}(\hat{\boldsymbol{\beta}}_1,\boldsymbol{\beta}_1) \xrightarrow{d} \mathcal{N}(\mathbf{0},\phi\mathbf{G}) $$
+        where $\mathbf{A}_n$ is a $q\times s$ matrix s.t. $\mathbf{A}_n\mathbf{A}_n'\rightarrow \mathbf{G}$, and $\mathbf{G}$ is a $q\times q$ symmetric positive definite matrix.
+    \end{itemize}
+\end{theorem}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
