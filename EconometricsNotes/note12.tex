@@ -226,7 +226,15 @@ $$
 \end{itemize}
 
 \subsection{Properties of Concave Penalty}
-
+Next, we establish the nonasymptotic weak oracle property for estimator with concave penalties.
+\begin{theorem}{Nonasymptotic Weak Oracle Property}{nonasymp_weak_oracle}
+    Under some regularity conditions, $s=o(n)$ and $\log p=O(n^{1-2\alpha})$, there exists a penalized likelihood estimator $\boldsymbol{\beta}$ s.t. for sufficiently large $n$, with probability of at least $$ 1-2\left[ sn^{-1}+(p-s)e^{-n^{1-2\alpha}\log n} \right] $$ $\hat{\boldsymbol{\beta}}$ satisfies 
+    \begin{itemize}
+        \item Sparsity: $\hat{\boldsymbol{\beta}}_2 =\mathbf{0}$
+        \item $L_{\infty}$ loss: $\lVert \hat{\boldsymbol{\beta}}_1 -\boldsymbol{\beta}_1 \rVert _{\infty} = O(n^{-\gamma}log n)$
+    \end{itemize}
+\end{theorem}
+This theorem shows that concave penalties can reduce biases of estimates.
 
 \newpage
 \bibliographystyle{plainnat}
