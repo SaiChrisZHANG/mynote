@@ -234,7 +234,7 @@ Next, we establish the nonasymptotic weak oracle property for estimator with con
         \item $L_{\infty}$ loss: $\lVert \hat{\boldsymbol{\beta}}_1 -\boldsymbol{\beta}_1 \rVert _{\infty} = O(n^{-\gamma}log n)$
     \end{itemize}
 \end{theorem}
-This theorem shows that concave penalties can reduce biases of estimates. The $L_{\infty}$ estimation loss can de decomposed into $L_{\infty}\leq h_1 + h_2 + h_3$, 
+This theorem shows that concave penalties can reduce biases of estimates. The $L_{\infty}$ estimation loss can de decomposed into $L_{\infty}\leq h_1 + h_2 + h_3$, $h_2 \sim b_s \lambda_s \frac{\rho'(d_n)}{\rho'(0+)}$
 
 \begin{theorem}{Non-Concave Penalized Likelihood Estimator}{nonconcave_penal}
     Under some regularity conditions, $s\ll n$ and $\log p = O(n^{\alpha})$ for some $\alpha \in (0,1/2)$, there exists a strict local maximizer $\hat{\boldsymbol{\beta}}$ of penalized likelihood such that $that{\boldsymbol{\beta}}_2=\mathbf{0}$ with probability tending to 1 as $n\rightarrow \infty$ and $\lVert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \rVert _2=O_P(\sqrt{s}n^{-1/2})$.
