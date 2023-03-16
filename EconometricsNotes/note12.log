@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  15 MAR 2023 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  16 MAR 2023 16:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1155,40 +1155,40 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 5.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 5.
-LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 7.
-LaTeX Font Info:    Try loading font information for OT1+zpltlf on input line 8.
+LaTeX Font Info:    Try loading font information for OT1+zpltlf on input line 5.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
 File: ot1zpltlf.fd 2015/01/17 v1.0 font definition file for OT1/zpl/tlf
 )
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 8.
+(Font)              scaled to size 10.0pt on input line 5.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 8.
+(Font)              scaled to size 7.3pt on input line 5.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 8.
-LaTeX Font Info:    Try loading font information for U+msa on input line 8.
+(Font)              scaled to size 5.5pt on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 8.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+npxmia on input line 8.
+LaTeX Font Info:    Try loading font information for U+npxmia on input line 5.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Try loading font information for U+npxsym on input line 8.
+LaTeX Font Info:    Try loading font information for U+npxsym on input line 5.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2015/03/21 Fontinst v1.933 font definitions for U/npxsym.
 )
-LaTeX Font Info:    Try loading font information for U+npxsyc on input line 8.
+LaTeX Font Info:    Try loading font information for U+npxsyc on input line 5.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
 )
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 7.
 LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 8.
 LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
@@ -1259,7 +1259,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{http://faculty.marshall.usc.edu/jinchi-lv/} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxbmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxbsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.pdf" (8 pages, 195687 bytes).
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.pdf" (8 pages, 195724 bytes).
 PDF statistics:
  200 PDF objects out of 1000 (max. 8388607)
  173 compressed objects within 2 object streams

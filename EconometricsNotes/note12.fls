@@ -365,7 +365,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-ot1.tfm
@@ -408,6 +407,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsyc.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
@@ -465,6 +465,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplexa.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-ot1.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplmi.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxmi.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/pxfonts/pxmi.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/rpxmi.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/rpxpplri.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbmi.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxbmi.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/pxfonts/pxbmi.vf
@@ -473,11 +478,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/rpxpplbi.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplsy.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/pxsys.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplmi.vf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxmi.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/pxfonts/pxmi.vf
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/rpxmi.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/rpxpplri.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplmi.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxmi.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/pxfonts/pxmi.vf
