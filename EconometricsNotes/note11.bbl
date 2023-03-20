@@ -1,0 +1,47 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Antoniadis and Fan(2001)]{antoniadis2001regularization}
+Anestis Antoniadis and Jianqing Fan.
+\newblock Regularization of wavelet approximations.
+\newblock \emph{Journal of the American Statistical Association}, 96\penalty0
+  (455):\penalty0 939--967, 2001.
+
+\bibitem[Candes and Tao(2007)]{candes2007dantzig}
+Emmanuel Candes and Terence Tao.
+\newblock The dantzig selector: Statistical estimation when p is much larger
+  than n.
+\newblock \emph{The Annals of Statistics}, 35\penalty0 (6):\penalty0
+  2313--2351, 2007.
+
+\bibitem[Efron et~al.(2004)Efron, Hastie, Johnstone, and
+  Tibshirani]{efron2004least}
+Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani.
+\newblock {Least angle regression}.
+\newblock \emph{The Annals of Statistics}, 32\penalty0 (2):\penalty0 407 --
+  499, 2004.
+\newblock \doi{10.1214/009053604000000067}.
+\newblock URL \url{https://doi.org/10.1214/009053604000000067}.
+
+\bibitem[James et~al.(2009)James, Radchenko, and Lv]{james2009dasso}
+Gareth~M James, Peter Radchenko, and Jinchi Lv.
+\newblock Dasso: connections between the dantzig selector and lasso.
+\newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 71\penalty0 (1):\penalty0 127--142, 2009.
+
+\bibitem[Meinshausen and B{\"u}hlmann(2006)]{meinshausen2006variable}
+Nicolai Meinshausen and Peter B{\"u}hlmann.
+\newblock Variable selection and high-dimensional graphs with the lasso.
+\newblock \emph{Ann Stat}, 34:\penalty0 1436--1462, 2006.
+
+\bibitem[Tibshirani(1996)]{tibshirani1996regression}
+Robert Tibshirani.
+\newblock Regression shrinkage and selection via the lasso.
+\newblock \emph{Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 58\penalty0 (1):\penalty0 267--288, 1996.
+
+\end{thebibliography}
