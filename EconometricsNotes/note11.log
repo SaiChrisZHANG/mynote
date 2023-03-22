@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  20 MAR 2023 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  21 MAR 2023 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1257,9 +1257,9 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 6.2pt on input line 291.
  [6] [7] [8] [9] [10] [11] [12]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 7.3pt on input line 610.
+(Font)              scaled to size 7.3pt on input line 609.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 6.2pt on input line 610.
+(Font)              scaled to size 6.2pt on input line 609.
  [13] [14]
 Missing character: There is no ; in font nullfont!
  [15] (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.bbl
@@ -1270,14 +1270,14 @@ File: t1npxtt.fd 2000/12/14 v1.0
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
 (Font)              scaled to size 10.0pt on input line 28.
 ) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 710.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 710.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 709.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 709.
  (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 710.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 710.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 709.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 709.
 Package rerunfilecheck Info: File `note11.out' has not changed.
 (rerunfilecheck)             Checksum: FFAD45411122AA3BEE42BE1150B3726E;1048.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 710.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 709.
  ) 
 Here is how much of TeX's memory you used:
  36886 strings out of 492649
