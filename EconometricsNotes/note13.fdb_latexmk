@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note13"] 1679546120 "note13.aux" "note13.bbl" "note13" 1679546174
+["bibtex note13"] 1679546120 "note13.aux" "note13.bbl" "note13" 1679546193
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "note13.aux" 1679546174 3428 ab010ba8237c25059b99002a741edb5b ""
+  "note13.aux" 1679546193 3428 ab010ba8237c25059b99002a741edb5b ""
   "ref.bib" 1678040083 5223 8084aef08a4079167a8b057ad251e7d4 ""
   (generated)
   "note13.bbl"
   "note13.blg"
-["pdflatex"] 1679546171 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.pdf" "note13" 1679546174
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.aux" 1679546174 3428 ab010ba8237c25059b99002a741edb5b ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.tex" 1679546170 20612 64fe34c5889a2c44f3b87c80b019301f ""
+["pdflatex"] 1679546190 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.pdf" "note13" 1679546193
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.aux" 1679546193 3428 ab010ba8237c25059b99002a741edb5b ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.tex" 1679546190 20615 f55b50071225285e91d91cb7f1f24b64 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc" 1480098668 6292 5f5eff34c010300454c6de629a3dbaf4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
@@ -325,15 +325,15 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "figures/note12_SCADvsLasso.png" 1676473014 632353 c99274c17b7c5c450bd5fee62f2288f6 ""
-  "note13.aux" 1679546174 3428 ab010ba8237c25059b99002a741edb5b ""
+  "note13.aux" 1679546193 3428 ab010ba8237c25059b99002a741edb5b ""
   "note13.bbl" 1679546120 842 79d41fe7c71af1bed7827e6269c7f70f "bibtex note13"
-  "note13.out" 1679546174 684 9e1910ad79d6c0645ba8c45254be85f6 ""
-  "note13.tex" 1679546170 20612 64fe34c5889a2c44f3b87c80b019301f ""
+  "note13.out" 1679546193 684 9e1910ad79d6c0645ba8c45254be85f6 ""
+  "note13.tex" 1679546190 20615 f55b50071225285e91d91cb7f1f24b64 ""
   "settings.tex" 1677985651 6251 8882cb6da954304887104a432671a309 ""
   (generated)
-  "note13.log"
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.pdf"
-  "note13.pdf"
   "note13.out"
   "note13.aux"
+  "note13.pdf"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.log"
+  "note13.log"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.pdf"
