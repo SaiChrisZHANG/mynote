@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note12"] 1679187367 "note12.aux" "note12.bbl" "note12" 1679278224
+["bibtex note12"] 1679187367 "note12.aux" "note12.bbl" "note12" 1679571185
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "note12.aux" 1679278223 3428 58f4a2f8362fdce60eed7a8d3b8f1ee2 ""
   "ref.bib" 1678040083 5223 8084aef08a4079167a8b057ad251e7d4 ""
   (generated)
   "note12.blg"
   "note12.bbl"
-["pdflatex"] 1679278220 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.pdf" "note12" 1679278224
+["pdflatex"] 1679278220 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.pdf" "note12" 1679571185
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.aux" 1679278223 3428 58f4a2f8362fdce60eed7a8d3b8f1ee2 ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.tex" 1679278219 20610 79b1cef22efc87a0fcfb9cfc5a4bfbb7 ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.tex" 1679571184 20610 79b1cef22efc87a0fcfb9cfc5a4bfbb7 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc" 1480098668 6292 5f5eff34c010300454c6de629a3dbaf4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
@@ -328,12 +328,12 @@
   "note12.aux" 1679278223 3428 58f4a2f8362fdce60eed7a8d3b8f1ee2 ""
   "note12.bbl" 1679187367 842 79d41fe7c71af1bed7827e6269c7f70f "bibtex note12"
   "note12.out" 1679278223 684 9e1910ad79d6c0645ba8c45254be85f6 ""
-  "note12.tex" 1679278219 20610 79b1cef22efc87a0fcfb9cfc5a4bfbb7 ""
+  "note12.tex" 1679571184 20610 79b1cef22efc87a0fcfb9cfc5a4bfbb7 ""
   "settings.tex" 1677985651 6251 8882cb6da954304887104a432671a309 ""
   (generated)
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.log"
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.pdf"
-  "note12.log"
-  "note12.aux"
-  "note12.pdf"
   "note12.out"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.pdf"
+  "note12.aux"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.log"
+  "note12.pdf"
+  "note12.log"
