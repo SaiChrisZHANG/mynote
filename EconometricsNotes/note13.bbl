@@ -1,0 +1,21 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Barron et~al.(1999)Barron, Lucien, and Pascal]{barron1999risk}
+Andrew Barron, Birg{\'e} Lucien, and Massart Pascal.
+\newblock Risk bounds for model selection via penalization.
+\newblock \emph{Probability theory and related fields}, 113\penalty0
+  (3):\penalty0 301--413, 1999.
+
+\bibitem[Fan and Li(2001)]{fan2001variable}
+Jianqing Fan and Runze Li.
+\newblock Variable selection via nonconcave penalized likelihood and its oracle
+  properties.
+\newblock \emph{Journal of the American statistical Association}, 96\penalty0
+  (456):\penalty0 1348--1360, 2001.
+
+\end{thebibliography}
