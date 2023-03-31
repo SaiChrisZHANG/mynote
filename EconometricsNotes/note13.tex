@@ -13,8 +13,15 @@ We are facing a tradeoff:
 Here, we take advantage of the linearity of Lasso (convex \textit{and} concave) and try to combine it with concave regularization to get the best of both.
 
 \section{Model Setup}
-Again, consider a linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$
-
+Again, consider a linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, where 
+\begin{itemize}
+    \item response vector ($n\times 1$): $\mathbf{y} = (y_1,\cdots,y_n)^{\prime}$
+    \item design matrix ($n\times p$): $\mathbf{X} = (\mathbf{x}_1,\cdots,\mathbf{x}_p)$
+\end{itemize}
+here, we consider a scenario where
+\begin{itemize}
+    \item $\boldsymbol{\beta}_0 = (\beta_{0,1},\cdots,\beta_{0,p})^{\prime}$ is \textit{\textbf{sparse}} (with many 0 components)
+\end{itemize}
 
 %\newpage
 %\bibliographystyle{plainnat}
