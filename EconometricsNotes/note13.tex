@@ -27,6 +27,11 @@ and consider the penalized least squares
 \begin{equation}
     \min_{\boldsymbol{\beta}\in\mathbb{R}^p}\left\{ (2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert ^2_2 + \lambda_0 \lVert \boldsymbol{\beta} \rVert _1 + \lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1  \right\}
 \end{equation}
+where 
+\begin{itemize}
+    \item $\lambda_0 = c\left(\frac{\log p}{n}\right)^{1/2}$ for some $c>0$
+    \item $p_{\lambda}(\boldsymbol{\beta}) = p_{\lambda}(\lvert\boldsymbol{\beta}\rvert ) = (p_{\lambda}(\lvert \beta_1 \rvert),\cdots,p_{\lambda}(\lvert \beta_p \rvert))^{\prime}$, with $\lvert\boldsymbol{\beta} \rvert = (\lvert \beta_1 \rvert,\cdots,\lvert \beta_p \rvert)^{\prime}$
+\end{itemize}
 
 %\newpage
 %\bibliographystyle{plainnat}
