@@ -24,7 +24,7 @@ here, we consider a scenario where
     \item ultra-\textbf{high} dimensions: $\log p=O(n^a)$, for some $0<a<1$
 \end{itemize}
 and consider the penalized least squares 
-\begin{equation}
+\begin{equation}\label{eq:penalized-LS-l1concave}
     \min_{\boldsymbol{\beta}\in\mathbb{R}^p}\left\{ (2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert ^2_2 + \lambda_0 \lVert \boldsymbol{\beta} \rVert _1 + \lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1  \right\}
 \end{equation}
 where 
@@ -37,6 +37,17 @@ the 2 penalty components
     \item $L_1-$component: minimum amount of regularization for \underline{\textit{removing noise}} in prediction 
     \item concave component $\lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1$: adapt model sparsity for \underline{\textit{variable selection}}
 \end{itemize}
+
+Under this set up, we can derive the hard-thresholding property as 
+\begin{proposition}{Hard-Thresholding Property}{hard-thresholding-nonconvex}
+    Assume the $p_{\lambda}(t)$, $t\geq 0$, is \myhl[myblue]{\textbf{increasing and concave}} with 
+    \begin{itemize}
+        \item $p_{\lambda}(t)\geq p_{H,\lambda}(t) = \frac{1}{2}\left[\lambda^2-(\lambda-t)^2_+\right]$ on $[0,\lambda]$
+        \item $p'_{\lambda}\left((1-c_1)\lambda\right)\leq c_1\lambda$ for some $c_1\in [0,1)$
+        \item $-p''_{\lambda}(t)$ decreasing on $[0,(1-c_1)\lambda]$
+    \end{itemize}
+    then any \underline{local minimizer} of \ref{eq:penalized-LS-l1concave} that is also a \underline{global minimizer} in each coordinate has the \textbf{\textit{hard-thresholding}} feature that each component is either $0$ or of magnitude \textbf{larger} than $(1-c_1)\lambda$
+\end{proposition}
 
 %\newpage
 %\bibliographystyle{plainnat}

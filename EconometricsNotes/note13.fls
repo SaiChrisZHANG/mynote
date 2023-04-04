@@ -481,9 +481,15 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplexx.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxexx.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-th-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplmia.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplr-x.tfm
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.aux
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.out
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.out
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
