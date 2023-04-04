@@ -16,7 +16,7 @@ Here, we take advantage of the linearity of Lasso (convex \textit{and} concave) 
 Again, consider a linear regression model $\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\boldsymbol{\epsilon}$, where 
 \begin{itemize}
     \item response vector ($n\times 1$): $\mathbf{y} = (y_1,\cdots,y_n)^{\prime}$
-    \item design matrix ($n\times p$): $\mathbf{X} = (\mathbf{x}_1,\cdots,\mathbf{x}_p)$
+    \item design matrix ($n\times p$): $\mathbf{X} = (\mathbf{x}_1,\cdots,\mathbf{x}_p)$, with each column rescaled to have $L_2-$norm $n^{1/2}$
 \end{itemize}
 here, we consider a scenario where
 \begin{itemize}
@@ -31,6 +31,11 @@ where
 \begin{itemize}
     \item $\lambda_0 = c\left(\frac{\log p}{n}\right)^{1/2}$ for some $c>0$
     \item $p_{\lambda}(\boldsymbol{\beta}) = p_{\lambda}(\lvert\boldsymbol{\beta}\rvert ) = (p_{\lambda}(\lvert \beta_1 \rvert),\cdots,p_{\lambda}(\lvert \beta_p \rvert))^{\prime}$, with $\lvert\boldsymbol{\beta} \rvert = (\lvert \beta_1 \rvert,\cdots,\lvert \beta_p \rvert)^{\prime}$; the concave penalty $p_{\lambda}(t)$ is defined on $t\in\left[0,\infty \right)$, indexed by $\lambda\geq 0$, increasing in \textbf{\underline{both}} $t$ and $\lambda$, $p_{\lambda}(0)=0$
+\end{itemize}
+the 2 penalty components
+\begin{itemize}
+    \item $L_1-$component: minimum amount of regularization for \underline{\textit{removing noise}} in prediction 
+    \item concave component $\lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1$: adapt model sparsity for \underline{\textit{variable selection}}
 \end{itemize}
 
 %\newpage
