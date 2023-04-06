@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Fan and Lv(2014)]{fan2014asymptotic}
+Yingying Fan and Jinchi Lv.
+\newblock Asymptotic properties for combined l 1 and concave regularization.
+\newblock \emph{Biometrika}, 101\penalty0 (1):\penalty0 57--70, 2014.
+
+\end{thebibliography}
