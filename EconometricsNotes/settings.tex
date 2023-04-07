@@ -56,6 +56,7 @@
 \definecolor{myred}{cmyk}{0,.88,.88,.58}
 \definecolor{mygreen}{cmyk}{1,0,.69,.66}
 \definecolor{myorange}{cmyk}{0,.58,100,.20}
+\definecolor{glaucous}{rgb}{0.38, 0.51, 0.71}
 
 \makeatletter
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
@@ -174,3 +175,9 @@ use tangent/.style={
     y=(tangent orthogonal unit vector-#1)
 },
 use tangent/.default=1}
+
+\tikzstyle{terminator} = [rectangle, draw, thick, text centered, rounded corners, minimum height=2em]
+\tikzstyle{process} = [rectangle, draw, thick, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, draw, thick, text centered, minimum width=3cm, minimum height=0.5cm]
+\tikzstyle{data}=[trapezium, draw, thick, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{arrow} = [thick,->,>=stealth]
