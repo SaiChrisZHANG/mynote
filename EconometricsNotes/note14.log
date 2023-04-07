@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  7 APR 2023 10:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  7 APR 2023 10:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1174,9 +1174,9 @@ Here is how much of TeX's memory you used:
  39420 multiletter control sequences out of 15000+600000
  16323 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,6n,136p,1054b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,6n,136p,1054b,628s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf" (1 page, 58826 bytes).
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf" (1 page, 58819 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream

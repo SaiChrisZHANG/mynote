@@ -346,8 +346,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
 OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.pdf
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
+OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -563,6 +569,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/figures/note12_SCADvsLasso.png
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/figures/note12_SCADvsLasso.png
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/figures/note12_SCADvsLasso.png
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.bbl
+INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.bbl
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.aux
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note12.out
