@@ -50,8 +50,9 @@ Under this set up, we can derive the hard-thresholding property as
 \end{proposition}
 Such property is shared by a wide class of concave penalties, including hard-thresholding penalty $p_{H,\lambda}(t)$ with $c_1=0$, $L_0-$penalty, and SICA (with suitable $c_1$).
 
-\paragraph*{How to \textit{\underline{understand}} this proposition?} Let $\hat{\boldsymbol{\beta}}=\left(\hat{\beta}_1,\cdots,\hat{\beta}_p\right)^{\prime}$, then \myhl[myred]{\textbf{each} $\hat{\beta}_j$} is the glocal minimizer of the corresponding univariate penalized least-square problem along the $j-$th coordinate.
-
+\paragraph*{How to \textit{\underline{understand}} this proposition?} Let $\hat{\boldsymbol{\beta}}=\left(\hat{\beta}_1,\cdots,\hat{\beta}_p\right)^{\prime}$, then \myhl[myred]{\textbf{each} $\hat{\beta}_j$} is the glocal minimizer of the corresponding univariate penalized least-square problem along the $j-$th coordinate. These univariate problems share a common form with (generally) different scalars $z$ $$ \hat{\beta}(z) = \arg\min_{\beta\in\mathbb{R}}\left\{ \frac{1}{2}(z-\beta)^2 + \lambda_0\lvert\beta\rvert + p_{H,\lambda}(\lvert \beta \rvert) \right\} $$
+after we rescale all covariates to have $L_2-$norm $n^{1/2}$. The solution to these univariate problems are $$ \hat{\beta}(z) = \mathrm{sgn}(z)(\lvert z \rvert-\lambda_0)\cdot\mathbf{1}_{\lvert z\rvert > \lambda+\lambda_0} $$
+these solutions have the same feature as the hard-thresholded estimator: each component is either 0 or of magnitude larger than $\lambda$. This provides a better distinction between insignificant and significant covariates then soft-thresholding by $L_1$ penalty.
 
 
 With the hard-thresholding property of Prop. \ref{prop:hard-thresholding-nonconvex}, we can prove a basic constraint for the global optimum $\hat{\boldsymbol{\beta}}$ on an event with significant probability \citep{fan2014asymptotic}
