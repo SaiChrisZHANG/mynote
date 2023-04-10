@@ -76,7 +76,11 @@ then, plug in $\boldsymbol{\delta} = \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}
     (2n)^{-1}\lVert \boldsymbol{\epsilon} -\mathbf{X}\boldsymbol{\delta} \rVert ^2_2 + \lambda_0 \lVert \boldsymbol{\beta}_0+\boldsymbol{\delta} \rVert _1 + \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1  &\leq  (2n)^{-1}\lVert {\boldsymbol{\epsilon}} \rVert ^2_2 + \lambda_0 \lVert {\boldsymbol{\beta}_0} \rVert _1 + \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 \\
     (2n)^{-1}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 - n^{-1}\boldsymbol{\epsilon}^{\prime}\mathbf{X}\boldsymbol{\delta} + \lambda_0 \lVert \boldsymbol{\beta}_0+\boldsymbol{\delta} \rVert _1 + \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1  &\leq  \lambda_0 \lVert {\boldsymbol{\beta}_0} \rVert _1 + \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1
 \end{align*}
-since $\boldsymbol{\beta}_{0,2}=\mathbf{0}$, $\boldsymbol{\delta}=\boldsymbol{\beta}_{0,2}+\boldsymbol{\delta}_2$
+since $\boldsymbol{\beta}_{0,2}=\mathbf{0}$, $\boldsymbol{\delta}_2=\boldsymbol{\beta}_{0,2}+\boldsymbol{\delta}_2$, we have $$ \lVert {\boldsymbol{\beta}_{0}} + \boldsymbol{\delta} \rVert _1 = \lVert {\boldsymbol{\beta}_{0,1}} + {\boldsymbol{\beta}_{0,2}} + \boldsymbol{\delta}_1 + \boldsymbol{\delta}_2 \rVert _1 = \lVert {\boldsymbol{\beta}_{0,1}} + \boldsymbol{\delta}_1 + \boldsymbol{\delta}_2 \rVert _1 \leq  \lVert {\boldsymbol{\beta}_{0,1}} + \boldsymbol{\delta}_1 \rVert _1 +  \lVert \boldsymbol{\delta}_2 \rVert _1 $$
+hence
+$$
+(2n)^{-1}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 - n^{-1}\boldsymbol{\epsilon}^{\prime}\mathbf{X}\boldsymbol{\delta} + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 \leq  \lambda_0 \lVert {\boldsymbol{\beta}_{0,1}} \rVert _1 - \lambda_0 \lVert \boldsymbol{\beta}_{0,1}+\boldsymbol{\delta}_1 \rVert _1 + \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 
+$$
 
 
 \newpage
