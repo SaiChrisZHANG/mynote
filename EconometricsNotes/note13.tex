@@ -81,7 +81,22 @@ hence
 $$
 (2n)^{-1}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 - n^{-1}\boldsymbol{\epsilon}^{\prime}\mathbf{X}\boldsymbol{\delta} + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 \leq  \lambda_0 \lVert {\boldsymbol{\beta}_{0,1}} \rVert _1 - \lambda_0 \lVert \boldsymbol{\beta}_{0,1}+\boldsymbol{\delta}_1 \rVert _1 + \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 
 $$
-
+and by the reverse triangle inequality $ \lVert {\boldsymbol{\beta}_{0,1}} \rVert _1 - \lVert {\boldsymbol{\beta}_{0,1}} + \boldsymbol{\delta}_1 \rVert _1 \leq \lVert \boldsymbol{\delta}_1 \rVert _1 $, we get 
+$$
+(2n)^{-1}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 - n^{-1}\boldsymbol{\epsilon}^{\prime}\mathbf{X}\boldsymbol{\delta} + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 \leq  \lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 + \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 
+$$
+If assume the distribution of the model error $\boldsymbol{\epsilon}$ as 
+$$
+\Pr \left( \left\Vert n^{-1}\mathbf{X}'\boldsymbol{\epsilon}  \right\Vert _{\infty} >\frac{\lambda_0}{2} \right) = O\left(p^{-c_0}\right)
+$$
+conditional on the event $\mathcal{E} = \left\{ \left\Vert n^{-1}\mathbf{X}'\boldsymbol{\epsilon}  \right\Vert _{\infty}\leq \lambda_0 /2 \right\}$, we have 
+$$
+ - n^{-1}\boldsymbol{\epsilon}^{\prime}\mathbf{X}\boldsymbol{\delta} + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 - \lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 \geq -\frac{\lambda_0}{2}\lVert \boldsymbol{\delta} \rVert _1 + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 - \lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 = \frac{\lambda_0}{2} \lVert \boldsymbol{\delta}_2 \rVert _1 - \frac{3\lambda_0}{2} \lVert \boldsymbol{\delta}_1 \rVert _1
+$$
+plug this result back, get
+$$
+\frac{1}{2n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 + \frac{\lambda_0}{2} \lVert \boldsymbol{\delta}_2 \rVert _1 \leq \frac{3\lambda_0}{2} \lVert \boldsymbol{\delta}_1 \rVert _1+ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 
+$$
 
 \newpage
 \bibliographystyle{plainnat}
