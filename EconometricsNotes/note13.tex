@@ -66,7 +66,9 @@ $$
 the global minimizer $\hat{\boldsymbol{\beta}}$ leads to 
 \begin{align*}
     (2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}} \rVert ^2_2 + \lambda_0 \lVert \hat{\boldsymbol{\beta}} \rVert _1 + \lVert p_{\lambda}(\hat{\boldsymbol{\beta}}) \rVert _1 =& (2n)^{-1}\lVert \mathbf{X}\boldsymbol{\beta}_0+ \boldsymbol{\epsilon} -\mathbf{X}\hat{\boldsymbol{\beta}} \rVert ^2_2 + \lambda_0 \lVert \hat{\boldsymbol{\beta}} \rVert _1 + \lVert p_{\lambda}(\hat{\boldsymbol{\beta}}) \rVert _1 \\
-    =& (2n)^{-1}\lVert \mathbf{X}\boldsymbol{\beta}_0+ \boldsymbol{\epsilon} -\mathbf{X}\hat{\boldsymbol{\beta}} \rVert ^2_2 + \lambda_0 \lVert \hat{\boldsymbol{\beta}} \rVert _1 + \lVert p_{\lambda}(\hat{\boldsymbol{\beta}}) \rVert _1 
+    =& (2n)^{-1}\lVert \boldsymbol{\epsilon} -\mathbf{X}(\hat{\boldsymbol{\beta}}- \boldsymbol{\beta}_0) \rVert ^2_2 + \lambda_0 \lVert \hat{\boldsymbol{\beta}} \rVert _1 + \lVert p_{\lambda}(\hat{\boldsymbol{\beta}}) \rVert _1 \\
+    \leq &  (2n)^{-1}\lVert \mathbf{y}-\mathbf{X}{\boldsymbol{\beta}_0} \rVert ^2_2 + \lambda_0 \lVert {\boldsymbol{\beta}_0} \rVert _1 + \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1\\
+    =& (2n)^{-1}\lVert {\boldsymbol{\epsilon}} \rVert ^2_2 + \lambda_0 \lVert {\boldsymbol{\beta}_0} \rVert _1 + \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1
 \end{align*}
 
 
