@@ -61,12 +61,14 @@ $$
 $$
 where $\boldsymbol{\delta} = \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 = \left( \boldsymbol{\delta}^{\prime}_1,\boldsymbol{\delta}^{\prime}_2 \right)^{\prime}$, with $\boldsymbol{\delta}_1\in\mathbb{R}^s$. Where does this constraint come from? For the penalized least square quesion \ref{eq:penalized-LS-l1concave}
 $$
-(2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert ^2_2 + \lambda_0 \lVert \boldsymbol{\beta} \rVert _1 + \lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1 
+\min_{\boldsymbol{\beta}\in\mathbb{R}^p}\left\{ (2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert ^2_2 + \lambda_0 \lVert \boldsymbol{\beta} \rVert _1 + \lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1  \right\}
 $$
 the global minimizer $\hat{\boldsymbol{\beta}}$ leads to 
-$$
-(2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert ^2_2 + \lambda_0 \lVert \boldsymbol{\beta} \rVert _1 + \lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1 
-$$
+\begin{align*}
+    (2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}} \rVert ^2_2 + \lambda_0 \lVert \hat{\boldsymbol{\beta}} \rVert _1 + \lVert p_{\lambda}(\hat{\boldsymbol{\beta}}) \rVert _1 =& (2n)^{-1}\lVert \mathbf{X}\boldsymbol{\beta}_0+ \boldsymbol{\epsilon} -\mathbf{X}\hat{\boldsymbol{\beta}} \rVert ^2_2 + \lambda_0 \lVert \hat{\boldsymbol{\beta}} \rVert _1 + \lVert p_{\lambda}(\hat{\boldsymbol{\beta}}) \rVert _1 \\
+    =& (2n)^{-1}\lVert \mathbf{X}\boldsymbol{\beta}_0+ \boldsymbol{\epsilon} -\mathbf{X}\hat{\boldsymbol{\beta}} \rVert ^2_2 + \lambda_0 \lVert \hat{\boldsymbol{\beta}} \rVert _1 + \lVert p_{\lambda}(\hat{\boldsymbol{\beta}}) \rVert _1 
+\end{align*}
+
 
 
 
