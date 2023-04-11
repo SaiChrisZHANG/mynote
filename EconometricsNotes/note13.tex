@@ -99,7 +99,13 @@ $$
 $$
 Now, if we further impose 2 conditions:
 \begin{itemize}
-    \item \myhl[myblue]{\underline{\textbf{eigenvalue condition}}}: for some positive constant $\kappa_0$, $\min_{\lVert\boldsymbol{\delta}\rVert _2=1,\lVert\boldsymbol{\delta}\rVert _0<2s}\frac{1}{\sqrt{n}}\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2\geq \kappa_0$
+    \item {\myhl[myblue]{\textbf{eigenvalue condition}}}: for some positive constant $\kappa_0$ 
+    \begin{align*}
+        \min_{\lVert\boldsymbol{\delta}\rVert _2=1,\lVert\boldsymbol{\delta}\rVert _0<2s}\frac{1}{\sqrt{n}}\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2 &\geq \kappa_0 & \textbf{(A)} \\
+        \kappa = \kappa(s,7) = \min_{\boldsymbol{\delta}\neq \mathbf{0}, \lVert\boldsymbol{\delta}_2\rVert _1 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _1} \frac{1}{\sqrt{n}}\frac{\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2}{\lVert\boldsymbol{\delta}_1\rVert _2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert _2} &> 0 & \textbf{(B)}
+    \end{align*}
+    where $\tilde{\boldsymbol{\delta}}_2$ is the subvector of $\boldsymbol{\delta}_2$ consisting of the components with the $s$ \textbf{\textit{largest}} absolute values. Here, 
+    \item {\myhl[myblue]{\textbf{eigenvalue condition}}}: 
 \end{itemize}
 
 \newpage
