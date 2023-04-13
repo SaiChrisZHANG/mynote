@@ -56,9 +56,9 @@ these solutions have the same feature as the hard-thresholded estimator: each co
 
 
 With the hard-thresholding property of Prop. \ref{prop:hard-thresholding-nonconvex}, we can prove a basic constraint for the global optimum $\hat{\boldsymbol{\beta}}$ on an event with significant probability \citep{fan2014asymptotic}
-$$
-\lVert \boldsymbol{\delta}_2 \rVert _1 \leq 7 \lVert \boldsymbol{\delta}_1 \rVert _1
-$$
+\begin{equation}\label{eq:basic_constrant}
+    \lVert \boldsymbol{\delta}_2 \rVert _1 \leq 7 \lVert \boldsymbol{\delta}_1 \rVert _1
+\end{equation}
 where $\boldsymbol{\delta} = \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 = \left( \hat{\boldsymbol{\beta}}_1',\hat{\boldsymbol{\beta}}_2' \right)' - \left( {\boldsymbol{\beta}}_{0,1}',{\boldsymbol{\beta}}_{0,2}' \right)' = \left( \boldsymbol{\delta}^{\prime}_1,\boldsymbol{\delta}^{\prime}_2 \right)^{\prime}$, with $\boldsymbol{\delta}_1\in\mathbb{R}^s$. Where does this constraint come from? For the penalized least square quesion \ref{eq:penalized-LS-l1concave}
 $$
 \min_{\boldsymbol{\beta}\in\mathbb{R}^p}\left\{ (2n)^{-1}\lVert \mathbf{y}-\mathbf{X}\boldsymbol{\beta} \rVert ^2_2 + \lambda_0 \lVert \boldsymbol{\beta} \rVert _1 + \lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1  \right\}
@@ -94,9 +94,9 @@ $$
  - n^{-1}\boldsymbol{\epsilon}^{\prime}\mathbf{X}\boldsymbol{\delta} + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 - \lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 \geq -\frac{\lambda_0}{2}\lVert \boldsymbol{\delta} \rVert _1 + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 - \lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 = \frac{\lambda_0}{2} \lVert \boldsymbol{\delta}_2 \rVert _1 - \frac{3\lambda_0}{2} \lVert \boldsymbol{\delta}_1 \rVert _1
 $$
 plug this result back, get
-$$
-\frac{1}{2n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 + \frac{\lambda_0}{2} \lVert \boldsymbol{\delta}_2 \rVert _1 \leq \frac{3\lambda_0}{2} \lVert \boldsymbol{\delta}_1 \rVert _1+ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 
-$$
+\begin{equation}\label{eq:basic_constrant_step1}
+    \frac{1}{2n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 + \frac{\lambda_0}{2} \lVert \boldsymbol{\delta}_2 \rVert _1 \leq \frac{3\lambda_0}{2} \lVert \boldsymbol{\delta}_1 \rVert _1+ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 
+\end{equation}
 Now, if we further impose 2 conditions:
 \begin{itemize}
     \item {\myhl[myblue]{\textbf{eigenvalue condition}}}: for some positive constant $\kappa_0$ 
@@ -118,6 +118,8 @@ Now, if we further impose 2 conditions:
         \min_{j=1,\cdots,s}\lvert\beta_{0,j}\rvert &> \max\left\{ (1-c_1)\lambda,2\kappa_0^{-1}p_{\lambda}^{1/2}(\infty) \right\}
     \end{align*} 
 \end{itemize}
+
+Now, look back at the condition \ref{eq:basic_constrant_step1}, we can upper-bound $ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1$ by $\frac{1}{4n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{4}\lambda_0\lVert\boldsymbol{\delta} \rVert _1$
 
 \newpage
 \bibliographystyle{plainnat}
