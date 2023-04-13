@@ -495,6 +495,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zplsups.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zplsups.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsups-Regular-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplsups-Regular-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxmia.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txmia.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxsyralt.tfm
@@ -510,6 +515,7 @@ INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.bbl
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.aux
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.out
 INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note13.out
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
