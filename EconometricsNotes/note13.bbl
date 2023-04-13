@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,13 @@
 Peter~J Bickel, Ya'acov Ritov, and Alexandre~B Tsybakov.
 \newblock Simultaneous analysis of lasso and dantzig selector.
 \newblock \emph{The Annals of Statistics}, pages 1705--1732, 2009.
+
+\bibitem[Candes and Tao(2007)]{candes2007dantzig}
+Emmanuel Candes and Terence Tao.
+\newblock The dantzig selector: Statistical estimation when p is much larger
+  than n.
+\newblock \emph{The Annals of Statistics}, 35\penalty0 (6):\penalty0
+  2313--2351, 2007.
 
 \bibitem[Fan and Lv(2014)]{fan2014asymptotic}
 Yingying Fan and Jinchi Lv.
