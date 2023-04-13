@@ -102,12 +102,15 @@ Now, if we further impose 2 conditions:
     \item {\myhl[myblue]{\textbf{eigenvalue condition}}}: for some positive constant $\kappa_0$ 
     \begin{align*}
         \min_{\lVert\boldsymbol{\delta}\rVert _2=1,\lVert\boldsymbol{\delta}\rVert _0<2s}\frac{1}{\sqrt{n}}\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2 &\geq \kappa_0 & \textbf{(A)} \\
-        \kappa = \kappa(s,7) = \min_{\boldsymbol{\delta}\neq \mathbf{0}, \lVert\boldsymbol{\delta}_2\rVert _1 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _1} \frac{1}{\sqrt{n}}\frac{\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2}{\lVert\boldsymbol{\delta}_1\rVert _2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert _2} &> 0 & \textbf{(B)}
+        \kappa = \kappa(s,7) = \min_{\boldsymbol{\delta}\neq \mathbf{0}, \lVert\boldsymbol{\delta}_2\rVert _1 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _1} \left\{ \frac{1}{\sqrt{n}}\frac{\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2}{\lVert\boldsymbol{\delta}_1\rVert _2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert _2} \right\} &> 0 & \textbf{(B)}
     \end{align*}
-    where $\tilde{\boldsymbol{\delta}}_2$ is the subvector of $\boldsymbol{\delta}_2$ consisting of the components with the $s$ \textbf{\textit{largest}} absolute values. Here
+    where $\tilde{\boldsymbol{\delta}}_2$ is the subvector of $\boldsymbol{\delta}_2$ consisting of the components with the $s$ \textbf{\underline{largest}} absolute values. Here
     \begin{itemize}
         \item[-] Condition \textbf{(A)} is a mild sparse eigenvalue condition
-        \item[-] Condition \textbf{(B)} combines the restricted eigenvalue assumptions in \citet{bickel2009simultaneous}\footnote{Introduced by \citet{candes2007dantzig} for studying the oracle inequalities for the Lasso estimator and Dantzig selector.}. The intuition is, for OLS estimation, $\mathbf{X}^{\prime}\mathbf{X}$ should be positive definite
+        \item[-] Condition \textbf{(B)} combines the restricted eigenvalue assumptions in \citet{bickel2009simultaneous}\footnote{Introduced by \citet{candes2007dantzig} for studying the oracle inequalities for the Lasso estimator and Dantzig selector.}. The intuition is, for OLS estimation, $\mathbf{X}^{\prime}\mathbf{X}$ should be \textbf{\underline{positive definite}}, that is $$ \min_{\mathbf{0}\neq \boldsymbol{\delta}\in\mathbb{R}^p}\left\{ \frac{1}{\sqrt{n}} \frac{\lVert  \mathbf{X} \boldsymbol{\delta} \rVert _2}{\lVert \boldsymbol{\delta} \rVert _2} \right\} >0 $$
+        however, when $p>n$, this condition \textbf{never} holds, hence we replace $\lVert \boldsymbol{\delta} \rVert _2$ with the $L_2-$norm of $\lVert \boldsymbol{\delta}_1 \rVert _2$, a subvector of $\boldsymbol{\delta}$ 
+        $$ \kappa = \kappa(s,7) \min_{\boldsymbol{\delta}\neq \mathbf{0}, \lVert\boldsymbol{\delta}_2\rVert _1 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _1}\left\{ \frac{1}{\sqrt{n}} \frac{\lVert  \mathbf{X} \boldsymbol{\delta} \rVert _2}{\lVert \boldsymbol{\delta} \rVert _2} \right\} >0 $$
+        and for $L_q$ loss with $q\in (1,2]$, we further bound $ \lVert\tilde{\boldsymbol{\delta}}_2\rVert _2$, which leads to condition \textbf{(B)}.
     \end{itemize}
     \item {\myhl[myblue]{\textbf{eigenvalue condition}}}: 
 \end{itemize}
