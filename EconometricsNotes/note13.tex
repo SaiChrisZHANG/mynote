@@ -119,7 +119,12 @@ Now, if we further impose 2 conditions:
     \end{align*} 
 \end{itemize}
 
-Now, look back at the condition \ref{eq:basic_constrant_step1}, we can upper-bound $ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1$ by $\frac{1}{4n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{4}\lambda_0\lVert\boldsymbol{\delta} \rVert _1$
+Now, look back at the condition \ref{eq:basic_constrant_step1}, we can upper-bound $ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1$ by $\frac{1}{4n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{4}\lambda_0\lVert\boldsymbol{\delta} \rVert _1$. Consider 2 cases:
+\begin{itemize}
+    \item \textbf{Case 1}: $\lVert \hat{\boldsymbol{\beta}}_0 \rVert\geq s$. By the hard-thresholding condition, we have $\lvert\beta_{0,j}\rvert>(1-c_1)\lambda$ and $p'_{\lambda}\left\{ (1-c_1)\lambda \right\}\leq \lambda_0/4$. Hence, $\forall j=1,\cdots,s$, if $\hat{\beta}_j\neq 0$, we must have $\lvert \hat{\beta}_j \rvert >(1-c_1)\lambda$. And by the \underline{mean-value theorem}, we have 
+    $$\lvert p_{\lambda}(\lvert \beta_{0,j} \rvert)-p_{\lambda}(\lvert \hat{\beta}_{j} \rvert) \rvert = p'_{\lambda}(b)(\lvert \hat{\beta}_{j} \rvert - \lvert \beta_{0,j} \rvert)\leq p'_{\lambda}(b)\lvert \delta_{0,j} \rvert$$ 
+    where $b$ is between $\lvert \beta_{0,j} \rvert$ and $\lvert \hat{\beta}_j \rvert$, hence, $b>\lvert\beta_{0,j}\rvert>(1-c_1)\lambda$, by the concavity of $p_{\lambda}$, we have $p'(b)<p'((1-c_1)\lambda)\leq \lambda_0/4$, which leads to $\lvert p_{\lambda}(\lvert \beta_{0,j} \rvert)-p_{\lambda}(\lvert \hat{\beta}_{j} \rvert) \rvert$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
