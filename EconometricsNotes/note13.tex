@@ -150,7 +150,16 @@ Combining Case 1 and 2, we have $\lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVe
      & \leq 3\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 + \frac{1}{2n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{2}\lambda_0\underbrace{\lVert\boldsymbol{\delta} \rVert _1}_{= \lVert\boldsymbol{\delta}_1 \rVert _1 + \lVert\boldsymbol{\delta}_2 \rVert _1} \\
      & \leq 7\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1
 \end{align*}
-which leads to the constraint in \ref{eq:basic_constrant}.
+which leads to the constraint in \ref{eq:basic_constrant} and $\frac{1}{n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 \leq 7\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1$
+
+Now, look back at Condition 1(\textbf{B})
+$$
+\kappa = \kappa(s,7) = \min_{\boldsymbol{\delta}\neq \mathbf{0}, \lVert\boldsymbol{\delta}_2\rVert _1 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _1} \left\{ \frac{1}{\sqrt{n}}\frac{\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2}{\lVert\boldsymbol{\delta}_1\rVert _2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert _2} \right\} > 0
+$$
+we have 
+\begin{align*}
+    \frac{1}{4}\kappa^2(s,7)\left( \lVert\boldsymbol{\delta}_1\rVert^2_2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert^2_2 \right)\leq \frac{1}{4n}\lVert\mathbf{X}\boldsymbol{\delta}\rVert^2_2\leq 
+\end{align*}
 
 
 \newpage
