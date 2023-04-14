@@ -135,7 +135,10 @@ Now, look back at the condition \ref{eq:basic_constrant_step1}, we can upper-bou
         \end{align*}
     \end{itemize}
     together, we have $$ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 \leq \frac{1}{4}\lambda_0\lVert\boldsymbol{\delta}\rVert _1 \leq \frac{1}{4n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{4}\lambda_0\lVert\boldsymbol{\delta} \rVert _1 $$
-    \item \textbf{Case 2}: $\lVert \hat{\boldsymbol{\beta}} \rVert _0 = s-k$ for some $k\geq 1$.
+    \item \textbf{Case 2}: $\lVert \hat{\boldsymbol{\beta}} \rVert _0 = s-k$ for some $k\geq 1$. Then we must have $\lVert \boldsymbol{\delta} \rVert _0 \leq \lVert \hat{\boldsymbol{\beta}} \rVert _0 + \lVert \boldsymbol{\beta}_0 \rVert _0\leq s -k+s <2s$, and $\lVert \boldsymbol{\delta} \rVert _2 \geq \sqrt{k}\min_{j=1,\cdots,s}\lvert \beta_{0,j} \rvert$. Also, there are at least $k$ null estimates ($\hat{\beta}_j=0$), thus
+    \begin{align*}
+        \underbrace{\frac{1}{4n}\lVert \mathbf{X} \boldsymbol{\delta} \rVert^2_2 \geq \frac{\kappa_0^2}{4} \lVert \boldsymbol{\delta} \rVert^2_2}_{\text{Condition 1(A)}} \geq \frac{\kappa_0^2}{4}\left(  \right)
+    \end{align*}
 \end{itemize}
 
 
