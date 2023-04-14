@@ -150,7 +150,7 @@ Combining Case 1 and 2, we have $\lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVe
      & \leq 3\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 + \frac{1}{2n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{2}\lambda_0\underbrace{\lVert\boldsymbol{\delta} \rVert _1}_{= \lVert\boldsymbol{\delta}_1 \rVert _1 + \lVert\boldsymbol{\delta}_2 \rVert _1} \\
      & \leq 7\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1
 \end{align*}
-which leads to the constraint in \ref{eq:basic_constrant} and $\frac{1}{n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 \leq 7\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1$
+which leads to the constraint in \ref{eq:basic_constrant} and $\frac{1}{n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 \leq 7\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1$.
 
 Now, look back at Condition 1(\textbf{B})
 $$
@@ -158,9 +158,20 @@ $$
 $$
 we have 
 \begin{align*}
-    \frac{1}{4}\kappa^2(s,7)\left( \lVert\boldsymbol{\delta}_1\rVert^2_2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert^2_2 \right)\leq \frac{1}{4n}\lVert\mathbf{X}\boldsymbol{\delta}\rVert^2_2\leq 
+    \frac{1}{4}\kappa^2(s,7)\lVert\boldsymbol{\delta}_1\rVert^2_2 \leq \frac{1}{4}\kappa^2(s,7)\left( \lVert\boldsymbol{\delta}_1\rVert^2_2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert^2_2 \right)\leq \frac{1}{4n}\lVert\mathbf{X}\boldsymbol{\delta}\rVert^2_2\leq \underbrace{\frac{7}{4}\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 \leq \frac{7}{4}\lambda_0\sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2 }_{\text{Cauchy-Schwartz inequality}}
 \end{align*}
-
+hence
+\begin{align*}
+    \lVert\boldsymbol{\delta}_1\rVert _2 &\leq \frac{7\lambda_0 \sqrt{s}}{\kappa^2(s,7)} & \lVert\boldsymbol{\delta}_1\rVert _1\leq \sqrt{s} \lVert\boldsymbol{\delta}_1\rVert _1 &\leq \frac{7\lambda_0 s}{\kappa^2(s,7)} & \lVert\boldsymbol{\delta}_2'\rVert _2 &\leq \frac{\sqrt{7\lambda_0 \sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2}}{\kappa(s,7)}
+\end{align*}
+Notice that the $k-$th largest absolute component of $\boldsymbol{\delta}_2$ is bounded from above by $\lVert\boldsymbol{\delta}_2\rVert _1/k$, then for $\boldsymbol{\delta}_{2_s}$, the subvector of $\boldsymbol{\delta}_2$ consisting of components \textbf{excluding} those with the $s$ largest magnitudes, we have
+$$
+\lVert\boldsymbol{\delta}_{2_s}\rVert _2^2\leq  \sum^{p-s}_{k=s+1}\frac{1}{k^2} \lVert\boldsymbol{\delta}_2\rVert^2 _1 \leq s^{-1}\lVert\boldsymbol{\delta}_2\rVert _1^2 \Rightarrow \lVert\boldsymbol{\delta}_{2_s}\rVert _2 \leq \frac{1}{\sqrt{s}}\lVert\boldsymbol{\delta}_2\rVert _1  \overset{\ref{eq:basic_constrant}}{\leq} \frac{7}{\sqrt{s}}\lVert\boldsymbol{\delta}_1\rVert _1 \overset{\text{C-S}}{\leq} 7\lVert\boldsymbol{\delta}_1\rVert _2
+$$
+since $\boldsymbol{\delta}_{2_s}$ and $\boldsymbol{\delta}_{2}'$ are a partition of $\boldsymbol{\delta}$, we have 
+\begin{align*}
+    \lVert\boldsymbol{\delta}_2\rVert _2 \leq \lVert\boldsymbol{\delta}_{2_s}\rVert _2 + \lVert\boldsymbol{\delta}_2'\rVert _2 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _2 + \frac{\sqrt{7\lambda_0 \sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2}}{\kappa(s,7)}\leq 7 \lVert\boldsymbol{\delta}_1\rVert _2 &\leq \frac{56\lambda_0 \sqrt{s}}{\kappa^2(s,7)} 
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
