@@ -137,9 +137,20 @@ Now, look back at the condition \ref{eq:basic_constrant_step1}, we can upper-bou
     together, we have $$ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 \leq \frac{1}{4}\lambda_0\lVert\boldsymbol{\delta}\rVert _1 \leq \frac{1}{4n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{4}\lambda_0\lVert\boldsymbol{\delta} \rVert _1 $$
     \item \textbf{Case 2}: $\lVert \hat{\boldsymbol{\beta}} \rVert _0 = s-k$ for some $k\geq 1$. Then we must have $\lVert \boldsymbol{\delta} \rVert _0 \leq \lVert \hat{\boldsymbol{\beta}} \rVert _0 + \lVert \boldsymbol{\beta}_0 \rVert _0\leq s -k+s <2s$, and $\lVert \boldsymbol{\delta} \rVert _2 \geq \sqrt{k}\min_{j=1,\cdots,s}\lvert \beta_{0,j} \rvert$. Also, there are at least $k$ null estimates ($\hat{\beta}_j=0$), thus
     \begin{align*}
-        \underbrace{\frac{1}{4n}\lVert \mathbf{X} \boldsymbol{\delta} \rVert^2_2 \geq \frac{\kappa_0^2}{4} \lVert \boldsymbol{\delta} \rVert^2_2}_{\text{Condition 1(A)}} \geq \frac{\kappa_0^2}{4}\left(  \right)
+        \underbrace{\frac{1}{4n}\lVert \mathbf{X} \boldsymbol{\delta} \rVert^2_2 \geq \frac{\kappa_0^2}{4} \lVert \boldsymbol{\delta} \rVert^2_2}_{\text{Condition 1(A)}} \geq \underbrace{\frac{\kappa_0^2}{4}\left( \sqrt{k}\min_{j=1,\cdots,s}\lvert \beta_{0,j}\rvert \right)^2 \geq kp_{\lambda}(\infty)}_{\text{Condition 2}} \geq k p_{\lambda}(\lvert \beta_{0,j} \rvert)
+    \end{align*}
+    similar to Case 1, we have the desired upper bound 
+    \begin{align*}
+        \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 \leq  kp_{\lambda}(\infty) + \frac{1}{4}\lambda_0\lVert\boldsymbol{\delta}\rVert _1 \leq \frac{1}{4n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{4}\lambda_0\lVert\boldsymbol{\delta} \rVert _1
     \end{align*}
 \end{itemize}
+Combining Case 1 and 2, we have $\lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1 \leq \frac{1}{4n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{4}\lambda_0\lVert\boldsymbol{\delta} \rVert _1$, plug this back in \ref{eq:basic_constrant_step1}, get 
+\begin{align*}
+    \frac{1}{n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert ^2_2 + \lambda_0\lVert \boldsymbol{\delta}_2 \rVert _1 &\leq 3\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1+ \lVert p_{\lambda}({\boldsymbol{\beta}_0}) \rVert _1 -  \lVert p_{\lambda}( \boldsymbol{\beta}_0+\boldsymbol{\delta}) \rVert _1\\
+     & \leq 3\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 + \frac{1}{2n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2+\frac{1}{2}\lambda_0\underbrace{\lVert\boldsymbol{\delta} \rVert _1}_{= \lVert\boldsymbol{\delta}_1 \rVert _1 + \lVert\boldsymbol{\delta}_2 \rVert _1} \\
+     & \leq 7\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1
+\end{align*}
+which leads to the constraint in \ref{eq:basic_constrant}.
 
 
 \newpage
