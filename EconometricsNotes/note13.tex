@@ -180,12 +180,19 @@ Hence, we have the following theorem:
     \begin{align}
         \frac{1}{2}\left\Vert \mathbf{X}\left( \hat{\boldsymbol{\beta}} -\boldsymbol{\beta}_0 \right) \right\Vert _2 &= O(\kappa^{-1}\lambda_0 s^{1/2}) \\
         \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert _q &= O(\kappa^{-2}\lambda_0 s^{1/q}), & q\in[1,2]\\
-        FS\left(\hat{\boldsymbol{\beta}}\right) &= O\left( \kappa^{-4} \left(\frac{\lambda_0}{\lambda}\right)^2 s \right)
+        \mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right) &= O\left( \kappa^{-4} \left(\frac{\lambda_0}{\lambda}\right)^2 s \right)
     \end{align}
+    Where 
+    $$
+    \mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right) = \left\vert \left\{ j=1,\cdots,p: \mathrm{sgn}\left(\hat{\beta}_j\right) \neq \mathrm{sgn}\left(\beta_{0,j}\right) \right\} \right\vert
+    $$
+    is the number of falsely discovered signs, stronger than the total number of false positives and false negatives.
+
     If in addition $\lambda \geq \frac{56\lambda_0\sqrt{s}}{(1-c_1)\kappa^2}$, then with probability $1-O(p^{-c_0})$, we also have that 
     \begin{align*}
         \mathrm{sgn}\left(\hat{\boldsymbol{\beta}}\right) &= \mathrm{sgn}\left(\boldsymbol{\beta}_0\right) & \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert _{\infty} = O\left(\lambda_0\left\Vert \left(\frac{1}{n}\mathbf{X}^{\prime}_1\mathbf{X}_1 \right)^{-1} \right\Vert _{\infty}\right)
     \end{align*}
+    where $\mathbf{X}_1$ is the $n\times s$ submatrix of $\mathbf{X}$ corresponding to $s$ nonzero regression coefficients $\beta_{0,j}$.
 \end{theorem}
 
 \newpage
