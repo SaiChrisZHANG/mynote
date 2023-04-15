@@ -171,14 +171,14 @@ $$
 $$
 since $\boldsymbol{\delta}_{2_s}$ and $\boldsymbol{\delta}_{2}'$ are a partition of $\boldsymbol{\delta}$, we have 
 \begin{align*}
-    \lVert\boldsymbol{\delta}_2\rVert _2 \leq \lVert\boldsymbol{\delta}_{2_s}\rVert _2 + \lVert\boldsymbol{\delta}_2'\rVert _2 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _2 + \frac{\sqrt{7\lambda_0 \sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2}}{\kappa(s,7)}\leq 7 \lVert\boldsymbol{\delta}_1\rVert _2 &\leq \frac{56\lambda_0 \sqrt{s}}{\kappa^2(s,7)} 
+    \lVert\boldsymbol{\delta}_2\rVert _2 \leq \lVert\boldsymbol{\delta}_{2_s}\rVert _2 + \lVert\boldsymbol{\delta}_2'\rVert _2 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _2 + \frac{\sqrt{7\lambda_0 \sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2}}{\kappa(s,7)}\leq  \frac{56\lambda_0 \sqrt{s}}{\kappa^2(s,7)} 
 \end{align*}
 
 Together, for the estimation loss $\boldsymbol{\delta}= \hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0$, we have
 \begin{itemize}
     \item \myhl[myblue]{\textbf{$L_2$-covar-loss-correlation}}: $\frac{1}{n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2 \leq 7\lambda_0\lVert \boldsymbol{\delta}_1 \rVert _1 \leq \frac{(7\lambda_0)^2s}{\kappa^2(s,7)}\Rightarrow \frac{1}{\sqrt{n}}\lVert \mathbf{X}\boldsymbol{\delta} \rVert _2 \leq \frac{7\lambda_0 \sqrt{s}}{\kappa(s,7)}$
     \item \myhl[myblue]{\textbf{$L_2$-loss}}: $\lVert\boldsymbol{\delta}\rVert _2\leq \lVert\boldsymbol{\delta}_1\rVert _2+\lVert\boldsymbol{\delta}_2\rVert _2\leq \frac{63\lambda_0\sqrt{s}}{\kappa^2(s,7)}$
-    \item \myhl[myblue]{\textbf{$L_q$-loss}}:
+    \item \myhl[myblue]{\textbf{$L_q$-loss}}: $\lVert\boldsymbol{\delta}\rVert _q \leq \left(s^{(2-q)/2}\lVert\boldsymbol{\delta}_1\rVert ^q_2\right)^{1/q} = s^{(2-q)/2q}\lVert\boldsymbol{\delta}_1\rVert _2 \leq s^{(2-q)/2q}\frac{7\lambda_0 \sqrt{s}}{\kappa^2(s,7)} = \frac{7\lambda_0 s^{1/q}}{\kappa^2(s,7)} $ \sidenotes{$\leftarrow$by Holder's\\ inequality}
 \end{itemize}
 
 
