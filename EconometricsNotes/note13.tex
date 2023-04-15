@@ -182,7 +182,10 @@ Hence, we have the following theorem:
         \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert _q &= O(\kappa^{-2}\lambda_0 s^{1/q}), & q\in[1,2]\\
         FS\left(\hat{\boldsymbol{\beta}}\right) &= O\left( \kappa^{-4} \left(\frac{\lambda_0}{\lambda}\right)^2 s \right)
     \end{align}
-    If in addition $\lambda \geq \frac{56\lambda_0\sqrt{s}}{(1-c_1)\kappa^2}$, then with probability 
+    If in addition $\lambda \geq \frac{56\lambda_0\sqrt{s}}{(1-c_1)\kappa^2}$, then with probability $1-O(p^{-c_0})$, we also have that 
+    \begin{align*}
+        \mathrm{sgn}\left(\hat{\boldsymbol{\beta}}\right) &= \mathrm{sgn}\left(\boldsymbol{\beta}_0\right) & \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert _{\infty} = O\left(\lambda_0\left\Vert \left(\frac{1}{n}\mathbf{X}^{\prime}_1\mathbf{X}_1 \right)^{-1} \right\Vert _{\infty}\right)
+    \end{align*}
 \end{theorem}
 
 \newpage
