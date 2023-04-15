@@ -99,7 +99,7 @@ plug this result back, get
 \end{equation}
 Now, if we further impose 2 conditions:
 \begin{itemize}
-    \item {\myhl[myblue]{\textbf{eigenvalue condition}}}: for some positive constant $\kappa_0$ 
+    \item {\myhl[myblue]{\textbf{Condition 1 (eigenvalue condition)}}}: for some positive constant $\kappa_0$ 
     \begin{align*}
         \min_{\lVert\boldsymbol{\delta}\rVert _2=1,\lVert\boldsymbol{\delta}\rVert _0<2s}\frac{1}{\sqrt{n}}\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2 &\geq \kappa_0 & \textbf{(A)} \\
         \kappa = \kappa(s,7) = \min_{\boldsymbol{\delta}\neq \mathbf{0}, \lVert\boldsymbol{\delta}_2\rVert _1 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _1} \left\{ \frac{1}{\sqrt{n}}\frac{\lVert\mathbf{X}\boldsymbol{\delta}\rVert _2}{\lVert\boldsymbol{\delta}_1\rVert _2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert _2} \right\} &> 0 & \textbf{(B)}
@@ -112,7 +112,7 @@ Now, if we further impose 2 conditions:
         $$ \kappa = \kappa(s,7) \min_{\boldsymbol{\delta}\neq \mathbf{0}, \lVert\boldsymbol{\delta}_2\rVert _1 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _1}\left\{ \frac{1}{\sqrt{n}} \frac{\lVert  \mathbf{X} \boldsymbol{\delta} \rVert _2}{\lVert \boldsymbol{\delta} \rVert _2} \right\} >0 $$
         and for $L_q$ loss with $q\in (1,2]$, we further bound $ \lVert\tilde{\boldsymbol{\delta}}_2\rVert _2$, which leads to condition \textbf{(B)}.
     \end{itemize}
-    \item {\myhl[myblue]{\textbf{hard-thresholding condition}}}: The penalty $p_{\lambda}(t)$ satisfies the conditions of Prop. \ref{prop:hard-thresholding-nonconvex} with 
+    \item {\myhl[myblue]{\textbf{Condition 2 (hard-thresholding condition)}}}: The penalty $p_{\lambda}(t)$ satisfies the conditions of Prop. \ref{prop:hard-thresholding-nonconvex} with 
     \begin{align*}
         p'_{\lambda}\left\{ (1-c_1) \lambda \right\} &\leq \lambda_0/4 \\
         \min_{j=1,\cdots,s}\lvert\beta_{0,j}\rvert &> \max\left\{ (1-c_1)\lambda,2\kappa_0^{-1}p_{\lambda}^{1/2}(\infty) \right\}
@@ -172,6 +172,12 @@ since $\boldsymbol{\delta}_{2_s}$ and $\boldsymbol{\delta}_{2}'$ are a partition
 \begin{align*}
     \lVert\boldsymbol{\delta}_2\rVert _2 \leq \lVert\boldsymbol{\delta}_{2_s}\rVert _2 + \lVert\boldsymbol{\delta}_2'\rVert _2 \leq 7 \lVert\boldsymbol{\delta}_1\rVert _2 + \frac{\sqrt{7\lambda_0 \sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2}}{\kappa(s,7)}\leq 7 \lVert\boldsymbol{\delta}_1\rVert _2 &\leq \frac{56\lambda_0 \sqrt{s}}{\kappa^2(s,7)} 
 \end{align*}
+
+
+Hence, we have the following theorem:
+\begin{theorem}{1}{}
+    Assume that Condition 1 and 2 and the model error bound $\Pr \left( \left\Vert n^{-1}\mathbf{X}'\boldsymbol{\epsilon}  \right\Vert _{\infty} >\frac{\lambda_0}{2} \right) = O\left(p^{-c_0}\right)$ 
+\end{theorem}
 
 \newpage
 \bibliographystyle{plainnat}
