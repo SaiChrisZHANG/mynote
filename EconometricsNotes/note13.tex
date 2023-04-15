@@ -176,7 +176,13 @@ since $\boldsymbol{\delta}_{2_s}$ and $\boldsymbol{\delta}_{2}'$ are a partition
 
 Hence, we have the following theorem:
 \begin{theorem}{1}{}
-    Assume that Condition 1 and 2 and the model error bound $\Pr \left( \left\Vert n^{-1}\mathbf{X}'\boldsymbol{\epsilon}  \right\Vert _{\infty} >\frac{\lambda_0}{2} \right) = O\left(p^{-c_0}\right)$ 
+    Assume that Condition 1 and 2 and the model error bound $\Pr \left( \left\Vert n^{-1}\mathbf{X}'\boldsymbol{\epsilon}  \right\Vert _{\infty} >\frac{\lambda_0}{2} \right) = O\left(p^{-c_0}\right)$ , and $p_{\lambda}(t)$ is continuously differentiable. Then the global minimizer $\hat{\boldsymbol{\beta}}$ of \ref{eq:penalized-LS-l1concave} has the hard-thresholding property stated in Prop.\ref{prop:hard-thresholding-nonconvex}, and, with probability $1-O(p^{-c_0})$, statisfies simultaneously that
+    \begin{align}
+        \frac{1}{2}\left\Vert \mathbf{X}\left( \hat{\boldsymbol{\beta}} -\boldsymbol{\beta}_0 \right) \right\Vert _2 &= O(\kappa^{-1}\lambda_0 s^{1/2}) \\
+        \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert _q &= O(\kappa^{-2}\lambda_0 s^{1/q}), & q\in[1,2]\\
+        FS\left(\hat{\boldsymbol{\beta}}\right) &= O\left( \kappa^{-4} \left(\frac{\lambda_0}{\lambda}\right)^2 s \right)
+    \end{align}
+    If in addition $\lambda \geq \frac{56\lambda_0\sqrt{s}}{(1-c_1)\kappa^2}$, then with probability 
 \end{theorem}
 
 \newpage
