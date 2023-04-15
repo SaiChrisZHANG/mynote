@@ -179,10 +179,23 @@ Together, for the estimation loss $\boldsymbol{\delta}= \hat{\boldsymbol{\beta}}
     \item \myhl[myblue]{\textbf{$L_2$-covar-loss-correlation}}: $\frac{1}{n}\lVert \mathbf{X}\boldsymbol{\delta} \rVert^2_2 \leq 7\lambda_0\lVert \boldsymbol{\delta}_1 \rVert _1 \leq \frac{(7\lambda_0)^2s}{\kappa^2(s,7)}\Rightarrow \frac{1}{\sqrt{n}}\lVert \mathbf{X}\boldsymbol{\delta} \rVert _2 \leq \frac{7\lambda_0 \sqrt{s}}{\kappa(s,7)}$
     \item \myhl[myblue]{\textbf{$L_2$-loss}}: $\lVert\boldsymbol{\delta}\rVert _2\leq \lVert\boldsymbol{\delta}_1\rVert _2+\lVert\boldsymbol{\delta}_2\rVert _2\leq \frac{63\lambda_0\sqrt{s}}{\kappa^2(s,7)}$
     \item \myhl[myblue]{\textbf{$L_q$-loss}}: $\lVert\boldsymbol{\delta}\rVert _q \leq \left(s^{(2-q)/2}\lVert\boldsymbol{\delta}_1\rVert ^q_2\right)^{1/q} = s^{(2-q)/2q}\lVert\boldsymbol{\delta}_1\rVert _2 \leq s^{(2-q)/2q}\frac{7\lambda_0 \sqrt{s}}{\kappa^2(s,7)} = \frac{7\lambda_0 s^{1/q}}{\kappa^2(s,7)} $ \sidenotes{$\leftarrow$by Holder's\\ inequality}
+    
 \end{itemize}
+Define the \myhl[myblue]{\textbf{number of falsely discovered signs}} as\footnote{\textbf{Stronger} than the total number of false positives and false negatives.}
+    $$
+    \mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right) = \left\vert \left\{ j=1,\cdots,p: \mathrm{sgn}\left(\hat{\beta}_j\right) \neq \mathrm{sgn}\left(\beta_{0,j}\right) \right\} \right\vert
+    $$
+we know from Prop.\ref{prop:hard-thresholding-nonconvex} that $\lvert\hat{\beta}_j\rvert>(1-c_1)\lambda$ and from Condition 2 that $ \lvert \beta_{0,j}\rvert>(1-c_1)\lambda  $, then if $\mathrm{sgn}(\hat{\beta}_j)\neq \mathrm{sgn}(\beta_{0,j})$, we must have $ \lvert \delta_j \rvert = \lvert \hat{\beta}_j - \beta_{0,j} \rvert \geq (1-c_1)\lambda $. Therefore, it follows that 
+$$
+\lVert \boldsymbol{\delta} \rVert _2 \geq \left(\mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right)\right)^{1/2}(1-c_1)\lambda
+$$
+hence 
+$$
+\mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right) \leq \frac{\lVert \boldsymbol{\delta} \rVert ^2_2}{(1-c_1)^2\lambda^2} \leq \left(\frac{63}{1-c_1}\right)^2\left(\frac{\lambda_0}{\lambda}\right)^2\frac{s}{\kappa^4(s,7)}
+$$
+The results above are all conditional on the event $\mathcal{E} = \left\{ \left\Vert n^{-1}\mathbf{X}'\boldsymbol{\epsilon}  \right\Vert _{\infty}\leq \lambda_0 /2 \right\}$, hence hold simultaneously with proability $1-O(p^{-c_0})$.
 
-
-Hence, we have the following theorem:
+Altogether, we have the following theorem:
 \begin{theorem}{Properties of the Global Minimizer $\hat{\boldsymbol{\beta}}$}{global_minimizer_property}
     Assume that Condition 1 and 2 and the model error bound $\Pr \left( \left\Vert n^{-1}\mathbf{X}'\boldsymbol{\epsilon}  \right\Vert _{\infty} >\frac{\lambda_0}{2} \right) = O\left(p^{-c_0}\right)$ , and $p_{\lambda}(t)$ is continuously differentiable. Then the global minimizer $\hat{\boldsymbol{\beta}}$ of \ref{eq:penalized-LS-l1concave} has the hard-thresholding property stated in Prop.\ref{prop:hard-thresholding-nonconvex}, and, with probability $1-O(p^{-c_0})$, statisfies simultaneously that
     \begin{align}
@@ -190,11 +203,6 @@ Hence, we have the following theorem:
         \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert _q &= O(\kappa^{-2}\lambda_0 s^{1/q}), & q\in[1,2]\\
         \mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right) &= O\left( \kappa^{-4} \left(\frac{\lambda_0}{\lambda}\right)^2 s \right)
     \end{align}
-    Where 
-    $$
-    \mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right) = \left\vert \left\{ j=1,\cdots,p: \mathrm{sgn}\left(\hat{\beta}_j\right) \neq \mathrm{sgn}\left(\beta_{0,j}\right) \right\} \right\vert
-    $$
-    is the number of falsely discovered signs, \textbf{stronger} than the total number of false positives and false negatives.
 
     If in addition $\lambda \geq \frac{56\lambda_0\sqrt{s}}{(1-c_1)\kappa^2}$, then with probability $1-O(p^{-c_0})$, we also have that 
     \begin{align*}
