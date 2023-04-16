@@ -161,9 +161,9 @@ we have
     \frac{1}{4}\kappa^2(s,7)\lVert\boldsymbol{\delta}_1\rVert^2_2 \leq \frac{1}{4}\kappa^2(s,7)\left( \lVert\boldsymbol{\delta}_1\rVert^2_2 \vee \lVert\tilde{\boldsymbol{\delta}}_2\rVert^2_2 \right)\leq \frac{1}{4n}\lVert\mathbf{X}\boldsymbol{\delta}\rVert^2_2\leq \underbrace{\frac{7}{4}\lambda_0 \lVert \boldsymbol{\delta}_1 \rVert _1 \leq \frac{7}{4}\lambda_0\sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2 }_{\text{Cauchy-Schwartz inequality}}
 \end{align*}
 hence
-\begin{align*}
+\begin{align}\label{eq:L2bound_loss_subvector}
     \lVert\boldsymbol{\delta}_1\rVert _2 &\leq \frac{7\lambda_0 \sqrt{s}}{\kappa^2(s,7)} & \lVert\boldsymbol{\delta}_1\rVert _1\leq \sqrt{s} \lVert\boldsymbol{\delta}_1\rVert _1 &\leq \frac{7\lambda_0 s}{\kappa^2(s,7)} & \lVert\boldsymbol{\delta}_2'\rVert _2 &\leq \frac{\sqrt{7\lambda_0 \sqrt{s} \lVert \boldsymbol{\delta}_1 \rVert _2}}{\kappa(s,7)}
-\end{align*}
+\end{align}
 
 Notice that the $k-$th largest absolute component of $\boldsymbol{\delta}_2$ is bounded from above by $\lVert\boldsymbol{\delta}_2\rVert _1/k$, then for $\boldsymbol{\delta}_{2_s}$, the subvector of $\boldsymbol{\delta}_2$ consisting of components \textbf{excluding} those with the $s$ largest magnitudes, we have
 $$
@@ -210,6 +210,11 @@ Altogether, we have the following theorem:
     \end{align*}
     where $\mathbf{X}_1$ is the $n\times s$ submatrix of $\mathbf{X}$ corresponding to $s$ nonzero regression coefficients $\beta_{0,j}$.
 \end{theorem}
+The proof of the second part follows as such: by assuming $\lambda \geq \frac{56\lambda_0\sqrt{s}}{(1-c_1)\kappa^2}$, from Condition 2, we have $\min_{j=1,\cdots,s}\lvert \beta_{0,j}\rvert > \frac{56\lambda_0\sqrt{s}}{\kappa^2(s,7)}$, combined with \ref{eq:L2bound_loss_subvector}, we know that
+$$
+\mathrm{sgn}\left( \hat{\beta}_j \right) = \mathrm{sgn}\left(\beta_{0,j}\right),\ \forall j=1,\cdots, s
+$$
+by a simple contradiction argument.
 
 \newpage
 \bibliographystyle{plainnat}
