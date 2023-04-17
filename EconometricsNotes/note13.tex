@@ -215,14 +215,14 @@ $$
 \mathrm{sgn}\left( \hat{\beta}_j \right) = \mathrm{sgn}\left(\beta_{0,j}\right),\ \forall j=1,\cdots, s
 $$
 by a simple contradiction argument. In view of \ref{eq:L2bound_loss_subvector2} and the hard-thresholding feature of $\hat{\boldsymbol{\beta}} = \left( \hat{\boldsymbol{\beta}}_{0,1}^{\prime},\hat{\boldsymbol{\beta}}_{0,2}^{\prime} \right)^{\prime}$, with $\hat{\boldsymbol{\beta}}_{0,1} = \left(\hat{\beta}_1,\cdots,\hat{\beta}_s\right)^{\prime}$, a similar contradiction argument leads to $\hat{\boldsymbol{\beta}}_{0,2}=\mathbf{0}$. Together, we have the 
-sign consistency: $\mathrm{sgn}\left(\hat{\boldsymbol{\beta}}\right) = \mathrm{sgn}\left(\boldsymbol{\beta}_0\right)$. Under this result, applying Theorem 1 of \citet{lv2009unified}, the estimation $\hat{\boldsymbol{\beta}_{0,1}}$ solves the following equation for $\gamma \in \mathbb{R}^s$
+sign consistency: $\mathrm{sgn}\left(\hat{\boldsymbol{\beta}}\right) = \mathrm{sgn}\left(\boldsymbol{\beta}_0\right)$. Under this result, applying Theorem 1 of \citet{lv2009unified}, the estimation $\hat{\boldsymbol{\beta}_{0,1}}$ solves the following equation for $\boldsymbol{\gamma} \in \mathbb{R}^s$
 $$
-\gamma = \tilde{\boldsymbol{\beta}}_{0,1}-\left(n^{-1}\mathbf{X}^{\prime}_1\mathbf{X}_1\right)^{-1}\mathbf{b}
+\boldsymbol{\gamma} = \tilde{\boldsymbol{\beta}}_{0,1}-\left(n^{-1}\mathbf{X}^{\prime}_1\mathbf{X}_1\right)^{-1}\mathbf{b}
 $$
 where 
 \begin{itemize}
     \item $\mathbf{X}_1$ is the $n\times s$ submatrix of $\mathbf{X}$ corresponding to the $s$ non-zero regression coefficients $\beta_{0,j}$
-    \item $\mathbf{b} = \left\{ \lambda_0  \right\}$
+    \item $\mathbf{b} = \left\{ \lambda_0 \mathbf{1}_s +p'_{\lambda}(\lvert \boldsymbol{\gamma} \rvert)  \right\}$
 \end{itemize}
 
 \newpage
