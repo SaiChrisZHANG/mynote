@@ -222,7 +222,7 @@ $$
 where 
 \begin{itemize}
     \item $\mathbf{X}_1$ is the $n\times s$ submatrix of $\mathbf{X}$ corresponding to the $s$ non-zero regression coefficients $\beta_{0,j}$
-    \item $\mathbf{b} = \left\{ \lambda_0 \mathbf{1}_s +p'_{\lambda}(\lvert \boldsymbol{\gamma} \rvert)  \right\}$
+    \item $\mathbf{b} = \left\{ \lambda_0 \mathbf{1}_s +p'_{\lambda}(\lvert \boldsymbol{\gamma} \rvert)  \right\} \circ \mathrm{sgn}(\tilde{\boldsymbol{\beta}}_{0,1})-n^{-1}\mathbf{X}'_1\boldsymbol{\epsilon}$, with componentwise derivative and product.
 \end{itemize}
 
 \newpage
