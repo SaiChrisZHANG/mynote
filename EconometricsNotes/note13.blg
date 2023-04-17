@@ -3,46 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: note13.aux
 The style file: plainnat.bst
 Database file #1: ref.bib
-Warning--empty journal in lv2009unified
 You've used 4 entries,
             2773 wiz_defined-function locations,
-            617 strings with 5433 characters,
-and the built_in function-call counts, 1942 in all, are:
-= -- 182
+            618 strings with 5480 characters,
+and the built_in function-call counts, 1943 in all, are:
+= -- 183
 > -- 93
 < -- 4
 + -- 31
 - -- 27
 * -- 146
-:= -- 289
+:= -- 290
 add.period$ -- 12
 call.type$ -- 4
 change.case$ -- 21
 chr.to.int$ -- 4
-cite$ -- 9
+cite$ -- 8
 duplicate$ -- 91
 empty$ -- 160
 format.name$ -- 37
-if$ -- 411
+if$ -- 412
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 4
 newline$ -- 28
 num.names$ -- 16
-pop$ -- 40
+pop$ -- 38
 preamble$ -- 1
 purify$ -- 17
 quote$ -- 0
 skip$ -- 79
 stack$ -- 0
 substring$ -- 98
-swap$ -- 14
+swap$ -- 15
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 44
-warning$ -- 1
+warning$ -- 0
 while$ -- 19
 width$ -- 0
-write$ -- 57
-(There was 1 warning)
+write$ -- 58
