@@ -224,6 +224,10 @@ where
     \item $\mathbf{X}_1$ is the $n\times s$ submatrix of $\mathbf{X}$ corresponding to the $s$ non-zero regression coefficients $\beta_{0,j}$
     \item $\mathbf{b} = \left\{ \lambda_0 \mathbf{1}_s +p'_{\lambda}(\lvert \boldsymbol{\gamma} \rvert)  \right\} \circ \mathrm{sgn}(\tilde{\boldsymbol{\beta}}_{0,1})-n^{-1}\mathbf{X}'_1\boldsymbol{\epsilon}$, with componentwise derivative and product.
 \end{itemize}
+From the concavity and monotonicity of $p_{\lambda}(t)$ and Condition 2, we have 
+$$
+0 \leq p_{\lambda}'(t)\leq p_{\lambda}'\left\{ (1-c_1)\lambda \right\} \leq \lambda_0/4
+$$
 
 \newpage
 \bibliographystyle{plainnat}
