@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -28,5 +28,11 @@ Jinchi Lv and Yingying Fan.
 \newblock A unified approach to model selection and sparse recovery using
   regularized least squares.
 \newblock \emph{Journal of the American Statistical Association}, 2009.
+
+\bibitem[Zhang and Zhang(2012)]{zhang2012general}
+Cun-Hui Zhang and T~Zhang.
+\newblock A general theory of concave regularization for high-dimensional
+  sparse estimation problems.
+\newblock \emph{Statistical Science}, page 576, 2012.
 
 \end{thebibliography}
