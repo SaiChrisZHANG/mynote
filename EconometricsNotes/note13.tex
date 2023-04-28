@@ -246,8 +246,8 @@ which completes the proof for Theorem \ref{thm:global_minimizer_property}.
     Under the same regularity conditions, the global minimizer $\hat{\boldsymbol{\beta}}$ in Theorem \ref{thm:global_minimizer_property} satisfies that $\forall \tau >0$
     \begin{align}
         \mathbb{E}\left\{ \frac{1}{n}\left\Vert \mathbf{X}\left( \hat{\boldsymbol{\beta}} -\boldsymbol{\beta}_0 \right) \right\Vert^2 _2 \right\} =& O\left( \textcolor{myred}{\kappa^{-2}\lambda^2_0s} +m_{2,\tau}+\gamma \lambda_0p^{-c_0}\right) \\
-        \mathbb{E}\left\{ \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert^q _q \right\} = &O\left[ \kappa^{-2q}\lambda_0^q s + (2-q)\lambda_0^{-1}m_{2,\tau}+(q-1)\lambda^{-2}_0m_{4,\tau} + \left( (2-q)\gamma + (q-1)\gamma^2 \right)p^{-c_0} \right] \\
-        \mathbb{E}\left\{\mathrm{FS}\left(\hat{\boldsymbol{\beta}} \right) \right\} =& O\left[ \kappa^{-4}\left( \frac{\lambda_0}{\lambda} \right)^s s +\lambda^{-2}m_{2,\tau} + \left(\frac{\gamma\lambda_0}{\lambda^2}+s\right)p^{-c_0} \right]
+        \mathbb{E}\left\{ \left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert^q _q \right\} = &O\left[ \textcolor{myred}{\kappa^{-2q}\lambda_0^q s} + (2-q)\lambda_0^{-1}m_{2,\tau}+(q-1)\lambda^{-2}_0m_{4,\tau} + \left( (2-q)\gamma + (q-1)\gamma^2 \right)p^{-c_0} \right] \\
+        \mathbb{E}\left\{\mathrm{FS}\left(\hat{\boldsymbol{\beta}} \right) \right\} =& O\left[ \textcolor{myred}{\kappa^{-4}\left( \frac{\lambda_0}{\lambda} \right)^s s} +\lambda^{-2}m_{2,\tau} + \left(\frac{\gamma\lambda_0}{\lambda^2}+s\right)p^{-c_0} \right]
     \end{align}
     where $m_{q,\tau}=\mathbb{E}\left( \lvert \epsilon_0 \rvert^q \mathbf{1}_{ \{\lvert \epsilon_0 \rvert>\tau \} } \right)$ denotes the tail moment and $\gamma = \lVert \boldsymbol{\beta}_0 \rVert _1 + s\lambda_0^{-1}p_{\lambda}(\infty) + \tau^2 \lambda_0^{-1}$. If in addition $\lambda\geq 56(1-c_1)^{-1}\kappa^{-2}\lambda_0 \sqrt{s}$, then we  have 
     \begin{align*}
