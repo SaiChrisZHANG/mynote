@@ -261,7 +261,8 @@ which completes the proof for Theorem \ref{thm:global_minimizer_property}.
 \begin{itemize}
     \item The 3 bounds can have leading orders given in the \textcolor{myred}{\textbf{first terms}} since they are independent of the $\tau$ and $p^{-c_0}$, and the remainders in each bound can be made sufficiently small since $\tau$ and $c_0$ can be chosen arbitrarily large:
     \begin{itemize}
-        \item 
+        \item for bounded error $\epsilon_i\in [-b,b]$, take $\tau=b$ makes the tail moments $m_{q,\tau}$ vanish 
+        \item for Gaussian error $\epsilon_i\sim \mathcal{N}(0,\sigma^2)$, $m_{q,\tau}=O\left[\tau^{q-1}\exp(-\frac{\tau^2}{2\sigma^2}) \right]$ for positive integer $q$
     \end{itemize}
 \end{itemize}
 
