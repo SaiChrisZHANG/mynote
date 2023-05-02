@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -28,6 +28,12 @@ Jianqing Fan and Jinchi Lv.
 Yingying Fan and Jinchi Lv.
 \newblock Asymptotic properties for combined l 1 and concave regularization.
 \newblock \emph{Biometrika}, 101\penalty0 (1):\penalty0 57--70, 2014.
+
+\bibitem[Lin and Lv(2013)]{lin2013high}
+Wei Lin and Jinchi Lv.
+\newblock High-dimensional sparse additive hazards regression.
+\newblock \emph{Journal of the American Statistical Association}, 108\penalty0
+  (501):\penalty0 247--264, 2013.
 
 \bibitem[Lv and Fan(2009)]{lv2009unified}
 Jinchi Lv and Yingying Fan.
