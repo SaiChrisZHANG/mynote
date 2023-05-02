@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -18,6 +18,12 @@ Emmanuel Candes and Terence Tao.
 \newblock \emph{The Annals of Statistics}, 35\penalty0 (6):\penalty0
   2313--2351, 2007.
 
+\bibitem[Fan and Lv(2011)]{fan2011nonconcave}
+Jianqing Fan and Jinchi Lv.
+\newblock Nonconcave penalized likelihood with np-dimensionality.
+\newblock \emph{IEEE Transactions on Information Theory}, 57\penalty0
+  (8):\penalty0 5467--5484, 2011.
+
 \bibitem[Fan and Lv(2014)]{fan2014asymptotic}
 Yingying Fan and Jinchi Lv.
 \newblock Asymptotic properties for combined l 1 and concave regularization.
@@ -28,6 +34,13 @@ Jinchi Lv and Yingying Fan.
 \newblock A unified approach to model selection and sparse recovery using
   regularized least squares.
 \newblock \emph{Journal of the American Statistical Association}, 2009.
+
+\bibitem[Mazumder et~al.(2011)Mazumder, Friedman, and
+  Hastie]{mazumder2011sparsenet}
+Rahul Mazumder, Jerome~H Friedman, and Trevor Hastie.
+\newblock Sparsenet: Coordinate descent with nonconvex penalties.
+\newblock \emph{Journal of the American Statistical Association}, 106\penalty0
+  (495):\penalty0 1125--1138, 2011.
 
 \bibitem[Zhang and Zhang(2012)]{zhang2012general}
 Cun-Hui Zhang and T~Zhang.

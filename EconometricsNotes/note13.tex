@@ -284,7 +284,9 @@ The global minimizer established so far has nice properties, but due to the non-
 
 The implementation is
 \begin{itemize}
-    \item employ \myhl[myblue]{\textbf{path-following}} coordinate optimization algorithm 
+    \item employ \myhl[myblue]{\textbf{path-following}} coordinate optimization algorithm \citep{fan2011nonconcave,mazumder2011sparsenet} for implementation and choose initial estimate as Lasso estimator 
+    \item A convergence analysis of such an algorithm was presented in \citet{lin2013high}
+    \item One can obtain a path of sparse computable solutions that are global minimizers in each coordinate
 \end{itemize}
 
 \newpage
