@@ -271,7 +271,14 @@ which completes the proof for Theorem \ref{thm:global_minimizer_property}.
 
 \section{Computable Solutionss}
 The global minimizer established so far has nice properties, but due to the non-convexity, there might be computational difficulties in finding such global minimizer. Here, with the coordinate optimization algorithm, one can obtain a path of sparse computable solutions that are global minimizers in each coordinate, as shown in the following Theorem.
-
+\begin{theorem}{Asymptotic Properties of the Computable Solutions}{asymptotic_computable}
+    Let $\hat{\boldsymbol{\beta}}$ be a computable local minimizer of \ref{eq:penalized-LS-l1concave} that is global minimizer in \textbf{each coordinate} produced by any algorithm satisfying
+    \begin{itemize}
+        \item $\lVert \hat{\boldsymbol{\beta}} \rVert _0\leq c_2 s$
+        \item $\lVert \frac{1}{n}\mathbf{X}'(\mathbf{y}-\mathbf{X}\hat{\boldsymbol{\beta}}) \rVert _{\infty} = O(\lambda_0),\lambda\geq c_3\lambda_0$
+        \item $\min_{\lVert \boldsymbol{\delta} \rVert _2=1,\lVert \boldsymbol{\delta} \rVert _0\leq c_4s}\frac{1}{\sqrt{n}}\lVert \mathbf{X}\boldsymbol{\delta} \rVert _2 \geq \kappa_0$ for some positive constant $c_2,c_3,\kappa_0$
+    \end{itemize}
+\end{theorem}
 
 \newpage
 \bibliographystyle{plainnat}
