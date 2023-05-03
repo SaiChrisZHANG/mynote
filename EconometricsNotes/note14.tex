@@ -2,29 +2,10 @@
 \input{settings.tex}
 
 \begin{document}
-\lecture{14}{Knockoffs}{}{Sai Zhang}{}{}
+\lecture{14}{Regularization Methods in Thresholded Parameter Space}{}{Sai Zhang}{Combining the best of the two, we can use \textbf{Lasso plus Concave} method, with Lasso screening and concave component selecting variables, achieving a coordinated intrinsic two-scale learning.}{The note is built on Prof. \hyperlink{http://faculty.marshall.usc.edu/jinchi-lv/}{Jinchi Lv}'s lectures of the course at USC, DSO 607, High-Dimensional Statistics and Big Data Problems.}
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
 
-\begin{tikzpicture}
-    % text width=  cm
-    \node [terminator, fill=glaucous, text=white] at (0,0) (start) {\textbf{Start}};
-    \node [data, fill=blue!20] at (0,-2) (data) {Provide data};
-    \node [decision, fill=blue!20] at (0,-5) (decision) {Valid data?};
-    \node [process, fill=red!20] at (3.5,-5) (error) {Error};
-    \node [process, fill=green!20] at (0,-8) (success) {Success};
-    \node [terminator, fill=blue!20] at (0,-10) (end) {\textbf{End}};
-    
-   \draw [arrow] (start) -| (error);
-   % \draw [arrow] (in1) -- (pro1);
-   % \draw [arrow] (pro1) -- (dec1);
-   % \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
-   % \draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
-  %  \draw [arrow] (pro2b) |- (pro1);
-   % \draw [arrow] (pro2a) -- (out1);
-   % \draw [arrow] (out1) -- (stop);
-    
-\end{tikzpicture}
 
 %\newpage
 %\bibliographystyle{plainnat}
