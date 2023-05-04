@@ -23,9 +23,13 @@ where
     \item $\lVert p_{\lambda}(\boldsymbol{\beta}) \rVert _1 = \sum^p_{j=1}p_{\lambda}(\lvert \beta_j \rvert)$
 \end{itemize}
 
+Next, define \textbf{robust spark} $\kappa_c$
+\begin{definition}{Robust Spark $\kappa_c$}{robust_spark}
+    The robust spark $\kappa_c$ of the $n\times p$ design matrix $\mathbf{X}$ is defined as the smallest possible positive integer s.t. there exists an $n\times \kappa_c$ submatrix of $\frac{1}{\sqrt{n}}\mathbf{X}$ having a singular value less than a given positive constant $c$ \citep{zheng2014high}
+\end{definition}
 
-%\newpage
-%\bibliographystyle{plainnat}
-%\bibliography{ref.bib}
+\newpage
+\bibliographystyle{plainnat}
+\bibliography{ref.bib}
 
 \end{document}
