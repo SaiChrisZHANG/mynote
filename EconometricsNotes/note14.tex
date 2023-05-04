@@ -24,13 +24,32 @@ where
 \end{itemize}
 
 Next, define \textbf{robust spark} $\kappa_c$
-\begin{definition}{Robust Spark $\kappa_c$}{robust_spark}
+\begin{definition}{Robust spark $\kappa_c$}{robust_spark}
     The robust spark $\kappa_c$ of the $n\times p$ design matrix $\mathbf{X}$ is defined as the smallest possible positive integer s.t. there exists an $n\times \kappa_c$ submatrix of $\frac{1}{\sqrt{n}}\mathbf{X}$ having a singular value less than a given positive constant $c$ \citep{zheng2014high}, and $$\kappa_c\leq n+1$$
 \end{definition}
 Bounding sparse model size can control collinearity and ensure model identifiability and stability, and as $c\rightarrow 0+$, $\kappa_c$ approaches the spark. Robust spark can be some large number diverging with $n$:
 \begin{proposition}{Order of $\kappa_c$}{order_robust_spark}
-    
+    Assume $\log p=o(n)$ and that the rows of the $n\times p$ random design matrix $\mathbf{X}$ are i.i.d. as $\mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$, where $\boldsymbol{\Sigma}$ has smallest eigenvalue bounded from below by some positive constant. Then there exist positive constants $c$ and $\tilde{c}$ s.t. with asymptotic probability one, $\kappa_c \geq \frac{\tilde{c}n}{\log p} $
 \end{proposition}
+
+Next, we define a thresholded parameter space
+\begin{definition}{Thresholded parameter space}{thresholded_param_space}
+    $$
+    \mathcal{B}_{\tau,c} = \left\{ \boldsymbol{\beta}\in\mathbb{R}^p: \lVert \boldsymbol{\beta} \rVert _0 <\frac{\kappa_c}{2}\text{, and for each $j$, $\beta_j=0$ or $\lvert \beta_j \rvert \geq \tau$} \right\}
+    $$
+    where $\boldsymbol{\beta} = \left( \beta_1,\cdots,\beta_p \right)'$. $\tau$ is some positive threshold on parameter magnitude:
+\end{definition}
+Here, $\tau$ is very important:
+\begin{itemize}
+    \item $\tau$ is key to distinguishing between important covariates and noise covariates for the purpose of variable selection 
+    \item $\tau$ typically needs to satisfy $\tau\sqrt{n/\log p}\xrightarrow{n\rightarrow\infty}\infty$
+\end{itemize}
+
+It turns out that the solution to the regularizaiton problem has the (very natural) hard-thresholding property:
+\begin{proposition}{Hard-thresholding property}
+    For the $L_0$-penalty $p_{\lambda}(t) = \lambda\mathbf{1}_{t\neq 0}$, the global minimizer $\hat{\boldsymbol{\beta}} = \left(\hat{\beta}_1,\cdots,\hat{\beta}_p\right)'$ of the regularization problem over $\mathbb{R}^p$ satisfies that each component $\hat{\beta}_j$ is either 0 or has magnitude larger than some positive threshold
+\end{proposition}
+This hard-thresholding property is shared by many other penalties such as SICA penalties. This property guarantees sparcity of the model: weak signals are generally difficult to stand out comparing to noise variables due to impact of high dimensionality
 
 \newpage
 \bibliographystyle{plainnat}
