@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  3 MAY 2023 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  4 MAY 2023 04:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1198,30 +1198,30 @@ LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
  (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 15.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 19.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 19.
 Package rerunfilecheck Info: File `note14.out' has not changed.
 (rerunfilecheck)             Checksum: 765B35A128016B4C61CF14927C5E259D;46.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 15.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 19.
  ) 
 Here is how much of TeX's memory you used:
- 36157 strings out of 492649
- 853203 string characters out of 6129623
- 1052890 words of memory out of 5000000
- 39400 multiletter control sequences out of 15000+600000
- 35218 words of font info for 56 fonts, out of 8000000 for 9000
+ 36197 strings out of 492649
+ 853670 string characters out of 6129623
+ 1053889 words of memory out of 5000000
+ 39421 multiletter control sequences out of 15000+600000
+ 48413 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,6n,136p,1054b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{http://faculty.marshall.usc.edu/jinchi-lv/} has been referenced but does not exist, replaced by a fixed one
 
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf" (1 page, 75562 bytes).
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf" (1 page, 99325 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

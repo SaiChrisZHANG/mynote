@@ -6,7 +6,11 @@
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
 \section{Model Setup}
-Now, consider a generalized linear model (GLM) linking a $p$-dimensional predictor $\mathbf{x}$ to a scalar response $Y$
+Now, consider a generalized linear model (GLM) linking a $p$-dimensional predictor $\mathbf{x}$ to a scalar response $Y$. With canonical link, the conditional distribution of $Y$ given $\mathbf{x}$ has density
+$$
+f(y;\theta,\phi) = \exp\left[ y\theta-b(\theta)+c(y,\phi) \right]
+$$
+where $\theta = \mathbf{x}'\boldsymbol{\beta}$ with $\boldsymbol{\beta}$ a $p-$dimensional regression coefficient vector, $b(\dot)$ and $c(\cdot,\cdot)$ are know functions and $\phi$ is dispersion parameter.
 
 %\newpage
 %\bibliographystyle{plainnat}
