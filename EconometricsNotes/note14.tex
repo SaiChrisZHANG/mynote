@@ -25,8 +25,12 @@ where
 
 Next, define \textbf{robust spark} $\kappa_c$
 \begin{definition}{Robust Spark $\kappa_c$}{robust_spark}
-    The robust spark $\kappa_c$ of the $n\times p$ design matrix $\mathbf{X}$ is defined as the smallest possible positive integer s.t. there exists an $n\times \kappa_c$ submatrix of $\frac{1}{\sqrt{n}}\mathbf{X}$ having a singular value less than a given positive constant $c$ \citep{zheng2014high}
+    The robust spark $\kappa_c$ of the $n\times p$ design matrix $\mathbf{X}$ is defined as the smallest possible positive integer s.t. there exists an $n\times \kappa_c$ submatrix of $\frac{1}{\sqrt{n}}\mathbf{X}$ having a singular value less than a given positive constant $c$ \citep{zheng2014high}, and $$\kappa_c\leq n+1$$
 \end{definition}
+Bounding sparse model size can control collinearity and ensure model identifiability and stability, and as $c\rightarrow 0+$, $\kappa_c$ approaches the spark. Robust spark can be some large number diverging with $n$:
+\begin{proposition}{Order of $\kappa_c$}{order_robust_spark}
+    
+\end{proposition}
 
 \newpage
 \bibliographystyle{plainnat}
