@@ -52,10 +52,10 @@ It turns out that the solution to the regularizaiton problem has the (very natur
 This hard-thresholding property is shared by many other penalties such as SICA penalties. This property guarantees sparcity of the model: weak signals are generally difficult to stand out comparing to noise variables due to impact of high dimensionality
 
 \section{Asymptotic Equivalence of Regularization Methods}
-For a universal $\lambda=c_0\sqrt{\log p /n}$ with $c_0>0$ and $p$ implicitly as $n \vee p$ onsider 2 key events:
-\begin{itemize}
-    \item 
-\end{itemize}
+For a universal $\lambda=c_0\sqrt{\log p /n}$ with $c_0>0$ and $p$ implicitly as $n \vee p$, consider 2 key events:
+\begin{align*}
+    \mathcal{E}&=\left\{ \lVert n^{-1} \mathbf{X}'\boldsymbol{\epsilon} \rVert _{\infty} \leq \lambda/2 \right\} & \mathcal{E}_0 &= \left\{ \lVert n^{-1}\mathbf{X}'_{\alpha_0}\boldsymbol{\epsilon} \rVert _{\infty} \leq c_0 \sqrt{\log n/n}  \right\} 
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
