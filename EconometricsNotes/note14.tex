@@ -60,8 +60,9 @@ where $\boldsymbol{\epsilon}=\mathbf{y}-\mathbb{E}\mathbf{y}$, $\mathbf{X}_{\alp
 
 For this setting, consider the following technical conditions:
 \begin{itemize}
-    \item \textcolor{myblue}{\textbf{Error tail distribution}}: $\Pr (\mathcal{E}^c) = O(p^{-c_1})$ and $\Pr (\mathcal{E}^c_0) = O(n^{-c_1})$ for some positive constant $c_1$ that can be sufficiently large for large enough $c_0$
-    \item \textcolor{myblue}{\textbf{Bounded variance}}: $b(\theta)$ satisfies that $c_2\leq b''(\theta)\leq c_2^{-1}$ in its domain, where $c_2$ is some positive constant
+    \item \myhl[myblue]{\textbf{Error tail distribution}}: $\Pr (\mathcal{E}^c) = O(p^{-c_1})$ and $\Pr (\mathcal{E}^c_0) = O(n^{-c_1})$ for some positive constant $c_1$ that can be sufficiently large for large enough $c_0$
+    \item \myhl[myblue]{\textbf{Bounded variance}}: $b(\theta)$ satisfies that $c_2\leq b''(\theta)\leq c_2^{-1}$ in its domain, where $c_2$ is some positive constant
+    \item \myhl[myblue]{\textbf{Concave penalty function}}: $p_{\lambda}(t)$ is increasing and concave in $t\in [0,\infty)$ with $p_{\lambda}(0)=0$, and is differentiable with $p'_{\lambda}(0+) = c_3\lambda$ for some positive constant $c_3$
 \end{itemize}
 
 we have that the global minimizer exists and satisfies oracle inequalities:
