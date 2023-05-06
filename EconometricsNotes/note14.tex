@@ -81,7 +81,18 @@ Given these 5 conditions, we have that the global minimizer $\hat{\boldsymbol{\b
     \end{itemize}
     where $C$ is some positive constant.
 \end{theorem}
-\paragraph*{How to understand Thm.\ref{thm:oracle_inequal}}: first, these results hold uniformly over the set of all possible global minimizers. 
+\paragraph*{How to understand Thm.\ref{thm:oracle_inequal}} 
+\begin{itemize}
+    \item These results hold uniformly over the set of all possible global minimizers
+    \item $c_1$ in probability bound can be chosen arbitrarily large, affecting \textbf{only} $C$
+    \item $FS\left(\hat{\boldsymbol{\beta}}\right) = o(s)$ since $\lambda = o(\tau)$, while $\lVert\hat{\boldsymbol{\beta}}\rVert _0 = O(\phi_{\max}s)$ where $\phi_{\max}$ is the largest eigenvalue of $\frac{1}{n}\mathbf{X}'\mathbf{X}$
+    \item $\forall q \in[1,2]$, the convergence rates of estimation losses
+    \begin{align*}
+        \lVert \hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0\rVert _q &= O\left\{ s^{1/q} \sqrt{\frac{\log p}{n}} \right\} \\
+        \frac{1}{\sqrt{n}} \lVert \mathbf{X}\left(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0\right)\rVert _2 &= O\left( \sqrt{\frac{s \log p}{n}} \right)
+    \end{align*}
+    are consistent with Lasso.
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
