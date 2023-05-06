@@ -60,14 +60,26 @@ where $\boldsymbol{\epsilon}=\mathbf{y}-\mathbb{E}\mathbf{y}$, $\mathbf{X}_{\alp
 
 For this setting, consider the following technical conditions:
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{Error tail distribution}}: $\Pr (\mathcal{E}^c) = O(p^{-c_1})$ and $\Pr (\mathcal{E}^c_0) = O(n^{-c_1})$ for some positive constant $c_1$ that can be sufficiently large for large enough $c_0$
-    \item \myhl[myblue]{\textbf{Bounded variance}}: $b(\theta)$ satisfies that $c_2\leq b''(\theta)\leq c_2^{-1}$ in its domain, where $c_2$ is some positive constant
-    \item \myhl[myblue]{\textbf{Concave penalty function}}: $p_{\lambda}(t)$ is increasing and concave in $t\in [0,\infty)$ with $p_{\lambda}(0)=0$, and is differentiable with $p'_{\lambda}(0+) = c_3\lambda$ for some positive constant $c_3$
+    \item[C1] \myhl[myblue]{\textbf{Error tail distribution}}: $\Pr (\mathcal{E}^c) = O(p^{-c_1})$ and $\Pr (\mathcal{E}^c_0) = O(n^{-c_1})$ for some positive constant $c_1$ that can be sufficiently large for large enough $c_0$
+    \item[C2] \myhl[myblue]{\textbf{Bounded variance}}: $b(\theta)$ satisfies that $c_2\leq b''(\theta)\leq c_2^{-1}$ in its domain, where $c_2$ is some positive constant
+    \item[C3] \myhl[myblue]{\textbf{Concave penalty function}}: $p_{\lambda}(t)$ is increasing and concave in $t\in [0,\infty)$ with $p_{\lambda}(0)=0$, and is differentiable with $p'_{\lambda}(0+) = c_3\lambda$ for some positive constant $c_3$\footnote{A wide class of penalties, including $L_1$-penalty in Lasso, SCAD, MCP and SICA, satisfy this condition.}
+    \item[C4] \myhl[myblue]{\textbf{Ultra-high dimensionality}}: $\log p=O(n^a)$ for some constant $a\in (0,1)$
+    \item[C5] \myhl[myblue]{\textbf{True parameter vector}}: $s=o(n^{1-a})$ and $\exists c>0$ s.t. the \textbf{robust spark} $\kappa_c > 2s$. Moreover, $\min_{1\leq j\leq s}\lvert \beta_{0,j}\rvert \gg \sqrt{\log p/n}$
 \end{itemize}
 
-we have that the global minimizer exists and satisfies oracle inequalities:
+Given these 5 conditions, we have that the global minimizer $\hat{\boldsymbol{\beta}} = \arg \min_{\boldsymbol{\beta}\in \mathcal{B}_{\tau}}Q_n(\boldsymbol{\beta})$ exists and satisfies oracle inequalities:
 \begin{theorem}{Oracle Inequalities}{oracle_inequal}
-    Assume 
+    Assume that Condition 1-5 hold and $\tau$ is chosen s.t. $\tau < \min_{1\leq j \leq s}\lvert \beta_{0,j} \rvert$ and $\lambda = c_0\sqrt{\log p/n} = o(\tau)$, then the global minimizer exists, and any such global minimizer satisfies that with probability at least $1-O(p^{-c_1})$, it holds simultaneously that 
+    \begin{itemize}
+        \item \myhl[myblue]{\textbf{False sign}}: $$FS(\hat{\boldsymbol{\beta}}) \leq \frac{Cs \lambda^2 \tau^{-2}}{1-C\lambda^2\tau^{-2}}$$
+        \item \myhl[myblue]{\textbf{Estimation losses}}: 
+        \begin{align*}
+            \lVert \hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0\rVert _q &\leq C\lambda s^{1/q} (1-C\lambda^2\tau^{-2})^{-1/q} &\forall q\in [1,2]\\
+            \lVert \hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0\rVert _{\infty} &\leq C\lambda s^{1/2} (1-C\lambda^2\tau^{-2})^{-1/2}
+        \end{align*}
+        \item \myhl[myblue]{\textbf{Prediction loss}}: $$\frac{1}{\sqrt{n}} \lVert \mathbf{X}\left(\hat{\boldsymbol{\beta}} - \boldsymbol{\beta}_0\right)\rVert _2 \leq C\lambda s^{1/2} (1-C\lambda^2\tau^{-2})^{-1/2}  $$
+    \end{itemize}
+    where $C$ is some positive constant.
 \end{theorem}
 
 \newpage
