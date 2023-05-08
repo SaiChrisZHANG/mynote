@@ -106,6 +106,16 @@ We also have a sign consistency result:
     \end{itemize}
 \end{theorem}
 
+\paragraph*{How to understand Thm.\ref{thm:sign_consistency}} Consider a linear model, where
+\begin{align*}
+    \gamma_n^* &= \left\Vert \left( \frac{1}{n}\mathbf{X}'_{\alpha_0}\mathbf{X}_{\alpha_0} \right)^{-1} \right\Vert _{\infty} \leq \sqrt{s} \left\Vert \left( \frac{1}{n}\mathbf{X}'_{\alpha_0}\mathbf{X}_{\alpha_0} \right)^{-1} \right\Vert _2 \leq \frac{\sqrt{s}}{c} & \gamma_n & = \sup_{\alpha \subset \left\{ s+1,\cdots,p \right\},\lvert\alpha\rvert\leq s } \left\Vert \frac{1}{n}\mathbf{X}'_{\alpha_0}\mathbf{X}_{\alpha} \right\Vert _{\infty}
+\end{align*} 
+when all ture covariates are orthogonal to each other, $\gamma_n^*=1$ and  
+$$
+\lVert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0\rVert _{\infty}\leq C \sqrt{\frac{\log n}{n}}
+$$
+within a logarithmic factor $\log n$ or oracle rate.
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
