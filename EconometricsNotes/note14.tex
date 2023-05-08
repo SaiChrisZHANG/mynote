@@ -98,6 +98,11 @@ We also have a sign consistency result:
     Assume the same conditions of Thm.\ref{thm:oracle_inequal}, further assume $\min_{1\leq j \leq s}\lvert \beta_{0,j} \rvert \geq 2\tau $ and $\lambda = c_0\sqrt{\log p/n} = o(s^{-1/2}\tau)$, and $\gamma_n = o\left(\tau \sqrt{\frac{n}{s\log n}}\right)$, then any global minimizer $\hat{\boldsymbol{\beta}}$ defined satisfies that with probability at least $1-O(n^{-c_1})$, it holds simultaneously that 
     \begin{itemize}
         \item \myhl[myblue]{\textbf{Sign consistency}}: $\mathrm{sgn}\left( \hat{\boldsymbol{\beta}} \right)=\mathrm{sgn}\left( \boldsymbol{\beta}_0 \right)$
+        \item \myhl[myblue]{\textbf{Estimation and prediction losses}}: If the penalty function further satisfies $p'_{\lambda}(\tau) = O\left(\frac{\log n}{n}\right)$, then $\forall q\in [1,2]$,
+        \begin{align*}
+            \left\Vert \hat{\boldsymbol{\beta}} -\boldsymbol{\beta}_0\right\Vert _q &\leq Cs^{1/q}\sqrt{\frac{\log n}{n}} & \left\Vert \hat{\boldsymbol{\beta}} -\boldsymbol{\beta}_0\right\Vert _{\infty} &\leq C\gamma_n^*\sqrt{\frac{\log n}{n}} & n^{-1}D\left( \hat{\boldsymbol{\beta}} \right) \leq C\frac{s\log n}{n} 
+        \end{align*}
+        where $\gamma^*_n$ is a constant showing the behavior of $\lVert \left[\frac{1}{n} \mathbf{X}'_{\alpha_0}\mathbf{H}\left(\boldsymbol{\beta}_1,\cdots,\boldsymbol{\beta}_n\right)\mathbf{X}_{\alpha_0} \right]^{-1} \rVert _{\infty}$ in a small neighborhood of $\boldsymbol{\beta}_0$, $D(\hat{\boldsymbol{\beta}})$ is the Kullback-Leibler divergence, and $C$ is some positive constant
     \end{itemize}
 \end{theorem}
 
