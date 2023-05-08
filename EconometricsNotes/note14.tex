@@ -116,13 +116,32 @@ $$
 $$
 within a logarithmic factor $\log n$ or oracle rate. Meanwhile, the penalty function condition $p'_{\lambda}(\tau) = O\left(\frac{\log n}{n}\right)$ can be easily satisfied by concave penalties such as SCAD and SICA, having convergence rates improved with $\log n$ in place of $\log p$.
 
-\subsection{Phase Transition Phenomenon}
+\paragraph{Phase transition phenomenon}
 Combining Thm.\ref{thm:oracle_inequal} and \ref{thm:sign_consistency}, it's shown that
 \begin{itemize}
     \item for \myhl[myred]{\underline{$ p=O(n^a)$}}, Lasso and concave regularization methods are \myhl[myred]{\textbf{asymptotically equivalent}}, having the same convergence rates in the oracle inequalities, with a logarithmic factor of $\log n$
     \item for \myhl[myred]{\underline{$\log p=O(n^a)$}}, concave regularization methods are \myhl[myred]{\textbf{asymptotically equivalent}} and still enjoy the same convergence rates in the oracle inequalities, with a logarithmic factor of $\log n$\footnote{For Lasso, the condition $p'_{\lambda}(\tau) = O\left(\frac{\log n}{n}\right)$ and the choice of $\lambda = c_0\sqrt{\frac{\log p}{n}}$ are \myhl[myred]{\textbf{incompatible}} with each other in this ultra-high dimensional case, and the convergence rates for Lasso \myhl[myred]{(of $\log p$)} are slower than those for concave regularization methods.}.
 \end{itemize}
 A phase diagram on how the performance of regularization methods, in the thresholded parameter space, evolves with dimensionality and penalty function.
+
+Further, we have the following \textbf{\underline{oracle risk inequalities}} of the global minimizer
+\begin{theorem}{Oracle Risk Inequalities}{oracle_risk_inequality}
+    Assume that conditions of Thm.\ref{thm:sign_consistency} hold and \textbf{the fourth moments of errors $\mathbb{E}\epsilon_i^4$ are \myhl[myblue]{uniformly} \myhl[myblue]{bounded}} . Then any global minimizer $\hat{\boldsymbol{\beta}}$ defined satisfies that 
+    \begin{itemize}
+        \item \myhl[myblue]{\textbf{Sign risk}} $$ \mathbb{E}\left[\mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right)\right] = \frac{1}{p_{\lambda}(\tau)}\left[ \left(\left\Vert p_{\lambda}\left(\boldsymbol{\beta}_0\right) \right\Vert _1 + s\lambda^2 \right) O(n^{-c_1})+ O(p^{-c_1/2})\kappa_c \right] $$
+        \item \myhl[myblue]{\textbf{Estimation and prediction risks}}: If the pnnalty function further satisfies $p'_{\lambda}(\tau) = O\left(\sqrt{\frac{\log n}{n}}\right)$, then $\forall q\in[1,2]$
+        \begin{align*}
+            \mathbb{E}\left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert^q_q &\leq Cs\left(\frac{log n}{n}\right)^{q/2} & \mathbb{E}\left\Vert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0 \right\Vert _{\infty} &\leq C\gamma_n^*\sqrt{\frac{\log n}{n}} & \mathbb{E}\left[\frac{1}{n}D\left(\hat{\boldsymbol{\beta}}\right)\right] &\leq Cs\frac{\log n}{n}
+        \end{align*}
+        where $C$ is some positive constant.
+    \end{itemize}
+\end{theorem}
+\paragraph*{How to understand Thm.\ref{thm:oracle_risk_inequality}}
+\begin{itemize}
+    \item $\mathbb{E}\left[\mathrm{FS}\left(\hat{\boldsymbol{\beta}}\right)\right]$ converges to 0 at a polynomial rate of $n$
+    \item Consistent with the risk bounds $O\left(\frac{s\log n}{n}\right)$ of the regularized estimators under the $L_2$-loss in wavelets setting with orthogonal design 
+    \item No additional cost in risk bounds for generalizing to the ultra-high dimensional nonlinear model setting of GLM
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
