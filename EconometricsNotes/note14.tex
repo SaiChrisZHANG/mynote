@@ -95,7 +95,10 @@ Given these 5 conditions, we have that the global minimizer $\hat{\boldsymbol{\b
 \end{itemize}
 We also have a sign consistency result:
 \begin{theorem}{Sign Consistency and Oracle Inequalities}{sign_consistency}
-    Assume the same conditions of Thm.\ref{thm:oracle_inequal}, further assume $\min_{1\leq j \leq s}\lvert \beta_{0,j} \rvert \geq 2\tau $ and $\lambda = c_0\sqrt{\log p/n} = o(\tau)$
+    Assume the same conditions of Thm.\ref{thm:oracle_inequal}, further assume $\min_{1\leq j \leq s}\lvert \beta_{0,j} \rvert \geq 2\tau $ and $\lambda = c_0\sqrt{\log p/n} = o(s^{-1/2}\tau)$, and $\gamma_n = o\left(\tau \sqrt{\frac{n}{s\log n}}\right)$, then any global minimizer $\hat{\boldsymbol{\beta}}$ defined satisfies that with probability at least $1-O(n^{-c_1})$, it holds simultaneously that 
+    \begin{itemize}
+        \item \myhl[myblue]{\textbf{Sign consistency}}: $\mathrm{sgn}\left( \hat{\boldsymbol{\beta}} \right)=\mathrm{sgn}\left( \boldsymbol{\beta}_0 \right)$
+    \end{itemize}
 \end{theorem}
 
 \newpage
