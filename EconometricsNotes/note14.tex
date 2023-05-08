@@ -114,7 +114,14 @@ when all ture covariates are orthogonal to each other, $\gamma_n^*=1$ and
 $$
 \lVert \hat{\boldsymbol{\beta}}-\boldsymbol{\beta}_0\rVert _{\infty}\leq C \sqrt{\frac{\log n}{n}}
 $$
-within a logarithmic factor $\log n$ or oracle rate. Meanwhile, the penalty function condition $p'_{\lambda}(\tau) = O\left(\frac{\log n}{n}\right)$ can be easily satisfied by concave penalties such as SCAD and SICA, having convergence rates improved with $\log n$ in place of $\log p$
+within a logarithmic factor $\log n$ or oracle rate. Meanwhile, the penalty function condition $p'_{\lambda}(\tau) = O\left(\frac{\log n}{n}\right)$ can be easily satisfied by concave penalties such as SCAD and SICA, having convergence rates improved with $\log n$ in place of $\log p$.
+
+\subsection{Phase Transition Phenomenon}
+Combining Thm.\ref{thm:oracle_inequal} and \ref{thm:sign_consistency}, it's shown that
+\begin{itemize}
+    \item for $ p=O(n^a)$, Lasso and concave regularization methods are \myhl[myred]{\textbf{asymptotically equivalent}}, having the same convergence rates in the oracle inequalities, with a logarithmic factor of $\log n$
+    \item for $\log p=O(n^a)$, concave regularization methods are \myhl[myred]{\textbf{asymptotically equivalent}} and still enjoy the same convergence rates in the oracle inequalities, with a logarithmic factor of $\log n$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
