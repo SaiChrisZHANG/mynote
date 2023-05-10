@@ -1,14 +1,46 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Efron et~al.(2004)Efron, Hastie, Johnstone, and
+  Tibshirani]{efron2004least}
+Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani.
+\newblock {Least angle regression}.
+\newblock \emph{The Annals of Statistics}, 32\penalty0 (2):\penalty0 407 --
+  499, 2004.
+\newblock \doi{10.1214/009053604000000067}.
+\newblock URL \url{https://doi.org/10.1214/009053604000000067}.
+
+\bibitem[Fan and Li(2001)]{fan2001variable}
+Jianqing Fan and Runze Li.
+\newblock Variable selection via nonconcave penalized likelihood and its oracle
+  properties.
+\newblock \emph{Journal of the American statistical Association}, 96\penalty0
+  (456):\penalty0 1348--1360, 2001.
+
+\bibitem[Fan and Lv(2011)]{fan2011nonconcave}
+Jianqing Fan and Jinchi Lv.
+\newblock Nonconcave penalized likelihood with np-dimensionality.
+\newblock \emph{IEEE Transactions on Information Theory}, 57\penalty0
+  (8):\penalty0 5467--5484, 2011.
+
+\bibitem[Wu and Lange(2008)]{wu2008coordinate}
+Tong~Tong Wu and Kenneth Lange.
+\newblock Coordinate descent algorithms for lasso penalized regression.
+\newblock \emph{The Annals of Applied Statistics}, pages 224--244, 2008.
+
 \bibitem[Zheng et~al.(2014)Zheng, Fan, and Lv]{zheng2014high}
 Zemin Zheng, Yingying Fan, and Jinchi Lv.
 \newblock High dimensional thresholded regression and shrinkage effect.
 \newblock \emph{Journal of the Royal Statistical Society: Series B: Statistical
   Methodology}, pages 627--649, 2014.
+
+\bibitem[Zou and Li(2008)]{zou2008one}
+Hui Zou and Runze Li.
+\newblock One-step sparse estimates in nonconcave penalized likelihood models.
+\newblock \emph{The Annals of Statistics}, pages 1509--1533, 2008.
 
 \end{thebibliography}

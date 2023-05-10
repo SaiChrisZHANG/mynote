@@ -153,7 +153,15 @@ These properties are quite nice, but what about the computability? Specifically,
     \end{align*}
     if the model is nonlinear. If $\eta_n + \lambda = o(\tau)$ and $\min_{1\leq j\leq s}\lvert \beta_{0,j}\rvert > c_5 \sqrt{s}(\eta_n+\lambda)$ with a sufficiently large positive constant $c_5$, then $\hat{\boldsymbol{\beta}}$ enjoys the same asymptotic properties as for any global minimizer in Thm.\ref{thm:oracle_inequal}, \ref{thm:sign_consistency}, \ref{thm:oracle_risk_inequality} under the same conditions therein.
 \end{theorem}
-With Thm.\ref{thm:asymptotic_computable_sol}, we have that a \myhl[myblue]{\textbf{computable solution}} produced by any algorithm can share the same nice asymptotic properties as for any global minimizer, when the maximum correlation between
+With Thm.\ref{thm:asymptotic_computable_sol}, we have that a \myhl[myblue]{\textbf{computable solution}} produced by any algorithm can share the same nice asymptotic properties as for any global minimizer, when the maximum correlation between the covariates and the residual vector $\mathbf{y}-\boldsymbol{\mu}\left( \mathbf{X}\hat{\boldsymbol{\beta}} \right)$ is a smaller order of the threshold $\tau$, where $\boldsymbol{\mu}(\boldsymbol{\theta}) = \left( b'(\theta_1),\cdots,b'(\theta_n) \right)'$.
+
+\paragraph*{Implementation} Since computable solutions also have the nice asymptotic properties, we can then implement this algorithm. There are several ways to do so 
+\begin{itemize}
+    \item \myhl[myred]{\textbf{Lasso-type methods}}: LARS algorithm \citep{efron2004least}
+    \item \myhl[myred]{\textbf{nonconcave penalized likelihood methods}}: LQA algorithm \citep{fan2001variable} and LLA algorithm \citep{zou2008one}
+    \item \myhl[myred]{\textbf{coordinate optimization}} \citep{wu2008coordinate}
+    \item \myhl[myred]{\textbf{ICA algorithm}}: implementing \textbf{nonconcave penalized likelihood} methods with \textbf{second-roder quadratic approximation} of the likelihood function and the coordination optimization \citep{fan2011nonconcave}
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
