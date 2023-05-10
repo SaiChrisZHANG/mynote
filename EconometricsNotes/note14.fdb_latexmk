@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note14"] 1683723962 "note14.aux" "note14.bbl" "note14" 1683724214
+["bibtex note14"] 1683723962 "note14.aux" "note14.bbl" "note14" 1683724395
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "note14.aux" 1683724214 2438 8ce47fe8ae0c98b0f195f55a5438d24f ""
+  "note14.aux" 1683724395 2438 8ce47fe8ae0c98b0f195f55a5438d24f ""
   "ref.bib" 1683723568 8324 878fb3192b5e800fc91891447b8dc4e0 ""
   (generated)
-  "note14.bbl"
   "note14.blg"
-["pdflatex"] 1683724212 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf" "note14" 1683724214
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.aux" 1683724214 2438 8ce47fe8ae0c98b0f195f55a5438d24f ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.tex" 1683724211 19029 c407bfcc1ae9115c363d1103bb268918 ""
+  "note14.bbl"
+["pdflatex"] 1683724393 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf" "note14" 1683724395
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.aux" 1683724395 2438 8ce47fe8ae0c98b0f195f55a5438d24f ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.tex" 1683724392 19468 c34b6b47356c57482fc153201d1b5cda ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc" 1480098668 6292 5f5eff34c010300454c6de629a3dbaf4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
@@ -324,15 +324,15 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note14.aux" 1683724214 2438 8ce47fe8ae0c98b0f195f55a5438d24f ""
+  "note14.aux" 1683724395 2438 8ce47fe8ae0c98b0f195f55a5438d24f ""
   "note14.bbl" 1683723962 1918 f2b8afce8f5cece63cd32172718cf003 "bibtex note14"
-  "note14.out" 1683724214 196 088c1afcb7c3d53e5fef450b8dce5718 ""
-  "note14.tex" 1683724211 19029 c407bfcc1ae9115c363d1103bb268918 ""
+  "note14.out" 1683724395 196 088c1afcb7c3d53e5fef450b8dce5718 ""
+  "note14.tex" 1683724392 19468 c34b6b47356c57482fc153201d1b5cda ""
   "settings.tex" 1680890376 6761 6578778d86a805e9108d713c4a37cb11 ""
   (generated)
-  "note14.out"
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf"
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.log"
   "note14.pdf"
+  "note14.out"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.log"
   "note14.log"
   "note14.aux"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note14.pdf"
