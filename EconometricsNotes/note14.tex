@@ -146,7 +146,11 @@ Further, we have the following \textbf{\underline{oracle risk inequalities}} of 
 \section{Computability and Implementation}
 These properties are quite nice, but what about the computability? Specifically, what if computable solutions produced by an algorithm are not actually the \textbf{global} minimizer?
 \begin{theorem}{Asymptotic Properties of Computable solutions}{asymptotic_computable_sol}
-    Let $\hat{\boldsymbol{\beta}} =\in \mathcal{B}_{\tau}$ be a computable solution to the minimization problem produced by any algorithm that is the global minimizer when constrained on the subspace given by $\mathrm{supp}\left( \hat{\boldsymbol{\beta}} \right)$ and $\eta_n =\left\Vert \frac{1}{n}\mathbf{X}'\left[\mathbf{y}-\boldsymbol{\mu}\left( \mathbf{X}\hat{\boldsymbol{\beta}} \right)\right] \right\Vert _{\infty}$
+    Let $\hat{\boldsymbol{\beta}} \in \mathcal{B}_{\tau}$ be a computable solution to the minimization problem produced by any algorithm that is the global minimizer when \textbf{constrained on the \myhl[myblue]{subspace} given by} $\mathrm{supp}\left( \hat{\boldsymbol{\beta}} \right)$ and $\eta_n =\left\Vert \frac{1}{n}\mathbf{X}'\left[\mathbf{y}-\boldsymbol{\mu}\left( \mathbf{X}\hat{\boldsymbol{\beta}} \right)\right] \right\Vert _{\infty}$.
+    Assume in addition that $\exists c_4 >0$ s.t. 
+    \begin{align*}
+        \left\Vert \frac{1}{n}\mathbf{X}'_{\alpha}\left[ \boldsymbol{\mu}\left( \mathbf{X}\boldsymbol{\beta} \right)-\boldsymbol{\mu}\left( \mathbf{X}\boldsymbol{\beta}_0 \right)\right] \right\Vert _2 & \geq c_4 \lVert \boldsymbol{\beta}-\boldsymbol{\beta}_0\rVert _2,\forall \boldsymbol{\beta}\in\mathcal{B}_{\tau}
+    \end{align*}
 \end{theorem}
 
 \newpage
