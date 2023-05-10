@@ -149,8 +149,9 @@ These properties are quite nice, but what about the computability? Specifically,
     Let $\hat{\boldsymbol{\beta}} \in \mathcal{B}_{\tau}$ be a computable solution to the minimization problem produced by any algorithm that is the global minimizer when \textbf{constrained on the \myhl[myblue]{subspace} given by} $\mathrm{supp}\left( \hat{\boldsymbol{\beta}} \right)$ and $\eta_n =\left\Vert \frac{1}{n}\mathbf{X}'\left[\mathbf{y}-\boldsymbol{\mu}\left( \mathbf{X}\hat{\boldsymbol{\beta}} \right)\right] \right\Vert _{\infty}$.
     Assume in addition that $\exists c_4 >0$ s.t. 
     \begin{align*}
-        \left\Vert \frac{1}{n}\mathbf{X}'_{\alpha}\left[ \boldsymbol{\mu}\left( \mathbf{X}\boldsymbol{\beta} \right)-\boldsymbol{\mu}\left( \mathbf{X}\boldsymbol{\beta}_0 \right)\right] \right\Vert _2 & \geq c_4 \lVert \boldsymbol{\beta}-\boldsymbol{\beta}_0\rVert _2,\forall \boldsymbol{\beta}\in\mathcal{B}_{\tau}
+        \left\Vert \frac{1}{n}\mathbf{X}'_{\alpha}\left[ \boldsymbol{\mu}\left( \mathbf{X}\boldsymbol{\beta} \right)-\boldsymbol{\mu}\left( \mathbf{X}\boldsymbol{\beta}_0 \right)\right] \right\Vert _2 & \geq c_4 \lVert \boldsymbol{\beta}-\boldsymbol{\beta}_0\rVert _2, & \forall \boldsymbol{\beta}\in\mathcal{B}_{\tau},\alpha = \mathrm{supp}\left( \boldsymbol{\beta} \right) \cup  \mathrm{supp}\left( \boldsymbol{\beta}_0 \right)
     \end{align*}
+    if the model is nonlinear. If $\eta_n + \lambda = o(\tau)$ and $\min_{1\leq j\leq s}\lvert \beta_{0,j}\rvert > c_5 \sqrt{s}(\eta_n+\lambda)$ with a sufficiently large positive constant $c_5$, then $\hat{\boldsymbol{\beta}}$ enjoys the same asymptotic properties as for any global minimizer in Thm.\ref{thm:oracle_inequal}, \ref{thm:sign_consistency}, \ref{thm:oracle_risk_inequality} under the same conditions therein.
 \end{theorem}
 
 \newpage
