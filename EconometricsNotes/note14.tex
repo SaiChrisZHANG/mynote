@@ -160,20 +160,21 @@ With Thm.\ref{thm:asymptotic_computable_sol}, we have that a \myhl[myblue]{\text
     \item \myhl[myred]{\textbf{Lasso-type methods}}: LARS algorithm \citep{efron2004least}
     \item \myhl[myred]{\textbf{nonconcave penalized likelihood methods}}: LQA algorithm \citep{fan2001variable} and LLA algorithm \citep{zou2008one}
     \item \myhl[myred]{\textbf{coordinate optimization}} \citep{wu2008coordinate}
-    \item \myhl[myred]{\textbf{ICA algorithm}}: implementing \textbf{nonconcave penalized likelihood} methods with \textbf{second-roder quadratic approximation} of the likelihood function and the coordination optimization \citep{fan2011nonconcave}.
+\end{itemize}
+
+Another way is \myhl[myred]{\textbf{ICA algorithm}}: implementing \textbf{nonconcave penalized likelihood} methods with \textbf{second-roder quadratic approximation} of the likelihood function and the coordination optimization \citep{fan2011nonconcave}.
+\begin{itemize}
+    \item[-] For each coordinate within each iteration, solve the \underline{\textit{univariate penalized least-squares}} problem with the \textit{\underline{corresponding quadratic approximation}} of the likelihood function, and \textit{\underline{update}} this coordinate only when the global minimizer has magnitude above the given threshold $\tau$ 
+    \item[-] Thresholded parameter space naturally puts a constraint on each component, while also inducing additional \textit{\underline{sparsity}} of regularized estimate, making the algorithm converge faster
+    \item[-] \textbf{\textit{Stability}}
     \begin{itemize}
-        \item[-] For each coordinate within each iteration, solve the \underline{\textit{univariate penalized least-squares}} problem with the \textit{\underline{corresponding quadratic approximation}} of the likelihood function, and \textit{\underline{update}} this coordinate only when the global minimizer has magnitude above the given threshold $\tau$ 
-        \item[-] Thresholded parameter space naturally puts a constraint on each component, while also inducing additional \textit{\underline{sparsity}} of regularized estimate, making the algorithm converge faster
-        \item[-] \textbf{\textit{Stability}}
+        \item[$\star$] Assume $p_{\lambda}(t)$ has \textit{maximum concavity} $$ \rho(p_{\lambda}) = \sup_{0<t_1<t_2<\infty} \left\{ - \frac{p'_{\lambda}(t_2)-p'_{\lambda}(t_1)}{t_2-t_1} < c\cdot c_2 \right\} $$ with constants $c,c_2$
+        \item[$\star$] This ensures that $Q_n(\boldsymbol{\beta})$  is \textit{strictly convex} on a union of cooridnate subspaces $\left\{ \boldsymbol{\beta}\in\mathbb{R}^p: \lVert \boldsymbol{\beta} \rVert _0 < \kappa_c \right\}$, which is key to stability of sparse solution found by any algorithm
+        \item[$\star$] This condition holds for many concave penalties 
         \begin{itemize}
-            \item[$\star$] Assume $p_{\lambda}(t)$ has \textit{maximum concavity} $$ \rho(p_{\lambda}) = \sup_{0<t_1<t_2<\infty} \left\{ - \frac{p'_{\lambda}(t_2)-p'_{\lambda}(t_1)}{t_2-t_1} < c\cdot c_2 \right\} $$ with constants $c,c_2$
-            \item[$\star$] This ensures that $Q_n(\boldsymbol{\beta})$  is \textit{strictly convex} on a union of cooridnate subspaces $\left\{ \boldsymbol{\beta}\in\mathbb{R}^p: \lVert \boldsymbol{\beta} \rVert _0 < \kappa_c \right\}$, which is key to stability of sparse solution found by any algorithm
-            \item[$\star$] This condition holds for many concave penalties 
-            \begin{itemize}
-                \item[$\cdot$] $L_1$-penalty $p_{\lambda}(t)=\lambda t$ has maximum concavity 0
-                \item[$\cdot$] SCAD $p_{\lambda}(t)$ has $\rho(p_{\lambda})=(a-1)^{-1}$ 
-                \item[$\cdot$] SICA $p_{\lambda}(t;a) = \frac{\lambda(a+1)t}{a+t}$ has $2\lambda(a^{-1}+a^{-2})$  
-            \end{itemize}
+            \item[$\cdot$] $L_1$-penalty $p_{\lambda}(t)=\lambda t$ has maximum concavity $$\rho(p_{\lambda})=0$$
+            \item[$\cdot$] SCAD $p_{\lambda}(t)$ has $$\rho(p_{\lambda})=(a-1)^{-1}$$ 
+            \item[$\cdot$] SICA $p_{\lambda}(t;a) = \frac{\lambda(a+1)t}{a+t}$ has $$rho(p_{\lambda})=2\lambda(a^{-1}+a^{-2})$$  
         \end{itemize}
     \end{itemize}
 \end{itemize}
