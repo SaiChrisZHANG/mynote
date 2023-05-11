@@ -9,7 +9,16 @@ Consider a Mutlivariate Linear Regression (MLR) model
 \begin{align*}
     \underset{n\times q}{\mathbf{Y}} = \underset{n\times p}{\mathbf{X}} \cdot \underset{p\times q}{\mathbf{C}}+ \underset{n\times q}{\mathbf{E}}
 \end{align*}
-
+How to apply regularization methods to this model? There are several approaches to consider 
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Shrinkage}}: ridge regression to overcome multicollinearity
+    \item \myhl[myblue]{\textbf{sparsity}}: variable selection in multivariate setting 
+    \item \myhl[myblue]{\textbf{Reduced-rank}}
+    \begin{itemize}
+        \item[-] \textbf{\underline{Dimension reduction}} via reducing rank of $\mathbf{C}$
+        \item[-] $\min \lVert \mathbf{Y}-\mathbf{XC} \rVert^2_F$ s.t. $\mathrm{rank}(\mathbf{C})\leq r$  
+    \end{itemize}
+\end{itemize}
 
 %\newpage
 %\bibliographystyle{plainnat}
