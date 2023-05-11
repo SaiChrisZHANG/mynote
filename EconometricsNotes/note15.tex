@@ -5,6 +5,7 @@
 \lecture{15}{Sparse Orthogonal Factor Regression}{}{Sai Zhang}{Sparcity and dimensionality reduction for Multivariate Linear Regression models.}{The note is built on Prof. \hyperlink{http://faculty.marshall.usc.edu/jinchi-lv/}{Jinchi Lv}'s lectures of the course at USC, DSO 607, High-Dimensional Statistics and Big Data Problems.}
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
+\section{Motivation}
 Consider a Mutlivariate Linear Regression (MLR) model
 \begin{align*}
     \underset{n\times q}{\mathbf{Y}} = \underset{n\times p}{\mathbf{X}} \cdot \underset{p\times q}{\mathbf{C}}+ \underset{n\times q}{\mathbf{E}}
@@ -18,7 +19,51 @@ How to apply regularization methods to this model? There are several approaches 
         \item[-] \textbf{\underline{Dimension reduction}} via reducing rank of $\mathbf{C}$
         \item[-] $\min \lVert \mathbf{Y}-\mathbf{XC} \rVert^2_F$ s.t. $\mathrm{rank}(\mathbf{C})\leq r$  
     \end{itemize}
+    \item \myhl[myblue]{\textbf{Combinations}}
+    \item \myhl[myblue]{\textbf{Low-rank}} plus \myhl[myblue]{\textbf{sparse decomposition}}: robust PCA, latent variable graphical models, covariance estimation 
+    \item \myhl[myblue]{\textbf{Regularized matrix}} or \myhl[myblue]{\textbf{tensor regression}}
 \end{itemize}
+Or, we can introduce a very attractive sparsity structure to achieve simultaneous dimension reduction and variable selection. This structure should be characterized by
+\begin{itemize}
+    \item Having a few \textbf{distinct} channels/pathways relating responses and predictors
+    \item Each of such associations may involve only \textbf{a smaller subset}, but not all of the responses and predictors  
+\end{itemize}
+that is 
+\begin{align*}
+    \mathbf{Y} &= \mathbf{X}\mathbf{C} +\mathbf{E}\\
+    &= \mathbf{X}\cdot \begin{pmatrix}
+        c_{11} & c_{12} & \cdots & c_{1q} \\
+        c_{21} & c_{22} & \cdots & c_{2q} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        c_{p1} & c_{p2} & \cdots & c_{pq} 
+    \end{pmatrix} + \mathbf{E} \\
+    &= \mathbf{X}\cdot \begin{pmatrix}
+        \textcolor{myblue}{0} & \textcolor{myred}{u_{12}} & \cdots & \textcolor{myorange}{u_{1r}} \\
+        \textcolor{myblue}{u_{21}} & \textcolor{myred}{0} & \cdots & \textcolor{myorange}{c_{2r}} \\
+        \textcolor{myblue}{\vdots} & \textcolor{myred}{\vdots} & \ddots & \textcolor{myorange}{\vdots} \\
+        \textcolor{myblue}{u_{p1}} & \textcolor{myred}{u_{p2}} & \cdots & \textcolor{myorange}{u_{pr}} 
+    \end{pmatrix}\cdot \begin{pmatrix}
+        \textcolor{myblue}{d_1} & & & \\
+         & \textcolor{myred}{d_2} & & \\
+         & & \ddots & \\
+         & & & \textcolor{myorange}{0}
+    \end{pmatrix} \cdot \begin{pmatrix}
+        \textcolor{myblue}{0} & \textcolor{myblue}{0} & \cdots & \textcolor{myblue}{v_{q1}} \\
+        \textcolor{myred}{v_{12}} & \textcolor{myred}{v_{22}} & \cdots & \textcolor{myred}{0} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \textcolor{myorange}{v_{1r}} & \textcolor{myorange}{v_{2r}} & \cdots & \textcolor{myorange}{v_{qr}} 
+    \end{pmatrix}
+      + \mathbf{E}
+\end{align*}
+This way, we can have 
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Sparsity}}: selection of both \textbf{\underline{latent}} and \textbf{\underline{original}} variables
+    \item \myhl[myblue]{\textbf{Low-rank SVD}}: different subsets of responses allowed to be associated with different subsets of predictors
+\end{itemize}
+Consider an example:
+\begin{example}{Dimension Reduction and Variable Selection via Sparse SVD}{sparse_svd}
+    
+\end{example}
 
 %\newpage
 %\bibliographystyle{plainnat}
