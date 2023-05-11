@@ -2,10 +2,13 @@
 \input{settings.tex}
 
 \begin{document}
-\lecture{15}{Sparse Orthogonal Factor Regression}{}{Sai Zhang}{}{}
+\lecture{15}{Sparse Orthogonal Factor Regression}{}{Sai Zhang}{Sparcity and dimensionality reduction for Multivariate Linear Regression models.}{The note is built on Prof. \hyperlink{http://faculty.marshall.usc.edu/jinchi-lv/}{Jinchi Lv}'s lectures of the course at USC, DSO 607, High-Dimensional Statistics and Big Data Problems.}
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
 Consider a Mutlivariate Linear Regression (MLR) model
+\begin{align*}
+    \underbrace{\mathbf{Y}}_{n\times q} = \underbrace{\mathbf{X}}_{n\times p} \cdot \underbrace{\mathbf{C}}_{p\times q} + \underbrace{\textbf{E}_{n\times q}}
+\end{align*}
 
 
 %\newpage
