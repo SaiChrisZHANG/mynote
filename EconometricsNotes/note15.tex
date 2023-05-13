@@ -87,8 +87,9 @@ How consider
 \end{align}
 where 
 \begin{itemize}
-    \item $\rho_a(\cdot),\rho_b(\cdot)$ are penalty functions with regularization parameters $\lambda_d,\lambda_a,\lambda_b\geq 0$
-    \item $\lVert \cdot \rVert _F$ is the nuclear norm, defined as the \textbf{sum} of its singular values $\lVert \mathbf{A}\rVert _F =\sum_i\sigma_i(\mathbf{A})$
+    \item $\rho_a(\cdot),\rho_b(\cdot)$ are penalty functions with regularization parameters $\lambda_d,\lambda_a,\lambda_b\geq 0$. These sparsity penalizations on $\mathbf{UD}$ and $\mathbf{VD}$ can be thought as \textbf{importance weighting}
+    \item $\lVert \cdot \rVert _F$ is the nuclear norm, defined as the \textbf{sum} of its singular values $\lVert \mathbf{A}\rVert _F =\sum_i\sigma_i(\mathbf{A})$. It encourages sparsity among singular values and achieve \textbf{\underline{rank reduction}}
+    \item 
 \end{itemize}
 
 %\newpage
