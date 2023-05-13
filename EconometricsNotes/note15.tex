@@ -68,6 +68,13 @@ Consider an example:
     $$
     where $\mathbf{u}_1,\mathbf{u}_2,\mathbf{u}_3$ are all $p\times 1$, $\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3$ are all $q\times 1$, $d_1,d_2,d_3$ are all scalars. Hence, there are only $3\times (1000+100+1) = 3303$ paramaters to estimate. If futher assume sparcity, the dimension would be even lower.
 \end{example}
+Now let's develop a scalable procedure for this idea.
+
+\section{Sparse Orthogonal Factor Regression}
+Consider the sigular value decomposition of $\mathbf{C}$
+$$
+\mathbf{C} = \mathbf{UDV}'=\sum^r_{k=1}d_k\mathbf{u}_k\mathbf{v}_k'
+$$
 
 %\newpage
 %\bibliographystyle{plainnat}
