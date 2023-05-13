@@ -75,7 +75,21 @@ Consider the sigular value decomposition of $\mathbf{C}$
 $$
 \mathbf{C} = \mathbf{UDV}'=\sum^r_{k=1}d_k\mathbf{u}_k\mathbf{v}_k'
 $$
-where $\mathbf{U}$ and $\mathbf{V}$ are both \myhl[myblue]{\textbf{orthonormal}}: $\mathbf{UU}' = \mathbf{VV}'=\mathbf{I}$.
+where $\mathbf{U}$ and $\mathbf{V}$ are both \myhl[myblue]{\textbf{orthonormal}}: $\mathbf{UU}' = \mathbf{VV}'=\mathbf{I}$. Then we can achieve dimension reduction via \textbf{low-dimensional latent model} $$ \tilde{\mathbf{Y}} = \tilde{\mathbf{X}}\mathbf{D}+\tilde{\mathbf{E}} $$ where 
+\begin{itemize}
+    \item $\tilde{\mathbf{Y}} = \mathbf{YV}$: $\mathbf{V}$ sparsity leads to \textbf{\underline{response}} variable selection
+    \item $\tilde{\mathbf{X}} = \mathbf{XU}$: $\mathbf{U}$ sparsity leads to \textbf{\underline{predictor}} variable selection
+\end{itemize}
+
+How consider 
+\begin{align}
+    \left( \hat{\mathbf{D}},\hat{\mathbf{U}},\hat{\mathbf{V}} \right) &= \arg\min_{\mathbf{D,U,V}}\left\{ \frac{1}{2}\left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{UD}) + \lambda_b \rho_b (\mathbf{VD})\right\} & \text{s.t. } \mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m 
+\end{align}
+where 
+\begin{itemize}
+    \item $\rho_a(\cdot),\rho_b(\cdot)$ are penalty functions with regularization parameters $\lambda_d,\lambda_a,\lambda_b\geq 0$
+    \item $\lVert \cdot \rVert _F$ is the nuclear norm, defined as the \textbf{sum} of its singular values $\lVert \mathbf{A}\rVert _F =\sum_i\sigma_i(\mathbf{A})$
+\end{itemize}
 
 %\newpage
 %\bibliographystyle{plainnat}
