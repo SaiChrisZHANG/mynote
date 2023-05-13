@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  13 MAY 2023 08:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  13 MAY 2023 08:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1205,29 +1205,29 @@ LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
-(Font)              scaled to size 10.0pt on input line 83.
+(Font)              scaled to size 10.0pt on input line 84.
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
  (/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note15.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
 Package rerunfilecheck Info: File `note15.out' has not changed.
 (rerunfilecheck)             Checksum: 7AAB6228D5FB0CAE65B59E5ECE945915;115.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
  ) 
 Here is how much of TeX's memory you used:
- 36309 strings out of 492649
- 856285 string characters out of 6129623
+ 36310 strings out of 492649
+ 856301 string characters out of 6129623
  1067925 words of memory out of 5000000
- 39529 multiletter control sequences out of 15000+600000
+ 39530 multiletter control sequences out of 15000+600000
  43768 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,18n,136p,1054b,1216s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{http://faculty.marshall.usc.edu/jinchi-lv/} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note15.pdf" (2 pages, 116714 bytes).
+Output written on "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note15.pdf" (2 pages, 117071 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
