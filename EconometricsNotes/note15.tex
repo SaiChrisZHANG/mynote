@@ -93,21 +93,22 @@ where
 \end{itemize}
 
 If we further enrich this model by introducting an \myhl[myblue]{{adaptive weighting $\mathbf{W}$ matrices}}
-\begin{align}
-    \left( \hat{\boldsymbol{\Theta}},\hat{\boldsymbol{\Omega}} \right) &= \arg\min_{\mathbf{D,U,V}}\left\{ \frac{1}{2}\left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{UD}) + \lambda_b \rho_b (\mathbf{VD})\right\} & \text{s.t. } \mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m 
-\end{align}
+\begin{align*}
+    \left( \hat{\boldsymbol{\Theta}},\hat{\boldsymbol{\Omega}} \right) &= \arg\min_{\boldsymbol{\Theta,\Omega}}\left\{ \frac{1}{2}\left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{W}_d\circ \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{W}_a\circ\mathbf{A}) + \lambda_b \rho_b (\mathbf{W}_b\circ\mathbf{B})\right\}
+\end{align*}
+s.t. $\mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m$, $\mathbf{UD}=\mathbf{A}$, $\mathbf{VD}=\mathbf{B}$. But why? Singular values and singular vectors of \myhl[myblue]{\textbf{larger magnitude}} should be \myhl[myblue]{\textbf{less penalized}} to reduce bias and improve efficiency.
 
 
 Two applications are
 \begin{itemize}
     \item Biclustering with sparse SVD 
-    \begin{align}
+    \begin{align*}
         \left( \hat{\mathbf{D}},\hat{\mathbf{U}},\hat{\mathbf{V}} \right) &= \arg\min_{\mathbf{D,U,V}}\left\{ \frac{1}{2}\left\Vert \mathbf{X-UDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{UD}) + \lambda_b \rho_b (\mathbf{VD})\right\} & \text{s.t. } \mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m 
-    \end{align}
+    \end{align*}
     \item Sparse PCA (sparsity in loadings of principla components)
-    \begin{align}
+    \begin{align*}
         \left( \hat{\mathbf{A}},\hat{\mathbf{V}} \right) &= \arg\min_{\mathbf{A,V}}\left\{ \frac{1}{2}\left\Vert \mathbf{X-XAV}' \right\Vert _F^2  + \lambda_a \rho_a (\mathbf{A}) \right\} & \text{s.t. } \mathbf{V'V}=\mathbf{I}_m 
-    \end{align}
+    \end{align*}
 \end{itemize}
 
 %\newpage
