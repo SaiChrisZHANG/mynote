@@ -92,7 +92,10 @@ where
     \item The orthgonality on $\mathbf{U,V}$ allow a flexible form of sparsity-inducing penalties
 \end{itemize}
 
-If we further enrich this model by introducting an adeptive weighting $\mathbf{W}$ matrices
+If we further enrich this model by introducting an \myhl[myblue]{{adaptive weighting $\mathbf{W}$ matrices}}
+\begin{align}
+    \left( \hat{\boldsymbol{\Theta}},\hat{\boldsymbol{\Omega}} \right) &= \arg\min_{\mathbf{D,U,V}}\left\{ \frac{1}{2}\left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{UD}) + \lambda_b \rho_b (\mathbf{VD})\right\} & \text{s.t. } \mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m 
+\end{align}
 
 
 Two applications are
