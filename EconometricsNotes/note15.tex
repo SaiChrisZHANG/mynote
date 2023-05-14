@@ -92,6 +92,20 @@ where
     \item The orthgonality on $\mathbf{U,V}$ allow a flexible form of sparsity-inducing penalties
 \end{itemize}
 
+
+
+Two applications are
+\begin{itemize}
+    \item Biclustering with sparse SVD 
+    \begin{align}
+        \left( \hat{\mathbf{D}},\hat{\mathbf{U}},\hat{\mathbf{V}} \right) &= \arg\min_{\mathbf{D,U,V}}\left\{ \frac{1}{2}\left\Vert \mathbf{X-UDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{UD}) + \lambda_b \rho_b (\mathbf{VD})\right\} & \text{s.t. } \mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m 
+    \end{align}
+    \item Sparse PCA (sparsity in loadings of principla components)
+    \begin{align}
+        \left( \hat{\mathbf{A}},\hat{\mathbf{V}} \right) &= \arg\min_{\mathbf{A,V}}\left\{ \frac{1}{2}\left\Vert \mathbf{X-XAV}' \right\Vert _F^2  + \lambda_a \rho_a (\mathbf{A}) \right\} & \text{s.t. } \mathbf{V'V}=\mathbf{I}_m 
+    \end{align}
+\end{itemize}
+
 %\newpage
 %\bibliographystyle{plainnat}
 %\bibliography{ref.bib}
