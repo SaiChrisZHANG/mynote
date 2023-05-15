@@ -139,7 +139,8 @@ The robust spark $\kappa_c$ here can be at least of order $O\left( \frac{n}{\log
 \begin{itemize}
     \item \myhl[myblue]{\textbf{Parameter space}} and \myhl[myblue]{\textbf{constrained eigenvalue}} are essential for investigating computable solution to non-convex SOFAR optimization problem 
     \item Gaussianity of \myhl[myblue]{error term} can be relaxed 
-    \item \myhl[myblue]{\textbf{Penalty functions}} can be many kinds of \underline{sparsity-inducing} penalties, including entrywise $L_1$-norm and row-wise $(2,1)$-norm\footnote{$(2,1)$-norm is defined as the summation of absolute values of all components of a matrix.}
+    \item \myhl[myblue]{\textbf{Penalty functions}} can be many kinds of \underline{sparsity-inducing} penalties, including entrywise $L_1$-norm\footnote{Entrywise $L_1$-norm encourages sparsity among predictor/response effects specific to each rank-1 SVD layer} and row-wise $(2,1)$-norm\footnote{$(2,1)$-norm is defined as the summation of absolute values of all components of a matrix. It promotes predictor/response-wise sparsity \textbf{regardless} of specific layer}
+    \item \myhl[myblue]{\textbf{Relative spectral gap}} rules out non-identifiable case where some non-zero singular values are tied with each other and associated singular vectors in matrices $\mathbf{U}^*,\mathbf{V}^*$ are identifiable only up to some \textbf{\underline{orthogonal transformation}}
 \end{itemize}
 
 %\newpage
