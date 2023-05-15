@@ -131,7 +131,15 @@ The robust spark $\kappa_c$ here can be at least of order $O\left( \frac{n}{\log
         \max_{\lVert \mathbf{u} \rVert _0 <\frac{\kappa_{c_2}}{2}, \lVert \mathbf{u}\rVert _2=1}\lVert \mathbf{Xu}\rVert ^2_2 &\leq c_3 n, & \max_{1\leq j\leq r}\lVert \mathbf{Xu}^*_j\rVert ^2_2 &\leq c_3 n
     \end{align*}
     where $\mathbf{u}^*_j$ is the \textbf{\underline{left singular vector}} of $\mathbf{C}^*$ corresponding to singular value $d^*_j$
-    \item \myhl[myblue]{\textbf{Error term}}: The error term $\mathbf{E}\in\mathbb{R}^{n\times q}\sim \mathcal{N}(\mathbf{0},\mathbf{I}\otimes \boldsymbol{\Sigma} )$
+    \item \myhl[myblue]{\textbf{Error term}}: The error term $\mathbf{E}\in\mathbb{R}^{n\times q}\sim \mathcal{N}(\mathbf{0},\mathbf{I}\otimes \boldsymbol{\Sigma} )$ with the maximum eigenvalue $\alpha_{\max}$ of $\boldsymbol{\Sigma}$ bounded from above and diagonal entries of $\boldsymbol{\Sigma}$ being $\sigma^2_j$ 
+    \item \myhl[myblue]{\textbf{Penalty functions}}: For matrices $\mathbf{M}$ and $\mathbf{M}^*$ of the same size, the penalty functions $\rho_h$ with $h\in \left\{a,b\right\}$ satisfies $$ \lvert \rho_h(\mathbf{M})-\rho_h(\mathbf{M}^*)\rvert \leq \lVert\mathbf{M}-\mathbf{M}^* \rVert _1 $$
+    \item \myhl[myblue]{\textbf{Relative spectral gap}}: The nonzero singular values of $\mathbf{C}^*$ satisfy that $$ {d^*_{j-1}}^2-{d^*_{j}}^2\geq \sqrt{\delta}{d^*_{j-1}}^2,\ \ 2\leq j\leq r $$ with a constant $\delta >0$, both $r$ and $\sum^r_{j=1}\left( \frac{d^*_1}{d^*_j}\right)^2$ can diverge as $n\rightarrow \infty$
+\end{itemize}
+\paragraph{How to understand the 5 conditions?}
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Parameter space}} and \myhl[myblue]{\textbf{constrained eigenvalue}} are essential for investigating computable solution to non-convex SOFAR optimization problem 
+    \item Gaussianity of \myhl[myblue]{error term} can be relaxed 
+    \item \myhl[myblue]{\textbf{Penalty functions}} can be many kinds of \underline{sparsity-inducing} penalties, including entrywise $L_1$-norm and row-wise $(2,1)$-norm\footnote{$(2,1)$-norm is defined as the summation of absolute values of all components of a matrix.}
 \end{itemize}
 
 %\newpage
