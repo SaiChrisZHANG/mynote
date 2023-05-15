@@ -120,10 +120,16 @@ The robust spark $\kappa_c$ here can be at least of order $O\left( \frac{n}{\log
 \begin{itemize}
     \item \myhl[myblue]{\textbf{Parameter space}}: True parameters $(\mathbf{C}^*,\mathbf{D}^*,\mathbf{A}^*,\mathbf{B}^*)$ lie in $\mathcal{C}\times \mathcal{D}\times \mathcal{A}\times \mathcal{B}$, where 
     \begin{itemize}
-        \item $\mathcal{C} = \left\{ \mathbf{C}\in \mathbb{R}^{p\times q}: \lVert \mathbf{C} \rVert _0<\kappa_{c_2}/2 \right\}$
+        \item $\mathcal{C} = \left\{ \mathbf{C}\in \mathbb{R}^{p\times q}: \lVert \mathbf{C} \rVert _0<\kappa_{c_2}/2 \right\}$, with $\kappa_{c_2}$ being the robust spark of $\mathbf{X}$
         \item $\mathcal{D} = \left\{ \mathbf{D} = \mathrm{diag}\left\{d_j\right\}\in \mathbb{R}^{q\times q}: d_j=0 \text{ or }\lvert d_j \rvert \geq \tau \right\}$
-        \item $\mathcal{A}$
+        \item $\mathcal{A} = \left\{ \mathbf{A}=\left\{a_{ij}\right\}\in\mathbb{R}^{p\times q}:a_{ij}=0\text{ or }\lvert a_{ij} \rvert \geq \tau  \right\}$
+        \item $\mathcal{B} = \left\{ \mathbf{B}=\left\{b_{ij}\right\}\in\mathbb{R}^{p\times q}:b_{ij}=0\text{ or }\lvert b_{ij} \rvert \geq \tau  \right\}$
     \end{itemize}
+    $\tau >0$ asymptotically vanishing.
+    \item \myhl[myblue]{\textbf{Constrained eigenvalue}}: It holds that for some constant $c_3 >0$
+    \begin{align*}
+        \max_{\lVert \mathbf{u} \rVert _0 <\frac{\kappa_{c_2}}{2}, \lVert \mathbf{u}\rVert _2=1}\lVert \mathbf{Xu}\rVert ^2_2 &\leq c_3 n, & \max_{1\leq j\leq r}\lVert \mathbf{Xu}^*_j\rVert ^2_2 &\leq c_3 n
+    \end{align*}
 \end{itemize}
 
 %\newpage
