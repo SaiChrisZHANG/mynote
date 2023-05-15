@@ -116,7 +116,15 @@ First, define the robust spark for the regularity conditions
 \begin{definition}{The robust spark $\kappa_c$}{robust_spark}
     The robust spark $\kappa_c$ of the $n\times p$ design matrix $\mathbf{X}$ is defined as the smallest possible positive integer such that there exists an $n\times \kappa_c$ submatrix of $\frac{1}{\sqrt{n}}\mathbf{X}$ having a \myhl[myred]{\textbf{singular value}} \textbf{less than} a given positive constant $c$
 \end{definition}
-The robust spark $\kappa_c$ here can be at least of order $O\left( \frac{n}{\log p} \right)$ with large probability for Gaussian design with dependency.
+The robust spark $\kappa_c$ here can be at least of order $O\left( \frac{n}{\log p} \right)$ with large probability for Gaussian design with dependency. With this definition, we characterize the following 5 conditions
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Parameter space}}: True parameters $(\mathbf{C}^*,\mathbf{D}^*,\mathbf{A}^*,\mathbf{B}^*)$ lie in $\mathcal{C}\times \mathcal{D}\times \mathcal{A}\times \mathcal{B}$, where 
+    \begin{itemize}
+        \item $\mathcal{C} = \left\{ \mathbf{C}\in \mathbb{R}^{p\times q}: \lVert \mathbf{C} \rVert _0<\kappa_{c_2}/2 \right\}$
+        \item $\mathcal{D} = \left\{ \mathbf{D} = \mathrm{diag}\left\{d_j\right\}\in \mathbb{R}^{q\times q}: d_j=0 \text{ or }\lvert d_j \rvert \geq \tau \right\}$
+        \item $\mathcal{A}$
+    \end{itemize}
+\end{itemize}
 
 %\newpage
 %\bibliographystyle{plainnat}
