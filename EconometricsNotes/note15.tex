@@ -148,8 +148,17 @@ Non-convexity of SOFAR objective function poses important algorithmic and theore
 
 \paragraph*{Step 1} minimize \myhl[myblue]{\textbf{$L_1$-penalized squared loss}} for multivariate regression to obtain an initial estimator
 \begin{theorem}{Error Bounds for the Initial Estimator}{error_bound_step1}
-    
+    Under some regularity conditions, with large probability the initial estimator satisfies the following error bounds simultaneously:
+    \begin{align*}
+        \left\Vert \tilde{\mathbf{C}}-\mathbf{C}^* \right\Vert _F\leq R_n &\equiv c\sqrt{\frac{s \log (pq)}{n}} & \text{(A)}\\
+        \left\Vert \tilde{\mathbf{D}}-\mathbf{D}^* \right\Vert _F &\leq c\sqrt{\frac{s \log (pq)}{n}} &\text{(B)}\\
+        \left\Vert \tilde{\mathbf{A}}-\mathbf{A}^* \right\Vert _F + \left\Vert \tilde{\mathbf{B}}-\mathbf{B}^* \right\Vert _F &\leq c\eta_n \sqrt{\frac{s \log (pq)}{n}} & \text{(C)}
+    \end{align*}
+    where $c= \left\Vert \mathbf{C}^* \right\Vert _0$ and $\eta_n = 1+ \sqrt{\frac{\sum^r_{j=1}(d_1^*/d_j^*)^2}{\delta}} $
 \end{theorem}
+\begin{itemize}
+    \item When $q=1$, bound (A) is consistent with the oracle inequality for Lasso.
+\end{itemize}
 
 \begin{itemize}
     \item \underline{\textbf{Step 1}}: 
