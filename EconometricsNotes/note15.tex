@@ -156,15 +156,39 @@ Non-convexity of SOFAR objective function poses important algorithmic and theore
     \end{align*}
     where $c= \left\Vert \mathbf{C}^* \right\Vert _0$ and $\eta_n = 1+ \sqrt{\frac{\sum^r_{j=1}(d_1^*/d_j^*)^2}{\delta}} $
 \end{theorem}
-\begin{itemize}
-    \item When $q=1$, bound (A) is consistent with the oracle inequality for Lasso.
-\end{itemize}
+When $q=1$, bound (A) is consistent with the oracle inequality for Lasso. In this step, finer sparse SVD structure of coefficient matrix $\mathbf{C}^*$ is completely ignored, so intuitively, the second step should be able to improve error bounds.
 
+\paragraph*{Step 2}  minimize SOFAR objective function in an \myhl[myblue]{\textbf{asymptotically shrinking neighborhood}} of initial estimator
+\begin{theorem}{Nonasymptotic Error Bounds for SOFAR Estimator}{error_bound_step2}
+    Under some regularity conditions, with large probability the SOFAR estimator satisfies the following error bounds simultaneously:
+    \begin{align*}
+        \left\Vert \tilde{\mathbf{C}}-\mathbf{C}^* \right\Vert _F &\leq c\sqrt{\min\left\{s,(r+s_a+s_b)\eta^2_n\right\}\cdot \frac{ \log (pq)}{n}} & \text{(a)}\\
+        \left\Vert \tilde{\mathbf{D}}-\mathbf{D}^* \right\Vert _F + \left\Vert \tilde{\mathbf{A}}-\mathbf{A}^* \right\Vert _F + \left\Vert \tilde{\mathbf{B}}-\mathbf{B}^* \right\Vert _F &\leq c\eta_n\sqrt{ \min\left\{s,(r+s_a+s_b)\eta^2_n\right\} \cdot \frac{\log (pq)}{n}} &\text{(b)}
+    \end{align*}
+    and 
+    \begin{align*}
+        \left\Vert \tilde{\mathbf{D}}-\mathbf{D}^* \right\Vert _0 + \left\Vert \tilde{\mathbf{A}}-\mathbf{A}^* \right\Vert _0 + \left\Vert \tilde{\mathbf{B}}-\mathbf{B}^* \right\Vert _0 &\leq c (r+s_a+s_b) & \text{(c)}\\
+        \left\Vert \tilde{\mathbf{D}}-\mathbf{D}^* \right\Vert _1 + \left\Vert \tilde{\mathbf{A}}-\mathbf{A}^* \right\Vert _1 + \left\Vert \tilde{\mathbf{B}}-\mathbf{B}^* \right\Vert _1 &\leq c(r+s_a+s_b) \eta_n^2\lambda_{\max} & \text{(d)}\\
+        \frac{1}{n} \left\Vert \mathbf{X}\left(\hat{\mathbf{C}}-\mathbf{C}^*\right) \right\Vert ^2_F & \leq c(r+s_a+s_b)\eta_n^2\lambda_{\max}^2 & \text{(e)}
+    \end{align*}
+    where $r=\left\Vert \mathbf{D}^* \right\Vert _0$, $s_a = \left\Vert \mathbf{A}^* \right\Vert _0$, $s_b=\left\Vert \mathbf{B}^* \right\Vert _0$ and still $c= \left\Vert \mathbf{C}^* \right\Vert _0$ and $\eta_n = 1+ \sqrt{\frac{\sum^r_{j=1}(d_1^*/d_j^*)^2}{\delta}} $
+\end{theorem}
+here 
 \begin{itemize}
-    \item \underline{\textbf{Step 1}}: 
-    \item \underline{\textbf{Step 2}}: minimize SOFAR objective function in an \myhl[myblue]{\textbf{asymptotically shrinking neighborhood}} of initial estimator
+    \item Bound (d) and (e) are the minimum of 2 rates
+    \item $s$ (the sparsity of matrix $\mathbf{C}^*$) comes from the first step of Lasso estimation, $r+s_a+s_b$ (total sparsity of $\mathbf{D}^*,\mathbf{A}^*,\mathbf{B}^*$) comes from the second step of SOFAR refinement
+    \item Under Frobenius norm, $s>(r+s_a +s_b)\eta_n^2$ gives that the two-step procedure enhances error rates
 \end{itemize}
-
+also,
+\begin{itemize}
+    \item In the case of univariate response with $q=1$, $\eta_n=1+\delta,r=1,s_a=s,s_b=1$, the upper bounds are then reduced to those for high-dimensional univariate response regressions
+    \item In the case of rank-one $r=1$, $\eta_n = 1+\frac{1}{\sqrt{\delta}}$ and $s=s_as_b$, which leads to
+    \begin{itemize}
+        \item[-] SOFAR bounds: $c\sqrt{\frac{(s_a+s_b)\log(pq)}{n}}$, $c\sqrt{\frac{(s_a+s_b)\log(pq)}{n}}$, $c(s_a+s_b)$, $c(s_a+s_b)\sqrt{\frac{\log(pq)}{n}}$ and $\frac{c(s_a+s_b)\log(pq)}{n}$
+        \item[-] Lasso bound (step 1): $c\sqrt{\frac{s_as_b\log(pq)}{n}}$
+    \end{itemize}
+    SOFAR estimator have much improved rates of covergence even in this case.
+\end{itemize}
 
 
 %\newpage
