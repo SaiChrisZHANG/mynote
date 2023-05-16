@@ -145,10 +145,18 @@ The robust spark $\kappa_c$ here can be at least of order $O\left( \frac{n}{\log
 
 \section{Estimation: Convexity-Assisted Nonconvex Optimization}
 Non-convexity of SOFAR objective function poses important algorithmic and theoretical challenges, hence consider a \myhl[myblue]{\textbf{two-step}} approach exploiting the framework of \underline{\textbf{convexity-assisted nonconvex optimization}} (CANO) to obtain SOFAR estimator:
+
+\paragraph*{Step 1} minimize \myhl[myblue]{\textbf{$L_1$-penalized squared loss}} for multivariate regression to obtain an initial estimator
+\begin{theorem}{Error Bounds for the Initial Estimator}{error_bound_step1}
+    
+\end{theorem}
+
 \begin{itemize}
-    \item \underline{\textbf{Step 1}}: minimize \myhl[myblue]{\textbf{$L_1$-penalized squared loss}} for multivariate regression to obtain an initial estimator
-    \item \underline{\textbf{Step 2}}: minimize SOFAR objective function in an 
+    \item \underline{\textbf{Step 1}}: 
+    \item \underline{\textbf{Step 2}}: minimize SOFAR objective function in an \myhl[myblue]{\textbf{asymptotically shrinking neighborhood}} of initial estimator
 \end{itemize}
+
+
 
 %\newpage
 %\bibliographystyle{plainnat}
