@@ -193,7 +193,11 @@ also,
 \section{Implementation with ALM-BCD}
 Now consider estimation implementation. The idea is to use the \myhl[myblue]{\textbf{augmented Lagrangian method (ALM)}} coupled with \myhl[myblue]{\textbf{block coordinate descent (BCD)}}. The implementation procedure uses variable splitting to separate \underline{\textbf{orthogonality constraints}} and \underline{\textbf{sparsity-inducing penalties}} into different subproblems, enabling efficient optimization in a BCD fashion.
 
-Consider $\boldsymbol{\Theta} = (\mathbf{D,U,V}),\boldsymbol{\Omega}=(\mathbf{A,B})$
+Consider $\boldsymbol{\Theta} = (\mathbf{D,U,V}),\boldsymbol{\Omega}=(\mathbf{A,B})$ in the optimization problem
+$$
+\min_{\boldsymbol{\Theta,\Omega}}\left\{ \frac{1}{2}\left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{A}) + \lambda_b \rho_b (\mathbf{B})\right\}
+$$
+s.t. $\mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m$, $\mathbf{UD}=\mathbf{A}$, $\mathbf{VD}=\mathbf{B}$
 
 
 %\newpage
