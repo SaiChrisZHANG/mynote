@@ -202,7 +202,24 @@ s.t. $\mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m$, $\mathbf{UD}=\mathbf{A}$, $\mathb
     \mathcal{L}_{\mu}\left( \boldsymbol{\Theta,\Omega,\Gamma} \right) =& \frac{1}{2} \left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{A}) + \lambda_b \rho_b (\mathbf{B}) \\
     & + \left< \Gamma_a \mathbf{UD-A} \right> + \left< \Gamma_b \mathbf{VD-B} \right> + \frac{\mu}{2}\left\Vert \mathbf{UD-A} \right\Vert^2_F + \frac{\mu}{2}\left\Vert \mathbf{VD-B} \right\Vert^2_F 
 \end{align*}
-where $\boldsymbol{\Gamma} = \left( \boldsymbol{\Gamma}_a,\boldsymbol{\Gamma_b} \right)$.
+where $\boldsymbol{\Gamma} = \left( \boldsymbol{\Gamma}_a,\boldsymbol{\Gamma_b} \right)$. The procedure has 2 components 
+\begin{itemize}
+    \item $(\boldsymbol{\Theta,\Omega})$-step $$ \left(\boldsymbol{\Theta}^{k+1},\boldsymbol{\Omega}^{k+1}\right) \leftarrow \arg \min_{\boldsymbol{\Theta,\Omega}} \mathcal{L}_\mu(\boldsymbol{\Theta,\Omega},\boldsymbol{\Gamma}^k) $$ s.t. $\mathbf{U'U=V'V=I}_m$. This step embodies 
+    \begin{itemize}
+        \item block coordinate descent 
+        \item orthogonal Procrustes problem 
+        \item entrywise or block shoft thresholding
+    \end{itemize}
+    \item $\Gamma$-step 
+    \begin{align*}
+        \boldsymbol{\Gamma}^{k+1}_a &\leftarrow \boldsymbol{\Gamma}^k_a + \mu \left( \mathbf{U}^{k+1}\mathbf{D}^{k+1}-\mathbf{A}^{k+1} \right)\\
+        \boldsymbol{\Gamma}^{k+1}_b &\leftarrow \boldsymbol{\Gamma}^k_b + \mu \left( \mathbf{V}^{k+1}\mathbf{D}^{k+1}-\mathbf{B}^{k+1} \right)
+    \end{align*}
+    where
+    \begin{itemize}
+        \item The penalty parameter $\mu$
+    \end{itemize}
+\end{itemize}
 
 
 %\newpage
