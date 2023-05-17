@@ -197,7 +197,12 @@ Consider $\boldsymbol{\Theta} = (\mathbf{D,U,V}),\boldsymbol{\Omega}=(\mathbf{A,
 $$
 \min_{\boldsymbol{\Theta,\Omega}}\left\{ \frac{1}{2}\left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{A}) + \lambda_b \rho_b (\mathbf{B})\right\}
 $$
-s.t. $\mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m$, $\mathbf{UD}=\mathbf{A}$, $\mathbf{VD}=\mathbf{B}$
+s.t. $\mathbf{U'U}=\mathbf{V'V}=\mathbf{I}_m$, $\mathbf{UD}=\mathbf{A}$, $\mathbf{VD}=\mathbf{B}$. Then the \myhl[myblue]{\textbf{\underline{augmented Lagrangian}}} is
+\begin{align*}
+    \mathcal{L}_{\mu}\left( \boldsymbol{\Theta,\Omega,\Gamma} \right) =& \frac{1}{2} \left\Vert \mathbf{Y-XUDV}' \right\Vert _F^2 + \lambda_d \lVert \mathbf{D} \rVert _1 + \lambda_a \rho_a (\mathbf{A}) + \lambda_b \rho_b (\mathbf{B}) \\
+    & + \left< \Gamma_a \mathbf{UD-A} \right> + \left< \Gamma_b \mathbf{VD-B} \right> + \frac{\mu}{2}\left\Vert \mathbf{UD-A} \right\Vert^2_F + \frac{\mu}{2}\left\Vert \mathbf{VD-B} \right\Vert^2_F 
+\end{align*}
+where $\boldsymbol{\Gamma} = \left( \boldsymbol{\Gamma}_a,\boldsymbol{\Gamma_b} \right)$.
 
 
 %\newpage
