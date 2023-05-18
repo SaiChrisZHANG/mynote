@@ -2,14 +2,11 @@
 \input{settings.tex}
 
 \begin{document}
-\lecture{15}{Graphical Network Inference}{}{Sai Zhang}{}{The note is built on Prof. \hyperlink{http://faculty.marshall.usc.edu/jinchi-lv/}{Jinchi Lv}'s lectures of the course at USC, DSO 607, High-Dimensional Statistics and Big Data Problems.}
+\lecture{16}{Graphical Network Inference}{}{Sai Zhang}{}{The note is built on Prof. \hyperlink{http://faculty.marshall.usc.edu/jinchi-lv/}{Jinchi Lv}'s lectures of the course at USC, DSO 607, High-Dimensional Statistics and Big Data Problems.}
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
 \section{Motivation}
-Consider a classic question: Suppose we have $N$ observations of dimension $p$ follow $\mathcal{N}(\mu,\Sigma)$. let $\Theta = \Sigma^{-1}$, and $S$ be the empirical covariance matrix. The problem is
-\begin{align*}
-    \max \log \det \Theta - \mathrm{Tr}(S\Theta) - \rho \lVert \Theta \rVert _1 \Leftrightarrow \min -\log \det \Theta - \mathrm{Tr}(S\Theta) - \rho \lVert \Theta \rVert _1
-\end{align*}
+Consider a classic question: Suppose we have $N$ observations of dimension $p$ follow $\mathcal{N}(\mu,\Sigma)$. let $\Theta = \Sigma^{-1}$, and $S$ be the empirical covariance matrix. How can we capture the statistical relationships between the variables of interest?
 
 %\newpage
 %\bibliographystyle{plainnat}
