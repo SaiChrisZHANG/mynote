@@ -6,14 +6,24 @@
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
 \section{Motivation}
-Consider a classic question: Suppose we have $N$ observations of dimension $p$ follow $\mathcal{N}(\mu,\Sigma)$. let $\Theta = \Sigma^{-1}$, and $\mathbf{S}$ be the empirical covariance matrix. How can we capture the statistical relationships between the variables of interest? Write this question in matrix form:
+Consider a classic question: For $N$ observations of dimension $p$, how can we capture the statistical relationships between the variables of interest? Consider the example of the multivariate Gaussian distribution:
 \begin{example}{Multivariate Gaussian Distribution}{}
-     $\mathbf{x}\sim \mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$ with the probability density 
+    Suppose we have $N$ observations of dimension $p$, $\mathbf{x}\sim \mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$. let $\mathbf{S}$ be the empirical covariance matrix. Then the probability density 
     $$
-    f(\mathbf{x}) = \frac{1}{(2\pi)^{p/2}\det (\boldsymbol{\Sigma})^{1/2}}\exp\left\{ -\frac{1}{2}\mathbf{x}'\boldsymbol{\Sigma}^{-1}\mathbf{x} \right\} \propto \det (\boldsymbol{\Theta})^{1/2}\exp\left\{ -\frac{1}{2} \mathbf{x}'\boldsymbol{\Theta}\mathbf{x} \right\}
+    f(\mathbf{x}) = \frac{1}{(2\pi)^{p/2}\det (\boldsymbol{\Sigma})^{1/2}}\exp\left\{ -\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})'\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu}) \right\}
     $$
-    where $\boldsymbol{\Sigma}=\mathbb{E}[\mathbf{xx}'] > \mathbf{0}$ is the covariance matrix, and $ \boldsymbol{\Theta}=\boldsymbol{\Sigma}^{-1} $ is the \textbf{inverse covariance matrix} or \textbf{precision matrix}
+    define the \textbf{inverse covariance matrix} or \textbf{precision matrix} as $ \boldsymbol{\Omega}=\boldsymbol{\Sigma}^{-1} $, then we have 
+    $$
+    f_{\mathbf{\mu},\boldsymbol{\Omega}} = \exp \left\{ \boldsymbol{\mu'\Omega x} - \left< \boldsymbol{\Omega},\frac{1}{2}\mathbf{xx}' \right> -\frac{p}{2}\log(2\pi) + \frac{1}{2} \log\det(\boldsymbol{\Omega}) - \frac{1}{2}\boldsymbol{\mu'\Omega\mu} \right\}
+    $$
 \end{example}
+In this example, we know that \textbf{every} multivariate Gaussian distribution can be represented by a pairwise \myhl[myblue]{\textbf{Gaussian Markov Random Field (GMRF)}}, which an \textbf{\underline{undirected graph}} $G=(V,E)$
+\begin{itemize}
+    \item representing the collection of variables $\mathbf{x}$ by a vertex set $\mathcal{V}=\left\{1,\cdots,p\right\}$
+    \item encoding 
+\end{itemize}
+
+ with vertex set $V=1,\cdots,p$ conrresponding to the random variable edge set $E = \left\{ (i,j)\in V \mid i\neq j,\Omega_{ij}\neq 0 \right\}$
 
 %\newpage
 %\bibliographystyle{plainnat}
