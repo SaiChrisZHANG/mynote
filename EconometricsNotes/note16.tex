@@ -6,9 +6,9 @@
 %\footnotetext{These notes are partially based on those of Nigel Mansell.}
 
 \section{Motivation}
-Consider a classic question: For $N$ observations of dimension $p$, how can we capture the statistical relationships between the variables of interest? Consider the example of the multivariate Gaussian distribution:
+Consider a classic question: For $n$ observations of dimension $p$, how can we capture the statistical relationships between the variables of interest? Consider the example of the multivariate Gaussian distribution:
 \begin{example}{Multivariate Gaussian Distribution}{}
-    Suppose we have $N$ observations of dimension $p$, $\mathbf{x}\sim \mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$. let $\mathbf{S}$ be the empirical covariance matrix. Then the probability density 
+    Suppose we have $n$ observations of dimension $p$, $\mathbf{x}\sim \mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$. let $\mathbf{S}$ be the empirical covariance matrix. Then the probability density 
     $$
     f(\mathbf{x}) = \frac{1}{(2\pi)^{p/2}\det (\boldsymbol{\Sigma})^{1/2}}\exp\left\{ -\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})'\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu}) \right\}
     $$
@@ -23,7 +23,7 @@ In this example, we know that \textbf{every} multivariate Gaussian distribution 
     \item encoding correlations between variables by a set of edges $\mathcal{E}=\left\{ (i,j)\in \mathcal{V}\mid i=\neq j,\Omega_{ij}\neq 0 \right\}$  
 \end{itemize}
 
-
+\paragraph*{What's the goal?} We want to estimate a \myhl[myblue]{\textbf{sparse}} graph structure given $n\ll p$ i.i.d. observations.
 
 %\newpage
 %\bibliographystyle{plainnat}
