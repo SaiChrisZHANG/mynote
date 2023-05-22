@@ -26,80 +26,60 @@ In this example, we know that \textbf{every} multivariate Gaussian distribution 
 \paragraph*{What's the goal?} We want to estimate a \myhl[myblue]{\textbf{sparse}} graph structure given $n\ll p$ i.i.d. observations. But what does sparsity means in this context? A sparse graph is \textbf{\underline{equivalent}} to a sparse precision matrix: the precision matrix should have many 0s.
 
 \paragraph*{Sparse precision matrix} for the Gaussian vector mentioned above $\mathbf{x}\sim\mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$, we have $\forall u,v$ $$ x_u \perp x_v \mid \mathbf{x}_{\mathcal{V}\setminus \left\{ u,v \right\} } \Leftrightarrow \Theta_{u,v}=0 $$
-that is, sparsity of the precision matrix is equivalent to \myhl[myblue]{\textbf{conditional independence}}\footnote{Meanwhile, for independence: $\Sigma_{u,v}=0\Leftrightarrow x_u \perp x_v$}.
+that is, sparsity of the precision matrix is equivalent to \myhl[myblue]{\textbf{conditional independence}}\footnote{Meanwhile, for independence: $\Sigma_{u,v}=0\Leftrightarrow x_u \perp x_v$}. Consider a graph 
 
-Consider a graph
 \begin{figure}[ht]
     \begin{minipage}[b]{0.45\textwidth}
     \centering
-      \begin{tikzpicture}[scale=1.4]
-          % basics
-          \draw [-stealth,color=black,thin] (-0.5,0) -- (4,0) node[right] {$x_1$};
-          \draw [-stealth,color=black,thin] (0,-0.5) -- (0,4) node[above] {$x_2$};
-          \draw [color=black, ultra thick] (0,0) -- (3.5,1.5) node[above] {OLS};
-          \draw [color=myred, ultra thick] (0,0) -- (2,0) node[below] {Step 1};
-          \draw [color=myblue, ultra thick] (2,0) -- (3.5,1.5) node[below,xshift=15pt] {Step 2};
-          
-          \coordinate (X) at (3.5,1.5);
-            \coordinate (A) at (2,0);
-            \coordinate (Y) at (3,0);
-
-            % Draw Angle
-            \draw[thin] (Y) -- (A) -- (X)
-            pic ["$45^{\circ}$", draw, thin, angle eccentricity=1.8] {angle = Y--A--X};
-      \end{tikzpicture}
+    \begin{tikzpicture}[scale=1]
+        % Step
+        \draw[color=myblue] (-2,4) node[draw,circle] (x1) {$x_1$};
+        \draw[color=myblue] (2,4) node[draw,circle] (x5) {$x_5$};
+        \draw[color=myblue] (0,3) node[draw,circle] (x4) {$x_4$};
+        \draw[color=myblue] (-3,2) node[draw,circle] (x2) {$x_2$};
+        \draw[color=myblue] (0.3,1.5) node[draw,circle] (x6) {$x_6$};
+        \draw[color=myblue] (3,2) node[draw,circle] (x8) {$x_8$};
+        \draw[color=myblue] (-2,0) node[draw,circle] (x3) {$x_3$};
+        \draw[color=myblue] (2.5,0) node[draw,circle] (x7) {$x_7$};
+        % egdes
+        \draw[color=myred, very thick] (x1) -- (x5);
+        \draw[color=myred, very thick] (x5) -- (x8);
+        \draw[color=myred, very thick] (x8) -- (x3);
+        \draw[color=myred, very thick] (x3) -- (x5);
+        \draw[color=myred, very thick] (x1) -- (x2);
+        \draw[color=myred, very thick] (x2) -- (x6);
+        \draw[color=myred, very thick] (x2) -- (x7);
+        \draw[color=myred, very thick] (x4) -- (x7);
+    \end{tikzpicture}
+    
+    \textbf{$x_1$ and $x_4$ are \textit{connected}}
     \end{minipage}
     \hfill
     \begin{minipage}[b]{0.45\textwidth}
         \centering
-        \tdplotsetmaincoords{60}{45}
-        \begin{tikzpicture}
-            [scale=5,
-                tdplot_main_coords,
-                axis/.style={-stealth,black,thin},
-                vector/.style={black,very thick},
-                LARS/.style={ultra thick}]
-
-            %standard tikz coordinate definition using x, y, z coords
-            \coordinate (O) at (0,0,0);
-            
-            \coordinate (P) at (0.8, 0.6, 0.2);
-
-            \coordinate (P12) at (0.8, 0.6, 0);
-            \coordinate (P23) at (0, 0.6, 0.2);
-            \coordinate (P13) at (0.8, 0, 0.2);
-            \coordinate (P1) at (0.8, 0, 0);
-            \coordinate (P2) at (0, 0.6, 0);
-            \coordinate (P3) at (0, 0, 0.2);
-            
-            %draw axes
-            \draw[axis] (0,0,0) -- (1,0,0) node[anchor=north east]{$x_1$};
-            \draw[axis] (0,0,0) -- (0,1,0) node[anchor=north west]{$x_2$};
-            \draw[axis] (0,0,0) -- (0,0,1) node[anchor=south]{$x_3$};
-
-            % projection dash line
-            \draw[thin, black, densely dashed] (P12)--(P1);
-            \draw[thin, black, densely dashed] (P12)--(P2);
-            \draw[thin, black, densely dashed] (P)--(P13);
-            \draw[thin, black, densely dashed] (P)--(P23);
-            \draw[thin, black, densely dashed] (P23)--(P3);
-            \draw[thin, black, densely dashed] (P13)--(P3);
-            \draw[thin, black, densely dashed] (P23)--(P2);
-            \draw[thin, black, densely dashed] (P13)--(P1);
-            \draw[thin, black, densely dashed] (P)--(P12);
-            
-            %draw a vector from O to P
-            \draw[vector] (O) -- (P);
-
-            % draw LARS steps
-            \draw[LARS, myred] (O) -- (0.2,0,0) node[left,xshift=-10pt] {Step 1};
-            \draw[LARS, myblue] (0.2,0,0) -- (0.6,0.4,0) node[below] {Step 2};
-            \draw[LARS, teal] (0.6,0.4,0) -- (P) node[right] {Step 3};
-
-            % approaching, but not exactly reach OLS
-            %\draw[thin, teal, densely dashed] (P13)--(0.8,0.35,0.2);
-            %\draw[thin, teal, densely dashed] (0.8,0.35,0.2)--(0,0.35,0.2);
+        \begin{tikzpicture}[scale=1]
+            % Step
+            \draw[color=myblue] (-2,4) node[draw,circle] (x1) {$x_1$};
+            \draw[color=myblue!35!white] (2,4) node[draw,circle] (x5) {$x_5$};
+            \draw[color=myblue] (0,3) node[draw,circle] (x4) {$x_4$};
+            \draw[color=myblue!35!white] (-3,2) node[draw,circle] (x2) {$x_2$};
+            \draw[color=myblue!35!white] (0.3,1.5) node[draw,circle] (x6) {$x_6$};
+            \draw[color=myblue!35!white] (3,2) node[draw,circle] (x8) {$x_8$};
+            \draw[color=myblue!35!white] (-2,0) node[draw,circle] (x3) {$x_3$};
+            \draw[color=myblue!35!white] (2.5,0) node[draw,circle] (x7) {$x_7$};
+            % egdes
+            \draw[color=myred, very thick] (x1) -- (x5);
+            \draw[color=myred, very thick] (x5) -- (x8);
+            \draw[color=myred, very thick] (x8) -- (x3);
+            \draw[color=myred, very thick] (x3) -- (x5);
+            \draw[color=myred, very thick] (x1) -- (x2);
+            \draw[color=myred, very thick] (x2) -- (x6);
+            \draw[color=myred, very thick] (x2) -- (x7);
+            \draw[color=myred, very thick] (x4) -- (x7);
         \end{tikzpicture}
+        
+        \textbf{$x_1$ and $x_4$ are \textit{NOT connected}, conditionally}
+        
     \end{minipage}
 \end{figure}
 
