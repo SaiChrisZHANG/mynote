@@ -25,10 +25,23 @@ In this example, we know that \textbf{every} multivariate Gaussian distribution 
 
 \paragraph*{What's the goal?} We want to estimate a \myhl[myblue]{\textbf{sparse}} graph structure given $n\ll p$ i.i.d. observations. But what does sparsity means in this context? A sparse graph is \textbf{\underline{equivalent}} to a sparse precision matrix: the precision matrix should have many 0s.
 
-\paragraph*{Sparse precision matrix} for the Gaussian vector mentioned above $\mathbf{x}\sim\mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$, we have $\forall u,v$ $$ x_u \perp x_v \mid \mathbf{x}_{\mathcal{V}\setminus \left\{ u,v \right\} } \Leftrightarrow \Theta_{u,v}=0 $$
-that is, sparsity of the precision matrix is equivalent to \myhl[myblue]{\textbf{conditional independence}}\footnote{Meanwhile, for independence: $\Sigma_{u,v}=0\Leftrightarrow x_u \perp x_v$}. Consider a graph 
+\paragraph*{Sparse precision matrix} for the Gaussian vector mentioned above $\mathbf{x}\sim\mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$, we have $\forall u,v$ $$ x_u \perp x_v \mid \mathbf{x}_{\mathcal{V}\setminus \left\{ u,v \right\} } \Leftrightarrow \Omega_{u,v}=0 $$
+that is, sparsity of the precision matrix is equivalent to \myhl[myblue]{\textbf{conditional independence}}\footnote{Meanwhile, for independence: $\Sigma_{u,v}=0\Leftrightarrow x_u \perp x_v$}. Consider \hyperref[fig:sparse_precision_graph]{a graph}, where $x_1$ and $x_4$ are only connected through other nodes, that is $x_1$ and $x_4$ are conditional independent, then we can have the precision matrix be something like:
+$$
+\boldsymbol{\Theta} = \begin{bmatrix}
+    * & * & 0 & 0 & * & 0 & 0 & 0 \\
+    * & * & 0 & 0 & 0 & * & * & 0 \\
+    0 & 0 & * & 0 & * & 0 & 0 & * \\
+    0 & 0 & 0 & * & 0 & 0 & * & 0 \\
+    * & 0 & * & 0 & * & 0 & 0 & * \\
+    0 & * & 0 & 0 & 0 & * & 0 & 0 \\
+    0 & * & 0 & * & 0 & 0 & * & 0 \\
+    0 & 0 & * & 0 & * & 0 & 0 & *
+\end{bmatrix}
+$$
+where 0 
 
-\begin{figure}[ht]
+\begin{figure}[ht]\label{fig:sparse_precision_graph}
     \begin{minipage}[b]{0.45\textwidth}
     \centering
     \begin{tikzpicture}[scale=1]
