@@ -103,7 +103,7 @@ where 0 captures precisely the conditional independence.
     \end{minipage}
 \end{figure}
 
-Intuitively, a sparse graph is much simpler, which is why conditional independence is desired. So how to achieve sparsity? We can again use a L-1 regularization when maximizing the log-likelihood $\mathcal{L}(\boldsymbol{\Omega})$. Denote the sample covariance matrix as $\mathbf{S} = \frac{1}{n}\sum^n_{i=1}\mathbf{x}_i\mathbf{x}_i'$, then the problem becomes
+Intuitively, a sparse graph is much simpler, which is why conditional independence is desired. So how to achieve sparsity? We can again use a L-1 regularization when maximizing the log-likelihood $\mathcal{L}(\boldsymbol{\Omega})$. Denote the sample covariance matrix as $\mathbf{S} = \frac{1}{n}\sum^n_{i=1}\mathbf{x}_i\mathbf{x}_i'$, then the problem becomes the so-called \myhl[myblue]{\textbf{Graphical Lasso}}
 $$
 \max_{\boldsymbol{\Omega}\geq \mathbf{0}}\log \det (\boldsymbol{\Omega}) - \mathrm{tr}(\mathbf{S}\boldsymbol{\Omega}) - \rho\left\Vert \boldsymbol{\Omega} \right\Vert _1
 $$
@@ -111,6 +111,7 @@ which is equivalent to
 $$
 \min_{\boldsymbol{\Omega}\geq \mathbf{0}} -\log \det (\boldsymbol{\Omega}) + \mathrm{tr}(\mathbf{S}\boldsymbol{\Omega}) +\rho\left\Vert \boldsymbol{\Omega} \right\Vert _1
 $$
+
 
 %\newpage
 %\bibliographystyle{plainnat}
