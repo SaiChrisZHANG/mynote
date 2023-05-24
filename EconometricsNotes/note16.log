@@ -1236,10 +1236,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
 Package rerunfilecheck Info: File `note16.out' has not changed.
 (rerunfilecheck)             Checksum: EBDE86C03A1ED1E2428913C9162414C2;45.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
  ) 
 Here is how much of TeX's memory you used:

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1684891155 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.pdf" "note16" 1684891156
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux" 1684891156 983 fe98f83d3608bc7979ac7dac0b417d4c ""
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.tex" 1684891153 6295 9985566a799ed62b824a3dc76b342af6 ""
+["pdflatex"] 1684891302 "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.tex" "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.pdf" "note16" 1684891304
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux" 1684891304 983 c39846fd02236aece70f3c8b179383aa ""
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.tex" 1684891300 6304 14b5d4afc7d2fd9247cae94653f9e4e1 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc" 1480098668 6292 5f5eff34c010300454c6de629a3dbaf4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
@@ -315,14 +315,14 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note16.aux" 1684891156 983 fe98f83d3608bc7979ac7dac0b417d4c ""
-  "note16.out" 1684891156 45 ebde86c03a1ed1e2428913c9162414c2 ""
-  "note16.tex" 1684891153 6295 9985566a799ed62b824a3dc76b342af6 ""
+  "note16.aux" 1684891304 983 c39846fd02236aece70f3c8b179383aa ""
+  "note16.out" 1684891304 45 ebde86c03a1ed1e2428913c9162414c2 ""
+  "note16.tex" 1684891300 6304 14b5d4afc7d2fd9247cae94653f9e4e1 ""
   "settings.tex" 1684329602 7379 991eca0f68dc03aa387e36d3d06099ca ""
   (generated)
   "note16.aux"
+  "note16.pdf"
   "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.log"
   "note16.log"
-  "note16.pdf"
-  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.pdf"
   "note16.out"
+  "/Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.pdf"
