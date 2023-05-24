@@ -16,6 +16,7 @@ Consider a classic question: For $n$ observations of dimension $p$, how can we c
     $$
     f_{\mathbf{\mu},\boldsymbol{\Omega}} = \exp \left\{ \boldsymbol{\mu'\Omega x} - \left< \boldsymbol{\Omega},\frac{1}{2}\mathbf{xx}' \right> -\frac{p}{2}\log(2\pi) + \frac{1}{2} \log\det(\boldsymbol{\Omega}) - \frac{1}{2}\boldsymbol{\mu'\Omega\mu} \right\}
     $$
+    where $\left<\right>$
 \end{example}
 In this example, we know that \textbf{every} multivariate Gaussian distribution can be represented by a pairwise \myhl[myblue]{\textbf{Gaussian Markov Random Field (GMRF)}}, which an \textbf{\underline{undirected graph}} $G=(V,E)$
 \begin{itemize}
@@ -23,7 +24,11 @@ In this example, we know that \textbf{every} multivariate Gaussian distribution 
     \item encoding correlations between variables by a set of edges $\mathcal{E}=\left\{ (i,j)\in \mathcal{V}\mid i=\neq j,\Omega_{ij}\neq 0 \right\}$  
 \end{itemize}
 
-For simplicity, we normalize $\boldsymbol{\mu} = \mathbf{0}$
+For simplicity, we normalize $\boldsymbol{\mu} = \mathbf{0}$. If we draw $n$ i.i.d. samples $\mathbf{x}_1,\cdots,\mathbf{x}_n \sim \mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})$, then the log-likelihood is
+\begin{align*}
+    \mathcal{L}(\boldsymbol{\Omega}) &= \frac{1}{n}\sum^n_{i=1}\log f(\mathbf{x}_i) = \frac{1}{2}\log \det (\boldsymbol{\Omega}) - \frac{1}{2n}\sum^n_{i=1}\mathbf{x}'_1\boldsymbol{\Theta}\mathbf{x}_i \\
+    &= \frac{1}{2}\log\det (\boldsymbol{\Omega}) - \frac{1}{2}\left< \Omega,\frac{1}{n}\sum^n_{i=1}\mathbf{x}'_i\mathbf{x}'_i \right>
+\end{align*}
 
 \paragraph*{What's the goal?} We want to estimate a \myhl[myblue]{\textbf{sparse}} graph structure given $n\ll p$ i.i.d. observations. But what does sparsity means in this context? A sparse graph is \textbf{\underline{equivalent}} to a sparse precision matrix: the precision matrix should have many 0s.
 
