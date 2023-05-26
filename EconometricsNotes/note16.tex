@@ -130,8 +130,14 @@ The idea is to repeatedly cycle through all columns-rows and in each step optimi
      \end{pmatrix} & \mathbf{S} &= \begin{pmatrix}
         \mathbf{S}_{1,1} & \mathbf{s}_{1,2}\\
         \mathbf{s}_{1,2}' & s_{2,2}
+     \end{pmatrix} &= \begin{pmatrix}
+        \mathbf{W}_{1,1} & \mathbf{w}_{1,2}\\
+        \mathbf{w}_{1,2}' & w_{2,2}
      \end{pmatrix}
 \end{align*}
+where $\boldsymbol{\Omega}_{1,1}$ is $(p-1)\times(p-1)$, $\boldsymbol{\omega}_{1,2}$ is $(p-1)\times 1$, $\omega_{2,2}$ is scalar.
+
+Consider a \myhl[myblue]{\textbf{blockwise}} step: suppose we fix all but the last row/column, then 
 
 
 
