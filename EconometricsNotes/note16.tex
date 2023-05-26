@@ -145,6 +145,10 @@ Consider a \myhl[myblue]{\textbf{blockwise}} step: suppose we fix all but the la
      \end{pmatrix} &= \begin{pmatrix}
         \left( \boldsymbol{\Omega}_{1,1}-\frac{\boldsymbol{\omega}_{1,2}\boldsymbol{\omega}_{1,2}'}{\omega_{2,2}} \right)^{-1} & -\mathbf{W}_{1,1}\frac{\boldsymbol{\omega}_{1,2}}{\omega_{2,2}}\\
          & \frac{1}{\omega_{2,2}}-\frac{\boldsymbol{\omega}_{1,2}'\mathbf{W}_{1,1}\boldsymbol{\omega}_{1,2}}{\omega^2_{2,2}}
+     \end{pmatrix}\\
+     &= \begin{pmatrix}
+        \boldsymbol{\Omega}^{-1}_{1,1}+\frac{\boldsymbol{\Omega}^{-1}_{1,1}\boldsymbol{\omega}_{1,2}\boldsymbol{\omega}_{1,2}'\boldsymbol{\Omega}^{-1}_{1,1}}{\omega_{2,2}-\boldsymbol{\omega}_{1,2}'\boldsymbol{\Omega}^{-1}_{1,1}\boldsymbol{\omega}_{1,2}} & -\frac{\boldsymbol{\Omega}^{-1}_{1,1}\boldsymbol{\omega}_{1,2}}{\omega_{2,2}-\boldsymbol{\omega}_{1,2}'\boldsymbol{\Omega}^{-1}_{1,1}\boldsymbol{\omega}_{1,2}} \\
+        & \frac{1}{\omega_{2,2}-\boldsymbol{\omega}_{1,2}'\boldsymbol{\Omega}^{-1}_{1,1}\boldsymbol{\omega}_{1,2}}
      \end{pmatrix}
 \end{align*}
 
