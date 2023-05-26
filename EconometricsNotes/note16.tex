@@ -122,7 +122,18 @@ The first-order optimality condition gives
     &\mathbf{0} \in \boldsymbol{\Omega}^{-1} - \mathbf{S} -\lambda \partial \left\Vert \boldsymbol{\Omega} \right\Vert _1\\
     \Rightarrow & \boldsymbol{\Omega}^{-1}_{i,i} = \mathbf{S}_{i,i} + \lambda, \ 1\leq i \leq p & \text{in diagonal entries (self-loop), }1\in\partial\left\vert \boldsymbol{\Omega}_{i,i} \right\vert
 \end{align*}
-The idea is to repeatedly cycle through all columns-rows and in each step optimize only a single column-row
+The idea is to repeatedly cycle through all columns-rows and in each step optimize only a single column-row. Denote a working version of $\boldsymbol{\Omega}^{-1}$ as $\mathbf{W}$, consider the following partition where all matrices are partitioned into one column/row versus the rest
+\begin{align*}
+    \boldsymbol{\Omega} &= \begin{pmatrix}
+        \boldsymbol{\Omega}_{1,1} & \boldsymbol{\omega}_{1,2}\\
+        \boldsymbol{\omega}_{1,2}' & \omega_{2,2}
+     \end{pmatrix} & \mathbf{S} &= \begin{pmatrix}
+        \mathbf{S}_{1,1} & \mathbf{s}_{1,2}\\
+        \mathbf{s}_{1,2}' & s_{2,2}
+     \end{pmatrix}
+\end{align*}
+
+
 
 \newpage
 \bibliographystyle{plainnat}
