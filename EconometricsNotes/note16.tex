@@ -119,8 +119,8 @@ The graphical lasso method is developed by \citep{friedman2008sparse}. For the o
 \end{equation}
 The first-order optimality condition gives
 \begin{align*}
-    &\mathbf{0} \in \boldsymbol{\Theta}^{-1} - \mathbf{S} -\lambda \partial \left\Vert \boldsymbol{\Theta} \right\Vert _1\\
-    \Rightarrow & \boldsymbol{\Theta}^{-1}_{i,i} = \mathbf{S}_{i,i} + \lambda, \ 1\leq i \leq p & \text{in diagonal entries (self-loop), }1\in\partial\left\vert \boldsymbol{\Theta}_{i,i} \right\vert
+    &\mathbf{0} \in \boldsymbol{\Omega}^{-1} - \mathbf{S} -\lambda \partial \left\Vert \boldsymbol{\Omega} \right\Vert _1\\
+    \Rightarrow & \boldsymbol{\Omega}^{-1}_{i,i} = \mathbf{S}_{i,i} + \lambda, \ 1\leq i \leq p & \text{in diagonal entries (self-loop), }1\in\partial\left\vert \boldsymbol{\Omega}_{i,i} \right\vert
 \end{align*}
 The idea is to repeatedly cycle through all columns-rows and in each step optimize only a single column-row
 
