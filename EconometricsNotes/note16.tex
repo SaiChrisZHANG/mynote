@@ -151,6 +151,14 @@ The idea is to repeatedly cycle through all columns-rows and in each step optimi
         \boldsymbol{\gamma}_{12}' & \gamma_{22}
      \end{pmatrix}
 \end{align*}
+this partition gives 
+\begin{align*}
+    \boldsymbol{\Omega}^{-1} &= \mathbf{S} - \lambda\boldsymbol{\Gamma} \\
+    \begin{pmatrix}
+        \mathbf{W}_{11} & \mathbf{w}_{12}\\
+        \mathbf{w}_{12}' & w_{22}
+    \end{pmatrix}
+\end{align*}
 where $\boldsymbol{\Omega}_{11}$ is $(p-1)\times(p-1)$, $\boldsymbol{\omega}_{12}$ is $(p-1)\times 1$, $\omega_{22}$ is a scalar.
 
 Consider a \myhl[myblue]{\textbf{blockwise}} step: suppose we fix all but the last row/column, then using properties of inverses of block-partitioned matrices, we have 
@@ -168,6 +176,7 @@ Consider a \myhl[myblue]{\textbf{blockwise}} step: suppose we fix all but the la
      \end{pmatrix}
 \end{align*}
 
+With th
 
 
 \newpage
