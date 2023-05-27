@@ -182,10 +182,12 @@ Consider a \myhl[myblue]{\textbf{blockwise}} step: suppose we fix all but the la
      \end{pmatrix}
 \end{align*}
 
-then, by the partitioned optimality condition, we have\footnote{For Eq.16.4, by Eq.\ref{eq:ghlasso_stationary_condition}, we know that $w_{22}=s_{22}+\lambda$, which is fixed.}:
+then, by the partitioned optimality condition, we have\footnote{For Eq.\ref{eq:modified_glasso_conditions}, by Eq.\ref{eq:ghlasso_stationary_condition}, we know that $w_{22}=s_{22}+\lambda$, which is fixed.}:
 \begin{align}\label{eq:glasso_conditions}
-    \mathbf{0} &= -\mathbf{w}_{12} + \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12} = \mathbf{W}_{11}\frac{\boldsymbol{\omega}_{12}}{\omega_{22}}+ \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12}\\
-    &= \frac{\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}}{\omega_{22}-\boldsymbol{\omega}_{12}'\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12} = w_{22}\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12}
+    \mathbf{0} &= -\mathbf{w}_{12} + \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12} = \mathbf{W}_{11}\frac{\boldsymbol{\omega}_{12}}{\omega_{22}}+ \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12}
+\end{align}
+\begin{align}\label{eq:modified_glasso_conditions}
+    \mathbf{0} &= \frac{\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}}{\omega_{22}-\boldsymbol{\omega}_{12}'\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12} = w_{22}\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12}
 \end{align}
 
 The graphic Lasso algorithm them solves Eq.\ref{eq:glasso_conditions} for $\boldsymbol{\beta}=\boldsymbol{\omega}_{12}/\omega_{12}$, that is
@@ -196,7 +198,15 @@ where $\boldsymbol{\gamma}_{12}\in\mathrm{sign}(\boldsymbol{\beta})$ since $\ome
 $$
 \min_{\boldsymbol{\beta}\in\mathbb{R}^{p-1}}\left\{ \frac{1}{2}\boldsymbol{\beta}'\mathbf{W}_{11}\boldsymbol{\beta} + \boldsymbol{\beta}'\mathbf{s}_{12} + \lambda\left\Vert \boldsymbol{\beta} \right\Vert _1 \right\}
 $$
-and $\mathbf{W}_{11}>0$ is assumed to be fixed. And this problem is analogous to a lasso regression problem of \myhl[myblue]{the \textbf{last variable} on \textbf{the rest}},
+and $\mathbf{W}_{11}>0$ is assumed to be fixed. 
+
+This problem is analogous to a lasso regression problem of \myhl[myblue]{the \textbf{last variable} on \textbf{the rest}}, but the cross-product matrix $\mathbf{S}_{11}$ is replaced by its \textbf{\underline{current estimation}} $\mathbf{W}_{11}$. It is relatively easier to solve using elementwise coordinate descent, then
+\begin{align*}
+    \mathbf{w}_{12} &= -\mathbf{W}_{11}\frac{\boldsymbol{\omega}_{12}}{\omega_{22}} &\Rightarrow \hat{\mathbf{w}}_{12} &= -\mathbf{W}_{11}\hat{\boldsymbol{\beta}} \\
+    w_{22} &= \frac{1}{\omega_{22}}-\frac{\boldsymbol{\omega}_{12}'\mathbf{W}_{11}\boldsymbol{\omega}_{12}}{\omega^2_{22}} &\Rightarrow \frac{1}{\hat{\omega}_{22}} &= w_{22} - \hat{\boldsymbol{\beta}}'\hat{\mathbf{w}}_{12} \\
+    \boldsymbol{\omega}_{12} &= -\mathbf{W}_{11}^{-1}\mathbf{w}_{12}\omega_{22} &\Rightarrow \hat{\boldsymbol{\omega}}_{12} &= -\mathbf{W}^{-1}_{11}\hat{\mathbf{w}}_{12}\hat{\omega}_{22}
+\end{align*}
+
 
 
 \newpage
