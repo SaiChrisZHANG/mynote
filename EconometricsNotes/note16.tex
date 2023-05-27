@@ -182,13 +182,21 @@ Consider a \myhl[myblue]{\textbf{blockwise}} step: suppose we fix all but the la
      \end{pmatrix}
 \end{align*}
 
-then, by the partitioned optimality condition, we have:
-\begin{align*}
+then, by the partitioned optimality condition, we have\footnote{For Eq.16.4, by Eq.\ref{eq:ghlasso_stationary_condition}, we know that $w_{22}=s_{22}+\lambda$, which is fixed.}:
+\begin{align}\label{eq:glasso_conditions}
     \mathbf{0} &= -\mathbf{w}_{12} + \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12} = \mathbf{W}_{11}\frac{\boldsymbol{\omega}_{12}}{\omega_{22}}+ \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12}\\
-    &= \frac{\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}}{\omega_{22}-\boldsymbol{\omega}_{12}'\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12} \\
-    &= w_{22}\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12}
-\end{align*}
-here, by Eq.\ref{eq:ghlasso_stationary_condition}, we know that $w_{22}=s_{22}+\lambda$, which is fixed.
+    &= \frac{\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}}{\omega_{22}-\boldsymbol{\omega}_{12}'\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12} = w_{22}\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12}
+\end{align}
+
+The graphic Lasso algorithm them solves Eq.\ref{eq:glasso_conditions} for $\boldsymbol{\beta}=\boldsymbol{\omega}_{12}/\omega_{12}$, that is
+$$
+\mathbf{W}_{11}\boldsymbol{\beta} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12} = \mathbf{0}
+$$
+where $\boldsymbol{\gamma}_{12}\in\mathrm{sign}(\boldsymbol{\beta})$ since $\omega_{22}>0$, which is essentially solving:
+$$
+\min_{\boldsymbol{\beta}\in\mathbb{R}^{p-1}}\left\{ \frac{1}{2}\boldsymbol{\beta}'\mathbf{W}_{11}\boldsymbol{\beta} + \boldsymbol{\beta}'\mathbf{s}_{12} + \lambda\left\Vert \boldsymbol{\beta} \right\Vert _1 \right\}
+$$
+and $\mathbf{W}_{11}>0$ is assumed to be fixed. And this problem is analogous to a lasso regression problem of \myhl[myblue]{the \textbf{last variable} on \textbf{the rest}},
 
 
 \newpage
