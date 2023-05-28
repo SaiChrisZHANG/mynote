@@ -206,29 +206,19 @@ This problem is analogous to a lasso regression problem of \myhl[myblue]{the \te
     w_{22} &= \frac{1}{\omega_{22}}-\frac{\boldsymbol{\omega}_{12}'\mathbf{W}_{11}\boldsymbol{\omega}_{12}}{\omega^2_{22}} &\Rightarrow \frac{1}{\hat{\omega}_{22}} &= w_{22} - \hat{\boldsymbol{\beta}}'\hat{\mathbf{w}}_{12} & \text{Step 2} \\
     \boldsymbol{\omega}_{12} &= -\mathbf{W}_{11}^{-1}\mathbf{w}_{12}\omega_{22} &\Rightarrow \hat{\boldsymbol{\omega}}_{12} &= -\mathbf{W}^{-1}_{11}\hat{\mathbf{w}}_{12}\hat{\omega}_{22} & \text{Step 3}
 \end{align*}
-notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}$ in Step 1, the graphic Lasso procedure can move onto the next block, that is, only Step 1 is used in the loop, Step 2 and 3 can be done at the end.
+notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}$ in Step 1, the graphic Lasso procedure can move onto the next block, that is, only Step 1 is used in the loop, Step 2 and 3 can be done at the end. The algorithm can be summarized as:
 
 \begin{algorithm}{SOFAR algorithm with ALM-BCD}{sofar_algorithm}
     \begin{itemize}
-        \item \textit{Parameters}: $\lambda_d,\lambda_a,\lambda_b$ and $\gamma >1$
-        \item Initialize $\mathbf{U}^0,\mathbf{V}^0,\mathbf{D}^0,\mathbf{A}^0,\mathbf{B}^0,\boldsymbol{\Gamma}^0_a,\boldsymbol{\Gamma}^0_b,\mu^0$
-        \item For $k=0,1,\cdots$, do 
+        \item[1] Initialize $\mathbf{W}= \mathbf{S} + \lambda\mathbf{I}$ 
+        \item Cycle around the columns repeatedly, performing the following steps till convergence: 
         \begin{itemize}
-            \item[-] update $\mathbf{U,V,D,A,B}$:
-            \begin{align*}
-                \mathbf{U}^{k+1} \leftarrow \arg\min_{\mathbf{U'U=I}_m} & \frac{1}{2}\left\Vert \mathbf{Y-XUD}^k{\mathbf{V}^k}' \right\Vert ^2_F + \frac{\mu^k}{2}\left\Vert \mathbf{UD}^k-\mathbf{A}^k + \frac{\boldsymbol{\Gamma}^k_a}{\mu^k} \right\Vert ^2_F & (i)\\
-                \mathbf{V}^{k+1} \leftarrow \arg\min_{\mathbf{V'V=I}_m} &\frac{1}{2}\left\Vert \mathbf{Y-XU}^{k+1}\mathbf{D}^k{\mathbf{V}}' \right\Vert ^2_F + \frac{\mu^k}{2}\left\Vert \mathbf{VD}^k-\mathbf{B}^k + \frac{\boldsymbol{\Gamma}^k_b}{\mu^k} \right\Vert ^2_F & (ii)\\
-                \mathbf{D}^{k+1} \leftarrow \arg\min_{\mathbf{D}\geq \mathbf{0}} &\frac{1}{2}\left\Vert \mathbf{Y-XU}^{k+1}\mathbf{D}{\mathbf{V}^{k+1}}' \right\Vert ^2_F + \frac{\mu^k}{2}\left\Vert \mathbf{U}^{k+1}\mathbf{D}-\mathbf{A}^k + \frac{\boldsymbol{\Gamma}^k_a}{\mu^k} \right\Vert ^2_F \\
-                &+\frac{\mu^k}{2}\left\Vert \mathbf{V}^{k+1}\mathbf{D}-\mathbf{B}^k + \frac{\boldsymbol{\Gamma}^k_b}{\mu^k} \right\Vert ^2_F + \lambda_d \lVert \mathbf{D} \rVert _1 & (c)\\
-                \mathbf{A}^{k+1}\leftarrow \arg\min_{\mathbf{A}} &\frac{\mu^k}{2}\left\Vert \mathbf{U}^{k+1}\mathbf{D}^{k+1}-\mathbf{A} + \frac{\boldsymbol{\Gamma}^k_a}{\mu^k} \right\Vert ^2_F + \lambda_a\rho_a(\mathbf{A}) & (d)\\
-                \mathbf{B}^{k+1}\leftarrow \arg\min_{\mathbf{B}} &\frac{\mu^k}{2}\left\Vert \mathbf{V}^{k+1}\mathbf{D}^{k+1}-\mathbf{B} + \frac{\boldsymbol{\Gamma}^k_b}{\mu^k} \right\Vert ^2_F + \lambda_b\rho_b(\mathbf{B}) & (e)
-            \end{align*} 
-            \item[-] update $\boldsymbol{\Gamma}_a,\boldsymbol{\Gamma}_b$:
-            \begin{align*}
-                \boldsymbol{\Gamma}^{k+1}_a &\leftarrow \boldsymbol{\Gamma}^k_a + \mu^k\left(\mathbf{U}^{k+1}\mathbf{D}^{k+1}-\mathbf{A}^{k+1}\right) & \boldsymbol{\Gamma}^{k+1}_b &\leftarrow \boldsymbol{\Gamma}^k_b + \mu^k\left(\mathbf{V}^{k+1}\mathbf{D}^{k+1}-\mathbf{B}^{k+1}\right) 
-            \end{align*}
-            where $\mu$ is updated by $\mu^{k+1}\leftarrow\gamma \mu^k$
+            \item[a] rearrange the rows/columns so that the target column is \textbf{\underline{the last}} (implicitly)
+            \item[b] solve the lasso problem, starting the solution from the previous round for this column
+            \item[c] update the row/column (\textbf{\textit{off-diagonal}}) of the covariance using $\hat{\mathbf{w}}_{12}$
+            \item[d] save $\hat{\boldsymbol{\beta}}$ for this column in the matrix $\mathbf{B}$
         \end{itemize}
+        \item[3] after convergence, for every row/column, compute the diagonal entries $\hat{\theta}_{jj}$, and covert the $\mathbf{B}$ matrix to $\boldsymbol{\Theta}$
     \end{itemize}
 \end{algorithm}
 
