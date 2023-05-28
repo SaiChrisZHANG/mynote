@@ -208,7 +208,7 @@ This problem is analogous to a lasso regression problem of \myhl[myblue]{the \te
 \end{align*}
 notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}$ in Step 1, the graphic Lasso procedure can move onto the next block, that is, only Step 1 is used in the loop, Step 2 and 3 can be done at the end. The algorithm can be summarized as:
 
-\begin{algorithm}{SOFAR algorithm with ALM-BCD}{sofar_algorithm}
+\begin{algorithm}{Graphical Lasso algorithm}{glasso_algorithm}
     \begin{itemize}
         \item[1] Initialize $\mathbf{W}= \mathbf{S} + \lambda\mathbf{I}$ 
         \item Cycle around the columns repeatedly, performing the following steps till convergence: 
@@ -221,6 +221,11 @@ notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}
         \item[3] after convergence, for every row/column, compute the diagonal entries $\hat{\theta}_{jj}$, and covert the $\mathbf{B}$ matrix to $\boldsymbol{\Theta}$
     \end{itemize}
 \end{algorithm}
+
+\paragraph*{Issues of GLasso method}:
+\begin{itemize}
+    \item $\boldsymbol{\theta}_{12}$ is entangled in $\mathbf{W}_{11}$, which is \myhl[myblue]{\textbf{\textit{incorrectly}}} treated as a constant
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
