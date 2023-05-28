@@ -225,6 +225,7 @@ notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}
 \paragraph*{Issues of GLasso method}:
 \begin{itemize}
     \item $\boldsymbol{\theta}_{12}$ is entangled in $\mathbf{W}_{11}$, which is \myhl[myblue]{\textbf{\textit{incorrectly}}} treated as a constant
+    \item after updating $\boldsymbol{\theta}_{12}$, the entire (working) covariance matrix $\mathbf{W}$ changes, but Glasso algorithm only updates $\mathbf{w}_{12}$ and $\mathbf{w}_{21}$
 \end{itemize}
 
 \newpage
