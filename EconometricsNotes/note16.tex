@@ -230,7 +230,11 @@ notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}
 Together, the two issues lead to the non-monotonic behavior of Glasso in minimizing $f(\boldsymbol{\Omega})$. Next, we address these issues by introducing some modifications.
 
 \section{Graphical Lasso: Modifications}
-
+Consider the optimality condition in Eq.\ref{eq:modified_glasso_conditions}:
+\begin{align}
+    \mathbf{0} &= \frac{\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}}{\omega_{22}-\boldsymbol{\omega}_{12}'\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12} = w_{22}\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12}
+\end{align}
+Here
 
 \newpage
 \bibliographystyle{plainnat}
