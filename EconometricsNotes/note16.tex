@@ -218,7 +218,7 @@ notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}
             \item[c] update the row/column (\textbf{\textit{off-diagonal}}) of the covariance using $\hat{\mathbf{w}}_{12}$
             \item[d] save $\hat{\boldsymbol{\beta}}$ for this column in the matrix $\mathbf{B}$
         \end{itemize}
-        \item[3] after convergence, for every row/column, compute the diagonal entries $\hat{\theta}_{jj}$, and covert the $\mathbf{B}$ matrix to $\boldsymbol{\Theta}$
+        \item[3] after convergence, for every row/column, compute the diagonal entries $\hat{\omega}_{jj}$, and covert the $\mathbf{B}$ matrix to $\boldsymbol{\Omega}$
     \end{itemize}
 \end{algorithm}
 
@@ -227,6 +227,7 @@ notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}
     \item $\boldsymbol{\theta}_{12}$ is entangled in $\mathbf{W}_{11}$, which is \myhl[myblue]{\textbf{\textit{incorrectly}}} treated as a constant
     \item after updating $\boldsymbol{\theta}_{12}$, the entire (working) covariance matrix $\mathbf{W}$ changes, but Glasso algorithm only updates $\mathbf{w}_{12}$ and $\mathbf{w}_{21}$
 \end{itemize}
+Together, the two issues lead to the non-monotonic behavior of Glasso in minimizing $f(\boldsymbol{\Omega})$
 
 \newpage
 \bibliographystyle{plainnat}
