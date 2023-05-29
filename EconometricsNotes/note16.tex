@@ -227,7 +227,10 @@ notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}
     \item $\boldsymbol{\theta}_{12}$ is entangled in $\mathbf{W}_{11}$, which is \myhl[myblue]{\textbf{\textit{incorrectly}}} treated as a constant
     \item after updating $\boldsymbol{\theta}_{12}$, the entire (working) covariance matrix $\mathbf{W}$ changes, but Glasso algorithm only updates $\mathbf{w}_{12}$ and $\mathbf{w}_{21}$
 \end{itemize}
-Together, the two issues lead to the non-monotonic behavior of Glasso in minimizing $f(\boldsymbol{\Omega})$
+Together, the two issues lead to the non-monotonic behavior of Glasso in minimizing $f(\boldsymbol{\Omega})$. Next, we address these issues by introducing some modifications.
+
+\section{Graphical Lasso: Modifications}
+
 
 \newpage
 \bibliographystyle{plainnat}
