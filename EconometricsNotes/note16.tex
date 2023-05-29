@@ -231,10 +231,14 @@ Together, the two issues lead to the non-monotonic behavior of Glasso in minimiz
 
 \section{Graphical Lasso: Modifications}
 Consider the optimality condition in Eq.\ref{eq:modified_glasso_conditions}:
-\begin{align}
+\begin{align*}
     \mathbf{0} &= \frac{\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}}{\omega_{22}-\boldsymbol{\omega}_{12}'\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12}} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12} = w_{22}\boldsymbol{\Omega}^{-1}_{11}\boldsymbol{\omega}_{12} + \mathbf{s}_{12} + \lambda\boldsymbol{\gamma}_{12}
-\end{align}
-Here, the dependence of the covariance submatrix $\mathbf{W}_{11}$ on $\boldsymbol{\Omega}_{12}$ is \myhl[myblue]{\textbf{explicit}}. Let $\boldsymbol{\alpha} = \boldsymbol{\omega}_{12}w_{22}$ with fixed $w_{22}\geq 0$
+\end{align*}
+Here, the dependence of the covariance submatrix $\mathbf{W}_{11}$ on $\boldsymbol{\Omega}_{12}$ is \myhl[myblue]{\textbf{explicit}}. Let $\boldsymbol{\alpha} = \boldsymbol{\omega}_{12}w_{22}$ with fixed $w_{22}\geq 0$\footnote{$w_{22}= 1/(\omega_22-\boldsymbol{\omega}_{21}\boldsymbol{\Omega}_{11}^{-1}\boldsymbol{\omega}_{12})$}, then this optimality condition is essentially solving
+$$
+\min_{\boldsymbol{\alpha}\in\mathbb{R}^{p-1}}\left\{ \frac{1}{2}\boldsymbol{\alpha'\Omega}_{11}^{-1}\boldsymbol{\alpha} + \boldsymbol{\alpha}'\mathbf{s}_{12} + \lambda\left\Vert \boldsymbol{\alpha}\right\Vert _1 \right\}
+$$
+the minimizer of this problem $\hat{\boldsymbol{\alpha}}$ can then be used to derive the estimation for $\boldsymbol{\omega}_{12}$: $$\hat{\boldsymbol{\omega}}_{12} = \frac{\hat{\boldsymbol{\alpha}}}{w_{22}}$$, then we can update $\omega_{22}$ as before via $$ \hat{\omega}_{22} = \frac{1}{w_{22}} + \hat{\boldsymbol{\omega}}_{21}\boldsymbol{\Theta}^{-1}_{11} \hat{\boldsymbol{\omega}}_{12}$$ with $w_{22}=s_{22}+\lambda$. Another problem is how to obtain $\boldsymbol{\Omega}^{-1}_{11}$
 
 \newpage
 \bibliographystyle{plainnat}
