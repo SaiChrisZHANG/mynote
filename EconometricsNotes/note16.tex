@@ -238,7 +238,8 @@ Here, the dependence of the covariance submatrix $\mathbf{W}_{11}$ on $\boldsymb
 $$
 \min_{\boldsymbol{\alpha}\in\mathbb{R}^{p-1}}\left\{ \frac{1}{2}\boldsymbol{\alpha'\Omega}_{11}^{-1}\boldsymbol{\alpha} + \boldsymbol{\alpha}'\mathbf{s}_{12} + \lambda\left\Vert \boldsymbol{\alpha}\right\Vert _1 \right\}
 $$
-the minimizer of this problem $\hat{\boldsymbol{\alpha}}$ can then be used to derive the estimation for $\boldsymbol{\omega}_{12}$: $$\hat{\boldsymbol{\omega}}_{12} = \frac{\hat{\boldsymbol{\alpha}}}{w_{22}}$$, then we can update $\omega_{22}$ as before via $$ \hat{\omega}_{22} = \frac{1}{w_{22}} + \hat{\boldsymbol{\omega}}_{12}'\boldsymbol{\Theta}^{-1}_{11} \hat{\boldsymbol{\omega}}_{12}$$ with $w_{22}=s_{22}+\lambda$. Another problem is how to obtain $\boldsymbol{\Omega}^{-1}_{11}$: as the iterations proceed, maintain $\mathbf{W}=\boldsymbol{\Omega}^{-1}$, and $\boldsymbol{\Omega}^{-1}_{11}$ can be derived from $$ \boldsymbol{\Omega}^{-1}_{11}=\mathbf{W}_{11}-\frac{\mathbf{w}_{12}\mathbf{w}}{} $$
+the minimizer of this problem $\hat{\boldsymbol{\alpha}}$ can then be used to derive the estimation for $\boldsymbol{\omega}_{12}$: $$\hat{\boldsymbol{\omega}}_{12} = \frac{\hat{\boldsymbol{\alpha}}}{w_{22}}$$, then we can update $\omega_{22}$ as before via $$ \hat{\omega}_{22} = \frac{1}{w_{22}} + \hat{\boldsymbol{\omega}}_{12}'\boldsymbol{\Theta}^{-1}_{11} \hat{\boldsymbol{\omega}}_{12}$$ with $w_{22}=s_{22}+\lambda$. Another problem is how to obtain $\boldsymbol{\Omega}^{-1}_{11}$: as the iterations proceed, maintain $\mathbf{W}=\boldsymbol{\Omega}^{-1}$, and $\boldsymbol{\Omega}^{-1}_{11}$ can be derived from $$ \boldsymbol{\Omega}^{-1}_{11}=\mathbf{W}_{11}-\frac{\mathbf{w}_{12}\mathbf{w}_{12}'}{w_{22}} $$
+once $\boldsymbol{\omega}_{12}$ is updated, the \myhl[myblue]{\textbf{\textit{entire}}} working covariance matrix $\mathbf{W}$ is updated using $\boldsymbol{\Omega}^{-1}_{11}$
 
 \newpage
 \bibliographystyle{plainnat}
