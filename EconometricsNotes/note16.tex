@@ -251,7 +251,7 @@ once $\boldsymbol{\omega}_{12}$ is updated, the \myhl[myblue]{\textbf{\textit{en
             \item[c] solve $\min_{\boldsymbol{\alpha}\in\mathbb{R}^{p-1}}\left\{ \frac{1}{2}\boldsymbol{\alpha'\Omega}_{11}^{-1}\boldsymbol{\alpha} + \boldsymbol{\alpha}'\mathbf{s}_{12} + \lambda\left\Vert \boldsymbol{\alpha}\right\Vert _1 \right\} $ for $\boldsymbol{\alpha}$, using as warm starts the solution from the previous round of row/column updates. Then update $\hat{\boldsymbol{\omega}_{12}} = \hat{\boldsymbol{\alpha}}/w_{22}$ and $\hat{\omega_{22}}$
             \item[d] update $\boldsymbol{\Omega}$ and $\mathbf{W}$, ensuring that $\boldsymbol{\Omega}\mathbf{W} = \mathbf{I}_p$
         \end{itemize}
-        \item[3] d
+        \item[3] output the solution: precision matrix $\boldsymbol{\Omega}$ and its exact inverse, covariance matrix $\mathbf{W}$
     \end{itemize}
 \end{algorithm}
 
