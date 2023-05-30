@@ -239,7 +239,22 @@ $$
 \min_{\boldsymbol{\alpha}\in\mathbb{R}^{p-1}}\left\{ \frac{1}{2}\boldsymbol{\alpha'\Omega}_{11}^{-1}\boldsymbol{\alpha} + \boldsymbol{\alpha}'\mathbf{s}_{12} + \lambda\left\Vert \boldsymbol{\alpha}\right\Vert _1 \right\}
 $$
 the minimizer of this problem $\hat{\boldsymbol{\alpha}}$ can then be used to derive the estimation for $\boldsymbol{\omega}_{12}$: $$\hat{\boldsymbol{\omega}}_{12} = \frac{\hat{\boldsymbol{\alpha}}}{w_{22}}$$, then we can update $\omega_{22}$ as before via $$ \hat{\omega}_{22} = \frac{1}{w_{22}} + \hat{\boldsymbol{\omega}}_{12}'\boldsymbol{\Theta}^{-1}_{11} \hat{\boldsymbol{\omega}}_{12}$$ with $w_{22}=s_{22}+\lambda$. Another problem is how to obtain $\boldsymbol{\Omega}^{-1}_{11}$: as the iterations proceed, maintain $\mathbf{W}=\boldsymbol{\Omega}^{-1}$, and $\boldsymbol{\Omega}^{-1}_{11}$ can be derived from $$ \boldsymbol{\Omega}^{-1}_{11}=\mathbf{W}_{11}-\frac{\mathbf{w}_{12}\mathbf{w}_{12}'}{w_{22}} $$
-once $\boldsymbol{\omega}_{12}$ is updated, the \myhl[myblue]{\textbf{\textit{entire}}} working covariance matrix $\mathbf{W}$ is updated using $\boldsymbol{\Omega}^{-1}_{11}$
+once $\boldsymbol{\omega}_{12}$ is updated, the \myhl[myblue]{\textbf{\textit{entire}}} working covariance matrix $\mathbf{W}$ is updated using $\boldsymbol{\Omega}^{-1}_{11}$. This procedure, the so-called primal graphical lasso, can be represented in the following algorithm:
+
+\begin{algorithm}{P-GLasso Algorithm}{pglasso_algorithm}
+    \begin{itemize}
+        \item[1] Initialize $\mathbf{W} = \mathrm{diag}(\mathbf{S}) + \lambda\mathbf{I}$ and $\boldsymbol{\Omega} = \mathbf{W}^{-1}$
+        \item[2] Cycle around the columns repeatedly, performing the following steps till convergence:
+        \begin{itemize}
+            \item[a] rearrange the rows/columns so that the target column is the last (implicitly)
+            \item[b] compute $\mathbf{\Omega}^{-1}_{11}$ using $\boldsymbol{\Omega}^{-1}_{11}=\mathbf{W}_{11}-\frac{\mathbf{w}_{12}\mathbf{w}_{12}'}{w_{22}}$
+            \item[c] solve $\min_{\boldsymbol{\alpha}\in\mathbb{R}^{p-1}}\left\{ \frac{1}{2}\boldsymbol{\alpha'\Omega}_{11}^{-1}\boldsymbol{\alpha} + \boldsymbol{\alpha}'\mathbf{s}_{12} + \lambda\left\Vert \boldsymbol{\alpha}\right\Vert _1 \right\} $ for $\boldsymbol{\alpha}$, using as warm starts the solution from the previous round of row/column updates. Then update $\hat{\boldsymbol{\omega}_{12}} = \hat{\boldsymbol{\alpha}}/w_{22}$ and $\hat{\omega_{22}}$
+            \item[d] update $\boldsymbol{\Omega}$ and $\mathbf{W}$, ensuring that $\boldsymbol{\Omega}\mathbf{W} = \mathbf{I}_p$
+        \end{itemize}
+        \item[3] d
+    \end{itemize}
+\end{algorithm}
+
 
 \newpage
 \bibliographystyle{plainnat}
