@@ -223,6 +223,15 @@ notice that after solving for $\boldsymbol{\beta}$ and updating $\mathbf{w}_{12}
 \end{algorithm}
 
 \section{What Is GLasso Solving?}
+Again, consider the optimization problem 
+\begin{equation*}
+    \min_{\boldsymbol{\Omega}\geq \mathbf{0}} -\log \det (\boldsymbol{\Omega}) + \mathrm{tr}(\mathbf{S}\boldsymbol{\Omega}) +\rho\left\Vert \boldsymbol{\Omega} \right\Vert _1 
+\end{equation*}
+The first-order optimality condition gives
+\begin{align*}
+    &\mathbf{0} \in \boldsymbol{\Omega}^{-1} - \mathbf{S} -\lambda \boldsymbol{\Gamma}
+    %\Rightarrow & \boldsymbol{\Omega}^{-1}_{i,i} = \mathbf{S}_{i,i} + \lambda, \ 1\leq i \leq p & \text{in diagonal entries (self-loop), }1\in\partial\left\vert \boldsymbol{\Omega}_{i,i} \right\vert
+\end{align*}
 
 
 \paragraph*{Issues of GLasso method}:
