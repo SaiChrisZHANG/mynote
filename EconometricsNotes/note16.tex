@@ -232,7 +232,11 @@ and its stationarity condition
     &\mathbf{0} = \boldsymbol{\Omega}^{-1} - \mathbf{S} -\lambda \boldsymbol{\Gamma}
     %\Rightarrow & \boldsymbol{\Omega}^{-1}_{i,i} = \mathbf{S}_{i,i} + \lambda, \ 1\leq i \leq p & \text{in diagonal entries (self-loop), }1\in\partial\left\vert \boldsymbol{\Omega}_{i,i} \right\vert
 \end{align*}
-
+rewrite the stationarity condition
+\begin{align*}
+    \mathbf{0} &= \boldsymbol{\Omega}^{-1} - \mathbf{S} -\lambda \boldsymbol{\Gamma} = \boldsymbol{\Omega} - \left(\mathbf{S}+ \lambda\boldsymbol{\Gamma}\right)^{-1}
+\end{align*}
+since $\boldsymbol{\Gamma}=\mathrm{sign}(\boldsymbol{\Omega})$, write $\tilde{\boldsymbol{\Gamma}}=\lambda \boldsymbol{\Gamma}$, then we have $\left\Vert \tilde{\boldsymbol{\Gamma}} \right\Vert _{\infty}\leq \lambda$. Denote 
 
 
 \paragraph*{Issues of GLasso method}:
