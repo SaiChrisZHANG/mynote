@@ -129,8 +129,8 @@ where $\boldsymbol{\Gamma}$ is a matrix of component-wise signs of $\boldsymbol{
         \in  [-1,1], &\omega_{jk}=0
     \end{cases}
 \end{align*}
-since in a graph, we always have that, following the global stationary conditions, $\omega_{jj}>0$, which implies that 
-\begin{align}\label{eq:ghlasso_stationary_condition}
+since in a graph, we always have that, following the global stationarity conditions, $\omega_{jj}>0$, which implies that 
+\begin{align}\label{eq:ghlasso_stationarity_condition}
     w_{ii} &= s_{ii} + \lambda & i=1,\cdots,p
 \end{align}
 where we denote a working version of $\boldsymbol{\Omega}^{-1}$ as $\mathbf{W}$.
@@ -182,7 +182,7 @@ Consider a \myhl[myblue]{\textbf{blockwise}} step: suppose we fix all but the la
      \end{pmatrix}
 \end{align*}
 
-then, by the partitioned optimality condition, we have\footnote{For Eq.\ref{eq:modified_glasso_conditions}, by Eq.\ref{eq:ghlasso_stationary_condition}, we know that $w_{22}=s_{22}+\lambda$, which is fixed.}:
+then, by the partitioned optimality condition, we have\footnote{For Eq.\ref{eq:modified_glasso_conditions}, by Eq.\ref{eq:ghlasso_stationarity_condition}, we know that $w_{22}=s_{22}+\lambda$, which is fixed.}:
 \begin{align}\label{eq:glasso_conditions}
     \mathbf{0} &= -\mathbf{w}_{12} + \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12} = \mathbf{W}_{11}\frac{\boldsymbol{\omega}_{12}}{\omega_{22}}+ \mathbf{s}_{12}+\lambda \boldsymbol{\gamma}_{12}
 \end{align}
@@ -227,11 +227,12 @@ Again, consider the optimization problem
 \begin{equation*}
     \min_{\boldsymbol{\Omega}\geq \mathbf{0}} -\log \det (\boldsymbol{\Omega}) + \mathrm{tr}(\mathbf{S}\boldsymbol{\Omega}) +\rho\left\Vert \boldsymbol{\Omega} \right\Vert _1 
 \end{equation*}
-The first-order optimality condition gives
+and its stationarity condition
 \begin{align*}
-    &\mathbf{0} \in \boldsymbol{\Omega}^{-1} - \mathbf{S} -\lambda \boldsymbol{\Gamma}
+    &\mathbf{0} = \boldsymbol{\Omega}^{-1} - \mathbf{S} -\lambda \boldsymbol{\Gamma}
     %\Rightarrow & \boldsymbol{\Omega}^{-1}_{i,i} = \mathbf{S}_{i,i} + \lambda, \ 1\leq i \leq p & \text{in diagonal entries (self-loop), }1\in\partial\left\vert \boldsymbol{\Omega}_{i,i} \right\vert
 \end{align*}
+
 
 
 \paragraph*{Issues of GLasso method}:
