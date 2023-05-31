@@ -239,8 +239,17 @@ rewrite the stationarity condition
 since $\boldsymbol{\Gamma}=\mathrm{sign}(\boldsymbol{\Omega})$, write $\tilde{\boldsymbol{\Gamma}}=\lambda \boldsymbol{\Gamma}$, we have $\left\Vert \tilde{\boldsymbol{\Gamma}} \right\Vert _{\infty}\leq \lambda$. Denote the element-wise absolute value matrix of $\boldsymbol{\Omega}$ as $\mathrm{abs}(\boldsymbol{\Omega})$, then let $\tilde{\boldsymbol{\Gamma}} = \lambda \boldsymbol{\Gamma}$, $\mathbf{P}=\mathrm{abs}(\boldsymbol{\Omega})$, we have 
 \begin{align*}
     \mathbf{0} &= \boldsymbol{\Omega} - \left(\mathbf{S}+ \lambda\boldsymbol{\Gamma}\right)^{-1}\\
-    &= \mathbf{P}\cdot \mathrm{sign}(\tilde{\boldsymbol{\Gamma}}) - (\mathbf{S}+\tilde{\boldsymbol{\Gamma}})^{-1}
+    &= \mathbf{P} \circ \mathrm{sign}(\tilde{\boldsymbol{\Gamma}}) - (\mathbf{S}+\tilde{\boldsymbol{\Gamma}})^{-1}
 \end{align*}
+and mechanically, we also have
+\begin{align*}
+    \mathbf{P} \circ \left(\mathrm{abs}(\tilde{\boldsymbol{\Gamma}}) -\lambda\mathbf{1}_p\mathbf{1}'_p \right) &= \mathbf{0} \\
+    \left\Vert \tilde{\boldsymbol{\Gamma}} \right\Vert _{\infty} &\leq \lambda
+\end{align*}
+together, these are just hte KKT optimality condition for the following box-constrained SDP
+\begin{equation}
+    \max_{\tilde{\boldsymbol{\Gamma}}:\left\Vert \tilde{\boldsymbol{\Gamma}} \right\Vert _{\infty}\leq \lambda} g(\tilde{\boldsymbol{\Gamma}}) \coloneq \log\det (\mathbf{S}+\tilde{\boldsymbol{\Gamma}}) + p
+\end{equation}
 
 
 \paragraph*{Issues of GLasso method}:
