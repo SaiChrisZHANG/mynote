@@ -250,7 +250,7 @@ together, these are just hte KKT optimality condition for the following box-cons
 \begin{equation}
     \max_{\tilde{\boldsymbol{\Gamma}}:\left\Vert \tilde{\boldsymbol{\Gamma}} \right\Vert _{\infty}\leq \lambda} g(\tilde{\boldsymbol{\Gamma}}) \coloneq \log\det (\mathbf{S}+\tilde{\boldsymbol{\Gamma}}) + p
 \end{equation}
-with the transformation $\mathbf{S}+\tilde{\boldsymbol{\Gamma}} = \boldsymbol{\Omega}^{-1}$. Essentially, this is the dual problem of the initial optimization problem.
+with the transformation $\mathbf{S}+\tilde{\boldsymbol{\Gamma}} = \boldsymbol{\Omega}^{-1}$. Essentially, this is the dual problem of the initial optimization problem, both of them are solved by the GLasso algorithm.
 
 \paragraph*{Issues of GLasso method}:
 \begin{itemize}
@@ -295,6 +295,12 @@ once $\boldsymbol{\omega}_{12}$ is updated, the \myhl[myblue]{\textbf{\textit{en
     \end{itemize}
 \end{algorithm}
 
+\subsection{Innovated Scalable Efficient Estimation}
+Now, we try to tackle the high-dimesnionality issues: $\boldsymbol{\Sigma}^{-1}$ does \textbf{not} exist when $p>n$. Again, 
+$$
+\mathbf{x} \sim \mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})
+$$
+consider a linear transformation where $\tilde{\mathbf{x}} = \boldsymbol{\Omega}\mathbf{x}$, 
 
 \newpage
 \bibliographystyle{plainnat}

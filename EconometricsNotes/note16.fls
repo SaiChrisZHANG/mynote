@@ -1,15 +1,15 @@
-PWD /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes
+PWD /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.tex
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.log
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.tex
+OUTPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.log
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/settings.tex
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/settings.tex
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/settings.tex
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/settings.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -327,9 +327,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libr
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zpltlf.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zpltlf.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
+OUTPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxexa.fd
@@ -346,14 +346,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.pdf
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
-OUTPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+OUTPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.pdf
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+OUTPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -585,11 +585,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbmia.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxbmia.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxbmia.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplb-x.tfm
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.bbl
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.bbl
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
-INPUT /Users/admin/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.bbl
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.bbl
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.aux
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
+INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note16.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc
