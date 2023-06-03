@@ -300,7 +300,10 @@ Now, we try to tackle the high-dimesnionality issues: $\boldsymbol{\Sigma}^{-1}$
 $$
 \mathbf{x} \sim \mathcal{N}(\mathbf{0},\boldsymbol{\Sigma})
 $$
-consider a linear transformation where $\tilde{\mathbf{x}} = \boldsymbol{\Omega}\mathbf{x}$, 
+consider a linear transformation where $\tilde{\mathbf{x}} = \boldsymbol{\Omega}\mathbf{x}$ ($\boldsymbol{\Omega}$ is still the precision matrix $\boldsymbol{\Sigma}^{-1}$), and 
+$$
+\mathrm{cov}(\tilde{\mathbf{x}}) = \boldsymbol{\Omega}\mathrm{cov}(\mathbf{x})\boldsymbol{\Omega} = \boldsymbol{\Omega}\boldsymbol{\Sigma}\boldsymbol{\Omega}=\boldsymbol{\Omega}
+$$
 
 \newpage
 \bibliographystyle{plainnat}
