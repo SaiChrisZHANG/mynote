@@ -321,6 +321,11 @@ where $\boldsymbol{\eta}_A = \mathbf{x}_A+ \boldsymbol{\Omega}_A^{-1}\boldsymbol
     \mathbf{x}_A\mid \mathbf{x}_{A^C} \sim \mathcal{N}\left( -\boldsymbol{\Omega}_A^{-1}\boldsymbol{\Omega}_{A,A^C}\mathbf{x}_{A^C},\boldsymbol{\Omega}_A^{-1} \right)
     $$
 \end{proposition}
+Prop.\ref{prop:cond_disc_subvec} gives a multivariate linear regression model:
+$$
+\mathbf{x}_A = \mathbf{C}'_A\mathbf{x}_{A^C}+\boldsymbol{\eta}_A
+$$
+where $\mathbf{C}_A=-\boldsymbol{\Omega}_{A^C,A}\boldsymbol{\Omega}^{-1}_A$ is the coefficient matrix, and $\boldsymbol{\eta}_A$ is model errors with Gaussian distribution $\mathcal{N}(\mathbf{0},\boldsymbol{\Omega}_A^{-1})$
 
 \newpage
 \bibliographystyle{plainnat}
