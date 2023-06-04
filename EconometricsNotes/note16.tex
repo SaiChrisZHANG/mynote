@@ -329,9 +329,12 @@ where $\mathbf{C}_A=-\boldsymbol{\Omega}_{A^C,A}\boldsymbol{\Omega}^{-1}_A$ is t
 
 \begin{algorithm}{ISEE Algorithm}{isee}
     \begin{itemize}
-        \item[1] Let $(A_l)^L_{l=1}$ be a partition of index set $\left\{ 1,\cdots,p \right\}$ 
+        \item[1] Let $(A_l)^L_{l=1}$ be a partition of index set $\left\{ 1,\cdots,p \right\}$, s.t. $\bigcup ^L_{l=1}A_l=\left\{1,\cdots,p \right\}$
+        \item[2] estimate $\boldsymbol{\eta}_{A_l}$ and then obtain estimated $\tilde{\mathbf{x}}_{A_l}$
+        \item[3] stack all estimated sub-vectors $\tilde{\mathbf{x}}_{A_l}$ together to obtain $\tilde{\mathbf{x}}$
     \end{itemize}
 \end{algorithm}
+ISEE algorithm breaks large-scale precision estimation into small-scale linear regression problems, each of which is computationally efficient and effective.
 
 \newpage
 \bibliographystyle{plainnat}
