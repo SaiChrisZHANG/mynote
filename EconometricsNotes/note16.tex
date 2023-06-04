@@ -334,7 +334,9 @@ where $\mathbf{C}_A=-\boldsymbol{\Omega}_{A^C,A}\boldsymbol{\Omega}^{-1}_A$ is t
         \item[3] stack all estimated sub-vectors $\tilde{\mathbf{x}}_{A_l}$ together to obtain $\tilde{\mathbf{x}}$
     \end{itemize}
 \end{algorithm}
-ISEE algorithm breaks large-scale precision estimation into small-scale linear regression problems, each of which is computationally efficient and effective.
+ISEE algorithm breaks large-scale precision estimation into \textbf{\myhl[myblue]{small-scale linear regression problems}}, each of which is computationally efficient and effective.
+
+\paragraph*{Estimation} for the $n\times p$ data matrix $\mathbf{X}=\left(\mathbf{x}_1,\cdots,\mathbf{x}_n\right)'$, we construct the linear transformation $$ \tilde{\mathbf{X}} = \left( \tilde{\mathbf{x}}_1,\cdots,\tilde{\mathbf{x} }_n = \mathbf{X}\boldsymbol{\Omega} \right) $$
 
 \newpage
 \bibliographystyle{plainnat}
