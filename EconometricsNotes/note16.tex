@@ -345,6 +345,7 @@ and the corresponding sub-matrix $\tilde{\mathbf{X}}_A$ can be written as
 $$
 \tilde{\mathbf{X}}_A = (\mathbf{X}\boldsymbol{\Omega})_A = \mathbf{X}_A\boldsymbol{\Omega}_A + \mathbf{X}_{A^C}\boldsymbol{\Omega}_{A^C,A} = \left( \mathbf{X}_A+\mathbf{X}_{A^C}\boldsymbol{\Omega}_{A^C,A}\boldsymbol{\Omega}^{-1}_A \right)\boldsymbol{\Omega}_A = \mathbf{E}_A\boldsymbol{\Omega}_A
 $$
+Sparsity is achieved bia scaled Lasso: for each node $j$ in index set $A$, $$ \mathbf{X}_j = \mathbf{A^C}\beta_j + \mathbf{E}_j $$ where $\beta_j$ is the column of $\mathbf{C}_A$ corresponds to node $j$.
 
 \newpage
 \bibliographystyle{plainnat}
