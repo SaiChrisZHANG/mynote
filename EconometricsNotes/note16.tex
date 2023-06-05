@@ -352,7 +352,8 @@ Sparsity is achieved bia scaled Lasso: for each node $j$ in index set $A$, $$ \m
         \left(\hat{\boldsymbol{\beta}}_j,\hat{\theta}_j^{1/2}\right) &= \arg\min_{\boldsymbol{\beta}\in\mathbf{R}^{p-\left\vert A \right\vert },\sigma\geq 0} \left\{ \frac{\left\Vert \mathbf{X}_j-\mathbf{X}_{A^C} \boldsymbol{\beta} \right\Vert^2_2}{2n\sigma} + \frac{\sigma}{2} + \lambda\left\Vert \boldsymbol{\beta}_*\right\Vert _1 \right\}
     \end{align*}
     where $\boldsymbol{\beta}_*$ is component-wise product of $\boldsymbol{\beta}$ and $\left( \frac{1}{\sqrt{n}}\left\Vert \mathbf{X}_k \right\Vert _2 \right)_{k\in A^C}$, and the penalizing factor is $\lambda = C\left( \frac{2\log p}{n} \right)$.
-    \item after obtaining $\hat{\boldsymbol{\beta}}_j$, get the estimation of the precision matrix $\hat{\boldsymbol{\Omega}}_A$ $$ \hat{\Omega}_A = \left(\frac{1}{n}\hat{\mathbf{E}}'_A\hat{\mathbf{E}}_A\right)^{-1} $$ where $\hat{\mathbf{E}}_j = \mathbf{X}_j -\mathbf{X}_{A^C}\hat{\boldsymbol{\beta}}_j$
+    \item after obtaining $\hat{\boldsymbol{\beta}}_j$, get the estimation of the (partitioned) precision matrix $\hat{\boldsymbol{\Omega}}_A$ $$ \hat{\Omega}_A = \left(\frac{1}{n}\hat{\mathbf{E}}'_A\hat{\mathbf{E}}_A\right)^{-1} $$ where $\hat{\mathbf{E}}_j = \mathbf{X}_j -\mathbf{X}_{A^C}\hat{\boldsymbol{\beta}}_j$, $\hat{\mathbf{E}}_A=\left( \hat{\mathbf{E}}_j \right)_{j\in A}$
+    \item for the whole partition $(A_l)^L_{l=1}$, we have $\hat{\mathbf{X}} = (\hat{\mathbf{X}}_{A_l})_{1\leq l\leq L}$ where $\hat{\mathbf{X}}_{A_l}=\hat{\mathbf{E}}_{A_l}\hat{\boldsymbol{\Omega}}_{A_l}$, then the initital estiation of the whole precision matrix is $\hat{\Omega}_{ISEE,ini} = \frac{1}{n}\hat{\mathbf{X}}'\hat{\mathbf{X}}$
 \end{itemize} 
 
 \newpage
