@@ -337,6 +337,11 @@ where $\mathbf{C}_A=-\boldsymbol{\Omega}_{A^C,A}\boldsymbol{\Omega}^{-1}_A$ is t
 ISEE algorithm breaks large-scale precision estimation into \textbf{\myhl[myblue]{small-scale linear regression problems}}, each of which is computationally efficient and effective.
 
 \paragraph*{Estimation} for the $n\times p$ data matrix $\mathbf{X}=\left(\mathbf{x}_1,\cdots,\mathbf{x}_n\right)'$, we construct the linear transformation $$ \tilde{\mathbf{X}} = \left( \tilde{\mathbf{x}}_1,\cdots,\tilde{\mathbf{x} }_n \right) = \mathbf{X}\boldsymbol{\Omega} $$
+then the multivariate linear regression model by matrix notation is 
+$$
+\mathbf{X}_A = \mathbf{X}_{A^C}\mathbf{C}_A+\mathbf{E}_A
+$$
+and the corresponding sub-matrix $\tilde{\mathbf{X}}_A$ can be written as
 
 \newpage
 \bibliographystyle{plainnat}
