@@ -357,9 +357,11 @@ Sparsity is achieved bia scaled Lasso: for each node $j$ in index set $A$, $$ \m
     \item next, introduce a threshold $\tau \geq 0$, define $$ \hat{\boldsymbol{\Omega}}_{ISEE,g} = T_{\tau}\left( \hat{\boldsymbol{\Omega}}_{ISEE,ini} \right) $$ where $T_{\tau}(\mathbf{B}) = \left( b_{jk}\mathbf{1}_{\left\vert b_{jk}\right\vert \geq \tau} \right)$ for matrix $\mathbf{B}=\left(b_{jk}\right)$, then estimate the structure $\mathbf{E}$ as $\hat{\mathbf{E}}_{ISEE}=\mathrm{supp}\left( \hat{\boldsymbol{\Omega}}_{ISEE,g}\right)$. One can then use the cross validation method to choose the optimal threshold:
     \begin{itemize}
         \item[-] randomly split sample of $n$ rows into 2 samples of $n_1$ and $n_2$, repeat $N_1$ times. Denote $\hat{\Omega}^{1,\nu}_{ISEE,ini},\hat{\Omega}^{2,\nu}_{ISEE,ini}$ the corresponding covariance matrices
-        \item[-] choose $\tau$ by minimizing $$ \mathcal{R}(\tau) $$
+        \item[-] choose $\tau$ by minimizing $$ \mathcal{R}(\tau) = \frac{1}{N_1}\sum^{N_1}_{\nu=1}\left\Vert T_{\tau}\left( \hat{\Omega}^{1,\nu}_{ISEE,ini} \right) - \hat{\Omega}^{1,\nu}_{ISEE,ini} \right\Vert^2$$
     \end{itemize}
 \end{itemize} 
+
+\section{Heterogeneous Graphical Networks}
 
 \newpage
 \bibliographystyle{plainnat}
