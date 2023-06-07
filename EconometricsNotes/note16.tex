@@ -366,7 +366,12 @@ Next, we introduce heterogeneity into this problem: the samples are now drawn fr
 \begin{align*}
     \mathbf{X}^{(t)} = \left( \mathbf{X}^{(t)}_1,\cdots,\mathbf{X}^{(t)}_p \right) &\sim \mathcal{N}\left(\mathbf{0},\left(\boldsymbol{\Omega}^{(t)}\right)^{-1}\right) & t&=1,\cdots, k
 \end{align*}
-here the number of subpopulations $k$, like the dimensionality $p$, could also be large.
+Some simple observations on this problem are
+\begin{itemize}
+    \item For each node $1\leq j \leq p$ in graph $1\leq t\leq k$ $$ \mathbf{X}^{(t)}_j\mid \mathbf{X}^{(t)}_{-j} \sim \mathcal{N}\left( {\mathbf{X}^{(t)}_{-j} }'\mathbf{C}^{(t)}_j,\frac{1}{\omega_{j,j}^{(t)}} \right) $$ 
+\end{itemize}
+
+here the number of subpopulations $k$, like the dimensionality $p$, could also be large. Again, we apply the same idea of ISEE,
 
 \newpage
 \bibliographystyle{plainnat}
