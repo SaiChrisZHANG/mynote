@@ -375,7 +375,20 @@ Some simple observations on this problem are
 Based on these observations, we can turn the problem of multiple-network estimation into a problem of \textbf{high-dimensional multi-response linear regression with heterogeneity}.
 
 \subsection*{Nodewise Heterogeneous Multi-Response Regression}
-
+For each node $1\leq j\leq p$, 
+\begin{align*}
+    \begin{pmatrix}
+        \mathbf{X}_j^{(1)}\\
+        \mathbf{X}_j^{(2)}\\
+        \vdots\\
+        \mathbf{X}_j^{(k)}
+    \end{pmatrix} = \begin{pmatrix}
+        \mathbf{X}_{-j}^{(1)} \\
+        & \mathbf{X}_{-j}^{(2)} \\
+        & & \ddots \\
+        & & & \mathbf{X}_{-j}^{(k)}
+    \end{pmatrix}
+\end{align*}
 
 
 \newpage
