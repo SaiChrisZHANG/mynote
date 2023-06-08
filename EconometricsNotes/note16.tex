@@ -400,6 +400,12 @@ For each node $1\leq j\leq p$,
         \boldsymbol{\epsilon}_j^{(k)}
     \end{pmatrix}
 \end{align*}
+The noises are \myhl[myblue]{\textbf{Heterogeneous}} since $\omega_{j,j}^{(t)}$ generally varies over $1\leq t\leq k$. To tackle this problem with a tuning-free estimation procedure, follow this roadmap:
+\begin{itemize}
+    \item construct estimators based on residuals from the heterogeneous multi-response regressions
+    \item rely on 2 tests (chi-based and linear-functional-based) for common sparsity pattern with optimality 
+    \item develop the scaled iterative thresholding HGSL algorithm with provable convergence for the scalability of Tuning-free heterogeneous inference (THI)
+\end{itemize}
 
 
 \newpage
