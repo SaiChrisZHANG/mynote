@@ -410,7 +410,7 @@ The noises are \myhl[myblue]{\textbf{Heterogeneous}} since $\omega_{j,j}^{(t)}$ 
         \item then get 
         \begin{itemize}
             \item an estimator for $\hat{\omega}_{j,j}^{(t)} = \frac{n^{(t)}}{\sum^{n^{(t)}}_{i=1}\hat{\mathbf{E}}_{i,j}^{(t)'}\hat{\mathbf{E}}_{i,j}^{(t)'}}$
-            \item a bias-corrected statistic for estimating $-\mathrm{Cov}\left(\boldsymbol{\epsilon}^{(t)}_a,\boldsymbol{\epsilon}^{(t)}_b\right)$ $$ T^{(t)}_{n,k,a,b} = \frac{1}{n^{(t)}}\left[ \sum^{n^{(t)}}_{i=1} \right] \hat{\mathbf{E}}_{i,a}^{(t)'} \hat{\mathbf{E}}_{i,b}^{(t)'}$$
+            \item a bias-corrected statistic for estimating $-\mathrm{Cov}\left(\boldsymbol{\epsilon}^{(t)}_a,\boldsymbol{\epsilon}^{(t)}_b\right)$ $$ T^{(t)}_{n,k,a,b} = \frac{1}{n^{(t)}}\left[ \sum^{n^{(t)}}_{i=1} \hat{\mathbf{E}}_{i,a}^{(t)} \hat{\mathbf{E}}_{i,b}^{(t)} + \sum^{n^{(t)}}_{i=1} \left(\hat{\mathbf{E}}_{i,a}^{(t)}\right)^2 \hat{\mathbf{C}}_{b,a}^{(t)} + \sum^{n^{(t)}}_{i=1}\left(\hat{\mathbf{E}}_{i,b}^{(t)}\right)^2 \hat{\mathbf{C}}_{a,b}^{(t)} \right] $$ where bias can occur if $a\neq b$, and the statistic $T^{(t)}_{n,k,a,b}$ asymptotically close to statistic $$ J^{(t)}_{n,k,a,b} = \left[ 1-\omega_{a,a}^{(t)}\left(\hat{\omega}_{a,a}^{(t)}\right)^{-1} - \omega_{b,b}^{(t)}\left( \hat{\omega}_{b,b}^{(t)} \right)^{-1} \right] \frac{\omega_{a,b}^{(t)}}{\omega_{a,a}^{(t)}\omega_{b,b}^{(t)}} $$ which in turn asymptotically close to negative covariance $-\mathrm{Cov}\left(\boldsymbol{\epsilon}^{(t)}_a,\boldsymbol{\epsilon}^{(t)}_b\right)$.
         \end{itemize}
     \end{itemize}
     \item rely on 2 tests (chi-based and linear-functional-based) for common sparsity pattern with optimality 
