@@ -403,6 +403,10 @@ For each node $1\leq j\leq p$,
 The noises are \myhl[myblue]{\textbf{Heterogeneous}} since $\omega_{j,j}^{(t)}$ generally varies over $1\leq t\leq k$. To tackle this problem with a tuning-free estimation procedure, follow this roadmap:
 \begin{itemize}
     \item construct estimators based on residuals from the heterogeneous multi-response regressions
+    \begin{itemize}
+        \item Initial estimation of $\hat{\mathbf{C}}_j^0 = \left( {\hat{\mathbf{C}}_j^{(1)}},\cdots,{\hat{\mathbf{C}}_j^{(k)}} \right)$ Using a tuning-free heterogeneous group square-root Lasso (HGSL) 
+        $$ \hat{\mathbf{C}}^0_1 = \arg\min_{\boldsymbol{\beta}^0 \in \mathbb{R}^{(p-1)k}}\left\{ \sum^k_{t=1}\sqrt{\textcolor{myblue}{Q_t}\left(\boldsymbol{\beta}^{(t)}\right)} + \textcolor{myred}{\lambda}\sum^p_{l=2}\left\Vert \sqrt{\bar{D}_{1(l)}}\boldsymbol{\beta}^0_{(l)} \right\Vert  \right\} $$ where $\textcolor{myblue}{Q_t}\left(\boldsymbol{\beta}^{(t)}\right)$ is the quadratic loss over class $t$.
+    \end{itemize}
     \item rely on 2 tests (chi-based and linear-functional-based) for common sparsity pattern with optimality 
     \item develop the scaled iterative thresholding HGSL algorithm with provable convergence for the scalability of Tuning-free heterogeneous inference (THI)
 \end{itemize}
