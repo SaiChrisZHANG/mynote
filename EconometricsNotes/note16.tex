@@ -407,6 +407,11 @@ The noises are \myhl[myblue]{\textbf{Heterogeneous}} since $\omega_{j,j}^{(t)}$ 
         \item Initial estimation $\hat{\mathbf{C}}_j^0 = \left( {\hat{\mathbf{C}}_j^{(1)'}},\cdots,{\hat{\mathbf{C}}_j^{(k)'}} \right)'$ for the $(p-1)k$ dimensional vector ${\mathbf{C}}_j^0 = \left( {{\mathbf{C}}_j^{(1)'}},\cdots,{{\mathbf{C}}_j^{(k)'}} \right)'$ with the tuning-free heterogeneous group square-root Lasso (HGSL) 
         $$ \hat{\mathbf{C}}^0_1 = \arg\min_{\boldsymbol{\beta}^0 \in \mathbb{R}^{(p-1)k}}\left\{ \sum^k_{t=1}\sqrt{\textcolor{myblue}{Q_t}\left(\boldsymbol{\beta}^{(t)}\right)} + \textcolor{myred}{\lambda}\sum^p_{l=2}\left\Vert \sqrt{\bar{D}_{1(l)}}\boldsymbol{\beta}^0_{(l)} \right\Vert  \right\} $$ where $\textcolor{myblue}{Q_t}\left(\boldsymbol{\beta}^{(t)}\right)$ is the quadratic loss over class $t$.
         \item Get the residuals $\hat{\mathbf{E}}^{(t)}_{i,j} = \mathbf{X}^{(t)}_{i,j} - \mathbf{X}^{(t)'}_{i,-j}\hat{\mathbf{C}}_{j}^{(t)}$ with $1\leq i\leq n^{(t)},1\leq j\leq p$, and $n^{(t)}$ the sample size for graph $t$.
+        \item then get 
+        \begin{itemize}
+            \item an estimator for $\hat{\omega}_{j,j}^{(t)} = \frac{n^{(t)}}{\sum^{n^{(t)}}_{i=1}\hat{\mathbf{E}}_{i,j}^{(t)'}\hat{\mathbf{E}}_{i,j}^{(t)'}}$
+            \item a bias-corrected statistic for estimating $-\mathrm{Cov}\left(\boldsymbol{\epsilon}^{(t)}_a,\boldsymbol{\epsilon}^{(t)}_b\right)$ $$ T^{(t)}_{n,k,a,b} = \frac{1}{n^{(t)}}\left[ \sum^{n^{(t)}}_{i=1} \right] \hat{\mathbf{E}}_{i,a}^{(t)'} \hat{\mathbf{E}}_{i,b}^{(t)'}$$
+        \end{itemize}
     \end{itemize}
     \item rely on 2 tests (chi-based and linear-functional-based) for common sparsity pattern with optimality 
     \item develop the scaled iterative thresholding HGSL algorithm with provable convergence for the scalability of Tuning-free heterogeneous inference (THI)
