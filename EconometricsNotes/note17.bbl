@@ -1,8 +1,16 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{1}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cand{\`e}s et~al.(2018)Cand{\`e}s, Fan, Janson, and
+  Lv]{candes2018panning}
+Emmanuel~J Cand{\`e}s, Jianqing Fan, Lucas Janson, and Jinchi Lv.
+\newblock Panning for gold: `model-x' knockoffs for high dimensional controlled
+  variable selection.
+\newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 80\penalty0 (3):\penalty0 551--577, 2018.
 
 \end{thebibliography}
