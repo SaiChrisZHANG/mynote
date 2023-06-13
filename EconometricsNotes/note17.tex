@@ -15,7 +15,7 @@ where $\boldsymbol{\beta}\in\mathbb{R}^p$ is the unknown vector of coefficients 
     \begin{align*}
         \mathrm{FDR} = \mathbb{E}(\mathrm{FDP}) = \mathbb{E}\left[ \frac{\lvert \hat{\mathcal{S}}\cap \mathcal{H}_0 \rvert}{ \lvert \hat{\mathcal{S}} \rvert } \textcolor{myred}{ =\frac{\#\left\{ j:j\in\hat{\mathcal{S}}\setminus \mathcal{S}\right\} }{\#\left\{ j:j\in\hat{\mathcal{S}}\right\} }} \right]
     \end{align*}
-    where $\mathcal{H}_0$, $\mathbf{X}_j$ is \textit{\underline{null}} iff $\mathbf{Y}$ is independent of $\mathbf{X}_j$ conditional on the other variables $\mathbf{X}_{-j}=\left\{\mathbf{X}_1,\cdots,\mathbf{X}_p\right\}\setminus \left\{\mathbf{X}_j\right\}$. The subset of of all null variables is denoted by $\mathcal{H}_0\subset \left\{1,\cdots,p\right\}$. Variable $\mathbf{X}_j$ is \textit{\underline{non-null}} or \textit{\underline{relevant}}, if $j\in \mathcal{H}_0$
+    where $\mathcal{H}_0\subset \left\{1,\cdots,p\right\}$ is the set of \myhl[myred]{\textbf{{null}}} variables: $\mathbf{X}_j$ is {\textbf{null}} iff $\mathbf{Y}$ is independent of $\mathbf{X}_j$ conditional on the other variables $\mathbf{X}_{-j}=\left\{\mathbf{X}_1,\cdots,\mathbf{X}_p\right\}\setminus \left\{\mathbf{X}_j\right\}$.
 \end{definition}
 
 \citet{candes2018panning}
