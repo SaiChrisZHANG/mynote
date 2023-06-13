@@ -13,7 +13,7 @@ $$
 where $\boldsymbol{\beta}\in\mathbb{R}^p$ is the unknown vector of coefficients and $\boldsymbol{\epsilon}\sim \mathcal{N}(\mathbf{0},\sigma^2\mathbf{I})$. In a high-dimensional problem, we would like to just select a subset of all variables $\hat{S}\subset \left\{ 1,\cdots,p \right\}$ s.t. conditional on $\left\{\mathbf{X}_j\right\}_{j\in\hat{S}}$, $\mathbf{y}$ is \textbf{independent} of all other variables, we can define the \myhl[myblue]{\textbf{False Discovery Rate}} \textbf{(FDR)} in can be defined as 
 \begin{definition}{False Discovery Rate (FDR)}{FDR}
     \begin{align*}
-        \mathrm{FDR} \coloneqq \mathbb{E}\left[ \frac{\lvert \hat{\mathcal{S}}\cap \mathcal{H}_0 \rvert}{ \lvert \hat{\mathcal{S}} \rvert } \textcolor{myred}{ =\frac{\#\left\{ j:j\in\hat{\mathcal{S}}\setminus \mathcal{S}\right\} }{\#\left\{ j:j\in\hat{\mathcal{S}}\right\} }} \right]
+        \mathrm{FDR} = \mathbb{E}(FDP) = \mathbb{E}\left[ \frac{\lvert \hat{\mathcal{S}}\cap \mathcal{H}_0 \rvert}{ \lvert \hat{\mathcal{S}} \rvert } \textcolor{myred}{ =\frac{\#\left\{ j:j\in\hat{\mathcal{S}}\setminus \mathcal{S}\right\} }{\#\left\{ j:j\in\hat{\mathcal{S}}\right\} }} \right]
     \end{align*}
 \end{definition}
 
