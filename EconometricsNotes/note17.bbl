@@ -5,12 +5,10 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Cand{\`e}s et~al.(2018)Cand{\`e}s, Fan, Janson, and
-  Lv]{candes2018panning}
-Emmanuel~J Cand{\`e}s, Jianqing Fan, Lucas Janson, and Jinchi Lv.
-\newblock Panning for gold: `model-x' knockoffs for high dimensional controlled
-  variable selection.
-\newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical
-  Methodology)}, 80\penalty0 (3):\penalty0 551--577, 2018.
+\bibitem[Barber and Candes(2015)]{Barber2015}
+Rina~Foygel Barber and Emmanuel~J. Candes.
+\newblock Controlling the false discovery rate via knockoffs.
+\newblock \emph{Annals of Statistics}, 43\penalty0 (5):\penalty0 2055--2085,
+  2015.
 
 \end{thebibliography}
