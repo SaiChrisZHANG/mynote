@@ -42,7 +42,8 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
     \end{itemize}
     To construct such knockoffs, 
     \begin{itemize}
-        \item Given a proper $\mathbf{s}$, if $n \geq  2p$, then  $$ \tilde{\mathbf{X}} = \mathbf{X}(\mathbf{I}-\boldsymbol{\Sigma}^{-1}\mathrm{diag}\left\{\mathbf{s}\right\}) + \tilde{\mathbf{U}}\mathbf{C} $$ where $\tilde{\mathbf{U}}\in \mathbb{R}^{n\times p}$ is an \myhl[myblue]{\mathbf{orthonormal}} matrix s.t. $\tilde{\mathbf{U}}'\mathbf{X}=\mathbf{0}$ and $\mathbf{C'C}=2\mathrm{diag}\left\{\mathbf{s}\right\} - \mathrm{diag}\left\{\mathbf{s}\right\}\boldsymbol{\Sigma}^{-1}\mathrm{diag}\left\{\mathbf{s}\right\} \geq \mathbf{0}$
+        \item Given a proper $\mathbf{s}$, if $n \geq  2p$, then  $$ \tilde{\mathbf{X}} = \mathbf{X}(\mathbf{I}-\boldsymbol{\Sigma}^{-1}\mathrm{diag}\left\{\mathbf{s}\right\}) + \tilde{\mathbf{U}}\mathbf{C} $$ where $\tilde{\mathbf{U}}\in \mathbb{R}^{n\times p}$ is an \myhl[myblue]{\textbf{orthonormal}} matrix s.t. $\tilde{\mathbf{U}}'\mathbf{X}=\mathbf{0}$ and $\mathbf{C'C}=2\mathrm{diag}\left\{\mathbf{s}\right\} - \mathrm{diag}\left\{\mathbf{s}\right\}\boldsymbol{\Sigma}^{-1}\mathrm{diag}\left\{\mathbf{s}\right\} \geq \mathbf{0}$
+        \item A sufficient and necessary condition for $\tilde{\mathbf{X}}$ to exist: $\mathrm{diag}\left\{\mathbf{s}\right\} \leq 2\boldsymbol{\Sigma}$
     \end{itemize}
 \end{itemize}
 
