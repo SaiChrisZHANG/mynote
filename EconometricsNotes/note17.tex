@@ -45,6 +45,14 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
         \item Given a proper $\mathbf{s}$, if $n \geq  2p$, then  $$ \tilde{\mathbf{X}} = \mathbf{X}(\mathbf{I}-\boldsymbol{\Sigma}^{-1}\mathrm{diag}\left\{\mathbf{s}\right\}) + \tilde{\mathbf{U}}\mathbf{C} $$ where $\tilde{\mathbf{U}}\in \mathbb{R}^{n\times p}$ is an \myhl[myblue]{\textbf{orthonormal}} matrix s.t. $\tilde{\mathbf{U}}'\mathbf{X}=\mathbf{0}$ and $\mathbf{C'C}=2\mathrm{diag}\left\{\mathbf{s}\right\} - \mathrm{diag}\left\{\mathbf{s}\right\}\boldsymbol{\Sigma}^{-1}\mathrm{diag}\left\{\mathbf{s}\right\} \geq \mathbf{0}$
         \item A sufficient and necessary condition for $\tilde{\mathbf{X}}$ to exist: $\mathrm{diag}\left\{\mathbf{s}\right\} \leq 2\boldsymbol{\Sigma}$
     \end{itemize}
+    2 types of knockoffs can be constructed, following these procedures
+    \begin{itemize}
+        \item[T1] \underline{\textbf{Equi-correlated}} knockoffs: set $s_j=2\lambda_{\min}(\boldsymbol{\Sigma}) \wedge 1$ for all $j$, then $\langle \mathbf{X}_j,\tilde{\mathbf{X}}_j \rangle = 1-2\lambda_{\min}(\boldsymbol{\Sigma}) \wedge 1$ for all $j$. This is essentially minimizing $\left\vert \langle \mathbf{X}_j,\tilde{\mathbf{X}}_j \rangle \right\vert$ 
+        \item[T2] \underline{\textbf{SDP}} knockoffs: solve the convex problem \begin{align*}
+            \arg\min_{\mathbf{x}} \sum_j (1-s_j) & & s.t. 0 \leq s_j \leq 1, \mathrm{diag}\left\{ \mathbf{s}\right\}\leq 2\boldsymbol{\Sigma}
+        \end{align*}
+        which is essentially minimizing the average of $ \langle \mathbf{X}_j,\tilde{\mathbf{X}}_j \rangle $ 
+    \end{itemize}
 \end{itemize}
 
 \newpage
