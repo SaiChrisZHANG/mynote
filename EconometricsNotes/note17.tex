@@ -32,11 +32,12 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
     \item Calculate the Gram matrix $\boldsymbol{\Sigma}=\mathbf{X'X}$ for the normalized original variables, where $\Sigma_{jj}=\left\Vert \mathbf{X}_j \right\Vert^2_2 = 1$
     \item Construct the knockoffs $\tilde{\mathbf{X}}$ s.t. 
     \begin{align*}
-        \tilde{\mathbf{X}}'\tilde{\mathbf{X}} &= \boldsymbol{\Sigma} & {\mathbf{X}}'\tilde{\mathbf{X}} = \boldsymbol{\Simga} -\mathrm{diag}\left\{s\right\}
+        \tilde{\mathbf{X}}'\tilde{\mathbf{X}} &= \boldsymbol{\Sigma} & {\mathbf{X}}'\tilde{\mathbf{X}} = \boldsymbol{\Sigma} -\mathrm{diag}\left\{s\right\}
     \end{align*}
     and
     \begin{itemize}
-        \item 
+        \item $\tilde{\mathbf{X}}$ exhibits the \myhl[myblue]{\textbf{same}} covariance structrue as the original design $\mathbf{X}$
+        \item The correlation between distinct original variables and knockoffs are the same as between the originals: $$ \mathbf{X}_j'\tilde{\mathbf{X}}_k = \mathbf{X}_j'{\mathbf{X}}_k,\ \forall j\neq k $$
     \end{itemize}
 \end{itemize}
 
