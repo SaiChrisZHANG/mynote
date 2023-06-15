@@ -34,7 +34,7 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
     \begin{align*}
         \tilde{\mathbf{X}}'\tilde{\mathbf{X}} &= \boldsymbol{\Sigma} & {\mathbf{X}}'\tilde{\mathbf{X}} = \boldsymbol{\Sigma} -\mathrm{diag}\left\{\mathbf{s}\right\}
     \end{align*}
-    and
+    where $\mathbf{s}\in\mathbb{R}^p_{+}$ is a p-dimensional non-negative vector (larger $s_j$ indicates higher power) and
     \begin{itemize}
         \item $\tilde{\mathbf{X}}$ exhibits the \myhl[myblue]{\textbf{same}} covariance structrue as the original design $\mathbf{X}$
         \item The correlation between distinct original variables and knockoffs are the same as between the originals: $$ \mathbf{X}_j'\tilde{\mathbf{X}}_k = \mathbf{X}_j'{\mathbf{X}}_k,\ \forall j\neq k $$
