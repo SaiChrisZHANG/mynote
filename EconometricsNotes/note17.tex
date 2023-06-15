@@ -29,7 +29,15 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
 \section{Barber and Candes (2015)}
 \citet{Barber2015} construct the knockoffs by the following procedure
 \begin{itemize}
-    \item 
+    \item Calculate the Gram matrix $\boldsymbol{\Sigma}=\mathbf{X'X}$ for the normalized original variables, where $\Sigma_{jj}=\left\Vert \mathbf{X}_j \right\Vert^2_2 = 1$
+    \item Construct the knockoffs $\tilde{\mathbf{X}}$ s.t. 
+    \begin{align*}
+        \tilde{\mathbf{X}}'\tilde{\mathbf{X}} &= \boldsymbol{\Simga} & {\mathbf{X}}'\tilde{\mathbf{X}} = \boldsymbol{\Simga} -\mathrm{diag}\left\{s\right\}
+    \end{align*}
+    and
+    \begin{itemize}
+        \item 
+    \end{itemize}
 \end{itemize}
 
 \newpage
