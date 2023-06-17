@@ -21,12 +21,13 @@ where $\boldsymbol{\beta}\in\mathbb{R}^p$ is the unknown vector of coefficients 
 In this note, we consider a series of knockoff-based methods to control FDR. They all follow a common procedure:
 \begin{itemize}
     \item \textbf{\underline{Step 1}}: Construct Knockoffs 
-    \item \textbf{\underline{Step 2}}: Calculate test satistics for both original and knockoff variables
+    \item \textbf{\underline{Step 2}}: Calculate test statistics for both original and knockoff variables
     \item \textbf{\underline{Step 3}}: Calculate a threshold for the test statistics, controling for a desired FDR level
     \item \textbf{\underline{Step 4}}: Select variables that pass the threshold
 \end{itemize}
 
 \section{Barber and Candes (2015)}
+\paragraph{Constructing the knockoffs}
 \citet{Barber2015} construct the knockoffs by the following procedure
 \begin{itemize}
     \item Calculate the Gram matrix $\boldsymbol{\Sigma}=\mathbf{X'X}$ for the normalized original variables, where $\Sigma_{jj}=\left\Vert \mathbf{X}_j \right\Vert^2_2 = 1$
@@ -53,7 +54,10 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
         \end{align*}
         which is essentially minimizing the average of $ \langle \mathbf{X}_j,\tilde{\mathbf{X}}_j \rangle $ 
     \end{itemize}
+    \item
 \end{itemize}
+
+\paragraph{Calculate test statistics}
 
 \newpage
 \bibliographystyle{plainnat}
