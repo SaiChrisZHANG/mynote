@@ -63,7 +63,8 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
     \begin{definition}{Property of Test Statistics $W_j$}{statistic_property}
         The test statistic $W_j$ is said to obey
         \begin{itemize}
-            \item the \myhl[myred]{\textbf{sufficient}}
+            \item the \myhl[myred]{\textbf{sufficient}} property if $\mathbf{W}$ depends \underline{\textit{only}} on the Gram matrix and on feature-response inner products, that is $$ \mathbf{W} = f\left( \begin{bmatrix} \mathbf{X} & \tilde{\mathbf{X}} \end{bmatrix}'\begin{bmatrix} \mathbf{X} & \tilde{\mathbf{X}} \end{bmatrix},\begin{bmatrix} \mathbf{X} & \tilde{\mathbf{X}} \end{bmatrix}'\mathbf{y} \right) $$
+            \item the \myhl[myred]{\textbf{antisymmetry}} property if swapping the original $\mathbf{X}_j$ and its knockoff $\tilde{\mathbf{X}}_j$ has the effect of \textbf{switching the sign} of $W_j$, that is $$ W_j(Z_j,\tilde{Z}_j)= -W_j (\tilde{Z}_j,Z_j) $$
         \end{itemize}
     \end{definition}
 \end{itemize}
