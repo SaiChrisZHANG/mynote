@@ -58,7 +58,7 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
 
 \paragraph{Calculate test statistics} Define and calculate test statistics $W_j$ for each $\beta_j\in\left\{ 1,\cdots,p \right\}$ using $\begin{bmatrix} \mathbf{X} & \tilde{\mathbf{X}} \end{bmatrix}$:
 \begin{itemize}
-    \item the test statistic $W_j$ should be constructed s.t. large positive values are evidence against the null hypothesis $\beta_j =0$, for example, consider a Lasso on $\begin{bmatrix} \mathbf{X} & \tilde{\mathbf{X}} \end{bmatrix}$
+    \item the test statistic $W_j$ should be constructed s.t. large positive values are evidence against the null hypothesis $\beta_j =0$, for example, consider a Lasso on $\begin{bmatrix} \mathbf{X} & \tilde{\mathbf{X}} \end{bmatrix}$ $$ \hat{\beta}(\lambda) = \arg\min_{\mathbf{b}}\left\{ \frac{1}{2}\left\Vert \mathbf{y}-\begin{bmatrix} \mathbf{X} & \tilde{\mathbf{X}} \end{bmatrix} \mathbf{b} \right\Vert^2_2 + \lambda\left\Vert \mathbf{b} \right\Vert \right\} _1 $$
 \end{itemize}
 
 \newpage
