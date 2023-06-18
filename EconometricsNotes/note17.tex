@@ -95,8 +95,24 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
     \end{align*}
     then the knockoff procedure can be interpreted as finding a threshold via $T=\min\left\{t\in \mathcal{W}:\widehat{\mathrm{FDR}}(t)\leq q \right\}$
 \end{itemize}
-The knockoff procedure essentially controls a quantity \myhl[myblue]{\textbf{nearly equal}} to the FDR:
+The knockoff procedure essentially controls a quantity \myhl[myblue]{\textbf{nearly equal}} to the FDR. To control the FDR \myhl[myred]{\textbf{exactly}}, we have, \underline{textbf{knockoff+}} , a more conservative modification of the knockoff procedure, where the threshold is 
+$$
+T = \min\left\{ t\in\mathcal{W}: \frac{\textcolor{myred}{1+}\# \left\{ j:W_j\leq -t \right\}}{\max\left( \# \left\{ j:W_j\geq t \right\},1 \right)} \leq q \right\}
+$$
+the $\textcolor{myred}{+1}$ part makes it harder to reject the null:
+\begin{align*}
+    \mathrm{FDP} &= \frac{\# \left\{ j: \beta_j=0, W_j\geq -T \right\}}{\# \left\{ j: W_j\geq T \right\} \vee 1}\cdot \frac{1+ \# \left\{ j: \beta_j=0, W_j\leq -T \right\}}{1+\# \left\{ j: \beta_j=0, W_j\leq -T \right\}}\\
+    & \leq \frac{1+ \# \left\{ j: W_j\leq -T \right\}}{\# \left\{ j: W_j\geq T \right\}\vee 1} \cdot \frac{\# \left\{ j: \beta_j=0, W_j\geq T \right\}}{1+\# \left\{ j: \beta_j=0, W_j\leq -T \right\}}\\
+    & \leq  q \cdot 1
+\end{align*}
 
+Then, we have the following theorem
+\begin{theorem}{Property of the Knockoff Method}{knockoff_property}
+    For any $q\in[0,1]$, the \myhl[myblue]{\textbf{knockoff}} method satisfies
+    $$
+    \mathbb{E}\left[ \frac{\# \left\{ j: \beta_j=0, j\in \hat{S}}{\# \left\{ j: j\in\hat{S} \right\} + q^{-1}} \right]\leq q
+    $$
+\end{theorem}
 
 
 \newpage
