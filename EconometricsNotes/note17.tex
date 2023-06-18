@@ -93,7 +93,11 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
         \frac{\# \left\{ j:\beta_j=0,W_j\geq t \right\}}{\max\left( \# \left\{ j:W_j\geq t \right\},1 \right)} &\simeq \frac{\# \left\{ j:\beta_j=0,W_j\leq -t \right\}}{\max\left( \# \left\{ j:W_j\geq t \right\},1 \right)}\\
         &\leq  \frac{\# \left\{ j:W_j\leq -t \right\}}{\max\left( \# \left\{ j:W_j\geq t \right\},1 \right)} \coloneq \widehat{\mathrm{FDP}}(t)
     \end{align*}
+    then the knockoff procedure can be interpreted as finding a threshold via $T=\min\left\{t\in \mathcal{W}:\widehat{\mathrm{FDR}}(t)\leq q \right\}$
 \end{itemize}
+The knockoff procedure essentially controls a quantity \myhl[myblue]{\textbf{nearly equal}} to the FDR:
+
+
 
 \newpage
 \bibliographystyle{plainnat}
