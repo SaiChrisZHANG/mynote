@@ -71,7 +71,7 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
 
 \paragraph*{Calculate a threshold for the test statistics} After defining the test statistic, we then
 \begin{itemize}
-    \item 
+    \item Let $q$ be the target FDR, define the data-dependent threshold $T$ as $$ T =\min\left\{ t\in\mathcal{W}: \frac{\# \left\{j:W_j\leq -t \right\}}{\# \left\{j:W_j\geq t \right\} \vee 1} \leq  q \right\} $$ where $\mathcal{W}=\left\{ \left\vert W_j \right\vert: j=1,\cdots,p \right\} \setminus \left\{ 0 \right\}$
 \end{itemize}
 
 \newpage
