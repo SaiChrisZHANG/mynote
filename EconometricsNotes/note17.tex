@@ -84,6 +84,17 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
     \item for each $j=1,\cdots,p$, reject $H_{0,j}:\beta_j=0$ if $W_j\geq T$, the knockoff filter selects the model $$ \hat{S} = \left\{ j:W_j\geq T \right\} $$
 \end{itemize}
 
+\subsection{Intuition and Theory}
+\paragraph*{Why knockoffs work?}
+\begin{itemize}
+    \item $\mathbf{W}$ is constructed (\myhl[myblue]{\textbf{antisymmetry}} and \myhl[myblue]{\textbf{sufficiency}}) such that the signs of the $W_j$'s are i.i.d. random for the null 
+    \item for any threshold $t$, we have $$ \# \left\{ j:\beta_j=0,W_j\geq t \right\} \overset{d}{=} \# \left\{ j:\beta_j=0,W_j\leq -t \right\} $$, and the false discovery proportion (FDP) can be estimated as
+    \begin{align*}
+        \frac{\# \left\{ j:\beta_j=0,W_j\geq t \right\}}{\max\left( \# \left\{ j:W_j\geq t \right\},1 \right)} &\simeq \frac{\# \left\{ j:\beta_j=0,W_j\leq -t \right\}}{\max\left( \# \left\{ j:W_j\geq t \right\},1 \right)}\\
+        &\leq  \frac{\# \left\{ j:W_j\leq -t \right\}}{\max\left( \# \left\{ j:W_j\geq t \right\},1 \right)} \coloneq \widehat{\mathrm{FDP}}(t)
+    \end{align*}
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
