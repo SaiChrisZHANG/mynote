@@ -110,8 +110,13 @@ Then, we have the following theorem
 \begin{theorem}{Property of the Knockoff Method}{knockoff_property}
     For any $q\in[0,1]$, the \myhl[myblue]{\textbf{knockoff}} method satisfies
     $$
-    \mathbb{E}\left[ \frac{\# \left\{ j: \beta_j=0, j\in \hat{S}}{\# \left\{ j: j\in\hat{S} \right\} + q^{-1}} \right]\leq q
+    \mathbb{E}\left[ \frac{\# \left\{ j: \beta_j=0, j\in \hat{S}\right\}}{\# \left\{ j: j\in\hat{S} \right\} + q^{-1}} \right]\leq q
     $$
+    and the \myhl[myred]{\textbf{knockoff+}} method satisfies
+    $$
+    \mathbb{E}\left[ \frac{\# \left\{ j: \beta_j=0, j\in \hat{S}\right\}}{\# \left\{ j: j\in\hat{S} \right\}} \right]\leq q
+    $$
+    in both cases, teh expectation is taken over the Gaussian noise in the model, while treating original variables $\mathbf{X}$ and knockoffs $\tilde{\mathbf{X}}$ as fixed
 \end{theorem}
 
 
