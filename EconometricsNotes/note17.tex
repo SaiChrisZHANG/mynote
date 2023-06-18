@@ -79,7 +79,10 @@ In this note, we consider a series of knockoff-based methods to control FDR. The
     \end{figure}
 \end{itemize}
 
-\paragraph*{title}
+\paragraph*{Variable selection} after building the threshold, 
+\begin{itemize}
+    \item for each $j=1,\cdots,p$, reject $H_{0,j}:\beta_j=0$ if $W_j\geq T$, the knockoff filter selects the model $$ \hat{S} = \left\{ j:W_j\geq T \right\} $$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
