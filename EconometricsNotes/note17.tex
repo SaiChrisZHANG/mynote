@@ -132,7 +132,7 @@ Suppose $\mathbf{X}\sim \mathcal{N}(0,\boldsymbol{\Sigma})$, then $(\mathbf{X},\
         \boldsymbol{\Sigma}-\mathrm{diag}(s) & \boldsymbol{\Sigma}
     \end{pmatrix}
 \end{align*}
-where $\mathrm{diag}(s)$ is any \textbf{diagonal matrix} s.t. $\boldsymbol{G}$ is \myhl[myblue]{\textbf{positive semidefinite}}. For $\mathbf{P}$, the permutation matrix encoding the swap,
+where $\mathrm{diag}(s)$ is any \textbf{diagonal matrix} s.t. $\boldsymbol{G}$ is \myhl[myblue]{\textbf{positive semidefinite}}. The knockoffs constructed this way are named \textbf{MX knockoffs}. For $\mathbf{P}$, the permutation matrix encoding the swap,
 $$
 \mathbf{PGP} = \mathbf{G}
 $$
@@ -146,6 +146,13 @@ where
     \mathbf{V} &= 2\mathrm{diag}(s) - \mathrm{diag}(s)\boldsymbol{\Sigma}^{-1}\mathrm{diag}(s)
 \end{align*}
 
+An important lemma is
+\begin{lemma}{MX Knockoff Construction}{mxknockoff_swapping}
+    For {\textbf{MX knockoffs}}, swapping \myhl[myorange]{\textbf{null}} covariates with their knockoffs would \textbf{not} change the joint distribution of the original covariate $\mathbf{X}$ and their knockoffs $\tilde{\mathbf{X}}$, conditional on the repsonse $\mathbf{Y}$: Take any subset $S\subset \mathcal{H}_0$ of nulls, then
+    $$
+    \left( \mathbf{X},\tilde{\mathbf{X}} \right)\mid \mathbf{y} \overset{\mathrm{d}}{=} \left(\mathbf{X},\tilde{\mathbf{X}}\right)_{\mathrm{swap}(S)}\mid \mathbf{y}
+    $$
+\end{lemma}
 
 \newpage
 \bibliographystyle{plainnat}
