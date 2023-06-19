@@ -136,6 +136,15 @@ where $\mathrm{diag}(s)$ is any \textbf{diagonal matrix} s.t. $\boldsymbol{G}$ i
 $$
 \mathbf{PGP} = \mathbf{G}
 $$
+then we can sample the knockoff vector $\tilde{\mathbf{X}}$ from the conditional distribution
+$$
+\tilde{\mathbf{X}} \mid \mathbf{X} \overset{\mathrm{d}}{=}\mathcal{N}(\mu,\mathbf{V})
+$$
+where 
+\begin{align*}
+    \mu &= \mathbf{X} - \mathbf{X}\boldsymbol{\Sigma}^{-1}\mathrm{diag}(s)\\
+    \mathbf{V} &= 2\mathrm{diag}(s) - \mathrm{diag}(s)\boldsymbol{\Sigma}^{-1}\mathrm{diag}(s)
+\end{align*}
 
 
 \newpage
