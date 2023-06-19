@@ -120,7 +120,12 @@ Then, we have the following theorem
 \end{theorem}
 
 \section{Candes et al. (2018)}
-Another way of constructing knockoffs, introduced by \citet{candes2018panning}, is to 
+Another way of constructing knockoffs, introduced by \citet{candes2018panning}, is by a swapping method:  for the family of random variables $\mathbf{X}=(\mathbf{X}_1,\cdots,\mathbf{X}_p)$ are a new family of random variables $\tilde{\mathbf{X}} = (\tilde{\mathbf{X}}_1,\cdots,\tilde{\mathbf{X}}_p)$ constructed with the following 2 properties:
+\begin{itemize}
+    \item[(a)] for any subset $S \subset \left\{1,\cdots,p \right\}$, $$ (\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap}(S)} \overset{\mathrm{d}}{=}(\mathbf{X},\tilde{\mathbf{X}}) $$
+    \item[(b)] $\tilde{\mathbf{X}}\ind \mathbf{Y}\mid \mathbf{X}$ if there is a response $\mathbf{Y}$
+\end{itemize}
+
 
 
 \newpage
