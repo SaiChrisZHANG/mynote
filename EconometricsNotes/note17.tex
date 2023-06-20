@@ -173,11 +173,18 @@ then the \myhl[myblue]{\textbf{flip sign}} property can be achieved by setting $
     $$
     \min_{b\in\mathbb{R}^{2p}}\frac{1}{2}\lVert y - (\mathbf{X},\tilde{\mathbf{X}})b \rVert^2_2 + \lambda \lVert b \rVert _1
     $$
-    which has solution $ \hat{b}(\lambda) = (\hat{b}_1(\lambda),\cdots,\hat{b}_p(\lambda),\hat{b}_{p+1}(\lambda),\cdots,\hat{b}_{2p}(\lambda)) $, then
+    which has solution $ \hat{b}(\lambda) = (\hat{b}_1(\lambda),\cdots,\hat{b}_p(\lambda),\hat{b}_{p+1}(\lambda),\cdots,\hat{b}_{2p}(\lambda)) $, then the statistic can be constructed as 
     $$
     W_j = Z_j -\tilde{Z}_j = \lvert \hat{b}_j(\lambda) \rvert - \lvert \hat{b}_{j+p}(\lambda) \rvert
     $$
+    and conditional on $\left( \lvert W_1 \rvert,\cdots, \lvert W_p \rvert \right)$, the sign of the null $W_j$s ($j\in \mathcal{H}_0$) are i.i.d. coin flips\footnote{Proof: for a sequence independent random variables $\boldsymbol{\epsilon}=(\epsilon_1,\cdots,\epsilon_p)$ s.t. $\epsilon_j = \pm 1$ with probability $\frac{1}{2}$ if $j\in\mathcal{H}_0$, and $\epsilon_j=1$ otherwise, put $S=\left\{j:\epsilon_j=-1\right\}\subset \mathcal{H}_0$
+    \begin{itemize}
+        \item flip sign property: $W_{\mathrm{swap}(S)} \overset{\Delta}{=}w \left\{ (\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap}(S)},\mathbf{y} \right\} \textcolor{myblue}{\boxed{\overset{\mathrm{d}}{=}}} \epsilon \odot W = (\epsilon_1W1,\cdots,\epsilon_pW_p)$
+        \item Lemma \ref{lemma:mxknockoff_swapping}: $W_{\mathrm{swap}(S)}\overset{\mathrm{d}}{=} W$
+    \end{itemize}
+    which establishes $W \overset{\mathrm{d}}{=} \epsilon \odot W $ }.
 \end{lemma}
+
 
 
 \newpage
