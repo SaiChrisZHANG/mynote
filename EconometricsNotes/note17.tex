@@ -184,6 +184,27 @@ then the \myhl[myblue]{\textbf{flip sign}} property can be achieved by setting $
     \end{itemize}
     which establishes $W \overset{\mathrm{d}}{=} \epsilon \odot W $ }.
 \end{lemma}
+\begin{itemize}
+    \item a large positive value of $W_j$ provides some evidence that the distribution of $\mathbf{Y}$ depends on $\mathbf{X}_j$
+    \item value of $\lambda$ can be chosen in any data-dependent fashion for a pair of $\mathbf{y}$ and $(\mathbf{X},\tilde{\mathbf{X}})$ 
+\end{itemize}
+
+Why \myhl[myblue]{\textbf{i.i.d. coin flips}}? the null $W_j$s are \myhl[myblue]{{\textbf{symmetric}}}
+$$
+ \# \left\{ j: W_j\leq -t,j\in\mathcal{H}_0  \right\} \overset{\mathrm{d}}{=} \# \left\{ j: W_j\geq t,j\in\mathcal{H}_0  \right\}
+$$
+and for any fixed threshold $t>0$
+$$
+\# \left\{ j:W_j\leq -t \right\} \geq \# \left\{ j: W_j\leq -t,j\in\mathcal{H}_0  \right\}
+$$
+so for the false discovery proportion (FDP)
+$$
+{\mathrm{FDP}(t)} = \frac{ {\#\left\{j: W_j\geq t,j\in\mathcal{H}_0 \right\}} }{ \#\left\{ j:W_j\geq t \right\} }
+$$
+an \underline{\textbf{{upward-biased}}} estimate is
+$$
+{\textcolor{myblue}{\widehat{\mathrm{FDP}}(t)}} = \frac{ {\textcolor{myblue}{\# \left\{j: W_j\leq -t \right\}} } }{ \#\left\{ j:W_j\geq t \right\} }
+$$
 
 
 
