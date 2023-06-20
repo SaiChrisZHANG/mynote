@@ -169,7 +169,14 @@ if the components of $\mathbf{T}$ are switched in the same way: $$ (\mathbf{Z},\
 then the \myhl[myblue]{\textbf{flip sign}} property can be achieved by setting $$W_j = f_j(Z_j,\tilde{Z}_j)$$ where $f_j$ is any \myhl[myred]{\textbf{antisymmetric}} function \myhl[myred]{\underline{$f(v,u)=-f(u,v)$}}.
 
 \begin{lemma}{Feature Statistics: Lasso Coefficient Difference (LCD)}{LCD_statistics}
-    
+    Consider the Lasso \textbf{{augmented with \myhl[myorange]{knockoffs}}} 
+    $$
+    \min_{b\in\mathbb{R}^{2p}}\frac{1}{2}\lVert y - (\mathbf{X},\tilde{\mathbf{X}})b \rVert^2_2 + \lambda \lVert b \rVert _1
+    $$
+    which has solution $ \hat{b}(\lambda) = (\hat{b}_1(\lambda),\cdots,\hat{b}_p(\lambda),\hat{b}_{p+1}(\lambda),\cdots,\hat{b}_{2p}(\lambda)) $, then
+    $$
+    W_j = Z_j -\tilde{Z}_j = \lvert \hat{b}_j(\lambda) \rvert - \lvert \hat{b}_{j+p}(\lambda) \rvert
+    $$
 \end{lemma}
 
 
