@@ -154,6 +154,15 @@ An important lemma is
     $$
 \end{lemma}
 
+After constructing the knockoffs, we can construct the feature importance statistics by imposing a \myhl[myblue]{\textbf{flip sign}} property: swapping the $j$th variable with its knockoff has the effect of changing the sign of $W_j$ 
+$$
+ w_j\left\{ (\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap}(S)},\mathbf{y} \right\} = \begin{cases}
+    w_j\left\{ (\mathbf{X},\tilde{\mathbf{X}}),\mathbf{y} \right\}, & j\not\in S \\
+    -w_j \left\{ (\mathbf{X},\tilde{\mathbf{X}}),\mathbf{y} \right\}, & j\in S
+ \end{cases}
+$$
+
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
