@@ -120,7 +120,9 @@ Then, we have the following theorem
 \end{theorem}
 
 \section{Candes et al. (2018)}
-Another way of constructing knockoffs, introduced by \citet{candes2018panning}, is by a swapping method:  for the family of random variables $\mathbf{X}=(\mathbf{X}_1,\cdots,\mathbf{X}_p)$ are a new family of random variables $\tilde{\mathbf{X}} = (\tilde{\mathbf{X}}_1,\cdots,\tilde{\mathbf{X}}_p)$ constructed with the following 2 properties
+Another way of constructing knockoffs, introduced by \citet{candes2018panning}, is by a swapping method: 
+
+\paragraph*{Constructing the knockoffs} for the family of random variables $\mathbf{X}=(\mathbf{X}_1,\cdots,\mathbf{X}_p)$ are a new family of random variables $\tilde{\mathbf{X}} = (\tilde{\mathbf{X}}_1,\cdots,\tilde{\mathbf{X}}_p)$ constructed with the following 2 properties
 \begin{itemize}
     \item for any subset $S \subset \left\{1,\cdots,p \right\}$, $$ (\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap}(S)} \overset{\mathrm{d}}{=}(\mathbf{X},\tilde{\mathbf{X}}) $$
     \item $\tilde{\mathbf{X}} \ind \mathbf{Y}\mid \mathbf{X}$ if there is a response $\mathbf{Y}$
@@ -154,6 +156,7 @@ An important lemma is
     $$
 \end{lemma}
 
+\paragraph*{Calculate test statistics}
 After constructing the knockoffs, we can construct the feature importance statistics by imposing a \myhl[myblue]{\textbf{flip sign}} property: swapping the $j$th variable with its knockoff has the effect of changing the sign of $W_j$ 
 $$
  w_j\left\{ (\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap}(S)},\mathbf{y} \right\} = \begin{cases}
@@ -163,7 +166,12 @@ $$
 $$
 consider a statistic $\mathbf{T}$ for each original and knockoff variable $$ \mathbf{T} \overset{\Delta}{=} (\mathbf{Z},\tilde{\mathbf{Z}}) = (Z_1,\cdots,Z_p,\tilde{Z}_1,\cdots,\tilde{Z}_p) = t\left\{ (\mathbf{X},\tilde{\mathbf{X}}), \mathbf{y}\right\} $$
 if the components of $\mathbf{T}$ are switched in the same way: $$ (\mathbf{Z},\tilde{\mathbf{Z}})_{\mathrm{swap}(S)} = t\left\{ (\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap}(S)},\mathbf{y} \right\} $$
-set $$W_j = f_j(Z_j,\tilde{Z}_j)$$ where $f_j$ is any antisymmetric function (\underline{$f(v,u)=-f(u,v)$}) to achieve the flip sign condition.
+then the \myhl[myblue]{\textbf{flip sign}} property can be achieved by setting $$W_j = f_j(Z_j,\tilde{Z}_j)$$ where $f_j$ is any \myhl[myred]{\textbf{antisymmetric}} function \myhl[myred]{\underline{$f(v,u)=-f(u,v)$}}.
+
+\begin{lemma}{Feature Statistics: Lasso Coefficient Difference (LCD)}{LCD_statistics}
+    
+\end{lemma}
+
 
 \newpage
 \bibliographystyle{plainnat}
