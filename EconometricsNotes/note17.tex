@@ -156,6 +156,23 @@ An important lemma is
     $$
 \end{lemma}
 
+and this leads to 
+\begin{proposition}{Conditional Exchangeability of MX Knockoffs}{mxknockoff_exchangeable}
+    The random variables $ (\tilde{\mathbf{X}}_1,\cdots,\tilde{\mathbf{X}}_p) $ are \myhl[myblue]{\textbf{MX knockoffs}} for $({\mathbf{X}}_1,\cdots,{\mathbf{X}}_p)$ if and only if for any $j\in \left\{1,\cdots,p\right\}$, the pair $({\mathbf{X}}_j,\tilde{\mathbf{X}}_j)$ is \textbf{\underline{exchangeable}} conditional on all the other variables and their knockoffs.
+\end{proposition}
+under Prop.\ref{prop:mxknockoff_exchangeable}, we can use the following algorithm to construct the MX Knockoffs 
+\begin{algorithm}{Sequential Conditional Independent Pairs}{cond_indep_pairs}
+    $j=1$ 
+                        
+    \textbf{while} $j\leq p$ \textbf{do}
+
+    \ \ \ \ \textbf{sample} $\tilde{\mathbf{X}}_j$ from $\mathcal{L}(\mathbf{X}_j\mid \mathbf{X}_{-j},\tilde{\mathbf{X}}_{1:j-1})$
+
+    \ \ \ \  $j=j+1$
+
+    \textbf{end}
+\end{algorithm}
+
 \paragraph*{Calculate test statistics}
 After constructing the knockoffs, we can construct the feature importance statistics by imposing a \myhl[myblue]{\textbf{flip sign}} property: swapping the $j$th variable with its knockoff has the effect of changing the sign of $W_j$ 
 $$
@@ -205,6 +222,7 @@ an \underline{\textbf{{upward-biased}}} estimate is
 $$
 {\textcolor{myblue}{\widehat{\mathrm{FDP}}(t)}} = \frac{ {\textcolor{myblue}{\# \left\{j: W_j\leq -t \right\}} } }{ \#\left\{ j:W_j\geq t \right\} }
 $$
+then Theorem \ref{thm:knockoff_property} applies.
 
 
 
