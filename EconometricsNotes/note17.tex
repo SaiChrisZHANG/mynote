@@ -170,8 +170,12 @@ under Prop.\ref{prop:mxknockoff_exchangeable}, we can use the following algorith
 
     \ \ \ \  $j=j+1$
 
-    \textbf{end}
+    \textbf{end}\footnote{Example with $p=3$\begin{itemize} \item $j=1$: sample $\tilde{\mathbf{X}}_1$ from $\mathcal{L}(\mathbf{X}_1 \mid \mathbf{X}_{2:3})$
+        \item $j=2$: sample $\tilde{\mathbf{X}}_2$ from $\mathcal{L}(\mathbf{X}_2\mid \mathbf{X}_1,\mathbf{X}_3,\tilde{\mathbf{X}}_1)$ 
+        \item $j=3$: sample $\tilde{\mathbf{X}}_3$ from $\mathcal{L}(\mathbf{X}_3\mid \mathbf{X}_{1:2},\tilde{\mathbf{X}}_{1:2})$ \end{itemize} }
 \end{algorithm}
+
+And an \myhl[myblue]{\textbf{approximate}} construction in high-dimensional situation can be achieved via matching the first 2 moments of $(\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap(S)}}$ and $(\mathbf{X},\tilde{\mathbf{X}})$,
 
 \paragraph*{Calculate test statistics}
 After constructing the knockoffs, we can construct the feature importance statistics by imposing a \myhl[myblue]{\textbf{flip sign}} property: swapping the $j$th variable with its knockoff has the effect of changing the sign of $W_j$ 
