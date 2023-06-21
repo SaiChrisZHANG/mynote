@@ -188,7 +188,9 @@ which can be achieved through 2 ways:
     $$
     s^{\mathrm{EQ}}_j = 2\lambda_{\min}(\boldsymbol{\Sigma})\wedge 1,\ \forall j
     $$
-    minimizing the {\textbf{correlation between variable knockoff pairs}} subject to the constraint that all such pairs \underline{\textit{must have the same correlation}}
+    minimizing the {\textbf{correlation between variable knockoff pairs}} subject to the constraint that all such pairs \underline{\textit{must have the same correlation}}.
+
+    \myhl[myblue]{\textbf{ISSUE} with large $p$}: $\lambda_{\min}(\boldsymbol{\Sigma})$ tends to be extremely small: computationally easy, but \textbf{low power} of $s_j^{\mathrm{EQ}}$
     \item \textcolor{myblue}{\underline{\textbf{semidefinite programme}}} construction
     \begin{align*}
         \text{minimize} & & \sum_j\left\vert 1-s_j^{\mathrm{SDP}} \right\vert \\
@@ -196,6 +198,7 @@ which can be achieved through 2 ways:
     \end{align*}
     minimizing the {\textbf{sum of the absolute values}} of variable knockoff correlations between \underline{\textit{all} suitable $s$}
 
+    \myhl[myblue]{\textbf{ISSUE} with large $p$}: SDP (a convex problem) is computationally expensive 
 \end{itemize}
 
 in high-dimensional situation
