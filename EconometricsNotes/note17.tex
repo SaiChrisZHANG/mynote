@@ -175,7 +175,16 @@ under Prop.\ref{prop:mxknockoff_exchangeable}, we can use the following algorith
         \item $j=3$: sample $\tilde{\mathbf{X}}_3$ from $\mathcal{L}(\mathbf{X}_3\mid \mathbf{X}_{1:2},\tilde{\mathbf{X}}_{1:2})$ \end{itemize} }
 \end{algorithm}
 
-And an \myhl[myblue]{\textbf{approximate}} construction in high-dimensional situation can be achieved via matching the first 2 moments of $(\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap(S)}}$ and $(\mathbf{X},\tilde{\mathbf{X}})$,
+And an \myhl[myblue]{\textbf{approximate}} construction can be achieved via matching the first 2 moments of $(\mathbf{X},\tilde{\mathbf{X}})_{\mathrm{swap(S)}}$ and $(\mathbf{X},\tilde{\mathbf{X}})$,
+\begin{align*} \mathrm{cov}(\mathbf{X},\tilde{\mathbf{X}})&=\mathbf{G} & \mathbf{G}=
+    \begin{pmatrix}
+        \boldsymbol{\Sigma} & \boldsymbol{\Sigma}-\mathrm{diag}(s)\\
+        \boldsymbol{\Sigma}-\mathrm{diag}(s) & \boldsymbol{\Sigma}
+    \end{pmatrix}
+\end{align*}
+which can be achieved through 2 ways:
+
+in high-dimensional situation
 
 \paragraph*{Calculate test statistics}
 After constructing the knockoffs, we can construct the feature importance statistics by imposing a \myhl[myblue]{\textbf{flip sign}} property: swapping the $j$th variable with its knockoff has the effect of changing the sign of $W_j$ 
