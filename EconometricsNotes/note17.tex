@@ -201,7 +201,20 @@ which can be achieved through 2 ways:
     \myhl[myblue]{\textbf{ISSUE} with large $p$}: SDP (a convex problem) is computationally expensive 
 \end{itemize}
 
-in high-dimensional situation
+Hence, in high-dimensional situation, follow a 2-step procedure to combine both
+\begin{itemize}
+    \item Step 1: choose an {{\textbf{approximation}}} $\boldsymbol{\Sigma}_{\mathrm{approx}}$ of $\boldsymbol{\Sigma}$  and solve
+    \begin{align*}
+        \text{minimize} && \sum_j\left\vert 1-\hat{s}_j \right\vert \\
+        \text{subject to} && \hat{s}_j\geq 0, \ \mathrm{diag}\left(\hat{s}_j\right)\preceq 2\boldsymbol{\Sigma}_{\mathrm{approx}}
+    \end{align*}
+    \item Step 2: solve 
+    \begin{align*}
+        \text{maximize} && \gamma \\
+        \text{subject to} && \mathrm{diag}\left(\gamma \hat{s}\right)\preceq 2\boldsymbol{\Sigma}
+    \end{align*}
+    and set $s^{\mathrm{ASDP}}=\gamma \hat{s}$
+\end{itemize}
 
 \paragraph*{Calculate test statistics}
 After constructing the knockoffs, we can construct the feature importance statistics by imposing a \myhl[myblue]{\textbf{flip sign}} property: swapping the $j$th variable with its knockoff has the effect of changing the sign of $W_j$ 
