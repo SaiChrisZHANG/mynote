@@ -215,6 +215,12 @@ Hence, in high-dimensional situation, follow a 2-step procedure to combine both
     \end{align*}
     and set $s^{\mathrm{ASDP}}=\gamma \hat{s}$
 \end{itemize}
+It's easy to see that this 2-step procedure can be reduced to equicorrelated or semidefinite programme
+\begin{itemize}
+    \small
+    \item[-] \textcolor{myblue}{\underline{\textbf{equicorrelated}}}: $\boldsymbol{\Sigma}=\mathbf{I}\Rightarrow$ $\hat{s}_j =1$, $\gamma = 2\times \lambda_{\min}\boldsymbol{\Sigma}\wedge 1$
+    \item[-] \textcolor{myblue}{\underline{\textbf{semidefinite programme}}}: $\boldsymbol{\Sigma}=\boldsymbol{\Sigma}$, $\hat{s}_j = s^{\mathrm{SDP}}$, $\gamma=1$
+\end{itemize}
 
 \paragraph*{Calculate test statistics}
 After constructing the knockoffs, we can construct the feature importance statistics by imposing a \myhl[myblue]{\textbf{flip sign}} property: swapping the $j$th variable with its knockoff has the effect of changing the sign of $W_j$ 
