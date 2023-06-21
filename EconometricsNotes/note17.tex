@@ -184,17 +184,17 @@ And an \myhl[myblue]{\textbf{approximate}} construction can be achieved via matc
 \end{align*}
 which can be achieved through 2 ways:
 \begin{itemize}
-    \item \textcolor{myblue}{\underline{\textbf{equicorrelated}}} construction: 
+    \item \textcolor{myblue}{\underline{\textbf{equicorrelated}}} construction
     $$
     s^{\mathrm{EQ}}_j = 2\lambda_{\min}(\boldsymbol{\Sigma})\wedge 1,\ \forall j
     $$
-    minimizing the \underline{\textbf{correlation between variable knockoff pairs}} subject to the constraint that all such pairs \underline{\textit{must have the same correlation}}
-    \item \textcolor{myblue}{\underline{\textit{semidefinite programme}}} construction: 
+    minimizing the {\textbf{correlation between variable knockoff pairs}} subject to the constraint that all such pairs \underline{\textit{must have the same correlation}}
+    \item \textcolor{myblue}{\underline{\textbf{semidefinite programme}}} construction
     \begin{align*}
         \text{minimize} & & \sum_j\left\vert 1-s_j^{\mathrm{SDP}} \right\vert \\
         \text{subject to} & & s_j^{\mathrm{SDP}}\geq 0, \ \mathrm{diag}\left(s^{\mathrm{SDP}}\right)\preceq 2\boldsymbol{\Sigma}
     \end{align*}
-    minimizing the \underline{\textit{sum of the absolute values}} of variable knockoff correlations between \underline{\textit{all} suitable $s$}
+    minimizing the {\textbf{sum of the absolute values}} of variable knockoff correlations between \underline{\textit{all} suitable $s$}
 
 \end{itemize}
 
