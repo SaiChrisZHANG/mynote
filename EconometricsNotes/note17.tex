@@ -279,9 +279,13 @@ The model-X knockoff \citep{candes2018panning} can accomodate an arbitrarily lar
 \paragraph*{Regularity conditions for MX knockoffs} Under the conditions 
 \begin{itemize}
     \item the components of $\epsilon$ are i.i.d. with sub-Gaussian distribution 
-    \item $\min_{j\in \mathcal{S_0}} \left\vert \beta_{0,j} \right\vert \geq k_n\left( \log (p)/n \right)^{1/2}$ for some slowly diverging sequence $k_n\xrightarrow{n\rightarrow\infty} \infty$
-    \item $\exists c\in \left( \frac{2}{qs},1 \right)$ s.t. with asymptotic probability 1, $\left\vert \hat{\mathcal{S}} \right\vert \geq cs$ for $\hat{\mathcal{S}} = \left\{ 1\leq j\leq p: W_j\geq T \right\}$
+    \item $\min_{j\in \mathcal{S_0}} \left\vert \beta_{0,j} \right\vert \geq k_n\left( \log (p)/n \right)^{1/2}$ for some slowly diverging sequence $k_n\xrightarrow{n\rightarrow\infty} \infty$: Lasso solution does not miss many important features
+    \item $\exists c\in \left( \frac{2}{qs},1 \right)$ s.t. with asymptotic probability 1, $\left\vert \hat{\mathcal{S}} \right\vert \geq cs$ for $\hat{\mathcal{S}} = \left\{ 1\leq j\leq p: W_j\geq T \right\}$: lower bound on the size of the sparse model
 \end{itemize}
+then we have
+\begin{theorem}{Oracle Property of the MX Knockoff Procedure}{oracle_mxknockoff}
+    Under the 3 conditions, all eigenvalues of $\Omega_0$ are bounded away from 0 and $\infty$
+\end{theorem}
 
 \newpage
 \bibliographystyle{plainnat}
