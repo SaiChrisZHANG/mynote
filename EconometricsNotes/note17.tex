@@ -156,7 +156,7 @@ An important lemma is
     $$
 \end{lemma}
 
-and this leads to 
+Here, the main assumption of model-X knockoffs is assuming \textbf{known} joint distribution of covariates, and this leads to 
 \begin{proposition}{Conditional Exchangeability of MX Knockoffs}{mxknockoff_exchangeable}
     The random variables $ (\tilde{\mathbf{X}}_1,\cdots,\tilde{\mathbf{X}}_p) $ are \myhl[myblue]{\textbf{MX knockoffs}} for $({\mathbf{X}}_1,\cdots,{\mathbf{X}}_p)$ if and only if for any $j\in \left\{1,\cdots,p\right\}$, the pair $({\mathbf{X}}_j,\tilde{\mathbf{X}}_j)$ is \textbf{\underline{exchangeable}} conditional on all the other variables and their knockoffs.
 \end{proposition}
@@ -274,6 +274,8 @@ $$
 then Theorem \ref{thm:knockoff_property} applies.
 
 \section{Fan et al. (2020)}
+The model-X knockoff \citep{candes2018panning} can accomodate an arbitrarily large $p$, but assumes 
+
 \citet{fan2020rank}
 
 \newpage
