@@ -274,9 +274,14 @@ $$
 then Theorem \ref{thm:knockoff_property} applies.
 
 \section{Fan et al. (2020)}
-The model-X knockoff \citep{candes2018panning} can accomodate an arbitrarily large $p$, but assumes \myhl[myblue]{\textbf{known}} joint distribution of covariates. \citet{fan2020rank} introduced a data-splitting procedure to separately estimate the unknown covariate distribution and then globally construct the knockoff variables
+The model-X knockoff \citep{candes2018panning} can accomodate an arbitrarily large $p$, but assumes \myhl[myblue]{\textbf{known}} joint distribution of covariates. \citet{fan2020rank} introduced a data-splitting procedure to separately estimate the unknown covariate distribution and then globally construct the knockoff variables.
 
-\citet{fan2020rank}
+\paragraph*{Regularity conditions for MX knockoffs} Under the conditions 
+\begin{itemize}
+    \item the components of $\epsilon$ are i.i.d. with sub-Gaussian distribution 
+    \item $\min_{j\in \mathcal{S_0}} \left\vert \beta_{0,j} \right\vert \geq k_n\left( \log (p)/n \right)^{1/2}$ for some slowly diverging sequence $k_n\xrightarrow{n\rightarrow\infty} \infty$
+    \item $\exists c\in \left( \frac{2}{qs},1 \right)$ s.t. with asymptotic probability 1, $\left\vert \hat{\mathcal{S}} \right\vert \geq cs$ for $\hat{\mathcal{S}} = \left\{ 1\leq j\leq p: W_j\geq T \right\}$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
