@@ -297,7 +297,8 @@ The RANK inference procedure is
 \begin{itemize}
     \item[S1] Randomly split data $(\mathbf{X,y})$ into two folds each of sample size $n/2$
     \item[S2] Use $(\mathbf{X}^{(1)},\mathbf{y}^{(1)})$ to obtain $\hat{\boldsymbol{\Omega}}$ and a reduced model with support $\tilde{\mathcal{S}}$
-    \item[S3] Construct knockoffs matrix $\hat{\mathbf{X}} = \mathbf{X}^{(2)}(C^{\hat{\boldsymbol{\Omega}}})' + ZB^{\hat{\boldsymbol{\Omega}}}$
+    \item[S3] Construct knockoffs matrix $\hat{\mathbf{X}} = \mathbf{X}^{(2)}(C^{\hat{\boldsymbol{\Omega}}})' + ZB^{\hat{\boldsymbol{\Omega}}}$ with $Z$ an $\frac{n}{2}\times p$ matrix with i.i.d. $\mathcal{N}(0,1)$ components 
+    \item[S4] Construct $W_j = W_j(\mathbf{y}^{(2)},\mathbf{X}^{(2)}_{\tilde{\mathcal{S}}},\mathbf{X}_{\tilde{\mathcal{S}}})$ for $j\in \tilde{\mathcal{S}}$
 \end{itemize}
 
 \newpage
