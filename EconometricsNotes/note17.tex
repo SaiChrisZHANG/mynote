@@ -292,6 +292,14 @@ then we have
 \end{theorem}
 The oracle MX knockoffs procedure in knowing the true precision matrix $\boldsymbol{\Omega}_0$ for the covariate distribution can indeed have asymptotic power one.
 
+\paragraph*{RANK inference procedure} 
+The RANK inference procedure is
+\begin{itemize}
+    \item[S1] Randomly split data $(\mathbf{X,y})$ into two folds each of sample size $n/2$
+    \item[S2] Use $(\mathbf{X}^{(1)},\mathbf{y}^{(1)})$ to obtain $\hat{\boldsymbol{\Omega}}$ and a reduced model with support $\tilde{\mathcal{S}}$
+    \item[S3] Construct knockoffs matrix $\hat{\mathbf{X}} = \mathbf{X}^{(2)}(C^{\hat{\boldsymbol{\Omega}}})' + ZB^{\hat{\boldsymbol{\Omega}}}$
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
