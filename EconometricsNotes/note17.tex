@@ -303,7 +303,7 @@ The RANK inference procedure is
 \end{itemize}
 Implementing this modified procedure, we limit ourselves to sparse models $\tilde{\mathcal{S}}$ with size bounded by some positive integer $K_n$ that diverges with $n$. \citet{fan2020rank} also provide theoretical proofs for the robustness of the FDR control and the power of RANK:
 $$
-\mathrm{Power}\left( \hat{\boldsymbol{\Omega}},\hat{\mathcal{S}} \right)
+\mathrm{Power}\left( \hat{\boldsymbol{\Omega}},\hat{\mathcal{S}} \right) \geq 1-C_{l_1}C_{\lambda} (\phi+1)k_n^{-1}-c_2p^{-c_2} - c_3p^{-c_3}+ o(k_n^{-1}) = 1-o(1)
 $$
 
 \newpage
