@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note17"] 0 "note17.aux" "note17.bbl" "note17" 1687537389
+["bibtex note17"] 1687624833 "note17.aux" "note17.bbl" "note17" 1687624839
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "note17.aux" 1687537388 2883 17d3b7785f65c6aabeaf485510835448 ""
+  "note17.aux" 1687624839 2906 4c70e29db6a4ab08c9d22c3bb30ed6fb ""
   "ref.bib" 1687347119 21399 0a168fb1518e2b9dbd7f5baee649626e ""
   (generated)
-  "note17.bbl"
   "note17.blg"
-["pdflatex"] 1687537384 "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.tex" "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.pdf" "note17" 1687537389
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.aux" 1687537388 2883 17d3b7785f65c6aabeaf485510835448 ""
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.tex" 1687537383 25339 25e98d82431a717d1e0692ed4dccedbe ""
+  "note17.bbl"
+["pdflatex"] 1687624833 "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.tex" "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.pdf" "note17" 1687624839
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.aux" 1687624839 2906 4c70e29db6a4ab08c9d22c3bb30ed6fb ""
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.tex" 1687624826 25373 12f47351142c6b382e492a867fb76977 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc" 1480098668 6292 5f5eff34c010300454c6de629a3dbaf4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
@@ -322,15 +322,15 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "figures/note17_visualizingFDR.png" 1687112401 1532456 28a4da20c328b8c89cb9be95248ac97f ""
-  "note17.aux" 1687537388 2883 17d3b7785f65c6aabeaf485510835448 ""
-  "note17.bbl" 1687436511 1217 093b2ed830160c52a54375189e9afdcd "bibtex note17"
-  "note17.out" 1687537388 286 1300bd5a9fe3dc7ec64037b000946cc7 ""
-  "note17.tex" 1687537383 25339 25e98d82431a717d1e0692ed4dccedbe ""
+  "note17.aux" 1687624839 2906 4c70e29db6a4ab08c9d22c3bb30ed6fb ""
+  "note17.bbl" 1687624833 1217 093b2ed830160c52a54375189e9afdcd "bibtex note17"
+  "note17.out" 1687624839 286 1300bd5a9fe3dc7ec64037b000946cc7 ""
+  "note17.tex" 1687624826 25373 12f47351142c6b382e492a867fb76977 ""
   "settings.tex" 1687179692 7416 64242c056f22740ca54e67d2b9680a98 ""
   (generated)
-  "note17.out"
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.log"
-  "note17.aux"
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.pdf"
-  "note17.log"
   "note17.pdf"
+  "note17.out"
+  "note17.log"
+  "note17.aux"
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.log"
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note17.pdf"
