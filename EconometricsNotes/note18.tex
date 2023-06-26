@@ -10,7 +10,14 @@ Consider $n$ independent observations $\mathbf{X}_i\in \mathbb{R}^p$ drawn from 
 \begin{align*}
     \boldsymbol{\Sigma} = \mathrm{Cov}(\mathbf{X}_i) = \mathbf{I} + \sum^M_{k=1}\theta_k \nu_k\nu'_k =\boldsymbol{\Sigma}_0 + \boldsymbol{\Phi}
 \end{align*}
-where $M$ denotes the \myhl[myblue]{\textbf{number of spikes}} in the distribution of eigenvalues. The idea is: spikes deviate from a reference model along a \textbf{small fixed number} of unknown directions.
+where $M$ denotes the \myhl[myblue]{\textbf{number of spikes}} in the distribution of eigenvalues. The idea is: spikes deviate from a reference model along a \textbf{\underline{small fixed number}} of unknown directions. If $\boldsymbol{\Phi}=\mathbf{0}$, then none of the sample eigenvalues is separated from the bulk.
+
+\paragraph*{Why a spike model is interesting?} A spike model can help determine the latent dimension of the data, some examples being
+\begin{itemize}
+    \item Principal component analysis (PCA): spikes are related to the directions of the most variations of the data, i.e., the principal components
+    \item Clustering model: $M$ spikes is equivalent to $M+1$ clusters
+    \item Economic significance: $M$ is related to the number of factor loadings
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
