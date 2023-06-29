@@ -47,9 +47,16 @@ If $\mathbf{Y} = \mathbf{M} + \mathbf{X}$, that is, the sum of the \textit{rando
 \begin{definition}{Density of Wishart Distribution}{wishart_pdf}
     The PDF of Wishart distribution is defined as 
     \begin{align*}
-        f(\mathbf{X}) = \frac{1}{2^{np/2}\boldsymbol{\Gamma}_p\left(\frac{n}{2}\right)\left\vert \boldsymbol{\Sigma}\right\vert^{n/2} } \left\vert \mathbf{X} \right\vert^{(n-p-1)/2}\exp \left(-\frac{1}{2}\mathrm{tr}\left(\boldsymbol{\Sigma}^{-1}\mathbf{X}\right)\right)
+        f(\mathbf{X}) = \frac{1}{2^{np/2}{\Gamma}_p\left(\frac{n}{2}\right)\left\vert \boldsymbol{\Sigma}\right\vert^{n/2} } \left\vert \mathbf{X} \right\vert^{(n-p-1)/2}\exp \left(-\frac{1}{2}\mathrm{tr}\left(\boldsymbol{\Sigma}^{-1}\mathbf{X}\right)\right)
     \end{align*}
-    where $\mathbf{X}$ is a symmetric positive semidefinite and $\boldsymbol{\Gamma}_p\left(\frac{n}{2}\right)$ is a multivariate gamma function so that 
+    where $\mathbf{X}$ is a symmetric positive semidefinite and ${\Gamma}_p\left(\frac{n}{2}\right)$ is a multivariate gamma function such that 
+    \begin{align*}
+        {\Gamma}_p\left( \frac{n}{2} \right) = \pi^{\frac{p(p-1)}{4}} \prod^p_{j=1}{\Gamma}\left(\frac{n}{2}-\frac{j-1}{2}\right)
+    \end{align*}
+    Notice that the sample covariance matrix $\mathbf{S}=\frac{1}{n}\mathbf{X}'\mathbf{X}$ is just a scaled version of Wishart distribution
+    $$
+        n\mathbf{S} = \mathbf{X}'\mathbf{X} \sim W_p(n,\boldsymbol{\Sigma})
+    $$
 \end{definition}
 
 \newpage
