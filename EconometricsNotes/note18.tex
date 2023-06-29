@@ -47,7 +47,7 @@ If $\mathbf{Y} = \mathbf{M} + \mathbf{X}$, that is, the sum of the \textit{rando
 \begin{definition}{Density of Wishart Distribution}{wishart_pdf}
     The PDF of Wishart distribution is defined as 
     \begin{align*}
-        f(\mathbf{X}) = \frac{1}{2^{np/2}\boldsymbol{\Gamma}_p\left(\frac{n}{2}\right)\left\vert \boldsymbol{\Sigma}\right\vert^{n/2} }
+        f(\mathbf{X}) = \frac{1}{2^{np/2}\boldsymbol{\Gamma}_p\left(\frac{n}{2}\right)\left\vert \boldsymbol{\Sigma}\right\vert^{n/2} } \left\vert \mathbf{X} \right\vert^{(n-p-1)/2}\exp \left(-\frac{1}{2}\mathrm{tr}\left(\boldsymbol{\Sigma}^{-1}\mathbf{X}\right)\right)
     \end{align*}
 \end{definition}
 
