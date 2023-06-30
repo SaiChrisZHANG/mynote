@@ -27,7 +27,7 @@ Then the question is threefold:
 \end{itemize}
 
 Under rank one alternative, we would like to test the hypothesis
-$$ the
+$$
 H_1: \boldsymbol{\Sigma} = \mathbf{I}_p+ \theta\boldsymbol{\nu}\boldsymbol{\nu}', \theta>0
 $$
 against the null
@@ -60,8 +60,22 @@ If $\mathbf{Y} = \mathbf{M} + \mathbf{X}$, that is, the sum of the \textit{rando
 \end{definition}
 For $\boldsymbol{\Sigma}=\mathbf{I}_p$, the empirical distribution fo eigenvalues converges to Marcenko-Pastur distribution
 \begin{align*}
-    f^{\mathrm{MP}}(x) = \frac{1}{2\pi\gamma x}
+    f^{\mathrm{MP}}(x) = \frac{1}{2\pi\gamma x}\sqrt{(b_+-x)(x-b_-)}
 \end{align*}
+where $b_{\pm} = (1\pm \sqrt{\gamma})^2$. Then:
+\begin{itemize}
+    \item under $H_0: \boldsymbol{\Sigma}= \mathbf{I}_p$, we have 
+    $$
+    n^{2/3}\left( \frac{\lambda_1 -\mu(\gamma)}{\sigma (\gamma)} \right) \xrightarrow{d} \mathrm{TW}_1
+    $$
+    where $\mathrm{TW}_1$ is the Tracy-Widom distribution
+    \item under $H_1: \boldsymbol{\Sigma} = \mathbf{I}_p+ \theta\boldsymbol{\nu}\boldsymbol{\nu}', \theta>0$, if $\theta$ is strong ($\theta\gg \sqrt{\gamma}$), then
+    $$
+    n^{1/2}\left( \frac{\lambda_1 - \rho(\theta,\gamma)}{\tau (\theta,\gamma)} \right) \xrightarrow{d}\mathcal{N}(0,1)
+    $$
+\end{itemize}
+Here, the largest eigenvalue test is the best test. But when the signal is weak $(\theta < \sqrt{\gamma})$
+
 
 \newpage
 \bibliographystyle{plainnat}
