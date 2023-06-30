@@ -74,7 +74,11 @@ where $b_{\pm} = (1\pm \sqrt{\gamma})^2$. Then:
     n^{1/2}\left( \frac{\lambda_1 - \rho(\theta,\gamma)}{\tau (\theta,\gamma)} \right) \xrightarrow{d}\mathcal{N}(0,1)
     $$
 \end{itemize}
-Here, the largest eigenvalue test is the best test. But when the signal is weak $(\theta < \sqrt{\gamma})$
+Here, the largest eigenvalue test is the best test. \textbf{But} when the signal is weak $(0 \leq \theta < \sqrt{\gamma})$, the largest eigenvalue under the alternative converges to the same distribution as null: 
+\begin{align*}
+    n^{2/3} \left( \frac{\lambda_1 - \rho(\theta,\gamma)}{\tau (\theta,\gamma)} \right) \xrightarrow{d} \mathrm{TW}_1
+\end{align*}
+which means that the largest eigenvalue test \textit{fails}.
 
 
 \newpage
