@@ -78,7 +78,13 @@ Here, the largest eigenvalue test is the best test. \textbf{But} when the signal
 \begin{align*}
     n^{2/3} \left( \frac{\lambda_1 - \rho(\theta,\gamma)}{\tau (\theta,\gamma)} \right) \xrightarrow{d} \mathrm{TW}_1
 \end{align*}
-which means that the largest eigenvalue test \textit{fails}.
+which means that the largest eigenvalue test \textit{fails}. On top of this, \textbf{resampling} also fails when $p$ is large.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 0.6 \textwidth]{figures/note18_resamplingfail.png}
+    \caption{Failure of Resampling Test $(n=p=100)$}\label{fig:resampling_failure}
+\end{figure}
+
 
 
 \newpage
