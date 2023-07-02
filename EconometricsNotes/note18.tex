@@ -97,7 +97,23 @@ with $p\times p$ matrices
     n_1\mathbf{H} &= \sum^{n_1}_{k=1}\mathbf{x}_k\mathbf{x}_k' &\text{\textit{hypothesis} SS}\\
     n_1\mathbf{E} &= \sum^{n_1}_{k=1}\mathbf{z}_k\mathbf{z}_k' &\text{\textit{error} SS}
 \end{align*}
-The solution $\mathbf{x}$ is generalized eigenvalues $\left\{ \lambda_i \right\}^p_{i=1}$, which are the eigenvalue of \myhl[myblue]{F-ratio} $\mathbf{E}^{-1}\mathbf{H}$
+The solution $\mathbf{x}$ is generalized eigenvalues $\left\{ \lambda_i \right\}^p_{i=1}$, which are the eigenvalue of \myhl[myblue]{F-ratio} $\mathbf{E}^{-1}\mathbf{H}$. \citet{johnstone2020testing} summarized 5 topics using $\mathbf{E}^{-1}\mathbf{H}$ relying on the five most common hypergeometric functions $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}$
+
+\begin{table}[h!]
+    \small
+    \begin{center}
+      \begin{tabular}{lcccc}
+        
+        \multicolumn{3}{c}{Statistical method} & $n_1\mathbf{H}$ & $n_2\mathbf{E}$  \\
+        \hline
+        $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ & PCA & Principal components analysis & $W_p(n_1,\boldsymbol{\Sigma+\Psi})$ & $n_2\boldsymbol{\Sigma}$ \\
+        $_{\mathrm{1}}\mathcal{F}_{\mathrm{0}}$ & PCA & Principal components analysis & $W_p(n_1,\boldsymbol{\Sigma+\Psi})$ & $n_2\boldsymbol{\Sigma}$ \\
+        $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$ & PCA & Principal components analysis & $W_p(n_1,\boldsymbol{\Sigma+\Psi})$ & $n_2\boldsymbol{\Sigma}$ \\
+        $_{\mathrm{1}}\mathcal{F}_{\mathrm{1}}$ & PCA & Principal components analysis & $W_p(n_1,\boldsymbol{\Sigma+\Psi})$ & $n_2\boldsymbol{\Sigma}$ \\
+        $_{\mathrm{2}}\mathcal{F}_{\mathrm{1}}$ & PCA & Principal components analysis & $W_p(n_1,\boldsymbol{\Sigma+\Psi})$ & $n_2\boldsymbol{\Sigma}$
+      \end{tabular}
+    \end{center}
+  \end{table}
 
 \newpage
 \bibliographystyle{plainnat}
