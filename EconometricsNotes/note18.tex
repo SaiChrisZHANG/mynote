@@ -89,7 +89,7 @@ Next, we develop another test to cope with these problems.
 
 \section{Johnstone and Onatski (2020)}
 Consider the basic equation of classical multivariate statistics:
-\begin{align}
+\begin{align}\label{eq:multivariate_statistic}
     \det \left( \mathbf{H}-\mathbf{xE}\right) = 0
 \end{align}
 with $p\times p$ matrices
@@ -105,6 +105,7 @@ The solution $\mathbf{x}$ is generalized eigenvalues $\left\{ \lambda_i \right\}
 \end{itemize} } $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}$
 
 \begin{table}[ht]
+    \caption{5 Statistical Methods}\label{tab:5cases_James}
     \footnotesize
     \begin{center}
       \begin{tabular}{lccccc}
@@ -122,7 +123,18 @@ The solution $\mathbf{x}$ is generalized eigenvalues $\left\{ \lambda_i \right\}
 \end{table}
 
 \subsection{Definitions and global assumptions}
-Let $\mathbf{Z}$ be an $n\times p$ data matrix with rows (observations) drawn \textbf{i.i.d.} from $\mathcal{N}_p(\mathbf{0},\boldsymbol{\Sigma})$
+Let $\mathbf{Z}$ be an $n\times p$ data matrix with rows (observations) drawn \textbf{i.i.d.} from $\mathcal{N}_p(\mathbf{0},\boldsymbol{\Sigma})$, and a deterministic matrix $\mathbf{M}$ of $n\times p$, then for $\mathbf{Y} = \mathbf{M}+ \mathbf{Z}$, 
+\begin{itemize}
+    \item $\mathbf{H} = \mathbf{Y'Y}$ has a $p$ dimensional Wishart distribution $W_p(n,\boldsymbol{\Sigma,\Psi})$ with $n$ degrees of freedom, covariance matrix $\boldsymbol{\Sigma}$ and non-centrality matrix $\boldsymbol{\Psi}=\boldsymbol{\Sigma}^{-1}\mathbf{M'M}$
+    \item the corresponding central Wishart distribution with $\mathbf{M}=\mathbf{0}$ is $W_p(n,\boldsymbol{\Sigma})$
+\end{itemize}
+\citet{johnstone2020testing} assume a relative low dimensionality $p\leq \min\left\{ n_1,n_2 \right\}$ where $n_1,n_2$ are the degrees of freedom as in Table \ref{tab:5cases_James}, where 
+\begin{itemize}
+    \item[-] $p\leq n_2$ ensures almost sure invertibility of matrix $\mathbf{E}$ in Equation \ref{eq:multivariate_statistic} 
+    \item[-] $p\leq n_1$ is not essential, but reduces the number of various situations of consideration.
+\end{itemize}
+
+
 \citet{johnstone2020testing} established a unified statistical problem \myhl[myblue]{\textbf{symmetric matrix denoising (SMD)}}.
 
 
