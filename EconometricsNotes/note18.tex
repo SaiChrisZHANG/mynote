@@ -99,10 +99,12 @@ with $p\times p$ matrices
 \end{align*}
 The solution $\mathbf{x}$ is generalized eigenvalues $\left\{ \lambda_i \right\}^p_{i=1}$, which are the eigenvalue of \myhl[myblue]{F-ratio} $\mathbf{E}^{-1}\mathbf{H}$. \citet{johnstone2020testing} summarized 5 topics using $\mathbf{E}^{-1}\mathbf{H}$ relying on the five most common hypergeometric functions\footnote{Hypergeometric functions are:
 \begin{itemize}
-\item scalar inputs: $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{a}}(a,b;x) = \sum^{\infty}_{k=0} \frac{(a_1)_k\cdots (a_p)_k}{(b_1)_k\cdots (b_p)_k}\frac{x^k}{k!} $$
+\item scalar inputs $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;x) = \sum^{\infty}_{k=0} \frac{(a_1)_k\cdots (a_p)_k}{(b_1)_k\cdots (b_p)_k}\frac{x^k}{k!} $$ where $(a_j)_k$ are generalized Pochhammer symbols
+\item single matrix inputs, where $\mathbf{S}$ is symmetric and usually diagonal $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\mathbf{S}) = \sum^{\infty}_{k=0} \sum_{\kappa} \frac{(a_1)_{\kappa}\cdots (a_p)_{\kappa}}{(b_1)_{\kappa}\cdots (b_p)_{\kappa}}\frac{C_{\kappa}(\mathbf{S})}{k!}  $$ where $C_k$ are the zonal polynomials. Easily, $ _{\mathrm{0}}\mathcal{F}_{\mathrm{0}}(\mathbf{S}) = e^{\mathrm{tr}(\mathbf{S})}$, $ _{\mathrm{1}}\mathcal{F}_{\mathrm{0}}(a,\mathbf{S}) = \left\vert \mathbf{I-S} \right\vert^{-a}$
+\item two matrix inputs, where $\mathbf{S,T}$ are both symmetric $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\mathbf{S,T})  = \int_{O(p)} _{\mathrm{p}}\mathcal{F}_{\mathrm{q}} (a,b;\mathbf{SUTU'})\mathrm(d)\mathbf{U} $$
 \end{itemize} } $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}$
 
-\begin{table}[h!]
+\begin{table}[ht]
     \footnotesize
     \begin{center}
       \begin{tabular}{lccccc}
