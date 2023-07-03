@@ -101,7 +101,7 @@ The solution $\mathbf{x}$ is generalized eigenvalues $\left\{ \lambda_i \right\}
 \begin{itemize}
 \item scalar inputs $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;x) = \sum^{\infty}_{k=0} \frac{(a_1)_k\cdots (a_p)_k}{(b_1)_k\cdots (b_p)_k}\frac{x^k}{k!} $$ where $(a_j)_k$ are generalized Pochhammer symbols
 \item single matrix inputs, where $\mathbf{S}$ is symmetric and usually diagonal $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\mathbf{S}) = \sum^{\infty}_{k=0} \sum_{\kappa} \frac{(a_1)_{\kappa}\cdots (a_p)_{\kappa}}{(b_1)_{\kappa}\cdots (b_p)_{\kappa}}\frac{C_{\kappa}(\mathbf{S})}{k!}  $$ where $C_k$ are the zonal polynomials. Easily, $ _{\mathrm{0}}\mathcal{F}_{\mathrm{0}}(\mathbf{S}) = e^{\mathrm{tr}(\mathbf{S})}$, $ _{\mathrm{1}}\mathcal{F}_{\mathrm{0}}(a,\mathbf{S}) = \left\vert \mathbf{I-S} \right\vert^{-a}$
-\item two matrix inputs, where $\mathbf{S,T}$ are both symmetric $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\mathbf{S,T})  = \int_{O(p)} _{\mathrm{p}}\mathcal{F}_{\mathrm{q}} (a,b;\mathbf{SUTU'})\mathrm(d)\mathbf{U} $$
+\item two matrix inputs, where $\mathbf{S,T}$ are both symmetric $$ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\mathbf{S,T})  = \int_{O(p)} {}_{\mathrm{p}}\mathcal{F}_{\mathrm{q}} (a,b;\mathbf{SUTU'})\mathrm(d)\mathbf{U} $$
 \end{itemize} } $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}$
 
 \begin{table}[ht]
@@ -119,7 +119,10 @@ The solution $\mathbf{x}$ is generalized eigenvalues $\left\{ \lambda_i \right\}
         \multicolumn{5}{l}{For $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ and $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$, $\mathbf{E}$ is deterministic, $\boldsymbol{\Sigma}$ is known, $n_2$ disppears, otherwise $\mathbf{E}$ is independent of $\mathbf{H}$.}
       \end{tabular}
     \end{center}
-  \end{table}
+\end{table}
+
+\citet{johnstone2020testing} established a unified statistical problem \myhl[myblue]{\textbf{symmetric matrix denoising (SMD)}}. Under the null, the ob
+
 
 \newpage
 \bibliographystyle{plainnat}
