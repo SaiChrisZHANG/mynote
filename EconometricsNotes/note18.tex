@@ -154,11 +154,15 @@ naturally, SigD reduces to PCA as $n_2\rightarrow\infty$ while $n_1$ and $p$ hel
 
 \paragraph*{REG$_0$} Next, consider a linear regression with multivariate response $$ \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$ with known covariance matrix $\boldsymbol{\Sigma}$ of the i.i.d. Gaussian rows of the error matrix $\boldsymbol{\epsilon}$. Here, to test linear restrictions on the matrix of coefficients $\boldsymbol{\beta}$, we can split the matrix of transformed response variables $\mathbf{Y}$ into 3 parts $\mathbf{Y}_1,\mathbf{Y}_2,\mathbf{Y}_3$, where 
 \begin{itemize}
-    \item $\mathbf{Y}_1$ is $n_1\times p$ where $p$ is the number of response variables, $n_1$ is the number of linear restrictions (per each of the $p$ columns of matrix $\boldsymbol{\beta}$), under the null $H_0: \mathbb{E}\mathbf{Y}_1 = 0$, versus the alternative \begin{align}
+    \item $\mathbf{Y}_1$ is $n_1\times p$ where $p$ is the number of response variables, $n_1$ is the number of linear restrictions (per each of the $p$ columns of matrix $\boldsymbol{\beta}$), under the null $H_0: \mathbb{E}\mathbf{Y}_1 = 0$, versus the alternative \begin{align}\label{eq:REG_alternative}
         \mathbb{E}\mathbf{Y}_1 = \sqrt{n_1\theta}\boldsymbol{\psi\phi'}
     \end{align}
-    where 
+    where $\theta>0$, $\left\Vert \boldsymbol{\Sigma}^{-1/2}\boldsymbol{\phi}\right\Vert = 1$ and $\lVert \boldsymbol{\psi}\rVert = 1$
+    \item $\mathbf{Y}_2$ is $(q-n_1)\times p$, where $q$ is the number of regressors
+    \item $\mathbf{Y}_3$ is $(T-q)\times p$, where $T$ is the number of observations
 \end{itemize}
+In this case, tests can be based on the solutions $\lambda_1,\cdots,\lambda_p$ to $$ \det \left( \mathbf{H}-\boldsymbol{\lambda }\mathbf{E} \right)=\mathbf{0} $$
+where $\mathbf{H} = \mathbf{Y}'_1\mathbf{Y}_1/n_1$ and $\mathbf{E}=\boldsymbol{\Sigma}$.
 
 \paragraph*{REG} Again, consider the linear regression $$ \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$ but \textbf{NOT} knowing the covariance matrix $\boldsymbol{\Sigma}$ of rows of $\epsilon{\epsilon}$.
 
