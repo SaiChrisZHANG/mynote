@@ -136,8 +136,33 @@ Let $\mathbf{Z}$ be an $n\times p$ data matrix with rows (observations) drawn \t
 
 With these assumptions, they established a unified statistical problem \myhl[myblue]{\textbf{symmetric matrix denoising (SMD)}} that can be linked to the 5 classes of problems:
 
-\paragraph*{PCA} $n_1$ i.i.d. observations drawn from $\mathcal{N}_p(\mathbf{0},\boldsymbol{\Omega})$ to test the hull hypothesis that the population covariance $\boldsymbol{\Omega} = \boldsymbol{\Sigma}$, with the alternative of interest being $$ \boldsymbol{\Omega} = \boldsymbol{\Sigma+\Phi},\ \text{ with }\boldsymbol{\Phi}=\theta \boldsymbol{\phi\phi'}  $$ where $\theta>0$, $\boldsymbol{\phi}$ are unknown, and $\boldsymbol{\phi}$ is normalized s.t. $\left\Vert \boldsymbol{\Sigma}^{-1/2}\boldsymbol{\phi} \right\Vert = 1$. W.L.O.G., 
+\paragraph*{PCA} $n_1$ i.i.d. observations drawn from $\mathcal{N}_p(\mathbf{0},\boldsymbol{\Omega})$ to test the hull hypothesis that the population covariance $\boldsymbol{\Omega} = \boldsymbol{\Sigma}$, with the alternative of interest being $$ \boldsymbol{\Omega} = \boldsymbol{\Sigma+\Phi},\ \text{ with }\boldsymbol{\Phi}=\theta \boldsymbol{\phi\phi'}  $$ where $\theta>0$, $\boldsymbol{\phi}$ are unknown, and $\boldsymbol{\phi}$ is normalized s.t. $\left\Vert \boldsymbol{\Sigma}^{-1/2}\boldsymbol{\phi} \right\Vert = 1$. W.L.O.G., assume $\boldsymbol{\Sigma}=\mathbf{I}_p$, then under the alternative, the first principal component explains a larger portion of the variation than the other principal components. Re-formulate the hypotheses in terms of the spectral \textit{spike} parameter $\theta$, we have
+\begin{align*}
+    H_0: \theta_0 &= 0 & H_1: \theta_0 = \theta>0
+\end{align*}
+where $\theta_0$ is the true value of the \textit{spike}. A \myhl[myblue]{\textbf{maximal invariant statistic}} consists of the solutions $\lambda_1\geq \cdots\geq \lambda_p$ of Equation \ref{eq:multivariate_statistic} with
+\begin{itemize}
+    \item $n_1\mathbf{H}$ equal to the sample covariance matrix
+    \item $\mathbf{E} = \boldsymbol{\Sigma}$
+\end{itemize}
 
+\paragraph*{SigD} Now consider testing the \textbf{equality} of covariance matrices $\boldsymbol{\Omega}$ and $\boldsymbol{\Sigma}$, corresponding to 2 independent $p-$dimensional mean-zero Gaussian samples of size \myhl[myblue]{$n_1$} and \myhl[myblue]{$n_2$}, with the alternative still  $$ \boldsymbol{\Omega} = \boldsymbol{\Sigma+\Phi},\ \text{ with }\boldsymbol{\Phi}=\theta \boldsymbol{\phi\phi'}  $$ and again, assume $\boldsymbol{\Sigma}=\mathbf{I}_p$ (but NOT necessarily known), here, instead of Equation \ref{eq:multivariate_statistic}, consider 
+\begin{align}
+    \det \left( \mathbf{H}-\boldsymbol{\lambda}\left(\mathbf{E}+\frac{n_1}{n_2}\mathbf{H}\right) \right) = 0
+\end{align}
+naturally, SigD reduces to PCA as $n_2\rightarrow\infty$ while $n_1$ and $p$ held constant.
+
+\paragraph*{REG$_0$} Next, consider a linear regression with multivariate response $$ \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$ with known covariance matrix $\boldsymbol{\Sigma}$ of the i.i.d. Gaussian rows of the error matrix $\boldsymbol{\epsilon}$. Here, to test linear restrictions on the matrix of coefficients $\boldsymbol{\beta}$, we can split the matrix of transformed response variables $\mathbf{Y}$ into 3 parts $\mathbf{Y}_1,\mathbf{Y}_2,\mathbf{Y}_3$, where 
+\begin{itemize}
+    \item $\mathbf{Y}_1$ is $n_1\times p$ where $p$ is the number of response variables, $n_1$ is the number of linear restrictions (per each of the $p$ columns of matrix $\boldsymbol{\beta}$), under the null $H_0: \mathbb{E}\mathbf{Y}_1 = 0$, versus the alternative \begin{align}
+        \mathbb{E}\mathbf{Y}_1 = \sqrt{n_1\theta}\boldsymbol{\psi\phi'}
+    \end{align}
+    where 
+\end{itemize}
+
+\paragraph*{REG} Again, consider the linear regression $$ \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$ but \textbf{NOT} knowing the covariance matrix $\boldsymbol{\Sigma}$ of rows of $\epsilon{\epsilon}$.
+
+\paragraph*{CCA}
 
 \newpage
 \bibliographystyle{plainnat}
