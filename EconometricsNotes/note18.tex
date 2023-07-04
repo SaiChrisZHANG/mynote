@@ -162,7 +162,12 @@ naturally, SigD reduces to PCA as $n_2\rightarrow\infty$ while $n_1$ and $p$ hel
     \item $\mathbf{Y}_3$ is $(T-q)\times p$, where $T$ is the number of observations
 \end{itemize}
 In this case, tests can be based on the solutions $\lambda_1,\cdots,\lambda_p$ to $$ \det \left( \mathbf{H}-\boldsymbol{\lambda }\mathbf{E} \right)=\mathbf{0} $$
-where $\mathbf{H} = \mathbf{Y}'_1\mathbf{Y}_1/n_1$ and $\mathbf{E}=\boldsymbol{\Sigma}$.
+where $\mathbf{H} = \mathbf{Y}'_1\mathbf{Y}_1/n_1$ and $\mathbf{E}=\boldsymbol{\Sigma}$. The solutions represent a multivaraite analog of the difference between the sum of squared residuals in the restircted and unrestricted regressions. Under the null, $n_1\mathbf{H}$ is distributed as $W_p(n_1,\boldsymbol{\Sigma})$. Here, 
+\begin{align*}
+    n_1\mathbf{H} & \sim W_p(n_1,\boldsymbol{\Sigma}) & \text{under }H_0\\
+    n_1\mathbf{H} & \sim W_p(n_1,\boldsymbol{\Sigma},n_1\boldsymbol{\Phi}),\ \text{where }\boldsymbol{\Phi} = \theta \boldsymbol{\Sigma}^{-1}\boldsymbol{\phi\phi}' & \text{under }H_1
+\end{align*}
+Again, W.L.O.G, assume $\boldsymbol{\Sigma} = \mathbf{I}_p$. This \myhl[myblue]{\textbf{canonical form}} of REG$_0$ is essentially equivalent 
 
 \paragraph*{REG} Again, consider the linear regression $$ \mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$ but \textbf{NOT} knowing the covariance matrix $\boldsymbol{\Sigma}$ of rows of $\epsilon{\epsilon}$.
 
