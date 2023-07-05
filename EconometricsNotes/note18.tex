@@ -207,7 +207,31 @@ We seek to make inference about a symmetric rank-one \textit{signal} matrix $\bo
 The problem remains \myhl[myblue]{\textbf{invariant}} under the multiplication of $\mathbf{X}$ from the left by an orthogonal matrix, and from the right by its transpose.
 A maximal invariant statistic consists of the solutions $\lambda_1,\cdots,\lambda_p$ to $\det \left( \mathbf{H}-\boldsymbol{\lambda }\mathbf{E} \right)=\mathbf{0} $ with $\mathbf{H}=\mathbf{X}$ and $\mathbf{E}=\mathbf{I}_p$.
 
-SMD can be viewed as a degenerate version of the 5 classes of problems.
+SMD can be viewed as a degenerate version of the 5 classes of problems, as shown in Figure.
+
+
+\begin{figure}[ht]
+    \caption{SMD and 5 Classes of Statistical Problems}\label{fig:smd_5classesofproblems}
+    \centering
+      \begin{tikzpicture}[scale=0.9]
+        \node[draw, above, align=center,fill=white] at (6,5) {\myhl[myblue]{\textbf{SMD}} \\ \footnotesize{$\mathbf{H}=\frac{GOE}{\sqrt{p}}+\boldsymbol{\Phi},\mathbf{E}=\mathbf{I}_p$}};
+        
+        \draw [-stealth,color=black,thick] (0,2.5) -- (6,5) node[midway, fill=white] {\footnotesize{ $n_1\rightarrow\infty,\theta\rightarrow\theta\sqrt{p/n_1}$ }};
+        \node[draw, align=center,fill=white] at (0,2.5) {\myhl[myblue]{\textbf{PCA}} \\ \footnotesize{$n_1\mathbf{H}=W_p(n_1,\mathbf{I}_p+\boldsymbol{\Phi}),\mathbf{E}=\mathbf{I}_p$}};
+
+        \draw [-stealth,color=black,thick] (12,2.5) -- (6,5) node[midway, fill=white] {\footnotesize{ $n_1\rightarrow\infty,\theta\rightarrow\theta\sqrt{p/n_1}$ }};
+        \node[draw, align=center,fill=white] at (12,2.5) {\myhl[myblue]{\textbf{REG$_0$}} \\ \footnotesize{$n_1\mathbf{H}=W_p(n_1,\mathbf{I}_p,n_1\boldsymbol{\Phi}),\mathbf{E}=\mathbf{I}_p$}};
+
+        \draw [-stealth,color=black,thick] (0,0) -- (0,1.9) node[midway, fill=white] {\footnotesize{ $n_2\rightarrow\infty$ }};
+        \node[draw, below, align=center,fill=white] at (0,0) {\myhl[myblue]{\textbf{SigD}} \\ \footnotesize{$n_1\mathbf{H}=W_p(n_1,\mathbf{I}_p+\boldsymbol{\Phi}),n_2\mathbf{E}=W_p(n_2,\mathbf{I}_p)$}};
+
+        \draw [-stealth,color=black,thick] (12,0) -- (12,1.9) node[midway, fill=white] {\footnotesize{ $n_2\rightarrow\infty$ }};
+        \node[draw, below, align=center,fill=white] at (12,0) {\myhl[myblue]{\textbf{REG}} \\ \footnotesize{$n_1\mathbf{H}=W_p(n_1,\mathbf{I}_p,n_1\boldsymbol{\Phi}),n_2\mathbf{E}=W_p(n_2,\mathbf{I}_p)$}};
+
+        \draw [-stealth,color=black,thick] (6,0) -- (12,1.9) node[midway, fill=white] {\footnotesize{ $n_2\rightarrow\infty$ }};
+        \node[draw, below, align=center,fill=white] at (6,0) {\myhl[myblue]{\textbf{CCA}} \\ \footnotesize{$\mathbf{H}=\mathbf{S}_{xy}\mathbf{S}_{yy}^{-1}\mathbf{S}_{yx},n_2\mathbf{E}=\mathbf{S}_{xx}$}};
+      \end{tikzpicture}
+\end{figure}
 
 
 \newpage
