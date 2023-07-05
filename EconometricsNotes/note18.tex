@@ -176,6 +176,15 @@ $$
 this represents a multivariate analog of the $F$ ratio: the difference between the sum of squared residuals in the restricted and unrestricted regressions to the sum of squared residuals in the restricted regression. Again, as $n_2 \rightarrow \infty$, REG reduces to REG$_0$. 
 
 \paragraph*{CCA} Consider testing for independence between Gaussian vectors $x_t\in\mathbb{R}^p$ and $y_t\in \mathbb{R}^{n_1}$, given zero-mean observations with $t=1,\cdots,n_1+n_2$. Partition the population and sample covariance matrices of the observations $(x_t',y_t')'$ into 
+\begin{align*}
+    \begin{pmatrix}
+        \boldsymbol{\Sigma}_{xx} & \boldsymbol{\Sigma}_{xy}\\
+        \boldsymbol{\Sigma}_{yx} & \boldsymbol{\Sigma}_{yy}
+    \end{pmatrix} & & \begin{pmatrix}
+        \mathbf{S}_{xx} & \mathbf{S}_{xy}\\
+        \mathbf{S}_{yx} & \mathbf{S}_{yy}
+    \end{pmatrix}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
