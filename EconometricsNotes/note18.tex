@@ -185,6 +185,19 @@ this represents a multivariate analog of the $F$ ratio: the difference between t
         \mathbf{S}_{yx} & \mathbf{S}_{yy}
     \end{pmatrix}
 \end{align*}
+respsectively. Under $H_0:\boldsymbol{\Sigma}_{xy}=\mathbf{0}$, while the alternative is
+\begin{align}
+    \boldsymbol{\Sigma}_{xy} = \sqrt{\frac{n_1\theta}{n_1\theta + n_1 + n_2}}\boldsymbol{\phi\psi}'
+\end{align}
+where the nuisance parameters $\phi \in \mathbb{R}^p$ and $\psi \in \mathbb{R}^{n_1}$ are normalized s.t.
+\begin{align*}
+    \left\Vert \boldsymbol{\Sigma}_{xx}^{-1/2}\boldsymbol{\phi} \right\Vert = \left\Vert \boldsymbol{\Sigma}_{yy}^{-1/2}\boldsymbol{\psi} \right\Vert = 1
+\end{align*}
+And the test can be based on the squared sample canonical correlations $\lambda_1,\cdots,\lambda_p$ that solves $$ \det \left( \mathbf{H}-\boldsymbol{\lambda }\mathbf{E} \right)=\mathbf{0} $$
+with
+\begin{align}
+    \mathbf{H} &= \mathbf{S}_{xy}\mathbf{S}_{yy}^{-1}\mathbf{S}_{yx} & \mathbf{E}&\mathbf{S}_{xx}
+\end{align}
 
 \newpage
 \bibliographystyle{plainnat}
