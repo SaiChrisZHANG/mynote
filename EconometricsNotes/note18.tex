@@ -134,6 +134,7 @@ Let $\mathbf{Z}$ be an $n\times p$ data matrix with rows (observations) drawn \t
     \item[-] $p\leq n_1$ is not essential, but reduces the number of various situations of consideration.
 \end{itemize}
 
+\subsection{5 classes of problems}
 With these assumptions, they established a unified statistical problem \myhl[myblue]{\textbf{symmetric matrix denoising (SMD)}} that can be linked to the 5 classes of problems:
 
 \paragraph*{PCA} $n_1$ i.i.d. observations drawn from $\mathcal{N}_p(\mathbf{0},\boldsymbol{\Omega})$ to test the hull hypothesis that the population covariance $\boldsymbol{\Omega} = \boldsymbol{\Sigma}$, with the alternative of interest being $$ \boldsymbol{\Omega} = \boldsymbol{\Sigma+\Phi},\ \text{ with }\boldsymbol{\Phi}=\theta \boldsymbol{\phi\phi'}  $$ where $\theta>0$, $\boldsymbol{\phi}$ are unknown, and $\boldsymbol{\phi}$ is normalized s.t. $\left\Vert \boldsymbol{\Sigma}^{-1/2}\boldsymbol{\phi} \right\Vert = 1$. W.L.O.G., assume $\boldsymbol{\Sigma}=\mathbf{I}_p$, then under the alternative, the first principal component explains a larger portion of the variation than the other principal components. Re-formulate the hypotheses in terms of the spectral \textit{spike} parameter $\theta$, we have
@@ -195,9 +196,13 @@ where the nuisance parameters $\phi \in \mathbb{R}^p$ and $\psi \in \mathbb{R}^{
 \end{align*}
 And the test can be based on the squared sample canonical correlations $\lambda_1,\cdots,\lambda_p$ that solves $$ \det \left( \mathbf{H}-\boldsymbol{\lambda }\mathbf{E} \right)=\mathbf{0} $$
 with
-\begin{align}
+\begin{align*}
     \mathbf{H} &= \mathbf{S}_{xy}\mathbf{S}_{yy}^{-1}\mathbf{S}_{yx} & \mathbf{E}&\mathbf{S}_{xx}
-\end{align}
+\end{align*}
+
+\subsection{SMD}
+
+
 
 \newpage
 \bibliographystyle{plainnat}
