@@ -138,9 +138,9 @@ Let $\mathbf{Z}$ be an $n\times p$ data matrix with rows (observations) drawn \t
 With these assumptions, they established a unified statistical problem \myhl[myblue]{\textbf{symmetric matrix denoising (SMD)}} that can be linked to the 5 classes of problems:
 
 \paragraph*{PCA} $n_1$ i.i.d. observations drawn from $\mathcal{N}_p(\mathbf{0},\boldsymbol{\Omega})$ to test the hull hypothesis that the population covariance $\boldsymbol{\Omega} = \boldsymbol{\Sigma}$, with the alternative of interest being $$ \boldsymbol{\Omega} = \boldsymbol{\Sigma+\Phi},\ \text{ with }\boldsymbol{\Phi}=\theta \boldsymbol{\phi\phi'}  $$ where $\theta>0$, $\boldsymbol{\phi}$ are unknown, and $\boldsymbol{\phi}$ is normalized s.t. $\left\Vert \boldsymbol{\Sigma}^{-1/2}\boldsymbol{\phi} \right\Vert = 1$. W.L.O.G., assume $\boldsymbol{\Sigma}=\mathbf{I}_p$, then under the alternative, the first principal component explains a larger portion of the variation than the other principal components. Re-formulate the hypotheses in terms of the spectral \textit{spike} parameter $\theta$, we have
-\begin{align*}
+\begin{align}\label{eq:spectral_spike_hypotheses}
     H_0: \theta_0 &= 0 & H_1: \theta_0 = \theta>0
-\end{align*}
+\end{align}
 where $\theta_0$ is the true value of the \textit{spike}. A \myhl[myblue]{\textbf{maximal invariant statistic}} consists of the solutions $\lambda_1\geq \cdots\geq \lambda_p$ of Equation \ref{eq:multivariate_statistic} with
 \begin{itemize}
     \item $n_1\mathbf{H}$ equal to the sample covariance matrix
@@ -201,7 +201,11 @@ with
 \end{align*}
 
 \subsection{SMD}
-For a $\mathbf{X} = \boldsymbol{\Phi} + \mathbf{Z}/\sqrt{p}$ where $\mathbf{Z}$ is a noise matrix from the \myhl[myblue]{\textbf{Gaussian Orthogonal Ensemble} (GOE)}\footnote{$\mathbf{Z}$ is from the G}
+For a $\mathbf{X} = \boldsymbol{\Phi} + \mathbf{Z}/\sqrt{p}$ where $\mathbf{Z}$ is a noise matrix from the \myhl[myblue]{\textbf{Gaussian Orthogonal Ensemble} (GOE)}\footnote{$\mathbf{Z}$ is from the GOE that it is \textbf{symmetric} and \begin{align*} \mathbf{Z}_{ii} &\sim \mathcal{N}(0,2) & \mathbf{Z}_{ij}\sim\mathcal{N}(0,1) \text{ if }i>j \end{align*} }
+We seek to make inference about a symmetric rank-one \textit{signal} matrix $\boldsymbol{\Phi} = \theta\boldsymbol{\phi\phi}'$. The null and the alternative is again as in \ref{eq:spectral_spike_hypotheses}. The nuisance vector $\boldsymbol{\phi}\in\mathbb{R}^p$ is normalized s.t. $\left\Vert \boldsymbol{\phi} \right\Vert =1$. 
+
+The problem remains \myhl[myblue]{\textbf{invariant}} under the multiplication of $\mathbf{X}$ from the left by an orthogonal matrix, and from the right by its transpose.
+A maximal invariant statistic consists of the solutions $\lambda_1,\cdots,\lambda_p$ to $\det \left( \mathbf{H}-\boldsymbol{\lambda }\mathbf{E} \right)=\mathbf{0} $ with $\mathbf{H}=\mathbf{X}$ and $\mathbf{E}=\mathbf{I}_p$.
 
 SMD can be viewed as a degenerate version of the 5 classes of problems.
 
