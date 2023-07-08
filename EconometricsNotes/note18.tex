@@ -258,9 +258,10 @@ where $\mathbf{a}=\left( a_1,\cdots,a_{\mathrm{p}} \right)$ and $\mathbf{b}=\lef
       \begin{tabular}{lccccc}
         Classes & $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}$ & $\alpha(\theta)$ & $a$ & $b$ & $\boldsymbol{\Phi}_{11}$ \\
         \hline
-        $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ & PCA & Principal components analysis & $W_p(n_1,\boldsymbol{\Sigma+\Phi})$ & $n_2\boldsymbol{\Sigma}$ & $\chi^2$\\
-        $_{\mathrm{1}}\mathcal{F}_{\mathrm{0}}$ & SigD & Signal detection & $W_p(n_1,\boldsymbol{\Sigma+\Phi})$ & $W_p(n_2,\boldsymbol{\Sigma})$ & non-central $\chi^2$ \\
-        $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$ & REG$_0$ & Multivariate regression, with known error & $W_p(n_1,\boldsymbol{\Sigma},n_1\boldsymbol{\Phi})$ & $n_2\boldsymbol{\Sigma}$ & $F$ \\
+        SMD & $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ & $\exp(-p\theta^2/4)$ & - & - & $\theta p/2$\\
+        PCA & $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ & $(1+\theta)^{-n_1/2}$ & - & - & $\theta n_1/(2(1+\theta))$\\
+        SigD & $_{\mathrm{1}}\mathcal{F}_{\mathrm{0}}$ & $(1+\theta)^{-n_1/2}$ & - & - & $\theta n_1/(n_2(1+\theta))$ \\
+        REG$_0$ & $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$ & $\exp(-n_1\theta/2)$ & - & $n_1/2$ & $\theta n_1^2/4$ \\
         $_{\mathrm{1}}\mathcal{F}_{\mathrm{1}}$ & REG & Multivariate regression, with unknown error & $W_p(n_1,\boldsymbol{\Sigma},n_1\boldsymbol{\Phi})$ & $W_p(n_2,\boldsymbol{\Sigma})$ & non-central $F$ \\
         $_{\mathrm{2}}\mathcal{F}_{\mathrm{1}}$ & CCA & Canonical correlation analysis & $W_p(n_1,\boldsymbol{\Sigma},\boldsymbol{\Phi}(\mathbf{Y}))$ & $W_p(n_2,\boldsymbol{\Sigma})$ & $\frac{r^2}{1-r^2}$\\ \hline
         \multicolumn{5}{l}{For $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ and $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$, $\mathbf{E}$ is deterministic, $\boldsymbol{\Sigma}$ is known, $n_2$ disppears, otherwise $\mathbf{E}$ is independent of $\mathbf{H}$.}
