@@ -242,14 +242,34 @@ $$
 \Lambda = \mathrm{diag}\left\{ \lambda_1,\cdots,\lambda_p \right\}
 $$
 then the likelihood of the alternative versus the null is given by 
-\begin{equation}
+\begin{equation}\label{eq:likelihood_ratio}
     \mathcal{L}(\theta,\Lambda) = \frac{p(\Lambda;\theta)}{p(\Lambda;0)} = \alpha(\theta) _{\mathrm{p}}\mathcal{D}_{\mathrm{q}}(\mathbf{a,b};\boldsymbol{\Phi},\Lambda)
 \end{equation}
 where $\boldsymbol{\Phi}=\boldsymbol{\Phi}(\theta)$ is a $p$-dimensional matrix $\mathrm{diag}\left\{ \boldsymbol{\Phi}_{11},0,\cdots,0 \right\}$. Consider the hypergeometric functions of 2 matrix arguments $\boldsymbol{\Phi,\Lambda}$ are defined as 
 \begin{align*}
     _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(\mathbf{a,b};\boldsymbol{\Phi,\Lambda}) &= \sum^{\infty}_{k=0} \frac{1}{k!}\sum_{\kappa-k}\frac{\left(a_1\right)_{\kappa}\cdots\left(a_{\mathrm{p}}\right)_{\kappa}}{\left(b_1\right)_{\kappa}\cdots\left(b_{\mathrm{1}}\right)_{\kappa}}\frac{C_{\kappa}(\boldsymbol{\Phi})C_{\kappa}(\boldsymbol{\Lambda})}{C_{\kappa}(\mathbf{I}_p)}
 \end{align*}
-where $\mathbf{a}=\left( a_1,\cdots,a_{\mathrm{p}} \right)$ and $\mathbf{b}=\left( b_1,\cdots,b_{\mathrm{q}} \right)$ are parameters, $\kappa$ are partitions of the integer $k$, $(a_j)_{\kappa}$ and $(b_i)_{\kappa}$ are the generalized Pochhammer symbols, $C_{\kappa}$ are the zonal polynomials. Some links in Fig.\ref{fig:smd_5classesofproblems} can also be established via asymptotic relations between hypergeometric functions.
+where $\mathbf{a}=\left( a_1,\cdots,a_{\mathrm{p}} \right)$ and $\mathbf{b}=\left( b_1,\cdots,b_{\mathrm{q}} \right)$ are parameters, $\kappa$ are partitions of the integer $k$, $(a_j)_{\kappa}$ and $(b_i)_{\kappa}$ are the generalized Pochhammer symbols, $C_{\kappa}$ are the zonal polynomials. For each of the 6 classes of problems, we have the parameters as in Table  where $n = n_1+n_2 $.
+
+\begin{table}[ht]
+    \caption{Parameters of the Likelihood Ratios in Eq.\ref{eq:likelihood_ratio}}\label{tab:6cases_parameters}
+    \footnotesize
+    \begin{center}
+      \begin{tabular}{lccccc}
+        
+        \multicolumn{3}{c}{Statistical method} & $n_1\mathbf{H}$ & $n_2\mathbf{E}$ & Univariate Analog \\
+        \hline
+        $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ & PCA & Principal components analysis & $W_p(n_1,\boldsymbol{\Sigma+\Phi})$ & $n_2\boldsymbol{\Sigma}$ & $\chi^2$\\
+        $_{\mathrm{1}}\mathcal{F}_{\mathrm{0}}$ & SigD & Signal detection & $W_p(n_1,\boldsymbol{\Sigma+\Phi})$ & $W_p(n_2,\boldsymbol{\Sigma})$ & non-central $\chi^2$ \\
+        $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$ & REG$_0$ & Multivariate regression, with known error & $W_p(n_1,\boldsymbol{\Sigma},n_1\boldsymbol{\Phi})$ & $n_2\boldsymbol{\Sigma}$ & $F$ \\
+        $_{\mathrm{1}}\mathcal{F}_{\mathrm{1}}$ & REG & Multivariate regression, with unknown error & $W_p(n_1,\boldsymbol{\Sigma},n_1\boldsymbol{\Phi})$ & $W_p(n_2,\boldsymbol{\Sigma})$ & non-central $F$ \\
+        $_{\mathrm{2}}\mathcal{F}_{\mathrm{1}}$ & CCA & Canonical correlation analysis & $W_p(n_1,\boldsymbol{\Sigma},\boldsymbol{\Phi}(\mathbf{Y}))$ & $W_p(n_2,\boldsymbol{\Sigma})$ & $\frac{r^2}{1-r^2}$\\ \hline
+        \multicolumn{5}{l}{For $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ and $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$, $\mathbf{E}$ is deterministic, $\boldsymbol{\Sigma}$ is known, $n_2$ disppears, otherwise $\mathbf{E}$ is independent of $\mathbf{H}$.}
+      \end{tabular}
+    \end{center}
+\end{table}
+
+Some links in Fig.\ref{fig:smd_5classesofproblems} can also be established via asymptotic relations between hypergeometric functions.
 
 \newpage
 \bibliographystyle{plainnat}
