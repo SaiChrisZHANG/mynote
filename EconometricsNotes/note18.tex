@@ -289,6 +289,25 @@ $$
 \end{cases}
 $$
 
+A summary of the 3 classes of distributions is shown in Table 
+
+\begin{table}[ht]
+    \caption{Semi-circle, Marchenko-Pastur, scaled Wachter distributions}\label{tab:3classes_distributions}
+    \footnotesize
+    \begin{center}
+      \begin{tabular}{lccccc}
+        Case & $F^{\lim}_{\boldsymbol{\gamma}}$ & Density, $\lambda\in[\beta_{-},\beta_+]$ & $\beta_{\pm}$ & $b$ & $\boldsymbol{\Phi}_{11}$ \\
+        \hline
+        SMD & $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ & $\exp(-p\theta^2/4)$ & - & - & $\theta p/2$\\
+        PCA & $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}$ & $(1+\theta)^{-n_1/2}$ & - & - & $\theta n_1/(2(1+\theta))$\\
+        SigD & $_{\mathrm{1}}\mathcal{F}_{\mathrm{0}}$ & $(1+\theta)^{-n_1/2}$ & - & - & $\theta n_1/(n_2(1+\theta))$ \\
+        REG$_0$ & $_{\mathrm{0}}\mathcal{F}_{\mathrm{1}}$ & $\exp(-n_1\theta/2)$ & - & $n_1/2$ & $\theta n_1^2/4$ \\
+        REG & $_{\mathrm{1}}\mathcal{F}_{\mathrm{1}}$ & $\exp(-n_1\theta/2)$ & $n/2$ & $n_1/2$ & $\theta n_1^2/(2n_2)$ \\
+        CCA & $_{\mathrm{2}}\mathcal{F}_{\mathrm{1}}$ & $(1+n_1\theta/n)^{-n/2} $ & $(n/2,n/2)$ & $n_1/2$ & $\theta n_1^2/(n_2^2 + n_2n_1(1+\theta))$
+      \end{tabular}
+    \end{center}
+\end{table}
+
 
 \newpage
 \bibliographystyle{plainnat}
