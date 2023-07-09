@@ -274,7 +274,14 @@ Some links in Fig.\ref{fig:smd_5classesofproblems} can also be established via a
 \begin{align}
     c_1 \equiv \frac{p}{n_1} &\rightarrow \gamma_1\in (0,1) & c_2 \equiv \frac{p}{n_2} & \rightarrow \gamma_2\in (0,1]
 \end{align}
-which can be denoted as $\mathbf{n},p\rightarrow_{\boldsymbol{\gamma}}\infty$ where $\mathbf{n}=\left\{ n_1,n_2 \right\}$ and $\boldsymbol{\gamma}=\left\{\gamma_1,\gamma_2 \right\}$ then under the null (the true value of the spike $\theta_0=0$), 
+which can be denoted as $\mathbf{n},p\rightarrow_{\boldsymbol{\gamma}}\infty$ where $\mathbf{n}=\left\{ n_1,n_2 \right\}$ and $\boldsymbol{\gamma}=\left\{\gamma_1,\gamma_2 \right\}$. Under the null (the true value of the spike $\theta_0=0$), $\lambda_1,\cdots,\lambda_p$ are the eigenvalues of
+\begin{itemize}
+    \item $GOE/\sqrt{p}$, for \myhl[myblue]{\textbf{SMD}}
+    \item $W_p(n_1,\mathbf{I}_p)/n_1$, for \myhl[myblue]{\textbf{PCA}} and \myhl[myblue]{\textbf{REG$_0$}}
+    \item a $p-$dimensional multivariate beta matrix with parameters $n_1/2$ and $n_2/2$ (here scaled by a factor of $n_2/n_1$), for \myhl[myblue]{\textbf{SigD}}, \myhl[myblue]{\textbf{REG}}, \myhl[myblue]{\textbf{CCA}}
+\end{itemize}
+and the 
+
 
 \newpage
 \bibliographystyle{plainnat}
