@@ -280,7 +280,14 @@ which can be denoted as $\mathbf{n},p\rightarrow_{\boldsymbol{\gamma}}\infty$ wh
     \item $W_p(n_1,\mathbf{I}_p)/n_1$, for \myhl[myblue]{\textbf{PCA}} and \myhl[myblue]{\textbf{REG$_0$}}
     \item a $p-$dimensional multivariate beta matrix with parameters $n_1/2$ and $n_2/2$ (here scaled by a factor of $n_2/n_1$), for \myhl[myblue]{\textbf{SigD}}, \myhl[myblue]{\textbf{REG}}, \myhl[myblue]{\textbf{CCA}}
 \end{itemize}
-and the 
+and the empirical distribution of $\lambda_1,\cdots,\lambda_p$ follows
+$$
+\hat{F} = \frac{1}{p}\sum^p_{j=1}\mathrm{I}\left\{ \lambda_j \leq \lambda \right\} \xrightarrow{a.s.} F_{\boldsymbol{\gamma}} = \begin{cases}
+    F^{SC} & \text{semi-circle distribution, for SMD}\\
+    F^{MP} & \text{Marchenko-Pastur distribution, for PCA, REG}_0 \\
+    F^{W} & \text{Wachter distribution, for SigD, REG, CCA}
+\end{cases}
+$$
 
 
 \newpage
