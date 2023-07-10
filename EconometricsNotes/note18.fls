@@ -575,6 +575,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/pxbsys.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txbex-bar.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbmi.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxbmi.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/pxfonts/pxbmi.vf
