@@ -274,46 +274,53 @@ Some links in Fig.\ref{fig:smd_5classesofproblems} can also be established via a
 \begin{align}
     c_1 \equiv \frac{p}{n_1} &\rightarrow \gamma_1\in (0,1) & c_2 \equiv \frac{p}{n_2} & \rightarrow \gamma_2\in (0,1]
 \end{align}
-which can be denoted as $\mathbf{n},p\rightarrow_{\boldsymbol{\gamma}}\infty$ where $\mathbf{n}=\left\{ n_1,n_2 \right\}$ and $\boldsymbol{\gamma}=\left\{\gamma_1,\gamma_2 \right\}$. Under the null (the true value of the spike $\theta_0=0$), $\lambda_1,\cdots,\lambda_p$ are the eigenvalues of
+which can be denoted as $\mathbf{n},p\rightarrow_{\boldsymbol{\gamma}}\infty$ where $\mathbf{n}=\left\{ n_1,n_2 \right\}$ and $\boldsymbol{\gamma}=\left\{\gamma_1,\gamma_2 \right\}$. 
+
 \begin{itemize}
-    \item $GOE/\sqrt{p}$, for \myhl[myblue]{\textbf{SMD}}
-    \item $W_p(n_1,\mathbf{I}_p)/n_1$, for \myhl[myblue]{\textbf{PCA}} and \myhl[myblue]{\textbf{REG$_0$}}
-    \item a $p-$dimensional multivariate beta matrix with parameters $n_1/2$ and $n_2/2$ (here scaled by a factor of $n_2/n_1$), for \myhl[myblue]{\textbf{SigD}}, \myhl[myblue]{\textbf{REG}}, \myhl[myblue]{\textbf{CCA}}
+    \item \myhl[myblue]{\textbf{Under the null}} (the true value of the spike $\theta_0=0$), $\lambda_1,\cdots,\lambda_p$ are the eigenvalues of
+    \begin{itemize}
+        \item $GOE/\sqrt{p}$, for \myhl[myblue]{\textbf{SMD}}
+        \item $W_p(n_1,\mathbf{I}_p)/n_1$, for \myhl[myblue]{\textbf{PCA}} and \myhl[myblue]{\textbf{REG$_0$}}
+        \item a $p-$dimensional multivariate beta matrix with parameters $n_1/2$ and $n_2/2$ (here scaled by a factor of $n_2/n_1$), for \myhl[myblue]{\textbf{SigD}}, \myhl[myblue]{\textbf{REG}}, \myhl[myblue]{\textbf{CCA}}
+    \end{itemize}
+    and the empirical distribution of $\lambda_1,\cdots,\lambda_p$ follows
+    $$
+    \hat{F} = \frac{1}{p}\sum^p_{j=1}\mathrm{I}\left\{ \lambda_j \leq \lambda \right\} \xrightarrow{a.s.} F_{\boldsymbol{\gamma}} = \begin{cases}
+        F^{SC} & \text{semi-circle distribution, for SMD}\\
+        F^{MP} & \text{Marchenko-Pastur distribution, for PCA, REG}_0 \\
+        F^{W} & \text{Wachter distribution, for SigD, REG, CCA}
+    \end{cases}
+    $$
+    
+    A summary of the 3 classes of distributions is shown in Table \ref{tab:3classes_distributions}. And the cumulative distribution functions $F_{\boldsymbol{\gamma}}^{\lim}(\lambda)$ are linked in the sense that 
+    \begin{align*}
+        F_{\boldsymbol{\gamma}}^W(\lambda) & \rightarrow F_{\gamma_1}^{MP}(\lambda) & \gamma_2\rightarrow 0\\
+        F_{\gamma_1}^{MP}(\sqrt{\gamma_1}\lambda +1) & \rightarrow F^{SC}(\lambda) & \gamma_1\rightarrow 0
+    \end{align*}
+    If $\varphi$ is a \textit{well-behaved} function, the centered \textbf{linear spectral statistic}
+    \begin{equation}
+        \sum^p_{j=1}\varphi (\lambda_j) - p\int \varphi (\lambda) \mathrm(d)F_{\mathbf{c}}^{\lim}(\lambda)
+    \end{equation}
+    converges in distribtuion to a Gaussian random variable in each of the semicircle, Marchenko-Pastur and Wachter cases.\footnote{The centering constant is defined in terms of $F_{\mathbf{c}}=\left\{ c_1,c_2 \right\}$, that is, the \textit{correct centering} can be computed using the densities in Tab.\ref{tab:3classes_distributions}, where $\gamma_1,\gamma_2$ are replaced by $c_1\equiv p/n_1,c_2\equiv p/n_2$ respectively.}
+    
+    \begin{table}[ht]
+        \caption{Semi-circle, Marchenko-Pastur, scaled Wachter distributions}\label{tab:3classes_distributions}
+        \footnotesize
+        \begin{center}
+          \begin{tabular}{lcccc}
+            Case & $F^{\lim}_{\boldsymbol{\gamma}}$ & Density, $\lambda\in[\beta_{-},\beta_+]$ & $\beta_{\pm}$ & Threshold $\hat{\theta}$ \\
+            \hline
+            SMD & SC & $\frac{R(\lambda)}{2\pi}$ & $\pm 2$ & $1$\\
+            PCA, REG$_0$ & MP & $\frac{R(\lambda)}{2\pi\gamma_1 \lambda}$ & $(1\pm \sqrt{\gamma_1})^2$ & $\sqrt{\gamma_1}$\\
+            SigD, REG, CCA & W & $ \frac{(\gamma_1+\gamma_2)R(\lambda)}{2\pi\gamma_1 \lambda(\gamma_1-\gamma_2\lambda)} $ & $\gamma_1\left( \frac{\rho\pm 1}{\rho\pm \gamma_2}\right)^2$ & $\frac{\rho + \gamma_2}{1-\gamma_2}$ \\ \hline
+            \multicolumn{5}{l}{where $R(\lambda)= \sqrt{(\beta_+-\lambda)(\lambda-\beta_-)}$, $\rho = \sqrt{\gamma_1+\gamma_2-\gamma_1\gamma_2}$}
+          \end{tabular}
+        \end{center}
+    \end{table}
+    \item \myhl[myblue]{\textbf{Under the alternative}}
 \end{itemize}
-and the empirical distribution of $\lambda_1,\cdots,\lambda_p$ follows
-$$
-\hat{F} = \frac{1}{p}\sum^p_{j=1}\mathrm{I}\left\{ \lambda_j \leq \lambda \right\} \xrightarrow{a.s.} F_{\boldsymbol{\gamma}} = \begin{cases}
-    F^{SC} & \text{semi-circle distribution, for SMD}\\
-    F^{MP} & \text{Marchenko-Pastur distribution, for PCA, REG}_0 \\
-    F^{W} & \text{Wachter distribution, for SigD, REG, CCA}
-\end{cases}
-$$
 
-A summary of the 3 classes of distributions is shown in Table \ref{tab:3classes_distributions}. And the cumulative distribution functions $F_{\boldsymbol{\gamma}}^{\lim}(\lambda)$ are linked in the sense that 
-\begin{align*}
-    F_{\boldsymbol{\gamma}}^W(\lambda) & \rightarrow F_{\gamma_1}^{MP}(\lambda) & \gamma_2\rightarrow 0\\
-    F_{\gamma_1}^{MP}(\sqrt{\gamma_1}\lambda +1) & \rightarrow F^{SC}(\lambda) & \gamma_1\rightarrow 0
-\end{align*}
-If $\varphi$ is a \textit{well-behaved} function, the centered \textbf{linear spectral statistic}
-\begin{equation}
-    \sum^p_{j=1}\varphi (\lambda_j) - p\int \varphi (\lambda) \mathrm(d)F_{\mathbf{c}}^{\lim}(\lambda)
-\end{equation}
-converges in distribtuion to a Gaussian random variable in each of the semicircle, Marchenko-Pastur and Wachter cases.\footnote{The centering constant is defined in terms of $F_{\mathbf{c}}=\left\{ c_1,c_2 \right\}$, that is, the \textit{correct centering} can be computed using the densities in Tab.\ref{tab:3classes_distributions}, where $\gamma_1,\gamma_2$ are replaced by $c_1\equiv p/n_1,c_2\equiv p/n_2$ respectively.}
-
-\begin{table}[ht]
-    \caption{Semi-circle, Marchenko-Pastur, scaled Wachter distributions}\label{tab:3classes_distributions}
-    \footnotesize
-    \begin{center}
-      \begin{tabular}{lcccc}
-        Case & $F^{\lim}_{\boldsymbol{\gamma}}$ & Density, $\lambda\in[\beta_{-},\beta_+]$ & $\beta_{\pm}$ & Threshold $\hat{\theta}$ \\
-        \hline
-        SMD & SC & $\frac{R(\lambda)}{2\pi}$ & $\pm 2$ & $1$\\
-        PCA, REG$_0$ & MP & $\frac{R(\lambda)}{2\pi\gamma_1 \lambda}$ & $(1\pm \sqrt{\gamma_1})^2$ & $\sqrt{\gamma_1}$\\
-        SigD, REG, CCA & W & $ \frac{(\gamma_1+\gamma_2)R(\lambda)}{2\pi\gamma_1 \lambda(\gamma_1-\gamma_2\lambda)} $ & $\gamma_1\left( \frac{\rho\pm 1}{\rho\pm \gamma_2}\right)^2$ & $\frac{\rho + \gamma_2}{1-\gamma_2}$ \\ \hline
-        \multicolumn{5}{l}{where $R(\lambda)= \sqrt{(\beta_+-\lambda)(\lambda-\beta_-)}$, $\rho = \sqrt{\gamma_1+\gamma_2-\gamma_1\gamma_2}$}
-      \end{tabular}
-    \end{center}
-\end{table}
+ 
 
 
 \newpage
