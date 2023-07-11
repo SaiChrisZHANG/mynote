@@ -330,7 +330,14 @@ Hence,
     \item under the \textit{\underline{sub-critical}} cases where $\theta < \bar{\theta}$, the likelihood ratio converges to a Guassian process, the sequences of measures corresponding to the distribution of $\Lambda$ under the null and under the \textit{sub-critical} alternatives are mutually \myhl[myblue]{contiguous}.
 \end{itemize}
 
-\paragraph*{Contour integral representation} The asymptotic behavioral of the likelihood ratios (Eq.\ref{eq:likelihood_ratio}) depends on that of $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\boldsymbol{\Psi},\boldsymbol{\Lambda})$, of which the asymptotics are well established when the dimension of the matrix arguments remain \textbf{fixed}. Now consider the case where $\boldsymbol{\Phi,\Lambda}$
+\paragraph*{Contour integral representation} The asymptotic behavioral of the likelihood ratios (Eq.\ref{eq:likelihood_ratio}) depends on that of $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\boldsymbol{\Psi},\boldsymbol{\Lambda})$, of which the asymptotics are well established when the dimension of the matrix arguments remain \textbf{fixed}. Now consider the case where $\boldsymbol{\Phi,\Lambda}$ diverge to infinity. In single-spiked models, $\boldsymbol{\Phi}$ has rank one, then $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\boldsymbol{\Psi},\boldsymbol{\Lambda})$ can be represented in the form of a \textbf{contour integral} of a hypergeometric function of a single scalar argument:
+
+\begin{lemma}{Contour Integral Representations for Likelihood Ratios}{contour_integral_represent}
+    Assume $p\leq \min\left\{ n_1,n_2 \right\}$, let $\mathcal{K}$ be a contour in the complex plan $\mathbb{C}$ taht starts at $-\infty$, encircles $0$ and $\lambda_1,\cdots,\lambda_p$ counter-clockwise, returning to $-\infty$, then 
+    \begin{equation}
+        \mathcal{L}(\theta;\boldsymbol{\Lambda}) = \frac{\Gamma(s+1)\alpha(\theta)q_s}{\boldsymbol{\Phi}^s_{11}2\pi i}\int_{\mathcal{\Kappa}} _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a,b;\boldsymbol{\Psi},\boldsymbol{\Lambda})
+    \end{equation}
+\end{lemma}
 
 \newpage
 \bibliographystyle{plainnat}
