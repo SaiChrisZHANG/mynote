@@ -334,11 +334,18 @@ Hence,
 
 \begin{lemma}{Contour Integral Representations for Likelihood Ratios}{contour_integral_represent}
     Assume $p\leq \min\left\{ n_1,n_2 \right\}$, let $\mathcal{K}$ be a contour in the complex plan $\mathbb{C}$ taht starts at $-\infty$, encircles $0$ and $\lambda_1,\cdots,\lambda_p$ counter-clockwise, returning to $-\infty$, then 
-    \begin{equation}
+    \begin{equation}\label{eq:contour_integral}
         \mathcal{L}(\theta;\boldsymbol{\Lambda}) = \frac{\Gamma(s+1)\alpha(\theta)q_s}{\boldsymbol{\Phi}^s_{11}2\pi i}\int_{\mathcal{K}}\ _{\mathrm{p}}\mathcal{F}_{\mathrm{q}}(a-s,b-s;\boldsymbol{\Psi}_{11}z)\prod^p_{j=1}(z-\lambda_j)^{-1/2}\mathrm{d}z
     \end{equation}
     where $s=p/2-1$, the values of $\alpha(\theta),\boldsymbol{\Phi}_{11},a,b,\mathrm{p},\mathrm{q}$ for difference cases are given in Tab.\ref{tab:6cases_parameters}, and $a-s$, $b-s$ are vectors with elements $a_j-s$, $b_j-s$ respectively, $$ q_s = \prod^{\mathrm{p}}_{j=1}\frac{\Gamma (a_j-s)}{\Gamma (a_j)} \prod^{\mathrm{q}}_{i=1}\frac{\Gamma (b_i)}{\Gamma (b_i-s)} $$
 \end{lemma}
+
+a Laplace form 
+\begin{equation}\label{eq:laplace_form}
+    \mathcal{L}(\theta;\boldsymbol{\Lambda}) = \sqrt{\pi p}\frac{1}{2\pi i}\int_{\mathcal{K}}\exp\left\{ -\left(\frac{p}{2}\right)f(z;\theta) \right\} g(z;\theta)\mathrm{d}z
+\end{equation}
+
+to integrals \ref{eq:contour_integral} 
 
 \newpage
 \bibliographystyle{plainnat}
