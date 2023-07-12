@@ -358,7 +358,7 @@ The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form}
     \begin{equation}
         \frac{\Gamma(s+1)\alpha(\theta)q_s}{\boldsymbol{\Phi}^s_{11}2\pi i} = \exp\left\{ -\frac{p}{2}f_c \right\}g_c
     \end{equation}
-    where $g_c$ remains bounded as $\mathbf{n},p\xrightarrow{\boldsymbol{\gamma}}\infty$, and the values of $f_c$ and $g_c$ are given as Tab.\ref{tab:fc_gc_values}
+    where $g_c$ remains bounded as $\mathbf{n},p\xrightarrow{\boldsymbol{\gamma}}\infty$, and the values of $f_c$ and $g_c$ are given as Tab.\ref{tab:fc_gc_values}\footnote{In Tab.\ref{tab:fc_gc_values} the terms $o(1)$ do \textbf{not} depend on $\theta$. $l(\theta)=1+\frac{(1+\theta)c_2}{c_1}$, $r^2=c_1+c_2-c_1c_2$, $f_{10}=-1-\frac{r^2}{c_1c_2}\log\frac{r^2}{c_1+c_2}+\log\frac{c_1+c_2}{c_1}$, $\check{g}_{10}=c_1^{-1}r(c_1+c_2)^{1/2}$, $f_{21}=-1-\frac{\theta}{c_1}-\frac{r^2}{c_1c_2}\log \frac{r^2}{c_1 l(\theta)}$.}
     \begin{table}[ht]
         \caption{Values of $f_c$ and $\check{g}_c = \frac{g_c}{1+o(1)}$}\label{tab:fc_gc_values}
         \footnotesize
@@ -371,11 +371,11 @@ The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form}
             SigD & $f_c^{\text{PCA}}+f_{10}$ & $\check{g}_c^{\text{PCA}}\check{g}_{10}$ \\
             REG$_0$ & $1+\frac{\theta+c_1}{c_1} + \log\frac{\theta}{c_1} + \frac{1-c_1}{c_1}\log(1-c_1)$ & $\theta c_1^{-1}(1-c_1)^{-1/2}$\\ 
             REG & $f^{\text{REG}_0}_c+f_{10}$ & $\check{g}^{\text{REG}_0}_c\check{g}_{10}$ \\
-            CCA & $f_c^{\text{REG}}+f_{21}$ & $\frac{\check{g}_c^{\text{REG}}\check{g}_{10}}{l(\theta)}$ \\ \hline
-            \multicolumn{3}{l}{where the terms $o(1)$ do \textbf{not} depend on $\theta$. $l(\theta)=1+\frac{(1+\theta)c_2}{c_1}$, $r^2=c_1+c_2-c_1c_2$.}
+            CCA & $f_c^{\text{REG}}+f_{21}$ & $\frac{\check{g}_c^{\text{REG}}\check{g}_{10}}{l(\theta)}$
           \end{tabular}
         \end{center}
     \end{table}
+    
     \item 
 \end{itemize}
 
