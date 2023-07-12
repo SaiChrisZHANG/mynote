@@ -345,7 +345,11 @@ next, we want to approximate \ref{eq:contour_integral} in a Laplace form, that i
     \mathcal{L}(\theta;\boldsymbol{\Lambda}) = \sqrt{\pi p}\frac{1}{2\pi i}\int_{\mathcal{K}}\exp\left\{ -\left(\frac{p}{2}\right)f(z;\theta) \right\} g(z;\theta)\mathrm{d}z
 \end{equation}
 
-The goal of the transformation is:
+The goal of the transformation is to have the function $f(\cdot),g(\cdot)$ will have the forms of a sum and a product:
+\begin{align*}
+    f(z) &=f_c+ f_e(z) + f_h(z)\\
+    g(z) &= g_c\times g_e(z) \times g_h(z)
+\end{align*}
 
 
 The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form} is done in 3 steps:
