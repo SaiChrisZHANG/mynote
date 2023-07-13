@@ -390,7 +390,17 @@ The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form}
     \begin{equation}
         _{\mathrm{p}}\mathcal{F}_{\mathrm{q}} (a-s,b-s,\boldsymbol{\Phi}_{11}z) = \exp\left\{ -\frac{p}{2}f_h(z) \right\}g_h(z)
     \end{equation}
-    
+    where 
+    \begin{align}
+        f_h(z) = \begin{cases}
+            -z\theta & \text{SMD}\\
+            -z\frac{\theta}{c_1(1+\theta)} & \text{PCA} \\
+            \ln\left[1-\frac{c_2z\theta}{c_1(1+\theta)}\right]\frac{r^2}{c_1c_2} & \text{SigD}
+        \end{cases}
+    \end{align}
+    \begin{itemize}
+        \item when $\mathrm{q}=0$, $_{\mathrm{p}}\mathcal{F}_{\mathrm{q}}$ can be expressed in terms of elementary functions: $_{\mathrm{0}}\mathcal{F}_{\mathrm{0}}(z)=e^z$, $_{\mathrm{1}}\mathcal{F}_{\mathrm{0}}(a;z)=(1-z)^{-a}$
+    \end{itemize}
 \end{itemize}
 
 \newpage
