@@ -382,9 +382,10 @@ The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form}
     \end{equation}
     where
     \begin{align}
-        f_e(z) & \int \ln(z-lambda)\mathrm{d}F_{\mathbf{c}}(\lambda) \\
-        g_e(z) & 
+        f_e(z) & \int \ln(z-\lambda)\mathrm{d}F_{\mathbf{c}}(\lambda) \\
+        g_e(z) & \exp \left\{ -\frac{p}{2}\int \ln(z-\lambda) \mathrm{d}\left( \hat{F}(\lambda) - F_{\mathbf{c}}(\lambda) \right)\right\}
     \end{align}
+    for $f_e(z)$ and $g_e(z)$ to be well-defined, $z\not\in$
 \end{itemize}
 
 \newpage
