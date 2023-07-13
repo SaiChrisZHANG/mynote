@@ -392,10 +392,14 @@ The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form}
     \end{equation}
     where 
     \begin{align}
-        f_h(z) = \begin{cases}
+        f_h(z) &= \begin{cases}
             -z\theta & \text{SMD}\\
             -z\frac{\theta}{c_1(1+\theta)} & \text{PCA} \\
             \ln\left[1-\frac{c_2z\theta}{c_1(1+\theta)}\right]\frac{r^2}{c_1c_2} & \text{SigD}
+        \end{cases}\\
+        g_h(z) &= \begin{cases}
+            1 & \text{SMD, PCA}\\
+            \left[1-\frac{c_2z\theta}{c_1(1+\theta)}\right]^{-1} & \text{SigD}
         \end{cases}
     \end{align}
     \begin{itemize}
