@@ -430,6 +430,16 @@ The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form}
             \begin{align*}
                 C_m&=\frac{\Gamma (m+1)\Gamma(m(\kappa-1)+1)}{\Gamma(m\kappa +1)}
             \end{align*}
+            and 
+            \begin{align*}
+                \varphi_j(t)&=\begin{cases}
+                    -\eta_j t-\kappa\ln t + (\kappa-1)\ln(t-1), &j=1\\
+                    -\kappa \ln(t/(1-\eta_jt))+(\kappa-1)\ln(t-1), &j=2
+                \end{cases} & \psi_j(t) &=\begin{cases}
+                    (t-1)^{-1},&j=1\\
+                    (t-1)^{-1}(1-\eta_jt)^{-1}, &j=2
+                \end{cases}
+            \end{align*}
         \end{itemize}
     \end{itemize}
 \end{itemize}
