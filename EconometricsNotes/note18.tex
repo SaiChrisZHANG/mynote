@@ -457,6 +457,10 @@ The transformation from Eq.\ref{eq:contour_integral} to Eq.\ref{eq:laplace_form}
             f_{h}(z) & \begin{cases}
                 \frac{1-c_1}{c_1}\varphi_0(t_0) & \text{REG}_0\\
                 \frac{1-c_1}{c_1}\left(\varphi_j(t_j)+\kappa\ln\kappa - (\kappa-1)\ln(\kappa-1)\right) & \text{REG,CCA}
+            \end{cases}\\
+            g_h(z) & \begin{cases}
+                (1+4\eta_0)^{-1/4}(1+o(1)) & \text{REG}_0\\
+                \sqrt{\frac{c_1}{r^2}}e^{-\mathrm{i}w_j/2}\left\vert \varphi''_{j}(t_j) \right\vert^{-1/2} \varphi_j(t_j)(1+o(1)) & \text{REG,CCA}
             \end{cases}
         \end{align}
     \end{itemize}
