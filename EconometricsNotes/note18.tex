@@ -476,7 +476,35 @@ Together, we have
             (1+\theta)(\theta+c_1)/(\theta l(\theta)) & \text{SigD, REG, CCA}
         \end{cases}
     \end{equation}
+    for $\theta \in (0,\bar{\theta}_{\mathbf{c}}),z_0>b_+$ where $\bar{\theta}_{\mathbf{c}}$ is the threshold corresponding to $F_{\mathbf{c}}$.
 \end{lemma}
+
+\begin{figure}[ht]
+    \begin{minipage}[b]{0.45\textwidth}
+    \centering
+      \begin{tikzpicture}[scale=1.4]
+          % basics
+          \draw [-stealth,color=black,thin] (-0.5,2) -- (4,2);
+        \draw [-stealth,color=black,thin] (2,0) -- (2,4);
+        \filldraw[myblue] (3.5,2) circle (2pt) node[right, xshift=2pt, yshift=-8pt] {$z_0$};
+        \draw [-stealth,myblue!45!white,thick] (-0.5,0.5) -- (1,0.5);
+        \draw [-stealth,myblue!45!white,thick] (1,0.5) -- (3,0.5);
+        \filldraw[myblue] (2,0.5) circle (2pt) node[left, xshift=-2pt, yshift=8pt] {$-i 2z_0$};
+        
+      \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \tdplotsetmaincoords{60}{45}
+        \begin{tikzpicture}[scale=1.4]
+            % basics
+            \draw [-stealth,color=black,thin] (-0.5,2) -- (4,2);
+            \draw [-stealth,color=black,thin] (2,0) -- (2,4);
+            \filldraw[myblue] (1.5,2) circle (2pt) node[anchor=west] {Intersection point};
+        \end{tikzpicture}
+    \end{minipage}
+\end{figure}
 
 \newpage
 \bibliographystyle{plainnat}
