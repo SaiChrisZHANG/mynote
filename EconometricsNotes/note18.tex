@@ -471,7 +471,9 @@ Together, we have
     The saddle points $z_0(\theta,\mathbf{c})$ of $f(z)$ satisfies
     \begin{equation}
         z_0(\theta,\mathbf{c}) = \begin{cases}
-            \theta + 1/\theta
+            \theta + 1/\theta & \text{SMD}\\
+            (1+\theta)(\theta+c_1)/\theta & \text{PCA, REG}_0\\
+            
         \end{cases}
     \end{equation}
 \end{lemma}
