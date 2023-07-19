@@ -512,13 +512,14 @@ Together, we have
           \draw [-stealth,color=black,thin] (-0.5,2) -- (4,2);
           \draw [-stealth,color=black,thin] (2,0) -- (2,4);
           \draw [-stealth,myblue!45!white,thick] (-0.5,0.5) -- (1,0.5);
-          \draw [-stealth,myblue!45!white,thick] (1.5,3.5) -- (1,3.5) node[above] {$\mathcal{K}_1$};
+          \draw [-stealth,myblue!45!white,thick] (1.5,3.5) -- (1,3.5) node[above] {$\mathcal{K}_2$};
           \draw [myblue!45!white,thick] (1,0.5) -- (1.5,0.5);
           \draw [myblue!45!white,thick] (1.5,3.5) -- (-0.5,3.5);
 
           \draw [myblue!45!white,thin, densely dashed] (1.5,0) -- (1.5,4);
 
-          \draw [myblue] (1.5,3.5) .. controls (2.3325,3.5) and (3,2.8325) .. (3,2);
+          \draw [myblue!45!white,thick] (1.5,3.5) .. controls (2.3325,3.5) and (3,2.8325) .. (3,2);
+          \draw [myblue!45!white,thick] (1.5,0.5) .. controls (2.3325,0.5) and (3,1.1675) .. (3,2);
   
           \filldraw[myblue] (3,2) circle (2pt) node[right, xshift=2pt, yshift=-8pt] {$z_0$};
           \filldraw[myblue] (1.5,2) circle (2pt) node[left, xshift=-2pt, yshift=8pt] {$z_1$};
