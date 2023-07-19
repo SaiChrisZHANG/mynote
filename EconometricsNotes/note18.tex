@@ -479,6 +479,9 @@ Together, we have
     for $\theta \in (0,\bar{\theta}_{\mathbf{c}}),z_0>b_+$ where $\bar{\theta}_{\mathbf{c}}$ is the threshold corresponding to $F_{\mathbf{c}}$.
 \end{lemma}
 
+As $c_2\rightarrow 0$, while $c_1$ stays constant, the value of $z_0$ for \textbf{SigD}, \textbf{REG}, \textbf{CCA} converges to \textbf{PCA} and \textbf{REG}$_0$, which converges to \textbf{SMD} as $c_1\rightarrow 0$. Precisely, solving equation $$ \sqrt{c_1}z_0 +1 = (1+\sqrt{c_1}\theta)(\sqrt{c_1}\theta+c_1)/(\sqrt{c_1}\theta) $$
+for $z_0$ and taking limit as $c_1\rightarrow 0$ yields $z_0 = \theta+1/\theta$.
+
 \begin{figure}[ht]
     \begin{minipage}[b]{0.45\textwidth}
     \centering
@@ -502,7 +505,7 @@ Together, we have
         \filldraw[myblue] (2,3.5) circle (2pt) node[left, xshift=-2pt, yshift=-8pt] {$i 2z_0$};
         
       \end{tikzpicture}
-      \caption{$\mathcal{K}$ for SMD, PCA, SigD}
+      \caption{$\mathcal{K}$ for SMD, PCA, SigD}\label{fig:contour_cmd_pca_sigd}
     \end{minipage}
     \hfill
     \begin{minipage}[b]{0.45\textwidth}
@@ -518,14 +521,15 @@ Together, we have
 
           \draw [myblue!45!white,thin, densely dashed] (1.5,0) -- (1.5,4);
 
-          \draw [myblue!45!white,thick] (1.5,3.5) .. controls (2.3325,3.5) and (3,2.8325) .. (3,2);
-          \draw [myblue!45!white,thick] (1.5,0.5) .. controls (2.3325,0.5) and (3,1.1675) .. (3,2);
-  
+          \draw [domain=1.5:3, smooth, myblue!45!white,thick, variable=\x] plot ({\x},{(2.25-(\x-1.5)^2)^(1/2)+2});
+          \draw [domain=1.5:3, smooth, myblue!45!white,thick, variable=\x] plot ({\x},{-(2.25-(\x-1.5)^2)^(1/2)+2});
+          \filldraw[myblue!45!white] (2.56066,3.06066) circle (0.1pt) node[above] {$\mathcal{K}_1$};
+
           \filldraw[myblue] (3,2) circle (2pt) node[right, xshift=2pt, yshift=-8pt] {$z_0$};
           \filldraw[myblue] (1.5,2) circle (2pt) node[left, xshift=-2pt, yshift=8pt] {$z_1$};
           
         \end{tikzpicture}
-        \caption{$\mathcal{K}$ for REG$_0$, CCA}
+        \caption{$\mathcal{K}$ for REG$_0$, CCA}\label{fig:contour_reg0_cca}
     \end{minipage}
 \end{figure}
 
