@@ -484,7 +484,14 @@ for $z_0$ and taking limit as $c_1\rightarrow 0$ yields $z_0 = \theta+1/\theta$.
 
 Then, we have the deformed contour as $\mathcal{K}= \mathcal{K}_+\cup \mathcal{K}_-$, with $\mathcal{K}_-$ is the complex conjugate of $\mathcal{K}_+$, and $\mathcal{K}_+=\mathcal{K}_1\cup \mathcal{K}_2$, where
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{SMD, PCA, SigD}}: 
+    \item \myhl[myblue]{\textbf{SMD, PCA, SigD}} (as in Fig.\ref{fig:contour_cmd_pca_sigd})
+    \begin{align*}
+        \mathcal{K}_1 &= \left\{ z_0 + it: 0\leq t \leq 2z_0 \right\} & \mathcal{K}_2 &= \left\{ x+i2z_0: -\infty < x\leq z_0 \right\}
+    \end{align*}
+    \item \myhl[myblue]{\textbf{REG$_0$, CCA}} (as in Fig.\ref{fig:contour_reg0_cca})
+    \begin{align*}
+        \mathcal{K}_1 &= \left\{ z_1 + \left\vert z_0-z_1 \right\vert \exp \left\{\mathrm{i}\gamma\right\}: \gamma\in[0,\pi/2] \right\} & \mathcal{K}_2 &= \left\{ z_1-x+\left\vert z_0-z_1 \right\vert \exp \left\{ \mathrm{i}\pi/2 \right\}: x \geq 0 \right\}
+    \end{align*}
 \end{itemize}
 
 \begin{figure}[ht]
