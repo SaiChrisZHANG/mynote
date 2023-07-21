@@ -516,7 +516,7 @@ Then, we have the deformed contour as $\mathcal{K}= \mathcal{K}_+\cup \mathcal{K
           \draw [-stealth,myblue!45!white,thick] (3,1.5) -- (3,3) node[right] {$\mathcal{K}_1$};
           \draw [-stealth,myblue!45!white,thick] (3,0.5) -- (3,1.5);
           \draw [myblue!45!white,thick] (3,3) -- (3,3.5);
-          \draw [-stealth,myblue!45!white,thick] (3,3.5) -- (2.5,3.5) node[above] {$\mathcal{K}_1$};
+          \draw [-stealth,myblue!45!white,thick] (3,3.5) -- (2.5,3.5) node[above] {$\mathcal{K}_2$};
           \draw [-stealth,myblue!45!white,thick] (2.5,3.5) -- (1,3.5);
           \draw [myblue!45!white,thick] (1,3.5) -- (-0.5,3.5);
   
@@ -552,6 +552,11 @@ Then, we have the deformed contour as $\mathcal{K}= \mathcal{K}_+\cup \mathcal{K
         \caption{$\mathcal{K}$ for REG$_0$, CCA}\label{fig:contour_reg0_cca}
     \end{minipage}
 \end{figure}
+
+Together, we have that for all 6 cases (SMD, PCA, SigD, REG$_0$, REG and CCA), we have 
+\begin{lemma}{$\mathcal{K}_1$ are of steep descent}{steep_descent_contour}
+    As $z$ moves along the corersponding $\mathcal{K}_1$ away from $z_0$, $-\mathrm{Re}f(z)$ is \textbf{strictly decreasing}.
+\end{lemma}
 
 
 \newpage
