@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  22 JUL 2023 08:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  22 JUL 2023 08:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1131,79 +1131,4 @@ LaTeX Info: Redefining \nameref on input line 4.
 \makeMPintoPDFobject=\count181
 \everyMPtoPDFconversion=\toks52
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-\c@mv@tabular=\count182
-\c@mv@boldtabular=\count183
-
-Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
-
-LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <10> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 5.
-LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 5.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 5.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 5.
-LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 8.
-LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 8.
-LaTeX Font Info:    Try loading font information for OT1+zpltlf on input line 9.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
-File: ot1zpltlf.fd 2015/01/17 v1.0 font definition file for OT1/zpl/tlf
-)
-LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 9.
-LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 9.
-LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 9.
-LaTeX Font Info:    Try loading font information for U+msa on input line 9.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 9.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+npxmia on input line 9.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxmia.fd
-File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
-)
-LaTeX Font Info:    Try loading font information for U+npxsym on input line 9.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsym.fd
-File: unpxsym.fd 2015/03/21 Fontinst v1.933 font definitions for U/npxsym.
-)
-LaTeX Font Info:    Try loading font information for U+npxsyc on input line 9.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/unpxsyc.fd
-File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
-)
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 9.
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 7.3pt on input line 9.
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 5.5pt on input line 9.
-LaTeX Font Info:    Try loading font information for TS1+zpltlf on input line 17.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
-File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
-)
-LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 17.
- [1
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/note18_resamplingfail.png, id=52, 1383.1675pt x 865.2325pt>
-File: figures/note18_resamplingfail.png Graphic file (type png)
-<use figures/note18_re
+Package: epstopdf-base 2016/05/15 v2.6 Ba
