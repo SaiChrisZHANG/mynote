@@ -588,12 +588,16 @@ Assuming that $\exists C_1,\cdots,C_4>0$ that do not depend on $p,\omega$, s.t. 
         \mathrm{Re}\left(\phi(z_1)-\phi_0\right) &C_5 & \left\vert \mathrm{Im}\left(\phi(z_i)-\phi_0\right) \right\vert& < C_6
     \end{align*}
     \item[A5] For $\Theta\subset \mathbb{C}$ that consists of all points whose Euclidean distance from $\mathcal{K}$ is no larger than $C_1$
-    $$ \sup_{z\in\Theta} \left\vert \chi(z) \right\vert = O_p(1) $$
-    as $p\rightarrow \infty$, where $O_p(1)$ is uniform in $\omega\in \Omega$ 
+    $$ \sup_{z\in\Theta} \left\vert \chi(z) \right\vert = O_{mathrm{p}}(1) $$
+    as $p\rightarrow \infty$, where $O_{mathrm{p}}(1)$ is uniform in $\omega\in \Omega$ 
 \end{itemize}
 Under Assumption A0-A5, we have
 \begin{lemma}{A General Integral and the Laplace Approximation}{general_integral_laplace}
-    
+    For any positive integer $k$ as $p\rightarrow \infty$, we have 
+    $$
+    I_{p,\omega} = 2e^{-p\phi_0} \left[ \sum^{k-1}_{s=0}\Gamma \left( s + \frac{1}{2} \right) \frac{a_{2s}}{p^{s+1/2}} + \frac{O_{mathrm{p}}(1)}{p^{k+1/2}} \right]
+    $$
+    where $O_{mathrm{p}}$
 \end{lemma}
 
 \newpage
