@@ -614,8 +614,23 @@ We then use the lemma above to obtain the Laplace approximation to
 here, we must know the values of $f(z_0)$ and $\mathrm{d}^2f(z_0)/\mathrm{d}z^2$:
 \begin{itemize}
     \item for all 6 cases, $f(z_0)=0$
-    \item for all 6 cases, $\mathrm{d}^2f(z_0)/\mathrm{d}z^2<0$, its explicit form $D_2 \equiv \theta^2\left( -\mathrm{d}^2f(z_0)/\mathrm{d}z^2 \right)^{-1}$ is given as 
-    
+    \item for all 6 cases, $\mathrm{d}^2f(z_0)/\mathrm{d}z^2<0$, its explicit form $D_2 \equiv \theta^2\left( -\mathrm{d}^2f(z_0)/\mathrm{d}z^2 \right)^{-1}$ is given in Tab.\ref{tab:value_of_D2}
+    \begin{table}[ht]
+        \caption{Values of $D_2 \equiv \theta^2\left( -\mathrm{d}^2f(z_0)/\mathrm{d}z^2 \right)^{-1}$}\label{tab:value_of_D2}
+        \footnotesize
+        \begin{center}
+          \begin{tabular}{lcccc}
+            Case & Value of $D_2 \equiv \theta^2\left( -\mathrm{d}^2f(z_0)/\mathrm{d}z^2 \right)^{-1}$ \\
+            \hline
+            SMD & $1+\theta^2/2 + \log\theta $ & $\theta$\\
+            PCA & $1+\frac{1-c_1}{c_1}\log(1+\theta)+\log\frac{\theta}{c_1}$ & $\theta(1+\theta)^{-1}c_1^{-1}$ \\
+            SigD & $f_c^{\text{PCA}}+f_{10}$ & $\check{g}_c^{\text{PCA}}\check{g}_{10}$ \\
+            REG$_0$ & $1+\frac{\theta+c_1}{c_1} + \log\frac{\theta}{c_1} + \frac{1-c_1}{c_1}\log(1-c_1)$ & $\theta c_1^{-1}(1-c_1)^{-1/2}$\\ 
+            REG & $f^{\text{REG}_0}_c+f_{10}$ & $\check{g}^{\text{REG}_0}_c\check{g}_{10}$ \\
+            CCA & $f_c^{\text{REG}}+f_{21}$ & $\frac{\check{g}_c^{\text{REG}}\check{g}_{10}}{l(\theta)}$
+          \end{tabular}
+        \end{center}
+    \end{table}
 \end{itemize}
 
 \newpage
