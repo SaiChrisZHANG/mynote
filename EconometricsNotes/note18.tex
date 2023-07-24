@@ -620,14 +620,11 @@ here, we must know the values of $f(z_0)$ and $\mathrm{d}^2f(z_0)/\mathrm{d}z^2$
         \footnotesize
         \begin{center}
           \begin{tabular}{lcccc}
-            Case & Value of $D_2 \equiv \theta^2\left( -\mathrm{d}^2f(z_0)/\mathrm{d}z^2 \right)^{-1}$ \\
+            Case & Value of $D_2 $ & Case & Value of $D_2 $ \\
             \hline
-            SMD & $1+\theta^2/2 + \log\theta $ & $\theta$\\
-            PCA & $1+\frac{1-c_1}{c_1}\log(1+\theta)+\log\frac{\theta}{c_1}$ & $\theta(1+\theta)^{-1}c_1^{-1}$ \\
-            SigD & $f_c^{\text{PCA}}+f_{10}$ & $\check{g}_c^{\text{PCA}}\check{g}_{10}$ \\
-            REG$_0$ & $1+\frac{\theta+c_1}{c_1} + \log\frac{\theta}{c_1} + \frac{1-c_1}{c_1}\log(1-c_1)$ & $\theta c_1^{-1}(1-c_1)^{-1/2}$\\ 
-            REG & $f^{\text{REG}_0}_c+f_{10}$ & $\check{g}^{\text{REG}_0}_c\check{g}_{10}$ \\
-            CCA & $f_c^{\text{REG}}+f_{21}$ & $\frac{\check{g}_c^{\text{REG}}\check{g}_{10}}{l(\theta)}$
+            SMD & $1-\theta^2 $ & PCA & $ c_1\left(c_1-\theta^2\right)(1+\theta)^2 $  \\
+            REG$_0$ & $c_1(1+c_1+2\theta)\left( c_1-\theta^2 \right)$ & REG & $c_1h(c_1 + \theta + (1+\theta)l)/l^4$ \\ 
+            SigD & $r^2h(1+\theta)^2/l^4$ & CCA & $c_1^2 \left( 2(c_1 + \theta) + l(1-c_1) \right)/(l^3 (c_1 + c_2))$
           \end{tabular}
         \end{center}
     \end{table}
