@@ -645,7 +645,10 @@ $$
 where $\Delta_p(\theta)$ is defined as zero in the event of asymptotically negligible probability that $z_0\leq \lambda_1$. 
 
 \begin{theorem}{Asymptotics of LR}{asymptotic_lr}
-    Suppose that the null hypothesis holds, $\theta_0= 0$. Let $\bar{\theta}$ be the threshold corresponding to $F_{\boldsymbol{\gamma}}$ as in Tab.\ref{tab:3classes_distributions}, let $\epsilon$ be an arbitrarily small fixed positive number, then $\forall \theta\in (0,\bar{\theta}-\epsilon]$, as $\mathbf{n},p\xrightarrow{\boldsymbol{\gamma}} \infty$
+    Suppose that the null hypothesis holds, $\theta_0= 0$. Let $\bar{\theta}$ be the threshold corresponding to $F_{\boldsymbol{\gamma}}$ as in Tab.\ref{tab:3classes_distributions}, let $\epsilon$ be an arbitrarily small fixed positive number, then $\forall \theta\in (0,\bar{\theta}-\epsilon]$, as $\mathbf{n},p\xrightarrow{\boldsymbol{\gamma}} \infty$, we have 
+    $$
+    \mathcal{L}(\theta,\Lambda) = \exp\left\{ -\frac{1}{2}\Delta_p(\theta) + \frac{1}{2}\ln \left(1-[\delta_p(\theta)]^2\right) \right\} (1+o_{\mathrm{p}}(1))
+    $$
 \end{theorem}
 
 \newpage
