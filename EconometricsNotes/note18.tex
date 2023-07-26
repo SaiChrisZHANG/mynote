@@ -649,6 +649,14 @@ where $\Delta_p(\theta)$ is defined as zero in the event of asymptotically negli
     $$
     \mathcal{L}(\theta,\Lambda) = \exp\left\{ -\frac{1}{2}\Delta_p(\theta) + \frac{1}{2}\ln \left(1-[\delta_p(\theta)]^2\right) \right\} (1+o_{\mathrm{p}}(1))
     $$
+    where 
+    $$
+    \delta_p(\theta) = \begin{cases}
+        \theta, &\text{SMD}\\
+        \theta/\sqrt{c_1}, & \text{PCA,REG}_0\\
+        \theta r/(c_1l(\theta)), & \text{SigD, REG, CCA}
+    \end{cases}
+    $$
 \end{theorem}
 
 \newpage
