@@ -669,6 +669,14 @@ Here, statistic $\Delta_p(\theta)$ is a linear spectral statistic, weakly conver
         \mathbb{E}\mathcal{L}(\theta) &= \frac{1}{4}\ln(1-\delta^2(\theta)) \\
         \mathrm{Cov}\left(\mathcal{L}(\theta_1),\mathcal{L}(\theta_2)\right)&= -\frac{1}{2}\ln \left(1-\delta(\theta_1)\delta(\theta_2)\right)
     \end{align*}
+    with 
+    $$
+    \delta(\theta) = \begin{cases}
+        \theta, & \text{SMD}\\
+        \theta/\sqrt{\gamma_1}, & \text{PCA,REG}_0\\
+        \theta\rho/(\gamma_1+\gamma_2+\theta\gamma_2), & \text{SigD,REG,CCA}
+    \end{cases}
+    $$
 \end{theorem}
 
 \newpage
