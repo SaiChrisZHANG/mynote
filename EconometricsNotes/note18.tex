@@ -702,7 +702,14 @@ Next, derive the asymptotic power envelopes for tests of the null hypothesis $\t
     \end{align*}
     An approximation can be obtained via simulation.
     \item The maximum likelihood estimator for the spike $\hat{\theta}_{ML}$. The limiting process $X(\theta)$ achieves maximum at a unique point with probability one. Therefore by the argmax continuous mapping theorem, $\hat{\theta}_{ML}$ converges in distribution to the argmax of $X(\theta)$. The distribution of such an argmax can also be approximated via simulations. But \textbf{the quality of the estimator} $\hat{\theta}_{ML}$ \textbf{cannot be good}.
-    \item \myhl[myblue]{\textbf{Multiple spikes}}: the asymptotic analysis can be extended to a \textbf{fixed} number of sub-critical spikes. In the case of slowly increasing number of spikes, relatively little is known about the phase transition phenomenon. It is not clear whether the experiments of observing sample covariance eigenvalues corresponding to the null case and an alternative with a growing number of sub-critical eigenvalues remain mutually contiguous. Iintuitively, the asymptotic power of the likelihood ratio test of the null hypothesis of no spikes against the alternative of one spike should not decrease if the rank-one assumption on the alternative is wrong and there are additional spikes.
+    \item \myhl[myblue]{\textbf{Multiple spikes}}: the asymptotic analysis can be extended to a \textbf{fixed} number of sub-critical spikes. In the case of slowly increasing number of spikes, relatively little is known about the phase transition phenomenon. It is not clear whether the experiments of observing sample covariance eigenvalues corresponding to the null case and an alternative with a growing number of sub-critical eigenvalues remain mutually contiguous. 
+    
+    Intuitively, the asymptotic power of the likelihood ratio test of the null hypothesis of no spikes against the alternative of one spike should not decrease if the rank-one assumption on the alternative is wrong and there are additional spikes.
+    \item \myhl[myblue]{\textbf{Relaxing} the assumption $p\leq n_1$}: 
+    \begin{itemize}
+        \item \textbf{SMD}: the assumption is irrelevant
+        \item \textbf{PCA}: already covered by previous work
+    \end{itemize}
 \end{itemize}
  
 \newpage
