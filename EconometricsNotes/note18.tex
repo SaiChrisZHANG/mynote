@@ -752,6 +752,16 @@ conduct a spectral decomposition of the observed data matrix. Denote its eigenva
 \begin{equation}
     f_k(z) = 1 + d_k \left\{ \mathcal{R}(\mathbf{v}_k,\mathbf{v}_k,z)-\mathcal{R}(\mathbf{v}_k,\mathbf{V}_{-k},z) \times \left[(\mathbf{D}_{-k})^{-1}+ \mathcal{R}(\mathbf{V}_{-k},\mathbf{V}_{-k},z)\right]^{-1}\mathcal{R}\left(\mathbf{V}_{-k},\mathbf{v}_k,z\right) \right\} = 0
 \end{equation}
+when restricted to the interval $z\in \left[a_k,b_k\right]$, where 
+\begin{align*}
+    a_k &= \begin{cases}
+        d_k/(1+c_0/2) & d_k > 0 \\
+        d_k(1+c_0/2) & d_k < 0
+    \end{cases}
+    & b_k & \begin{cases}
+        
+    \end{cases}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
