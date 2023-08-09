@@ -749,7 +749,7 @@ conduct a spectral decomposition of the observed data matrix. Denote its eigenva
 \end{itemize}
 
 \paragraph*{Asymptotic distributions of spiked eigenvalues} For each $1\leq k \leq K$, denote the solution to the equation 
-\begin{equation}\ref{eq:asymptotic_dist_equation}
+\begin{equation}\label{eq:asymptotic_dist_equation}
     f_k(z) = 1 + d_k \left\{ \mathcal{R}(\mathbf{v}_k,\mathbf{v}_k,z)-\mathcal{R}(\mathbf{v}_k,\mathbf{V}_{-k},z) \times \left[(\mathbf{D}_{-k})^{-1}+ \mathcal{R}(\mathbf{V}_{-k},\mathbf{V}_{-k},z)\right]^{-1}\mathcal{R}\left(\mathbf{V}_{-k},\mathbf{v}_k,z\right) \right\} = 0
 \end{equation}
 when restricted to the interval $z\in \left[a_k,b_k\right]$, where 
@@ -763,7 +763,7 @@ when restricted to the interval $z\in \left[a_k,b_k\right]$, where
         d_k/(1+c_0/2) & d_k <0
     \end{cases}
 \end{align*}
-Equation 
+Equation \ref{eq:asymptotic_dist_equation} has a \textbf{unique} solution in the interval $z\in\left[a_k,b_k\right]$ and thus $t_k$'s are well defined. Moreover, for each $1\leq k \leq K$, we have $$ t_k/d_k \xrightarrow{n\rightarrow\infty} 1 $$
 
 \newpage
 \bibliographystyle{plainnat}
