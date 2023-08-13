@@ -806,8 +806,9 @@ $$
 $$
 where $\boldsymbol{\Theta}$ is an $n\times K $ community membership matrix, and $\mathbf{B}$ is a $K\times K$ symmetric matrix. Then, based on Thm. \ref{thm:spike_eigen_asymptotics}, we can apply the $K-$means clustering algorithm to $K$ spiked eigenvectors and recover the memberships of nodes in network models:
 \begin{align*}
-    H_0 &: \mathbf{v}_k = \mathbf{1}/\sqrt{n} & H_1 &: \mathbf{v}_k & \neq \mathbf{1}/\sqrt{n}
+    H_0 &: \mathbf{v}_k = \mathbf{1}/\sqrt{n} & H_1 &: \mathbf{v}_k  \neq \mathbf{1}/\sqrt{n}
 \end{align*}
+using the test statistic $\hat{\mathbf{v}}_k'\mathbf{1}$. 
 
 \newpage
 \bibliographystyle{plainnat}
