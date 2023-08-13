@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  13 AUG 2023 08:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  13 AUG 2023 08:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1113,7 +1113,6 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
- (/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.out) (/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.out)
 \@outlinefile=\write6
 \openout6 = `note18.out'.
 
@@ -1204,6 +1203,332 @@ LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/note18_resamplingfail.png, id=56, 1383.1675pt x 865.2325pt>
+<figures/note18_resamplingfail.png, id=29, 1383.1675pt x 865.2325pt>
 File: figures/note18_resamplingfail.png Graphic file (type png)
-<use figures/note18_re
+<use figures/note18_resamplingfail.png>
+Package pdftex.def Info: figures/note18_resamplingfail.png  used on input line 84.
+(pdftex.def)             Requested size: 281.85585pt x 176.30441pt.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
+(Font)              scaled to size 10.0pt on input line 94.
+ [2]
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 99.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 99.
+
+
+Package natbib Warning: Citation `johnstone2020testing' on page 18-3 undefined on input line 100.
+
+LaTeX Font Info:    Try loading font information for T1+zplsups on input line 100.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zplsups.fd
+File: t1zplsups.fd 2015/01/17 v1.0
+)
+LaTeX Font Info:    Font shape `T1/zplsups/m/n' will be
+(Font)              scaled to size 10.0pt on input line 100.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 105.
+LaTeX Font Info:    Font shape `T1/zplsups/m/n' will be
+(Font)              scaled to size 8.0pt on input line 105.
+LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 105.
+LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 105.
+LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 105.
+LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
+(Font)              scaled to size 8.0pt on input line 105.
+LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
+(Font)              scaled to size 6.2pt on input line 105.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 125.
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <12> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 125.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 125.
+ [3 </Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/figures/note18_resamplingfail.png>]
+
+Package natbib Warning: Citation `johnstone2020testing' on page 18-4 undefined on input line 131.
+
+
+LaTeX Warning: Reference `tab:5cases_James' on page 18-4 undefined on input line 131.
+
+
+LaTeX Warning: Reference `eq:multivariate_statistic' on page 18-4 undefined on input line 133.
+
+
+LaTeX Warning: Reference `eq:multivariate_statistic' on page 18-4 undefined on input line 144.
+
+
+LaTeX Warning: Reference `eq:multivariate_statistic' on page 18-4 undefined on input line 150.
+
+[4] [5]
+LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <8> not available
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 204.
+LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
+(Font)              scaled to size 8.0pt on input line 204.
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 204.
+
+
+LaTeX Warning: Reference `eq:spectral_spike_hypotheses' on page 18-6 undefined on input line 205.
+
+
+LaTeX Warning: Reference `fig:smd_5classesofproblems' on page 18-6 undefined on input line 210.
+
+[6]
+
+LaTeX Warning: Reference `eq:likelihood_ratio' on page 18-7 undefined on input line 255.
+
+
+LaTeX Warning: Reference `eq:likelihood_ratio' on page 18-7 undefined on input line 255.
+
+
+LaTeX Warning: Reference `fig:smd_5classesofproblems' on page 18-7 undefined on input line 271.
+
+[7]
+
+LaTeX Warning: Reference `tab:3classes_distributions' on page 18-8 undefined on input line 295.
+
+LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
+(Font)              scaled to size 8.0pt on input line 304.
+
+LaTeX Warning: Reference `tab:3classes_distributions' on page 18-8 undefined on input line 304.
+
+
+LaTeX Warning: Reference `tab:3classes_distributions' on page 18-8 undefined on input line 322.
+
+
+LaTeX Warning: Reference `eq:likelihood_ratio' on page 18-8 undefined on input line 333.
+
+[8]
+
+LaTeX Warning: Reference `tab:6cases_parameters' on page 18-9 undefined on input line 340.
+
+
+LaTeX Warning: Reference `eq:contour_integral' on page 18-9 undefined on input line 343.
+
+
+LaTeX Warning: Reference `eq:contour_integral' on page 18-9 undefined on input line 355.
+
+
+LaTeX Warning: Reference `eq:laplace_form' on page 18-9 undefined on input line 355.
+
+
+LaTeX Warning: Reference `tab:fc_gc_values' on page 18-9 undefined on input line 361.
+
+
+LaTeX Warning: Reference `tab:fc_gc_values' on page 18-9 undefined on input line 361.
+
+[9]
+
+Package natbib Warning: Citation `johnstone2020testing' on page 18-10 undefined on input line 423.
+
+[10]
+
+LaTeX Warning: Reference `fig:contour_cmd_pca_sigd' on page 18-11 undefined on input line 487.
+
+
+LaTeX Warning: Reference `fig:contour_reg0_cca' on page 18-11 undefined on input line 491.
+
+[11]
+
+Package natbib Warning: Citation `johnstone2020testing' on page 18-12 undefined on input line 502.
+
+
+LaTeX Warning: Reference `eq:contour_integral' on page 18-12 undefined on input line 562.
+
+[12]
+
+LaTeX Warning: Reference `tab:value_of_D2' on page 18-13 undefined on input line 617.
+
+
+LaTeX Warning: Reference `tab:3classes_distributions' on page 18-13 undefined on input line 634.
+
+[13]
+
+LaTeX Warning: Reference `thm:laplace_approximation' on page 18-14 undefined on input line 641.
+
+
+LaTeX Warning: Reference `tab:3classes_distributions' on page 18-14 undefined on input line 648.
+
+
+LaTeX Warning: Reference `tab:3classes_distributions' on page 18-14 undefined on input line 666.
+
+[14]
+
+LaTeX Warning: Reference `thm:asymptotic_moments_LR' on page 18-15 undefined on input line 682.
+
+
+LaTeX Warning: Reference `tab:3classes_distributions' on page 18-15 undefined on input line 687.
+
+
+LaTeX Warning: Reference `thm:asymptotic_moments_LR' on page 18-15 undefined on input line 696.
+
+
+LaTeX Warning: Reference `thm:asymptotic_moments_LR' on page 18-15 undefined on input line 698.
+
+[15]
+
+Package natbib Warning: Citation `johnstone2020testing' on page 18-16 undefined on input line 719.
+
+
+Package natbib Warning: Citation `fan2022asymptotic' on page 18-16 undefined on input line 719.
+
+[16]
+
+LaTeX Warning: Reference `eq:asymptotic_dist_equation' on page 18-17 undefined on input line 766.
+
+[17]
+
+LaTeX Warning: Reference `thm:spike_eigen_asymptotics' on page 18-18 undefined on input line 807.
+
+Runaway argument?
+ 
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:809: Paragraph ended before \align* was complete.
+<to be read again> 
+                   \par 
+l.809 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:809: Missing $ inserted.
+<inserted text> 
+                $
+l.809 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:809: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.809 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:809: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.809 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:810: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.810 \end{align*}
+                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:810: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.810 \end{align*}
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:810: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.810 \end{align*}
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (270.90562pt too wide) detected at line 810
+[]
+ []
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:810: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.810 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:810: Missing $ inserted.
+<inserted text> 
+                $
+l.810 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.tex:810: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.810 \end{align*}
+                  
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[18] (/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 816.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 816.
+ (/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 816.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 816.
+
+
+Package rerunfilecheck Warning: File `note18.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `note18.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  F4D574ED592981DC6ECC806E66D8B775;439.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 816.
+ ) 
+Here is how much of TeX's memory you used:
+ 36797 strings out of 492649
+ 864384 string characters out of 6129623
+ 1072890 words of memory out of 5000000
+ 39870 multiletter control sequences out of 15000+600000
+ 124776 words of font info for 208 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 80i,24n,136p,1075b,1214s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{http://faculty.marshall.usc.edu/jinchi-lv/} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxbmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxbsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-bold.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
+Output written on "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.pdf" (19 pages, 298662 bytes).
+PDF statistics:
+ 257 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 76 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+
