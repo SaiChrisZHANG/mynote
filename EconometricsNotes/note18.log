@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  14 AUG 2023 05:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  14 AUG 2023 06:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1252,20 +1252,15 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
  [6] [7]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 304.
- [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-Overfull \hbox (14.95647pt too wide) in paragraph at lines 810--812
-\T1/zpltlf/m/n/10 using the test statis-tic $[]\OT1/zpltlf/b/n/10 1$\T1/zpltlf/m/n/10 . If we as-sume $\OML/npxmi/m/it/10 n \U/npxmia/m/it/10 5 \OML/npxmi/m/it/10 n[] \U/npxmia/m/it/10 ý \OML/npxmi/m/it/10 n[]; k \U/npxmia/m/it/10 5 \OT1/zpltlf/m/n/10 2$ \T1/zpltlf/m/n/10 and the 2 com-mu-ni-ties are $[] \OML/npxmi/m/it/10 ; []$\T1/zpltlf/m/n/10 .
- []
-
-[18] [19] (/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.bbl) [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 841.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 841.
+ [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] (/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.bbl) [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 843.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 843.
  (/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 841.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 841.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 843.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 843.
 Package rerunfilecheck Info: File `note18.out' has not changed.
 (rerunfilecheck)             Checksum: F4D574ED592981DC6ECC806E66D8B775;439.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 841.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 843.
  ) 
 Here is how much of TeX's memory you used:
  36810 strings out of 492649
@@ -1278,7 +1273,7 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{http://faculty.marshall.usc.edu/jinchi-lv/} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxbmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxbsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-bold.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.pdf" (20 pages, 303552 bytes).
+Output written on "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note18.pdf" (20 pages, 303614 bytes).
 PDF statistics:
  329 PDF objects out of 1000 (max. 8388607)
  284 compressed objects within 3 object streams
