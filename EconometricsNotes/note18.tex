@@ -838,9 +838,13 @@ where $\mathbf{l}$ is a vector with the first $n_1$ entries being 1 and rest 0, 
 \begin{itemize}
     \item under the null, the top eigenvector is $\mathbf{v}_1 = \mathbf{1}/\sqrt{n}$ and thus 
     \begin{align*}
-        \mathbb{E}\left( \mathbf{v}_1'\mathbf{W}^2\mathbf{v}_1 \right) & np(1-p)\\
-        \mathrm{var} \left( \mathbf{v}_1'\mathbf{W}^2\mathbf{v}_1 \right)& p(1-p)\left[2(n-1)+p^3+(1-p)^3\right]
+        \mathbb{E}\left( \mathbf{v}_1'\mathbf{W}^2\mathbf{v}_1 \right) & =np(1-p)\\
+        \mathrm{var} \left( \mathbf{v}_1'\mathbf{W}^2\mathbf{v}_1 \right)&= p(1-p)\left[2(n-1)+p^3+(1-p)^3\right]
     \end{align*}
+    \item the natural test statistic based on Thm.\ref{thm:spike_eigen_asymptotics} is given by 
+    \begin{equation*}
+        T_n \coloneq \frac{1\lambda_1^2}{ \hat{p}(1-\hat{p})\left[2(n-1)+\hat{p}^3+(1-\hat{p})^3\right] }
+    \end{equation*}
 \end{itemize}
 
 \newpage
