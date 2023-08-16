@@ -857,6 +857,10 @@ where $K$ is the true \textbf{rank} of the mean matrix $\mathbf{H}$ and $K_0$ is
 $$
 \hat{w}_{ij} = x_{ij} - \sum^{K_0}_{i=1}\lambda_k \mathbf{e}'i \hat{\mathbf{v}}_k \hat{\mathbf{v}}_k' \mathbf{e}_j
 $$
+under the null and some additional regularity conditions, $\hat{w}_{ij}$ is expected to be close to $w_{ij}$, hence the test statistic can be given by
+$$
+T_n \coloneq \frac{\sum^n_{i=1}\hat{w}_{ii}}{\sqrt{\sum^n_{i=1}\hat{w}_{ii}^2}} \xrightarrow{d} \mathcal{N}(0,1)
+$$
 
 \newpage
 \bibliographystyle{plainnat}
