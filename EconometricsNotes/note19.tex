@@ -16,7 +16,8 @@ Consider an undirected graph $G$, with nodes $V$ and edges $E$. Let
     \end{itemize}
 then we have
 \begin{definition}{Stochastic Block Model}{stoch_block_model}
-    The pair $(\mathbf{X},G)$ is drawn under $SBM(n,p,\mathbf{W})$ if $\mathbf{X}$ is an $n$ dimensional random vector with i.i.d. components distributed under $p$, and $G$ is an $n-$vertex simple 
+    The pair $(\mathbf{X},G)$ is drawn under $SBM(n,p,\mathbf{W})$ if $\mathbf{X}$ is an $n$ dimensional random vector with i.i.d. components distributed under $p$, and $G$ is an $n-$vertex simple graph 
+    where vertices $i$ and $j$ are connected with probability $W_{X_i,X_j}$, \myhl[myred]{\textbf{independently}} of other pairs of vertices. And the \textbf{community} sets can be defined 
 \end{definition}
 
 \newpage
