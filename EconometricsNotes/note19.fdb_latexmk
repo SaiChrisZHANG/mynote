@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1692636507 "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.pdf" "note19" 1692636509
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.aux" 1692636508 886 f4fd3a13aa478dfd27ac2d8ef8801823 ""
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" 1692636506 1543 abdcd0f34ffbef4c701efac832512dd6 ""
+["pdflatex"] 1692636556 "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.pdf" "note19" 1692636558
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.aux" 1692636558 886 f4fd3a13aa478dfd27ac2d8ef8801823 ""
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" 1692636556 1680 3156e4026be96aa5f4a1822d75ad8514 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -54,6 +54,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb" 1480098744 206482 8fb0f4dbfe4659d48567ae598ad0ada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb" 1480098744 3685 e72267ec4ec79f1bcc7076bddaadf68a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb" 1480098744 33353 09ab21ee50375c770acac474ded14d20 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb" 1480098744 21252 cb2897d23bc8718f98581102d7d28fb2 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb" 1480098744 14672 0093e684026e66eef888939395e1a17d ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb" 1480098745 135666 b55329880281d733ea35d6aea5c7261d ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb" 1480098746 27693 bfb340b71292c6ead561e4943433945d ""
@@ -283,14 +284,14 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note19.aux" 1692636508 886 f4fd3a13aa478dfd27ac2d8ef8801823 ""
-  "note19.out" 1692636508 57 1eb3c6276f222c0161e9acaed7653610 ""
-  "note19.tex" 1692636506 1543 abdcd0f34ffbef4c701efac832512dd6 ""
+  "note19.aux" 1692636558 886 f4fd3a13aa478dfd27ac2d8ef8801823 ""
+  "note19.out" 1692636558 57 1eb3c6276f222c0161e9acaed7653610 ""
+  "note19.tex" 1692636556 1680 3156e4026be96aa5f4a1822d75ad8514 ""
   "settings.tex" 1692272723 7463 b1b0546f474d1eda530a80592591d61a ""
   (generated)
-  "note19.pdf"
   "note19.log"
-  "note19.out"
   "note19.aux"
   "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.log"
+  "note19.pdf"
   "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.pdf"
+  "note19.out"
