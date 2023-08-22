@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1692704218 "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.pdf" "note19" 1692704220
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.aux" 1692704220 1146 83822f9dab5c5cc29c973dbdce2309e4 ""
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" 1692704218 3003 3fde7b691bf93a1bd4f6bd9b709b2ead ""
+["pdflatex"] 1692704289 "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.pdf" "note19" 1692704291
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.aux" 1692704291 1146 83822f9dab5c5cc29c973dbdce2309e4 ""
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.tex" 1692704288 3056 09054ce677e9f2c0823524adf6244e9b ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -286,14 +286,14 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note19.aux" 1692704220 1146 83822f9dab5c5cc29c973dbdce2309e4 ""
-  "note19.out" 1692704220 114 244c392c6ee964c953dd18bd92c87dbf ""
-  "note19.tex" 1692704218 3003 3fde7b691bf93a1bd4f6bd9b709b2ead ""
+  "note19.aux" 1692704291 1146 83822f9dab5c5cc29c973dbdce2309e4 ""
+  "note19.out" 1692704291 114 244c392c6ee964c953dd18bd92c87dbf ""
+  "note19.tex" 1692704288 3056 09054ce677e9f2c0823524adf6244e9b ""
   "settings.tex" 1692272723 7463 b1b0546f474d1eda530a80592591d61a ""
   (generated)
   "note19.out"
-  "note19.aux"
-  "note19.log"
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.log"
-  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.pdf"
   "note19.pdf"
+  "note19.log"
+  "note19.aux"
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.pdf"
+  "/Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.log"
