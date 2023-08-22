@@ -35,11 +35,13 @@ Immediately, we can define the symmetry of SBM as:
 \subsection{Recovery}
 The goal of community detection is to recover the labels $\mathbf{X}$ by observing $G$, up to some level of accuracy. First, define \myhl[myred]{\textbf{agreement}} as 
 \begin{definition}{Agreement of Communities}{community_agreement}
-    The agreement between two community vectors $\mathbf{x,y}\in [k]^n$ is obtained by maximizing the common components between $x$ and any relabelling of $y$, that is 
+    The agreement between two community vectors $\mathbf{x,y}\in [k]^n$ is obtained by maximizing the common components between $\mathbf{x}$ and any relabelling of $\mathbf{y}$, that is 
     \begin{equation*}
-        A(x,y) = \max_{\pi\in S_k}\frac{1}{n}\sum^n_{i=1}\mathbf{1}\left[x_i = \pi(y_i)\right]
+        A(\mathbf{x,y}) = \max_{\pi\in S_k}\frac{1}{n}\sum^n_{i=1}\mathbf{1}\left[x_i = \pi(y_i)\right]
     \end{equation*}
+    where $S_k$ is the group of permutations on $[k]$.
 \end{definition}
+The \textbf{relabelling}
 
 \newpage
 %\bibliographystyle{plainnat}
