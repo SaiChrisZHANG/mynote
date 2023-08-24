@@ -74,8 +74,15 @@ Let's look at the example of $SSBM(n,2,\alpha\frac{\log n}{n},\beta \frac{\log n
     \item WLOG, $\alpha > \beta$
 \end{itemize}
 then we have the following theorem 
-\begin{theorem}{Exact Recovery in $SSBM(n,2,\alpha \log (n)/n,\beta \log(n)/n)$}{}
-    
+\begin{theorem}{Exact Recovery in $SSBM(n,2,\alpha \log (n)/n,\beta \log(n)/n)$}{exact_recover_ssbm_n2}
+    \begin{itemize}
+        \item Exact recovery in $SSBM(n,2,\alpha \log (n)/n,\beta \log(n)/n)$ is solvable and efficiently so if $\left\vert \sqrt{\alpha} -\sqrt{\beta} \right\vert > \sqrt{2}$ nad unsolvable if $\left\vert \sqrt{\alpha} -\sqrt{\beta} \right\vert < \sqrt{2}$
+        \item Exact recovery of the ground truth assignment of the partition $(A,B)$ is also achieveable, that is: if 
+        $$ \frac{\alpha+\beta}{2} - \sqrt{\alpha\beta} >1 $$
+        i.e. 
+        $$ \alpha+\beta >2,\ \left(\alpha-\beta\right)^2 > 4\left(\alpha+\beta\right) - 4 $$
+        the maximum likelihood estimator exactly recovers the communities (up to a global flip), with high probability.
+    \end{itemize}
 \end{theorem}
 
 \newpage
