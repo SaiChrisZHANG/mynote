@@ -64,6 +64,8 @@ On the other hand, we the case of \myhl[myred]{\textbf{weak recovery}} defined a
 Let's look at the example of $SSBM(n,2,\alpha\frac{\log n}{n},\beta \frac{\log n}{n})$, where 
 \begin{itemize}
     \item $n$: number of vertices (assumed to be even for simplicity)
+    \item for each $v\in [n]$, a binary label $X_v$ is attached s.t. $$ \left\vert \left\{ v\in [n]: X_v =1 \right\} \right\vert = n/2 $$
+    \item for each pair of distinct nodes $u,v\in[n]$, an edge is placed with probability $\alpha \frac{\log n}{n}$ if $X_u=X_v$, and $\beta\frac{\log n}{n}$ if $X_u \neq X_v $
 \end{itemize}
 
 \newpage
