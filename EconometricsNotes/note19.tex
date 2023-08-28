@@ -95,7 +95,11 @@ In summary, for a graph structure $G=(V,E)$ represented by adjacency matrix $\ma
 \end{itemize}
 
 \section{SIMPLE Model (Fan et al., 2022)}
-In SBM, each
+In SBM, each $\pi_i\in\left\{e_1,\cdots,e_K \right\}$ with $e_k$ a one entry vector whose $k$-th component is one. But what if each node $i$ can belong to $K$ different communities? We generalize $\pi_i$ to be a compositional vector, and interpret it as community membership profile for node $i$, then 
+$$
+\Pr\left(\mathbf{X}_{ij}=1\right) = \theta_i\theta_j \sum^K_{k=1} \sum^K_{l=1} \pi_i(k)\pi_j(l)p_{kl}
+$$
+and 
 
 \newpage
 \bibliographystyle{plainnat}
