@@ -88,7 +88,8 @@ See \citet{abbe2017community} for the proof of this theorem.
 
 In summary, for a graph structure $G=(V,E)$ represented by adjacency matrix $\mathbf{X}_{n\times n}$, Stochastic Block Model (SBM)
 \begin{itemize}
-    \item assumes that there is a symmetric matrix $\mathbf{P} = \left\{ p_{ij} \right\} \in \mathbb{R}^{k\times k}$, for $k \ll n$ and a map $C:\left\{1,\cdots,n\right\} \rightarrow \left\{1,\cdots,k\right\}$, s.t. $\Pr\left(\mathbf{X}_{ij}=1\right)$
+    \item assumes that there is a symmetric matrix $\mathbf{P} = \left\{ p_{ij} \right\} \in \mathbb{R}^{k\times k}$, for $k \ll n$ and a map $C:\left\{1,\cdots,n\right\} \rightarrow \left\{1,\cdots,k\right\}$, s.t. $\Pr\left(\mathbf{X}_{ij}=1\right) = \mathbf{P}_{C(i),C(i)}$
+    \item Define $\boldsymbol{\Pi} = \left(\pi_1,\cdots,\pi_n\right)'\in \mathbb{R}^{n\times k}$ where $\boldsymbol{\Pi}_{ij}=1$
 \end{itemize}
 
 \section{SIMPLE Model (Fan et al., 2022)}
