@@ -90,6 +90,8 @@ In summary, for a graph structure $G=(V,E)$ represented by adjacency matrix $\ma
 \begin{itemize}
     \item assumes that there is a symmetric matrix $\mathbf{P} = \left\{ p_{ij} \right\} \in \mathbb{R}^{k\times k}$, for $k \ll n$ and a map $C:\left\{1,\cdots,n\right\} \rightarrow \left\{1,\cdots,k\right\}$, s.t. $\Pr\left(\mathbf{X}_{ij}=1\right) = \mathbf{P}_{C(i),C(i)}$
     \item Define $\boldsymbol{\Pi} = \left(\pi_1,\cdots,\pi_n\right)'\in \mathbb{R}^{n\times k}$ where $\boldsymbol{\Pi}_{ij}=1$ if $C(i)=j$, and $\boldsymbol{\Pi}_{ij}=0$ otherwise
+    \item Let $\mathbf{H}= \mathbb{E}(\mathbf{X})$ be the probability matrix, then $\mathbf{H} = \boldsymbol{\Pi}\mathbf{P}\boldsymbol{\Pi}'$
+    \item 
 \end{itemize}
 
 \section{SIMPLE Model (Fan et al., 2022)}
