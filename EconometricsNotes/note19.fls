@@ -494,6 +494,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplb-x.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbsy.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/pxbsys.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txbex-bar.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbmi.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxbmi.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/pxfonts/pxbmi.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/rpxbmi.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/rpxpplbi.tfm
 INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.bbl
 INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.bbl
 INPUT /Users/admin/Library/CloudStorage/Dropbox/SAI presentations/mynote/EconometricsNotes/note19.aux
@@ -511,6 +516,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxbsys.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb

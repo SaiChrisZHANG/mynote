@@ -114,6 +114,9 @@ where
     \item $\mathbf{W} = \left\{ w_{ij} \right\} \in \mathbb{R}^{n\times n}$ is a symmetric random matrix with zero mean and independent entries on and above the diagonal
 \end{itemize}
 
+Assume $V$ is decomposed into $K$ disjoint latent communities $$ C_1, \cdots, C_K $$ where each node $i$ is associated with the community membership probability vector $$\boldsymbol{\pi}_i = \left( \pi_i(1),\cdots,\pi_i(K) \right)' \in \mathbb{R}^K$$
+s.t. $$ \Pr(i\in C_k) = \pi_i(k),\ k=1,\cdots,K $$
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
