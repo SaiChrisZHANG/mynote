@@ -106,7 +106,12 @@ $$
 and $\mathbf{H} = \boldsymbol{\Theta\Pi}\mathbf{P}\boldsymbol{\Pi'\Theta}$. Now, consider a new statistical tests for testing whether any given pair of nodes share the same membership profiles, and providing the associated $p$-values.
 
 \subsection{Problem Setting}
-Consider an undirected graph $G=(V,E)$ with $n$ nodes, let $\mathbf{X}=\left\{x_{ij}\right\}\in \mathbb{R}^{n\times n}$ be the \textbf{symmetric} adjacency matrix. Under a probabilistic model, assume $x_{ij}$ is an independent realization from a Bernoulli random variable for all upper triangular entries of random matrix $\mathbf{X}$.
+For an undirected graph $G=(V,E)$ with $n$ nodes, let $\mathbf{X}=\left\{x_{ij}\right\}\in \mathbb{R}^{n\times n}$ be the \textbf{symmetric} adjacency matrix. Under a probabilistic model, assume $x_{ij}$ is an independent realization from a Bernoulli random variable for all upper triangular entries of random matrix $\mathbf{X}$.
+Consider the adjacency matrix with the deterministic-random latent structure $$ \mathbf{X=H+W} $$
+where 
+\begin{itemize}
+    \item $\mathbf{H} = \left\{ h_{ij} \right\} \in \mathbb{R}^{n\times n}$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
