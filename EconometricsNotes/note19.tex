@@ -122,6 +122,15 @@ For any given pair of nodes $i\neq j\in V$, the goal is to infer whether they sh
 \begin{align*}
     H_0 &: \pi_i=\pi_j & H_1: &\pi_i\neq \pi_j
 \end{align*}
+More explicitly, consider the DCMM (Degree Corrected Mixed Membership) model as the underlying network model, s.t. the probability of a link between nodes $i$ and $j$ can be written as 
+\begin{align*}
+    \Pr(\mathbf{X}_{ij}=1) = \theta_i \theta_j \sum^K_{k=1}\sum^K_{l=1}\pi_i(k)\pi_j(l)p_{kl}
+\end{align*}
+and 
+$$
+\mathbf{H} = \boldsymbol{\Theta\Pi}\mathbf{P}\boldsymbol{\Pi'\Theta}
+$$
+in matrix form, where $\boldsymbol{\Pi} = \left(\pi_1,\cdots,\pi_n\right)'\in \mathbb{R}^{n\times k}$ and $\boldsymbol{\Theta} = \mathrm{diag}\left(\theta_1,\cdots,\theta_n\right)$
 
 \newpage
 \bibliographystyle{plainnat}
