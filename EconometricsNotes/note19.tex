@@ -132,7 +132,8 @@ $$
 $$
 in matrix form, where $\boldsymbol{\Pi} = \left(\pi_1,\cdots,\pi_n\right)'\in \mathbb{R}^{n\times k}$ and $\boldsymbol{\Theta} = \mathrm{diag}\left(\theta_1,\cdots,\theta_n\right)$. Consider 
 \begin{itemize}
-    \item No degree homogeneity: $\boldsymbol{\Theta} = \sqrt{\theta}\mathbf{I}_n$, then $\mathbf{H} = \theta \boldsymbol{\Pi}\mathbf{P}\boldsymbol{\Pi}'$
+    \item No degree homogeneity: $\boldsymbol{\Theta} = \sqrt{\theta}\mathbf{I}_n$, then $\mathbf{H} = \theta \boldsymbol{\Pi}\mathbf{P}\boldsymbol{\Pi}'$. If we eigen-decompose $\mathbf{H} = \mathbf{VDV}'$ where $\mathbf{D} = \mathrm{diag}\left(d_1,\cdots,d_K\right)$ with 
+    $\left\vert d_1 \right\vert \geq \left\vert d_2 \right\vert \geq \cdots \left\vert d_K \right\vert > 0$ is the matrix of all $K$ non-zero eigenvalues and $V=\left(v_1,\cdots, v_K\right)\in \mathbb{R}^{n\times K}$
 \end{itemize}
 
 \newpage
