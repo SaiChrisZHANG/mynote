@@ -135,7 +135,10 @@ in matrix form, where $\boldsymbol{\Pi} = \left(\pi_1,\cdots,\pi_n\right)'\in \m
     \item No degree homogeneity: $\boldsymbol{\Theta} = \sqrt{\theta}\mathbf{I}_n$, then $\mathbf{H} = \theta \boldsymbol{\Pi}\mathbf{P}\boldsymbol{\Pi}'$. If we eigen-decompose $\mathbf{H} = \mathbf{VDV}'$ where $\mathbf{D} = \mathrm{diag}\left(d_1,\cdots,d_K\right)$ with 
     $\left\vert d_1 \right\vert \geq \left\vert d_2 \right\vert \geq \cdots \left\vert d_K \right\vert > 0$ is the matrix of all $K$ non-zero eigenvalues and $V=\left(v_1,\cdots, v_K\right)\in \mathbb{R}^{n\times K}$ is the eigenvectors.
     \begin{itemize}
-        \item 
+        \item the column space spanned by $\boldsymbol{\Pi}$ is the same as the eigenspace spanned by the top $K$ eigenvectors of matrix $\mathbf{H}$
+        \item mean matrix $\mathbf{H}$ is \textbf{not} observable: replace it with adjacency matrix $\mathbf{X}$ and conduct eigen-decomposition to get eigenvalues $\hat{d}_1,\cdots,\hat{d}_n$ and eigenvectors $\hat{v}_1,\cdots,\hat{v}_n$. We assume that 
+        $$ \left\vert \hat{d}_1 \right\vert \geq \left\vert \hat{d}_2 \right\vert \geq \cdots \geq \left\vert \hat{d}_n \right\vert $$
+        and let $\hat{\mathbf{V}} = \left(\hat{v}_1,\cdots,\hat{v}_K\right) \in \mathbf{R}^{n\times K}$
     \end{itemize}
 \end{itemize}
 
