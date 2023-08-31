@@ -148,7 +148,7 @@ T_{ij} = \left[\hat{\mathbf{V}}(i) - \hat{\mathbf{V}}(j)\right]'\boldsymbol{\Sig
 $$
 where $\boldsymbol{\Sigma}_1^{-1} = \mathrm{Cov}\left[(e_i - e_j)' \mathbf{WVD}^{-1}\right]$ is the asymptotic variance of $\left[\hat{\mathbf{V}}(i) - \hat{\mathbf{V}}(j)\right]$. The regularity conditions are 
 \begin{itemize}
-    \item $\exists c_0 >0$ s.t. $$ \min \left\{ \frac{\left\vert d_i \right\vert}{\left\vert d_j \right\vert}: \right\} $$
+    \item $\exists c_0 >0$ s.t. $$ \min \left\{ \frac{\left\vert d_i \right\vert}{\left\vert d_j \right\vert}: 1\leq i\leq j\leq K, d_i\neq -d_j \right\} \geq 1+c_0 $$
 \end{itemize}
 
 \newpage
