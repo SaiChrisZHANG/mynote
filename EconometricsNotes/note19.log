@@ -1220,17 +1220,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `note19.out' has not changed.
 (rerunfilecheck)             Checksum: 9C76D8321B8C98DE6F9B05258DD1BC81;404.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 36421 strings out of 492649
- 858213 string characters out of 6129623
+ 36420 strings out of 492649
+ 858206 string characters out of 6129623
  1063689 words of memory out of 5000000
- 39593 multiletter control sequences out of 15000+600000
+ 39592 multiletter control sequences out of 15000+600000
  66735 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,8n,136p,1075b,1217s stack positions out of 5000i,500n,10000p,200000b,80000s
