@@ -148,10 +148,15 @@ T_{ij} = \left[\hat{\mathbf{V}}(i) - \hat{\mathbf{V}}(j)\right]'\boldsymbol{\Sig
 $$
 where $\boldsymbol{\Sigma}_1^{-1} = \mathrm{Cov}\left[(e_i - e_j)' \mathbf{WVD}^{-1}\right]$ is the asymptotic variance of $\left[\hat{\mathbf{V}}(i) - \hat{\mathbf{V}}(j)\right]$. The regularity conditions are 
 \begin{itemize}
-    \item $\exists c_0 >0$ s.t. $$ \min \left\{ \frac{\left\vert d_i \right\vert}{\left\vert d_j \right\vert}: 1\leq i\leq j\leq K, d_i\neq -d_j \right\} \geq 1+c_0 $$
-    \item $\exists c_0\in (0,1), c_2\in [0,1/2), c_1\in (0,1-2c_2)$ s.t. $\lambda_k\left(\boldsymbol{\Pi'\Pi}\right) \geq c_0 n$, $\lambda_K(\mathbf{P})\geq n^{-c_2}$ and $\theta \geq n^{-c_1}$
-    \item as $n\rightarrow \infty$, all the eigenvalues of $\theta^{-1}\mathbf{D}\boldsymbol{\Sigma}_1\mathbf{D}$ are bounded away from $0$ and $\infty$
+    \item[\textbf{C1}] $\exists c_0 >0$ s.t. $$ \min \left\{ \frac{\left\vert d_i \right\vert}{\left\vert d_j \right\vert}: 1\leq i\leq j\leq K, d_i\neq -d_j \right\} \geq 1+c_0 $$
+    \item[\textbf{C2}] $\exists c_0\in (0,1), c_2\in [0,1/2), c_1\in (0,1-2c_2)$ s.t. $\lambda_k\left(\boldsymbol{\Pi'\Pi}\right) \geq c_0 n$, $\lambda_K(\mathbf{P})\geq n^{-c_2}$ and $\theta \geq n^{-c_1}$
+    \item[\textbf{C3}] as $n\rightarrow \infty$, all the eigenvalues of $\theta^{-1}\mathbf{D}\boldsymbol{\Sigma}_1\mathbf{D}$ are bounded away from $0$ and $\infty$
 \end{itemize}
+
+and the test statistics follow the theorem 
+\begin{theorem}{SIMPLE-stat-dist}
+    Under Condition \textbf{C1} and \textbf{C2}, 
+\end{theorem}
 
 \newpage
 \bibliographystyle{plainnat}
