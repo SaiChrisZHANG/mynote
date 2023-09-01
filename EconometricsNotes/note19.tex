@@ -155,7 +155,12 @@ where $\boldsymbol{\Sigma}_1^{-1} = \mathrm{Cov}\left[(e_i - e_j)' \mathbf{WVD}^
 
 and the test statistics follow the theorem 
 \begin{theorem}{Test Statistics Distribution}{SIMPLE-stat-dist}
-    Under Condition \textbf{C1} and \textbf{C2}, 
+    Under Condition \textbf{C1} and \textbf{C2}, and $\boldsymbol{\Theta} = \sqrt{\theta}\mathbf{I}_n$,
+    \begin{itemize}
+        \item If \textbf{C3} holds too, then under the null
+        $$ H_0: T_{ij}\xrightarrow{\mathcal{D}} \chi^2_K $$
+        as $n\rightarrow\infty$, where $\chi^2_K$ is the chi-square distribution with $K$ degrees of freedom
+    \end{itemize}
 \end{theorem}
 
 \newpage
