@@ -176,7 +176,12 @@ Under the joint null $H_{0,ij}: \pi_i=\pi j,\forall 1\leq i\neq j\leq n$, a unif
 $$
 \lim_{n\rightarrow\infty} \sup_{1\leq i\neq j \leq n} \left\vert \Pr \left(T_{ij}\leq x \right) - \Pr \left( X\leq x \right) \right\vert =0,\forall x \in \mathbf{R}
 $$
-where $X\sim \chi^2_{K}$. But the test statistic $T_{ij}$ is not directly applicable since the population parameters $K$ and $\boldsymbol{\Sigma}_1$
+where $X\sim \chi^2_{K}$. But the test statistic $T_{ij}$ is not directly applicable since the population parameters $K$ and $\boldsymbol{\Sigma}_1$. For consistent 
+estimators satisfying the following condition 
+\begin{align*}
+    \Pr(\hat{K}=K)&= 1-o(1)\\
+    \theta^{-1}\left\Vert \mathbf{D}\left(\hat{\mathbf{S}}_1 - \boldsymbol{\Sigma}_1 \right) \mathbf{D} \right\Vert 
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
