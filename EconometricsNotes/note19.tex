@@ -199,7 +199,7 @@ $$
 G_{ij} =\left(\mathbf{Y}_i - \mathbf{Y}_j\right)'\boldsymbol{\Sigma}_2^{-1}\left(\mathbf{Y}_i-\mathbf{Y}_j\right)
 $$
 where $\boldsymbol{\Sigma}_2$ is the asymptotic variance of $\mathbf{Y}_i -\mathbf{Y}_j$, which is much harder to derive and estimate. So we need to 
-impose two other conditions in addition to Condition C1-C3: 
+impose four other conditions in addition to Condition C1-C3: 
 \begin{itemize}
     \item[\textbf{C4}] $\exists c_2 \in [0,1/2), c_3\in (0,1-2c_2), c_4>0, c_5\in (0,1)$ s.t. 
     \begin{align*}
@@ -209,6 +209,8 @@ impose two other conditions in addition to Condition C1-C3:
     $$
         n \min_{1\leq k \leq K,t=i,j} \mathrm{Var}\left(\mathbf{e}'_t \mathbf{W v_k}\right) \sim n\theta^2_{\max} \rightarrow \infty
     $$
+    \item[\textbf{C6}] all the eigenvalues of $$ \left(n\theta^2_{\max}\right)^{-1} \mathbf{D}\mathrm{Cov}(f)\mathbf{D} $$ are bounded away from 0 and $\infty$
+    \item[\textbf{C7}]
 \end{itemize}
 
 \newpage
