@@ -228,7 +228,11 @@ Then we have
 notice that $K$ and $\boldsymbol{\Sigma}_2$ are both unknown, we must have 
 \begin{itemize}
     \item for estimator $\hat{\mathbf{S}}_2$ of $\boldsymbol{\Sigma}_2$, we need $$\left(n\theta^2_{\max}\right)^{-1} \left\Vert \mathbf{D}\left(\hat{\mathbf{S}}_2 -\boldsymbol{\Sigma}^2\right)\mathbf{D} \right\Vert _2 = o_p(1)$$ replace $\boldsymbol{\Sigma}_2$ with $\hat{\mathbf{S}}_2$
-    \item for $K$, under Condition \textbf{C1}, and $\left\vert d_K \right\vert \gg \sqrt{\log(n)}\alpha_n$ and $\alpha_n\geq n^{c_5}$ for some positive constant $c_5$, 
+    \item for $K$, under Condition \textbf{C1}, and $\left\vert d_K \right\vert \gg \sqrt{\log(n)}\alpha_n$ and $\alpha_n\geq n^{c_5}$ for some positive constant $c_5$, a consistent thresholding estimator is defined 
+    $$
+    \hat{K} = \left\vert \left\{ \hat{d}_i: \hat{d}_i^2 > 2.01(\log n) \check{d}_n,i\in[n] \right\} \right\vert 
+    $$
+    where the constant $2.01$ can be replace with any other constant slightly larger then 2, $\check{d}_n = \max_{1\leq l\leq n} \sum^n_{j=1}\mathbf{X}_{lj}$ is the maximum degree of the network
 \end{itemize}
 
 \newpage
