@@ -253,8 +253,9 @@ where
 for a simple case (networks with self loops), when the observed data matrix $\mathbf{X} = \tilde{\mathbf{X}} = \mathbf{H+W}$, then we have 
 \begin{equation*}
     \begin{aligned}
-        \frac{\sum^n_{i=1}w_{ii}}{\sqrt{\sum^n_{i=1}\mathbb{E}w_{ii}^2}}\xrightarrow{d}\mathcal{N}(0,1)
-    \end{aligned}
+        \frac{\sum^n_{i=1}w_{ii}}{\sqrt{\sum^n_{i=1}\mathbb{E}w_{ii}^2}}&\xrightarrow{d}\mathcal{N}(0,1) \\
+        \frac{\sum^n_{i=1}\mathbb{E}w_{ii}^2}{\sum^n_{i=1}w^2_{ii}} &\xrightarrow{p} 1
+    \end{aligned} \Rightarrow
 \end{equation*}
 
 \newpage
