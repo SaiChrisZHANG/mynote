@@ -250,7 +250,12 @@ where
     \item $\mathbf{W}$ has bounded and independent entries on and above the diagonals
 \end{itemize}
 
-for a simple case (networks with self loops), when the observed data matrix $\mathbf{X} = \tilde{\mathbf{X}} = \mathbf{H+W}$, then 
+for a simple case (networks with self loops), when the observed data matrix $\mathbf{X} = \tilde{\mathbf{X}} = \mathbf{H+W}$, then we have 
+\begin{equation*}
+    \begin{aligned}
+        \frac{\sum^n_{i=1}w_{ii}}{\sqrt{\sum^n_{i=1}\mathbb{E}w_{ii}^2}}\xrightarrow{d}\mathcal{N}(0,1)
+    \end{aligned}
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
