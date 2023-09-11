@@ -260,8 +260,13 @@ for a simple case (networks with self loops), when the observed data matrix $\ma
 
 Let $\hat{\mathbf{V}}\hat{\mathbf{D}}\hat{\mathbf{V}}' = \sum^{K_0}_{k=1}\hat{d}_k \hat{\mathbf{v}}_k \hat{\mathbf{v}}_k'$ be an estimate of $\mathbf{H}$ with rank $K=K_0$, then 
 \begin{equation*}
-    \hat{\mathbf{W}} = \left(\hat{w}_{ij}\right) = \mathbf{X} - 
+    \hat{\mathbf{W}} = \left(\hat{w}_{ij}\right) = \mathbf{X} - \sum^{K_0}_{k=1}\hat{d}_k \hat{\mathbf{v}}_k \hat{\mathbf{v}}_k'
 \end{equation*}
+a test of the form 
+$$
+\tilde{T}_n = \frac{\sum^n_{i=1}\hat{\mathbf{w}}_{ij}}{\sqrt{\sum^n_{i=1}\hat{\mathbf{w}}_{ij}^2}}
+$$
+can be used. But what if $\mathrm{diag}(\mathbf{X})=0$, that is, the network doesn't contain \textbf{self loops}.
 
 \newpage
 \bibliographystyle{plainnat}
