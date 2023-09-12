@@ -271,6 +271,8 @@ can be used. But what if $\mathrm{diag}(\mathbf{X})=0$, that is, the network doe
 \paragraph*{Network without self loops} In the absence of self loops, the observed data matrix $\mathbf{X}$ takes the form $$ \tilde{\mathbf{X}} - \mathrm{diag}\left(\tilde{\mathbf{X}}\right) $$ and thus $\hat{\mathbf{W}}$ actually estimates $$\mathbf{W} - \mathrm{diag}\left(\tilde{\mathbf{X}}\right)$$
 also, the entries of $\hat{\mathbf{W}}$ are all correlated: aggregating too many entries will cause too much noise accumulation and invalidate the normality assumption.
 
+\paragraph*{Rank inference via residual subsampling (RIRS)} 
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
