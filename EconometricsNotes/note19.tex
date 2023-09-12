@@ -273,8 +273,9 @@ also, the entries of $\hat{\mathbf{W}}$ are all correlated: aggregating too many
 
 \paragraph*{Rank inference via residual subsampling (RIRS)} Define i.i.d. Bernoulli random variables $Y_{ij}$ with $ \Pr \left(Y_{ij}=1\right) = \frac{1}{m},1\leq i<j \leq n$, then the universal RIRS test takes the form 
 $$ 
-T_n = \frac{\sqrt{m} \sum_{i\neq j}\hat{w}_{ij}Y_{ij}}{\sqrt{w\sum_{i\neq j}\hat{w}^2_{ij}}}
+T_n = \frac{\sqrt{m} \sum_{i\neq j}\hat{\mathbf{w}}_{ij}\mathbf{Y}_{ij}}{\sqrt{2\sum_{i\neq j}\hat{\mathbf{w}}^2_{ij}}}
 $$
+$m$ controls (on average) how many entries of the residual matrix to use in calculating the statistic
 
 \newpage
 \bibliographystyle{plainnat}
