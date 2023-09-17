@@ -284,7 +284,7 @@ $m$ controls (on average) how many entries of the residual matrix to use in calc
     \item[\textbf{C3}] $\exists \theta_n>0$, $\theta_n\xrightarrow{n\rightarrow\infty} 0$, s.t. 
     \begin{itemize}
         \item $\sigma^2_{ij}=\mathrm{var}(\mathbf{w}_{ij})\leq \theta_n$, and $\max_{1\leq i\leq n}\left\vert \mathbf{hh}_{ii} \right\vert \lesssim \theta_n $, with $\mathbf{h}_{ii}$ being the diagonal entries of matrix $\mathbf{H}$
-        \item $\sigma^2_n = \max_i \sum^n_{j=1}\sigma^2_{ij}\xrightarrow{n\rightarrow\infty}\infty$, $\left\vert d_K \right\vert \gtrsim \alpha^2_n $, and $\frac{\left\vert d_K \right\vert}{\alpha_n}\gtrsim n^{\epsilon}$ for some $\epsilon>0$
+        \item $\sigma^2_n = \max_i \sum^n_{j=1}\sigma^2_{ij}\xrightarrow{n\rightarrow\infty}\infty$, $\left\vert d_K \right\vert \gtrsim \alpha^2_n $ (controls the \textbf{noise accumulation} cased by estimating $\mathbf{w}_{ij}$), and $\frac{\left\vert d_K \right\vert}{\alpha_n}\gtrsim n^{\epsilon}$ for some $\epsilon>0$
     \end{itemize}
     \item[\textbf{C4}]
     \item[\textbf{C5}]  
