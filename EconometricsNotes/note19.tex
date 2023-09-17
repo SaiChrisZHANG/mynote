@@ -287,7 +287,7 @@ $m$ controls (on average) how many entries of the residual matrix to use in calc
         \item $\sigma^2_n = \max_i \sum^n_{j=1}\sigma^2_{ij}\xrightarrow{n\rightarrow\infty}\infty$, $\left\vert d_K \right\vert \gtrsim \alpha^2_n $ (controls the \textbf{noise accumulation} cased by estimating $\mathbf{w}_{ij}$), and $\frac{\left\vert d_K \right\vert}{\alpha_n}\gtrsim n^{\epsilon}$ for some $\epsilon>0$
     \end{itemize}
     \item[\textbf{C4}] $\left\Vert \mathbf{text} \right\Vert _{\infty} \lesssim \frac{1}{\sqrt{n}}$
-    \item[\textbf{C5}] $\sum_{i\neq j}\sigma^2_{ij}\gg m$, and $\sum_{i\neq j}\sigma^2_{ij}$
+    \item[\textbf{C5}] $\sum_{i\neq j}\sigma^2_{ij}\gg m$, and $$\sum_{i\neq j}\sigma^2_{ij} \gtrsim n^{\epsilon} \left( \frac{n\sum^{K_0}_{k=1} \left(\mathbf{1'v}_k\right)^2}{m} + \alpha^2_n + \frac{n^2\alpha_n^2}{md_K^2} \right) $$ for some positive $\epsilon$
 \end{itemize}
 
 \newpage
