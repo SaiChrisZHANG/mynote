@@ -300,8 +300,12 @@ Under these conditions, we have
         as $n\rightarrow\infty$
         \item under the alternative, if $\sum_{i\neq j}\left(\sum^K_{k=K_0+1}d_k\mathbf{v}_k(i)\mathbf{v}_k (j)\right)^2 \ll \sum_{i\neq j}\sigma^2_{ij}$, then as $n\rightarrow \infty$, 
         $$
+        \frac{\sqrt{m} \left(\sum_{i\neq j}\hat{w}_{ij}Y_{ij} - \sum^K_{k=K_0+1}d_k\sum_{i\neq j}\mathbf{v}_k(i)\mathbf{v}_k(j)Y_{ij}\right)}{\sqrt{2\sum_{i\neq j}\hat{w}_{ij}}} \xrightarrow{d}\mathcal{N}(0,1)
+        $$
+        if instead $$
         \left\vert \sum^K_{k=K_0+1}d_k\sum_{i\neq j}\mathbf{v}_k(i)\mathbf{v}_k(j) \right\vert \gg \sqrt{m} \left( \sqrt{\sum_{i\neq j}}\sigma^2_{ij} + \sum^K_{k=K_0+1}\left\vert d_k \right\vert \right)
         $$
+        we have $$ \Pr\left(\left\vert T_n \right\vert > C\right) \xrightarrow{n\rightarrow \infty} 1 $$
     \end{itemize}
 \end{theorem}
 
