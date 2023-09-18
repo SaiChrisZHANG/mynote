@@ -291,7 +291,7 @@ $m$ controls (on average) how many entries of the residual matrix to use in calc
 \end{itemize}
 Under these conditions, we have 
 \begin{theorem}{Distribution of Test Statistics}{RIRS_test_stat}
-    For $\hat{\mathbf{W}} = \left(\hat{{w}}_{ij}\right) = \mathbf{X} - \sum^{K_0}_{k=1}\hat{d}_k\hat{\mathbf{v}}_k\hat{\mathbf{v}}_k'$, and test statistic $T_n$
+    For $\hat{\mathbf{W}} = \left(\hat{{w}}_{ij}\right) = \mathbf{X} - \sum^{K_0}_{k=1}\hat{d}_k\hat{\mathbf{v}}_k\hat{\mathbf{v}}_k'$, and test statistic $T_n = \frac{\sqrt{m}\sum_{i\neq j}\hat{w}_{ij}Y_{ij}}{\sqrt{2\sum_{i\neq j}\hat{w}_{ij}^2}}$, under the null hypothesis $H_0:K=K_0$ vs. $H_1:K>K_0$
 \end{theorem}
 
 \newpage
