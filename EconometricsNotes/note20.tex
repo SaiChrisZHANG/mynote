@@ -7,7 +7,10 @@
 
 \section{Motivation}
 Denote by $m(\mathbf{X})$ the measurable nonparametric regression function with p-dimensional random vector $\mathbf{X}$ taking values in $[0,1]^p$. The Random Forest algorithm aims to learn the 
- regression function in a non-parametric way based on the observations $\mathbf{x}_i \in [0,1]^p,y_i\in\mathbb{R}$
+regression function in a non-parametric way based on the observations $\mathbf{x}_i \in [0,1]^p,y_i\in\mathbb{R},i=1,\cdots,n$, from the model 
+$$
+y_i = m(\mathbf{x}_i) + \epsilon_i
+$$
 
 \citet{chi2022asymptotic}
 

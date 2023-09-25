@@ -430,6 +430,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsym.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txsyb.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txsya.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplmia.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplr-x.tfm
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.bbl
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.bbl
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-th-t1.tfm
@@ -437,6 +441,7 @@ INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/Econometr
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.out
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
@@ -447,3 +452,4 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb
