@@ -437,6 +437,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplmia.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxmia.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxmia.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zplr-x.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplexx.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxexx.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.bbl
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.bbl
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-th-t1.tfm
@@ -449,9 +453,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb
