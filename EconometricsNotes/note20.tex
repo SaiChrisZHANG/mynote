@@ -30,6 +30,12 @@ where $\mathbf{X},\mathbf{x}_i,\epsilon_i,i=1,\cdots,n$ are independent, and $\l
         \node[draw,rectangle,rounded corners,text width=2cm,align=center] (c2) at (-1.25,0) {Cell $\mathbf{t}_{2,2}$};
         \node[draw,rectangle,rounded corners,text width=2cm,align=center] (c3) at (1.25,0) {Cell $\mathbf{t}_{2,3}$};
         \node[draw,rectangle,rounded corners,text width=2cm,align=center] (c4) at (4,0) {Cell $\mathbf{t}_{2,4}$};
+        \draw[-] (a) -- (b1);
+        \draw[-] (a) -- (b2);
+        \draw[-] (b1) -- (c1);
+        \draw[-] (b1) -- (c2);
+        \draw[-] (b2) -- (c3);
+        \draw[-] (b2) -- (c4);
     \end{tikzpicture}
 \end{center}
 
