@@ -44,7 +44,10 @@ As illustrated in Figure \ref{fig:level2tree}, in a level-2 tree, each node (cel
     \caption{Level-2 Tree Example}\label{fig:level2tree}
 \end{figure}
 
-Given any $T$ (and the associated splitting criterion) and $\Theta_{1:k}$, the tree estimate denoted as $\hat{m}_{T(\Theta_{1:k})}$ for a test point $\mathbf{c}\in [0,1]^p$
+Given any $T$ (and the associated splitting criterion) and $\Theta_{1:k}$, the tree estimate denoted as $\hat{m}_{T(\Theta_{1:k})}$ for a test point $\mathbf{c}\in [0,1]^p$ is defined as 
+$$
+\hat{m}_{T(\Theta_{1:k})}\left(\mathbf{c},\mathcal{X}_n\right) \coloneq \sum_{\left(\mathbf{t}_1,\cdots,\mathbf{t}_k\right)\in T(\Theta_{1:k})} \mathbf{1}_{\mathbf{c}\in\mathbf{t}_k}\left( \frac{\sum_{i\in \left\{i:\mathbf{x}_i\in \mathbf{t}_k\right\}} y_i}{\# \left\{i:\mathbf{x}_i\in\mathbf{t}_k\right\}} \right)
+$$
 
 
 \citet{chi2022asymptotic}
