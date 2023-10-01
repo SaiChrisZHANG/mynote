@@ -51,11 +51,13 @@ $$
 where $\mathcal{X}_n\coloneq \left\{ \mathbf{x}_i,y_i \right\}^n_{i=1}$, the fraction is defined as $0$ when no sample is in the cell $\mathbf{t}_k$, and $\mathbf{1}_{\mathbf{c}\in\mathbf{t}_k}$ is an indicator function $=1$ if $\mathbf{c}\in\mathbf{t}_k$ and $=0$ otherwise.
 
 \section{Chi et al. (2022): High Dimensional RFs}
-For a RF model,
+For a RF model where
 \begin{itemize}
-    \item A sequence of distinct $\Theta_{1:k}$ results in a distinct tree
-    \item Every set of available features $\Theta_{l,s}$, $l=1,\cdots,k$; $s=1,\cdots,2^{l-1}$.
+    \item a sequence of distinct $\Theta_{1:k}$ results in a distinct tree
+    \item every set of available features $\Theta_{l,s}$, $l=1,\cdots,k$; $s=1,\cdots,2^{l-1}$
 \end{itemize}
+
+Define a \myhl[myblue]{\textbf{column subsampling}} procedure:
 
 \citet{chi2022asymptotic}
 
