@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note20"] 1696181261 "note20.aux" "note20.bbl" "note20" 1696181729
+["bibtex note20"] 1696181261 "note20.aux" "note20.bbl" "note20" 1696259756
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "note20.aux" 1696181721 1336 d4496bcd44aa9d5e950304ce1551d815 ""
+  "note20.aux" 1696259756 1336 d4496bcd44aa9d5e950304ce1551d815 ""
   "ref.bib" 1695480389 23271 e605cd11c7119f59ffe5f9f037adf5f0 ""
   (generated)
   "note20.bbl"
   "note20.blg"
-["pdflatex"] 1696181719 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.pdf" "note20" 1696181729
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.aux" 1696181721 1336 d4496bcd44aa9d5e950304ce1551d815 ""
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.tex" 1696181729 4587 93b9d7735128640d8d5d204cf526ed94 ""
+["pdflatex"] 1696259753 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.pdf" "note20" 1696259756
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.aux" 1696259756 1336 d4496bcd44aa9d5e950304ce1551d815 ""
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.tex" 1696259753 4809 496403f0814f289cf7e457a172fd7347 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1480098668 2880 847ca622ad468c3dafba6a3f9d89a636 ""
@@ -64,6 +64,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb" 1480098744 199307 14308222b906ee98024ec531171ef49e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb" 1480098744 206482 8fb0f4dbfe4659d48567ae598ad0ada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb" 1480098744 3685 e72267ec4ec79f1bcc7076bddaadf68a ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb" 1480098744 6960 578dd0212a306f394feddaaf3c1bbfcf ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb" 1480098744 33353 09ab21ee50375c770acac474ded14d20 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb" 1480098744 21252 cb2897d23bc8718f98581102d7d28fb2 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb" 1480098744 14672 0093e684026e66eef888939395e1a17d ""
@@ -298,15 +299,15 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note20.aux" 1696181721 1336 d4496bcd44aa9d5e950304ce1551d815 ""
+  "note20.aux" 1696259756 1336 d4496bcd44aa9d5e950304ce1551d815 ""
   "note20.bbl" 1696181262 566 1c985a963ca6a44aa8d5c62d784c3852 "bibtex note20"
-  "note20.out" 1696181721 121 b8453f0884e1de91437a9421de8aacdc ""
-  "note20.tex" 1696181729 4587 93b9d7735128640d8d5d204cf526ed94 ""
+  "note20.out" 1696259756 121 b8453f0884e1de91437a9421de8aacdc ""
+  "note20.tex" 1696259753 4809 496403f0814f289cf7e457a172fd7347 ""
   "settings.tex" 1692272723 7463 b1b0546f474d1eda530a80592591d61a ""
   (generated)
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.log"
-  "note20.log"
-  "note20.aux"
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.pdf"
   "note20.out"
   "note20.pdf"
+  "note20.aux"
+  "note20.log"
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.pdf"
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note20.log"
