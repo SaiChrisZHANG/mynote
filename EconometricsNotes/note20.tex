@@ -57,7 +57,7 @@ For a RF model where
     \item every set of available features $\Theta_{l,s}$, $l=1,\cdots,k$; $s=1,\cdots,2^{l-1}$
 \end{itemize}
 
-Define a \myhl[myblue]{\textbf{column subsampling}} procedure: $\Theta_{l,s},\forall l,s$ has $[\gamma_0p]$ distinct integers among $1,\cdots,p$, with $[\cdot]$ the ceiling function for some $0<\gamma_0\leq 1$. $\gamma_0$ is the predetermined constant parameter of column subsampling.
+\paragraph*{Subsampling} Define a \myhl[myblue]{\textbf{column subsampling}} procedure: $\Theta_{l,s},\forall l,s$ has $[\gamma_0p]$ distinct integers among $1,\cdots,p$, with $[\cdot]$ the ceiling function for some $0<\gamma_0\leq 1$. $\gamma_0$ is the predetermined constant parameter of column subsampling.
 Introduce the boldface random mappings $\boldsymbol{\Theta}_{1:k}$, which are independent and uniformly distributed over all possible $\Theta_{1:k}$ for all integer $k$. Then random forests estimate for $\mathbf{c}$ with observations $\mathcal{X}_n$ is given by 
 \begin{equation*}
     \mathbb{E}\left( \hat{m}_{T(\boldsymbol{\Theta}_{1:k})}\left(\mathbf{c},\mathcal{X}_n\right) \mid \mathcal{X}_n \right) = \sum_{\Theta_{1:k}} \mathbb{P} \left( \bigcap^k_{s=1} \left\{ \boldsymbol{\Theta}_s = \Theta_s \right\} \right) \hat{m}_{T(\Theta_{1:k})} \left(\mathbf{c},\mathcal{X}_n\right)
