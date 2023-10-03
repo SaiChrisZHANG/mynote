@@ -68,7 +68,7 @@ The expectation is taken over sets of available features.
 Let $A=\left\{a_1,\cdots, a_B\right\}$ be a set of subsamples with each $a_i$ consisting of $\lceil bn\rceil$ observations (indices) drawn without replacement from $\left\{1,\cdots,n\right\}$ for some positive integer $B$ and $0<b\leq 1$; in addition, each $a_i$ is independent of model training. The default values of $B$ and $b$ are $500$ and $0.632$\footnote{Or, $b=1$ but observations are drawn with replacement.}. Then the tree estimate using subsample $a$ is 
 define as 
 $$
-\hat{m}_{T(\Theta_{1;k}),a}\left(\mathbf{c},\mathcal{X}_n\right)
+\hat{m}_{T(\Theta_{1;k}),a}\left(\mathbf{c},\mathcal{X}_n\right) \coloneq \sum_{\left( \mathbf{t}_1,\cdots,\mathbf{t}_k \right)\in T(\Theta_{1:k})}\mathbf{1}_{\mathbf{c}\in\mathbf{t}_k}\left( \frac{\sum_{i\in a\cap \left\{i:\mathbf{x}_i\in\mathbf{t}_k\right\} }y_i}{\#\left(a\cap \left\{i:\mathbf{x}_i\in\mathbf{t}_k\right\}\right) } \right)
 $$
 
 \citet{chi2022asymptotic}
