@@ -70,6 +70,10 @@ define as
 $$
 \hat{m}_{T(\Theta_{1;k}),a}\left(\mathbf{c},\mathcal{X}_n\right) \coloneq \sum_{\left( \mathbf{t}_1,\cdots,\mathbf{t}_k \right)\in T(\Theta_{1:k})}\mathbf{1}_{\mathbf{c}\in\mathbf{t}_k}\left( \frac{\sum_{i\in a\cap \left\{i:\mathbf{x}_i\in\mathbf{t}_k\right\} }y_i}{\#\left(a\cap \left\{i:\mathbf{x}_i\in\mathbf{t}_k\right\}\right) } \right)
 $$
+the random forests estimate given $A$ is then 
+$$
+B^{-1}\sum_{a\in A}\mathbb{E}\left[\hat{m}_{T,a}\left(\boldsymbol{\Theta}_{1:k},\mathbf{c},\mathcal{X}_n \right) \mid \mathcal{X}_n\right] \coloneq B^{-1}\sum_{a\in A}\mathbb{E}\left[\hat{m}_{T(\boldsymbol{\Theta_{1:k}}),a}\left(\mathbf{c},\mathcal{X}_n\right)\mid \mathcal{X}_n\right]
+$$
 
 \citet{chi2022asymptotic}
 
