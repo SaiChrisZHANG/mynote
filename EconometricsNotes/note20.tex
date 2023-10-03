@@ -65,7 +65,11 @@ Introduce the boldface random mappings $\boldsymbol{\Theta}_{1:k}$, which are in
 The expectation is taken over sets of available features.
 
 \paragraph*{Observation resampling}
-Let $A=\left\{a_1,\cdots, a_B\right\}$ be a set of subsamples with each $a_i$ consisting of $\lceil bn\rceil$ observations (indices) drawn without replacement from $\left\{1,\cdots,n\right\}$ for some positive integer $B$ and $0<b\leq 1$; in addition, each $a_i$ is independent of model training. The default values of $B$ and $b$ are $500$ and $0.632$\footnote{Or, $b=1$ but observations are drawn with replacement.}.
+Let $A=\left\{a_1,\cdots, a_B\right\}$ be a set of subsamples with each $a_i$ consisting of $\lceil bn\rceil$ observations (indices) drawn without replacement from $\left\{1,\cdots,n\right\}$ for some positive integer $B$ and $0<b\leq 1$; in addition, each $a_i$ is independent of model training. The default values of $B$ and $b$ are $500$ and $0.632$\footnote{Or, $b=1$ but observations are drawn with replacement.}. Then the tree estimate using subsample $a$ is 
+define as 
+$$
+\hat{m}_{T(\Theta_{1;k}),a}\left(\mathbf{c},\mathcal{X}_n\right)
+$$
 
 \citet{chi2022asymptotic}
 
