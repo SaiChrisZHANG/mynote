@@ -78,7 +78,7 @@ $$
 \paragraph*{CART-split criterion}
 Given a cell $\mathbf{t}$, a subset of observation indices $a$ and a set of available features $\Theta \subset \left\{ 1,\cdots,p \right\}$, the CART-split is defined as 
 $$
-\left(\right)
+\left(\hat{j},\hat{c}\right) = \arg\min_{j\in\Theta,c\in \left\{x_{ij}:\mathbf{x}_i\in\mathbf{t},i\in a\right\}} \left[ \sum_{i\in a \cap P_L}\left(\bar{y}_L-y_i\right)^2 + \sum_{i\in a\cap P_R}\left(\bar{y}_R-y_i\right)^2 \right]
 $$
 
 
