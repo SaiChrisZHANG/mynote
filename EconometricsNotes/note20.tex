@@ -77,15 +77,15 @@ $$
 
 \paragraph*{CART-split criterion}
 Given a cell $\mathbf{t}$, a subset of observation indices $a$ and a set of available features $\Theta \subset \left\{ 1,\cdots,p \right\}$, the CART-split is defined as 
-$$
-\left(\hat{j},\hat{c}\right) = \arg\min_{j\in\Theta,c\in \left\{x_{ij}:\mathbf{x}_i\in\mathbf{t},i\in a\right\}} \left[ \sum_{i\in a \cap P_L}\left(\bar{y}_L-y_i\right)^2 + \sum_{i\in a\cap P_R}\left(\bar{y}_R-y_i\right)^2 \right]
-$$
+\begin{equation}\label{eq:cart_split}
+    \left(\hat{j},\hat{c}\right) = \arg\min_{j\in\Theta,c\in \left\{x_{ij}:\mathbf{x}_i\in\mathbf{t},i\in a\right\}} \left[ \sum_{i\in a \cap P_L}\left(\bar{y}_L-y_i\right)^2 + \sum_{i\in a\cap P_R}\left(\bar{y}_R-y_i\right)^2 \right]
+\end{equation}
 where 
 \begin{align*}
     P_L & \coloneq \left\{ i: \mathbf{x}_i\in\mathbf{t},x_{ij}<c \right\} & P_R & \coloneq  \left\{ i: \mathbf{x}_i\in\mathbf{t},x_{ij}\geq c \right\}\\
     \bar{y}_L & \coloneq \sum_{i\in a \cap P_L}\frac{y_i}{\# \left(a\cap P_L\right)} & \bar{y}_R & \coloneq \sum_{i\in a \cap P_R}\frac{y_i}{\# \left(a\cap P_R\right)}
 \end{align*}
-The CART-split criterion conditional on the sample is a deterministic splitting criterion; conditioning on another sample leads to another deterministic splitting criterion.
+The CART-split criterion conditional on the sample is a deterministic splitting criterion; conditioning on another sample leads to another deterministic splitting criterion. Define $\hat{T}_a$ as the sample tree growing rule that is associated with a splitting criterion following Eq.\ref{eq:cart_split}
 
 \citet{chi2022asymptotic}
 
