@@ -89,7 +89,10 @@ The CART-split criterion conditional on the sample is a deterministic splitting 
 \begin{equation*}
     \hat{m}_{\hat{T}_a(\Theta_{1:k})} \left(\mathbf{c},\mathcal{X}_n\right) \coloneq \sum_{\left(\mathbf{t}_1,\cdots,\mathbf{t}_k\right)\in\hat{T}_a\left(\Theta_{1:k}\right)} \mathbf{1}_{\mathbf{c}\in\mathbf{t}_k}\left( \frac{\sum_{i\in \left\{i:\mathbf{x}_i\in \mathbf{t}_k\right\}}y_i}{\#\left\{i:\mathbf{x}_i\in\mathbf{t}_k\right\}} \right)
 \end{equation*}
-the definition is the same for $\hat{m}_{\hat{T}_a,a}$. 
+the definition is the same for $\hat{m}_{\hat{T}_a,a}$. Then the random forests estimate for a test point $\mathbf{c}\in [0,1]^p$ is given by 
+\begin{equation*}
+    B^{-1}\sum_{a\in A}\mathbb{E}\left( \hat{m}_{\hat{T}_a,a} \left(\boldsymbol{\Theta}_{1:k},\mathbf{c},\mathcal{X}_n\right) \mid \mathcal{X}_n\right)
+\end{equation*}
 
 \citet{chi2022asymptotic}
 
