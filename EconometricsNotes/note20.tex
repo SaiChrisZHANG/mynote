@@ -96,7 +96,10 @@ the definition is the same for $\hat{m}_{\hat{T}_a,a}$. Then the random forests 
 where the average and conditional expectation correspond to the sample and column subsamplings respectively, and they are interchangeable.
 
 \paragraph*{Bias-variance decomposition}
-For a tree growing rule $T$ and 
+For a tree growing rule $T$ and $\Theta_{1:k}$, the population version is defined as 
+\begin{equation}
+    m^*_{T(\Theta{1:k})}(\mathbf{c}) \coloneq \sum_{\left(\mathbf{t}_1,\cdots,\mathbf{t}_k\right)\in T(\Theta_{1:k})}
+\end{equation}
 
 \citet{chi2022asymptotic}
 
