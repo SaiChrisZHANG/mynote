@@ -98,7 +98,7 @@ where the average and conditional expectation correspond to the sample and colum
 \paragraph*{Bias-variance decomposition}
 For a tree growing rule $T$ and $\Theta_{1:k}$, the population version is defined as 
 \begin{equation}
-    m^*_{T(\Theta{1:k})}(\mathbf{c}) \coloneq \sum_{\left(\mathbf{t}_1,\cdots,\mathbf{t}_k\right)\in T(\Theta_{1:k})}
+    m^*_{T(\Theta_{1:k})}(\mathbf{c}) \coloneq \sum_{\left(\mathbf{t}_1,\cdots,\mathbf{t}_k\right)\in T(\Theta_{1:k})} \mathbf{1}_{\mathbf{c}\in\mathbf{t}_k}\mathbb{E}\left(m(\mathbf{X})\mid \mathbf{X}\in \mathbf{t}_k\right)
 \end{equation}
 
 \citet{chi2022asymptotic}
