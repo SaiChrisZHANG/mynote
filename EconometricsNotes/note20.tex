@@ -106,7 +106,9 @@ for each test point $\mathbf{c}\in [0,1]^p$. And the $\mathbb{L}^2$ prediction l
 \end{equation}
 if we use the full sample $a=\left\{1,\cdots,n\right\}$, and denote $\hat{T}_a$ and $\hat{m}_{\hat{T}_a,a}$ as $\hat{T}$ and $\hat{m}_{\hat{T}}$, the sample subsampling and average $B^{-1}\sum_{a\in A}\left(\cdot\right)$ in the random forests estimate are no 
 longer needed, then Eq.(\ref{eq:l2predictloss}) can be simplified as 
-
+\begin{equation*}
+    \mathbb{E} \left[m(\mathbf{X})-\mathbb{E}\left(\hat{m}_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X},\mathcal{X}_n\right) \mid \mathbf{X},\mathcal{X}_n\right)\right]^2
+\end{equation*}
 
 \citet{chi2022asymptotic}
 
