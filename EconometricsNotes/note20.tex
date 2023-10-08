@@ -112,7 +112,7 @@ longer needed, then Eq.(\ref{eq:l2predictloss}) can be simplified as
 By Jensen's inequality and Cauchy-Schwarz inequality,
 \begin{align*}
     &\frac{1}{2}\mathbb{E} \left[m(\mathbf{X}) - \mathbb{E}\left(\hat{m}_{\hat{T}} \left(\boldsymbol{\Theta}_{1:k},\mathbf{X},\mathcal{X}_n\right) \mid \mathbf{X},\mathcal{X}_n\right)\right]^2 \\
-    \leq & \mathbb{E}\left[m(\mathbf{X})\right]
+    \leq & \mathbb{E}\left[m(\mathbf{X}) - m^*_{\hat{T}} \left(\boldsymbol{\Theta}_{1:k},\mathbf{X}\right) \right]^2 + \mathbb{E} \left[m^*_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X}\right) -\hat{m}_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X},\mathcal{X}_n\right)\right]^2
 \end{align*}
 
 \citet{chi2022asymptotic}
