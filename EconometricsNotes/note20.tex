@@ -129,7 +129,12 @@ in this context, we assume the following regularity conditions:
     \item \myhl[myblue]{\textbf{Absolutely continuous distribution}}: $f$, the density function of $\mathbf{X}$, is bounded away from $0$ and $\infty$
     \item \myhl[myblue]{\textbf{Covariates and model errors}}: assume $p=O(n^{K_0})$ for $K_0>0$, and there is a symmetric distribution around $0$ for $\epsilon_1$, s.t. $\mathbb{E}\left\vert \epsilon_1 \right\vert^q < \infty$ for sufficiently large $q>0$
     \item \myhl[myblue]{\textbf{Bounded regression functions}}: $\sup_{\mathbf{c}\in [0,1]^p}\left\vert m(\mathbf{c}) \right\vert \leq M_0$, for some $M_0>0$
-    \item \myhl[myblue]{\textbf{Sufficient impurity decrease}}: $\exists \alpha_1\geq 1$ s.t. $\forall \mathbf{t} = t_1\times \cdots \times t_p$, $$ \mathrm{Var}\left[m(\mathbf{X})\mid \mathbf{X}in\mathbf{t}\right] \leq \alpha_1 \sup_{j\in \left\{1,\cdots, p \right\}, c\in t_j} \left(\mathbb{II}\right)_{\mathbf{t,t}(j,c)}$$
+    \item \myhl[myblue]{\textbf{Sufficient impurity decrease}}: $\exists \alpha_1\geq 1$ s.t. $\forall \mathbf{t} = t_1\times \cdots \times t_p$, $$ \mathrm{Var}\left[m(\mathbf{X})\mid \mathbf{X}\in\mathbf{t}\right] \leq \alpha_1 \sup_{j\in \left\{1,\cdots, p \right\}, c\in t_j} \left(\mathbb{II}\right)_{\mathbf{t,t}(j,c)}$$where 
+    \begin{itemize}
+        \item $\left( \mathbb{II} \right)_{\mathbf{t,t}'}$: conditional bias decrease (or conditional impurity decrease)
+        \item $\mathrm{Var}\left[m(\mathbf{X})\mid \mathbf{X}\in\mathbf{t}\right]$: conditional \textbf{\textit{total}} bias, $\mathrm{Var}\left[m(\mathbf{X})\mid \mathbf{X}\in\mathbf{t}\right]= \left( \mathbb{I} \right)_{\mathbf{t,t}'}+\left( \mathbb{II} \right)_{\mathbf{t,t}'}$
+        \item \textbf{Intuition:} having large conditional bias decrease on each cell
+    \end{itemize}
 \end{itemize}
 
 \newpage
