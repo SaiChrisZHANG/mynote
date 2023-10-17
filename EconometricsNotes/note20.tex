@@ -169,7 +169,8 @@ Under Theorem (\ref{thm:main_consistency}), both bias and variance depend implic
     \end{align*} 
     and 
     \begin{align*}
-        \text{Squared bias} & \coloneq \underbrace{\mathbb{E}\left[m(\mathbf{X}) - m^*_{\hat{T}} \left(\boldsymbol{\Theta}_{1:k},\mathbf{X}\right) \right]^2}_{\text{approximation error (squared bias)}} + \underbrace{\mathbb{E} \left[m^*_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X}\right) -\hat{m}_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X},\mathcal{X}_n\right)\right]^2}_{\text{estimation variance}}
+        \text{Estimatino Variance} & \coloneq {\mathbb{E} \left[m^*_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X}\right) -\hat{m}_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X},\mathcal{X}_n\right)\right]^2} \\
+        & \leq O(n^{-\eta}) + \underbrace{O(n^{-\delta+c})}_{\text{Unintersting error}}
     \end{align*} 
 \end{proposition}
 
