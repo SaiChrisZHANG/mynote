@@ -167,12 +167,15 @@ Under Theorem (\ref{thm:main_consistency}), both bias and variance depend implic
         \text{Squared bias} & \coloneq \underbrace{\mathbb{E}\left[m(\mathbf{X}) - m^*_{\hat{T}} \left(\boldsymbol{\Theta}_{1:k},\mathbf{X}\right) \right]^2}_{\text{approximation error}} \\
         & \leq O\left( n^{-\eta} + \underbrace{\left(1-\gamma_0(\alpha_1\alpha_2)^{-1}\right)^k}_{\text{Main term of bias}} \right) + \underbrace{O\left(n^{-\delta+c}\right)}_{\text{Uninteresting error}}
     \end{align*} 
+    where $n^{-\eta}$ upper-bounds the error caused by the sample CART-splits. Under theoretical CART-splits, $n^{-\eta}$ vanishes and $\alpha_2=1$.
     and 
     \begin{align*}
         \text{Estimatino Variance} & \coloneq {\mathbb{E} \left[m^*_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X}\right) -\hat{m}_{\hat{T}}\left(\boldsymbol{\Theta}_{1:k},\mathbf{X},\mathcal{X}_n\right)\right]^2} \\
         & \leq O(n^{-\eta}) + \underbrace{O(n^{-\delta+c})}_{\text{Unintersting error}}
     \end{align*} 
+    where the upper bound is conservative since we establish a uniform upper bound for the variances of \textbf{individual} trees.
 \end{proposition}
+
 
 \newpage
 \bibliographystyle{plainnat}
