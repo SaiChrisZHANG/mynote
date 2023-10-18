@@ -179,13 +179,15 @@ Under Theorem (\ref{thm:main_consistency}), both bias and variance depend implic
 \paragraph*{Relevant features}
 Under the regularity conditions, for some cells, only the splits along the relevant feature directions can reduce a sufficient amount of bias. To be precise, introduce a variance of SID with some $S_0 \subset \left\{1,\cdots,p\right\}$ below
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{Sufficient impurity decrease 2}} $\exists \alpha_1 \geq 1$ s.t. for each cell $\mathbf{t} = t_1\times\cdots\times t_p $
+    \item \myhl[myblue]{\textbf{Sufficient impurity decrease 2}}: $\exists \alpha_1 \geq 1$ s.t. for each cell $\mathbf{t} = t_1\times\cdots\times t_p $
     $$
     \mathrm{Var}\left(m(\mathbf{X})\mid \mathbf{X}\in\mathbf{t}\right) \leq \alpha_1 \sup_{j\in S_0,c\in t_j}\left(\mathbb{II}\right)_{\mathbf{t,t}(j,c)}
     $$
 \end{itemize}
 When the regularity conditions on the underlying regression function and SID are assumed, SID2 holds only if $S_0$ includes all relevant features
-
+\begin{definition}{Relevant Features}{revel_feat}
+    A feature $j$ is said to be relevant for regression function $m(\mathbf{X})$ if and only if there exists some constant $\iota >0$ s.t. $$ \mathbb{E}\left[\mathrm{Var}\left(m(\mathbf{X})\mid X_s,s\in \left\{1,\cdots,p\right\}\setminus \{j\} \right)\right] > \iota $$
+\end{definition}
 
 \newpage
 \bibliographystyle{plainnat}
