@@ -190,7 +190,10 @@ When the regularity conditions on the underlying regression function and SID are
 \end{definition}
 Then, the magnitude of the $\mathbb{L}_2$ loss when a relevant feature is left out during the model training
 \begin{theorem}{$\mathbb{L}_2$ Loss of Missing A Relevant Feature}{l2_relev_feat}
-    Under the condition of \myhl[myblue]{\textbf{covariates and model errors}} and \myhl[myblue]{\textbf{bounded regression functions}}
+    Under the condition of \myhl[myblue]{\textbf{covariates and model errors}} and \myhl[myblue]{\textbf{bounded regression functions}}, some relevant feature $j$ is not involved in the random forests model training procedure, then 
+    $$
+    \mathbb{E}\left[ m(\mathbf{X}) - \frac{1}{B}\sum_{a\in A}\mathbb{E} \left(\hat{m}_{\hat{T}_a,a}\left(\boldsymbol{\Theta}_1,\cdots, \boldsymbol{\Theta}_k,\mathbf{X},\mathcal{X}_n \right) \mid \mathbf{X},\mathcal{X}_n \right) \right]^2 \geq \iota
+    $$
 \end{theorem}
 
 \newpage
