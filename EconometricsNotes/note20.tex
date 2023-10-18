@@ -178,7 +178,12 @@ Under Theorem (\ref{thm:main_consistency}), both bias and variance depend implic
 
 \paragraph*{Relevant features}
 Under the regularity conditions, for some cells, only the splits along the relevant feature directions can reduce a sufficient amount of bias. To be precise, introduce a variance of SID with some $S_0 \subset \left\{1,\cdots,p\right\}$ below
-
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Sufficient impurity decrease 2}} $\exists \alpha_1 \geq 1$ s.t. for each cell $\mathbf{t} = t_1\times\cdots\times t_p $
+    $$
+    \mathrm{Var}\left(m(\mathbf{X})\mid \mathbf{X}\in\mathbf{t}\right) \leq \alpha_1 \sup_{j\in S_0,c\in t_j}\left(\mathbb{II}\right)_{\mathbf{t,t}(j,c)}
+    $$
+\end{itemize}
 
 
 \newpage
