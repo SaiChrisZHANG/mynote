@@ -16,8 +16,19 @@ where $i$ denotes the $i$th of the $N$ individuals in the sample, $j$ denotes th
     \end{equation}
     unless $g=g'$, that is, errors for individuals within the same cluster may be correlated.
 \end{itemize}
+Grouping observations by cluster, get
+$$
+\mathbf{y}_g = \mathbf{X}_g \boldsymbol{\beta} + \mathbf{u}
+$$
+and stacking over cluster, get the matrix form of the model
+$$
+\mathbf{y=X}\boldsymbol{\beta}+\mathbf{u}
+$$
+with $\mathbf{y,u}$ being $N\times 1$ vectors, $\mathbf{X}$ being an $N\times K$ matrix. OLS estimator gives 
+\begin{equation}{eq:OLSest}
+    \hat{\boldsymbol{\beta}}
+\end{equation}
 
-for $i\neq j$
 
 \citet{chiang2023using} \citep{menzel2021bootstrap} \citet{cameron2011robust}
 
