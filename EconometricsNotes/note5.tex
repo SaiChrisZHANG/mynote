@@ -29,7 +29,10 @@ with $\mathbf{y,u}$ being $N\times 1$ vectors, $\mathbf{X}$ being an $N\times K$
 \begin{equation}\label{eq:OLSest}
     \hat{\boldsymbol{\beta}} = \left(\mathbf{X'X}\right)^{-1}\mathbf{X'y}=\left( \sum^G_{g=1}\mathbf{X}_g'\mathbf{X}_g \right)^{-1} \sum^G_{g=1}\mathbf{X}'_g\mathbf{y}_g
 \end{equation}
-
+then, by CLT, we have that $\sqrt{G} \left(\hat{\boldsymbol{\beta}}-\boldsymbol{\beta}\right) \xrightarrow{d} \mathcal{N}(0,\boldsymbol{\Sigma})$ where the variance matrix of the limit normal distribution $\boldsymbol{\Sigma}$ is 
+\begin{equation}\label{eq:limit_varcovmat}
+    \left( \lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{X}_g\right] \right)^{-1} \left(\lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{u}'_g\mathbf{u}_g\mathbf{X}_g\right] \right) \times \left( \lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{X}_g\right]  \right)
+\end{equation} 
 
 \citet{chiang2023using} \citep{menzel2021bootstrap} \citet{cameron2011robust}
 
