@@ -25,8 +25,8 @@ $$
 \mathbf{y=X}\boldsymbol{\beta}+\mathbf{u}
 $$
 with $\mathbf{y,u}$ being $N\times 1$ vectors, $\mathbf{X}$ being an $N\times K$ matrix. OLS estimator gives 
-\begin{equation}{eq:OLSest}
-    \hat{\boldsymbol{\beta}}
+\begin{equation}\label{eq:OLSest}
+    \hat{\boldsymbol{\beta}} = \left(\mathbf{X'X}\right)^{-1}\mathbf{X'y}=\left( \sum^G_{g=1}\mathbf{X}_g'\mathbf{X}_g \right)^{-1} \sum^G_{g=1}\mathbf{X}'_g\mathbf{y}_g
 \end{equation}
 
 
