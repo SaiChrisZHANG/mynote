@@ -7,7 +7,17 @@
 
 \section{One-Way Clustering}
 First, consider the case of one-way clustering. The linear model with one-way clustering $$ y_{ig} = \mathbf{x}_{ig}\boldsymbol{\beta} + u_{ig} $$
-where $i$ denotes the $i$th of the $N$ individuals in the sample, $j$ denotes the $g$th of the $G$ clusters, assme 
+where $i$ denotes the $i$th of the $N$ individuals in the sample, $j$ denotes the $g$th of the $G$ clusters, assume that
+\begin{itemize}
+    \item $\mathbb{E}\left[u_{ig}\mid \mathbf{x}_{ig}\right] =0$
+    \item error independence across clusters: for $i\neq j$
+    \begin{equation}\label{eq:error_independence}
+        \mathbb{E}\left[ u_{ig} u_{jg'}\mid \mathbf{x}_{ig},\mathbf{x}_{jg'} \right] = 0
+    \end{equation}
+    unless $g=g'$, that is, errors for individuals within the same cluster may be correlated.
+\end{itemize}
+
+for $i\neq j$
 
 \citet{chiang2023using} \citep{menzel2021bootstrap} \citet{cameron2011robust}
 
