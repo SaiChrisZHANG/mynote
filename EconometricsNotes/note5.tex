@@ -31,8 +31,17 @@ with $\mathbf{y,u}$ being $N\times 1$ vectors, $\mathbf{X}$ being an $N\times K$
 \end{equation}
 then, by CLT, we have that $\sqrt{G} \left(\hat{\boldsymbol{\beta}}-\boldsymbol{\beta}\right) \xrightarrow{d} \mathcal{N}(0,\boldsymbol{\Sigma})$ where the variance matrix of the limit normal distribution $\boldsymbol{\Sigma}$ is 
 \begin{equation}\label{eq:limit_varcovmat}
-    \left( \lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{X}_g\right] \right)^{-1} \left(\lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{u}'_g\mathbf{u}_g\mathbf{X}_g\right] \right) \times \left( \lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{X}_g\right]  \right)
-\end{equation} 
+    \left( \lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{X}_g\right] \right)^{-1} \left(\lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{u}'_g\mathbf{u}_g\mathbf{X}_g\right] \right) \times \left( \lim_{G\rightarrow\infty}\frac{1}{G}\sum^G_{g=1} \mathbf{E}\left[\mathbf{X}'_g\mathbf{X}_g\right]  \right)^{-1}
+\end{equation}
+If the primary source of clustering is due to group-level common shocks, a useful approximation is that for the $j$th regressor, the default OLS variance estimate based on $s^2 \left(\mathbf{X'X}\right)^{-1}$ should be inflated by $\tau_j \simeq 1+\rho_{x_j}\rho_u\left(\bar{N}_g -1\right)$, where 
+\begin{itemize}
+    \item $s$ is the estimated standard deviation of the error
+    \item $\rho_{x_j}$ is a measure of within-cluster correlation of $x_j$
+    \item $\rho_u$ is the within-cluster error correlation 
+    \item $\bar{N}_g$ is the average cluster size
+\end{itemize}
+It's easy to see the $\tau_j$ can be large even with small $\rho_u$ \citep{kloek1981ols,scott1982effect,moulton1990illustration}.
+
 
 \citet{chiang2023using} \citep{menzel2021bootstrap} \citet{cameron2011robust}
 
