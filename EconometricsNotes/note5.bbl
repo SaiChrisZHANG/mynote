@@ -1,9 +1,22 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arellano(1987)]{arellano1987computing}
+Manuel Arellano.
+\newblock Computing robust standard errors for within-groups estimators.
+\newblock \emph{Oxford bulletin of Economics and Statistics}, 49\penalty0
+  (4):\penalty0 431--434, 1987.
+
+\bibitem[Hansen(2007)]{hansen2007asymptotic}
+Christian~B Hansen.
+\newblock Asymptotic properties of a robust variance matrix estimator for panel
+  data when t is large.
+\newblock \emph{Journal of Econometrics}, 141\penalty0 (2):\penalty0 597--620,
+  2007.
 
 \bibitem[Kloek(1981)]{kloek1981ols}
 Teunis Kloek.

@@ -50,9 +50,12 @@ and there is a consistent estimate $\hat{\boldsymbol{\Omega}}_g$ of $\boldsymbol
 where $\hat{\mathbf{u}}_g = \mathbf{y}_g - \mathbf{X}_g\hat{\boldsymbol{\beta}}$. This estimate is consistent if $$ G^{-1}\sum^G_{g=1}\mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g - G^{-1}\sum^G_{g=1}\mathbb{E}\left[ \mathbf{X}_g' \mathbf{u}_g \mathbf{u}_g' \mathbf{X}_g \right] \xrightarrow{\mathrm{p}} \mathbf{0} $$ as $G\rightarrow \infty$. A strand of literature popularizes 
 this method:
 \begin{itemize}
-    \item citet{liang1986longitudinal}: in a generalized estimatin equations setting
+    \item \citet{liang1986longitudinal}: in a generalized estimatin equations setting
+    \item \citet{arellano1987computing}: fixed effects estimator in linear panel models
+    \item \citet{hansen2007asymptotic}: asymptotic theory for panel data where $T\rightarrow\infty$ in addition to $N\rightarrow\infty$ (or $N_g\rightarrow\infty$ in addition to $G\rightarrow\infty$ in the notation above).
 \end{itemize}
-\
+
+
 
 \newpage
 \bibliographystyle{plainnat}
