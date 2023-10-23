@@ -47,7 +47,30 @@ and there is a consistent estimate $\hat{\boldsymbol{\Omega}}_g$ of $\boldsymbol
 \begin{equation}\label{eq:oneway_clurob}
     \hat{\mathbb{V}} \left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\left(\sum^G_{g=1} \mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g \right) \left(\mathbf{X'X}\right)^{-1}
 \end{equation}
-where $\hat{\mathbf{u}}_g = \mathbf{y}_g - \mathbf{X}_g\hat{\boldsymbol{\beta}}$. This estimate is consistent if $$ G^{-1}\sum^G_{g=1}\mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g - G^{-1}\sum^G_{g=1}\mathbb{E}\left[ \mathbf{X}_g' \mathbf{u}_g \mathbf{u}_g' \mathbf{X}_g \right] \xrightarrow{\mathrm{p}} \mathbf{0} $$ as $G\rightarrow \infty$. A strand of literature popularizes 
+where $\hat{\mathbf{u}}_g = \mathbf{y}_g - \mathbf{X}_g\hat{\boldsymbol{\beta}}$. This estimate is consistent if $$ G^{-1}\sum^G_{g=1}\mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g - G^{-1}\sum^G_{g=1}\mathbb{E}\left[ \mathbf{X}_g' \mathbf{u}_g \mathbf{u}_g' \mathbf{X}_g \right] \xrightarrow{\mathrm{p}} \mathbf{0} $$ as $G\rightarrow \infty$. 
+An informal presentation of Eq.(\ref{eq:oneway_clurob}) is to rewrite the central matrix as 
+\begin{align*}
+    \sum^G_{g=1} \mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g &= \mathbf{X}'\begin{bmatrix}
+        \hat{\mathbf{u}}_1\hat{\mathbf{u}}_1' & \mathbf{0} & \cdots & \mathbf{0}\\
+        \mathbf{0} & \hat{\mathbf{u}}_2\hat{\mathbf{u}}_2' & & \vdots \\
+        \vdots & & \ddots & \mathbf{0} \\
+        \mathbf{0} & \cdots & & \hat{\mathbf{u}}_G\hat{\mathbf{u}}_G'
+    \end{bmatrix}\mathbf{X} = \mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^G \right) \mathbf{X} 
+\end{align*}
+where $\otimes$ denotes element-wise multiplication. The $(p,q)$th element of this matrix is 
+\begin{equation*}
+    \sum^N_{i=1}\sum^N_{j=1}x_{ia}x_{jb}\hat{u}_i\hat{u}_j \cdot \mathbf{1}\left(i,j\text{ in the same cluster}\right)
+\end{equation*}
+with $\hat{u}_i = y_i - \mathbf{x}'_i \hat{\boldsymbol{\beta}}$.
+
+$\mathbf{S}^G$ is an $N\times N$ indicator matrix with $\mathbf{S}_{ij}^G=1$ only if the $i$th and $j$th observation belong to the same cluster: it zeros out a large amount of $\hat{\mathbf{u}}\hat{\mathbf{u}}'$ (asymptotically equivalently, ${\mathbf{u}}{\mathbf{u}}'$), specifically, only $\sum^G_{g=1}N_g^2$ out of $N^2 = \left(\sum^G_{g=1}N_g\right)^2$ terms are not zero (sub-matrices on the diagonal). Asymptotically
+\begin{itemize}
+    \item for fixed $N_g$, $\frac{1}{{N^2}}\sum^G_{g=1}{N^2_g}\xrightarrow{G\rightarrow\infty}0$
+    \item for balanced clusters $N_g = N/G$, $\frac{1}{{N^2}}\sum^G_{g=1}{N^2_g} = \frac{1}{G} \xrightarrow{G\rightarrow\infty}0$
+\end{itemize}
+
+
+A strand of literature popularizes 
 this method:
 \begin{itemize}
     \item \citet{liang1986longitudinal}: in a generalized estimatin equations setting
