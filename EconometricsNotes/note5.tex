@@ -41,7 +41,15 @@ If the primary source of clustering is due to group-level common shocks, a usefu
     \item $\bar{N}_g$ is the average cluster size
 \end{itemize}
 It's easy to see the $\tau_j$ can be large even with small $\rho_u$ \citep{kloek1981ols,scott1982effect,moulton1990illustration}. If assume the model for the cluster error variance matrices $\boldsymbol{\Omega}_g = \mathbb{V}\left[\mathbf{u}_g \mid \mathbf{X}_g\right] = \mathbb{E}\left[\mathbf{u}_g\mathbf{u}_g'\mid \mathbf{X}_g\right]$, 
-and there is a consistent estimate $\hat{\boldsymbol{\Omega}}_g$ of $\boldsymbol{\Omega}_g$, we can estimate $\mathbb{E}\left[\mathbf{X}_g'\mathbf{u}_g\mathbf{u}_g'\mathbf{X}_g\right] = \mathbb{E}\left[\mathbf{X}_g'\boldsymbol{\Omega}_g \mathbf{u}_g\right]$
+and there is a consistent estimate $\hat{\boldsymbol{\Omega}}_g$ of $\boldsymbol{\Omega}_g$, we can estimate $\mathbb{E}\left[\mathbf{X}_g'\mathbf{u}_g\mathbf{u}_g'\mathbf{X}_g\right] = \mathbb{E}\left[\mathbf{X}_g'\boldsymbol{\Omega}_g \mathbf{X}_g\right]$ via GLS.
+
+\paragraph*{Cluster-robust variance matrix estimate} consider 
+\begin{equation}\label{eq:oneway_clurob}
+    \hat{\mathbb{V}} \left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\left(\sum^G_{g=1} \mathbf{X}_g'\hat{\mathbf{u}}g \hat{\mathbf{u}}_g' \mathbf{X}_g \right) \left(\mathbf{X'X}\right)^{-1}
+\end{equation}
+
+
+\citet{liang1986longitudinal} proposed 
 
 \newpage
 \bibliographystyle{plainnat}
