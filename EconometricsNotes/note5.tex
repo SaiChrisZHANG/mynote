@@ -45,11 +45,14 @@ and there is a consistent estimate $\hat{\boldsymbol{\Omega}}_g$ of $\boldsymbol
 
 \paragraph*{Cluster-robust variance matrix estimate} consider 
 \begin{equation}\label{eq:oneway_clurob}
-    \hat{\mathbb{V}} \left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\left(\sum^G_{g=1} \mathbf{X}_g'\hat{\mathbf{u}}g \hat{\mathbf{u}}_g' \mathbf{X}_g \right) \left(\mathbf{X'X}\right)^{-1}
+    \hat{\mathbb{V}} \left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\left(\sum^G_{g=1} \mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g \right) \left(\mathbf{X'X}\right)^{-1}
 \end{equation}
-
-
-\citet{liang1986longitudinal} proposed 
+where $\hat{\mathbf{u}}_g = \mathbf{y}_g - \mathbf{X}_g\hat{\boldsymbol{\beta}}$. This estimate is consistent if $$ G^{-1}\sum^G_{g=1}\mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g - G^{-1}\sum^G_{g=1}\mathbb{E}\left[ \mathbf{X}_g' \mathbf{u}_g \mathbf{u}_g' \mathbf{X}_g \right] \xrightarrow{\mathrm{p}} \mathbf{0} $$ as $G\rightarrow \infty$. A strand of literature popularizes 
+this method:
+\begin{itemize}
+    \item citet{liang1986longitudinal}: in a generalized estimatin equations setting
+\end{itemize}
+\
 
 \newpage
 \bibliographystyle{plainnat}
