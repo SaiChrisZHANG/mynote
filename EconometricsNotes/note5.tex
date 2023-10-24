@@ -49,14 +49,14 @@ and there is a consistent estimate $\hat{\boldsymbol{\Omega}}_g$ of $\boldsymbol
 \end{equation}
 where $\hat{\mathbf{u}}_g = \mathbf{y}_g - \mathbf{X}_g\hat{\boldsymbol{\beta}}$. This estimate is consistent if $$ G^{-1}\sum^G_{g=1}\mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g - G^{-1}\sum^G_{g=1}\mathbb{E}\left[ \mathbf{X}_g' \mathbf{u}_g \mathbf{u}_g' \mathbf{X}_g \right] \xrightarrow{\mathrm{p}} \mathbf{0} $$ as $G\rightarrow \infty$. 
 An informal presentation of Eq.(\ref{eq:oneway_clurob}) is to rewrite the central matrix as 
-\begin{align*}
-    \hat{\mathbf{B}} = \sum^G_{g=1} \mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g &= \mathbf{X}'\begin{bmatrix}
+\begin{equation}\label{eq:onewayclu_centralmat}
+    \hat{\mathbf{B}} = \sum^G_{g=1} \mathbf{X}_g'\hat{\mathbf{u}}_g \hat{\mathbf{u}}_g' \mathbf{X}_g = \mathbf{X}'\begin{bmatrix}
         \hat{\mathbf{u}}_1\hat{\mathbf{u}}_1' & \mathbf{0} & \cdots & \mathbf{0}\\
         \mathbf{0} & \hat{\mathbf{u}}_2\hat{\mathbf{u}}_2' & & \vdots \\
         \vdots & & \ddots & \mathbf{0} \\
         \mathbf{0} & \cdots & & \hat{\mathbf{u}}_G\hat{\mathbf{u}}_G'
     \end{bmatrix}\mathbf{X} = \mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^G \right) \mathbf{X} 
-\end{align*}
+\end{equation}
 where $\otimes$ denotes element-wise multiplication. The $(p,q)$th element of this matrix is 
 \begin{equation*}
     \sum^N_{i=1}\sum^N_{j=1}x_{ia}x_{jb}\hat{u}_i\hat{u}_j \cdot \mathbf{1}\left(i,j\text{ in the same cluster}\right)
@@ -89,7 +89,10 @@ where each observation may belong to \textbf{two} dimension of groups: group $g\
 \end{equation}
 unless $g=g'$ or $h=h'$, that is, errors for individuals within the same group (along either $g$ or $h$) may be correlated.
 
-
+\paragraph*{Cluster-robust variance matrix estimate} extending the one-way clustering case, keep elements of $\hat{\mathbf{u}}\hat{\mathbf{u}}'$ where the $i$th and $j$th observations share a cluster in \myhl[myblue]{\textbf{any}} dimension, then similar to 
+\begin{equation}
+    \hat{\mathbf{B}} = \mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^{GH}\right)\mathbf{X}
+\end{equation}
 
 \newpage
 \bibliographystyle{plainnat}
