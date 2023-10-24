@@ -89,10 +89,14 @@ where each observation may belong to \textbf{two} dimension of groups: group $g\
 \end{equation}
 unless $g=g'$ or $h=h'$, that is, errors for individuals within the same group (along either $g$ or $h$) may be correlated.
 
-\paragraph*{Cluster-robust variance matrix estimate} extending the one-way clustering case, keep elements of $\hat{\mathbf{u}}\hat{\mathbf{u}}'$ where the $i$th and $j$th observations share a cluster in \myhl[myblue]{\textbf{any}} dimension, then similar to 
-\begin{equation}
+\paragraph*{Cluster-robust variance matrix estimate} extending the one-way clustering case, keep elements of $\hat{\mathbf{u}}\hat{\mathbf{u}}'$ where the $i$th and $j$th observations share a cluster in \myhl[myblue]{\textbf{any}} dimension, then similar to Eq.(\ref{eq:onewayclu_centralmat})
+\begin{equation}\label{twowayclu_centermat}
     \hat{\mathbf{B}} = \mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^{GH}\right)\mathbf{X}
 \end{equation}
+here $\mathbf{S}^{GH}$ is an $N\times N$ indicator matrix with $\mathbf{S}^{GH}_{ij}=1$ only if the $i$th and $j$th observation share any cluster, the $(p,q)$th element of this matrix is 
+$$
+\sum^N_{i=1}
+$$
 
 \newpage
 \bibliographystyle{plainnat}
