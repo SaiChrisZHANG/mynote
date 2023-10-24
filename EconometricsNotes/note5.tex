@@ -81,9 +81,13 @@ this method:
 \section{Two-Way Clustering}
 Now, consider the case of two-way clustering, 
 $$
-y_{i,gh} = \mathbf{x}'
+y_{i,gh} = \mathbf{x}'_{i,gh}\boldsymbol{\beta} + u
 $$
-where each observation may belong to \textbf{two} dimension of groups: group $g\in \left\{1,\cdots,G\right\}$ and $h\in \left\{ 1,\cdots,H \right\}$
+where each observation may belong to \textbf{two} dimension of groups: group $g\in \left\{1,\cdots,G\right\}$ and $h\in \left\{ 1,\cdots,H \right\}$, and for $i\neq j$
+\begin{equation}\label{eq:twoway_errors}
+    \mathbb{E} \left[ u_{i,gh} u_{j,g'h'} \mid \mathbf{x}_{i,gh},\mathbf{j,g'h'} \right] = 0
+\end{equation}
+unless $g=g'$ or $h=h'$, that is, errors for individuals within the same group (along either $g$ or $h$) may be correlated.
 
 \newpage
 \bibliographystyle{plainnat}
