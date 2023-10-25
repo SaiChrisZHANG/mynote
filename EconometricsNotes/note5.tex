@@ -114,9 +114,15 @@ then, similar to one-way clustering case,
     &- \left(\mathbf{X'X}\right)^{-1}\mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}'\otimes \mathbf{S}^{G\cap H}\right)\mathbf{X}\left(\mathbf{X'X}\right)^{-1}
 \end{align}
 that is,
-\begin{equation}
+\begin{equation}\label{eq:twowayclu_decomp}
     \hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right] = \hat{\mathbb{V}}^G\left[\hat{\boldsymbol{\beta}}\right] + \hat{\mathbb{V}}^H\left[\hat{\boldsymbol{\beta}}\right] - \hat{\mathbb{V}}^{G\cap H}\left[\hat{\boldsymbol{\beta}}\right]
 \end{equation}
+each of Eq.(\ref{eq:twowayclu_decomp}) can be separately computed by OLS of $\mathbf{y}$ on $\mathbf{X}$, with variance matrix estimates $\hat{\mathbb{V}}$ based on 
+\begin{itemize}
+    \item[i] clustering on $g\in \left\{1,2,\cdots, G\right\}$
+    \item[ii] clustering on $h \in \left\{1,2,\cdots, H\right\}$
+    \item[iii] clustering on $(g,h)\in \left\{(1,1),\cdots,(G,H)\right\}$
+\end{itemize}
 
 
 \newpage
