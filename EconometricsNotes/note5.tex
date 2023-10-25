@@ -107,6 +107,17 @@ where $\mathbf{G}^{GH} =\mathbf{G}^G+ \mathbf{G}^H - \mathbf{G}^{G\cap H} $, wit
     \item $\mathbf{G}^H$: $\mathbf{G}^H_{ij}=1$ only if the $i$th and $j$th observation belong to the same cluster $h\in \left\{1,2,\cdots,H\right\}$
     \item $\mathbf{G}^{G\cap H}$: $\mathbf{G}^{G\cap H}_{ij}=1$ only if the $i$th and $j$th observation belong to \textbf{both} the same cluster $g\in \left\{1,2,\cdots,G\right\}$ and the same cluster $h\in \left\{1,2,\cdots,H\right\}$
 \end{itemize}
+then, similar to one-way clustering case,
+\begin{align}
+    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right] =& \left(\mathbf{X'X}\right)^{-1}\mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}'\otimes \mathbf{S}^G\right)\mathbf{X}\left(\mathbf{X'X}\right)^{-1} \\ \nonumber
+    &+ \left(\mathbf{X'X}\right)^{-1}\mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}'\otimes \mathbf{S}^H\right)\mathbf{X}\left(\mathbf{X'X}\right)^{-1} \\ \nonumber
+    &- \left(\mathbf{X'X}\right)^{-1}\mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}'\otimes \mathbf{S}^{G\cap H}\right)\mathbf{X}\left(\mathbf{X'X}\right)^{-1}
+\end{align}
+that is,
+\begin{equation}
+    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right] = \hat{\mathbb{V}}^G\left[\hat{\boldsymbol{\beta}}\right]
+\end{equation}
+
 
 \newpage
 \bibliographystyle{plainnat}
