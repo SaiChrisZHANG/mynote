@@ -90,7 +90,7 @@ where each observation may belong to \textbf{two} dimension of groups: group $g\
 unless $g=g'$ or $h=h'$, that is, errors for individuals within the same group (along either $g$ or $h$) may be correlated.
 
 \paragraph*{Cluster-robust variance matrix estimate} extending the one-way clustering case, keep elements of $\hat{\mathbf{u}}\hat{\mathbf{u}}'$ where the $i$th and $j$th observations share a cluster in \myhl[myblue]{\textbf{any}} dimension, then similar to Eq.(\ref{eq:onewayclu_centralmat})
-\begin{equation}\label{twowayclu_centermat}
+\begin{equation}\label{eq:twowayclu_centermat}
     \hat{\mathbf{B}} = \mathbf{X}'\left(\hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^{GH}\right)\mathbf{X}
 \end{equation}
 here $\mathbf{S}^{GH}$ is an $N\times N$ indicator matrix with $\mathbf{S}^{GH}_{ij}=1$ only if the $i$th and $j$th observation share any cluster, the $(p,q)$th element of this matrix is 
@@ -98,7 +98,7 @@ $$
 \sum^N_{i=1}\sum^N_{i=1}x_{ia}x_{jb}\hat{u}_i\hat{u}_j \cdot \mathbf{1} \left(i,j\text{ share any cluster}\right)
 $$
 $\hat{\mathbf{B}}$ can also be presented in one-way cluster-robust fashion:
-\begin{align}
+\begin{align}\label{eq:twowayclu_centmat}
     \hat{\mathbf{B}} &= \mathbf{X}'\left( \hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^{GH} \right)\mathbf{X} = \mathbf{X}'\left( \hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^G \right)\mathbf{X} + \mathbf{X}'\left( \hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^H \right)\mathbf{X} - \mathbf{X}'\left( \hat{\mathbf{u}}\hat{\mathbf{u}}' \otimes \mathbf{S}^{G\cap H} \right)\mathbf{X}
 \end{align}
 where $\mathbf{G}^{GH} =\mathbf{G}^G+ \mathbf{G}^H - \mathbf{G}^{G\cap H} $, with 
@@ -127,10 +127,12 @@ each of Eq.(\ref{eq:twowayclu_decomp}) can be separately computed by OLS of $\ma
 \paragraph*{Practical considerations} It is required to know what \textit{ways} will be potentially important for clustering, which can be tested via checking the dimension of correlations in the errors. There are several ways to test 
 \begin{itemize}
     \item estimate sample covariances of $\mathbf{X}'\hat{\mathbf{u}}$ within dimensions, test the null that the \myhl[myblue]{\textbf{average}} of such covariances is 0: rejecting this null is sufficient (not necessary) to reject the null of no clustering \citep{white1980heteroskedasticity}
-    \item for \myhl[myblue]{\textbf{small samples}}, Eq. (\ref{eq:oneway_clurob}) is baised downwards. This is corrected (in Stata) by replacing $\hat{\mathbf{u}}_g$ with $\sqrt{c}\hat{\mathbf{u}}_g$, where $c = \frac{G}{G-1}\frac{N-1}{N-K}\simeq \frac{G}{G-1}$. For two-way clustering, there are 2 ways of correction:
+    \item for \myhl[myblue]{\textbf{small samples}}, Eq. (\ref{eq:oneway_clurob}) is baised downwards. This is corrected (in Stata) by replacing $\hat{\mathbf{u}}_g$ with $\sqrt{c}\hat{\mathbf{u}}_g$, where $c = \frac{G}{G-1}\frac{N-1}{N-K}\simeq \frac{G}{G-1}$. For two-way clustering (Eq. \ref{eq:twowayclu_centmat}), there are 2 ways of correction:
     \begin{itemize}
-        \item 
+        \item choose correction terms for each of the 3 components: $$c_1= \frac{G}{G-1}\frac{N-1}{N-K}, c_2= \frac{H}{H-1}\frac{N-1}{N-K},c_3=\frac{I}{I-1}\frac{N-1}{N-K}$$ with $I$ being the number of unique clusters determined by $G\cap H$
+        \item choose a constant terms for all components: $$c=\frac{J}{J-1}\frac{N-1}{N-K}$$ with $J=\min(G,H)$
     \end{itemize}
+    \item $\hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right]$ might have negative elements on the diagonal (Eq. \ref{eq:twowayclu_decomp})
 \end{itemize}
 
 \newpage
