@@ -182,7 +182,12 @@ where cases of clustering on an odd number of dimensions are added, those of clu
 \begin{equation*}
     \left(\tilde{\mathbf{B}}_{(1,0,0)} + \tilde{\mathbf{B}}_{(0,1,0)} + \tilde{\mathbf{B}}_{(0,0,1)} \right) - \left( \tilde{\mathbf{B}}_{(1,1,0)} + \tilde{\mathbf{B}}_{(1,0,1)} + \tilde{\mathbf{B}}_{(0,1,1)} \right) + \tilde{\mathbf{B}}_{(1,1,1)}
 \end{equation*}
-$\tilde{\mathbf{B}}$ is identical to $\hat{\mathbf{B}}$ defined analogically as in \ref{eq:twowayclu_centmat} 
+$\tilde{\mathbf{B}}$ is identical to $\hat{\mathbf{B}}$ defined analogically as in Eq.(\ref{eq:twowayclu_centmat}), since 
+\begin{itemize}
+    \item no observation pair with $\mathbf{I}(i,j)=0$: this is immediate, since $\mathbf{I}(i,j)=0 \Leftrightarrow \mathbf{I_r}(i,j)=0,\forall \mathbf{r}$
+    \item the covariance term corresponding to each observation pair with $\mathbf{I}(i,j)=1$ is included \myhl[myblue]{\textbf{exactly once}} in $\tilde{\mathbf{B}} $: by inclusion-exclusion principle for set cardinality
+    $$\mathbf{I}(i,j) \Rightarrow \sum_{\left\Vert \mathbf{r} \right\Vert=k,\mathbf{r}\in R}(-1)^{k+1}\mathbf{I_r}(i,j)=1 $$
+\end{itemize} 
 
 \newpage
 \bibliographystyle{plainnat}
