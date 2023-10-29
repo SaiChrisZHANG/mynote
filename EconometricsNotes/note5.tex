@@ -154,7 +154,19 @@ then we have
 $$
 \mathbf{1}\left[i,j\text{ shares a clustser}\right] = 1 \Leftrightarrow \delta_{id}=\delta_{jd}
 $$
-for some $d\in \left\{1,2, \cdots, D\right\}$, where $\delta_{id}$ denotes the $d$th element of $\boldsymbol{\delta}_i$
+for some $d\in \left\{1,2, \cdots, D\right\}$, where $\delta_{id}$ denotes the $d$th element of $\boldsymbol{\delta}_i$. Also 
+\begin{itemize}
+    \item $D-$vector $\mathbf{r}$: define the set $$ R\equiv \left\{ \mathbf{r}:r_d\in\left\{0,1\right\},d=1,2,\cdots,D,\mathbf{r\neq 0} \right\} $$
+    elements of the set $R$ can be used to index all cases where 2 observations share a cluster in at least one dimension. Define the function 
+    $$
+    \mathbf{I_r} (i,j) \equiv \mathbf{1} \left[r_d\delta_{id} = r_d \delta_{jd},\forall d\right]
+    $$
+    which indicates whether observations $i$ and $j$ have identical cluster menbership for \myhl[myblue]{\textbf{all}} dimensions $d$ s.t. $r_d=1$.
+    Then we have a \textit{aggregate} identifier
+    $$
+    \mathbf{I}(i,j) = 1 \Leftrightarrow \mathbf{I_r}(i,j)=1\text{ for some }\mathbf{r}\in R
+    $$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
