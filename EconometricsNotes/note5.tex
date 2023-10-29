@@ -176,8 +176,13 @@ with $\mathbf{r}\in R$.
 
 \paragraph*{Estimator} consider, similarly, an estimator 
 \begin{equation}
-    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\tilde{\mathbf{B}} \left(\mathbf{X'X}\right)^{-1}
+    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\tilde{\mathbf{B}} \left(\mathbf{X'X}\right)^{-1} \equiv  \left(\mathbf{X'X}\right)^{-1}  \left(\sum_{\left\Vert \mathbf{r} \right\Vert =k,\mathbf{r}\in R} (-1)^{k+1}\tilde{\mathbf{B}}_r \right)  \left(\mathbf{X'X}\right)^{-1}
 \end{equation}
+where cases of clustering on an odd number of dimensions are added, those of clustering on an even number of dimensions are subtracted. Consider the case of $D=3$,
+\begin{equation*}
+    \left(\tilde{\mathbf{B}}_{(1,0,0)} + \tilde{\mathbf{B}}_{(0,1,0)} + \tilde{\mathbf{B}}_{(0,0,1)} \right) - \left( \tilde{\mathbf{B}}_{(1,1,0)} + \tilde{\mathbf{B}}_{(1,0,1)} + \tilde{\mathbf{B}}_{(0,1,1)} \right) + \tilde{\mathbf{B}}_{(1,1,1)}
+\end{equation*}
+$\tilde{\mathbf{B}}$ is identical to $\hat{\mathbf{B}}$ defined analogically as in \ref{eq:twowayclu_centmat} 
 
 \newpage
 \bibliographystyle{plainnat}
