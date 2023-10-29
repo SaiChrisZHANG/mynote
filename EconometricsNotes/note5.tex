@@ -168,9 +168,15 @@ for some $d\in \left\{1,2, \cdots, D\right\}$, where $\delta_{id}$ denotes the $
     $$
     i.e., 2 observations share \myhl[myblue]{\textbf{at least}} one dimension.
 \end{itemize}
-The define the $2^D-1$ matrices 
+The define the $2^D-1$ matrices
 \begin{equation}
-    \tilde{\mathbf{B}}_{\mathbf{r}}\equiv \sum^N_{i=1}sum^N_{j=1}\mathbf{x}_i\mathbf{x}_j' \hat{u}_i\hat{u}_j\mathbf{I_r}(i,j)
+    \tilde{\mathbf{B}}_{\mathbf{r}}\equiv \sum^N_{i=1}\sum^N_{j=1}\mathbf{x}_i\mathbf{x}_j' \hat{u}_i\hat{u}_j\mathbf{I_r}(i,j)
+\end{equation}
+with $\mathbf{r}\in R$.
+
+\paragraph*{Estimator} consider, similarly, an estimator 
+\begin{equation}
+    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\tilde{\mathbf{B}} \left(\mathbf{X'X}\right)^{-1}
 \end{equation}
 
 \newpage
