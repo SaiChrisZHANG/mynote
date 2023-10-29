@@ -174,7 +174,7 @@ The define the $2^D-1$ matrices
 \end{equation}
 with $\mathbf{r}\in R$.
 
-\paragraph*{Estimator} consider, similarly, an estimator 
+\paragraph*{Var-cov matrix estimator} consider, similarly, an estimator 
 \begin{equation}
     \hat{\mathbb{V}}\left[\hat{\boldsymbol{\beta}}\right] = \left(\mathbf{X'X}\right)^{-1}\tilde{\mathbf{B}} \left(\mathbf{X'X}\right)^{-1} \equiv  \left(\mathbf{X'X}\right)^{-1}  \left(\sum_{\left\Vert \mathbf{r} \right\Vert =k,\mathbf{r}\in R} (-1)^{k+1}\tilde{\mathbf{B}}_r \right)  \left(\mathbf{X'X}\right)^{-1}
 \end{equation}
@@ -188,6 +188,8 @@ $\tilde{\mathbf{B}}$ is identical to $\hat{\mathbf{B}}$ defined analogically as 
     \item the covariance term corresponding to each observation pair with $\mathbf{I}(i,j)=1$ is included \myhl[myblue]{\textbf{exactly once}} in $\tilde{\mathbf{B}} $: by inclusion-exclusion principle for set cardinality
     $$\mathbf{I}(i,j) \Rightarrow \sum_{\left\Vert \mathbf{r} \right\Vert=k,\mathbf{r}\in R}(-1)^{k+1}\mathbf{I_r}(i,j)=1 $$
 \end{itemize} 
+
+\paragraph*{Curse of dimensionality} this could arise in a setting with \textbf{many dimensions} of clustering, and in which one or more dimensions have \textbf{few} clusters.
 
 \newpage
 \bibliographystyle{plainnat}
