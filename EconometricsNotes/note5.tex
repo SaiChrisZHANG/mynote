@@ -205,9 +205,15 @@ under standard assumptions, $\hat{\boldsymbol{\theta}}$ is asymptotically normal
 where $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}}$ and $\hat{\mathbf{B}}$ is an estimate of $\mathbb{V}\left[\sum_i\mathbf{h}_i\right]$.
 
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{one-way clustering}} $\hat{\mathbf{B}} = \sum^G_{g=1}\hat{\mathbf{h}}_g\hat{\mathbf{h}}_g'$ where $\hat{\mathbf{h}}_g = \sum^{N_g}_{i=1}\hat{\mathbf{h}}_{ig}$
+    \item \myhl[myblue]{\textbf{one-way clustering}} $\hat{\mathbf{B}} = \sum^G_{g=1}\hat{\mathbf{h}}_g\hat{\mathbf{h}}_g'$ where $\hat{\mathbf{h}}_g = \sum^{N_g}_{i=1}\hat{\mathbf{h}}_{ig}$, clustering may not lead to parameter inconsistency, depending on whether $\mathbb{E}\left[\mathbf{h}_i(\boldsymbol{\theta})\right]= \mathbf{0}$ with clustering
     \begin{itemize}
-        \item clustering may not lead to parameter inconsistency, depending on whether $\mathbb{E}\left[\mathbf{h}_i(\boldsymbol{\theta})\right]= \mathbf{0}$
+        \item \textbf{population-averaged approach}: assum $\mathbf{E}\left[y_{ig}\mid \mathbf{x}_{ig}\right] = \Phi \left( \mathbf{x}_{ig}'\boldsymbol{\beta} \right)$
+        \item \textbf{random effects approach}: let $y_{ig}=1$ if $y^*_{ig} > 0$ where $y^*_{ig}=\mathbf{x}_{ig}'\boldsymbol{\beta}+\epsilon_g + \epsilon_{ig}$, where 
+        \begin{itemize}
+            \item idiosyncratic error $\epsilon_{ig}\sim \mathcal{N}(0,1)$
+            \item cluster-specific error $\epsilon_g \sim \mathcal{N}(0,\sigma^2_g)$
+        \end{itemize}
+        then we have the alternative moment condition $$ \mathbb{E}\left[y_{ig}\mid \mathbf{x}_{ig}\right] = \Phi\left(\frac{\mathbf{x}_{ig}'\boldsymbol{\beta}}{\sqrt{1+\sigma^2_g}}\right) $$ 
     \end{itemize}
 \end{itemize}
 
