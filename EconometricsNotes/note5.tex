@@ -217,8 +217,11 @@ where $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \b
     \end{itemize}
     \item \myhl[myblue]{\textbf{multiway clustering}} replacing $\hat{u}_i\mathbf{x}_i$ in Eq.(\ref{eq:centermat_multiclu}) with $\hat{\mathbf{h}}_i$, then we have 
     \begin{align*}
-        \hat{\mathbb{V}} \left[\hat{\boldsymbol{\theta}}\right] &= \hat{\mathbf{A}}^{-1} \tilde{\mathbf{B}} \hat{\mathbf{A}'}^{-1}\text{, where}\\
-        \hat{\mathbf{A}} &= \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}}
+        \hat{\mathbb{V}} \left[\hat{\boldsymbol{\theta}}\right] &= \hat{\mathbf{A}}^{-1} \tilde{\mathbf{B}} \hat{\mathbf{A}'}^{-1}
+    \end{align*}
+    where 
+    \begin{align*}
+        \hat{\mathbf{A}} &= \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}} & \tilde{\mathbf{B}} &= \sum_{\left\Vert \mathbf{r} \right\Vert =k,\mathbf{r}\in R} (-1)^{k+1}\tilde{\mathbf{B}}_r
     \end{align*}
 \end{itemize}
 
