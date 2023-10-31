@@ -232,8 +232,9 @@ $$
 $$
 where $\mathbf{W}$ is a symmetric positive definite weighting matrix. Under standard regularity conditions, $\hat{\boldsymbol{\theta}}$ is asymptotically normal, with estimated variance matrix 
 \begin{equation*}
-    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\theta}}\right] = \left(\hat{\mathbf{A}}'\mathbf{W}\hat{\mathbf{A}}\right)^{-1}\hat{\mathbf{A}}'\mathbf{W}
+    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\theta}}\right] = \left(\hat{\mathbf{A}}'\mathbf{W}\hat{\mathbf{A}}\right)^{-1}\hat{\mathbf{A}}'\mathbf{W}\tilde{\mathbf{B}}\mathbf{W}\hat{\mathbf{A}}\left(\hat{\mathbf{A}}'\mathbf{W}\hat{\mathbf{A}}\right)^{-1}
 \end{equation*}
+again, $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}} $, and $\tilde{\mathbf{B}}$ is an estimate of $\mathbb{V}\left[\sum_i \mathbf{h}_i\right]$.
 
 \newpage
 \bibliographystyle{plainnat}
