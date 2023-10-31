@@ -223,8 +223,8 @@ where $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \b
     \begin{align*}
         \hat{\mathbf{A}} &= \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}} & \tilde{\mathbf{B}} &= \sum_{\left\Vert \mathbf{r} \right\Vert =k,\mathbf{r}\in R} (-1)^{k+1}\tilde{\mathbf{B}}_r & \tilde{\mathbf{B}}_r &\equiv \sum^N_{i=1}\sum^N_{j=1}\hat{\mathbf{h}}_i\hat{\mathbf{h}'}_j\mathbb{I}_{\mathbf{r}}(i,j)
     \end{align*}
-    with $\mathbf{r}\in R$
-\end{itemize}
+    with $\mathbf{r}\in R$\footnote{This multiway clustering can be implemented using several one-way clustered bootstraps. Each of the one-way cluster robust matrices is estimated by a pairs cluster bootstrap that resamples with replacement from the appropriate cluster dimension. They are then combined as if they had been estimated analytically \citep{cameron2011robust}.}.
+\end{itemize} 
 
 \newpage
 \bibliographystyle{plainnat}
