@@ -215,7 +215,10 @@ where $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \b
         \end{itemize}
         then we have the alternative moment condition $$ \mathbb{E}\left[y_{ig}\mid \mathbf{x}_{ig}\right] = \Phi\left(\frac{\mathbf{x}_{ig}'\boldsymbol{\beta}}{\sqrt{1+\sigma^2_g}}\right) $$ 
     \end{itemize}
-    \item \myhl[myblue]{\textbf{multiway clustering}} replacing $\hat{u}_i\mathbf{x}_i$ in Eq.(\ref{eq:centermat_multiclu}) with $\hat{\mathbf{h}}_i$
+    \item \myhl[myblue]{\textbf{multiway clustering}} replacing $\hat{u}_i\mathbf{x}_i$ in Eq.(\ref{eq:centermat_multiclu}) with $\hat{\mathbf{h}}_i$, then we have 
+    \begin{align*}
+        \hat{\mathbb{V}} \left[\hat{\boldsymbol{\theta}}\right] &= \hat{\mathbf{A}}^{-1}
+    \end{align*}
 \end{itemize}
 
 \newpage
