@@ -226,6 +226,15 @@ where $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \b
     with $\mathbf{r}\in R$\footnote{This multiway clustering can be implemented using several one-way clustered bootstraps. Each of the one-way cluster robust matrices is estimated by a pairs cluster bootstrap that resamples with replacement from the appropriate cluster dimension. They are then combined as if they had been estimated analytically \citep{cameron2011robust}.}.
 \end{itemize} 
 
+\paragraph*{GMM estimation} Consider an example of over-identified models: linear two stage least squares with more instruments than endogenous regressors, we have 
+$$
+\hat{\boldsymbol{\theta}} = \arg\min_{\boldsymbol{\theta}} Q(\boldsymbol{\theta}) =  \arg\min_{\boldsymbol{\theta}} \left(\sum^N_{i=1}\mathbf{h}_i(\boldsymbol{\theta})\right)'\mathbf{W}\left(\sum^N_{i=1}\mathbf{h}_i(\boldsymbol{\theta})\right)
+$$
+where $\mathbf{W}$ is a symmetric positive definite weighting matrix. Under standard regularity conditions, $\hat{\boldsymbol{\theta}}$ is asymptotically normal, with estimated variance matrix 
+\begin{equation*}
+    \hat{\mathbb{V}}\left[\hat{\boldsymbol{\theta}}\right] = \left(\hat{\mathbf{A}}'\mathbf{W}\hat{\mathbf{A}}\right)^{-1}\hat{\mathbf{A}}'\mathbf{W}
+\end{equation*}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
