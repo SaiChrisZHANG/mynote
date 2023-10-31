@@ -221,8 +221,9 @@ where $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \b
     \end{align*}
     where 
     \begin{align*}
-        \hat{\mathbf{A}} &= \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}} & \tilde{\mathbf{B}} &= \sum_{\left\Vert \mathbf{r} \right\Vert =k,\mathbf{r}\in R} (-1)^{k+1}\tilde{\mathbf{B}}_r
+        \hat{\mathbf{A}} &= \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}} & \tilde{\mathbf{B}} &= \sum_{\left\Vert \mathbf{r} \right\Vert =k,\mathbf{r}\in R} (-1)^{k+1}\tilde{\mathbf{B}}_r & \tilde{\mathbf{B}}_r &\equiv \sum^N_{i=1}\sum^N_{j=1}\hat{\mathbf{h}}_i\hat{\mathbf{h}'}_j\mathbb{I}_{\mathbf{r}}(i,j)
     \end{align*}
+    with $\mathbf{r}\in R$
 \end{itemize}
 
 \newpage
