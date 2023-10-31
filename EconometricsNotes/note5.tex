@@ -217,7 +217,8 @@ where $\hat{\mathbf{A}} = \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \b
     \end{itemize}
     \item \myhl[myblue]{\textbf{multiway clustering}} replacing $\hat{u}_i\mathbf{x}_i$ in Eq.(\ref{eq:centermat_multiclu}) with $\hat{\mathbf{h}}_i$, then we have 
     \begin{align*}
-        \hat{\mathbb{V}} \left[\hat{\boldsymbol{\theta}}\right] &= \hat{\mathbf{A}}^{-1}
+        \hat{\mathbb{V}} \left[\hat{\boldsymbol{\theta}}\right] &= \hat{\mathbf{A}}^{-1} \tilde{\mathbf{B}} \hat{\mathbf{A}'}^{-1}\text{, where}\\
+        \hat{\mathbf{A}} &= \sum_i \left. \frac{\partial \mathbf{h}_i}{\partial \boldsymbol{\theta}'}\right\vert _{\hat{\boldsymbol{\theta}}}
     \end{align*}
 \end{itemize}
 
