@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -47,6 +47,13 @@ Andrew~J Scott and D~Holt.
 \newblock The effect of two-stage sampling on ordinary least squares methods.
 \newblock \emph{Journal of the American statistical Association}, 77\penalty0
   (380):\penalty0 848--854, 1982.
+
+\bibitem[Thompson(2011)]{thompson2011simple}
+Samuel~B Thompson.
+\newblock Simple formulas for standard errors that cluster by both firm and
+  time.
+\newblock \emph{Journal of financial Economics}, 99\penalty0 (1):\penalty0
+  1--10, 2011.
 
 \bibitem[White(1980)]{white1980heteroskedasticity}
 Halbert White.
