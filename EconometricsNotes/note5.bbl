@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,11 @@ A~Colin Cameron, Jonah~B Gelbach, and Douglas~L Miller.
 \newblock Robust inference with multiway clustering.
 \newblock \emph{Journal of Business \& Economic Statistics}, 29\penalty0
   (2):\penalty0 238--249, 2011.
+
+\bibitem[Chiang and Sasaki(2023)]{chiang2023using}
+Harold~D Chiang and Yuya Sasaki.
+\newblock On using the two-way cluster-robust standard errors.
+\newblock \emph{arXiv preprint arXiv:2301.13775}, 2023.
 
 \bibitem[Hansen(2007)]{hansen2007asymptotic}
 Christian~B Hansen.
