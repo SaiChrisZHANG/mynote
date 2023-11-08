@@ -269,6 +269,9 @@ Consider 2 examples:
         \hat{\gamma}_t & \coloneq \frac{1}{N}\sum^N_{i=1}\left(Y_{it}-\bar{Y}_{NT}\right) = \gamma_t + \frac{1}{N}\sum^N_{i=1} \left(\epsilon_{it}-\bar{\epsilon}_{NT}\right)\\
         \hat{\epsilon}_{it} & \coloneq Y_{it} - \bar{Y}_{NT} -\hat{\alpha}_i -\hat{\gamma}_t
     \end{align*}
+    then use these empirical distributions for estimation and form a bootstrap sample 
+    $$ Y^*_{it} \coloneq \bar{Y}_{NT} + \alpha^*_i + \gamma^*_t + \epsilon^*_{it} $$
+    
 \end{itemize}
 
 \section*{A Theoretical}
