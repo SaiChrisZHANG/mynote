@@ -273,7 +273,8 @@ Consider 2 examples:
     $$ Y^*_{it} \coloneq \bar{Y}_{NT} + \alpha^*_i + \gamma^*_t + \epsilon^*_{it} $$
     by drawing from these estimators and obtain $\bar{Y}^*_{NT}\coloneq \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}Y^*_{it}$, and verify the conditional variances of the bootstrap distribution given the sample:
     \begin{align*}
-        \frac{1}{N}\sum^N_{i=1}\left(\hat{\alpha}_i - \frac{1}{N}\sum^N_{j=1}\hat{\alpha}_j\right)
+        \frac{1}{N}\sum^N_{i=1}\left(\hat{\alpha}_i - \frac{1}{N}\sum^N_{j=1}\hat{\alpha}_j\right)^2 - \left[\mathrm{Var}(\alpha_i) + \frac{\mathrm{Var}(\epsilon_{it})}{T}\right] & \xrightarrow{p} 0\\
+        \frac{1}{T}\sum^N_{i=1}\left(\hat{\gamma}_t - \frac{1}{T}\sum^T_{s=1}\hat{\gamma}_t\right)^2 - \left[\mathrm{Var}(\gamma_t) + \frac{\mathrm{Var}(\epsilon_{it})}{N}\right] & \xrightarrow{p} 0
     \end{align*}
 \end{itemize}
 
