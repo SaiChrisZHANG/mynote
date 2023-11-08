@@ -276,6 +276,13 @@ Consider 2 examples:
         \frac{1}{N}\sum^N_{i=1}\left(\hat{\alpha}_i - \frac{1}{N}\sum^N_{j=1}\hat{\alpha}_j\right)^2 - \left[\mathrm{Var}(\alpha_i) + \frac{\mathrm{Var}(\epsilon_{it})}{T}\right] & \xrightarrow{p} 0\\
         \frac{1}{T}\sum^N_{i=1}\left(\hat{\gamma}_t - \frac{1}{T}\sum^T_{s=1}\hat{\gamma}_t\right)^2 - \left[\mathrm{Var}(\gamma_t) + \frac{\mathrm{Var}(\epsilon_{it})}{N}\right] & \xrightarrow{p} 0
     \end{align*}
+    then the bootstrap distribution is
+    \begin{itemize}
+        \item in the \underline{non-degenerate} case, $$ \sqrt{N}\left( \bar{Y}^*_{NT}-\bar{Y}_{NT} \right) \xrightarrow{d} \mathcal{N}\left(0,\mathrm{Var}(\alpha_i) + \mathrm{Var}(\gamma_t)\right) $$
+        the estimation error $\hat{\alpha}_i$ does \textbf{NOT} affect the asymptotic variance.
+        \item in the \underline{degenerate} case, $$ \sqrt{NT}\left(\bar{Y}^*_{NT}-\bar{Y}_{NT}\right) \xrightarrow{d} \mathcal{N}\left(0,3\mathrm{Var}(\epsilon_{it})\right) $$
+        asymptotically overestimates the variance of the sampling distribution, leading to inconsistency of this naive bootstrapping procedure.
+    \end{itemize}
 \end{itemize}
 
 \section*{A Theoretical}
