@@ -284,7 +284,7 @@ Consider 2 examples:
         asymptotically overestimates the variance of the sampling distribution, leading to inconsistency of this naive bootstrapping procedure.
     \end{itemize}
     \item \myhl[myblue]{\textbf{Non-Gaussian limit distribution}} $$ Y_{it} = \alpha_i \gamma_t + \epsilon_{it} $$
-    where $\alpha_i,\gamma_t,\epsilon_{it}$ are independently distributed with $\mathbb{E}\left[\epsilon_{it}\right] = 0,\mathrm{Var}(\alpha_i) = \sigma^2_{\alpha},\mathrm{Var}(\gamma_t) = \sigma^2_{\gamma}, \mathrm{Var}(\epsilon)_{it}=\sigma^2_{\epsilon}$. \textbf{If} $\mathbb{E}\left[\alpha_i\right] = \mathbb{E}\left[\gamma_t\right] = 0$, then CLT and CMT\sidenotes{CMT: Continuous Mapping Theorem} imply 
+    where $\alpha_i,\gamma_t,\epsilon_{it}$ are independently distributed with $\mathbb{E}\left[\epsilon_{it}\right] = 0,\mathrm{Var}(\alpha_i) = \sigma^2_{\alpha},\mathrm{Var}(\gamma_t) = \sigma^2_{\gamma}, \mathrm{Var}(\epsilon)_{it}=\sigma^2_{\epsilon}$. \textbf{If} $\mathbb{E}\left[\alpha_i\right] = \mathbb{E}\left[\gamma_t\right] = 0$, then CLT and Continuous Mapping Theorem (CMT) imply 
     \begin{align*}
         \sqrt{NT} \bar{Y}_{NT} =& \frac{1}{\sqrt{NT}} \sum^N_{i=1}\sum^T_{t=1} \left(\alpha_i \gamma_t +\epsilon_{it}\right)\\
         =& \left( \frac{1}{\sqrt{N}} \sum^N_{i=1}\alpha_i \right) \left(\frac{1}{\sqrt{T}} \sum^T_{t=1}\gamma_t \right) + \frac{1}{\sqrt{NT}}\sum^N_{i=1}\sum^T_{t=1}\epsilon_{it}\\
