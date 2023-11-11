@@ -310,10 +310,13 @@ For the array $\left(Y_{it}\right)_{i,t}$, denote
 \subsubsection{Inference: Sample Mean}
 First, consider the assumption of \textit{separate exchangeability}
 \begin{assumption}{Separate Exchangeability}{sep_exchange}
-    A \textbf{separately exchangeable} array is an infinite array $\left(Y_{it}\right)_{i,t}$ such that for any integers $\tilde{N},\tilde{T}$ and permutations $\pi_1:\left\{1,\cdots,\tilde{N}\right\}\rightarrow \left\{1,\cdots,\tilde{N}\right\}$ and $\pi_2:\left\{1,\cdots,\tilde{T}\right\}\rightarrow \left\{1,\cdots,\tilde{T}\right\}$, we have 
-    $$ \left(Y_{\pi_1(i),\pi_2(t)}\right)_{i,t} \xrightarrow{d} \left(Y_{it}\right)_{i,t} $$
-    such an array is called \textbf{dissociated} if for any $N_0,T_0\geq 1$, $\left(Y_{it}\right)^{i=N_0,t=T_0}_{i=1,t=1}$ is independent of $\left(Y_{it}\right)_{i>N_0,t>T_0}$
-    For the sample $Y_{it}$ for $i=1,\cdots, N$ and $t=1,\cdots,T$, 
+    \begin{itemize}
+        \item A \textbf{separately exchangeable} array is an infinite array $\left(Y_{it}\right)_{i,t}$ such that for any integers $\tilde{N},\tilde{T}$ and permutations $\pi_1:\left\{1,\cdots,\tilde{N}\right\}\rightarrow \left\{1,\cdots,\tilde{N}\right\}$ and $\pi_2:\left\{1,\cdots,\tilde{T}\right\}\rightarrow \left\{1,\cdots,\tilde{T}\right\}$, we have 
+        $$ \left(Y_{\pi_1(i),\pi_2(t)}\right)_{i,t} \overset{d}{=} \left(Y_{it}\right)_{i,t} $$
+        such an array is called \textbf{dissociated} if for any $N_0,T_0\geq 1$, $\left(Y_{it}\right)^{i=N_0,t=T_0}_{i=1,t=1}$ is independent of $\left(Y_{it}\right)_{i>N_0,t>T_0}$.
+        \item For dyadic data, consider the alternative assumption \textbf{jointly exchangeable} arrays $\left(Y_{it}\right)_{i,j}$ satisfying 
+        $$ \left(Y_{\pi(i),\pi(j)}\right)_{i,j} \overset{d}{=} \left(Y_{ij}\right)_{i,j} $$
+    \end{itemize}
 \end{assumption}
 
 \section*{A Theoretical}
