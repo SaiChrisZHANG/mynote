@@ -324,7 +324,13 @@ This assumption can be interpreted as rows (and columns) corresponding to units 
     \item \myhl[myblue]{\textbf{DiD/matched data}}: the units corresponding to either dimension of the sample to represent independent draws from a common, infinite population 
     \item \myhl[myblue]{\textbf{non-exhaustively matched data}}: only observe joint outcomes for a posibly self-selected subset of unit pairs, sample selection should be (jointly or separately) exchangeable
     \item \myhl[myblue]{\textbf{U-/V-statistics}}: the kernel $Y_{i_1,\cdots,i_D} \coloneq h\left(X_{i_1},\cdots,X_{i_D}\right) $ evaluated at i.i.d. observations $X_1,\cdots,X_N$ forms a dissociated, jointly exchangeable array
+    \item \myhl[myblue]{\textbf{Network}}: unlabeled\footnote{\textit{Unlabeled}: nodel identifiers do not carry any significance for the statistical model.} data implies finite exchangeability, the sampled graph has joint (\textit{infinite}) exchangeability if it is a subgraph of an infinite graph
 \end{itemize}
+Directly from Assumption \ref{assump:sep_exchange}, any dissociated separately exchangeable array can be represented as 
+\begin{equation*}
+    Y_{it} = f\left(\alpha_i,\gamma_t,\epsilon_{it}\right)
+\end{equation*}
+for some function $f(\cdot)$ where $\alpha_1,\cdots,\alpha_N$, $\gamma_1,\cdots,\gamma_T$, $\epsilon_{11},\cdots,\epsilon_{NT}$ are mutually independent, uniformly distributed random variables.
 
 \section*{A Theoretical}
 \citet{chiang2023using}
