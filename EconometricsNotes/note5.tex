@@ -319,7 +319,11 @@ First, consider the assumption of \textit{separate exchangeability}
         for any permutation $\pi$ on $\left\{1,\cdots,\tilde{N}\right\}$, in addition, $\left(Y_{ij}\right)^{N_0}_{i,j=1}$ is independent of $\left(Y_{ij}\right)_{i,j>N_0}$
     \end{itemize}
 \end{assumption}
-This assumption can be interpreted as rows (and columns) corresponding to units that are drawn independently from a common population, where we then observe the joint outcome for every row-column pair
+This assumption can be interpreted as rows (and columns) corresponding to units that are drawn independently from a common population, where we then observe the joint outcome for every row-column pair, consider the requirements in the following applications
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{DiD/matched data}}: the units corresponding to either dimension of the sample to represent independent draws from a common, infinite population 
+    \item \myhl[myblue]{\textbf{non-exhaustively matched data}}: only observe joint outcomes for a posibly self-selected subset of unit pairs, the resulting sample may still be  
+\end{itemize}
 
 \section*{A Theoretical}
 \citet{chiang2023using}
