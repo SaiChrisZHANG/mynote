@@ -360,6 +360,11 @@ then, rewrite the sample mean as
     \hat{Y}_{NT} &= b+\bar{a}_N + \bar{g}_T + \bar{v}_{NT} + \bar{e}_{NT}\\
     &\coloneq b + \frac{1}{N}\sum^N_{i=1}a_i + \frac{1}{T}\sum^T_{t=1}g_t + \frac{1}{NT}\sum^T_{t=1}\sum^N_{i=1}v_{it} + \frac{1}{NT}\sum^T_{t=1}\sum^N_{i=1}e_{it}
 \end{align*}
+and the unconditional variances of the projections with 
+\begin{align*}
+    \sigma^2_a&\coloneq \mathrm{Var}(a_i) & \sigma^2_g&\coloneq \mathrm{Var}(g_t) & \sigma^2_v&\coloneq \mathrm{Var}(v_{it}) & \sigma^2_e&\coloneq \mathrm{Var}(e_{it})   
+\end{align*}
+let $w_{it}\coloneq v_{it}+ e_{it}$, and denote its variance by $\sigma^2_w = \mathrm{Var}(w_{it})$
 
 \section*{A Theoretical}
 \citet{chiang2023using}
