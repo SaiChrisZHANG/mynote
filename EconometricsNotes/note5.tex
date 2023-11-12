@@ -364,7 +364,14 @@ and the unconditional variances of the projections with
 \begin{align*}
     \sigma^2_a&\coloneq \mathrm{Var}(a_i) & \sigma^2_g&\coloneq \mathrm{Var}(g_t) & \sigma^2_v&\coloneq \mathrm{Var}(v_{it}) & \sigma^2_e&\coloneq \mathrm{Var}(e_{it})   
 \end{align*}
-let $w_{it}\coloneq v_{it}+ e_{it}$, and denote its variance by $\sigma^2_w = \mathrm{Var}(w_{it})$
+let $w_{it}\coloneq v_{it}+ e_{it}$, and denote its variance by $\sigma^2_w = \mathrm{Var}(w_{it})$. Then, assume integrability 
+\begin{assumption}{Integrability}{integrability}
+    Let $Y_{it} = f(\alpha_i,\gamma_t,\epsilon_{it})$, where $\alpha_i,\gamma_t,\epsilon_{it}$ are random arrays with elements i.i.d. drawn from $[0,1]$ uniform distribution, assume 
+    \begin{itemize}
+        \item $a_i/\sigma_a$, $g_t/\sigma_g$, $v_{it}/\sigma_v$, $e_{it}/\sigma_e$ are well-defined and have bounded moments up to the order $4+\delta$ for some $\delta>0$, whenever the respective variances $\sigma^2_a,\sigma^2_g,\sigma^2_v,\sigma^2_e$ are non-zero.
+        \item $\sigma^2_a + \sigma^2_g >0$, or $\sigma^2_v + \sigma^2_e > 0$
+    \end{itemize}
+\end{assumption}
 
 \section*{A Theoretical}
 \citet{chiang2023using}
