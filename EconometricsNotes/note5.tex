@@ -347,7 +347,19 @@ with
     \item $e_{it} = Y_{it} - \mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right]$
     \item $a_i = \mathbb{E}\left[Y_{it}\mid\alpha_i \right]-\mathbb{E}\left[Y_{it}\right]$, $g_t= \mathbb{E}\left[Y_{it}\mid \gamma_t\right]-\mathbb{E}\left[Y_{it}\right]$
     \item $v_{it} = \mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] - \mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\mid \gamma_t\right] + \mathbb{E}\left[Y_{it}\right]$
+    \item $b= \mathbb{E}\left[Y_{it}\right]$
 \end{itemize}
+here, 
+\begin{itemize}
+    \item temporal and cross-sectional units were drawn independently: $a_1,\cdots,a_N$ and $g_1,\cdots,g_T$ are independent of each other.
+    \item by construction, $\mathbb{E}\left[e_{it}\mid a_i,g_t,v_{it}\right]=0$, $\mathbb{E}\left[v_{it}\mid a_i\right] = \mathbb{E}\left[v_{it}\mid g_t\right]=0$
+    \item $e_{it}$, $(a_i,g_t)$ and $v_{it}$ are \textbf{uncorrelated}
+\end{itemize}
+then, rewrite the sample mean as 
+\begin{align*}
+    \hat{Y}_{NT} &= b+\bar{a}_N + \bar{g}_T + \bar{v}_{NT} + \bar{e}_{NT}\\
+    &coloneq b + \frac{1}{N}\sum^N_{i=1}a_i + \frac{1}{T}\sum^T_{t=1}g_t
+\end{align*}
 
 \section*{A Theoretical}
 \citet{chiang2023using}
