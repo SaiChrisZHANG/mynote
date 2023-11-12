@@ -332,6 +332,21 @@ Directly from Assumption \ref{assump:sep_exchange}, any dissociated separately e
 \end{equation*}
 for some function $f(\cdot)$ where $\alpha_1,\cdots,\alpha_N$, $\gamma_1,\cdots,\gamma_T$, $\epsilon_{11},\cdots,\epsilon_{NT}$ are mutually independent, uniformly distributed random variables.
 
+\paragraph*{Projection} now, decompose the array $\left(Y_{it}\right)_{i,t}$ as 
+\begin{align*}
+    Y_{it} &= b + a_i + g_t + w_{it} & \mathbb{E}\left[w_{it}\mid a_i,g_t\right]&=0
+\end{align*}
+where $a_i$ and $g_t$ are mean-zero and mutually independent, s.t. the joint distribution of $Y_{it}$ can then be expended as 
+\begin{align*}
+    Y_{it} =& \mathbb{E}\left[Y_{it}\right] + \left(\mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\right] \right) + \left( \mathbb{E}\left[Y_{it}\mid \gamma_t\right] - \mathbb{E}\left[Y_{it}\right] \right) \\
+    &+ \left( \mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] - \mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\mid \gamma_t\right] + \mathbb{E}\left[Y_{it}\right]\right) + \left( Y_{it}-\mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] \right) \\
+    \eqcolon & b+ a_i + g_t + v_{it} + e_{it}
+\end{align*}
+with
+\begin{itemize}
+    \item $e_{it} = Y_{it} - \mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right]$
+\end{itemize}
+
 \section*{A Theoretical}
 \citet{chiang2023using}
 
