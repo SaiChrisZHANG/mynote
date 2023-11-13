@@ -373,6 +373,14 @@ let $w_{it}\coloneq v_{it}+ e_{it}$, and denote its variance by $\sigma^2_w = \m
     \end{itemize}
 \end{assumption}
 
+\paragraph*{Low-rank approximation}
+Consider the row/column projection
+\begin{equation*}
+    \bar{v}_{NT} \equiv \frac{1}{NT}\sum^T_{t=1}\sum^N_{i=1}\left(\mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] -\mathbb{E}\left[Y_{it}\mid \alpha_i\right] -\mathbb{E}\left[Y_{it}\mid \gamma_t\right] +\mathbb{E}\left[Y_{it}\right] \right) \eqcolon \frac{1}{NT}\sum^T_{t=1}\sum^N_{i=1}v(\alpha_i,\gamma_t)
+\end{equation*}
+as a generalized U-statistic with a kerel $v(\alpha,\gamma)$ evaluated at the samples $\alpha_1,\cdots,\alpha_N$ and $\gamma_1,\cdots,\gamma_t$
+
+
 \section*{A Theoretical}
 \citet{chiang2023using}
 
