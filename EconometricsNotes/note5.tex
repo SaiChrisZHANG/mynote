@@ -406,10 +406,11 @@ under the $L_2(F_{\alpha\gamma})$ norm on the space of smooth functions of $(\al
         \item $\left(\psi_1(\gamma_t),\cdots, \psi_K(\gamma_t)\right)$ can be correlated with $g_t$: $\sigma_{gk}\coloneq \mathrm{Cov}\left(g_t,\psi_k(\gamma_t)\right)$
     \end{itemize}
 \end{itemize}
-with this representation of Eq.(\ref{eq:low-rank_approximation}), we have 
+with this representation of Eq.(\ref{eq:low-rank_approximation}), we have\footnote{The limiting distribution of this term is not Gaussian, but can be represented as a linear combination of independent chi-squared random variables. This type of distributions is known as Wiener/Gaussian chaos.} 
 \begin{equation*}
-    \frac{1}{NT}\sum^N_{i=1}
+    \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}v(\alpha_i,\gamma_t) = \sum^{\infty}_{k=1}c_k \left(\frac{1}{N}\sum^N_{i=1}\phi_k(\alpha_i)\right) \left(\frac{1}{T}\sum^T_{t=1}\psi_k(\gamma_t)\right)
 \end{equation*}
+and the second-order projection term can also be represented as a function of \textbf{countably many} sample averages of \textbf{i.i.d. mean-zero} random variables.
 
 
 \section*{A Theoretical}
