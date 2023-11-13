@@ -391,6 +391,18 @@ under Assumption \ref{assump:integrability}, we have compact integral operators
 \begin{align*}
     S(u)(g)&=\int v(a,g)u(a)F_{\alpha}(\mathrm{d}a) & S^*(u)(a)&=\int v(a,g)u(g)F_{\gamma}(\mathrm{d}g)
 \end{align*}
+where $F_{\alpha},F_{\gamma}$ are the marginal distributions corresponding to the joint $F_{\alpha\gamma}$ of $\alpha_i,\gamma_t$. Then the low-rank approximation is
+\begin{equation}
+    v(\alpha,\gamma) = \sum^{\infty}_{k=1}c_k\phi_k(\alpha)\psi_k(\gamma)
+\end{equation}
+under the $L_2(F_{\alpha\gamma})$ norm on the space of smooth functions of $(\alpha,\gamma)\in[0,1]^2$. Here 
+\begin{itemize}
+    \item $(c_k)_{k\geq 1}$: a sequence of singular values, $\lim\left\vert c_k \right\vert \rightarrow 0$
+    \item $\left(\phi_k\left(\cdot\right)\right)_{k\geq 1}$ and $\left(\psi_k\left(\cdot\right)\right)_{k\geq 1}$: orthonormal bases for $L_2\left([0,1],F_{\alpha}\right)$ and $L_2\left([0,1],F_{\gamma}\right)$:
+    \begin{itemize}
+        \item By construction: $$ \mathbb{E}\left[v(a,\gamma_t)\right] = \mathbb{E}\left[v(\alpha_i,g)\right] $$
+    \end{itemize}
+\end{itemize}
 
 
 \section*{A Theoretical}
