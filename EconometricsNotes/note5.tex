@@ -385,8 +385,12 @@ as a generalized U-statistic with a kerel $v(\alpha,\gamma)$ evaluated at the sa
 \end{itemize}
 Define,
 $$
-v(\alpha,\gamma)
+v(\alpha,\gamma) \coloneq \mathbb{E}\left[Y_{it}\mid \alpha_i=\alpha,\gamma_t=\gamma\right] - \mathbb{E}\left[Y_{it}\mid \alpha_i=\alpha\right] - \mathbb{E}\left[Y_{it}\mid \gamma_t=\gamma\right] + \mathbb{E}\left[Y_{it}\right]
 $$
+under Assumption \ref{assump:integrability}, we have compact integral operators
+\begin{align*}
+    S(u)(g)&=\int v(a,g)u(a)F_{\alpha}(\mathrm{d}a) & S^*(u)(a)&=\int v(a,g)u(g)F_{\gamma}(\mathrm{d}g)
+\end{align*}
 
 
 \section*{A Theoretical}
