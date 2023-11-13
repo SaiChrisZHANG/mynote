@@ -412,6 +412,18 @@ with this representation of Eq.(\ref{eq:low-rank_approximation}), we have\footno
 \end{equation*}
 and the second-order projection term can also be represented as a function of \textbf{countably many} sample averages of \textbf{i.i.d. mean-zero} random variables.
 
+\begin{assumption}{Eigenfucntions and coefficients in the spectral represention (\ref{eq:low-rank_approximation})}{restrictions_on_lowrankapprox}
+    The function $v(\alpha,\gamma)\coloneq \mathbb{E}\left[Y_{it}\mid \alpha_i=\alpha,\gamma_t=\gamma\right] - \mathbb{E}\left[Y_{it}\mid \alpha_i=\alpha\right] - \mathbb{E}\left[Y_{it}\mid \gamma_t=\gamma\right] + \mathbb{E}\left[Y_{it}\right]$ admits a spectral representation
+    $$
+    v(\alpha,\gamma) = \sum^{\infty}_{k=1}c_k\phi_k(\alpha)\psi_k(\gamma)
+    $$
+    under the $L_2(F_{\alpha\gamma})$ norm. And 
+    \begin{itemize}
+        \item the singular values are uniformly bounded by a square summable null sequence $\bar{c}_k$: $c_k\leq \bar{c}_k,\forall k=1,2,\cdots$, where $\sum^{\infty}_{k=1}c^2_k< \infty$
+        \item $\forall k=1,2,\cdots$, the first 3 moments of the eigenfunctions $\phi_k(\alpha_i)$ and $\psi_k(\gamma_t)$ are bounded by a constant $B>0$
+    \end{itemize}
+\end{assumption}
+
 
 \section*{A Theoretical}
 \citet{chiang2023using}
