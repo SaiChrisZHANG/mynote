@@ -336,7 +336,7 @@ for some function $f(\cdot)$ where $\alpha_1,\cdots,\alpha_N$, $\gamma_1,\cdots,
 \begin{align*}
     Y_{it} &= b + a_i + g_t + w_{it} & \mathbb{E}\left[w_{it}\mid a_i,g_t\right]&=0
 \end{align*}
-where $a_i$ and $g_t$ are mean-zero and mutually independent, s.t. the joint distribution of $Y_{it}$ can then be expended as 
+where $a_i$ and $g_t$ are mean-zero and mutually independent, s.t. the joint distribution of $Y_{it}$ can then be expanded as 
 \begin{align*}
     Y_{it} =& \mathbb{E}\left[Y_{it}\right] + \left(\mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\right] \right) + \left( \mathbb{E}\left[Y_{it}\mid \gamma_t\right] - \mathbb{E}\left[Y_{it}\right] \right) \\
     &+ \left( \mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] - \mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\mid \gamma_t\right] + \mathbb{E}\left[Y_{it}\right]\right) + \left( Y_{it}-\mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] \right) \\
@@ -435,7 +435,16 @@ For the sample mean $\bar{Y}_{NT} - \mathbb{E}\left[Y_{it}\right]$, the limiting
     \item If observations are independent across rows and columns: $\sqrt{NT}\left(\bar{Y}_{NT}-\mathbb{E}\left[Y_{it}\right]\right) \xrightarrow{d} \mathcal{N}\left(0,\sigma^2_e\right)$
     \item If $N=T$, within-cluster covariances are bounded from 0 in \textbf{at least one dimension}: $\sqrt{N}\left(\bar{Y}_{NT}-\mathbb{E}\left[Y_{it}\right]\right) \xrightarrow{d}\mathcal{N}\left(0,\sigma^2_a+\sigma^2_g\right)$
 \end{itemize}
-
+The bootstrap procedure should then be adaptive for both degenerate and non-degenerate cases. For the expansion
+\begin{align}
+    Y_{it} =& \mathbb{E}\left[Y_{it}\right] + \left(\mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\right] \right) + \left( \mathbb{E}\left[Y_{it}\mid \gamma_t\right] - \mathbb{E}\left[Y_{it}\right] \right) \\ \nonumber
+    &+ \left( \mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] - \mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\mid \gamma_t\right] + \mathbb{E}\left[Y_{it}\right]\right) + \left( Y_{it}-\mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] \right) \\ \nonumber
+    \eqcolon & b+ a_i + g_t + v_{it} + e_{it}
+\end{align}
+the sample analogs are:
+\begin{align*}
+    \hat{a}_i &\coloneq \frac{1}{T}sum^T_{t=1}Y_{it}-\bar{Y}_{NT} & \hat{g}_t &\coloneq \frac{1}{N}\sum^N_{i=1}Y_{it} - \bar{Y}_{NT} & \hat{w}_{it}\coloneq & Y_{it} - \hat{a}_i-\hat{g}_t -\bar{Y}_{NT}
+\end{align*}
 
 \section*{A Theoretical}
 \citet{chiang2023using}
