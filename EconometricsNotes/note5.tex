@@ -466,7 +466,14 @@ then form the estimators as
 \begin{align}
     \hat{\sigma}^2_a &= \max \left\{0,\hat{s}_a^2 -\frac{1}{T}\hat{s}^2_w\right\} & \hat{\sigma}_g^2 &=\max \left\{0,\hat{s}^2_g -\frac{1}{N}\hat{s}_w^2\right\} & \hat{\sigma}^2_w&\coloneq \hat{s}^2_w
 \end{align}
-
+the rates of convergence for these estimators are given in the following lemma:
+\begin{lemma}{Stochastic Order of Variance Estimators}{varest_stcha_order}
+    Under Assumption \ref{assump:sep_exchange},
+    \begin{align*}
+        \hat{\sigma}^2_a - \sigma^2_a &= O_p \left(\frac{1}{\sqrt{N}}\left(\sigma_a + \frac{\sigma_e}{\sqrt{T}}\right)^2 + \frac{\sigma^2_v}{T}\right) \\
+        \hat{\sigma}^2_g - \sigma^2_g &= O_p \left(\frac{1}{\sqrt{N}}\left(\sigma_g + \frac{\sigma_e}{\sqrt{N}}\right)^2 + \frac{\sigma^2_v}{N}\right)
+    \end{align*}
+\end{lemma}
 
 
 \section*{A Theoretical}
