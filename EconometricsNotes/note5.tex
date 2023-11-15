@@ -471,7 +471,8 @@ the rates of convergence for these estimators are given in the following lemma:
     Under Assumption \ref{assump:sep_exchange},
     \begin{align*}
         \hat{\sigma}^2_a - \sigma^2_a &= O_p \left(\frac{1}{\sqrt{N}}\left(\sigma_a + \frac{\sigma_e}{\sqrt{T}}\right)^2 + \frac{\sigma^2_v}{T}\right) \\
-        \hat{\sigma}^2_g - \sigma^2_g &= O_p \left(\frac{1}{\sqrt{N}}\left(\sigma_g + \frac{\sigma_e}{\sqrt{N}}\right)^2 + \frac{\sigma^2_v}{N}\right)
+        \hat{\sigma}^2_g - \sigma^2_g &= O_p \left(\frac{1}{\sqrt{T}}\left(\sigma_g + \frac{\sigma_e}{\sqrt{N}}\right)^2 + \frac{\sigma^2_v}{N}\right) \\
+        \hat{\sigma}^2_w - \sigma^2_w &= O_p \left(\frac{\sigma^2_e}{\sqrt{NT}} + \left(\frac{1}{N} + \frac{1}{T}\right)\sigma^2_v \right)
     \end{align*}
 \end{lemma}
 
