@@ -456,6 +456,17 @@ s.t. the \textbf{convolution error} depending on $\sigma^2_w$ dominates in the d
     \lambda_a &= \frac{T\sigma^2_a}{T\sigma^2_a +\sigma^2_w} & \lambda_g &= \frac{N\sigma^2_g}{N\sigma^2_g +\sigma^2_w} 
 \end{align*}
 
+\paragraph*{Component variance estimator} let 
+\begin{align*}
+    \hat{s}^2_a &\coloneq \frac{1}{N-1}\sum^N_{i=1} \left(\hat{a}_i - \bar{Y}_{NT}\right)^2 \\
+    \hat{s}^2_g &\coloneq \frac{1}{T-1}\sum^T_{t=1} \left(\hat{g}_t - \bar{Y}_{NT}\right)^2 \\
+    \hat{s}^2_w &\coloneq \frac{1}{NT-N-T} \sum^N_{i=1}\sum^T_{t=1} \left(Y_{it}-\hat{a}_i-\hat{g}_t -\bar{Y}_{NT}\right)^2
+\end{align*}
+then form the estimators as 
+\begin{align}
+    \hat{\sigma}^2_a &= \max \left\{0,\hat{s}_a^2 -\frac{1}{T}\hat{s}^2_w\right\} & \hat{\sigma}_g^2 &=\max \left\{0,\hat{s}^2_g -\frac{1}{N}\hat{s}_w^2\right\} & \hat{\sigma}^2_w&\coloneq \hat{s}^2_w
+\end{align}
+
 
 
 \section*{A Theoretical}
