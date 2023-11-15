@@ -451,7 +451,11 @@ The variance of the projection terms are:
 \begin{align*}
     \mathrm{Var}\left(\hat{a}_i\right) &= \sigma^2_a + \frac{\sigma^2_w}{T} & \mathrm{Var}\left(\hat{g}_t\right) &= \sigma^2_g + \frac{\sigma^2_w}{N}
 \end{align*}
-s.t. the \textbf{convolution error} depending on $\sigma^2_w$ dominates in the degenerate case. Therefore, to correct for the contribution of the row/column averages of $w_{it}$, 
+s.t. the \textbf{convolution error} depending on $\sigma^2_w$ dominates in the degenerate case. Therefore, to correct for the contribution of the row/column averages of $w_{it}$, consider the scalar for the distribution of $\hat{a}_i,\hat{g}_t$ by 
+\begin{align*}
+    \lambda_a &= \frac{T\sigma^2_a}{T\sigma^2_a +\sigma^2_w} & \lambda_g &= \frac{N\sigma^2_g}{N\sigma^2_g +\sigma^2_w} 
+\end{align*}
+
 
 
 \section*{A Theoretical}
