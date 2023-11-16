@@ -478,7 +478,11 @@ the rates of convergence for these estimators are given in the following lemma:
 \end{lemma}
 Hence, a bootstrap procedure can use a consistent pre-test for the presence of cluster dependence in the \textbf{first moment}, with the model selectors 
 \begin{align*}
-    \hat{D}_a(\kappa) &\coloneq \mathbf{1} \left\{T\hat{\sigma}_a^2 \geq \kappa \right\} & \hat{D}_a(\kappa) &\coloneq \mathbf{1}\left\{N\hat{\sigma}_g^2 \geq \kappa \right\}
+    \hat{D}_a(\kappa) &\coloneq \mathbf{1} \left\{T\hat{\sigma}_a^2 \geq \kappa \right\} & \hat{D}_g(\kappa) &\coloneq \mathbf{1}\left\{N\hat{\sigma}_g^2 \geq \kappa \right\}
+\end{align*}
+$\forall \kappa \geq 0$. And for some $\kappa_a,\kappa_g$, let 
+\begin{align*}
+    \hat{\lambda}_a & \coloneq \frac{\hat{D}_a (\kappa_a)T\hat{\sigma}^2_a}{\hat{D}_a (\kappa_a)T\hat{\sigma}^2_a+\hat{\sigma}_w^2}
 \end{align*}
 
 
