@@ -476,7 +476,10 @@ the rates of convergence for these estimators are given in the following lemma:
     \end{align*}
     and there exist \textbf{no estimators} for $\sigma^2_a,\sigma^2_g,\sigma^2_w$ that converge at rates faster than these rates. Specifically, $\sigma^2_a$ can \textbf{NOT} be estimated at a rate faster than $T^{-1}$ even when $\sigma^2_a=0$\footnote{See the appendix of \citet{menzel2021bootstrap} for the proof.}.
 \end{lemma}
-Hence, a bootstrap procedure can use a consistent pre-test for the presence of cluster dependence in the \textbf{first moment}. Define the mode 
+Hence, a bootstrap procedure can use a consistent pre-test for the presence of cluster dependence in the \textbf{first moment}, with the model selectors 
+\begin{align*}
+    \hat{D}_a(\kappa) &\coloneq \mathbf{1} \left\{T\hat{\sigma}_a^2 \geq \kappa \right\} & \hat{D}_a(\kappa) &\coloneq \mathbf{1}\left\{N\hat{\sigma}_g^2 \geq \kappa \right\}
+\end{align*}
 
 
 \section*{A Theoretical}
