@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  16 NOV 2023 06:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  16 NOV 2023 06:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1268,10 +1268,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 500.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 500.
 Package rerunfilecheck Info: File `note5.out' has not changed.
 (rerunfilecheck)             Checksum: 6F5CBAC5ECE627E414E7C54BC6C47999;696.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 500.
  ) 
 Here is how much of TeX's memory you used:
