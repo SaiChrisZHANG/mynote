@@ -498,11 +498,13 @@ and estimate the asymptotic variance of the sample mean as
             a^*_{i,b} &\coloneq \hat{a}_{k^*_b(i)} & g^*_{t,b} &\coloneq \hat{g}_{s^*_b(t)}
         \end{align*}
         where $k^*_b(i)$ and $s^*_b(t)$ are i.i.d. draws from the discrete uniform distribution on the index sets $\left\{1,\cdots,N\right\}$ and $\left\{1,\cdots,T\right\}$ respectively
-        \item[\textbf{(b)}] Generate $$ w^*_{it,b} \coloneq \omega_{1i,b}\omega_{2t,b}\hat{w}_{k^*_b(i)s^*_b(t)} $$ where $\omega_{1i,b},\omega_{2t,b}$ are i.i.d. random variables with $\mathbb{E}\left[\omega\right]=0$, $\mathbb{E}\left[\omega^2\right] = \mathbb{E}\left[\omega^3\right] = 1$
-        \item[\textbf{(c)}] Generate a bootstrap sample of draws $$ Y^*_{it,b} = \bar{Y}_{NT} + \sqrt{\hat{\lambda}_a}a^*_{i,b} + \sqrt{\hat{\lambda}_g}g^*_{t,b} + w^*_{it,b} $$, and get the bootstrapped statistic $$ \bar{Y}^*_{NT,b} \coloneq \frac{1}{NT} \sum^N_{i=1}\sum^T_{t=1}Y^*_{it,b} $$ 
+        \item[\textbf{(b)}] Generate $$ w^*_{it,b} \coloneq \omega_{1i,b}\omega_{2t,b}\hat{w}_{k^*_b(i)s^*_b(t)} $$ where $\omega_{1i,b},\omega_{2t,b}$ are i.i.d. random variables with $\mathbb{E}\left[\omega\right]=0$, $\mathbb{E}\left[\omega^2\right] = \mathbb{E}\left[\omega^3\right] = 1$\footnote{Typical choices of $\omega_{1i,b},\omega_{2t,b}$ are the Gamma distribution (with shape $=4$, scale $=1/2$)}
+        \item[\textbf{(c)}] Generate a bootstrap sample of draws $$ Y^*_{it,b} = \bar{Y}_{NT} + \sqrt{\hat{\lambda}_a}a^*_{i,b} + \sqrt{\hat{\lambda}_g}g^*_{t,b} + w^*_{it,b} $$ and get the bootstrapped statistic $$ \bar{Y}^*_{NT,b} \coloneq \frac{1}{NT} \sum^N_{i=1}\sum^T_{t=1}Y^*_{it,b} $$ 
+        \item[\textbf{(d)}] Repeat this procedure, get a sample of $B$ replications and approximate the conditional distribution of $\bar{Y}^*_{NT}$ given the sample with the empirical distribution over the bootstrap draws $\bar{Y}^*_{NT,1},\cdots,\bar{Y}^*_{NT,B}$ 
     \end{itemize}
-    Repeat this procedure, get a sample of $B$ replications and approximate the conditional distribution of $\bar{Y}^*_{NT}$ given the sample with the empirical distribution over the bootstrap draws $\bar{Y}^*_{NT,1},\cdots,\bar{Y}^*_{NT,B}$
 \end{algorithm}
+For the \textbf{pivotal boostrap}, the last step uses instead the empirical distribution of the studentized bootstrap draws to approximate the distribution of $$ \sqrt{NT}\left(\bar{Y}^*_{NT}-\bar{Y}_{NT}\right)/\hat{S}^*_{NT,sel} $$
+where $\hat{S}^*_{NT,sel}$ is the bootstrap analog of the variance estimator $\hat{S}_{NT,sel}$.
 
 
 \section*{A Theoretical}
