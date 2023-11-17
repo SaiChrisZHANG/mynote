@@ -493,7 +493,11 @@ and estimate the asymptotic variance of the sample mean as
 \citet{menzel2021bootstrap} proposed the following resampling algorithm to estimate the sampling distribution for exhaustive sampling with cluster dependence in two dimensions 
 \begin{algorithm}{Resampling Algorithm}{resampling_menzel}
     \begin{itemize}
-        \item[\textbf{a}] 
+        \item[\textbf{a}] For the $b$-th bootstrap iteration, draw 
+        \begin{align*}
+            a^*_{i,b} &\coloneq \hat{a}_{k^*_b(i)} & g^*_{t,b} &\coloneq \hat{g}_{s^*_b(t)}
+        \end{align*}
+        where $k^*_b(i)$ and $s^*_b(t)$ are i.i.d. draws from the discrete uniform distribution on the index sets $\left\{1,\cdots,N\right\}$ and $\left\{1,\cdots,T\right\}$ respectively
     \end{itemize}
 \end{algorithm}
 
