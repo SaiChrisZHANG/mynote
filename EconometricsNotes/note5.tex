@@ -513,8 +513,9 @@ where $\hat{S}^*_{NT,sel}$ is the bootstrap analog of the variance estimator $\h
         \item \myhl[myred]{\textbf{BS-S}} (bootstrap \textit{with} model selection): apply steps (a) - (d), and set $\kappa_a,\kappa_g$ according to increasing sequences $\kappa_g,\kappa_a\rightarrow \infty$ s.t. $\kappa_a/T\rightarrow 0$ and $\kappa_g/N\rightarrow 0$
         \item \myhl[myred]{\textbf{BS-C}} (\textit{conservative} bootstrap): addition to the settings of \myhl[myred]{\textbf{BS-S}}, set 
         \begin{align*}
-            \hat{\lambda}_a \coloneq& \frac{\hat{q}_a}{\hat{q}_a+\hat{\sigma}^2_w}\frac{\hat{q}_a}{T\hat{\sigma}^2_a}
+            \hat{\lambda}_a \coloneq& \frac{\hat{q}_a}{\hat{q}_a+\hat{\sigma}^2_w}\frac{\hat{q}_a}{T\hat{\sigma}^2_a} & \hat{\lambda}_g &\coloneq \frac{\hat{q}_g}{\hat{q}_g+\hat{\sigma}^2_w}\frac{\hat{q}_g}{N\hat{\sigma}^2_g}
         \end{align*}
+        where 
     \end{itemize}
 \end{definition}
 
