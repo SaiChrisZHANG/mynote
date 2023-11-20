@@ -528,6 +528,11 @@ where $\hat{S}^*_{NT,sel}$ is the bootstrap analog of the variance estimator $\h
     \item {\textbf{BS-S}} (bootstrap \textit{without} model selection): \myhl[myblue]{\textbf{uniformly} consistent} if the limiting distribution is Gaussian
     \item {\textbf{BS-C}} (\textit{conservative} bootstrap): \myhl[myblue]{\textbf{consistent}} in the nondegerate case $\sigma^2_a + \sigma^2_g >0$, but asymptotically \myhl[myblue]{\textbf{conservative}} for the degenerate cases
 \end{itemize}
+To establish the consistency, define the \textbf{adaptive rate} $r_{NT}$ as \footnote{Following }
+\begin{equation*}
+    r^{-2}_{NT} \coloneq N^{-1}\sigma^2_a + T^{-1}\sigma^2_g + (NT)^{-1}\sigma^2_w \equiv \mathrm{Var}(\bar{Y}_{NT})
+\end{equation*}
+
 
 \section*{A Theoretical}
 \citet{chiang2023using}
