@@ -436,7 +436,7 @@ For the sample mean $\bar{Y}_{NT} - \mathbb{E}\left[Y_{it}\right]$, the limiting
     \item If $N=T$, within-cluster covariances are bounded from 0 in \textbf{at least one dimension}: $\sqrt{N}\left(\bar{Y}_{NT}-\mathbb{E}\left[Y_{it}\right]\right) \xrightarrow{d}\mathcal{N}\left(0,\sigma^2_a+\sigma^2_g\right)$
 \end{itemize}
 The bootstrap procedure should then be adaptive for both degenerate and non-degenerate cases. For the expansion
-\begin{align}
+\begin{align}\label{eq:sample_mean_decomp}
     Y_{it} =& \mathbb{E}\left[Y_{it}\right] + \left(\mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\right] \right) + \left( \mathbb{E}\left[Y_{it}\mid \gamma_t\right] - \mathbb{E}\left[Y_{it}\right] \right) \\ \nonumber
     &+ \left( \mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] - \mathbb{E}\left[Y_{it}\mid \alpha_i\right] - \mathbb{E}\left[Y_{it}\mid \gamma_t\right] + \mathbb{E}\left[Y_{it}\right]\right) + \left( Y_{it}-\mathbb{E}\left[Y_{it}\mid \alpha_i,\gamma_t\right] \right) \\ \nonumber
     \eqcolon & b+ a_i + g_t + v_{it} + e_{it}
@@ -528,7 +528,7 @@ where $\hat{S}^*_{NT,sel}$ is the bootstrap analog of the variance estimator $\h
     \item {\textbf{BS-S}} (bootstrap \textit{without} model selection): \myhl[myblue]{\textbf{uniformly} consistent} if the limiting distribution is Gaussian
     \item {\textbf{BS-C}} (\textit{conservative} bootstrap): \myhl[myblue]{\textbf{consistent}} in the nondegerate case $\sigma^2_a + \sigma^2_g >0$, but asymptotically \myhl[myblue]{\textbf{conservative}} for the degenerate cases
 \end{itemize}
-To establish the consistency, define the \textbf{adaptive rate} $r_{NT}$ as \footnote{Following }
+To establish the consistency, define the \textbf{adaptive rate} $r_{NT}$ as \footnote{Following Eq. ()}
 \begin{equation*}
     r^{-2}_{NT} \coloneq N^{-1}\sigma^2_a + T^{-1}\sigma^2_g + (NT)^{-1}\sigma^2_w \equiv \mathrm{Var}(\bar{Y}_{NT})
 \end{equation*}
