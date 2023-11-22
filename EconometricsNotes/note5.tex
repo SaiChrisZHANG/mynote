@@ -555,7 +555,14 @@ then for convergent sequences $\mathbf{q}_{NT},\mathbf{c}_{NT},\mathbf{c}$, deno
     q_a &\coloneq \lim_{N,T}q_{a,NT} & q_g &\coloneq \lim_{N,T}q_{g,NT} & q_e & \coloneq \lim_{N,T}q_{e,NT} & q_v & \coloneq \lim_{N,T} q_{v,NT} \\
     \mathbf{q} & \coloneq \lim_{N,T}\mathbf{q}_{NT} & \mathbf{c} & \coloneq \lim_{N,T}\mathbf{c}_{NT} & \varrho &\coloneq \lim_{N,T}\varrho_{NT}
 \end{align*}
-
+for any fixed values of $\mathbf{q}, \mathbf{c},\varrho\in[0,1]$, define 
+\begin{equation}\label{eq:convergence_law}
+    \mathcal{L}_0\left(\mathbf{q},\mathbf{c},\varrho\right) \coloneq \left(\sqrt{q_e}Z^e  + \sqrt{q_a}Z^a + \sqrt{q_g}Z^g\right) + \varrho V
+\end{equation}
+where 
+\begin{align*}
+    V \coloneq \sum^{\infty}_{k=1}c_k Z^{\psi}_k Z^{\phi}_k
+\end{align*}
 
 \section*{A Theoretical}
 \citet{chiang2023using}
