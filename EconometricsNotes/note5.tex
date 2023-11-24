@@ -533,7 +533,7 @@ To establish the consistency, define the \textbf{adaptive rate} $r_{NT}$ as\foot
     r^{-2}_{NT} \coloneq N^{-1}\sigma^2_a + T^{-1}\sigma^2_g + (NT)^{-1}\sigma^2_w \equiv \mathrm{Var}(\bar{Y}_{NT})
 \end{equation*}
 then consider the limiting distribution with the respective limits of normalized sequences:
-\begin{align}
+\begin{align}\label{eq:normalized_variances}
     q_{a,NT} &\coloneq r^2_{NT}N^{-1}\sigma^2_a & q_{g,NT} &\coloneq r^2_{NT}T^{-1}\sigma^2_g & q_{e,NT} &\coloneq r^2_{NT}(NT)^{-1}\sigma^2_e & q_{v,NT} &\coloneq r^2_{NT}(NT)^{-1}\sigma^2_v \\
     & & q_{ak,NT} & \coloneq r^2_{NT}N^{-1}\sigma_{ak} & q_{gk,NT} &\coloneq r^2_{NT}T^{-1}\sigma_{gk}\nonumber
 \end{align}
@@ -589,7 +589,9 @@ Lemma \ref{lemma:varest_stcha_order} establishes the consistency of the estimati
     \end{equation*}
     where
     \begin{itemize}
-        \item $\mathcal{F}$ is the class of functions $f(\alpha,\gamma,\epsilon)$ corresponding to distributions of $Y_{it}$ satisfying Assump. \ref{assump:integrability} and \ref{assump:restrictions_on_lowrankapprox}, for i.i.d. uniform $\alpha_i,\gamma_t,\epsilon_{it}$\footnote{From the Aldous-Hoover representation}
+        \item $\mathcal{F}$: the class of functions $f(\alpha,\gamma,\epsilon)$ corresponding to distributions of $Y_{it}$ satisfying Assump. \ref{assump:integrability} and \ref{assump:restrictions_on_lowrankapprox}, for i.i.d. uniform $\alpha_i,\gamma_t,\epsilon_{it}$\footnote{From the Aldous-Hoover representation}
+        \item $\mathbb{P}_{f,NT}\left(\cdot\right)$: probabilities for events w.r.t. an array of size $N,T$, generated according to $f$
+        \item $\mathbf{q}_{NT}(f) \coloneq \left(q_{e,NT}(f),q_{a,NT}(f),\cdots\right)$: the vector of normalized variances, 
     \end{itemize}
 \end{proposition}
 
