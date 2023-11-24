@@ -586,7 +586,11 @@ Lemma \ref{lemma:varest_stcha_order} establishes the consistency of the estimati
     Let $\hat{\mathcal{L}}_{NT}$ denote an arbitrary estimator for $\mathcal{L}_0$ based on an array of size $N,T$ form the unknown distribution, then $\exists \delta>0$ s.t. 
     \begin{equation*}
         \liminf_{N,T\rightarrow\infty} \sup_{f\in\mathcal{F}} \mathbb{P}_{f,NT} \left( \left\Vert \hat{\mathcal{L}}_{NT} - \mathcal{L}_0 \left(\mathbf{q}_{NT}(f),\mathbf{c}_{NT}(f),\varrho_{NT}(f)\right) \right\Vert _{\infty} > \delta \right) >0
-    \end{equation*}    
+    \end{equation*}
+    where
+    \begin{itemize}
+        \item $\mathcal{F}$ is the class of functions $f(\alpha,\gamma,\epsilon)$ corresponding to distributions of $Y_{it}$ satisfying Assump. \ref{assump:integrability} and \ref{assump:restrictions_on_lowrankapprox}, for i.i.d. uniform $\alpha_i,\gamma_t,\epsilon_{it}$\footnote{From the Aldous-Hoover representation}
+    \end{itemize}
 \end{proposition}
 
 
