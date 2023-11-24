@@ -580,8 +580,14 @@ Then, the CLT for sampling distribution is established as
     \end{itemize}
 \end{theorem}
 
-\paragraph*{Estimating the asymptotic distribution}
+\subparagraph*{Estimating the asymptotic distribution}
 Lemma \ref{lemma:varest_stcha_order} establishes the consistency of the estimation for the components vairances $\sigma^2_a,\sigma^2_g,\sigma^2_w$, but are they \textbf{fast} enough?
+\begin{proposition}{Estimability of Asymptotic Distribution}{estimability_asympdist}
+    Let $\hat{\mathcal{L}}_{NT}$ denote an arbitrary estimator for $\mathcal{L}_0$ based on an array of size $N,T$ form the unknown distribution, then $\exists \delta>0$ s.t. 
+    \begin{equation*}
+        \liminf_{N,T\rightarrow\infty} \sup_{f\in\mathcal{F}} \mathbb{P}_{f,NT} \left( \left\Vert \hat{\mathcal{L}}_{NT} - \mathcal{L}_0 \left(\mathbf{q}_{NT}(f),\mathbf{c}_{NT}(f),\varrho_{NT}(f)\right) \right\Vert _{\infty} > \delta \right) >0
+    \end{equation*}    
+\end{proposition}
 
 
 \section*{A Theoretical}
