@@ -594,18 +594,18 @@ Lemma \ref{lemma:varest_stcha_order} establishes the consistency of the estimati
         \item $\mathbf{q}_{NT}(f) \coloneq \left(q_{e,NT}(f),q_{a,NT}(f),\cdots\right)$: the vector of normalized variances from Eq. \ref{eq:normalized_variances}
     \end{itemize}
 \end{proposition}
-Proposition \ref{prop:estimability_asympdist} states that there exists \textbf{no estimator} for the asymptotic distribution that achieves consistency uniformly over the space of distributions satisfying Assumption \ref{assump:integrability} and \ref{assump:restrictions_on_lowrankapprox}: 
-\begin{itemize}
-    \item Under Theorem \ref{thm:clt_samp_dist}, the sample mean $\bar{Y}_{NT}$ converges to a continuous limiting distribution $\mathcal{L}_0(\mathbf{q,c},\varrho)$ along sequences $f_{NT}\in \mathcal{F}$ with proper limits for $\mathbf{q}_{NT},\mathbf{c}_{NT}$
-\end{itemize}
-
-Consider the counterexample for this impossibility: for the model $$Y_{it} = \alpha_i\gamma_t$$ where $\alpha_i,\gamma_t$ are mutually independent with i.i.d. factors $\alpha_i \sim \mathcal{N}(0,1),\gamma_t\sim\mathcal{N}(\mu_{\gamma},1)$. This model satisfies Assump.\ref{assump:integrability}, hence 
+Proposition \ref{prop:estimability_asympdist} states that there exists \textbf{no estimator}
+\footnote{Consider the counterexample for this impossibility: for the model $$Y_{it} = \alpha_i\gamma_t$$ where $\alpha_i,\gamma_t$ are mutually independent with i.i.d. factors $\alpha_i \sim \mathcal{N}(0,1),\gamma_t\sim\mathcal{N}(\mu_{\gamma},1)$. This model satisfies Assump.\ref{assump:integrability}, hence 
 Thm.\ref{thm:clt_samp_dist} gives convergence results. However, for this model 
 \begin{align*}
     a_i & \coloneq \mathbb{E}\left[Y_{it}\mid \alpha_i\right] = \alpha_i\mu_{\gamma} & g_t & \coloneq \mathbb{E}\left[Y_{it}\mid \gamma_t\right] = \gamma_t\mathbb{E}\left[\alpha_i\right]\equiv 0\\
     v_{it} & =\alpha_i(\gamma_t-\mu_{\gamma}) & \sigma^2_a&=\mu^2_{\gamma} & \sigma^2_v=1
 \end{align*}
-here, $\mu_{\gamma}$ can \textbf{not} be estimated from the original data at a rate faster than $T^{-1/2}$
+here, $\mu_{\gamma}$ can \textbf{not} be estimated from the original data at a rate faster than $T^{-1/2}$, the fastest possible rate at which $\mu_{\gamma}$ can be estimated from observing $\gamma_1,\cdots,\gamma_T$ directly. Therefore, no test can consistently distinguish the model $\mu_{\gamma}=0$ from a drifting sequence $\tilde{\mu}_{T,\gamma}\coloneq T^{-1/2}m_{\gamma}$.}
+for the asymptotic distribution that achieves consistency uniformly over the space of distributions satisfying Assumption \ref{assump:integrability} and \ref{assump:restrictions_on_lowrankapprox}: 
+\begin{itemize}
+    \item Under Theorem \ref{thm:clt_samp_dist}, the sample mean $\bar{Y}_{NT}$ converges to a continuous limiting distribution $\mathcal{L}_0(\mathbf{q,c},\varrho)$ along sequences $f_{NT}\in \mathcal{F}$ with proper limits for $\mathbf{q}_{NT},\mathbf{c}_{NT}$
+\end{itemize}
 
 
 \section*{A Theoretical}
