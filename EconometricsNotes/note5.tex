@@ -600,7 +600,10 @@ Proposition \ref{prop:estimability_asympdist} states that there exists \textbf{n
 \end{itemize}
 
 Consider the counterexample for this impossibility: for the model $$Y_{it} = \alpha_i\gamma_t$$ where $\alpha_i,\gamma_t$ are mutually independent with i.i.d. factors $\alpha_i \sim \mathcal{N}(0,1),\gamma_t\sim\mathcal{N}(\mu_{\gamma},1)$. This model satisfies Assump.\ref{assump:integrability}, hence 
-Thm.\ref{thm:clt_samp_dist} gives convergence results.
+Thm.\ref{thm:clt_samp_dist} gives convergence results. However, for this model 
+\begin{align*}
+    a_i & \coloneq \mathbb{E}\left[Y_{it}\mid \alpha_i\right] = \alpha_i\mu_{\gamma}
+\end{align*}
 
 \section*{A Theoretical}
 \citet{chiang2023using}
