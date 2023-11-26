@@ -601,7 +601,7 @@ Thm.\ref{thm:clt_samp_dist} gives convergence results. However, for this model
     a_i & \coloneq \mathbb{E}\left[Y_{it}\mid \alpha_i\right] = \alpha_i\mu_{\gamma} & g_t & \coloneq \mathbb{E}\left[Y_{it}\mid \gamma_t\right] = \gamma_t\mathbb{E}\left[\alpha_i\right]\equiv 0\\
     v_{it} & =\alpha_i(\gamma_t-\mu_{\gamma}) & \sigma^2_a&=\mu^2_{\gamma} & \sigma^2_v=1
 \end{align*}
-here, $\mu_{\gamma}$ can \textbf{not} be estimated from the original data at a rate faster than $T^{-1/2}$, the fastest possible rate at which $\mu_{\gamma}$ can be estimated from observing $\gamma_1,\cdots,\gamma_T$ directly. Therefore, no test can consistently distinguish the model $\mu_{\gamma}=0$ from a drifting sequence $\tilde{\mu}_{T,\gamma}\coloneq T^{-1/2}m_{\gamma}$.}
+here, $\mu_{\gamma}$ can \textbf{not} be estimated from the original data at a rate faster than $T^{-1/2}$, the fastest possible rate at which $\mu_{\gamma}$ can be estimated from observing $\gamma_1,\cdots,\gamma_T$ directly. Therefore, no test can consistently distinguish the model $\mu_{\gamma}=0$ (asymptotic variance $\sigma^2_v$) from a drifting sequence $\tilde{\mu}_{T,\gamma}\coloneq T^{-1/2}m_{\gamma}$ (asymptotic variance $m^2_{\gamma}+\sigma^2_v$).}
 for the asymptotic distribution that achieves consistency uniformly over the space of distributions satisfying Assumption \ref{assump:integrability} and \ref{assump:restrictions_on_lowrankapprox}: 
 \begin{itemize}
     \item Under Theorem \ref{thm:clt_samp_dist}, the sample mean $\bar{Y}_{NT}$ converges to a continuous limiting distribution $\mathcal{L}_0(\mathbf{q,c},\varrho)$ along sequences $f_{NT}\in \mathcal{F}$ with proper limits for $\mathbf{q}_{NT},\mathbf{c}_{NT}$
