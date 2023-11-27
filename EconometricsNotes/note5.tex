@@ -486,7 +486,7 @@ $\forall \kappa \geq 0$. And for some $\kappa_a,\kappa_g$, let
 \end{align*}
 and estimate the asymptotic variance of the sample mean as 
 \begin{equation}\label{eq:asymp_variance}
-    \hat{S}_{NT,sel}\coloneq \hat{D}_a(\kappa_a)T\hat{\sigma}^2_a + \hat{D}_g (\kappa_g) N\hat{\sigma}^2_g + \hat{\sigma}^2_w
+    \hat{S}^2_{NT,sel}\coloneq \hat{D}_a(\kappa_a)T\hat{\sigma}^2_a + \hat{D}_g (\kappa_g) N\hat{\sigma}^2_g + \hat{\sigma}^2_w
 \end{equation}
 
 \paragraph*{Bootstrap procedures}
@@ -608,7 +608,10 @@ for the asymptotic distribution that achieves consistency uniformly over the spa
 \end{itemize}
 
 \subparagraph*{Bootstrap Consistency}
-Consider the bootstrap analog of $\hat{S}_{NT,sel}$
+Consider the bootstrap analog of $\hat{S}_{NT,sel}$ in Eq. \ref{eq:asymp_variance}
+\begin{equation*}
+    \hat{S}^{2*}_{NT,sel}\coloneq \hat{D}_a(\kappa_a)T\hat{\sigma}^2_a + \hat{D}_g (\kappa_g) N\hat{\sigma}^2_g + \hat{\sigma}^2_w
+\end{equation*}
 
 \section*{A Theoretical}
 \citet{chiang2023using}
