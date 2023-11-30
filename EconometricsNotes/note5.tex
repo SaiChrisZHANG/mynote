@@ -621,7 +621,7 @@ And we can establish the consistency
 \begin{theorem}{Bootstrap Consistency}{bootstrap_consistency}
     Under Assumption \ref{assump:integrability}, 
     \begin{itemize}
-        \item the bootstrap \myhl[myblue]{\textbf{with model selection}} satisfies 
+        \item[(a)] the bootstrap \myhl[myblue]{\textbf{with model selection}} satisfies 
         \begin{equation}\label{eq:bsconsistency_clt}
             \left\Vert \mathbb{P}^*_{NT}\left( r_{NT} \left(\bar{Y}^*_{NT}-\bar{Y}_{NT}\right) \right) - \mathbb{P}_{NT}\left( r_{NT} \left(\bar{Y}_{NT}-\mathbb{E}\left[\bar{Y}_{it}\right]\right) \right) \right\Vert _{\infty} \xrightarrow{\text{a.s.}} 0
         \end{equation}
@@ -630,8 +630,8 @@ And we can establish the consistency
             \left\Vert  \mathbb{P}^*_{NT} \left( \sqrt{NT} \frac{\bar{Y}^*_{NT}-\bar{Y}_{NT}}{\hat{S}^*_{NT,sel}} \right) - \mathbb{P}_{NT} \left( \sqrt{NT} \frac{\bar{Y}_{NT}-\mathbb{E}\left[Y_{it}\right]}{\hat{S}_{NT,sel}} \right)   \right\Vert _{\infty} \xrightarrow{\text{a.s.}} 0
         \end{equation}
         \textbf{pointwise} for any fixed $\sigma^2_a,\sigma^2_g,\sigma^2_e,\sigma^2_v$
-        \item the bootstrap \myhl[myblue]{\textbf{without model selection}} satisfies Eq.\ref{eq:bsconsistency_clt} and Eq.\ref{eq:bsconsistency_piv} \textbf{uniformly} if $q_v=0$
-        \item the \myhl[myblue]{\textbf{conservative}} bootstrap satisfies
+        \item[(b)] the bootstrap \myhl[myblue]{\textbf{without model selection}} satisfies Eq.\ref{eq:bsconsistency_clt} and Eq.\ref{eq:bsconsistency_piv} \textbf{uniformly} if $q_v=0$
+        \item[(c)] the \myhl[myblue]{\textbf{conservative}} bootstrap satisfies
         \begin{equation}\label{eq:bscons_consistency_clt}
             \left\Vert \mathbb{P}^*_{NT}\left( r_{NT} \left(\bar{Y}^*_{NT}-\bar{Y}_{NT}\right) \right) - \mathcal{L}_0\left(\bar{\mathbf{q}},\mathbf{c},\varrho\right) \right\Vert _{\infty} \xrightarrow{\text{p}} 0
         \end{equation}
@@ -642,6 +642,8 @@ And we can establish the consistency
         uniformly over the \textbf{entire parameter space}, where $\bar{q}=\left(q_c,\bar{q}_a,\bar{q}_g,0,0,\cdots\right)$, with $\bar{q}_a\coloneq \max\left\{\kappa_a/T,q_a\right\}$ and $\bar{q}_g \coloneq \max\left\{\kappa_g/T,q_g\right\}$, which increases as $N,T\rightarrow \infty$.
     \end{itemize}
 \end{theorem}
+
+
 
 \section*{A Theoretical}
 \citet{chiang2023using}
