@@ -667,7 +667,15 @@ Consider the linear projection model
 \begin{equation}\label{eq:menzel_linearmodel}
     y_{it} = \mathbf{x}'_{it}\boldsymbol{\beta} + u_{it}
 \end{equation}
-where the dependent variable $y_{it}$ and the vector of $k$ regressors $\mathbb{x}_{it}\in \mathbb{R}^k$
+with the dependent variable $y_{it}$ and the vector of $k$ regressors $\mathbf{x}_{it}\in \mathbb{R}^k$. Consider LS estimator 
+\begin{equation*}
+    \hat{\boldsymbol{\beta}}_{LS} \coloneq \left(\mathbf{X'X}\right)^{-1}\mathbf{X'y} = \boldsymbol{\beta} + \left(\mathbf{X'X}\right)^{-1}\left(\frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}\mathbf{x}_{it}u_{it}\right)
+\end{equation*}
+assume $\left(\mathbf{x}_{it}u_{it}\right)_{i,t}$ constitute a dissociated, separately exchangeable array, then we can have the Aldous-Hoover representation 
+\begin{equation*}
+    \mathbb{z}_{it} \coloneq \mathbf{x}_{it}u_{it} = f\left(\alpha_i,\gamma_t,\epsilon_{it}\right)
+\end{equation*}
+then denote
 
 \section*{A Theoretical}
 \citet{chiang2023using}
