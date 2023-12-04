@@ -684,7 +684,7 @@ then denote
 and the unconditional component variances as $\sigma^2_{al},\sigma^2_{gl},\sigma^2_{vl},\sigma^2_{el},\sigma^2_{wl}=\sigma^2_{vl} + \sigma^2_{el}$. The empirical analog of this decomposition is given by 
 \begin{align*}
     \hat{\mathbf{a}}_i & \coloneq \frac{1}{T}\sum^T_{t=1}\mathbf{x}_{it}\hat{u}_{it} & \hat{\mathbf{g}_{t}} &\coloneq \frac{1}{N}\sum^N_{i=1}\mathbf{x}_{it}\hat{u}_{it} \\
-    \hat{\mathbf{w}}_{it}
+    \hat{\mathbf{w}}_{it} & \coloneq \mathbf{x}_{it}\hat{u}_{it} - \hat{\mathbf{a}}_i -\hat{\mathbf{g}}_t
 \end{align*}
 
 
