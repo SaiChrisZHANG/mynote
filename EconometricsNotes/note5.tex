@@ -686,6 +686,11 @@ and the unconditional component variances as $\sigma^2_{al},\sigma^2_{gl},\sigma
     \hat{\mathbf{a}}_i & \coloneq \frac{1}{T}\sum^T_{t=1}\mathbf{x}_{it}\hat{u}_{it} & \hat{\mathbf{g}_{t}} &\coloneq \frac{1}{N}\sum^N_{i=1}\mathbf{x}_{it}\hat{u}_{it} \\
     \hat{\mathbf{w}}_{it} & \coloneq \mathbf{x}_{it}\hat{u}_{it} - \hat{\mathbf{a}}_i -\hat{\mathbf{g}}_t
 \end{align*}
+for each $l=1,\cdots,k$, then construct
+\subparagraph*{Bootstrap procedure for regression}
+\begin{itemize}
+    \item For the $b$th bootstrap iteration, draw $\mathbf{a}^*_{i,b}\coloneq \hat{\mathbf{a}}_{k^*_b(i)}$ and $\mathbf{g}^*_{t,b}\coloneq \hat{\mathbf{g}}_{s^*_b(i)}$ where $k^*_b(i)$ and $s^*_b(t)$ are i.i.d. draws from the discrete uniform distribution on the index sets $\left\{1,\cdots,N\right\}$ and $\left\{1,\cdots,T\right\}$, respectively
+\end{itemize}
 
 
 \section*{A Theoretical}
