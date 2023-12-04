@@ -678,8 +678,10 @@ assume $\left(\mathbf{x}_{it}u_{it}\right)_{i,t}$ constitute a dissociated, sepa
 then denote
 \begin{align*}
     \mathbf{a}_i & \coloneq \mathbb{E}\left[\mathbf{x}_{it}u_{it}\mid\alpha_i \right] & \mathbf{g}_t & \coloneq \mathbb{E}\left[\mathbf{x}_{it}u_{it}\mid\gamma_t\right] \\
-    \mathbf{v}_{it} &\coloneq \mathbb{E}\left[\mathbf{x}_{it}u_{it}\mid\alpha_i,\gamma_t\right] - \mathbf{a}_i - \mathbf{g}_t & \mathbf{e}_{it} &\coloneq \mathbf{x}_{it}u_{it} - \mathbb{E}\left[\mathbf{x}_{it}u_{it}\mid \alpha_i,\gamma_t\right]
+    \mathbf{v}_{it} &\coloneq \mathbb{E}\left[\mathbf{x}_{it}u_{it}\mid\alpha_i,\gamma_t\right] - \mathbf{a}_i - \mathbf{g}_t & \mathbf{e}_{it} &\coloneq \mathbf{x}_{it}u_{it} - \mathbb{E}\left[\mathbf{x}_{it}u_{it}\mid \alpha_i,\gamma_t\right] \\
+    \mathbf{w}_{it} & \coloneq \mathbf{x}_{it}u_{it} - \mathbf{a}_i -\mathbf{g}_t = \mathbf{v}_{it} + \mathbf{e}_{it}
 \end{align*}
+
 
 \section*{A Theoretical}
 \citet{chiang2023using}
