@@ -693,8 +693,9 @@ for each $l=1,\cdots,k$, then construct
     \item generate $\mathbf{w}^*_{it,b} \coloneq \omega_{1i,b}\omega_{2t,b} \hat{\mathbf{w}}_{k^*_b(i)s^*_b(i)}$, where $\omega_{1i,b},\omega_{2t,b}$ are i.i.d. random variables with $\mathbb{E}\left[\omega\right] =0$, $\mathbb{E}[\omega^2]=\mathbb{E}[\omega^3]=1$
     \item simulate values of $\mathbf{z}^*_{it,b}=\left(z^*_{it1,b},\cdots,z^*_{itk,b}\right)'$, where the $l$th component is given by $$ z^*_{itl,b} \coloneq \sqrt{\hat{\lambda}_{al}}a^*_{il,b}+\sqrt{\hat{\lambda}_{gl}}g^*_{tl,b} +w^*_{itl,b}$$
     where the scalars are $\hat{\lambda}_{al}\coloneq \frac{\hat{D}_{al}(\kappa_a)T\hat{\sigma}^2_{al}}{\hat{D}_{al}(\kappa_a)T\hat{\sigma}^2_{al}+\hat{\sigma}^2_{wl}}$ and $\hat{\lambda}_{gl}\coloneq \frac{\hat{D}_{gl}(\kappa_g)N\hat{\sigma}^2_{gl}}{\hat{D}_{gl}(\kappa_g)N\hat{\sigma}^2_{gl}+\hat{\sigma}^2_{wl}}$
-    \item then compute $$ \hat{\boldsymbol{\beta}}^*_{LS,b} = \hat{\boldsymbol{\beta}}_{LS} + \left(\mathbf{X'X}\right)^{-1}\left( \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}\mathbf{z}^*_{it,b} \right) $$ for each bootstrap sample
+    \item then compute $$ \hat{\boldsymbol{\beta}}^*_{LS,b} = \hat{\boldsymbol{\beta}}_{LS} + \left(\mathbf{X'X}\right)^{-1}\left( \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}\mathbf{z}^*_{it,b} \right) $$ for each bootstrap sample.
 \end{itemize}
+Next, we can approximate the asymptotic distribution of $r_{NT}\left(\hat{\boldsymbol{\beta}}_{LS}-\boldsymbol{\beta}\right)$ with the simulated distribution of $r_{NT}\left(\hat{\boldsymbol{\beta}}^*_{LS,b}-\hat{\boldsymbol{\beta}}_{LS}\right)$.
 
 
 \section*{A Theoretical}
