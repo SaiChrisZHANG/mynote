@@ -692,7 +692,7 @@ for each $l=1,\cdots,k$, then construct
     \item for the $b$th bootstrap iteration, draw $\mathbf{a}^*_{i,b}\coloneq \hat{\mathbf{a}}_{k^*_b(i)}$ and $\mathbf{g}^*_{t,b}\coloneq \hat{\mathbf{g}}_{s^*_b(i)}$ where $k^*_b(i)$ and $s^*_b(t)$ are i.i.d. draws from the discrete uniform distribution on the index sets $\left\{1,\cdots,N\right\}$ and $\left\{1,\cdots,T\right\}$, respectively
     \item generate $\mathbf{w}^*_{it,b} \coloneq \omega_{1i,b}\omega_{2t,b} \hat{\mathbf{w}}_{k^*_b(i)s^*_b(i)}$, where $\omega_{1i,b},\omega_{2t,b}$ are i.i.d. random variables with $\mathbb{E}\left[\omega\right] =0$, $\mathbb{E}[\omega^2]=\mathbb{E}[\omega^3]=1$
     \item simulate values of $\mathbf{z}^*_{it,b}=\left(z^*_{it1,b},\cdots,z^*_{itk,b}\right)'$, where the $l$th component is given by $$ z^*_{itl,b} \coloneq \sqrt{\hat{\lambda}_{al}}a^*_{il,b}+\sqrt{\hat{\lambda}_{gl}}g^*_{tl,b} +w^*_{itl,b}$$
-    where the scalars 
+    where the scalars $\hat{\lambda}_{al}\coloneq \frac{\hat{D}_{al}(\kappa_a)T\hat{\sigma}^2_{al}}{\hat{D}_{al}(\kappa_a)T\hat{\sigma}^2_{al}+\hat{\sigma}^2_{wl}}$
     \item then compute $$ \hat{\boldsymbol{\beta}}^*_{LS,b} = \hat{\boldsymbol{\beta}}_{LS} + \left(\mathbf{X'X}\right)^{-1}\left( \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}\mathbf{z}^*_{it,b} \right) $$ for each bootstrap sample
 \end{itemize}
 
