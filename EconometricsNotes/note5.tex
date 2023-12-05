@@ -696,6 +696,9 @@ for each $l=1,\cdots,k$, then construct
     \item then compute $$ \hat{\boldsymbol{\beta}}^*_{LS,b} = \hat{\boldsymbol{\beta}}_{LS} + \left(\mathbf{X'X}\right)^{-1}\left( \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}\mathbf{z}^*_{it,b} \right) $$ for each bootstrap sample.
 \end{itemize}
 Next, we can approximate the asymptotic distribution of $r_{NT}\left(\hat{\boldsymbol{\beta}}_{LS}-\boldsymbol{\beta}\right)$ with the simulated distribution of $r_{NT}\left(\hat{\boldsymbol{\beta}}^*_{LS,b}-\hat{\boldsymbol{\beta}}_{LS}\right)$.
+\begin{assumption}{Regression}{bootstrap_regression}
+    Assume the model in Eq.(\ref{eq:menzel_linearmodel}) with $\mathbf{x}_{it}u_{it}=f(\alpha_i,\gamma_t,\epsilon_{it})$ and $\alpha_i,\gamma_t,\epsilon_{it}$ are i.i.d. uniform on $[0,1]$.
+\end{assumption}
 
 
 \section*{A Theoretical}
