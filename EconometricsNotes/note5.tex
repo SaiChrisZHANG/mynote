@@ -697,7 +697,11 @@ for each $l=1,\cdots,k$, then construct
 \end{itemize}
 Next, we can approximate the asymptotic distribution of $r_{NT}\left(\hat{\boldsymbol{\beta}}_{LS}-\boldsymbol{\beta}\right)$ with the simulated distribution of $r_{NT}\left(\hat{\boldsymbol{\beta}}^*_{LS,b}-\hat{\boldsymbol{\beta}}_{LS}\right)$.
 \begin{assumption}{Regression}{bootstrap_regression}
-    Assume the model in Eq.(\ref{eq:menzel_linearmodel}) with $\mathbf{x}_{it}u_{it}=f(\alpha_i,\gamma_t,\epsilon_{it})$ and $\alpha_i,\gamma_t,\epsilon_{it}$ are i.i.d. uniform on $[0,1]$.
+    Assume the model in Eq.(\ref{eq:menzel_linearmodel}) with $\mathbf{x}_{it}u_{it}=f(\alpha_i,\gamma_t,\epsilon_{it})$ and $\alpha_i,\gamma_t,\epsilon_{it}$ are i.i.d. uniform on $[0,1]$. And 
+    \begin{itemize}
+        \item[(a)] $\mathbf{X}$ has full column rank
+        \item[(b)] $\forall l=1,\cdots,k$ and some $\delta>0$, the $(4+\delta)$th absolute moments of $x_{itl}$ are bounded, and the $(4+\delta)$th conditional moments of each component $\frac{a_{il}}{\sqrt{\mathrm{Var}\left(a_{il}\mid\mathbf{X}\right)}}$, $\frac{g_{tl}}{\sqrt{\mathrm{Var}\left(g_{tl}\mid\mathbf{X}\right)}}$, $\frac{v_{itl}}{\sqrt{\mathrm{Var}\left(v_{itl}\mid\mathbf{X}\right)}}$ and $\frac{e_{itl}}{\sqrt{\mathrm{Var}\left(e_{itl}\mid\mathbf{X}\right)}}$ given $\mathbf{X}$ are bounded whenever the conditional variance of either component is strictly positive.
+    \end{itemize}
 \end{assumption}
 
 

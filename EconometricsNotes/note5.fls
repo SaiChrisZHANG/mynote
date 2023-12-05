@@ -582,6 +582,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplsym.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxsym.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsym.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/txfonts/txsya.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplexx.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxexx.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.bbl
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.bbl
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.aux
@@ -608,5 +612,3 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb
