@@ -710,7 +710,8 @@ then analogous to the sample mean inference, we have
     Under Assumption \ref{assump:bootstrap_regression}, then 
     \begin{itemize}
         \item $\hat{\boldsymbol{\beta}}_{LS}$ is consistent at the $r_{NT}$ rate 
-        \item The bootstrap with model selection satisfies Eq.(\ref{eq:bsconsistency_clt}) and (\ref{eq:bsconsistency_piv}) pointwise as $\sigma^2_{al},\sigma^2_{gl},\sigma^2_{el},\sigma^2_{vl}$
+        \item The bootstrap with model selection satisfies Eq.(\ref{eq:bsconsistency_clt}) and (\ref{eq:bsconsistency_piv}) pointwise as $\sigma^2_{al},\sigma^2_{gl},\sigma^2_{el},\sigma^2_{vl}$ are held fixed for all $l=1,\cdots,k$
+        \item The bootstrap without mode selection satisfies Eq.(\ref{eq:bsconsistency_clt}) and (\ref{eq:bsconsistency_piv}) uniformly if $q_{vl}=0$ for all $l=1,\cdots,k$
     \end{itemize}
 \end{proposition}
 
