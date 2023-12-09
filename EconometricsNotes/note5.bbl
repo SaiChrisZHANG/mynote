@@ -17,10 +17,10 @@ A~Colin Cameron, Jonah~B Gelbach, and Douglas~L Miller.
 \newblock \emph{Journal of Business \& Economic Statistics}, 29\penalty0
   (2):\penalty0 238--249, 2011.
 
-\bibitem[Chiang and Sasaki(2023)]{chiang2023using}
-Harold~D Chiang and Yuya Sasaki.
-\newblock On using the two-way cluster-robust standard errors.
-\newblock \emph{arXiv preprint arXiv:2301.13775}, 2023.
+\bibitem[Graham(2020)]{graham2020sparse}
+Bryan~S Graham.
+\newblock Sparse network asymptotics for logistic regression.
+\newblock Technical report, National Bureau of Economic Research, 2020.
 
 \bibitem[Hansen(2007)]{hansen2007asymptotic}
 Christian~B Hansen.
