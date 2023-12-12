@@ -600,6 +600,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplexx.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxexx.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxexx.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplsyc.vf
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newtx/ntxsyc.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newtx/ntxsyc.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/newpx/zplbmi.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/pxfonts/pxbmi.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/pxfonts/pxbmi.vf
