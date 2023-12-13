@@ -731,6 +731,10 @@ Consider a consumer-product problem, where
     \item $Y_{ij}=1$ if $i$ purchases $j$, $Y_{ij}=0$ otherwise
     \item a vector of observed consumer attributes $\mathbf{W}_i\in\mathbb{W}$, product attributes $\mathbf{X}_i\in\mathbb{X}$
 \end{itemize}
+The conditional probability that consumer $i$ buys product $j$ is 
+\begin{equation*}
+    \Pr\left(Y_{ij}=1\mid \mathbf{W}_i,\mathbf{X}_j \right) = g_n(\mathbf{W}_i,\mathbf{X}_j)
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
