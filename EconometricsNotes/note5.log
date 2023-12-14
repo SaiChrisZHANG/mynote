@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  14 DEC 2023 10:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  14 DEC 2023 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1119,7 +1119,6 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
- (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.out) (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.out)
 \@outlinefile=\write6
 \openout6 = `note5.out'.
 
@@ -1207,18 +1206,62 @@ File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 12.
- [1
+
+
+Package natbib Warning: Citation `kloek1981ols' on page 5-1 undefined on input line 43.
+
+
+Package natbib Warning: Citation `scott1982effect' on page 5-1 undefined on input line 43.
+
+
+Package natbib Warning: Citation `moulton1990illustration' on page 5-1 undefined on input line 43.
+
+[1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `eq:oneway_clurob' on page 5-2 undefined on input line 51.
+
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 7.3pt on input line 62.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 5.5pt on input line 62.
+
+Package natbib Warning: Citation `liang1986longitudinal' on page 5-2 undefined on input line 76.
+
+
+Package natbib Warning: Citation `arellano1987computing' on page 5-2 undefined on input line 77.
+
+
+Package natbib Warning: Citation `hansen2007asymptotic' on page 5-2 undefined on input line 78.
+
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
 (Font)              scaled to size 10.0pt on input line 85.
- [2] [3]
+[2]
+
+LaTeX Warning: Reference `eq:onewayclu_centralmat' on page 5-3 undefined on input line 92.
+
+
+LaTeX Warning: Reference `eq:twowayclu_decomp' on page 5-3 undefined on input line 120.
+
+[3]
+
+Package natbib Warning: Citation `white1980heteroskedasticity' on page 5-4 undefined on input line 129.
+
+
+LaTeX Warning: Reference `eq:oneway_clurob' on page 5-4 undefined on input line 130.
+
+
+LaTeX Warning: Reference `eq:twowayclu_centmat' on page 5-4 undefined on input line 130.
+
+
+LaTeX Warning: Reference `eq:twowayclu_decomp' on page 5-4 undefined on input line 135.
+
+
+Package natbib Warning: Citation `cameron2011robust' on page 5-4 undefined on input line 148.
+
 LaTeX Font Info:    Try loading font information for T1+zplsups on input line 148.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zplsups.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zplsups.fd
 File: t1zplsups.fd 2015/01/17 v1.0
 )
 LaTeX Font Info:    Font shape `T1/zplsups/m/n' will be
@@ -1227,65 +1270,53 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 148.
 LaTeX Font Info:    Font shape `T1/zplsups/m/n' will be
 (Font)              scaled to size 8.0pt on input line 148.
- [4]
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <8> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 192.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 148.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 192.
+(Font)              scaled to size 8.0pt on input line 148.
+
+
+Package natbib Warning: Citation `thompson2011simple' on page 5-4 undefined on input line 148.
+
+[4]
+
+LaTeX Warning: Reference `eq:twowayclu_centmat' on page 5-5 undefined on input line 185.
+
+
+Package natbib Warning: Citation `cameron2011robust' on page 5-5 undefined on input line 193.
+
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 195.
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <12> not available
 (Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 195.
- [5] [6] [7]
+[5]
+
+LaTeX Warning: Reference `eq:centermat_multiclu' on page 5-6 undefined on input line 218.
+
+
+Package natbib Warning: Citation `cameron2011robust' on page 5-6 undefined on input line 226.
+
+
+Package natbib Warning: Citation `menzel2021bootstrap' on page 5-6 undefined on input line 240.
+
+[6] [7]
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 298.
  [8]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 327.
- [9] [10] [11]
-LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 429.
-LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 429.
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 429.
-LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
-(Font)              scaled to size 6.2pt on input line 429.
- [12]
-LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 7.3pt on input line 477.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 477.
-LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 6.2pt on input line 477.
- [13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14] [15] [16] [17] [18] [19] [20] (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.bbl) [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 750.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 750.
- (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 750.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 750.
-Package rerunfilecheck Info: File `note5.out' has not changed.
-(rerunfilecheck)             Checksum: 3D7E5DF384136F99BC6EEF21CDE5F18D;916.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 750.
- ) 
-Here is how much of TeX's memory you used:
- 36762 strings out of 492649
- 863859 string characters out of 6129623
- 1072613 words of memory out of 5000000
- 39811 multiletter control sequences out of 15000+600000
- 122787 words of font info for 203 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 80i,18n,136p,1070b,1216s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxbmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexas.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.pdf (21 pages, 257934 bytes).
-PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
- 100 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+LaTeX Warning: Reference `assump:sep_exchange' on page 5-9 undefined on input line 329.
+
+[9] [10]
+
+LaTeX Warning: Reference `assump:integrability' on page 5-11 undefined on input line 390.
+
+
+LaTeX Warning: Reference `eq:low-rank_approximation' on page 5-11 undefined on input line 409.
+
+
+LaTeX Warning: Reference `eq:low-rank_approximation' on page 5-11 
