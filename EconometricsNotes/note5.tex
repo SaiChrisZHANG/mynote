@@ -737,6 +737,12 @@ The conditional probability that consumer $i$ buys product $j$ is
 \end{equation*}
 where $g_n\colon \mathbb{W\times X} \rightarrow\left\{0,1\right\}$. \citet{graham2020sparse} consider dyadic dependence, which is relevant to the twoway clustering literature.
 
+\paragraph*{Dyadic dependence}
+Consider predicting whether randomly sampled consumer $i$ purchases product $j$, for $k \neq i$, 
+$$
+\Pr \left(Y_{ij}=1 \mid Y_{kj}=1\right) > \Pr \left( Y_{ij}=1 \right)
+$$
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
