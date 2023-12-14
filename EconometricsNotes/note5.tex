@@ -742,7 +742,10 @@ Consider predicting whether randomly sampled consumer $i$ purchases product $j$,
 $$
 \Pr \left(Y_{ij}=1 \mid Y_{kj}=1\right) > \Pr \left( Y_{ij}=1 \right)
 $$
-that is, $Y_{i_1j_1}$ and $Y_{i_2j_2}$ will covary whenever $j_1=j_2$. Similarly, it could be that $Y_{i_1j_1}$ and $Y_{i_2j_2}$ covary whenever $i_1=i_2$. This covariancce between $Y_{i_1j_1}$ and $Y_{i_2j_2}$ (when $i_1=i_2$ or $j_1=j_2$) may hold even conditional on attributes of both sides $\mathbf{W}_i,\mathbf{X}_j$.
+that is, $Y_{i_1j_1}$ and $Y_{i_2j_2}$ will covary whenever $j_1=j_2$. Similarly, it could be that $Y_{i_1j_1}$ and $Y_{i_2j_2}$ covary whenever $i_1=i_2$. This covariancce between $Y_{i_1j_1}$ and $Y_{i_2j_2}$ (when $i_1=i_2$ or $j_1=j_2$) may hold even conditional on attributes of both sides $\mathbf{W}_i,\mathbf{X}_j$, that is 
+$$
+\Pr \left(Y_{ij}=1\mid Y_{kj}=1,\mathbf{W}_i,\mathbf{W}_k,\mathbf{X}_j\right) \neq \Pr \left(Y_{ij}=1 \mid \mathbf{W}_i,\mathbf{X}_j\right)
+$$
 
 \newpage
 \bibliographystyle{plainnat}
