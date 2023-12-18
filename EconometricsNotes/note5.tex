@@ -719,44 +719,6 @@ then analogous to the sample mean inference, we have
 \subparagraph*{Asymptotic Gaussian of the LS estimator} for conditional asymptotic normality of bilinear forms $V_k\coloneq \mathbf{Z}_{1k}'\mathbf{XZ}_{2k}$ of random vectors $\mathbf{Z}_{1k},\mathbf{Z}_{2k}$ given the matrix $\mathbf{X}$. 
 Under the conditions of this paper, $V_k$ is asymptotically Gaussian if $\ddot{\mathbf{x}}_{it},\ddot{\mathbf{x}}_{js}$ are mean-independent for any $(j,s)\neq (i,t)$\footnote{For difference-in-differences designs with a regressor $x_{it1}\coloneq\mathbf{1}\left\{t\geq T_i\right\}$ for unit-specific intervention date $T_i$, or when $\mathbf{x}_{it}\coloneq\mathbf{x}\left(\boldsymbol{\xi}_i,\boldsymbol{\zeta}_t\right)$ are a non-additive function of row- and column-level attributes $\boldsymbol{\xi}_i$ and $\boldsymbol{\zeta}_t$, respectively, these conditions need not hold in general.}.
 
-\subsection{Sparce Network}
-One case where the Gaussianity holds under the standard twoway clustering is the \textit{sparse network} asymptotics considered in \citet{bickel2011method}. \citet{graham2020sparse} studied the two-way clustering under this case.
-
-\subsubsection{Set up}
-Consider a consumer-product problem, where
-\begin{itemize}
-    \item $i=1,\cdots,N$ index a random sample of consumers
-    \item $j=1,\cdots,M$ index a random sample of products
-    \item total number of sampled consumers and products $n \coloneqq M+N$
-    \item $Y_{ij}=1$ if $i$ purchases $j$, $Y_{ij}=0$ otherwise
-    \item a vector of observed consumer attributes $\mathbf{W}_i\in\mathbb{W}$, product attributes $\mathbf{X}_i\in\mathbb{X}$
-\end{itemize}
-The conditional probability that consumer $i$ buys product $j$ is 
-\begin{equation*}
-    \Pr\left(Y_{ij}=1\mid \mathbf{W}_i,\mathbf{X}_j \right) = g_n(\mathbf{W}_i,\mathbf{X}_j)
-\end{equation*}
-where $g_n\colon \mathbb{W\times X} \rightarrow\left\{0,1\right\}$. \citet{graham2020sparse} consider dyadic dependence, which is relevant to the twoway clustering literature.
-
-\paragraph*{Dyadic dependence}
-Consider predicting whether randomly sampled consumer $i$ purchases product $j$, for $k \neq i$, 
-$$
-\Pr \left(Y_{ij}=1 \mid Y_{kj}=1\right) > \Pr \left( Y_{ij}=1 \right)
-$$
-that is, $Y_{i_1j_1}$ and $Y_{i_2j_2}$ will covary whenever $j_1=j_2$. Similarly, it could be that $Y_{i_1j_1}$ and $Y_{i_2j_2}$ covary whenever $i_1=i_2$. This covariancce between $Y_{i_1j_1}$ and $Y_{i_2j_2}$ (when $i_1=i_2$ or $j_1=j_2$) may hold even conditional on attributes of both sides $\mathbf{W}_i,\mathbf{X}_j$, that is 
-$$
-\Pr \left(Y_{ij}=1\mid Y_{kj}=1,\mathbf{W}_i,\mathbf{W}_k,\mathbf{X}_j\right) \neq \Pr \left(Y_{ij}=1 \mid \mathbf{W}_i,\mathbf{X}_j\right)
-$$
-
-\paragraph*{Key assumptions}
-There are a few key assumptions made 
-\begin{itemize}
-    \item \myhl[myblue]{\textbf{$W-X-$exchangeable}} $$\left[Y_{\sigma_w(i)\sigma_x(j)}\right]_{i\in\mathbb{N},j\in\mathbb{M}} \overset{d}{=}  \left[Y_{ij}\right]_{i\in\mathbb{N},j\in\mathbb{M}}$$ the probability law for the model should not change if \textbf{observationally identical units} are re-labeled.
-    \item \myhl[myblue]{\textbf{Graphon}}: exchangeable random \textit{arrays} exhibit a special dependence structure. Let $\mu$, $\left\{ \left(W_i,A_i\right) \right\}_{i\geq 1}$, $\left\{ \left(X_j,B_j\right) \right\}_{j\geq 1}$ and $\left\{ V_{ij} \right\}_{i\geq 1,j\geq 1}$ be sequences of i.i.d. random variables, consider the graph (\textbf{graphon}) generated according to $$ Y^*_{ij} = h\left(\mu,W_i,X_j,A_i,B_j,V_{ij}\right) $$
-    for any $W-X-$exchangeable random array $\left[Y_{ij}\right]_{i\in\mathbb{N},j\in\mathbb{M}}$, there exists another array $\left[Y^*_{ij}\right]_{i\in\mathbb{N},j\in\mathbb{M}}$ generated according to this graphon, such that the two arrays have the \textbf{same distribution}. This can generate the dependence structure where $Y_{i_1j_1}$ and $Y_{i_2j_2}$ may covary whenever $i_1=i_2$ or $j_1=j_2$, even conditional on observed attributes.
-    \item \myhl[myblue]{\textbf{Sampling}}: denote the population network as $G_{\infty,\infty}$, and let $\mathcal{V}_c,\mathcal{V}_p$ denote the set of consumers and products \textbf{randomly} sampled from $G_{\infty,\infty}$. Assume an observed matrix $\mathbf{Y}=\left[Y_{ij}\right]_{1\leq i \leq N,1\leq j\leq M}$, it is assumed to be equal to the adjacency matrix of the network $$ G_{N,M} = G_{\infty,\infty}\left[\mathcal{V}_c,\mathcal{V}_p\right] $$
-    and marginal probability of the event is then $$ \rho_0 = \mathbb{E}\left[h\left(W_i,X_j,A_i,B_j,V_{ij}\right)\right] $$
-    Let $\left\{G_{N,M}\right\}$ be a sequence of networks indexed by the cardinality of the sampled consumer and product index sets: $N=\left\vert\mathcal{V}_c\right\vert$, $M=\left\vert\mathcal{V}_p\right\vert$
-\end{itemize}
 
 
 \newpage
