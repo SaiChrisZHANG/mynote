@@ -3,46 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: note5.aux
 The style file: plainnat.bst
 Database file #1: ref.bib
-Warning--empty journal in davezies2021empirical
 You've used 11 entries,
             2773 wiz_defined-function locations,
-            669 strings with 6748 characters,
-and the built_in function-call counts, 4846 in all, are:
-= -- 466
+            671 strings with 6780 characters,
+and the built_in function-call counts, 4940 in all, are:
+= -- 479
 > -- 172
 < -- 12
 + -- 62
 - -- 51
-* -- 349
-:= -- 717
+* -- 363
+:= -- 728
 add.period$ -- 33
 call.type$ -- 11
 change.case$ -- 50
 chr.to.int$ -- 11
-cite$ -- 23
-duplicate$ -- 248
-empty$ -- 445
+cite$ -- 22
+duplicate$ -- 249
+empty$ -- 455
 format.name$ -- 66
-if$ -- 1035
+if$ -- 1056
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 11
 newline$ -- 63
 num.names$ -- 44
-pop$ -- 95
+pop$ -- 91
 preamble$ -- 1
 purify$ -- 39
 quote$ -- 0
 skip$ -- 190
 stack$ -- 0
-substring$ -- 284
-swap$ -- 37
+substring$ -- 309
+swap$ -- 38
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 121
-warning$ -- 1
-while$ -- 56
+warning$ -- 0
+while$ -- 58
 width$ -- 0
-write$ -- 148
-(There was 1 warning)
+write$ -- 150
