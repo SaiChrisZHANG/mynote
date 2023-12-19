@@ -721,8 +721,15 @@ Under the conditions of this paper, $V_k$ is asymptotically Gaussian if $\ddot{\
 
 \section{Latest Development}
 \subsection{LLN and CLT for Exchangeable Arrays}
-\citet{davezies2021empirical} establish uniform LLN and CLT to show consistency and asymptotic normality of nonlinear estimators under weak regularity conditions.
+\citet{davezies2021empirical} establish uniform LLN and CLT to show consistency and asymptotic normality of \textbf{nonlinear} estimators under weak regularity conditions.
 
+\subsubsection{Set up}
+For any $A\subset \mathbb{R}$, $B\subset \mathbb{R}^k$ for some $k\geq 2$, then let 
+\begin{align*}
+    A^+ &= A \cap \left(0,\infty\right)\\
+    \bar{B} &= \left\{ b=\left(b_1,\cdots,b_k\right)\in B: \forall (i,j)\in\left\{1,\cdots,k\right\}^2,i\neq j, b_i\neq b_j \right\}
+\end{align*}
+and $\mathbb{I}_k = \overline{\mathbb{N}^{+k}}$ denote the set of $k$-tuples of $\mathbb{N}^+$ \textbf{without} repetition.
 
 \newpage
 \bibliographystyle{plainnat}
