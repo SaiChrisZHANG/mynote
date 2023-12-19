@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,12 @@ A~Colin Cameron, Jonah~B Gelbach, and Douglas~L Miller.
 \newblock Robust inference with multiway clustering.
 \newblock \emph{Journal of Business \& Economic Statistics}, 29\penalty0
   (2):\penalty0 238--249, 2011.
+
+\bibitem[Davezies et~al.(2021)Davezies, D'Haultf{\oe}uille, and
+  Guyonvarch]{davezies2021empirical}
+Laurent Davezies, Xavier D'Haultf{\oe}uille, and Yannick Guyonvarch.
+\newblock Empirical process results for exchangeable arrays.
+\newblock 2021.
 
 \bibitem[Hansen(2007)]{hansen2007asymptotic}
 Christian~B Hansen.
