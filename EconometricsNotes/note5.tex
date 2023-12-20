@@ -741,7 +741,8 @@ and let
 \paragraph*{Polyadic data}
 For random variables $Y_{\mathbf{i}}$ indexed by $\mathbf{i}\in\mathbb{I}_k$\footnote{Some examples are: $Y_{i_1,i_2}$ corresponds to export flows from country $i_1$ to $i_2$, or whether there is a link between node $i_1$ and $i_2$ in a network. $\left\{i_1,\cdots,i_k\right\}$ can also correspond to the different dimensions of clustering.}, it's assumed that the random variables are generated according to a \myhl[myblue]{\textbf{jointly exchangeable}} and \myhl[myblue]{\textbf{dissociated}} array: 
 \begin{assumption}{Jointly Exchangeable and Dissociated Arrays}{jexch_diss_array}
-    For any $\pi \in \mathfrak{S}\left(\mathbb{N}^+\right)$
+    For any $\pi \in \mathfrak{S}\left(\mathbb{N}^+\right)$, $$ \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{I}_k} \overset{\mathrm{d}}{=} \left(Y_{\pi(\mathbf{i})}\right)_{\mathbf{i}\in\mathbb{I}_k} $$
+    and for any disjoint subsets of $\mathbb{N}^+$, $A,B$, with $\min\left(\left\vert A\right\vert,\left\vert B\right\vert\right)\geq k$, 
 \end{assumption}
 
 
