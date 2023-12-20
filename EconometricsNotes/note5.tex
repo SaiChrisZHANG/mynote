@@ -744,6 +744,11 @@ For random variables $Y_{\mathbf{i}}$ indexed by $\mathbf{i}\in\mathbb{I}_k$\foo
     For any $\pi \in \mathfrak{S}\left(\mathbb{N}^+\right)$, $$ \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{I}_k} \overset{\mathrm{d}}{=} \left(Y_{\pi(\mathbf{i})}\right)_{\mathbf{i}\in\mathbb{I}_k} $$
     and for any disjoint subsets of $\mathbb{N}^+$, $A,B$, with $\min\left(\left\vert A\right\vert,\left\vert B\right\vert\right)\geq k$, $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\overline{A^k}}$ is \textbf{independent} of $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\overline{B^k}}$
 \end{assumption}
+The assumption implies that 
+\begin{itemize}
+    \item \textbf{\underline{jointly exchangeability}}: the joint distribution of the data remains identical under any possible permutation of labels, i.e., labeling conveys no information
+    \item \textbf{\underline{dissociation}}: the variables are indepednent if they have \textbf{no unit} in common, that is $Y_{i_1,i_2}$ must be independent of $Y_{j_1,j_2}$ if $\left\{i_1,i_2\right\} \cap \left\{j_1,j_2\right\} = \varnothing$
+\end{itemize}
 
 
 \newpage
