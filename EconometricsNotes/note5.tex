@@ -753,9 +753,11 @@ the dependence structure under such assumptions are
 \begin{lemma}{Key Dependence Structure}{davezies_depstruct}
     Assumption \ref{assump:jexch_diss_array} holds \textbf{if and only if} there exists i.i.d. variables $\left(U_J\right)_{J\subset \mathbb{N}^+,1\leq \left\vert J \right\vert \leq k}$ and a measurable function $\tau$ s.t. almost surely
     $$
-    Y_{\mathbf{i}} = \tau
+    Y_{\mathbf{i}} = \tau\left( \left(U_{\left\{\mathbf{i}\odot \mathbf{e}\right\}^+}\right) _{\mathbf{e}\in\bigcup^k_{r=1}\mathcal{E}_r} \right),\forall \mathbf{i}\in\mathbb{I}_k
     $$
+    this result is referred to as the AHK representation (Aldous 1981, Hoover 1979, Kallenberg 1989).
 \end{lemma}
+
 
 
 \newpage
