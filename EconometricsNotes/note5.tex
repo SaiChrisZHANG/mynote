@@ -749,6 +749,10 @@ The assumption implies that
     \item \textbf{\underline{jointly exchangeability}}: the joint distribution of the data remains identical under any possible permutation of labels, i.e., labeling conveys no information
     \item \textbf{\underline{dissociation}}: the variables are indepednent if they have \textbf{no unit} in common, that is $Y_{i_1,i_2}$ must be independent of $Y_{j_1,j_2}$ if $\left\{i_1,i_2\right\} \cap \left\{j_1,j_2\right\} = \varnothing$
 \end{itemize}
+the dependence structure under such assumptions are 
+\begin{lemma}{Key Dependence Structure}{davezies_depstruct}
+    Assumption \ref{assump:jexch_diss_array} holds \textbf{if and only if} there exists i.i.d. variables $\left(U_J\right)_{J\subset \mathbb{N}^+,1\leq \left\vert J \right\vert \leq k}$
+\end{lemma}
 
 
 \newpage
