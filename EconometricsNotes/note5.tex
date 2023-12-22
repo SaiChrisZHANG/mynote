@@ -761,7 +761,11 @@ the dependence structure under such assumptions are
 \subsubsection{Uniform LLN and CLT}
 Let $\mathcal{F}$ denote a class of real-valued functions admitting a first moment w.r.t. the distribution $P$, let $Pf$ denote the corresponding moment $\mathbb{E}\left[f(Y_{\mathbf{1}})\right]$, with $\mathbf{1}$ as the $k-$tuple $(1,\cdots,k)$. Assume that there exists a countable subclass $\mathcal{G}\subset \mathcal{F}$ s.t. elements of $\mathcal{F}$ are pointwise limits of sequences of elements of $\mathcal{G}$.
 
-
+Consider
+\begin{align*}
+    \mathbb{P}_n f &= \frac{(n-k)!}{n!} \sum_{\mathbf{i}\in \mathbb{I}_{n,k}}f(Y_{\mathbf{i}}) \\
+    \mathbb{G}_n f &= \sqrt{n}\left(\mathbb{P}_n f - Pf\right)
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
