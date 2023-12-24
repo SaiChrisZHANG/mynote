@@ -771,7 +771,13 @@ and consider the restrictions on $\mathcal{F}$: for any $\eta>0$ and any seminor
     \item $N\left(\eta, \mathcal{F}, \left\Vert \cdot \right\Vert\right)$ denotes the minimal number of $\left\Vert \cdot \right\Vert$-closed balls of radius $\eta$ with centers in $\mathcal{F}$ needed to cover $\mathcal{F}$
     \item $N_{[]}\left(\eta, \mathcal{F}, \left\Vert \cdot \right\Vert\right)$ denotes the minimal number of $\eta-$brackets needed cover $\mathcal{F}$, where an $\eta-$bracket for $f\in\mathcal{F}$ is a pair of functions $\left(l,u\right)$ s.t. $l\leq f\leq u$ and $\left\Vert u-l \right\Vert<\eta$
 \end{itemize}
-\citet{davezies2021empirical} considered the seminorms $\left\Vert f \right\Vert _{\mu,r}=\left(\int \left\vert f \right\vert^t \mathrm{d}\mu\right)^{1/r}$ for any $r\geq 1$ and probability measure (cdf) $\mu$. An envelope of $\mathcal{F}$ is measurable function $F$ satisfying $F(u) \geq \sup_{f\in\mathcal{F}}\left\vert f(u) \right\vert$.
+\citet{davezies2021empirical} considered the seminorms $\left\Vert f \right\Vert _{\mu,r}=\left(\int \left\vert f \right\vert^t \mathrm{d}\mu\right)^{1/r}$ for any $r\geq 1$ and probability measure (cdf) $\mu$. An envelope of $\mathcal{F}$ is measurable function $F$ satisfying $F(u) \geq \sup_{f\in\mathcal{F}}\left\vert f(u) \right\vert$, satisfying 
+\begin{assumption}{Assumptions of $\mathcal{F}$}{assumptions_on_f}
+    The class $\mathcal{F}$ either 
+    \begin{itemize}
+        \item[(i)] admits an envelope $F$ with $PF<\infty$ and $\forall \eta >0$, $ \sup_{Q\in\mathcal{Q}}N\left( \eta\left\Vert F \right\Vert _{Q,1},\mathcal{F},\left\Vert \cdot \right\Vert _{Q,1} \right) <\infty $ 
+    \end{itemize}
+\end{assumption}
 
 \newpage
 \bibliographystyle{plainnat}
