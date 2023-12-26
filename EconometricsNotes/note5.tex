@@ -793,7 +793,7 @@ Assumption \ref{assump:assumptions_on_f} are same as the conditions imposed on i
         \item if (\textbf{A}) of Assumption \ref{assump:assumptions_on_f} holds, $\sup_{f\in\mathcal{F}} \left\vert \mathbb{P}_nf - Pf \right\vert \xrightarrow{\mathbf{a.s.}} 0$ and in $L^1$
         \item if (\textbf{B}) of Assumption \ref{assump:assumptions_on_f} holds, $\mathbb{G}_n$ converges weakly in $l^{\infty}(\mathcal{F})$ to a centered Gaussian process $\mathbb{G}$ on $\mathcal{F}$ as $n\rightarrow \infty$, the convariance kernel $K$ of $\mathbb{G}$ satisfies 
         $$
-        K(f_1,f_2) = \frac{1}{(k-1)!^2} \sum_{\left(\pi,\pi'\right) \in \mathfrak{S}\left(\left\{\mathbf{1}\right\}\right)\times \mathfrak{S}\left(\left\{\mathbf{1}'\right\}\right)}
+        K(f_1,f_2) = \frac{1}{(k-1)!^2} \sum_{\left(\pi,\pi'\right) \in \mathfrak{S}\left(\left\{\mathbf{1}\right\}\right)\times \mathfrak{S}\left(\left\{\mathbf{1}'\right\}\right) \mathrm{Cov}\left( f_1 \left(\mathbf{Y}_{\pi(\mathbf{1})}\right), f_2 \left(\mathbf{Y}_{\pi '(\mathbf{1}')}\right) \right)}
         $$
     \end{itemize}
 \end{theorem}
