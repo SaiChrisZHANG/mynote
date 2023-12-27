@@ -761,7 +761,7 @@ the dependence structure under such assumptions are
 \subsubsection{Uniform LLN and CLT}
 Let $\mathcal{F}$ denote a class of real-valued functions admitting a first moment w.r.t. the distribution $P$, let $Pf$ denote the corresponding moment $\mathbb{E}\left[f(Y_{\mathbf{1}})\right]$, with $\mathbf{1}$ as the $k-$tuple $(1,\cdots,k)$. Assume that
 \begin{assumption}{Measurability Assumption}{measurability_assumption}
-    There exists a countable subclass $\mathcal{G}\subset \mathcal{F}$ s.t. elements of $\mathcal{F}$ are pointwise limits of sequences of elements of $\mathcal{G}$
+    $\exists$ a countable subclass $\mathcal{G}\subset \mathcal{F}$ s.t. elements of $\mathcal{F}$ are pointwise limits of sequences of elements of $\mathcal{G}$
 \end{assumption}
 Consider
 \begin{align*}
@@ -806,7 +806,7 @@ Here, (\textbf{A}) of Assumption \ref{assump:assumptions_on_f} is stronger than 
 \end{align*}
 and the exact characterization is established as 
 \begin{proposition}{Exact Characterization of Uniform LLNs}{uni_lln_exactchar}
-    Under 
+    Under Assumption \ref{assump:jexch_diss_array} and \ref{assump:measurability_assumption}, and $\mathcal{F}$ admits an envelop $F$ with $PF<\infty$, then $\sup_{f\in\mathcal{F}} \left\vert \mathbb{P}_n f -Pf \right\vert \xrightarrow{\mathrm{a.s.}} 0$ \textbf{if and only if} both $\log N\left(\epsilon, \mathcal{F}, \left\Vert \cdot \right\Vert _{1,2}\right)/n^2$ and $\log N\left(\epsilon, \mathcal{F}, \left\Vert \cdot \right\Vert _{1,1}\right)/n$ tend to 0 in outer probability.
 \end{proposition}
 
 \newpage
