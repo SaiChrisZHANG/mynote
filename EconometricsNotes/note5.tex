@@ -759,8 +759,10 @@ the dependence structure under such assumptions are
 \end{lemma}
 
 \subsubsection{Uniform LLN and CLT}
-Let $\mathcal{F}$ denote a class of real-valued functions admitting a first moment w.r.t. the distribution $P$, let $Pf$ denote the corresponding moment $\mathbb{E}\left[f(Y_{\mathbf{1}})\right]$, with $\mathbf{1}$ as the $k-$tuple $(1,\cdots,k)$. Assume that there exists a countable subclass $\mathcal{G}\subset \mathcal{F}$ s.t. elements of $\mathcal{F}$ are pointwise limits of sequences of elements of $\mathcal{G}$.
-
+Let $\mathcal{F}$ denote a class of real-valued functions admitting a first moment w.r.t. the distribution $P$, let $Pf$ denote the corresponding moment $\mathbb{E}\left[f(Y_{\mathbf{1}})\right]$, with $\mathbf{1}$ as the $k-$tuple $(1,\cdots,k)$. Assume that
+\begin{assumption}{Measurability Assumption}{measurability_assumption}
+    There exists a countable subclass $\mathcal{G}\subset \mathcal{F}$ s.t. elements of $\mathcal{F}$ are pointwise limits of sequences of elements of $\mathcal{G}$
+\end{assumption}
 Consider
 \begin{align*}
     \mathbb{P}_n f &= \frac{(n-k)!}{n!} \sum_{\mathbf{i}\in \mathbb{I}_{n,k}}f(Y_{\mathbf{i}}) \\
@@ -802,6 +804,10 @@ Here, (\textbf{A}) of Assumption \ref{assump:assumptions_on_f} is stronger than 
     \left\Vert f \right\Vert _{1,1} &= \frac{1}{n} \sum^n_{i_1=1} \left\vert \frac{1}{n-1} \sum_{i_2 \neq i_1} f(Y_{i_1,i_2}) + f(Y_{i_2,i_1}) \right\vert \\
     \left\Vert f \right\Vert _{1,2} &= \frac{1}{n(n-1)} \sum_{1\leq i_1<i_2 \leq n} \left\vert \mathbb{E}\left[  f(Y_{i_1,i_2}) + f(Y_{i_2,i_1}) \right] \mid U_{\left\{ i_1,i_2 \right\}} \right\vert
 \end{align*}
+and the exact characterization is established as 
+\begin{proposition}{Exact Characterization of Uniform LLNs}{uni_lln_exactchar}
+    Under 
+\end{proposition}
 
 \newpage
 \bibliographystyle{plainnat}
