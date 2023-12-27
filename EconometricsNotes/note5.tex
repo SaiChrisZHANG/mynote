@@ -768,10 +768,10 @@ Consider
     \mathbb{P}_n f &= \frac{(n-k)!}{n!} \sum_{\mathbf{i}\in \mathbb{I}_{n,k}}f(Y_{\mathbf{i}}) \\
     \mathbb{G}_n f &= \sqrt{n}\left(\mathbb{P}_n f - Pf\right)
 \end{align*}
-and consider the restrictions on $\mathcal{F}$: for any $\eta>0$ and any seminorm $\left\Vert \cdot \right\Vert$ on a space containing $\mathcal{F}$, let
+and the restrictions on $\mathcal{F}$: for any $\eta>0$ and any seminorm $\left\Vert \cdot \right\Vert$ on a space containing $\mathcal{F}$, let
 \begin{itemize}
-    \item $N\left(\eta, \mathcal{F}, \left\Vert \cdot \right\Vert\right)$ denotes the minimal number of $\left\Vert \cdot \right\Vert$-closed balls of radius $\eta$ with centers in $\mathcal{F}$ needed to cover $\mathcal{F}$
-    \item $N_{[]}\left(\eta, \mathcal{F}, \left\Vert \cdot \right\Vert\right)$ denotes the minimal number of $\eta-$brackets needed cover $\mathcal{F}$, where an $\eta-$bracket for $f\in\mathcal{F}$ is a pair of functions $\left(l,u\right)$ s.t. $l\leq f\leq u$ and $\left\Vert u-l \right\Vert<\eta$
+    \item $N\left(\eta, \mathcal{F}, \left\Vert \cdot \right\Vert\right)$: the minimal number of $\left\Vert \cdot \right\Vert$-closed balls of radius $\eta$ with centers in $\mathcal{F}$ needed to cover $\mathcal{F}$
+    \item $N_{[]}\left(\eta, \mathcal{F}, \left\Vert \cdot \right\Vert\right)$: the minimal number of $\eta-$brackets needed cover $\mathcal{F}$, where an $\eta-$bracket for $f\in\mathcal{F}$ is a pair of functions $\left(l,u\right)$ s.t. $l\leq f\leq u$ and $\left\Vert u-l \right\Vert<\eta$
 \end{itemize}
 \citet{davezies2021empirical} considered the seminorms $\left\Vert f \right\Vert _{\mu,r}=\left(\int \left\vert f \right\vert^t \mathrm{d}\mu\right)^{1/r}$ for any $r\geq 1$ and probability measure (cdf) $\mu$. An envelope of $\mathcal{F}$ is measurable function $F$ satisfying $F(u) \geq \sup_{f\in\mathcal{F}}\left\vert f(u) \right\vert$, satisfying 
 \begin{assumption}{Assumptions of $\mathcal{F}$}{assumptions_on_f}
@@ -790,7 +790,7 @@ and consider the restrictions on $\mathcal{F}$: for any $\eta>0$ and any seminor
 \end{assumption}
 Assumption \ref{assump:assumptions_on_f} are same as the conditions imposed on i.i.d. data for uniform LLNs and CLTs. Under these assumptions, \citet{davezies2021empirical} established the uniform LLNs and CLTs as 
 \begin{theorem}{Uniform LLNs and CLTs}{uniform_lln_clt}
-    Under Assumption \ref{assump:jexch_diss_array}, 
+    Under Assumption \ref{assump:jexch_diss_array} and \ref{assump:measurability_assumption},
     \begin{itemize}
         \item if (\textbf{A}) of Assumption \ref{assump:assumptions_on_f} holds, $\sup_{f\in\mathcal{F}} \left\vert \mathbb{P}_nf - Pf \right\vert \xrightarrow{\mathbf{a.s.}} 0$ and in $L^1$
         \item if (\textbf{B}) of Assumption \ref{assump:assumptions_on_f} holds, $\mathbb{G}_n$ converges weakly in $l^{\infty}(\mathcal{F})$ to a centered Gaussian process $\mathbb{G}$ on $\mathcal{F}$ as $n\rightarrow \infty$, the convariance kernel $K$ of $\mathbb{G}$ satisfies 
