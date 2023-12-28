@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -43,6 +43,11 @@ Kung-Yee Liang and Scott~L Zeger.
 \newblock Longitudinal data analysis using generalized linear models.
 \newblock \emph{Biometrika}, 73\penalty0 (1):\penalty0 13--22, 1986.
 
+\bibitem[McCullagh(2000)]{mccullagh2000resampling}
+Peter McCullagh.
+\newblock Resampling and exchangeable arrays.
+\newblock \emph{Bernoulli}, pages 285--301, 2000.
+
 \bibitem[Menzel(2021)]{menzel2021bootstrap}
 Konrad Menzel.
 \newblock Bootstrap with cluster-dependence in two or more dimensions.
@@ -53,6 +58,11 @@ Brent~R Moulton.
 \newblock An illustration of a pitfall in estimating the effects of aggregate
   variables on micro units.
 \newblock \emph{The review of Economics and Statistics}, pages 334--338, 1990.
+
+\bibitem[Owen(2007)]{owen2007pigeonhole}
+Art~B Owen.
+\newblock The pigeonhole bootstrap.
+\newblock \emph{The Annals of Applied Statistics}, pages 386--411, 2007.
 
 \bibitem[Scott and Holt(1982)]{scott1982effect}
 Andrew~J Scott and D~Holt.
