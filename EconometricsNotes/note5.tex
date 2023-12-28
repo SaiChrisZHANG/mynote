@@ -816,8 +816,14 @@ and 2 aspects of dissociated, exchangeable arrays are emphasized:
 
 \subsubsection{Convergence of the bootstrap process} \citet{davezies2021empirical}, extending the pigeonhole bootstrap \citep{mccullagh2000resampling,owen2007pigeonhole}, established the following bootstrap process:
 \begin{itemize}
-    \item[1] $n$ units are sampled independently in $\left\{1,\cdots,n\right\}$ with replacement and equal probability, $W_i$ denotes the number of times unit $i$ is sampled. 
+    \item[1] $n$ units are sampled independently in $\left\{1,\cdots,n\right\}$ with replacement and equal probability, $W_i$ denotes the number of times unit $i$ is sampled.
+    \item[2] the $k-$tuple $\mathbf{i}= \left(i_1,\cdots,i_k\right)\in\mathbb{I}_{n,k}$ is then selected $W_i=\prod^k_{j=1}W_{i_j}$ times in the bootstrap sample 
 \end{itemize}
+then consider $\mathbb{P}^*_n$ and $\mathbb{G}^*_n$ defined on $\mathcal{F}$ by 
+\begin{align*}
+    \mathbb{P}^*_n f &= \frac{(n-k)!}{n!}\sum_{\mathbf{i}\in\mathbb{I}_{n,k}}W_{\mathbf{i}} f(Y_{\mathbf{i}})\\
+    \mathbb{G}^*_n f &= \sqrt{n}\left(\mathbb{P}^*_{n} f - \mathbb{P}_n f\right)
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
