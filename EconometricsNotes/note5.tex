@@ -832,7 +832,10 @@ The proof of this theorem boils down to proving
 $$
 \sup_{h\in BL_1} \left\vert \mathbb{E}\left(h\left(\mathbb{G}^*_n\right) \mid \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in \mathbb{I}_k}\right)  - \mathbb{E}\left(h(\mathbb{G})\right) \right\vert \xrightarrow{\mathrm{a.s.}_{outer}} 0 
 $$
-where $BL_1$ is the set of bounded and Lipschitz functions from $l^{\infty}(\mathcal{F})$ to $[0,1]$.
+where $BL_1$ is the set of bounded and Lipschitz functions from $l^{\infty}(\mathcal{F})$ to $[0,1]$. In contrast with the standard bootstrap for i.i.d. data
+$$
+\mathbb{E} \left[\mathbb{P}^*_n(f)\mid \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{I}_k}\right] = \frac{1}{n^k} \sum_{\mathbf{i}\in\mathbb{I}_{n,k}} f(Y_{\mathbf{i}}) \neq \mathbb{P}_n f
+$$
 
 \newpage
 \bibliographystyle{plainnat}
