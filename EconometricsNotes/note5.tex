@@ -849,6 +849,13 @@ Let
     \item for any real function $g$ on $\mathcal{H}$, $\left\Vert g \right\Vert _{\mathcal{H}} = \sup_{h\in\mathcal{H}}\left\vert g(h) \right\vert$
 \end{itemize}
 The parameter of interest $\theta_0$, satisfying $\Psi(\theta_0) = 0$, is estimated by $\hat{\theta} = \arg\min_{\theta\in\Theta} \left\Vert \Psi_n(\theta) \right\Vert _{\mathcal{H}}$ , define the bootstrap counterpart of $\hat{\theta}$ as $$ \hat{\theta}^* = \arg\min_{\theta\in\Theta} \left\Vert \Psi^*_n\left(\theta\right) \right\Vert _{\mathcal{H}} $$
+then we have the convergence 
+\begin{theorem}{Convergence of Z-estimators Bootstrap}{z_est_boot_conv}
+    Under Assumption \ref{assump:jexch_diss_array}, if also
+    \begin{itemize}
+        \item $\left\Vert \Psi(\theta_m) \right\Vert _{\mathcal{H}} \rightarrow 0 \Rightarrow \left\Vert \theta_m-\theta_0 \right\Vert _{\Theta} \rightarrow 0$, $\forall (\theta_m)_{m\in\mathbb{N}}\in \Theta$ 
+    \end{itemize}
+\end{theorem}
 
 \newpage
 \bibliographystyle{plainnat}
