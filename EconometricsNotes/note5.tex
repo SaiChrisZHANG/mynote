@@ -853,7 +853,16 @@ then we have the convergence
 \begin{theorem}{Convergence of Z-estimators Bootstrap}{z_est_boot_conv}
     Under Assumption \ref{assump:jexch_diss_array}, if also
     \begin{itemize}
-        \item $\left\Vert \Psi(\theta_m) \right\Vert _{\mathcal{H}} \rightarrow 0 \Rightarrow \left\Vert \theta_m-\theta_0 \right\Vert _{\Theta} \rightarrow 0$, $\forall (\theta_m)_{m\in\mathbb{N}}\in \Theta$ 
+        \item[1] $\left\Vert \Psi(\theta_m) \right\Vert _{\mathcal{H}} \rightarrow 0 \Rightarrow \left\Vert \theta_m-\theta_0 \right\Vert _{\Theta} \rightarrow 0$, $\forall (\theta_m)_{m\in\mathbb{N}}\in \Theta$ 
+        \item[2] $\left\{\psi_{\theta,h}:(\theta,h) \in \Theta \times \mathcal{H}\right\}$ satisfies Assumption \ref{assump:measurability_assumption} and (A) of \ref{assump:assumptions_on_f}, with $PF< \infty$
+        \item[3] $\exists\delta>0$ s.t. $\left\{\psi_{\theta,h}:\left\Vert\theta-\theta_0\right\Vert _{\Theta}<\delta,h\in\mathcal{H}\right\}$ satisfies Assumption \ref{assump:measurability_assumption} and (B) of \ref{assump:assumptions_on_f}, with $P F^2_{\delta} < \infty$
+        \item[4] $\lim_{\theta\rightarrow \theta_0}\sup_{h\in\mathcal{H}} P\left(\psi_{\theta,h}-\psi_{\theta_0,h}\right)^2 =0$
+        \item[5] $\forall \eta>0$, $\left\Vert \Psi_n \left(\hat{\theta}\right) \right\Vert _{\mathcal{H}} = o_p(n^{-1/2}) $ and $P\left( \left\Vert \sqrt{n} \Psi^*_n\left(\hat{\theta}^*\right) \right\Vert _{\mathcal{H}} > \eta\left\vert \left(Y_\mathbf{i}\right)_{\mathbf{i}\in\mathbb{I}_k} \right\vert \right) = o_p(1)$
+        \item[6] $\theta\mapsto \Psi(\theta)$ is Frechet-differentiable at $\theta_0$, with continuously invertible derivative $\dot{\Psi}_{\theta_0}$
+    \end{itemize}
+    Then
+    \begin{itemize}
+        \item $\sqrt{n}\left(\hat{\theta}-\theta\right)$ converges in distribution to a centered Gaussian process $\mathbb{G}$
     \end{itemize}
 \end{theorem}
 
