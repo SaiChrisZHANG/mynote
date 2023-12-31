@@ -860,9 +860,10 @@ then we have the convergence
         \item[5] $\forall \eta>0$, $\left\Vert \Psi_n \left(\hat{\theta}\right) \right\Vert _{\mathcal{H}} = o_p(n^{-1/2}) $ and $P\left( \left\Vert \sqrt{n} \Psi^*_n\left(\hat{\theta}^*\right) \right\Vert _{\mathcal{H}} > \eta\left\vert \left(Y_\mathbf{i}\right)_{\mathbf{i}\in\mathbb{I}_k} \right\vert \right) = o_p(1)$
         \item[6] $\theta\mapsto \Psi(\theta)$ is Frechet-differentiable at $\theta_0$, with continuously invertible derivative $\dot{\Psi}_{\theta_0}$
     \end{itemize}
-    Then
+    Then the convergence can be established as
     \begin{itemize}
         \item $\sqrt{n}\left(\hat{\theta}-\theta\right)$ converges in distribution to a centered Gaussian process $\mathbb{G}$
+        \item conditional on $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{I}_k}$, $\sqrt{n}\left(\hat{\theta}^*-\hat{\theta}\right) \xrightarrow{d} \mathbb{G}$ almost surely
     \end{itemize}
 \end{theorem}
 
