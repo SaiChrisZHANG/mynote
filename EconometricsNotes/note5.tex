@@ -872,7 +872,11 @@ then we have the convergence
 \begin{theorem}{Convergence of Smooth Functionals of the Empirical CDF}{conv_smoothcdf}
     Suppose that $g$ is Hadamard differentiable at $F_Y$ tangentially to a set $\mathbb{D}_0$, with derivative equal to $g'_{F_Y}$. Under Assumption \ref{assump:jexch_diss_array},
     \begin{itemize}
-        \item $\sqrt{n}\left( \hat{F}_Y-F_Y \right)$ converges weakly,
+        \item $\sqrt{n}\left( \hat{F}_Y-F_Y \right)$ converges weakly, as a process indexed by $y$, to a Gaussian process $\mathbb{G}$ with kernel $K$ satisfying 
+        $$
+        K\left(y_1,y_2\right) = \frac{1}{(k-1)!^2}
+        $$
+        \item 
     \end{itemize}
 \end{theorem}
 
