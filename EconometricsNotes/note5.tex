@@ -893,7 +893,13 @@ then we have the convergence
     \int^{\infty}_0 \sup_{Q\in\mathcal{Q}} \log N\left(\eta \left\Vert F \right\Vert _{Q,2},\mathcal{F}, \left\Vert \cdot \right\Vert _{Q,2}\right)\mathrm{d}\eta <\infty
     $$
     \citet{davezies2021empirical} showed that for $k=2$, $K(f,f)=0$ for all $f\in\mathcal{F}$, $\sqrt{n}\mathbf{G}_n$ converges \textbf{weakly} in $l^{\infty}(\mathcal{F})$ to $\mathbb{G}^d$. However, the proposed bootstrap process does \textbf{not} generally converge to $\mathbb{G}^d$.
-    \item \myhl[myblue]{\textbf{An alternative bootstrap process}}: \citet{davezies2021empirical} established that under Assumption \ref{assump:jexch_diss_array} and \ref{assump:measurability_assumption}, if $Pf^2<\infty$ for all $f\in \mathcal{F}$ and $\mathcal{F}$ admits an envelope $F$ s.t. $PF^{1+\delta}<\infty$ for some $\delta>0$, then conditional on $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{I}_k}$ and outer almost surely, the process $\mathbb{G}_n^*$ converges weakly in $l^{\infty}\left(\mathcal{F}\right)$ to a centered Gaussian process $\mathbb{G}$, the process $\mathbb{G}_n$ also converges weakly in $l^{\infty}(\mathcal{F})$ to $\mathbb{G}$.
+    \item \myhl[myblue]{\textbf{An alternative bootstrap process}}: \citet{davezies2021empirical} established that under Assumption \ref{assump:jexch_diss_array} and \ref{assump:measurability_assumption}, $Pf^2<\infty$ for all $f\in \mathcal{F}$ and $\mathcal{F}$ admits an envelope $F$ s.t. $PF^{1+\delta}<\infty$ for some $\delta>0$, then if conditional on $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{I}_k}$, the process $\mathbb{G}_n^*$ outer almost surely converges weakly in $l^{\infty}\left(\mathcal{F}\right)$ to a centered Gaussian process $\mathbb{G}$, the process $\mathbb{G}_n$ also converges weakly in $l^{\infty}(\mathcal{F})$ to $\mathbb{G}$. 
+    Combined with Theorem \ref{thm:bootstrap_validity}, we have $$ \mathbb{G}_n \rightarrow \mathbb{G} \Leftrightarrow \mathbb{G}^*_n \xrightarrow{\mathrm{a.s.}_{outer}} \mathbb{G} $$
+    consider an alternative, the multiplier bootstrap process adapted to jointly exchangeable arrays. Let $\left(\xi_i\right)^n_{i=1}$ be a sequence of i.i.d. random variables, independent from the original data $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in \mathbb{I}_{n,2}}$, then the process 
+    \begin{equation*}
+        \mathbb{G}^{m*}_{n}:f \mapsto \frac{1}{\sqrt{n}}\sum^n_{i_1=1} \xi_{i_1} \left(\frac{1}{n-1}\sum_{1\leq i_2\neq i_1\leq n} \left[f(Y_{i_1,i_2})+f(Y_{i_2,i_1})\right] - 2\mathbb{P}_n f\right)
+    \end{equation*}
+    also outer almost surely converges weakly in $l^{\infty}(\mathcal{F})$ to $\mathbb{G}$, just as the proposed process $\mathbb{G}_n^*$.
 \end{itemize}
 
 
