@@ -920,8 +920,12 @@ then we have the convergence
     Consider the \textbf{pigeonhole bootstrap} process \citep{mccullagh2000resampling}, which is close the bootstrap in Theorem \ref{thm:bootstrap_validity}, except that weights are now independent from one coordinate to another:
     \begin{itemize}
         \item[1] For each $j\in \left\{1,\cdots,k\right\}$, $n_j$ elements are sampled with replacement and equal probability in the set $\left\{1,\cdots,n_j\right\}$. For each $i_j$, let $W_{i_j}^j$ denote the number of times $i_j$ is selected 
-        \item[2]  
+        \item[2] $k$-tuple $\mathbf{i}=\left(i_1,\cdots,i_k\right)$ is then selected $W_{\mathbf{i}}= \prod^k_{j=1} W_{i_j}^j$ times in the bootstrap sample 
     \end{itemize}
+    the bootstrap process $\mathbb{G}^*_{\mathbf{n}}$ is then defined on $\mathcal{F}$ by 
+    \begin{equation*}
+        \mathbb{G}^*_{\mathbf{n}} f = \sqrt{\underbar{n}} \left(\frac{1}{\prod^k_{j=1}n_j} \sum_{\mathbf{1\leq i\leq n}}\left(W_{\mathbf{i}}-1\right) f(Y_{\mathbf{i}}) \right)
+    \end{equation*}
 \end{itemize}
 
 
