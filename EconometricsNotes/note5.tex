@@ -900,13 +900,18 @@ then we have the convergence
         \mathbb{G}^{m*}_{n}:f \mapsto \frac{1}{\sqrt{n}}\sum^n_{i_1=1} \xi_{i_1} \left(\frac{1}{n-1}\sum_{1\leq i_2\neq i_1\leq n} \left[f(Y_{i_1,i_2})+f(Y_{i_2,i_1})\right] - 2\mathbb{P}_n f\right)
     \end{equation*}
     also outer almost surely converges weakly in $l^{\infty}(\mathcal{F})$ to $\mathbb{G}$, just as the proposed process $\mathbb{G}_n^*$.
-    \item \myhl[myblue]{\textbf{Separately exchangeable arrays}} For the case of separately exchangeable arrays (the $n$ units stem from $k$ \textbf{different} populations, or multiway clustering as in \citet{menzel2021bootstrap}), then we must have a stronger version of Assumption \ref{assump:jexch_diss_array}
+    \item \myhl[myblue]{\textbf{Separately exchangeable arrays}} For the case of separately exchangeable arrays (the $n$ units stem from $k$ \textbf{different} populations, or multiway clustering as in \citet{menzel2021bootstrap}), then we must assume a stronger version of Assumption \ref{assump:jexch_diss_array}
     \begin{assumption}{Stronger assumptions for separately exchangeable arrays}{strong_sep_exc_array}
         Consider randome variables $Y_{\mathbf{i}}$ where $\mathbf{i}=\left(i_1,\cdots,i_k\right) \in \mathbb{N}^{+k}$, implying that repetitions are allowed. Then assume that for any $\left(\pi_1,\cdots,\pi_k\right)\in\mathfrak{S}\left(\mathbb{N}^+\right)^k$,
         $$ \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{N}^{+k}} \overset{d}{=} \left(Y_{\pi_1(i_1),\cdots,\pi_k(i_k)}\right)_{\mathbf{i}\in\mathbb{N}^{+k}} $$
         and for any $A,B$, disjoint subsets of $\mathbb{N}^+$, $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in A^k}$ is independent of $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in B^k}$.
     \end{assumption}
-    This 
+    Under this stronger assumption, we have equality in distribution even for $\pi_1 = \cdots =\pi_k$. Here, denote 
+    \begin{itemize}
+        \item $\mathbf{1} = \left(1,\cdots,1\right)$
+        \item $\mathbf{n} = \left(n_1,\cdots,n_k\right)$, where $n_j\geq 1$ denotes the number of units observed in population (or cluster) $j$, in general, $n_j\neq n_{j'}$ for $j\neq j'$
+        \item sample at hand: $\left(Y_{\mathbf{i}}\right)_{\mathbf{1\leq i\leq n}}$, where $\mathbf{i}\geq \mathbf{i}'$ means that $i_j\geq i'_j$, $\forall j=1,\cdots,k$.
+    \end{itemize}
 \end{itemize}
 
 
