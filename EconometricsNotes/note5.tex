@@ -903,7 +903,8 @@ then we have the convergence
     \item \myhl[myblue]{\textbf{Separately exchangeable arrays}} For the case of separately exchangeable arrays (the $n$ units stem from $k$ \textbf{different} populations, or multiway clustering as in \citet{menzel2021bootstrap}), then the assumptions must be strengthened
     \begin{assumption}{Stronger assumptions for separately exchangeable arrays}{strong_sep_exc_array}
         Consider randome variables $Y_{\mathbf{i}}$ where $\mathbf{i}=\left(i_1,\cdots,i_k\right) \in \mathbb{N}^{+k}$, implying that repetitions are allowed. Then assume that for any $\left(\pi_1,\cdots,\pi_k\right)\in\mathfrak{S}\left(\mathbb{N}^+\right)^k$,
-        $$ \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{N}^{+k}}  $$
+        $$ \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{N}^{+k}} \overset{d}{=} \left(Y_{\pi_1(i_1),\cdots,\pi_k(i_k)}\right)_{\mathbf{i}\in\mathbb{N}^{+k}} $$
+        and for any $A,B$, disjoint subsets of $\mathbb{N}^+$, $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in A^k}$ is independent of $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in B^k}$.
     \end{assumption}
 \end{itemize}
 
