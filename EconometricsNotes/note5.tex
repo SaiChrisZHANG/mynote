@@ -911,7 +911,12 @@ then we have the convergence
         \item $\mathbf{1} = \left(1,\cdots,1\right)$
         \item $\mathbf{n} = \left(n_1,\cdots,n_k\right)$, where $n_j\geq 1$ denotes the number of units observed in population (or cluster) $j$, in general, $n_j\neq n_{j'}$ for $j\neq j'$
         \item sample at hand: $\left(Y_{\mathbf{i}}\right)_{\mathbf{1\leq i\leq n}}$, where $\mathbf{i}\geq \mathbf{i}'$ means that $i_j\geq i'_j$, $\forall j=1,\cdots,k$.
+        \item $\underbar{n} = \min\left(n_1,\cdots,n_k\right)$
     \end{itemize}
+    then the empirical measure and empirical process for separately exchagneable arrays are 
+    \begin{align*}
+        \mathbb{P}_nf &=\frac{1}{\prod^k_{j=1}n_j}\sum_{\mathbf{1\leq i\leq n}}f(Y_{\mathbf{i}}) & \mathbb{G}_n f& = \sqrt{\underbar{n}}\left(\mathbb{P}_n f-Pf\right)
+    \end{align*}
 \end{itemize}
 
 
