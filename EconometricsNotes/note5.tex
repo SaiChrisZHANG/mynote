@@ -929,6 +929,10 @@ then we have the convergence
     as with multisample U-statistics, assume an index $m\in \mathbb{N}^+$ and increasing functions $g_1,\cdots,g_k$ s.t. for all $j$, $n_j=g_j\left(m\right)\xrightarrow{m\rightarrow\infty} \infty$, and w.l.o.g., $\forall m\in\mathbb{N}^+$, $\exists j$ s.t. $g_j(m+1)>g_j(m)$, then  
     \begin{theorem}{Bootstrap Convergence: Separately Exchangeable Arrays}{bootstrap_conv_sepexcharray}
         Under Assumption \ref{assump:measurability_assumption} and \ref{assump:strong_sep_exc_array} and for every $j=1,\cdots,k$, $\exists\lambda_j\geq0$ s.t. $\underbar{n}/n_j \rightarrow \lambda_j \geq 0$, then 
+        \begin{itemize}
+            \item[1] If (A) of Assumption \ref{assump:assumptions_on_f} holds, $\sup_{f\in\mathcal{F}} \left\vert \mathbb{P}_{\mathbf{n}}f - Pf \right\vert \xrightarrow{\mathrm{a.s.}} 0$ and in $L^1$
+            \item[2] If (B-i) of Assumption \ref{assump:assumptions_on_f} holds, the process $\mathbb{G}_n$ coverges weakly in $l^{\infty}(\mathcal{F})$ to a centered Gaussian process $\mathbb{G}_{\lambda}$ on $\mathcal{F}$ as $n$ tends to infinity
+        \end{itemize}
     \end{theorem}
 \end{itemize}
 
