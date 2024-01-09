@@ -881,7 +881,7 @@ then we have the convergence
     conditional on $\left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{I}_k}$, $\sqrt{n}\left(\hat{\theta}^*-\hat{\theta}\right)\xrightarrow{\mathrm{d}} \mathcal{N}\left(0, \mathbb{V}\left(g'_{F_Y}\left(\mathbb{G}\right)\right)\right)$, almost surely.
 \end{theorem}
 
-\paragraph*{Extensions}
+\subsubsection{Extensions}
 \citet{davezies2021empirical} also considered several extensions of the main results:
 \begin{itemize}
     \item \myhl[myblue]{\textbf{Degenerate cases}}: consider the simple $k=2$ situations where $K(f,f)=0, \forall f\in\mathcal{F}$. 
@@ -900,7 +900,7 @@ then we have the convergence
         \mathbb{G}^{m*}_{n}:f \mapsto \frac{1}{\sqrt{n}}\sum^n_{i_1=1} \xi_{i_1} \left(\frac{1}{n-1}\sum_{1\leq i_2\neq i_1\leq n} \left[f(Y_{i_1,i_2})+f(Y_{i_2,i_1})\right] - 2\mathbb{P}_n f\right)
     \end{equation*}
     also outer almost surely converges weakly in $l^{\infty}(\mathcal{F})$ to $\mathbb{G}$, just as the proposed process $\mathbb{G}_n^*$.
-    \item \myhl[myblue]{\textbf{Separately exchangeable arrays}} For the case of separately exchangeable arrays (the $n$ units stem from $k$ \textbf{different} populations, or multiway clustering as in \citet{menzel2021bootstrap}), then we must assume a stronger version of Assumption \ref{assump:jexch_diss_array}
+    \item \myhl[myblue]{\textbf{Separately exchangeable arrays}} For the case of separately exchangeable arrays (the $n$ units stem from $k$ \textbf{different} populations, or multiway clustering as in \citet{menzel2021bootstrap}), we must assume a stronger version of Assumption \ref{assump:jexch_diss_array}
     \begin{assumption}{Stronger assumptions for separately exchangeable arrays}{strong_sep_exc_array}
         Consider randome variables $Y_{\mathbf{i}}$ where $\mathbf{i}=\left(i_1,\cdots,i_k\right) \in \mathbb{N}^{+k}$, implying that repetitions are allowed. Then assume that for any $\left(\pi_1,\cdots,\pi_k\right)\in\mathfrak{S}\left(\mathbb{N}^+\right)^k$,
         $$ \left(Y_{\mathbf{i}}\right)_{\mathbf{i}\in\mathbb{N}^{+k}} \overset{d}{=} \left(Y_{\pi_1(i_1),\cdots,\pi_k(i_k)}\right)_{\mathbf{i}\in\mathbb{N}^{+k}} $$
@@ -941,6 +941,8 @@ then we have the convergence
     \end{theorem}
     Here, the case where $\lambda_j=0$ for some $j$ corresponds to \textbf{strongly unbalanced} designs with different rates of convergence to $\infty$ along the different dimensions of the array. In such case, only the dimensions with the slowest rate of convergence contribute to the asymptotic distribution.
 \end{itemize}
+
+\subsection{CLT for heterogeneous clusters}
 
 
 \newpage
