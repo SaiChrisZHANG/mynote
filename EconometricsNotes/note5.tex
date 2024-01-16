@@ -978,7 +978,12 @@ then we have $A_{ij}=A_{ji}$ and $A_{ii}=1$. \citet{yap2023general} established 
 \begin{theorem}{Asymptotic Normality of \citet{yap2023general}}{asymp_norm_yap2023}
     Under Assumption \ref{assump:assump_yap2023}, $$Q_n^{-1/2} \sum^n_{i=1} \omega_i \left(\mathbf{W}_i-\mathbb{E}\left[\mathbf{W}_i\right]\right) \xrightarrow{\mathrm{d}} \mathcal{N}\left(0,\mathbf{I}_K\right) $$ further 
     \begin{itemize}
-        \item if $\mathbb{E}\left[\mathbf{W}_i\right] = 0,\forall i$, then $Q_n^{-1}\hat{Q}_n\xrightarrow{\mathrm{p}} \mathbf{I}_K$, where $\hat{Q}_n\coloneq \sum_i\sum_{j\in\mathcal{N}_i}\omega_i\omega_j \mathbf{W}_i \mathbf{W}_j'$
+        \item If $\mathbb{E}\left[\mathbf{W}_i\right] = 0,\forall i$, then $Q_n^{-1}\hat{Q}_n\xrightarrow{\mathrm{p}} \mathbf{I}_K$, where $\hat{Q}_n\coloneq \sum_i\sum_{j\in\mathcal{N}_i}\omega_i\omega_j \mathbf{W}_i \mathbf{W}_j'$
+        \item If $\mathbb{E}\left[\mathbf{W}_i\right] = \mu, \forall i$ and $\frac{1}{\lambda_n} \sum_c\sum_{i,j\in\mathcal{N}^C_c}\left\vert \omega_i\omega_j \right\vert \leq K_0$ for some $K_0<\infty$, then
+        \begin{align*}
+            \bar{\mathbf{W}}&\xrightarrow{\mathrm{p}}\mu & Q_n^{-1}\hat{Q}_n\xrightarrow{\mathrm{p}}\mathbf{I}_K
+        \end{align*}
+        for $\hat{\mathbf{W}} = \left(\sum_i \omega_i \mathbf{W}_i\right)/\left(\sum_j\omega_j\right)$ and $\hat{Q}_n\coloneq \sum_i\sum_{j\in\mathcal{N}_i}\omega_i\omega_j \left(\mathbf{W}_i-\bar{\mathbf{W}}\right) \left(\mathbf{W}_j-\bar{\mathbf{W}}\right)'$
     \end{itemize}
 \end{theorem}
 
