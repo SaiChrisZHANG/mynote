@@ -961,7 +961,7 @@ Consider 2 clustering dimension $G$ and $H$, then
 Several assumptions are imposed to establish the main result
 \begin{assumption}{Assumptions of \citet{yap2023general}}{assump_yap2023}
     \begin{itemize}
-        \item[1] {\textbf{dependence structure}}: $W_i \perp W_j $ if $g(i)\neq g(j)$ and $h(i)\neq h(j)$
+        \item[1] {\textbf{dependence structure}}: $\mathbf{W}_i \perp \mathbf{W}_j $ if $g(i)\neq g(j)$ and $h(i)\neq h(j)$
         \item[2] {\textbf{additional assumptions}}: For $C\in \left\{G,H\right\}$ and $k\in \left\{ 1,2,\cdots,K \right\}$, $\exists K_0<\infty$ s.t. 
         \begin{itemize}
             \item $\forall i, \mathbb{E}\left[W_{ik}^4\right] \leq K_0$: bounded fourth moment, stronger than the one-way clustering condition.
@@ -972,13 +972,13 @@ Several assumptions are imposed to establish the main result
 \end{assumption}
 The key feature of Assumption \ref{assump:assump_yap2023} (1) is that it is agnostic about the dependent structure when $W_i$ and $W_j$ share at least one cluster. The DGP can be arbitrarily heterogeneous across different clusters. Consider a $0-1$ indicator:
 $$
-A_{ij} \coloneq \mathbf{1}\left[W_i \not\perp W_j\right]
+A_{ij} \coloneq \mathbf{1}\left[\mathbf{W}_i \not\perp \mathbf{W}_j\right]
 $$
 then we have $A_{ij}=A_{ji}$ and $A_{ii}=1$. \citet{yap2023general} established the following results 
 \begin{theorem}{Asymptotic Normality of \citet{yap2023general}}{asymp_norm_yap2023}
-    Under Assumption \ref{assump:assump_yap2023}, $$Q_n^{-1/2} \sum^n_{i=1} \omega_i \left(W_i-\mathbb{E}\left[W_i\right]\right) \xrightarrow{\mathrm{d}} \mathcal{N}\left(0,\mathbf{I}_K\right) $$ further 
+    Under Assumption \ref{assump:assump_yap2023}, $$Q_n^{-1/2} \sum^n_{i=1} \omega_i \left(\mathbf{W}_i-\mathbb{E}\left[\mathbf{W}_i\right]\right) \xrightarrow{\mathrm{d}} \mathcal{N}\left(0,\mathbf{I}_K\right) $$ further 
     \begin{itemize}
-        \item 
+        \item if $\mathbb{E}\left[\mathbf{W}_i\right] = 0,\forall i$, then $Q_n^{-1}\hat{Q}_n\xrightarrow{\mathrm{p}} \mathbf{I}_K$, where $\hat{Q}_n\coloneq \sum_i\sum_{j\in\mathcal{N}_i}\omega_i\omega_j \mathbf{W}_i \mathbf{W}_j'$
     \end{itemize}
 \end{theorem}
 
