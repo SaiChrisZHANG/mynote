@@ -1000,6 +1000,7 @@ and the commonly cluster-robust variance estimators take the form of
 \begin{equation*}
     \hat{V}_{\hat{\boldsymbol{\theta}}}^{\mathrm{CR}} = a_n \left(\sum^G_{g=1} \mathbf{X}'_g\mathbf{X}_g \right)^{-1} \left(\sum^G_{g=1} \hat{\mathbf{S}}_g \hat{\mathbf{S}}'_g \right) \left(\sum^G_{g=1} \mathbf{X}'_g\mathbf{X}_g \right)^{-1}
 \end{equation*}
+where $a_n\rightarrow 1$ is a suitable finite-sample adjustment, and $\hat{\mathbf{S}}_g =\sum^{N_g}_i=1\mathbf{X}_{gi}\hat{U}_{gi}$ with $\hat{U}_{gi} = Y_{gi} - \mathbf{X}'_{gi}\hat{\boldsymbol{\theta}}$
 
 \newpage
 \bibliographystyle{plainnat}
