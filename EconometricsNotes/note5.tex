@@ -988,7 +988,11 @@ then we have $A_{ij}=A_{ji}$ and $A_{ii}=1$. \citet{yap2023general} established 
 \end{theorem}
 
 \subsection{Robust clustering with a small number of large clusters}
-\citet{sasaki2022non} established robust clustering for the cases wher the distribution of cluster sizes follows a power law with exponent less than 2, the conventional clustering method fails\footnote{That is, $\sup_g N_g/N\not\rightarrow 0$. An example is that California consists of 10\% of total sample among the 51 US states.}.
+\citet{sasaki2022non} established robust clustering for the cases wher the distribution of cluster sizes follows a power law with exponent less than 2, the conventional clustering method fails\footnote{That is, $\sup_g N_g/N\not\rightarrow 0$. An example is that California consists of 10\% of total sample among the 51 US states.}. Conssider again the linear model
+\begin{align*}
+    Y_{gi} &= \mathbf{X}_{gi}'\boldsymbol{\theta} + U_{gi} & \mathbb{E}\left[\mathbf{U}_{g}\mid \mathbf{X}_g\right]=0
+\end{align*}
+with a clustered sample $\left\{ \left\{ \left(Y_{gi},\mathbf{X}'_{gi}\right)' \right\}^{N_g}_{i=1} \right\}^G_{g=1}$ for the linear model 
 
 \newpage
 \bibliographystyle{plainnat}
