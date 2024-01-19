@@ -992,7 +992,10 @@ then we have $A_{ij}=A_{ji}$ and $A_{ii}=1$. \citet{yap2023general} established 
 \begin{align*}
     Y_{gi} &= \mathbf{X}_{gi}'\boldsymbol{\theta} + U_{gi} & \mathbb{E}\left[\mathbf{U}_{g}\mid \mathbf{X}_g\right]=0
 \end{align*}
-with a clustered sample $\left\{ \left\{ \left(Y_{gi},\mathbf{X}'_{gi}\right)' \right\}^{N_g}_{i=1} \right\}^G_{g=1}$ for the linear model 
+with a clustered sample $\left\{ \left\{ \left(Y_{gi},\mathbf{X}'_{gi}\right)' \right\}^{N_g}_{i=1} \right\}^G_{g=1}$. The OLS estimator gives 
+\begin{equation*}
+    \hat{\boldsymbol{\theta}} = \left(\sum^G_{g=1}\sum^{N_g}_{i=1}\mathbf{X}_gi\mathbf{X}'_{gi}\right)^{-1} \left(\sum^G_{g=1}\sum^{N_g}_{i=1}\mathbf{X}_{gi}Y_{gi}\right) = \left(\sum^G_{g=1}\mathbf{X}\right)
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
