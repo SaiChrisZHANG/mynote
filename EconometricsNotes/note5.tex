@@ -1002,7 +1002,7 @@ and the commonly cluster-robust variance estimators take the form of
 \end{equation*}
 where $a_n\rightarrow 1$ is a suitable finite-sample adjustment, and $\hat{\mathbf{S}}_g =\sum^{N_g}_i=1\mathbf{X}_{gi}\hat{U}_{gi}$ with $\hat{U}_{gi} = Y_{gi} - \mathbf{X}'_{gi}\hat{\boldsymbol{\theta}}$. Conventionally, the adjustment is 
 $$
-a_n = \left( \frac{\sum^G_{g=1}N_g-1}{} \right)
+a_n = \left( \frac{\sum^G_{g=1}N_g-1}{\sum^G_{g=1} N_g -p} \right) \left(\frac{G}{G-1}\right)
 $$
 
 \newpage
