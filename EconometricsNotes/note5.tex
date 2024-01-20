@@ -1004,7 +1004,10 @@ where $a_n\rightarrow 1$ is a suitable finite-sample adjustment, and $\hat{\math
 $$
 a_n = \left( \frac{\sum^G_{g=1}N_g-1}{\sum^G_{g=1} N_g -p} \right) \left(\frac{G}{G-1}\right)
 $$
-with $p$ denoting the dimension of $\mathbf{X}_{gi}$.
+with $p$ denoting the dimension of $\mathbf{X}_{gi}$. Asymptotically,
+\begin{align*}
+    \sqrt{G}\left( \hat{\boldsymbol{\theta}} - \boldsymbol{\theta} \right) = \underbrace{\left(\frac{1}{G}\sum^G_{g=1}\sum^{N_g}_{i=1}\mathbf{X}_{gi}\mathbf{X}'_{gi}\right)^{-1}}_{\xrightarrow{\mathrm{p}}\mathbf{Q}} 
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
