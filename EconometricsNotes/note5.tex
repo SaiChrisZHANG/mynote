@@ -1006,7 +1006,7 @@ a_n = \left( \frac{\sum^G_{g=1}N_g-1}{\sum^G_{g=1} N_g -p} \right) \left(\frac{G
 $$
 with $p$ denoting the dimension of $\mathbf{X}_{gi}$. Asymptotically,
 \begin{align*}
-    \sqrt{G}\left( \hat{\boldsymbol{\theta}} - \boldsymbol{\theta} \right) = \underbrace{\left(\frac{1}{G}\sum^G_{g=1}\sum^{N_g}_{i=1}\mathbf{X}_{gi}\mathbf{X}'_{gi}\right)^{-1}}_{\xrightarrow{\mathrm{p}}\mathbf{Q}} 
+    \sqrt{G}\left( \hat{\boldsymbol{\theta}} - \boldsymbol{\theta} \right) = \left( \underbrace{\frac{1}{G}\sum^G_{g=1}\sum^{N_g}_{i=1}\mathbf{X}_{gi}\mathbf{X}'_{gi}}_{\xrightarrow{\mathrm{p}}\mathbf{Q}} \right)^{-1} \left( \underbrace{ \frac{1}{\sqrt{G}} \sum^G_{g=1} \sum^{N_g}_{i=1} \mathbf{X}_{gi}U_{gi} } \right)
 \end{align*}
 
 \newpage
