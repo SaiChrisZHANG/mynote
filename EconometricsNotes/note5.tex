@@ -1036,6 +1036,14 @@ here, the tail of the distribution of $N_g$ dominates that of $Z_{gi}$, the tail
 the $r-$th moment of $\sum_g$ might still be infinite if $r>\beta$. Hence, the conventional robust clustering may fail to exist even if $Z_{gi}$ has a bounded second moment. \citet{sasaki2022non} illustrated this problem with state clustering of PSID and 
 some recent studies published on Econometrica. The way they choose to show that $\beta<2$ is by using the Hill plot \citep{drees2000make}.
 
+\paragraph*{Proposed alternative estimators} \citet{sasaki2022non} proposed an simple fix as 
+\begin{align*}
+    \hat{\boldsymbol{\theta}}^{\mathrm{WCR}} &= \left(\sum^G_{g=1}N^{-1}_{g}\sum^{N_g}_{i=1}\mathbf{X}_gi\mathbf{X}'_{gi}\right)^{-1} \left(\sum^G_{g=1}N^{-1}_{g}\sum^{N_g}_{i=1}\mathbf{X}_{gi}Y_{gi}\right) = \left(\sum^G_{g=1}N^{-1}_{g}\mathbf{X}'\mathbf{X}\right)^{-1}\left(\sum^G_{g=1}N^{-1}_{g}\mathbf{X}'_g\mathbf{Y}_g\right) \\
+    \hat{V}_{\hat{\boldsymbol{\theta}}}^{\mathrm{WCR}} &= a_n \left(\sum^G_{g=1} N^{-1}_{g}\mathbf{X}'_g\mathbf{X}_g \right)^{-1} \left(\sum^G_{g=1} N^{-2}_{g}\hat{\mathbf{S}}_g \hat{\mathbf{S}}'_g \right) \left(\sum^G_{g=1}N^{-1}_{g} \mathbf{X}'_g\mathbf{X}_g \right)^{-1}
+\end{align*}
+
+and the commonly cluster-robust variance estimators take the form of 
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
