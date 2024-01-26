@@ -1041,7 +1041,10 @@ some recent studies published on Econometrica. The way they choose to show that 
     \hat{\boldsymbol{\theta}}^{\mathrm{WCR}} &= \left(\sum^G_{g=1}N^{-1}_{g}\sum^{N_g}_{i=1}\mathbf{X}_gi\mathbf{X}'_{gi}\right)^{-1} \left(\sum^G_{g=1}N^{-1}_{g}\sum^{N_g}_{i=1}\mathbf{X}_{gi}Y_{gi}\right) = \left(\sum^G_{g=1}N^{-1}_{g}\mathbf{X}'\mathbf{X}\right)^{-1}\left(\sum^G_{g=1}N^{-1}_{g}\mathbf{X}'_g\mathbf{Y}_g\right) \\
     \hat{V}_{\hat{\boldsymbol{\theta}}}^{\mathrm{WCR}} &= a_n \left(\sum^G_{g=1} N^{-1}_{g}\mathbf{X}'_g\mathbf{X}_g \right)^{-1} \left(\sum^G_{g=1} N^{-2}_{g}\hat{\mathbf{S}}_g \hat{\mathbf{S}}'_g \right) \left(\sum^G_{g=1}N^{-1}_{g} \mathbf{X}'_g\mathbf{X}_g \right)^{-1}
 \end{align*}
-where $a_n\rightarrow 1$. Again, for a given $k\in \left\{1,\cdots, p\right\}$, let $\sum_g$ and $Z_{gi}$ be the $k$-th coordinate of $\sum^{N_g}_{i=1} \mathbf{X}_{gi}U_{gi}$ and the $k-$th coordinate of $ \mathbf{X}_{gi}U_{gi}$ respectively, 
+where $a_n\rightarrow 1$. Again, for a given $k\in \left\{1,\cdots, p\right\}$, let $\sum_g$ and $Z_{gi}$ be the $k$-th coordinate of $\sum^{N_g}_{i=1} \mathbf{X}_{gi}U_{gi}$ and the $k-$th coordinate of $ \mathbf{X}_{gi}U_{gi}$ respectively, and then similar to Thm.\ref{thm:sasakiwang2022thm1},
+\begin{theorem}{\citet{sasaki2022non}'s Modified }{}
+    If $\beta<\alpha$, then $\forall z>0$, as $t\rightarrow\infty$ $$ \frac{\mathbb{P}\left(\sum_g > zt\right)}{\mathbb{P}\left(\sum_g >t\right)} = z^{-\beta} $$
+\end{theorem}
 
 \newpage
 \bibliographystyle{plainnat}
