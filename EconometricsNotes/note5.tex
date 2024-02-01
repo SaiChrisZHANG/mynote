@@ -1075,6 +1075,11 @@ the goal is to show the \textbf{asymptotic Gaussianity} of $\hat{\theta}_{NT}$. 
 \begin{equation*}
     \hat{\theta}_{NT} = \underbrace{\sum^N_{i=1}a_i + \sum^T_{t=1}b_t}_{\coloneq L_{NT}} + \underbrace{\sum^N_{i=1}\sum^T_{t=1}w_{it}}_{\coloneq W_{NT}} + \underbrace{\sum^N_{i=1}\sum^T_{t=1}r_{it}}_{\coloneq R_{NT}}
 \end{equation*}
+where 
+\begin{align*}
+    a_i &= \frac{1}{N}\mathbb{E}\left[D_{it}\mid \alpha_i\right] & b_t &= \frac{1}{T}\mathbb{E}\left[D_{it}\mid \gamma_t\right] \\
+    w_{it} &= \frac{1}{NT}\left(\mathbb{E}\left[D_{it}\right]\right)
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
