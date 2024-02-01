@@ -1080,7 +1080,13 @@ where
     a_i &= \frac{1}{N}\mathbb{E}\left[D_{it}\mid \alpha_i\right] & b_t &= \frac{1}{T}\mathbb{E}\left[D_{it}\mid \gamma_t\right] \\
     w_{it} &= \frac{1}{NT}\left(\mathbb{E}\left[D_{it}\mid \alpha_i,\gamma_t\right]-\mathbb{E}\left[D_{it}\mid \alpha_i\right] - \mathbb{E}\left[D_{it}\mid \gamma_t\right]\right) & r_{it} &=\frac{1}{NT}\left(D_{it}-\mathbb{E}\left[D_{it}\mid \alpha_i,\gamma_t\right]\right)
 \end{align*}
-straightforwardly, $\mathbb{E}\left[a_i\right]=\mathbb{E}\left[b_t\right] = \mathbb{E}\left[w_{it}\right] = \mathbb{E}\left[r_{it}\right]=0$.
+straightforwardly,
+\begin{align*}
+    \mathbb{E}\left[a_i\right]=\mathbb{E}\left[b_t\right] = \mathbb{E}\left[w_{it}\right] = \mathbb{E}\left[r_{it}\right]&=0\\
+    \mathbb{E}\left[w_{it}\mid \alpha_i\right] = \mathbb{E}\left[w_{it}\mid \gamma_t\right] &=0 \\
+    \mathbb{E}\left[a_iw_{it}\right] = \mathbb{E}\left[a_ir_{it}\right] = \mathbb{E}\left[gamma_tw_{it}\right] = \mathbb{E}\left[gamma_t r_{it}\right] &=0
+\end{align*}
+
 
 
 \newpage
