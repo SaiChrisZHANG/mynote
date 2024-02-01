@@ -1078,7 +1078,7 @@ the goal is to show the \textbf{asymptotic Gaussianity} of $\hat{\theta}_{NT}$. 
 where 
 \begin{align*}
     a_i &= \frac{1}{N}\mathbb{E}\left[D_{it}\mid \alpha_i\right] & b_t &= \frac{1}{T}\mathbb{E}\left[D_{it}\mid \gamma_t\right] \\
-    w_{it} &= \frac{1}{NT}\left(\mathbb{E}\left[D_{it}\right]\right)
+    w_{it} &= \frac{1}{NT}\left(\mathbb{E}\left[D_{it}\mid \alpha_i,\gamma_t\right]-\mathbb{E}\left[D_{it}\mid \alpha_i\right] - \mathbb{E}\left[D_{it}\mid \gamma_t\right]\right)
 \end{align*}
 
 \newpage
