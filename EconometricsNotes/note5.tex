@@ -1092,6 +1092,15 @@ here, $W_{NT}=\sum^N_{i=1}\sum^T_{t=1}w_{it}$ is the potentially non-guassian pa
 \end{equation*}
 where $\left\{\alpha_{ij}\right\}^J_{j=0}$ are $i-$specific latent factors, $\left\{\gamma_{tj}\right\}^J_{j=0}$ are $t-$specific latent factors, $\epsilon_{it}$ is an idiosyncratic component. Suppose that the factor loading $\lambda_j$ are non-zero, then \citet{chiang2023using} provide a 
 summary on when to use the TWCR standard error for $\hat{\theta}=\left(NT\right)^{-1}\sum^N_{i=1}\sum^T_{t=1}D_{it}$:
+\begin{table}[h!]
+    \caption{\citet{chiang2023using}'s Summary on TWCR SE Validity}
+    \begin{center}
+        \begin{tabular}{ccccc}
+        Small $J$ & $\alpha_{i0}$ & $\gamma_{t0}$ & $\epsilon_{it}$ & TWCR SE valid? \\
+        True
+        \end{tabular}
+    \end{center}
+\end{table}
 
 \newpage
 \bibliographystyle{plainnat}
