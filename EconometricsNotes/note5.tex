@@ -1107,6 +1107,11 @@ Except for the extreme case where \myhl[myblue]{the number of factors $J$ is \te
 \section{Clustering in Experiments}
 \subsection{When to cluster}
 \citet{abadie2023should} highlight 3 common misconceptions on clustering adjustments:
+\begin{itemize}
+    \item clustering when there is a nonzero correlation between residuals for units within the same cluster
+    \item when clustering makes a difference, one should cluster
+    \item either fully adjust for clustering, or not at all
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
