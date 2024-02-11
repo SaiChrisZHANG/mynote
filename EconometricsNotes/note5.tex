@@ -1138,8 +1138,16 @@ Thus, the population is characterized by triples $\left(m_{k,i},y_{k,i}(0),y_{k,
 naturally. we have $$ \tau_k = \sum^{m_k}_{m=1}\frac{n_{k,m}}{n_k} \tau_{k,m} $$
 For unit $i$ in population $k$, there are 2 components of the stochastic nature: 
 \begin{itemize}
-    \item[1] \myhl[myblue]{\textbf{Sampling process}}
-    \item[2] \myhl[myblue]{\textbf{Assignment process}} 
+    \item \myhl[myblue]{\textbf{Sampling process}}: a random variable $R_{k,i}=1$ if unit $i$ belongs to the sample, $0$ if not. The sampling process is independent of the potential outcomes and the assignments, and consists of 2 stages  
+    \begin{itemize}
+        \item[\textbf{i}] clusters are sampled with cluster sampling probability $q_k\in(0,1]$ 
+        \begin{itemize}
+            \item $q_k=1$: sample all clusters
+            \item $q_k\right 0$: only a small fraction of the clusters sampled
+        \end{itemize}
+        \item[\textbf{ii}] units are sampled from the subpopulation consisting of all the sampled clusters, with probability $p_k\in (0,1]$
+    \end{itemize}
+    \item \myhl[myblue]{\textbf{Assignment process}} 
 \end{itemize}
 
 \newpage
