@@ -1135,8 +1135,12 @@ Thus, the population is characterized by triples $\left(m_{k,i},y_{k,i}(0),y_{k,
     \item \myhl[myblue]{\textbf{population ATE}} $$ \tau _k = \frac{1}{n_k}\sum^{n_k}_{i=1} \left(y_{k,i}(1) - y_{k,0}(0)\right) $$
     \item \myhl[myblue]{\textbf{population ATE by clutser}} $$ \tau_{k,m} = \frac{1}{n_{k,m}} \sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\} \left(y_{k,i}(1)-y_{k,i}(0)\right) $$
 \end{itemize}
-naturally. we have 
-
+naturally. we have $$ \tau_k = \sum^{m_k}_{m=1}\frac{n_{k,m}}{n_k} \tau_{k,m} $$
+For unit $i$ in population $k$, there are 2 components of the stochastic nature: 
+\begin{itemize}
+    \item[1] \myhl[myblue]{\textbf{Sampling process}}
+    \item[2] \myhl[myblue]{\textbf{Assignment process}} 
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
