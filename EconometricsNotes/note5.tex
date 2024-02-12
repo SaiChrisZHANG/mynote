@@ -1154,7 +1154,10 @@ For unit $i$ in population $k$, there are 2 components of the stochastic nature:
     \end{itemize}
     \item \myhl[myblue]{\textbf{Assignment process}} the stochastic treatment indicator $W_{k,i}\in\left\{0,1\right\}$ is determined by a 2-stage process as well:
     \begin{itemize}
-        \item[\textbf{i}]
+        \item[\textbf{i}] for cluster $m$ in population $k$, \textbf{randomly} draw an assignment probability $A_{k,m}\in\left[0,1\right]$ from a distribution with $\mu_k$ (bounded away from 0 and 1 uniformly in $k$), variance $\sigma^2_k$, \textbf{independently} for each cluster
+        \begin{itemize}
+            \item $\sigma^2_k=0$: $A_{k,m}$ is the same across all clusters, i.e., \textbf{random assignment}
+        \end{itemize}
         \item[\textbf{ii}] 
     \end{itemize}
 \end{itemize}
