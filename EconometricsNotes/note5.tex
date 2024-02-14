@@ -1176,10 +1176,10 @@ be the number of \textbf{treated} and \textbf{untreated} units in the sample (bo
 $$
 Y_{k,i} = \alpha + \tau_k W_{k,i} + \epsilon_{k,i}
 $$
-the OLS estimator of $\beta$ is equal to the difference in means:
+the OLS estimator of $\beta$ is equal to the difference in means\footnote{$\leftarrow$ $a\vee b = \max\left\{a,b\right\}$}:
 \begin{equation*}
     \hat{\tau}_k = \frac{1}{N_{k,1}\vee 1}\sum^{n_k}_{i=1}R_{k,i}W_{k,i}Y_{k,i} - \frac{1}{N_{k,0}\vee 1}\sum^{n_k}_{i=1}R_{k,i}(1-W_{k,i})Y_{k,i}
-\end{equation*}\sidenotes{$\leftarrow$ $a\vee b = \max\left\{a,b\right\}$}
+\end{equation*}
 
 
 \newpage
