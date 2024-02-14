@@ -1274,10 +1274,10 @@ Package rerunfilecheck Info: File `note5.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1189.
  ) 
 Here is how much of TeX's memory you used:
- 36951 strings out of 492649
- 866841 string characters out of 6129623
- 1075844 words of memory out of 5000000
- 39924 multiletter control sequences out of 15000+600000
+ 36950 strings out of 492649
+ 866829 string characters out of 6129623
+ 1075827 words of memory out of 5000000
+ 39923 multiletter control sequences out of 15000+600000
  127378 words of font info for 217 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,20n,136p,1070b,1325s stack positions out of 5000i,500n,10000p,200000b,80000s
