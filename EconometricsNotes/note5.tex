@@ -1182,8 +1182,9 @@ the OLS estimator of $\beta$ is equal to the difference in means\footnote{$\left
 \end{equation*}
 \citet{abadie2023should} assume that 
 \begin{itemize}
-    \item $m_kq_k\rightarrow \infty$
-    \item $\lim\inf_{k\rightarrow \infty} p_k \min_m n_{k,m} > 0 $
+    \item $m_kq_k\rightarrow \infty$: the expected number of sampled clusters goes to infinity
+    \item $\lim\inf_{k\rightarrow \infty} p_k \min_m n_{k,m} > 0 $: average number of observations sampled per cluster (conditional on sampled) does not go to 0
+    \item $\lim \sup_{k\rightarrow \infty} \frac{\max_m n_{k,m}}{\min_n n_{k,m}} < \infty$
 \end{itemize}
 
 
