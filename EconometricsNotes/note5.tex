@@ -1180,6 +1180,11 @@ the OLS estimator of $\beta$ is equal to the difference in means\footnote{$\left
 \begin{equation*}
     \hat{\tau}_k = \frac{1}{N_{k,1}\vee 1}\sum^{n_k}_{i=1}R_{k,i}W_{k,i}Y_{k,i} - \frac{1}{N_{k,0}\vee 1}\sum^{n_k}_{i=1}R_{k,i}(1-W_{k,i})Y_{k,i}
 \end{equation*}
+\citet{abadie2023should} assume that 
+\begin{itemize}
+    \item $m_kq_k\rightarrow \infty$
+    \item $\lim\inf_{k\rightarrow \infty} p_k \min_m n_{k,m} > 0 $
+\end{itemize}
 
 
 \newpage
