@@ -1191,7 +1191,11 @@ the OLS estimator of $\beta$ is equal to the difference in means\footnote{$\left
 Let
 \begin{align*}
     \alpha_k &= \frac{1}{n_k}\sum^{n_k}_{i=1} y_{k,i}(0) & u_{k,i}(1) =& y_{k,i} - (\alpha_k+\tau_k) & u_{k,i}(0) &= y_{k,i}(0)-\alpha_k
-\end{align*} 
+\end{align*}
+then
+$$
+\frac{\sqrt{N_k} \left(\hat{\tau}_k-\tau_k\right)}{\sqrt{v_k}} \xrightarrow{d} \mathcal{N}\left(0,1\right)
+$$
 
 
 \newpage
