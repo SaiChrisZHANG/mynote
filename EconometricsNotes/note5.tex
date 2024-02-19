@@ -1209,7 +1209,7 @@ Under the following cases:
     \begin{equation*}
         v_k = \underbrace{\frac{1}{n_k} \sum^{n_k}_{i=1}\left( \frac{u_{k,i}^2(1)}{\mu_k} + \frac{u^2_{k,i}(0)}{1-\mu_k} \right)}_{\text{robust variance estimator}} - \underbrace{p_k \frac{1}{n_k} \sum^{n_k}_{i=1}\left(u_{k,i}(1)-u_{k,i}(0)\right)^2}_{\text{finite-sample correction}}
     \end{equation*} 
-    here, the finite-sample correction vanishes if there is either \textbf{no heterogeneity} in the treatment effects ($u_{k,i}(1)-u_{k,i}(0) = y_{k,i}(1)-y_{k,i}(0) - \tau_k=0$)
+    here, the finite-sample correction vanishes if there is either \textbf{no heterogeneity} in the treatment effects ($u_{k,i}(1)- u_{k,i}(0) = y_{k,i}(1)-y_{k,i}(0) - \tau_k=0$), or the sample is \textbf{small} ($p_k\simeq 0$)
 \end{itemize}
 
 
