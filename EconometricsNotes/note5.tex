@@ -1244,7 +1244,8 @@ The 5 terms of $v_k$ might be of \textbf{different} orders:
     \begin{equation*}
         \hat{V}_k^{\mathrm{robust}} = \frac{1}{\bar{W}^2_k\left(1-\bar{W}_k\right)^2} \left\{ \frac{1}{N_k}\sum^{n_k}_{i=1} R_{k,i}\hat{U}_{k,i}^2 \left(W_{k,i}-\bar{W}_k\right)^2 \right\}
     \end{equation*}
-    where $ \bar{W}_k = \frac{1}{N_k\vee 1} \sum^{n_k}_{i=1}R_{k,i}W_{k,i} $, let $v_k^{\text{robust}} = \frac{1}{n_k} \sum^{n_k}_{i=1}\left(\frac{u^2_{k,i}(1)}{\mu_k} + \frac{u^2_{k,i}(0)}{1-\mu_k}\right)$
+    where $ \bar{W}_k = \frac{1}{N_k\vee 1} \sum^{n_k}_{i=1}R_{k,i}W_{k,i} $, let $v_k^{\text{robust}} = \frac{1}{n_k} \sum^{n_k}_{i=1}\left(\frac{u^2_{k,i}(1)}{\mu_k} + \frac{u^2_{k,i}(0)}{1-\mu_k}\right)$, then under some regularity conditions, 
+    $$ \frac{\hat{V}_k^{\text{robust}}}{v_k} = \frac{v_k^{\text{robust}}}{v_k} + o_p(1) $$
     \item 
 \end{itemize}
 
