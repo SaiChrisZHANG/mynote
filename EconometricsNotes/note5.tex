@@ -1247,7 +1247,10 @@ The 5 terms of $v_k$ might be of \textbf{different} orders:
     where $ \bar{W}_k = \frac{1}{N_k\vee 1} \sum^{n_k}_{i=1}R_{k,i}W_{k,i} $, let $v_k^{\text{robust}} = \frac{1}{n_k} \sum^{n_k}_{i=1}\left(\frac{u^2_{k,i}(1)}{\mu_k} + \frac{u^2_{k,i}(0)}{1-\mu_k}\right)$, then under some regularity conditions, 
     $$ \frac{\hat{V}_k^{\text{robust}}}{v_k} = \frac{v_k^{\text{robust}}}{v_k} + o_p(1) $$
     notice that $v_k^{\text{robust}} - v_k$ can be positive or negative in general, so the robust variance estimator can be invalid in large samples.
-    \item \myhl[myblue]{\textbf{cluster variance estimator}}:
+    \item \myhl[myblue]{\textbf{cluster variance estimator}}: 
+    \begin{equation*}
+        \hat{V}^{\text{cluster}}_k = \frac{1}{\bar{W}^2_k(1-\bar{W}_k)^2} \times \left\{ \frac{1}{N_k} \sum^{m_k}_{m=1}\left( \sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}\hat{U}_{k,i} \left(W_{k,i}-\bar{W}_k\right) \right)^2 \right\}
+    \end{equation*}
 \end{itemize}
 
 \newpage
