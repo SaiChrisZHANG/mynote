@@ -1266,7 +1266,8 @@ The 5 terms of $v_k$ might be of \textbf{different} orders:
 We have 
 \begin{align*}
     v_k^{\text{robust}} - v_k =&  p_k \frac{1}{n_k} \sum^{n_k}_{i=1}\left(u_{k,i}(1)-u_{k,i}(0)\right)^2 - p_k\left(1-q_k\right) \frac{1}{n_k}\sum^{m_k}_{m=1}\left(\sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} \left(u_{k,i}(1)-u_{k,i}(0)\right) \right)^2\\
-    &+ p_k\sigma^2_k \frac{1}{n_k} \sum^{n_k}_{i=1} \left( \frac{u_{k,i}(1)}{\mu_k} + \frac{u_{k,i}(0)}{1-\mu_k} \right)^2 - p_k\sigma^2_k \frac{1}{n_k}\sum^{m_k}_{m=1} \left(\sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} \left(\frac{u_{k,i}(1)}{\mu_k} + \frac{u_{k,i}(0)}{1-\mu_k}\right)\right)^2
+    &+ p_k\sigma^2_k \frac{1}{n_k} \sum^{n_k}_{i=1} \left( \frac{u_{k,i}(1)}{\mu_k} + \frac{u_{k,i}(0)}{1-\mu_k} \right)^2 - p_k\sigma^2_k \frac{1}{n_k}\sum^{m_k}_{m=1} \left(\sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} \left(\frac{u_{k,i}(1)}{\mu_k} + \frac{u_{k,i}(0)}{1-\mu_k}\right)\right)^2\\
+    =& p_k \frac{1}{n_k} \left[ sum^{n_k}_{i=1}\left(u_{k,i}(1)-u_{k,i}(0)\right)^2 - (1-q_k)\sum_{m_k}_{m=1}n^2_{k,m}\left(\tau_{k,m}-\tau_k\right)^2 \right]
 \end{align*}
 
 \newpage
