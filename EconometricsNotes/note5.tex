@@ -1276,6 +1276,10 @@ $$p_k\frac{1}{n_k}\left[ \sum^{n_k}_{i=1}\left(u_{k,i}(1)-u_{k,i}(0)\right)^2 - 
     \item $>0$ with \textbf{all clusters sampled}, $q_k=1$, and \textbf{heterogeneous treatment effects}
     \item \myhl[myblue]{\textbf{possibly} $<0$}: $q_k<1$ (only a fraction of clusters are sampled), and $n^2_{k,m}$ large enough.
 \end{itemize}
+and the second term
+$$
+p_k\sigma^2_k \frac{1}{n_k} \sum^{n_k}_{i=1} \left( \frac{u_{k,i}(1)}{\mu_k} + \frac{u_{k,i}(0)}{1-\mu_k} \right)^2 - p_k\sigma^2_k \frac{1}{n_k}\sum^{m_k}_{m=1} \left(\sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} \left(\frac{u_{k,i}(1)}{\mu_k} + \frac{u_{k,i}(0)}{1-\mu_k}\right)\right)^2
+$$
 
 
 \newpage
