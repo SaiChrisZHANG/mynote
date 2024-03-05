@@ -1285,9 +1285,15 @@ and the second term
 \begin{itemize}
     \item $=0$ if there is no clustered assignment: $\sigma^2_k=0$
     \item close to $0$ if the heterogeneity in potential outcomes is small: $u_{k,i}(1),u_{k,i}(0)$ close to $0$
-    \item $>0$ if: there is heterogeneity in potential outcomes, but average potential outcomes are \textbf{nearly constant} across clusters
-    \item $<0$ if 
+    \item $>0$ if there is heterogeneity in potential outcomes, but average potential outcomes are \textbf{nearly constant} across clusters
+    \item $<0$ if the clusters explain enough heterogeneity in potential outcomes, could be very large if $n_{k,m}$ is large
 \end{itemize}
+
+Compare $v^{\text{cluster}}_k$ and $v_k$, we have 
+\begin{align*}
+    v_k^{\text{cluster}} - v_k &= p_kq_k \frac{1}{n_k} \sum^{m_k}_{m=1}\left(\sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} \left(u_{k,i}(1)-u_{k,i}(0)\right) \right)^2\\
+    &= \left(\frac{p_kn_k}{m_k}\right) q_k \left\{ \frac{1}{m_k} \sum^{m_k}_{m=1} \left(\frac{n_{k,m}m_k}{n_k}\right)^2 \left(\tau_{k,m}-\tau_k\right)^2 \right\}
+\end{align*}
 
 
 
