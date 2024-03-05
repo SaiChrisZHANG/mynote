@@ -1294,7 +1294,10 @@ Compare $v^{\text{cluster}}_k$ and $v_k$, we have
     v_k^{\text{cluster}} - v_k &= p_kq_k \frac{1}{n_k} \sum^{m_k}_{m=1}\left(\sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} \left(u_{k,i}(1)-u_{k,i}(0)\right) \right)^2\\
     &= \left(\frac{p_kn_k}{m_k}\right) q_k \left\{ \frac{1}{m_k} \sum^{m_k}_{m=1} \left(\frac{n_{k,m}m_k}{n_k}\right)^2 \left(\tau_{k,m}-\tau_k\right)^2 \right\}
 \end{align*}
-
+hence, 
+\begin{itemize}
+    \item $v^{\text{cluster}}_k-v_k\geq 0$: cluster standard errors are conservative in general
+\end{itemize}
 
 
 \newpage
