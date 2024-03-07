@@ -1312,6 +1312,7 @@ first, approximate the normalized error of $\hat{\tau}_k$ by a normalized sample
 \begin{equation*}
     \frac{\sqrt{N_k}\left(\hat{\tau}_k-\tau_k\right)}{\sqrt{v_k}} = \frac{1}{\sqrt{n_kp_kv_k}\mu_k\left(1-\mu_k\right)}\sum^{m_k}_{m=1}C_{k,m} + o_p(1)
 \end{equation*}
+where $C_{k,m}=\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}\left(W_{k,i}-\mu_k\right) U_{k,i}$ are independent across clusters.
 
 \newpage
 \bibliographystyle{plainnat}
