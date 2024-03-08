@@ -1313,13 +1313,14 @@ first, approximate the normalized error of $\hat{\tau}_k$ by a normalized sample
     \frac{\sqrt{N_k}\left(\hat{\tau}_k-\tau_k\right)}{\sqrt{v_k}} = \frac{1}{\sqrt{n_kp_kv_k}\mu_k\left(1-\mu_k\right)}\sum^{m_k}_{m=1}C_{k,m} + o_p(1)
 \end{equation*}
 where $C_{k,m}=\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}\left(W_{k,i}-\mu_k\right) U_{k,i}$ are independent across clusters. Then 
-\begin{equation*}
-    \frac{\hat{V}^{\text{cluster}}_k}{v_k} = \frac{1}{n_kp_kv_k} \left(\frac{1}{\mu_k(1-\mu_k)}\right)^2 \sum^{m_k}_{m=1}C^2_{k,m} + o_p(1)
-\end{equation*}
-for the term $C_{k,m}$, its expectation $\mathbb{E}\left[C_{k,m}\right]$ is \textbf{not} 0 in general for each cluster separately, but equals to 0 when sum over \textbf{all} clusters:
+For the term $C_{k,m}$, its expectation $\mathbb{E}\left[C_{k,m}\right]$ is \textbf{not} 0 in general for each cluster separately, but equals to 0 when sum over \textbf{all} clusters:
 \begin{align*}
     \mathbb{E}\left[C_{k,m}\right] &= n_{k,m}p_k\mu_k \left(1-\mu_k\right)\left(\tau_{k,m}-\tau_k\right) & \sum^{m_k}_{m=1}\mathbb{E}\left[C_{k,m}\right] &= p_k\mu_k \left(1-\mu_k\right) \sum^{m_k}_{m=1} n_{k,m}\left(\tau_{k,m}-\tau_k\right) = 0
 \end{align*}
+Now, since we have 
+\begin{equation*}
+    \frac{\hat{V}^{\text{cluster}}_k}{v_k} = \frac{1}{n_kp_kv_k} \left(\frac{1}{\mu_k(1-\mu_k)}\right)^2 \sum^{m_k}_{m=1}C^2_{k,m} + o_p(1)
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
