@@ -1316,6 +1316,10 @@ where $C_{k,m}=\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}\left(W
 \begin{equation*}
     \frac{\hat{V}^{\text{cluster}}_k}{v_k} = \frac{1}{n_kp_kv_k} \left(\frac{1}{\mu_k(1-\mu_k)}\right)^2 \sum^{m_k}_{m=1}C^2_{k,m} + o_p(1)
 \end{equation*}
+for the term $C_{k,m}$, its expectation $\mathbb{E}\left[C_{k,m}\right]$ is \textbf{not} 0 in general for each cluster separately, but equals to 0 when sum over \textbf{all} clusters:
+\begin{align*}
+    \mathbb{E}\left[C_{k,m}\right] = n_{k,m}p_k\mu_k \left(1-\mu_k\right)\left(\tau_{k,m}-\tau_k\right)
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
