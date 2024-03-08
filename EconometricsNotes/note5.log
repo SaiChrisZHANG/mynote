@@ -1054,13 +1054,12 @@ File: t1zpltlf.fd 2015/01/17 v1.0 font definition file for T1/zpl/tlf
 )
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 4.
-
-No file note5.aux.
+ (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.aux)
 \openout1 = `note5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 4.
 LaTeX Font Info:    Try loading font information for OML+npxmi on input line 4.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/omlnpxmi.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
 LaTeX Font Info:    ... okay on input line 4.
@@ -1120,6 +1119,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
+ (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.out) (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.out)
 \@outlinefile=\write6
 \openout6 = `note5.out'.
 
@@ -1207,62 +1207,18 @@ File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 12.
-
-
-Package natbib Warning: Citation `kloek1981ols' on page 5-1 undefined on input line 43.
-
-
-Package natbib Warning: Citation `scott1982effect' on page 5-1 undefined on input line 43.
-
-
-Package natbib Warning: Citation `moulton1990illustration' on page 5-1 undefined on input line 43.
-
-[1
+ [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `eq:oneway_clurob' on page 5-2 undefined on input line 51.
-
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 7.3pt on input line 62.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 5.5pt on input line 62.
-
-Package natbib Warning: Citation `liang1986longitudinal' on page 5-2 undefined on input line 76.
-
-
-Package natbib Warning: Citation `arellano1987computing' on page 5-2 undefined on input line 77.
-
-
-Package natbib Warning: Citation `hansen2007asymptotic' on page 5-2 undefined on input line 78.
-
 LaTeX Font Info:    Font shape `T1/zpltlf/m/sl' will be
 (Font)              scaled to size 10.0pt on input line 85.
-[2]
-
-LaTeX Warning: Reference `eq:onewayclu_centralmat' on page 5-3 undefined on input line 92.
-
-
-LaTeX Warning: Reference `eq:twowayclu_decomp' on page 5-3 undefined on input line 120.
-
-[3]
-
-Package natbib Warning: Citation `white1980heteroskedasticity' on page 5-4 undefined on input line 129.
-
-
-LaTeX Warning: Reference `eq:oneway_clurob' on page 5-4 undefined on input line 130.
-
-
-LaTeX Warning: Reference `eq:twowayclu_centmat' on page 5-4 undefined on input line 130.
-
-
-LaTeX Warning: Reference `eq:twowayclu_decomp' on page 5-4 undefined on input line 135.
-
-
-Package natbib Warning: Citation `cameron2011robust' on page 5-4 undefined on input line 148.
-
+ [2] [3]
 LaTeX Font Info:    Try loading font information for T1+zplsups on input line 148.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zplsups.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/newpx/t1zplsups.fd
 File: t1zplsups.fd 2015/01/17 v1.0
 )
 LaTeX Font Info:    Font shape `T1/zplsups/m/n' will be
@@ -1271,64 +1227,24 @@ LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 148.
 LaTeX Font Info:    Font shape `T1/zplsups/m/n' will be
 (Font)              scaled to size 8.0pt on input line 148.
+ [4]
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <8> not available
-(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 192.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 148.
-
-
-Package natbib Warning: Citation `thompson2011simple' on page 5-4 undefined on input line 148.
-
-[4]
-
-LaTeX Warning: Reference `eq:twowayclu_centmat' on page 5-5 undefined on input line 185.
-
-
-Package natbib Warning: Citation `cameron2011robust' on page 5-5 undefined on input line 193.
-
+(Font)              scaled to size 8.0pt on input line 192.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 195.
 LaTeX Font Info:    Font shape `T1/zpltlf/bx/n' in size <12> not available
 (Font)              Font shape `T1/zpltlf/b/n' tried instead on input line 195.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 195.
-[5]
-
-LaTeX Warning: Reference `eq:centermat_multiclu' on page 5-6 undefined on input line 218.
-
-
-Package natbib Warning: Citation `cameron2011robust' on page 5-6 undefined on input line 226.
-
-
-Package natbib Warning: Citation `menzel2021bootstrap' on page 5-6 undefined on input line 240.
-
-[6] [7]
+ [5] [6] [7]
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 298.
  [8]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 327.
-
-
-LaTeX Warning: Reference `assump:sep_exchange' on page 5-9 undefined on input line 329.
-
-[9] [10]
-
-LaTeX Warning: Reference `assump:integrability' on page 5-11 undefined on input line 390.
-
-
-LaTeX Warning: Reference `eq:low-rank_approximation' on page 5-11 undefined on input line 409.
-
-
-LaTeX Warning: Reference `eq:low-rank_approximation' on page 5-11 undefined on input line 415.
-
-[11]
-
-LaTeX Warning: Reference `assump:sep_exchange' on page 5-12 undefined on input line 428.
-
-
-LaTeX Warning: Reference `assump:restrictions_on_lowrankapprox' on page 5-12 undefined on input line 429.
-
+ [9] [10] [11]
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 429.
 LaTeX Font Info:    Font shape `OT1/zpltlf/m/n' will be
@@ -1337,375 +1253,39 @@ LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 429.
 LaTeX Font Info:    Font shape `OT1/zpltlf/b/n' will be
 (Font)              scaled to size 6.2pt on input line 429.
-[12]
-
-LaTeX Warning: Reference `assump:sep_exchange' on page 5-13 undefined on input line 471.
-
+ [12]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 7.3pt on input line 477.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
 (Font)              scaled to size 6.2pt on input line 477.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 6.2pt on input line 477.
-
-Package natbib Warning: Citation `menzel2021bootstrap' on page 5-13 undefined on input line 477.
-
-
-Package natbib Warning: Citation `menzel2021bootstrap' on page 5-13 undefined on input line 493.
-
-[13]
-
-LaTeX Warning: Reference `algm:resampling_menzel' on page 5-14 undefined on input line 510.
-
-
+ [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.bbl) [38]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1329.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1329.
+ (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1329.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1329.
+Package rerunfilecheck Info: File `note5.out' has not changed.
+(rerunfilecheck)             Checksum: 8EB5DFC6FC322AA71C3CBBABC9A77271;1970.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1329.
+ ) 
+Here is how much of TeX's memory you used:
+ 36963 strings out of 492649
+ 867024 string characters out of 6129623
+ 1075827 words of memory out of 5000000
+ 39931 multiletter control sequences out of 15000+600000
+ 127378 words of font info for 217 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 80i,20n,136p,1070b,1325s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxbmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxbmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexas.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
+Output written on /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.pdf (38 pages, 360017 bytes).
+PDF statistics:
+ 722 PDF objects out of 1000 (max. 8388607)
+ 656 compressed objects within 7 object streams
+ 167 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-LaTeX Warning: Reference `eq:sample_mean_decomp' on page 5-15 undefined on input line 531.
-
-
-LaTeX Warning: Reference `eq:low-rank_approximation' on page 5-15 undefined on input line 548.
-
-
-LaTeX Warning: Reference `assump:integrability' on page 5-15 undefined on input line 572.
-
-
-LaTeX Warning: Reference `assump:restrictions_on_lowrankapprox' on page 5-15 undefined on input line 579.
-
-
-LaTeX Warning: Reference `assump:restrictions_on_lowrankapprox' on page 5-15 undefined on input line 579.
-
-[15]
-
-LaTeX Warning: Reference `lemma:varest_stcha_order' on page 5-16 undefined on input line 584.
-
-
-LaTeX Warning: Reference `assump:integrability' on page 5-16 undefined on input line 592.
-
-
-LaTeX Warning: Reference `assump:restrictions_on_lowrankapprox' on page 5-16 undefined on input line 592.
-
-
-LaTeX Warning: Reference `eq:normalized_variances' on page 5-16 undefined on input line 594.
-
-
-LaTeX Warning: Reference `prop:estimability_asympdist' on page 5-16 undefined on input line 597.
-
-
-LaTeX Warning: Reference `assump:integrability' on page 5-16 undefined on input line 604.
-
-
-LaTeX Warning: Reference `thm:clt_samp_dist' on page 5-16 undefined on input line 604.
-
-
-LaTeX Warning: Reference `assump:integrability' on page 5-16 undefined on input line 605.
-
-
-LaTeX Warning: Reference `assump:restrictions_on_lowrankapprox' on page 5-16 undefined on input line 605.
-
-
-LaTeX Warning: Reference `thm:clt_samp_dist' on page 5-16 undefined on input line 607.
-
-
-LaTeX Warning: Reference `eq:asymp_variance' on page 5-16 undefined on input line 611.
-
-[16]
-
-LaTeX Warning: Reference `assump:integrability' on page 5-17 undefined on input line 622.
-
-
-LaTeX Warning: Reference `eq:bsconsistency_clt' on page 5-17 undefined on input line 633.
-
-
-LaTeX Warning: Reference `eq:bsconsistency_piv' on page 5-17 undefined on input line 633.
-
-
-LaTeX Warning: Reference `thm:clt_samp_dist' on page 5-17 undefined on input line 645.
-
-
-LaTeX Warning: Reference `thm:bootstrap_consistency' on page 5-17 undefined on input line 651.
-
-
-LaTeX Warning: Reference `thm:clt_samp_dist' on page 5-17 undefined on input line 651.
-
-[17]
-
-LaTeX Warning: Reference `assump:integrability' on page 5-18 undefined on input line 656.
-
-[18]
-
-LaTeX Warning: Reference `eq:menzel_linearmodel' on page 5-19 undefined on input line 700.
-
-
-LaTeX Warning: Reference `assump:restrictions_on_lowrankapprox' on page 5-19 undefined on input line 705.
-
-
-LaTeX Warning: Reference `assump:bootstrap_regression' on page 5-19 undefined on input line 710.
-
-
-LaTeX Warning: Reference `eq:bsconsistency_clt' on page 5-19 undefined on input line 713.
-
-
-LaTeX Warning: Reference `eq:bsconsistency_piv' on page 5-19 undefined on input line 713.
-
-
-LaTeX Warning: Reference `eq:bsconsistency_clt' on page 5-19 undefined on input line 714.
-
-
-LaTeX Warning: Reference `eq:bsconsistency_piv' on page 5-19 undefined on input line 714.
-
-
-LaTeX Warning: Reference `eq:bscons_consistency_clt' on page 5-19 undefined on input line 715.
-
-
-LaTeX Warning: Reference `eq:bscons_consistency_piv' on page 5-19 undefined on input line 715.
-
-[19]
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-20 undefined on input line 724.
-
-[20]
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-21 undefined on input line 754.
-
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-21 undefined on input line 776.
-
-[21]
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-22 undefined on input line 791.
-
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-22 undefined on input line 791.
-
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-22 undefined on input line 793.
-
-
-LaTeX Warning: Reference `assump:measurability_assumption' on page 5-22 undefined on input line 793.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-22 undefined on input line 795.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-22 undefined on input line 796.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-22 undefined on input line 802.
-
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-22 undefined on input line 809.
-
-
-LaTeX Warning: Reference `assump:measurability_assumption' on page 5-22 undefined on input line 809.
-
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-22 undefined on input line 817.
-
-
-Package natbib Warning: Citation `mccullagh2000resampling' on page 5-22 undefined on input line 817.
-
-
-Package natbib Warning: Citation `owen2007pigeonhole' on page 5-22 undefined on input line 817.
-
-[22]
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-23 undefined on input line 829.
-
-
-LaTeX Warning: Reference `assump:measurability_assumption' on page 5-23 undefined on input line 829.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-23 undefined on input line 829.
-
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-23 undefined on input line 839.
-
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-23 undefined on input line 842.
-
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-23 undefined on input line 854.
-
-
-LaTeX Warning: Reference `assump:measurability_assumption' on page 5-23 undefined on input line 857.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-23 undefined on input line 857.
-
-
-LaTeX Warning: Reference `assump:measurability_assumption' on page 5-23 undefined on input line 858.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-23 undefined on input line 858.
-
-[23]
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-24 undefined on input line 871.
-
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-24 undefined on input line 873.
-
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-24 undefined on input line 885.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-24 undefined on input line 891.
-
-[24]
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-25 undefined on input line 895.
-
-
-Package natbib Warning: Citation `davezies2021empirical' on page 5-25 undefined on input line 896.
-
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-25 undefined on input line 896.
-
-
-LaTeX Warning: Reference `assump:measurability_assumption' on page 5-25 undefined on input line 896.
-
-
-LaTeX Warning: Reference `thm:bootstrap_validity' on page 5-25 undefined on input line 897.
-
-
-Package natbib Warning: Citation `menzel2021bootstrap' on page 5-25 undefined on input line 903.
-
-
-LaTeX Warning: Reference `assump:jexch_diss_array' on page 5-25 undefined on input line 903.
-
-
-Package natbib Warning: Citation `mccullagh2000resampling' on page 5-25 undefined on input line 920.
-
-
-LaTeX Warning: Reference `thm:bootstrap_validity' on page 5-25 undefined on input line 920.
-
-[25]
-
-LaTeX Warning: Reference `assump:measurability_assumption' on page 5-26 undefined on input line 931.
-
-
-LaTeX Warning: Reference `assump:strong_sep_exc_array' on page 5-26 undefined on input line 931.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-26 undefined on input line 933.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-26 undefined on input line 934.
-
-
-LaTeX Warning: Reference `assump:assumptions_on_f' on page 5-26 undefined on input line 939.
-
-
-Package natbib Warning: Citation `yap2023general' on page 5-26 undefined on input line 946.
-
-
-Package natbib Warning: Citation `cameron2011robust' on page 5-26 undefined on input line 946.
-
-
-Package natbib Warning: Citation `yap2023general' on page 5-26 undefined on input line 961.
-
-
-Package natbib Warning: Citation `menzel2021bootstrap' on page 5-26 undefined on input line 968.
-
-[26]
-
-LaTeX Warning: Reference `assump:assump_yap2023' on page 5-27 undefined on input line 972.
-
-
-Package natbib Warning: Citation `yap2023general' on page 5-27 undefined on input line 976.
-
-
-Package natbib Warning: Citation `yap2023general' on page 5-27 undefined on input line 977.
-
-
-LaTeX Warning: Reference `assump:assump_yap2023' on page 5-27 undefined on input line 978.
-
-
-Package natbib Warning: Citation `yap2023general' on page 5-27 undefined on input line 981.
-
-
-Package natbib Warning: Citation `sasaki2022non' on page 5-27 undefined on input line 991.
-
-
-Underfull \vbox (badness 3849) has occurred while \output is active []
-
- [27]
-
-Package natbib Warning: Citation `sasaki2022non' on page 5-28 undefined on input line 1023.
-
-[28]
-
-LaTeX Warning: Reference `assump:sasakiwang2022assump1' on page 5-29 undefined on input line 1031.
-
-
-Package natbib Warning: Citation `sasaki2022non' on page 5-29 undefined on input line 1031.
-
-
-Package natbib Warning: Citation `sasaki2022non' on page 5-29 undefined on input line 1036.
-
-
-Package natbib Warning: Citation `drees2000make' on page 5-29 undefined on input line 1037.
-
-
-Package natbib Warning: Citation `sasaki2022non' on page 5-29 undefined on input line 1039.
-
-
-LaTeX Warning: Reference `thm:sasakiwang2022thm1' on page 5-29 undefined on input line 1044.
-
-
-Package natbib Warning: Citation `sasaki2022non' on page 5-29 undefined on input line 1045.
-
-
-LaTeX Warning: Reference `assump:sasakiwang2022assump1' on page 5-29 undefined on input line 1046.
-
-
-LaTeX Warning: Reference `thm:sasakiwang2022thm2' on page 5-29 undefined on input line 1048.
-
-
-Package natbib Warning: Citation `sasaki2022non' on page 5-29 undefined on input line 1050.
-
-
-LaTeX Warning: Reference `assump:sasakiwang2022assump1' on page 5-29 undefined on input line 1051.
-
-[29]
-
-LaTeX Warning: Reference `thm:asymp_norm_yap2023' on page 5-30 undefined on input line 1061.
-
-
-Package natbib Warning: Citation `chiang2023using' on page 5-30 undefined on input line 1064.
-
-[30]
-
-Package natbib Warning: Citation `menzel2021bootstrap' on page 5-31 undefined on input line 1089.
-
-
-Package natbib Warning: Citation `chiang2023using' on page 5-31 undefined on input line 1089.
-
-
-Package natbib Warning: Citation `chiang2023using' on page 5-31 undefined on input line 1093.
-
-
-Package natbib Warning: Citation `chiang2023using' on page 5-31 undefined on input line 1096.
-
-
-Package natbib Warning: Citation `chiang2023using' on page 5-31 undefined on input line 1096.
-
-
-Overfull \hbox (15.0529pt too wide) in paragraph at lines 1092--1106
-\T1/zpltlf/m/n/10 stan-dard er-ror for $[] \U/npxmia/m/it/10 5 [][] [][] [][] \OML/npxmi/m/it/10 D[]$\T1/zpltlf/m/n/10 : Ex-cept for the ex-treme case where [],
- []
-
-
-Package natbib Warning: Citation `abadie2023should' on page 5-31 undefined on input line 1109.
-
-[31] [32]
-
-Package natbib Warning: Citation `abadie2023should' on page 5-33 undefined on input line 1183.
-
-[33] [34] [35]
-
-Package natbib Warning: Citation `abadie2023should' on page 5-36 undefined on input line 1304.
-
-[36] [37] (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes
