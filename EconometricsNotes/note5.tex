@@ -1318,7 +1318,7 @@ where $C_{k,m}=\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}\left(W
 \end{equation*}
 for the term $C_{k,m}$, its expectation $\mathbb{E}\left[C_{k,m}\right]$ is \textbf{not} 0 in general for each cluster separately, but equals to 0 when sum over \textbf{all} clusters:
 \begin{align*}
-    \mathbb{E}\left[C_{k,m}\right] = n_{k,m}p_k\mu_k \left(1-\mu_k\right)\left(\tau_{k,m}-\tau_k\right)
+    \mathbb{E}\left[C_{k,m}\right] &= n_{k,m}p_k\mu_k \left(1-\mu_k\right)\left(\tau_{k,m}-\tau_k\right) & \sum^{m_k}_{m=1}\mathbb{E}\left[C_{k,m}\right] &= p_k\mu_k \left(1-\mu_k\right) \sum^{m_k}_{m=1} n_{k,m}\left(\tau_{k,m}-\tau_k\right) = 0
 \end{align*}
 
 \newpage
