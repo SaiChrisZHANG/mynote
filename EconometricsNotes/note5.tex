@@ -1326,7 +1326,7 @@ and $\mathrm{var}\left(C_{k,m}\right) \leq \mathbb{E}\left[C^2_{k,m}\right]$, th
 Plug in $\sum^{m_k}_{m=1}\mathbb{E}\left[C_{k,m}\right]=0$ back into normalized $\hat{\tau}_k$, get 
 \begin{align*}
     \frac{\sqrt{N_k}\left(\hat{\tau}_k-\tau_k\right)}{\sqrt{v_k}} &= \frac{1}{\sqrt{n_kp_kv_k}\mu_k\left(1-\mu_k\right)}\sum^{m_k}_{m=1}C_{k,m} + o_p(1) \\
-    &= \frac{1}{\sqrt{n_kp_kv_k}\mu_k\left(1-\mu_k\right)}\sum^{m_k}_{m=1}C_{k,m} + o_p(1)
+    &= \frac{1}{\sqrt{n_kp_kv_k}\mu_k\left(1-\mu_k\right)}\sum^{m_k}_{m=1}\left(C_{k,m}-\mathbb{E}\left[C_{k,m}\right]\right) + o_p(1)
 \end{align*}
 
 \newpage
