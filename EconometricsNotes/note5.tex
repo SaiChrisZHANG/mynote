@@ -1338,6 +1338,7 @@ $C_{k,m,1}$ and $C_{k,m,2}$ are \textbf{mean 0} and \textbf{uncorrelated}, and \
 \begin{itemize}
     \item variance of $\frac{\sum^{m_k}_{m=1}C_{k,m,1}}{\sqrt{n_kp_k}\mu_k \left(1-\mu_k\right)}$ is $$ \left(1-p_k\right) \sum^{m_k}_{m=1}\frac{n_{k,m}}{n_k}\left(\tau_{k,m}-\tau_k\right)^2 $$
     \item a direct estimator of the variance of $\sum^{m_k}_{m=1} C_{k,m,2}$ is $$ \sum^{m_k}_{m=1}\left( \sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}\left(\left(W_{k,i}-\bar{W}_k\right)\hat{U}_{k,i} -\left(\hat{\tau}_{k,m}-\hat{\tau}_k\right)\bar{W}_k\left(1-\bar{W}_k\right) \right) \right)^2 $$
+    where $\hat{\tau}_{k,m}$ is the estimated treatment effect (sample average) in cluster $m$
 \end{itemize}
 
 \newpage
