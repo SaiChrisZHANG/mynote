@@ -1343,7 +1343,13 @@ $C_{k,m,1}$ and $C_{k,m,2}$ are \textbf{mean 0} and \textbf{uncorrelated}, and \
         \item[\textbf{1}] split the sample randomly into 2 subsamples, indexed by $Z_{k,i}\in \left\{0,1\right\}$, where $Z_{k,i}=1$ for the second subsample. Let $\bar{Z}_k$ be the mean of $Z_{k,i}$
         \item[\textbf{2}] use the first subsample $Z_{k,i}=0$, get estimates $\hat{\tau}^*_{k,m}$, $\hat{\alpha}^*_k$ and $\hat{\tau}^*_k$ 
         \item[\textbf{3}] for the second subsample $Z_{k,i}=1$, calculate the residuals $\hat{U}^*_{k,i} = Y_{k,i} - \hat{\alpha}^*_k -\hat{\tau}^*_k W_{k,i}$
-        \item[\textbf{4}] estimate the 
+        \item[\textbf{4}] estimate the normalized variance (for $q_k=1$) as 
+        \begin{align*}
+            \hat{V}^{\text{CCV}}_k(1) =& \frac{1}{N_k \bar{W}^2_k \left(1-\bar{W}_k\right)^2} \times \\
+            & \sum^{m_k}_{m=1} \left[ \frac{1}{\bar{Z}^2_k} \left( \sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\}R_{k,i}Z_{k,i}\times \left(\left(W_{k,i}-\bar{W}_k\right)\hat{U}^*_{k,i} - \left(\hat{\tau}^*_{k,m}-\hat{\tau}^*_k\right) \bar{W}_k\left(1-\bar{W}_k\right) \right)^2 \right. \right. \\
+            & \left. - \frac{1-\bar{Z}_k}{\bar{Z}^2_k} \sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}Z_{k,i}\left( \left(W_{k,i}-\bar{W}_k\right)\hat{U}^*_{k,i} - \left(\hat{\tau}^*_{k,m}-\hat{\tau}^*_k\right)\bar{W}_k \left(1-\bar{W}_k\right) \right)^2 \right] \\
+            & + 
+        \end{align*}
     \end{itemize}
 \end{itemize}
 
