@@ -1348,8 +1348,9 @@ $C_{k,m,1}$ and $C_{k,m,2}$ are \textbf{mean 0} and \textbf{uncorrelated}, and \
             \hat{V}^{\text{CCV}}_k(1) =& \frac{1}{N_k \bar{W}^2_k \left(1-\bar{W}_k\right)^2} \times \\
             & \sum^{m_k}_{m=1} \left[ \frac{1}{\bar{Z}^2_k} \left( \sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\}R_{k,i}Z_{k,i}\times \left(\left(W_{k,i}-\bar{W}_k\right)\hat{U}^*_{k,i} - \left(\hat{\tau}^*_{k,m}-\hat{\tau}^*_k\right) \bar{W}_k\left(1-\bar{W}_k\right) \right)^2 \right. \right. \\
             & \left. - \frac{1-\bar{Z}_k}{\bar{Z}^2_k} \sum^{n_k}_{i=1} \mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}Z_{k,i}\left( \left(W_{k,i}-\bar{W}_k\right)\hat{U}^*_{k,i} - \left(\hat{\tau}^*_{k,m}-\hat{\tau}^*_k\right)\bar{W}_k \left(1-\bar{W}_k\right) \right)^2 \right] \\
-            & + 
+            & + \left(1-p_k\right) \sum^{m_k}_{m=1}\frac{\bar{N}_{k,m}}{N_k} \left(\hat{\tau}_{k,m}-\hat{\tau}_k\right)^2
         \end{align*}
+        where $\bar{N}_{k,m}$ is the size of the sample in cluster $m$.
     \end{itemize}
 \end{itemize}
 
