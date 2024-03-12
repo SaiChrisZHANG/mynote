@@ -1341,7 +1341,8 @@ $C_{k,m,1}$ and $C_{k,m,2}$ are \textbf{mean 0} and \textbf{uncorrelated}, and \
     where $\hat{\tau}_{k,m}$ is the estimated treatment effect (sample average) in cluster $m$. This estimator could be biased from the correlation between the estimation errors of its components (due to $\bar{W}_k$), to address this, \citet{abadie2023should} proposed a sample-splitting estimation procedure:
     \begin{itemize}
         \item[\textbf{1}] split the sample randomly into 2 subsamples, indexed by $Z_{k,i}\in \left\{0,1\right\}$, where $Z_{k,i}=1$ for the second subsample. Let $\bar{Z}_k$ be the mean of $Z_{k,i}$
-        \item 
+        \item[\textbf{2}] use the first subsample $Z_{k,i}=0$, get estimates $\hat{\tau}^*_{k,m}$, $\hat{\alpha}^*_k$ and $\hat{\tau}^*_k$ 
+        \item[\textbf{3}] 
     \end{itemize}
 \end{itemize}
 
