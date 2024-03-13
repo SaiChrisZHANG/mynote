@@ -1358,7 +1358,8 @@ $C_{k,m,1}$ and $C_{k,m,2}$ are \textbf{mean 0} and \textbf{uncorrelated}, and \
 \paragraph*{Not all clusters are sampled: $q_k<1$}
 First, notice that the variance for the general $q_k$ case is a convex combination of the true variance at $q_k=1$ and the cluster variance:
 \begin{align*}
-    v_k \left(q_k\right) - v^{\text{cluster}}_k &= q_k\times \left(v_k(1) - v_k^{\text{cluster}}\right)
+    v_k \left(q_k\right) - v^{\text{cluster}}_k &= q_k\times \left(v_k(1) - v_k^{\text{cluster}}\right) \\
+    \Rightarrow v_k \left(q_k\right) = q_k \times v_k(1) + \left(1-q_k\right)\times v^{\text{cluster}}_k
 \end{align*}
 
 \newpage
