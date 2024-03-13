@@ -1303,7 +1303,7 @@ hence,
 \subsubsection{New variance estimators}
 \citet{abadie2023should} proposed 2 estimators of the variance of $\hat{\tau}_k$, one analytic based on a correction to $\hat{V}^{\text{cluster}}_k$, one based on resampling.
 
-\paragraph*{Random Sampling: $q_k=1$}
+\paragraph*{Random sampling: $q_k=1$}
 When all clusters are observed ($q_k=1$), but allowing for general $p_k$, let 
 $$
 U_{k,i} = W_{k,i} u_{k,i}(1) + (1-W_{k,i})u_{k,i}(0)
@@ -1354,6 +1354,12 @@ $C_{k,m,1}$ and $C_{k,m,2}$ are \textbf{mean 0} and \textbf{uncorrelated}, and \
     \end{itemize}
     for more precise $\hat{V}^{\text{CCV}}_k(1)$, do the sample splitting multiple times and take the average of all variance estimators.
 \end{itemize}
+
+\paragraph*{Not all clusters are sampled: $q_k<1$}
+First, notice that the variance for the general $q_k$ case is a convex combination of the true variance at $q_k=1$ and the cluster variance:
+\begin{align*}
+    v_k \left(q_k\right) - v^{\text{cluster}}_k &= q_k\times \left(v_k(1) - v_k^{\text{cluster}}\right)
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
