@@ -1359,8 +1359,13 @@ $C_{k,m,1}$ and $C_{k,m,2}$ are \textbf{mean 0} and \textbf{uncorrelated}, and \
 First, notice that the variance for the general $q_k$ case is a convex combination of the true variance at $q_k=1$ and the cluster variance:
 \begin{align*}
     v_k \left(q_k\right) - v^{\text{cluster}}_k &= q_k\times \left(v_k(1) - v_k^{\text{cluster}}\right) \\
-    \Rightarrow v_k \left(q_k\right) = q_k \times v_k(1) + \left(1-q_k\right)\times v^{\text{cluster}}_k
+    \Rightarrow v_k \left(q_k\right) &= q_k \times v_k(1) + \left(1-q_k\right)\times v^{\text{cluster}}_k
 \end{align*}
+then naturally, the variance estimator is 
+\begin{equation*}
+    \hat{V}^{\text{CCV}}_k = \hat{q}_k \times \hat{V}^{\text{CCV}}_k(1) + \left(1-\hat{q}_k\right) \times \hat{V}^{\text{cluster}}_k
+\end{equation*}
+where computing $\hat{q}_k$ requires knowledge of $m_k$, the total number of clusters.
 
 \newpage
 \bibliographystyle{plainnat}
