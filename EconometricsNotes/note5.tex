@@ -1386,6 +1386,12 @@ where computing $\hat{q}_k$ requires knowledge of $m_k$, the total number of clu
     \item \myhl[myblue]{\textbf{Stage 2}}:
     \begin{itemize}
         \item[\textbf{a}] randomly draw $\left\lfloor N_{k,m}A_{k,m} \right\rfloor$\footnote{$\lfloor x\rfloor$ is the floor function takes the largest integer smaller than or equal to $x$} units with replacement from the set of treated units in cluster $m$
+        \item[\textbf{b}] randomly draw $\left\lfloor N_{k,m}(1-A_{k,m}) \right\rfloor$ units with replacement from the set of control units in cluster $m$
+    \end{itemize}
+    \item \myhl[myblue]{\textbf{Calculation}}:
+    \begin{itemize}
+        \item[\textbf{1}] for the units constructed in Stage 2, collect the values for $\left(Y_{k,i},W_{k,i},m_{k,i}\right)$ and calculate the least-squares or FE estimator 
+        \item[\textbf{2}] calculate the standard deviation of the estimator over the $B$ bootstrap samples 
     \end{itemize}
 \end{itemize}
 
