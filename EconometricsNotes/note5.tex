@@ -1379,6 +1379,13 @@ where computing $\hat{q}_k$ requires knowledge of $m_k$, the total number of clu
     \item \myhl[myblue]{\textbf{Stage 1}}:
     \begin{itemize}
         \item[\textbf{a}] create pseudo population by replicating each cluster $1/q_k$ times 
+        \item[\textbf{b}] for each cluster in the pseudo population, calculate the \textit{assignment probability} $\bar{W}_{k,m}$
+        \item[\textbf{c}] create a bootstrap sample of clusters by \textit{randomly drawing clusters} from the pseudo population from \textbf{a}, where cluster $m$ is sampled with probability $q_k$
+        \item[\textbf{d}] for each sampled cluster, draw an \textit{assignment probability} $A_{k,m}$ from the empirical distribution of the $\bar{W}_{k,m}$ from \textbf{b}
+    \end{itemize}
+    \item \myhl[myblue]{\textbf{Stage 2}}:
+    \begin{itemize}
+        \item[\textbf{a}] randomly draw from the set of treated units in cluster $m$, 
     \end{itemize}
 \end{itemize}
 
