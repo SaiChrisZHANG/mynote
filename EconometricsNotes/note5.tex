@@ -1368,7 +1368,16 @@ then naturally, the variance estimator is
 where computing $\hat{q}_k$ requires knowledge of $m_k$, the total number of clusters.
 
 \paragraph*{Bootstrap estimator}
-\citet{abadie2023should} proposed a bootstrap procedure where units (clusters) have different assignments and assignment probabilities from the original sample.
+\citet{abadie2023should} proposed a bootstrap procedure where units (clusters) have different assignments and assignment probabilities from the original sample: 
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Input}}:
+    \begin{itemize}
+        \item Sample $\left(Y_{k,i},W_{k,i},m_{k,i}\right)$
+        \item Fraction sampled clusters $q_k$
+        \item Number of bootstrap replications $B$
+    \end{itemize}
+    \item \myhl[myblue]{\textbf{Stage 1}}:
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
