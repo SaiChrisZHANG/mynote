@@ -1398,7 +1398,7 @@ where computing $\hat{q}_k$ requires knowledge of $m_k$, the total number of clu
 \subsubsection{Fixed-effects estimator}
 The fixed-effects estimator is based on a regression of the outcome on the treatment indicator and indicators for each of the clusters in the sample:
 \begin{equation*}
-    \hat{\tau}^{\text{fixed}}_k = 
+    \hat{\tau}^{\text{fixed}}_k = \frac{\sum^{m_k}_{m=1}\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\}R_{k,i}Y_{k,i}\left(W_{k,i}-\bar{W}_{k,m}\right) }{ \sum^{m_k}_{m=1}\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\}R_{k,i}Y_{k,i}\left(W_{k,i}-\bar{W}_{k,m}\right) }
 \end{equation*}
 
 \newpage
