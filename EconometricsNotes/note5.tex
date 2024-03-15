@@ -1403,6 +1403,9 @@ The fixed-effects estimator is based on a regression of the outcome on the treat
 assume:
 \begin{itemize}
     \item $m_kq_k/\left(\frac{p_kn_k}{m_k}\right) \rightarrow 0$: the expected number of sampled clusters is small relative to the expected number of sampled observations per sampled cluster
+    \begin{itemize}
+        \item this implies $p_kn_k/m_k\rightarrow\infty$, $n_kp_kq_k\rightarrow \infty$, and $p_k\min_mn_{k,m}\rightarrow\infty$
+    \end{itemize}
     \item $A_{k,m}$, the supports of the cluster probabilities, are bounded away from 0 and 1
 \end{itemize}
 
