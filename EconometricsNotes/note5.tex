@@ -1400,6 +1400,11 @@ The fixed-effects estimator is based on a regression of the outcome on the treat
 \begin{equation*}
     \hat{\tau}^{\text{fixed}}_k = \frac{\sum^{m_k}_{m=1}\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\}R_{k,i}Y_{k,i}\left(W_{k,i}-\bar{W}_{k,m}\right) }{ \sum^{m_k}_{m=1}\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\}R_{k,i}W_{k,i}\left(W_{k,i}-\bar{W}_{k,m}\right) }
 \end{equation*}
+assume:
+\begin{itemize}
+    \item $m_kq_k/\left(\frac{p_kn_k}{m_k}\right) \rightarrow 0$: the expected number of sampled clusters is small relative to the expected number of sampled observations per sampled cluster
+    \item $A_{k,m}$, the supports of the cluster probabilities, are bounded away from 0 and 1
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
