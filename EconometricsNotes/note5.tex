@@ -1427,7 +1427,10 @@ the large-$k$ distribution of the fixed-effects estimator is then
 \end{equation*}
 
 \paragraph*{Robust estimator}
-Let $\tilde{U}_{k,i} = \tilde{Y}_{k,i} - \hat{\tau}_k^{\text{fixed}}\tilde{W}_{k,i}$, where $\tilde{Y}_{k,i} = Y_{k,i}-\bar{Y}_{k,m_{k,i}}$, $\tilde{W}_{k,i}=W_{k,i}-\bar{W}_{k,m_{k,i}}$
+Let $\tilde{U}_{k,i} = \tilde{Y}_{k,i} - \hat{\tau}_k^{\text{fixed}}\tilde{W}_{k,i}$, where $\tilde{Y}_{k,i} = Y_{k,i}-\bar{Y}_{k,m_{k,i}}$, $\tilde{W}_{k,i}=W_{k,i}-\bar{W}_{k,m_{k,i}}$, the robust estimator of the variance of $\sqrt{N_k}\left(\hat{\tau}^{\text{fixed}}_k-\tau_k\right)$ is 
+\begin{equation*}
+    \tilde{V}^{\text{robust}}_k = \frac{\frac{1}{N_k}\sum^{n_k}_{i=1} R_{k,i}\tilde{W}^2_{k,i}\tilde{U}^2_{k,i} }{ \left(\frac{1}{N_k}\sum^{n_k}_{i=1}R_{k,i}\tilde{W}^2_{k,i}\right)^2 }
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
