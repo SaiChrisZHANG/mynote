@@ -1445,6 +1445,11 @@ and
     \tilde{V}_k^{\text{robust}} = \tilde{v}^{\text{robust}}_k + o_p(1)
 \end{equation*}
 
+\paragraph*{Cluster estimator} similarly,
+\begin{equation*}
+    \tilde{V}^{\text{cluster}}_k = \frac{\frac{1}{N_k}\sum^{m_k}_{m=1}\left(\sum^{n_k}_{i=1}\mathbf{1}\left\{m_{k,i}=m\right\} R_{k,i}\tilde{W}_{k,i}\tilde{U}_{k,i} \right)^2}{ \left(\frac{1}{N_k} \sum^{n_k}_{i=1}R_{k,i}\tilde{W}_{k,i}^2\right)^2 }
+\end{equation*}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
