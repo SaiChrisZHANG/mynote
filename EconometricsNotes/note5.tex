@@ -1466,7 +1466,10 @@ and then again,
 \end{equation*}
 
 \paragraph*{Adjusted estimator}
-Similar to the LS case, the robust estimator \textbf{underestimate} the true variance, the cluster estimator is generally \textbf{conservative}.
+Similar to the LS case, the robust estimator \textbf{underestimate} the true variance, the cluster estimator is generally \textbf{conservative}. \citet{abadie2023should} proposed a convex combination of $\tilde{V}_k^{\text{cluster}}$ and $\tilde{V}_k^{\text{robust}}$:
+\begin{equation*}
+    \tilde{V}^{\text{CCV}}_k = \hat{\lambda}_k \tilde{V}_k^{\text{cluster}} + \left(1-\hat{\lambda}_k\right)\tilde{V}_k^{\text{robust}}
+\end{equation*}
 
 
 \newpage
