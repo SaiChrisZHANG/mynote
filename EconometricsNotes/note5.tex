@@ -1470,7 +1470,15 @@ Similar to the LS case, the robust estimator \textbf{underestimate} the true var
 \begin{equation*}
     \tilde{V}^{\text{CCV}}_k = \hat{\lambda}_k \tilde{V}_k^{\text{cluster}} + \left(1-\hat{\lambda}_k\right)\tilde{V}_k^{\text{robust}}
 \end{equation*}
-
+with a estimated correction weight
+\begin{align*}
+    \hat{\lambda}_k = 1-\hat{q}_k \frac{\left(\frac{1}{M_k}\sum^{m_k}_{m=1}Q_{k,m}\bar{W}_{k,m}\left(1-\bar{W}_{k,m}\right)\right)^2}{\frac{1}{M_k}\sum^{m_k}_{m=1}Q_{k,m}\bar{W}_{k,m}\left(1-\bar{W}_{k,m}\right)}
+\end{align*}
+where 
+\begin{itemize}
+    \item $Q_{k,m}$ is an indicator $=1$ if cluster $m$ of population $k$ is sampled 
+    \item $M_k=\sum^{m_k}_{m=1}Q_{k,m}$ is the total number of sampled clusters
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
