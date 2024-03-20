@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -17,6 +17,12 @@ Manuel Arellano.
 \newblock Computing robust standard errors for within-groups estimators.
 \newblock \emph{Oxford bulletin of Economics and Statistics}, 49\penalty0
   (4):\penalty0 431--434, 1987.
+
+\bibitem[Cameron and Miller(2015)]{cameron2015practitioner}
+A~Colin Cameron and Douglas~L Miller.
+\newblock A practitioner's guide to cluster-robust inference.
+\newblock \emph{Journal of human resources}, 50\penalty0 (2):\penalty0
+  317--372, 2015.
 
 \bibitem[Cameron et~al.(2011)Cameron, Gelbach, and Miller]{cameron2011robust}
 A~Colin Cameron, Jonah~B Gelbach, and Douglas~L Miller.
