@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex note5"] 1710936109 "note5.aux" "note5.bbl" "note5" 1710936114
+["bibtex note5"] 1710936132 "note5.aux" "note5.bbl" "note5" 1710936132
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "note5.aux" 1710936114 11627 3c2f877abf99aaed6970a0b359908018 ""
-  "ref.bib" 1707226386 29207 c5d41e7fc71682cd4b87304c0a3734da ""
+  "ref.bib" 1710936131 29505 b50f83318c83d7239474b46136622bf8 ""
   (generated)
-  "note5.blg"
   "note5.bbl"
-["pdflatex"] 1710936109 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.pdf" "note5" 1710936114
+  "note5.blg"
+["pdflatex"] 1710936109 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.pdf" "note5" 1710936132
   "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.aux" 1710936114 11627 3c2f877abf99aaed6970a0b359908018 ""
   "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.tex" 1710936103 140293 b14f0f83c5e1f4b8a514d01746d2d3f3 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -326,14 +326,14 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "note5.aux" 1710936114 11627 3c2f877abf99aaed6970a0b359908018 ""
-  "note5.bbl" 1710936109 4644 bf2e10716ff1898cf621ca87b49bc258 "bibtex note5"
+  "note5.bbl" 1710936132 4644 bf2e10716ff1898cf621ca87b49bc258 "bibtex note5"
   "note5.out" 1710936114 2127 741fb8d4865605c432a20d8216956dc9 ""
   "note5.tex" 1710936103 140293 b14f0f83c5e1f4b8a514d01746d2d3f3 ""
   "settings.tex" 1700144582 7783 b7a2004fb544200f8d413ab7ddfd0b8a ""
   (generated)
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.log"
   "note5.log"
-  "note5.aux"
-  "note5.pdf"
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.pdf"
   "note5.out"
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.log"
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note5.pdf"
+  "note5.pdf"
+  "note5.aux"
