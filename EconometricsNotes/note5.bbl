@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -41,6 +41,13 @@ Laurent Davezies, Xavier D'Haultf{\oe}uille, and Yannick Guyonvarch.
 \newblock Empirical process results for exchangeable arrays.
 \newblock \emph{The Annals of Statistics}, 49\penalty0 (2):\penalty0 845--862,
   2021.
+
+\bibitem[De~Chaisemartin and Ramirez-Cuellar(2024)]{de2024level}
+Cl{\'e}ment De~Chaisemartin and Jaime Ramirez-Cuellar.
+\newblock At what level should one cluster standard errors in paired and
+  small-strata experiments?
+\newblock \emph{American Economic Journal: Applied Economics}, 16\penalty0
+  (1):\penalty0 193--212, 2024.
 
 \bibitem[Drees et~al.(2000)Drees, Resnick, and de~Haan]{drees2000make}
 Holger Drees, Sidney Resnick, and Laurens de~Haan.
