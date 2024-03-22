@@ -1495,6 +1495,13 @@ The $2P$ units are matched into $P$ pairs, by grouping together units with the c
     \item $n_{gp}>1$ for some units if RCT is clustered
 \end{itemize}
 
+Treatment is assigned as follows: $\forall p\in\left\{1,\cdots,P\right\}$ and $g\in\left\{1,2\right\}$, let $W_{gp}$ be an indicator $=1$ if unit $g$ in pair $p$ is treated, and $=0$ otherwise. Assume 
+\begin{assumption}{Paired assignment}{paired_assignment}
+    \begin{itemize}
+        \item $\forall p$, $W_{1p}+W_{2p}=1$
+    \end{itemize}
+\end{assumption}
+
 
 \newpage
 \bibliographystyle{plainnat}
