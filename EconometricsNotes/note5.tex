@@ -1486,7 +1486,14 @@ In regression analysis, clustered standard errors are reliable when the regressi
 
 \subsubsection{Setup}
 Consider a population of $2P$ units, not assume that the units are i.i.d. sample drawn from a superpopulation. Instead, population is fixed, its characteristics are not random\footnote{This structure reflects the RCTs where the sample is a convenience sample, consisting of volunteers to receive the treatment, or of units located in areas where conducting the research was easier.}.
-The $2P$ units are matched into $P$ pairs, by grouping together units with the closest value of some baseline variables predicting the outcome.
+The $2P$ units are matched into $P$ pairs, by grouping together units with the closest value of some baseline variables predicting the outcome, then 
+\begin{itemize}
+    \item the pairs are indexed by $p\in \left\{1,\cdots, P\right\}$
+    \item the two units in pair $p$ are indexed by $g\in \left\{1,2\right\}$
+    \item unit $g$ in pair $p$ has $n_{gp}$ observations: the number of observations in pair $p$ $n_p=n_{1p}+n_{2p}$
+    \item population: $n = \sum^P_{p=1} n_p$
+\end{itemize}
+
 
 \newpage
 \bibliographystyle{plainnat}
