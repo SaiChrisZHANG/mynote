@@ -1508,7 +1508,10 @@ Let $y_{igp}(1)$ and $y_{igp}(0)$ represent the potential outcomes of observatio
 $$
 Y_{igp}=y_{igp}(1)W_{gp} + y_{igp}(0)(1-W_{gp})
 $$
-
+then the ATE is 
+\begin{equation*}
+    \tau = \frac{1}{n}\sum^P_{p=1}\sum^2_{g=1}\sum^{n_{gp}}_{i=1}\left[y_{igp}(1)-y_{igp}(0)\right]
+\end{equation*}
 
 
 \newpage
