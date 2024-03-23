@@ -1498,11 +1498,12 @@ The $2P$ units are matched into $P$ pairs, by grouping together units with the c
 Treatment is assigned as follows: $\forall p\in\left\{1,\cdots,P\right\}$ and $g\in\left\{1,2\right\}$, let $W_{gp}$ be an indicator $=1$ if unit $g$ in pair $p$ is treated, and $=0$ otherwise. Assume 
 \begin{assumption}{Paired assignment}{paired_assignment}
     \begin{itemize}
-        \item $\forall p$, $W_{1p}+W_{2p}=1$
-        \item $\mathbb{P}\left(W_{gp}=1\right)=\frac{1}{2}$, $\forall g, p$
-        \item $\left(W_{1p},W_{2p}\right)^P_{p=1}$ is jointly independent across $p$
+        \item $\forall p$, $W_{1p}+W_{2p}=1$: within each pair, one of the two units is treated
+        \item $\mathbb{P}\left(W_{gp}=1\right)=\frac{1}{2}$, $\forall g, p$: two units have the same probability of being treated
+        \item $\left(W_{1p},W_{2p}\right)^P_{p=1}$ is jointly independent across $p$: treatments are independent across pairs
     \end{itemize}
 \end{assumption}
+
 
 
 \newpage
