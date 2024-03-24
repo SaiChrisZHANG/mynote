@@ -1512,14 +1512,16 @@ then the ATE is
 \begin{equation*}
     \tau = \frac{1}{n}\sum^P_{p=1}\sum^2_{g=1}\sum^{n_{gp}}_{i=1}\left[y_{igp}(1)-y_{igp}(0)\right]
 \end{equation*}
-Consider 2 estimators of $\tau$:
+Consider 2 estimators of $\tau$, for $i=1,\cdots,n_{gp}$; $g=1,2$; $p=1,\cdots,P$.:
 \begin{itemize}
     \item OLS estimator of the observed outcome $Y_{igp}$ on a constant and $W_{gp}$:
     \begin{equation}\label{eq:cr_olsest}
         Y_{igp} = \hat{\alpha}+\hat{\tau}W_{gp}+\epsilon_{igp}
     \end{equation}
-    for $i=1,\cdots,n_{gp}$; $g=1,2$; $p=1,\cdots,P$.
     \item pair-fixed-effects estimator of $Y_{igp}$ on $W_{gp}$ and a set of \textbf{pair} fixed effects:
+    \begin{equation}\label{eq:cr_feest}
+        Y_{igp}= \hat{\tau}_fe W_{gp}
+    \end{equation}
 \end{itemize}
 
 
