@@ -1527,7 +1527,7 @@ Consider 2 estimators of $\tau$, for $i=1,\cdots,n_{gp}$; $g=1,2$; $p=1,\cdots,P
 \subsubsection{Unit-/Pair-Clustered Variance Estimators}
 Let the sum of residuals $\epsilon_{igp}$ for the treated and untreated observations in pair $p$ be 
 \begin{align*}
-    SET_p &= 
+    SET_p &= \sum^2_{g=1}\sum^{n_{gp}}_{i=1} W_{gp}\epsilon_{igp} & SEU_p &= \sum^2_{g=1}\sum^{n_{gp}}_{i=1} \left(1-W_{gp}\right)\epsilon_{igp}
 \end{align*}
 
 
