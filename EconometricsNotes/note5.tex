@@ -1525,6 +1525,10 @@ Consider 2 estimators of $\tau$, for $i=1,\cdots,n_{gp}$; $g=1,2$; $p=1,\cdots,P
 \end{itemize}
 
 \subsubsection{Unit-/Pair-Clustered Variance Estimators}
+Given the number of treated and untreated observations in pair $p$ as 
+\begin{align*}
+    T_p &= n_{1p}W_{1p} + n_{2p}W_{2p} &= C_p &= n_{1p}\left(1-W_{1p}\right) + n_{2p}\left(1-W_{2p}\right)
+\end{align*}
 Let the sum of residuals $\epsilon_{igp}$ for the treated and untreated observations in pair $p$ be 
 \begin{align*}
     SET_p &= \sum^2_{g=1}\sum^{n_{gp}}_{i=1} W_{gp}\epsilon_{igp} & SEU_p &= \sum^2_{g=1}\sum^{n_{gp}}_{i=1} \left(1-W_{gp}\right)\epsilon_{igp}
@@ -1532,6 +1536,9 @@ Let the sum of residuals $\epsilon_{igp}$ for the treated and untreated observat
 then the clustered variance estimators are defined as 
 \begin{itemize}
     \item \myhl[myblue]{\textbf{paired}}-clustered variance estimators (PCVEs):
+    \begin{align*}
+        \hat{\mathbb{V}}\left(\hat{\tau}\right) &= \sum^P_{p=1}\left(\frac{SET_p}{T} - \right) 
+    \end{align*}
     \item \myhl[myblue]{\textbf{unit}}-clustered variance estimators (UCVEs):
 \end{itemize}
 
