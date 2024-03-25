@@ -1529,6 +1529,7 @@ Given the number of treated and untreated observations in pair $p$ as
 \begin{align*}
     T_p &= n_{1p}W_{1p} + n_{2p}W_{2p} &= C_p &= n_{1p}\left(1-W_{1p}\right) + n_{2p}\left(1-W_{2p}\right)
 \end{align*}
+and the total number of treated and untreated observations $T=\sum^P_{p=1}T_p$, $C=\sum^P_{p=1}C_p$.
 Let the sum of residuals $\epsilon_{igp}$ for the treated and untreated observations in pair $p$ be 
 \begin{align*}
     SET_p &= \sum^2_{g=1}\sum^{n_{gp}}_{i=1} W_{gp}\epsilon_{igp} & SEU_p &= \sum^2_{g=1}\sum^{n_{gp}}_{i=1} \left(1-W_{gp}\right)\epsilon_{igp}
