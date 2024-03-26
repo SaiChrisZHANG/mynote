@@ -1544,7 +1544,7 @@ then the clustered variance estimators are defined as
     \item \myhl[myblue]{\textbf{unit}}-clustered variance estimators (UCVEs):
     \begin{align*}
         \hat{\mathbb{V}}_{\text{unit}}\left(\hat{\tau}\right) &= \sum^P_{p=1}\left[ \left(\frac{SET_p}{T}\right)^2 + \left(\frac{SEU_p}{C}\right)^2 \right] \\
-        \hat{\mathbb{V}}_{\text{unit}}\left(\hat{\tau}_{fe}\right) &= \sum^P_{p=1}\omega^2_p \left(\hat{\tau}_p-\hat{\tau}_{fe}\right)
+        \hat{\mathbb{V}}_{\text{unit}}\left(\hat{\tau}_{fe}\right) &= \sum^P_{p=1}\omega^2_p \left(\hat{\tau}_p-\hat{\tau}_{fe}\right)^2 \left[ \left(\frac{n_{1p}}{n_p}\right)^2 + \left(\frac{n_{2p}}{n_p}\right)^2 \right]
     \end{align*}
 \end{itemize}
 
