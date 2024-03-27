@@ -1556,7 +1556,9 @@ Assumption \ref{assump:num_obs} requires that all units have the same number of 
     \hat{\tau}_p = \sum_g \left[W_{gp} \frac{1}{n_{gp}} \sum_i Y_{igp} - \left(1-W_{gp}\right) \frac{1}{n_{gp}} \sum_i Y_{igp} \right]
 \end{equation*}
 denote the difference between the average outcome of treated and untreated observations in pair $p$, then under Assumption \ref{assump:num_obs}, 
-
+\begin{equation*}
+    \hat{\tau} = \hat{\tau}_{fe} = \sum^P_{p=1}\frac{\hat{\tau}_p}{P}
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
