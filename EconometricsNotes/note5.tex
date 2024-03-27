@@ -1551,7 +1551,11 @@ then the clustered variance estimators are defined as
 \begin{assumption}{Number of Observations}{num_obs}
     There is a strictly positive integer $N$ such that for all $p$, $n_{1p}=n_{2p}=N$.
 \end{assumption}
-Assumption 
+Assumption \ref{assump:num_obs} requires that all units have the same number of observations, let 
+\begin{equation*}
+    \hat{\tau}_p = \sum_g \left[W_{gp} \frac{1}{n_{gp}} \sum_i Y_{igp} - \left(1-W_{gp}\right) \frac{1}{n_{gp}} \sum_i Y_{igp} \right]
+\end{equation*}
+denote the difference 
 
 \newpage
 \bibliographystyle{plainnat}
