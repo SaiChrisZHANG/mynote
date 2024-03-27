@@ -1559,6 +1559,10 @@ denote the difference between the average outcome of treated and untreated obser
 \begin{equation*}
     \hat{\tau} = \hat{\tau}_{fe} = \sum^P_{p=1}\frac{\hat{\tau}_p}{P}
 \end{equation*}
+both estimators are unbiased for the ATE, and 
+\begin{equation*}
+    \mathbb{V}\left(\hat{\tau}\right) = \mathbb{V}\left(\hat{\tau}_{fe}\right) = \frac{1}{P^2}\sum^P_{p=1}\mathbb{V}\left(\hat{\tau}_p\right)
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
