@@ -1577,9 +1577,13 @@ Let
 Then, we have the following lemma:
 \begin{lemma}{Comparing Two types of Clustered Variance Estimators}{comp_2type_varest}
     \begin{itemize}
-        \item Under Assumption \ref{assump:paired_assignment} and \ref{assump:num_obs}, $\hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right) = \hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right)_{fe}$, and 
+        \item[1] Under Assumption \ref{assump:paired_assignment} and \ref{assump:num_obs}, $\hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right) = \hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right)_{fe}$, and 
         $$ \mathbb{E}\left[\frac{P}{P-1}\hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right)\right] = \mathbb{V}\left(\hat{\tau}\right) + \frac{1}{P(P-1)}\sum^P_{p=1}\left(\tau_p-\tau\right)^2 \geq \mathbb{V}\left(\hat{\tau}\right) $$
-        \item 
+        \item[2] Under Assumption \ref{assump:num_obs}, $\hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right) = 2\hat{\mathbb{V}}_{unit}\left(\hat{\tau}_{fe}\right)$
+        \item[3] Under Assumption \ref{assump:paired_assignment} and \ref{assump:num_obs}, 
+        \begin{align*}
+            \mathbb{E}\left[ \frac{P}{P-1}\left(\hat{\mathbb{V}}_{unit}\left(\hat{\tau}\right) - \hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right)\right) \right] =& 
+        \end{align*}
     \end{itemize}
 \end{lemma}
 
