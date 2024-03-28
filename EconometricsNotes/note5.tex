@@ -1582,7 +1582,8 @@ Then, we have the following lemma:
         \item[2] Under Assumption \ref{assump:num_obs}, $\hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right) = 2\hat{\mathbb{V}}_{unit}\left(\hat{\tau}_{fe}\right)$
         \item[3] Under Assumption \ref{assump:paired_assignment} and \ref{assump:num_obs}, 
         \begin{align*}
-            \mathbb{E}\left[ \frac{P}{P-1}\left(\hat{\mathbb{V}}_{unit}\left(\hat{\tau}\right) - \hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right)\right) \right] =& 
+            \mathbb{E}\left[ \frac{P}{P-1}\left(\hat{\mathbb{V}}_{unit}\left(\hat{\tau}\right) - \hat{\mathbb{V}}_{pair}\left(\hat{\tau}\right)\right) \right] =& \frac{2}{P}\left( \frac{1}{P-1} \sum_p\left(\bar{y}_p(0)-\bar{y}(0)\right)\left(\bar{y}_p(1)-\bar{y}(1)\right) \right. \\
+            & \left.-\frac{1}{P} \sum_p\sum_g \frac{1}{2}\left(\bar{y}_{gp}(0)-\bar{y}_p(0)\right) \left(\bar{y}_{gp}(1)-\bar{y}_p(1)\right) \right)
         \end{align*}
     \end{itemize}
 \end{lemma}
