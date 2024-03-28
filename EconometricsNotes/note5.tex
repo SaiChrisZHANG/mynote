@@ -1568,13 +1568,14 @@ Let
     \item $\tau_p \equiv \frac{1}{n_p}\sum^2_{g=1}\sum^{n_{gp}}_{i=1}\left[y_{igp}(1)-y_{igp}(0)\right]$ be the ATE in pair $p$
     \item and $\forall d\in\left\{0,1\right\}$, let
     \begin{itemize}
-        \item $\bar{y}_{gp}(d)\equiv \frac{1}{n_{gp}}\sum_i y_{igp}(d)$
-        \item $\bar{y}_p(d)\equiv \frac{1}{2}\sum_g \bar{y}_{gp}(d)$
+        \item $\bar{y}_{gp}(d)\equiv \frac{1}{n_{gp}}\sum_i y_{igp}(d)$ denotes average outcome with treatment $d$ in pair $p$'s unit $g$
+        \item $\bar{y}_p(d)\equiv \frac{1}{2}\sum_g \bar{y}_{gp}(d)$ denotes average outcome with treatment $d$ in pair $p$
+        \item $\bar{y}(d)\equiv \sum_p\bar{y}_p(d)/P$ denotes average outcome with treatment $d$ in the entire population
     \end{itemize}
 \end{itemize}
 
 
-, and , let , , and $\bar{y}(d)\equiv \sum_p\bar{y}_p(d)/P$, respectively, denote the average outcome with treatment $d$ in pair $p$'s unit $g$, in pair $p$ and in the entire population
+
 
 \newpage
 \bibliographystyle{plainnat}
