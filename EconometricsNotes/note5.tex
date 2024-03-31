@@ -1599,7 +1599,7 @@ Lemma \ref{lemma:comp_2type_varest} states that
 Intuitively, the UCVEs are biased bacause clustering at the unit level does \textbf{not} account for the perfect negative correlation of the treatments of the two units in the same pair. If 
 \begin{itemize}
     \item \myhl[myblue]{\textbf{pair fixed effects are \textit{not} included}} in the regression: UCVEs generally \textbf{overeestimate} the variance of $\hat{\tau}$
-    \item \myhl[myblue]{\textbf{pair fixed effects are included}} in the regression: UCVEs can \textbf{underestimate} the variance of $\hat{\tau}$
+    \item \myhl[myblue]{\textbf{pair fixed effects are included}} in the regression: UCVEs can \textbf{underestimate} the variance of $\hat{\tau}$\footnote{With pair fixed effects in the regression, the sample residuals $u_{igp}$ are by construction uncorrelated with the pair fixed effects, which implies that for every $p$, $$\sum_{i,g}u_{igp}=0$$ Splitting }
 \end{itemize}
 
 \newpage
