@@ -1612,7 +1612,7 @@ Consider the DOF adjustment commonly used: $\frac{n-1}{n-k}\times \frac{G}{G-1}$
     \item regressions \textbf{without} pair FEs: only 2 regressors, the constant and the treatment, so $\frac{n-1}{n-k}=\frac{n-1}{n-2}$, UCVE and PCVE pretty much unchanged, hence PCVE is preferred.
     \item regressions \textbf{with} pair FEs: 
     \begin{itemize}
-        \item \textbf{not clustering}: the regression has $2P$ observations and $P+1$ regressors, then $\frac{n-1}{n-K}=\frac{2P-1}{P-1}\simeq 2$, the DOF adjustment is substantial, DOF-adjusted UCVE is twice as large as the non-DOF-adjusted UCVE, by Point 2 of Lemma \ref{lemma:comp_2type_varest} 
+        \item \textbf{not clustering}: the regression has $2P$ observations and $P+1$ regressors, then $\frac{n-1}{n-K}=\frac{2P-1}{P-1}\simeq 2$, the DOF adjustment is substantial, DOF-adjusted UCVE is twice as large as the non-DOF-adjusted UCVE, by Point 2 of Lemma \ref{lemma:comp_2type_varest}, the DOF-adjusted UCVE almost equal to non-DOF adjusted PCVE, controlling for pair fixed effects
     \end{itemize}
 \end{itemize}
 
