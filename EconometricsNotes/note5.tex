@@ -1615,6 +1615,7 @@ Consider the DOF adjustment commonly used: $\frac{n-1}{n-k}\times \frac{G}{G-1}$
         \item \textbf{not clustering}: the regression has $2P$ observations and $P+1$ regressors, then $\frac{n-1}{n-K}=\frac{2P-1}{P-1}\simeq 2$, the DOF adjustment is substantial, DOF-adjusted UCVE is twice as large as the non-DOF-adjusted UCVE, by Point 2 of Lemma \ref{lemma:comp_2type_varest}, the DOF-adjusted UCVE almost equal to non-DOF adjusted PCVE, controlling for pair fixed effects
         \item \textbf{clustering}: the regression has $2P\bar{n}_u$ observations and $P+1$ regressors, where $\bar{n}_u$ denotes the average number of observations across all units, then $\frac{n-1}{n-K}=\frac{2P\bar{n}_u-1}{2P\bar{n}_u-(P+1)}\simeq \frac{2\bar{n}_u}{2\bar{n}_u-1}$. This shows that the larger the average number of observations across units, the small the DOF adjustment.
     \end{itemize}
+    overall, in clustered paired RCTs with more than 10 observations per unit, DOF-adjusted PCVE is preferred than DOF-adjusted UCVE; 
 \end{itemize}
 
 \newpage
