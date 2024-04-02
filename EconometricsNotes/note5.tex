@@ -1610,6 +1610,10 @@ Intuitively, the UCVEs are biased bacause clustering at the unit level does \tex
 Consider the DOF adjustment commonly used: $\frac{n-1}{n-k}\times \frac{G}{G-1}$, where $\frac{G}{G-1}$ is close to 1:
 \begin{itemize}
     \item regressions \textbf{without} pair FEs: only 2 regressors, the constant and the treatment, so $\frac{n-1}{n-k}=\frac{n-1}{n-2}$, UCVE and PCVE pretty much unchanged, hence PCVE is preferred.
+    \item regressions \textbf{with} pair FEs: 
+    \begin{itemize}
+        \item \textbf{not clustering}: the regression has $2P$ observations and $P+1$ regressors, then 
+    \end{itemize}
 \end{itemize}
 
 \newpage
