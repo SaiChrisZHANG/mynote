@@ -1625,7 +1625,10 @@ Consider the DOF adjustment commonly used: $\frac{n-1}{n-k}\times \frac{G}{G-1}$
         \item \underline{without attrition}: adding pair FEs does not change the treatment coefficient or its variance, $\hat{\tau}=\hat{\tau}_{fe}$
         \item \underline{with attribution}: $\hat{\tau}$ only leverage observations from pairs where both randomization units are observed, while $\hat{\tau}$ also leverage obs. from pairs where only one of the randomization units is observed. There is \textbf{no} strong argument for or against adding pair FEs.
     \end{itemize}
-    \item \textbf{Clustered} experiments where there are pairs where the two randomization units have different number of observations $\exists p$ s.t. $(n_{1p}\neq n_{2p})$
+    \item \textbf{Clustered} experiments where there are pairs where the two randomization units have different number of observations $\exists p$ s.t. $(n_{1p}\neq n_{2p})$, pair FEs change treatment coefficients $\hat{\tau}\neq \hat{\tau}_{fe}$
+    \begin{itemize}
+        \item 
+    \end{itemize}
 \end{itemize}
 
 \newpage
