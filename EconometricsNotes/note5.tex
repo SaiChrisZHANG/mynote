@@ -1627,7 +1627,8 @@ Consider the DOF adjustment commonly used: $\frac{n-1}{n-k}\times \frac{G}{G-1}$
     \end{itemize}
     \item \textbf{Clustered} experiments where there are pairs where the two randomization units have different number of observations $\exists p$ s.t. $(n_{1p}\neq n_{2p})$, pair FEs change treatment coefficients $\hat{\tau}\neq \hat{\tau}_{fe}$
     \begin{itemize}
-        \item 
+        \item $\hat{\tau}$ converges toward $\tau$
+        \item $\hat{\tau}_{fe}$ converges toward a variance weighted average of the average treatment effect in each pair, hence it might be biased, while often with lower variance.
     \end{itemize}
 \end{itemize}
 
