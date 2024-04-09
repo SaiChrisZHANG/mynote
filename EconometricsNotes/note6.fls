@@ -368,6 +368,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Italic-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/newpx/zpl-Bold-tlf-t1.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.bbl
 INPUT /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.bbl
