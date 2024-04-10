@@ -9,7 +9,20 @@
 
 \subsection{Data Types}
 \subsubsection{Panel Data}
-For observations on $N$ units, indexed by $i=1,\cdots,N$, over $T$ periods, indexed by $t=1,\cdots,T$
+For observations on $N$ units, indexed by $i=1,\cdots,N$, over $T$ periods, indexed by $t=1,\cdots,T$, the outcome of interest is denoted by $Y_{it}$, the treatment $W_{it}$.
+These observations may themselves consist of averages over more basic units:
+\begin{align*}
+    \mathbf{Y} &= \begin{pmatrix}
+        Y_{11} & \cdots & Y_{1T}\\
+        \vdots & \ddots & \vdots \\
+        Y_{N1} & \cdots & Y_{NT}
+    \end{pmatrix} &
+    \mathbf{W} = \begin{pmatrix}
+        W_{11} & \cdots & W_{1T}\\
+        \vdots & \ddots & \vdots \\
+        W_{N1} & \cdots & W_{NT}
+    \end{pmatrix}
+\end{align*}
 
 \subsection{Shapes of Data Frames}
 
