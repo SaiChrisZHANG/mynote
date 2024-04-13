@@ -29,6 +29,10 @@ we may also observe exogenous variables $X_{it}$ or $X_i$. Typically, we focus o
 In a GRCS data, we have observations on $N$ units, each observed only once in period $T_i$ for unit $i$. Different units may be observed at diffrent points in time, $T_i$ typically takes on only a few values, with many units sharing the same value for $T_i$. The outcome $Y_i$ and treatment $W_i$ are indexed by the unit index $i$.
 The set of units is \textbf{partitioned} into 2 or more groups, with the group that unit $i$ belongs to denoted by $G_i\in \mathcal{G}=\left\{1,2,\cdots,G\right\}$.
 
+Define the average outcomes for each group-time-period pair:
+\begin{equation*}
+    \bar{Y}_{gt} \equiv \frac{\sum^N_{i=1} \mathbb{1}_{G_i=g,T_i=t}Y_i}{\sum^N_{i=1} \mathbb{1}_{G_i=g,T_i=t}}
+\end{equation*}
 
 \subsection{Shapes of Data Frames}
 
