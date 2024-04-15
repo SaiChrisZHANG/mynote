@@ -46,7 +46,11 @@ The data are doubly indexed by $i=1,\cdots,N$ and $j=1,\cdots,J$, with outcomes 
 \subsection{Shapes of Data Frames}
 Panel data can also be loosely classified by the shape:
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{Thin Frames} $(N\gg T)$}, where the number of cross-section units is large relative to the number of time periods, 
+    \item \myhl[myblue]{\textbf{Thin Frames} $(N\gg T)$}, where the number of cross-section units is large relative to the number of time periods:
+    \begin{itemize}
+        \item unit-specific parameters (individual FEs) can not be estimated consistently due to the short time series
+        \item REs might be more suitable since they place a stocahstic structure on the 
+    \end{itemize}
 \end{itemize}
 
 \subsection{Assignment Mechanisms}
