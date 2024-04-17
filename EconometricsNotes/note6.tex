@@ -70,6 +70,17 @@ In the most general case, the treatment may vary both across units and over time
 This is more relevant for the RCED configurations, and for panel data of products and promotions as treatments.
 The assumption on the absence/presence of \textbf{dynamic treatment} effects is very important.
 
+\subsubsection{Single Treated Period}
+One special case arises when a substantial number of units is treated, but these units are only treated \textbf{in the last period}
+\begin{equation*}
+    \mathbf{W}^{\text{last}} = \begin{pmatrix}
+        0&0&0&0&\cdots &0\\
+        0&0&0&0&\cdots &0\\
+        0&0&0&0&\cdots &1\\
+        \vdots &\vdots & \vdots & \vdots & \ddots & \vdots \\
+        0&0&0&0&\cdots &1
+    \end{pmatrix}
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
