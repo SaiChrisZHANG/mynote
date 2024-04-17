@@ -83,6 +83,19 @@ One special case arises when a substantial number of units is treated, but these
 \end{equation*}
 If $T$ is relatively small, this case is often analyzed as a cross-section problem, the lagged outcomes are used as exogenous covariates or pre-treatment variables to be adjusted.
 Here, dynamic effects are not testable, nor do they matter since the shortness of the panel.
+\begin{equation*}
+    \mathbf{W}^{\text{last}} = \begin{pmatrix}
+        0&0&0&0&\cdots &0\\
+        0&0&0&0&\cdots &0\\
+        0&0&0&0&\cdots &0\\
+        \vdots &\vdots & \vdots & \vdots & \ddots & \vdots \\
+        0&0&1&1&\cdots &0
+    \end{pmatrix}
+\end{equation*}
+
+
+\subsubsection{Single Treated Unit}
+Another case is a single unit being treated in multiple periods
 
 \newpage
 \bibliographystyle{plainnat}
