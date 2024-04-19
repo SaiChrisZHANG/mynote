@@ -123,6 +123,18 @@ The staggered adoption is the case where units adopt the treatment at various pe
 \end{equation*}
 Here, with some assumptions, we can separate dynamic effects from heterogeneity across calendar time.
 
+\subsubsection{Event Study Designs}
+In the event-study design, units are exposed to the treatment in at most one period:
+\begin{equation*}
+    \mathbf{W}^{\text{block}} = \begin{pmatrix}
+        0&0&0&0&\cdots &0\\
+        1&0&0&0&\cdots &0\\
+        0&1&0&0&\cdots &0\\
+        \vdots &\vdots & \vdots & \vdots & \ddots & \vdots \\
+        0&0&0&1&\cdots &0
+    \end{pmatrix}
+\end{equation*}
+There are often dynamic effects of the treatment past hte time of initial treatment, however, the effects might be changing over time.
 
 \newpage
 \bibliographystyle{plainnat}
