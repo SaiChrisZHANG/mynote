@@ -95,7 +95,17 @@ Here, dynamic effects are not testable, nor do they matter since the shortness o
 this setting is prominent in the original applications of the synthetic control literature, here $T$ is usually small.
 
 \subsubsection{Single Treated Unit and Single Treated Period}
-An extreme case is where only a single unit is treated, and it is only treated in a single period (typically the last). Normally, we focus on the effect for the single treated/time-period pair and construct prediction intervals.
+An extreme case is where only a single unit is treated, and it is only treated in a single period (typically the last). 
+\begin{equation*}
+    \mathbf{W}^{\text{block}} = \begin{pmatrix}
+        0&0&0&0&\cdots &0\\
+        0&0&0&0&\cdots &0\\
+        0&0&0&0&\cdots &0\\
+        \vdots &\vdots & \vdots & \vdots & \ddots & \vdots \\
+        0&0&0&0&\cdots &1
+    \end{pmatrix}
+\end{equation*}
+Normally, we focus on the effect for the single treated/time-period pair and construct prediction intervals.
 
 \subsubsection{Block Assignment}
 The case of block assignment is where a subset of units is treated every period after a common starting date:
