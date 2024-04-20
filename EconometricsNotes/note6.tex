@@ -167,9 +167,11 @@ Clustering creates complications for inference.
 For a treatment assignment matrix $\mathbf{W}$, denote:
 \begin{itemize}
     \item the full $T-$component column vector of treatment assignments as $$ \underline{\mathbf{w}} \equiv \left(w_1,\cdots,w_T\right)' $$
-    \item the $t$-component column vector of treatment assignments \myhl[myblue]{\textbf{up to} time $t$} as $$ \underline{\mathbf{w}}^{t} \equiv \left(w_1,\cdots,w_t\right)' $$
+    \item the $t$-component column vector of treatment assignments \myhl[myblue]{\textbf{up to} time $t$} as $$ \underline{\mathbf{w}}^{t} \equiv \left(w_1,\cdots,w_t\right)' $$ hence $\underline{\mathbf{w}}^T=\underline{\mathbf{w}}$
     \item the row vector of treatment values for unit $i$ as $\underline{\mathbf{W}}_i$
 \end{itemize}
+Then in general, we can index the potential outcomes for unit $i$ in period $t$ by the full $T-$component vector of assignments $\underline{\mathbf{w}}$
+$$Y_{it}\left(\underline{\mathbf{w}}\right)$$
 
 \newpage
 \bibliographystyle{plainnat}
