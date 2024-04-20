@@ -147,7 +147,19 @@ In the event-study design, units are exposed to the treatment in at most one per
 There are often dynamic effects of the treatment past hte time of initial treatment, however, the effects might be changing over time.
 
 \subsubsection{Clustered Assignment}
-
+In many applications, units are grouped together in clusters. Units within the same clusters are always assigned to the treatment:
+\begin{equation*}
+    \mathbf{W}^{\text{cluster}} = \begin{pmatrix}
+        0&0&0&0&\cdots &0&0&1\\
+        0&0&0&0&\cdots &0&0&1\\
+        0&0&0&0&\cdots &0&0&2\\
+        0&0&0&0&\cdots &0&0&2\\
+        0&0&0&0&\cdots &1&1&3\\
+        \vdots&\vdots&\vdots&\vdots&\ddots &\vdots&\vdots&\vdots\\
+        0&0&0&1&\cdots &1&1&C\\
+        0&0&0&1&\cdots &1&1&C
+    \end{pmatrix}
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
