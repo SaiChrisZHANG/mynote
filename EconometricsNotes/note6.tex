@@ -195,7 +195,10 @@ This is a testable assumption with experimental data and sufficient variation in
         \item In obserational studies, one cannot directly control the information about the future treatment paths. In this case, different units need to be gauranteed to face the \textbf{same information environment} for Assumption \ref{assump:no_anticipation} to hold.
     \end{itemize}
 \end{itemize}
-Under Assumption 1
+Under Assumption \ref{assump:no_anticipation}, the total number of potential treatment effects is reduced from $2^{T-1}\times \left(2^T-1\right)$ to $\left(\sum^T_{t=1}2^{t-1}\right)\left(\sum^T_{t=1}2^t-1\right)$. The unit-period specific treatment effects are now of the type 
+\begin{equation*}
+    \tau^{\underline{\mathbf{w}}^t,\underline{\mathbf{w}}^{t'}}_{it} \equiv Y_{it}\left(\underline{\mathbf{w}}^{t'}\right) - Y_{it}\left(\underline{\mathbf{w}}^t\right)
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
