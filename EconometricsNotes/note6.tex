@@ -240,6 +240,11 @@ First, consider a panel setting with no anticipation, no dynamics, and constant 
     The control outcome $Y_{it}(0)$ satisfies $$ Y_{it}(0) = \alpha_i + \beta_t + \epsilon_{it} $$
     The unobserved component $\epsilon_{it}$ is (mean-)independent of the treatment assignment $W_{it}$
 \end{assumption}
+And 
+\begin{assumption}{Constant Static Treatment Effects}{const_stat_treat}
+    The potential outcomes satisfy $$ Y_{it}(1) = Y_{it}(0) + \tau \ \ \forall (i,t) $$
+\end{assumption}
+Under Assumption \ref{assump:twfe_model}  Then for the realized 
 
 \newpage
 \bibliographystyle{plainnat}
