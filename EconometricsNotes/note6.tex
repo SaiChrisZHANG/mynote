@@ -246,6 +246,10 @@ And
 \end{assumption}
 Under Assumption \ref{assump:twfe_model} and \ref{assump:const_stat_treat}, for the realized $Y_{it}\equiv W_{it}Y_{it}(1) + \left(1-W_{it}\right)Y_{it}(0)$ we have a model 
 $$ Y_{it} = \alpha_i + \beta_t +\tau W_{it}+\epsilon_{it} $$
+then we can estimate the parameters of this model by least squares
+\begin{equation*}
+    \left(\hat{\tau}^{TWFE},\hat{\alpha},\hat{\beta}\right) = \arg\min_{\tau,\alpha,\beta} \sum^N_{i=1}\sum^T_{t=1}
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
