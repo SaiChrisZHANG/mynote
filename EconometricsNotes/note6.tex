@@ -258,6 +258,10 @@ Define the averages in the four groups as
     \bar{Y}^{\mathrm{tr,post}} &\equiv \frac{\sum_{i\in\mathcal{J}}\sum_{t>T_0}Y_{it}}{N^{\mathrm{tr}}\left(T-T_0\right)} & \bar{Y}^{\mathrm{tr,pre}} &\equiv \frac{\sum_{i\in\mathcal{J}}\sum_{t\leq T_0}Y_{it}}{N^{\mathrm{tr}}T_0} \\
     \bar{Y}^{\mathrm{co,post}} &\equiv \frac{\sum_{i\not\in\mathcal{J}}\sum_{t>T_0}Y_{it}}{N^{\mathrm{co}}\left(T-T_0\right)} & \bar{Y}^{\mathrm{co,pre}} &\equiv \frac{\sum_{i\not\in\mathcal{J}}\sum_{t\leq T_0}Y_{it}}{N^{\mathrm{co}}T_0}
 \end{align*}
+and then write the estimator for the treatment effect as 
+\begin{equation*}
+    \hat{\tau}^{TWFE} = \left(\bar{Y}^{\mathrm{tr,post}}-\bar{Y}^{\mathrm{tr,pre}}\right) - \left(\bar{Y}^{\mathrm{co,post}}-\bar{Y}^{\mathrm{co,pre}}\right)
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
