@@ -255,7 +255,8 @@ one restriction on the $\alpha_i$ or $\beta_t$ needs to be imposed to avoid perf
 Under a block assignment structure, we have $W_{it}=1$ only for a subset of the units\footnote{The \textit{treatment group} with $i\in \mathcal{J}$, where the cardinality for the set $\mathcal{J}$ is $N^{\mathrm{tr}}$ and $N^{\mathrm{co}}\equiv N-N^{\mathrm{tr}}$.}, and those units are treated only during periods $t$ with $t>T_0$.
 Define the averages in the four groups as 
 \begin{align*}
-    \bar{Y}^{\mathrm{tr},post}
+    \bar{Y}^{\mathrm{tr,post}} &\equiv \frac{\sum_{i\in\mathcal{J}}\sum_{t>T_0}Y_{it}}{N^{\mathrm{tr}}\left(T-T_0\right)} & \bar{Y}^{\mathrm{tr,pre}} &\equiv \frac{\sum_{i\in\mathcal{J}}\sum_{t\leq T_0}Y_{it}}{N^{\mathrm{tr}}T_0} \\
+    \bar{Y}^{\mathrm{co,post}} &\equiv \frac{\sum_{i\not\in\mathcal{J}}\sum_{t>T_0}Y_{it}}{N^{\mathrm{co}}\left(T-T_0\right)} & \bar{Y}^{\mathrm{co,pre}} &\equiv \frac{\sum_{i\not\in\mathcal{J}}\sum_{t\leq T_0}Y_{it}}{N^{\mathrm{co}}T_0}
 \end{align*}
 
 \newpage
