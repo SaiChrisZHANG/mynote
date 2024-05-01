@@ -250,7 +250,7 @@ then we can estimate the parameters of this model by least squares
 \begin{equation*}
     \left(\hat{\tau}^{TWFE},\hat{\alpha},\hat{\beta}\right) = \arg\min_{\tau,\alpha,\beta} \sum^N_{i=1}\sum^T_{t=1} \left(Y_{it}-\alpha_i-\beta_t -\tau W_{it}\right)^2
 \end{equation*}
-
+one restriction on the $\alpha_i$ or $\beta_t$ needs to be imposed to avoid perfect collinearity, but this normalization does not affect the estimation of $\tau$.
 
 \newpage
 \bibliographystyle{plainnat}
