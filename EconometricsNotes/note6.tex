@@ -274,6 +274,10 @@ Assuming that the treatment within group and time period pairs is constant, the 
     \hat{\tau}^{DiD} =& \frac{1}{G_T\left(T-T_0\right)} \sum_{g\in\mathcal{G}_T,t>T_0} \bar{Y}_{gt} - \frac{1}{G_C\left(T-T_0\right)} \sum_{g\in\mathcal{G}_C,t>T_0}\bar{Y}_{gt}\\
     &- \frac{1}{G_TT_0}\sum_{g\in\mathcal{G}_T,t\leq T_0} \bar{Y}_{gt} + \frac{1}{G_CT_0}\sum_{g\in\mathcal{G}_C,t\leq T_0}\bar{Y}_{gt}
 \end{align*}
+and at the group level, we have a proper panel setup:
+\begin{align*}
+    \bar{Y}_{gt}(0) &= \alpha_g+\beta_t+\epsilon_{gt} & \bar{Y}_{gt}(1) &\bar{Y}_{gt}(0)+\tau
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
