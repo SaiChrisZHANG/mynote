@@ -267,9 +267,13 @@ and then write the estimator for the treatment effect as
 In GRCS setting, we observe each physical unit only once. With blocked assignment, the notation only has a single index for the unit $i=1,\cdots,N$.
 Let $G_i\in\mathcal{G}=\left\{1,\cdots,G\right\}$ denote the cluster or group unit $i$ belongs to, and $T_i\in \left\{1,\cdots,N\right\}$ the time period unit $i$ is observed in.
 
-The set of clusters $\mathcal{G}$ is partitioned into two groups: control group $\mathcal{G}_C$ and treatment group $\mathcal{G}_T$, with cardinality $G_C$ and $G_T$.
+The set of clusters $\mathcal{G}$ is partitioned into two groups: control group $\mathcal{G}_C$ and treatment group $\mathcal{G}_T$, with cardinality $G_C$ and $G_T$. Only units with $G_i\in \mathcal{G}_T$, indicated by $D_i=\mathbf{1}_{G_i\in\mathcal{G}_T}$, are exposed to the treatment if they are observed after the treatment date $T_0$: $W_i=\mathbf{1}_{G_i\in\mathcal{G}_T,T_i>T_0}$
 
-Only units with $G_i\in \mathcal{G}_T$, indicated by $D_i=\mathbf{1}_{G_i\in\mathcal{G}_T}$, are exposed to the treatment if they are observed after the treatment date $T_0$: $W_i=\mathbf{1}_{G_i\in\mathcal{G}_T,T_i>T_0}$
+Assuming that the treatment within group and time period pairs is constant, the cluster/time-period average treatment $\bar{W}_{gt}$ is binary if the original treatment is. Then the DiD estimator is 
+\begin{align*}
+    \hat{\tau}^{DiD} =& \frac{1}{G_T\left(T-T_0\right)} \sum_{g\in\mathcal{G}_T,t>T_0} \bar{Y}_{gt} - \frac{1}{G_C\left(T-T_0\right)} \sum_{g\in\mathcal{G}_C,t>T_0}\bar{Y}_{gt}\\
+    &- \frac{1}{G_TT_0}\sum_{g\in\mathcal{G}_T,t\leq T_0} \bar{Y}_{gt} + \frac{1}{G_CT_0}\sum_{g\in\mathcal{G}_C,t\leq T_0}\bar{Y}_{gt}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
