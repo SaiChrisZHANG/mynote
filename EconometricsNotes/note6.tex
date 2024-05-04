@@ -297,6 +297,7 @@ There are two ways to conduct inference about $\hat{\tau}^{\mathrm{DiD}}$ and $\
 \end{itemize}
 
 Regardless of the level of aggregation, inference for TWFE and DiD estimators typically takes into account the correlation in outcomes over time within units in applications with more than two periods. So it is \textbf{NOT} appropriate to use the robust Eicker-Huber-White standard errors. 
+Instead, one should use clustered standard errors based on clustering observations by units. It can also be approximated by bootstrapping all observations for each unit.
 
 \newpage
 \bibliographystyle{plainnat}
