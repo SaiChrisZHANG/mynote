@@ -293,8 +293,10 @@ There are two ways to conduct inference about $\hat{\tau}^{\mathrm{DiD}}$ and $\
 \subsubsection{Sampling-Based Inference}
 \begin{itemize}
     \item \myhl[myblue]{\textbf{proper panel setting}}: it is often assumed that all units are randomly sampled from a large population and thus \textbf{exchangeable}. Inference about $\hat{\tau}^{\mathrm{TWFE}}$ reduces to joint inference about four means with i.i.d. observations.
+    \item \myhl[myblue]{\textbf{GRCS setting}}: one can allow for non-vanishing errors at the group level, but it cannot be done in the two-group case.
 \end{itemize}
 
+Regardless of the level of aggregation,
 
 \newpage
 \bibliographystyle{plainnat}
