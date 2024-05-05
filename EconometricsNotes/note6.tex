@@ -314,7 +314,12 @@ The \textbf{parallel trend assumption} is the fundamental justification for the 
     \begin{equation*}
         \mathbb{E}\left[Y_{it}(0)-Y_{it'}(0)\mid D_i=1\right] = \mathbb{E}\left[Y_{it}(0)-Y_{it'}(0)\mid D_i=0\right]
     \end{equation*}
+    alternatively, postulate a TWFE model for the control outcomes, additionally assuming that the treatment assignment $D_i$ is independent of the vector of residuals $\epsilon_{it},t=1,\cdots,T$, conditional on FEs: 
+    \begin{equation*}
+        D_i \perp \left(\epsilon_{i1},\cdots,\epsilon_{iT}\right) \mid \alpha_i 
+    \end{equation*}
 \end{assumption}
+From the point of view of the modern casual inference literature, the parallel trend assumption is non-standard in the sense that it combbines restrictions on the potential outcomes with restrictions on the assignment mechanism.
 
 
 \newpage
