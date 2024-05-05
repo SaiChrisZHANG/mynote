@@ -287,20 +287,20 @@ There are two ways to conduct inference about $\hat{\tau}^{\mathrm{DiD}}$ and $\
     \item otherwise: \myhl[myblue]{\textbf{sampling-based}} inference
 \end{itemize}
 
-\subsubsection{Design-Based Inference}
+\paragraph*{Design-Based Inference}
 
 
-\subsubsection{Sampling-Based Inference}
+\paragraph*{Sampling-Based Inference}
 \begin{itemize}
     \item \myhl[myblue]{\textbf{proper panel setting}}: it is often assumed that all units are randomly sampled from a large population and thus \textbf{exchangeable}. Inference about $\hat{\tau}^{\mathrm{TWFE}}$ reduces to joint inference about four means with i.i.d. observations.
     \item \myhl[myblue]{\textbf{GRCS setting}}: one can allow for non-vanishing errors at the group level, but it cannot be done in the two-group case.
 \end{itemize}
 
-\paragraph*{Standard errors}
+\subparagraph*{Standard errors}
 Regardless of the level of aggregation, inference for TWFE and DiD estimators typically takes into account the correlation in outcomes over time within units in applications with more than two periods. So it is \textbf{NOT} appropriate to use the robust Eicker-Huber-White standard errors. 
 Instead, one should use clustered standard errors based on clustering observations by units. It can also be approximated by bootstrapping all observations for each unit.
 
-\subsection{The Parallel Trend Assumption}
+\subsubsection{The Parallel Trend Assumption}
 
 \newpage
 \bibliographystyle{plainnat}
