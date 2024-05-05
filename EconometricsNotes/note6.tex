@@ -304,7 +304,10 @@ Instead, one should use clustered standard errors based on clustering observatio
 
 The \textbf{parallel trend assumption} is the fundamental justification for the DiD estimator. It states that the units who are treated would have followed a path that is parallel to the path followed by the control units on average, in the absence of the treatment.
 
-\paragraph*{Proper panel settings}
+\paragraph*{Proper panel settings} the assumption is that the expected difference in control outcomes in any period for units who later are exposed to the treatment and units who are always in the control group is \textbf{contstant}:
+\begin{assumption}{Parallel Trend Assumption: Proper Panel}{parallel_trend_panel}
+    
+\end{assumption}
 
 \newpage
 \bibliographystyle{plainnat}
