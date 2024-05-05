@@ -306,8 +306,12 @@ The \textbf{parallel trend assumption} is the fundamental justification for the 
 
 \paragraph*{Proper panel settings} the assumption is that the expected difference in control outcomes in any period for units who later are exposed to the treatment and units who are always in the control group is \textbf{contstant}:
 \begin{assumption}{Parallel Trend Assumption: Proper Panel}{parallel_trend_panel}
-    
+    For all $t,t'$,
+    \begin{equation*}
+        \mathbb{E}\left[Y_{it}\left(0\right)\mid D_i=1\right] - \mathbb{E}\left[Y_{it}\left(0\right)\mid D_i=0\right] = \mathbb{E}\left[Y_{it'}\left(0\right)\mid D_i=1\right] - \mathbb{E}\left[Y_{it'}\left(0\right)\mid D_i=0\right]
+    \end{equation*}
 \end{assumption}
+
 
 \newpage
 \bibliographystyle{plainnat}
