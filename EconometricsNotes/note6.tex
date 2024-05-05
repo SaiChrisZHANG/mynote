@@ -310,6 +310,10 @@ The \textbf{parallel trend assumption} is the fundamental justification for the 
     \begin{equation*}
         \mathbb{E}\left[Y_{it}\left(0\right)\mid D_i=1\right] - \mathbb{E}\left[Y_{it}\left(0\right)\mid D_i=0\right] = \mathbb{E}\left[Y_{it'}\left(0\right)\mid D_i=1\right] - \mathbb{E}\left[Y_{it'}\left(0\right)\mid D_i=0\right]
     \end{equation*}
+    equivalently, we can formulate it in terms of changes over time\footnote{the expected change in control outcomes is the same for those who will eventually be exposed to the treatment and those who will not}:
+    \begin{equation*}
+        \mathbb{E}\left[Y_{it}(0)-Y_{it'}(0)\mid D_i=1\right] = \mathbb{E}\left[Y_{it}(0)-Y_{it'}(0)\mid D_i=0\right]
+    \end{equation*}
 \end{assumption}
 
 
