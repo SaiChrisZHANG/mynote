@@ -332,8 +332,10 @@ The parallel trends assumption can the nbe formulated as requiring that the diff
     \begin{equation*}
         \mathbb{E}\left[Y_{gt}(0)\mid D_i=1\right] - \mathbb{E}\left[Y_{gt'}(0)\mid D_i=1\right] = \mathbb{E}\left[Y_{g't}(0)\mid D_i=0\right] - \mathbb{E}\left[Y_{g't'}(0)\mid D_i=0\right]
     \end{equation*}
-    If $Y_{gt}(0)$ for all $g$ and $t$ are observed, the presence of the two groups and two time periods would be sufficient for the assumption to have testable implications. However, in the 2-group/2-period case, at least one of the four cells is exposed to the treatment, there are no testable restrictions implied by this assumption.
 \end{assumption}
+If $Y_{gt}(0)$ for all $g$ and $t$ are observed, the presence of the two groups and two time periods would be sufficient for the assumption to have testable implications. However, in the 2-group/2-period case, at least one of the four cells is exposed to the treatment, there are no testable restrictions implied by this assumption.
+
+If there are more than 2 periods, or more than 2 groups, there are testable restrictions by the parallel trend assumption:
 
 \newpage
 \bibliographystyle{plainnat}
