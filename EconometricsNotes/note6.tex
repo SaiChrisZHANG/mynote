@@ -328,7 +328,10 @@ The parallel trends assumption can the nbe formulated as requiring that the diff
     \begin{equation*}
         \mathbb{E}\left[Y_{gt}(0)\mid D_i=1\right] - \mathbb{E}\left[Y_{g't}(0)\mid D_i=0\right] = \mathbb{E}\left[Y_{gt'}(0)\mid D_i=1\right] - \mathbb{E}\left[Y_{g't'}(0)\mid D_i=0\right]
     \end{equation*}
-    
+    an alternative formulation is that expected change between periods $t'$ and $t$ is the same for all groups:
+    \begin{equation*}
+        \mathbb{E}\left[Y_{gt}(0)\mid D_i=1\right] - \mathbb{E}\left[Y_{gt'}(0)\mid D_i=1\right] = \mathbb{E}\left[Y_{g't}(0)\mid D_i=0\right] - \mathbb{E}\left[Y_{g't'}(0)\mid D_i=0\right]
+    \end{equation*}
 \end{assumption}
 
 \newpage
