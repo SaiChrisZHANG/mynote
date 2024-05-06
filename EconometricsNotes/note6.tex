@@ -324,7 +324,11 @@ From the point of view of the modern casual inference literature, the parallel t
 \paragraph*{GRCS settings} Suppose in the population, all groups are (infinitely) large in each period, and we have random samples from these populations for each period. Then the expectations are well defined as population averages.
 The parallel trends assumption can the nbe formulated as requiring that the difference in expected control outcomes between two groups remains constant over time: 
 \begin{assumption}{Parallel Trend Assumption: Grouped Repeated Cross-Section}{parallel_trend_grcs}
-    For all pairs of groups $g,g'$ and for all pairs of time periods $t,t'$
+    For all pairs of groups $g,g'$ and for all pairs of time periods $t,t'$, the average difference between the groups remains the same over time, irrespective of their treatment status: 
+    \begin{equation*}
+        \mathbb{E}\left[Y_{gt}(0)\mid D_i=1\right] - \mathbb{E}\left[Y_{g't}(0)\mid D_i=0\right] = \mathbb{E}\left[Y_{gt'}(0)\mid D_i=1\right] - \mathbb{E}\left[Y_{g't'}(0)\mid D_i=0\right]
+    \end{equation*}
+    
 \end{assumption}
 
 \newpage
