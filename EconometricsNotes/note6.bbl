@@ -1,9 +1,15 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abadie(2005)]{abadie2005semiparametric}
+Alberto Abadie.
+\newblock Semiparametric difference-in-differences estimators.
+\newblock \emph{The review of economic studies}, 72\penalty0 (1):\penalty0
+  1--19, 2005.
 
 \bibitem[Arkhangelsky and Imbens(2023)]{arkhangelsky2023causal}
 Dmitry Arkhangelsky and Guido Imbens.
