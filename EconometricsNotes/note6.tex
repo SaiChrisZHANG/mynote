@@ -353,6 +353,12 @@ then
 \begin{equation*}
     \mathbb{E}\left\{ \frac{\Delta \mathbf{y}_t}{\mathbb{P}\left(\mathbf{d}=1\right)} \times \frac{\mathbf{d}-\pi\left(\mathbf{x}_b\right)}{1-\pi\left(\mathbf{x}_b\right)} \right\}
 \end{equation*}
+gives an unbiased estimate of the ATT if 
+\begin{align*}
+    \mathbb{E}\left(\mathbf{y}_{0t}-\mathbf{y}_{0b}\mid \mathbf{d}=1,\mathbf{x}_b\right) &= \mathbb{E}\left(\mathbf{y}_{0t}-\mathbf{y}_{0b}\mid \mathbf{d}=0,\mathbf{x}_b\right)\\
+    \mathbb{P}\left(\mathbf{d}=1\right) &>0\\
+    \pi\left(\mathbf{x}_b\right) &<1
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
