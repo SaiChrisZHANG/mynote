@@ -341,7 +341,13 @@ Time-invariant characteristics of the units in addition to the time path of the 
 A reason one might want to include these pre-treatment variables is that the parallel trend and constant treatment effect assumptions hold only within subpopulations defined by them.
 
 \paragraph*{Semi-parametric DiD}
-\citet{abadie2005semiparametric} proposed a solution based on \textbf{re-weighting} the differences in outcomes by the propensity score for balance:
+\citet{abadie2005semiparametric} proposed a solution based on \textbf{re-weighting} the differences in outcomes by the propensity score for balance. TO estimate the average treatment effect on the treated (ATT):
+\begin{equation*}
+    ATT\equiv \mathbb{E}\left(\mathbf{y}_{1t}-\mathbf{y}_{0t}\mid \mathbf{d}=1\right)
+\end{equation*}
+
+
+
 
 \newpage
 \bibliographystyle{plainnat}
