@@ -350,9 +350,9 @@ where the 2 potential outcomes $\mathbf{y}_{1t}$ is the value of $\mathbf{y}$ if
 ATT cannot be directly estimated since $\mathbf{y}_{0t}$, the counterfactual, is never observed. For a set of pretreatment characteristics $\mathbf{x}_{b}$, define the probability to be in the treatment group conditional on $\mathbf{x}_b$ as $$ \pi\left(\mathbf{x}_b\right)\equiv \mathbb{P}\left(\mathbf{d}=1\mid \mathbf{x}_b\right) $$
 define the change of $\mathbf{y}$ from baseline $b$ to $t$ as $$\Delta \mathbf{y}_t \equiv \mathbf{y}_t - \mathbf{y}_b $$
 then
-\begin{equation*}
+\begin{equation}\label{eq:abadie_att_estimate}
     \mathbb{E}\left\{ \frac{\Delta \mathbf{y}_t}{\mathbb{P}\left(\mathbf{d}=1\right)} \times \frac{\mathbf{d}-\pi\left(\mathbf{x}_b\right)}{1-\pi\left(\mathbf{x}_b\right)} \right\}
-\end{equation*}
+\end{equation}
 gives an unbiased estimate of the ATT if 
 \begin{align*}
     \mathbb{E}\left(\mathbf{y}_{0t}-\mathbf{y}_{0b}\mid \mathbf{d}=1,\mathbf{x}_b\right) &= \mathbb{E}\left(\mathbf{y}_{0t}-\mathbf{y}_{0b}\mid \mathbf{d}=0,\mathbf{x}_b\right)\\
@@ -361,7 +361,7 @@ gives an unbiased estimate of the ATT if
 \end{align*}
 This estimator is a weighted average of the difference of trend, $\Delta \mathbf{y}_t$, across treatment groups: it reweights the trend of the untreated based on the propensity score $\pi\left(\mathbf{x}_b\right)$\footnote{$\frac{\pi\left(\mathbf{x}_b\right)}{1-\pi\left(\mathbf{x}_b\right)}$ is an increasing function of $\pi\left(\mathbf{x}_b\right)$, hence untreated participants with a higher propensity score are given a higher weight.}.
 
-\citet{abadie2005semiparametric} suggests to approximate the propensity score $\pi\left(\mathbf{x}_b\right)$ semiparametrically using a polynomial series of the predictors and plug the predicted values into the sample analogue of teh ATT estimates.
+\citet{abadie2005semiparametric} suggests to approximate the propensity score $\pi\left(\mathbf{x}_b\right)$ semiparametrically using a polynomial series of the predictors and plug the predicted values into the sample analogue of the ATT estimates \ref{eq:abadie_att_estimate}.
 
 \newpage
 \bibliographystyle{plainnat}
