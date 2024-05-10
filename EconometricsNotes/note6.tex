@@ -370,8 +370,9 @@ There are two main ways to do the approximation:
 
 consider $\hat{\pi}\left(\mathbf{x}_b\right)$, the approximated propensity score, and $k$, the order of the polynomial function for approximation. Then the \textbf{LPM} approximation is 
 \begin{align*}
-    \hat{\pi}\left(\mathbf{x}_b\right) =
+    \hat{\pi}\left(\mathbf{x}_b\right) = \hat{\gamma}_0 + \hat{\gamma}_1 \times \mathbf{x}_1 + \sum^k_{i=1}\hat{\gamma}_{2i}\times \mathbf{x}^i_2
 \end{align*}
+where $\mathbf{x}_1$ is a binary variable,
 
 
 \newpage
