@@ -364,9 +364,11 @@ This estimator is a weighted average of the difference of trend, $\Delta \mathbf
 \citet{abadie2005semiparametric} suggests to approximate the propensity score $\pi\left(\mathbf{x}_b\right)$ semiparametrically using a polynomial series of the predictors and plug the predicted values into the sample analogue of the ATT estimates \ref{eq:abadie_att_estimate}.
 There are two main ways to do the approximation:
 \begin{itemize}
-    \item \textbf{polynomial}: higher order improves the approximation, but less precise
-    \item \textbf{series logit estimator (SLE)}: 
+    \item \textbf{linear probability model (LPM)}: higher order improves the approximation, but less precise
+    \item \textbf{series logit estimator (SLE)}: using a logit specification to constrain the estimated propensity score to vary between 0 and 1
 \end{itemize}
+
+consider $\hat{\pi}\left(\mathbf{x}_b\right)$, the approximated propensity score, and $k$, the order of the polynomial function for approximation. Then 
 
 
 \newpage
