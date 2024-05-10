@@ -362,6 +362,12 @@ gives an unbiased estimate of the ATT if
 This estimator is a weighted average of the difference of trend, $\Delta \mathbf{y}_t$, across treatment groups: it reweights the trend of the untreated based on the propensity score $\pi\left(\mathbf{x}_b\right)$\footnote{$\frac{\pi\left(\mathbf{x}_b\right)}{1-\pi\left(\mathbf{x}_b\right)}$ is an increasing function of $\pi\left(\mathbf{x}_b\right)$, hence untreated participants with a higher propensity score are given a higher weight.}.
 
 \citet{abadie2005semiparametric} suggests to approximate the propensity score $\pi\left(\mathbf{x}_b\right)$ semiparametrically using a polynomial series of the predictors and plug the predicted values into the sample analogue of the ATT estimates \ref{eq:abadie_att_estimate}.
+There are two main ways to do the approximation:
+\begin{itemize}
+    \item \textbf{polynomial}: higher order improves the approximation, but less precise
+    \item \textbf{series logit estimator (SLE)}: 
+\end{itemize}
+
 
 \newpage
 \bibliographystyle{plainnat}
