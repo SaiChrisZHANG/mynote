@@ -380,7 +380,10 @@ The \textbf{SLE} approximation is
 \end{equation*}
 where $\Lambda(x) = \frac{\exp(x)}{1+\exp(x)}$ is the logistic function. Higher order binary variables are not considered here since $\mathbf{x}_1^k=\mathbf{x}_1$ for any value $k>1$.
 
-\paragraph*{Doubly robust DiD} \citet{sant2020doubly}
+\paragraph*{Doubly robust DiD} \citet{sant2020doubly} adjust for time-invariant covariates in a doubly robust way, by combining inverse-propensity score weighting with outcome modeling. 
+
+
+With finite $T$, strictly exogenous time-varying covariates $X_{it}$ can be converted to time invariant $X_i\equiv \left(X_{i1},\cdots,X_{iT}\right)$, in practice, applied researchers only rely on linear specifications with contemporaneous covariates instead.
 
 \newpage
 \bibliographystyle{plainnat}
