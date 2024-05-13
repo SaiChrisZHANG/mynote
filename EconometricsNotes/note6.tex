@@ -395,7 +395,7 @@ With finite $T$, strictly exogenous time-varying covariates $X_{it}$ can be conv
             &+ \left(1-t\right)\cdot \left(1-\lambda\right) \mathbb{P}\left(Y_0\leq y, D=d, X\leq x \mid T=0\right)
         \end{align*}
         where $\left(y,d,x,t\right)\in \mathbb{R}\times \left\{0,1\right\}\times \mathbb{R}^k\times \left\{0,1\right\}$, with the joint distribution of $\left(D,X\right)$ invariant to $T$.
-        \item[2] \textbf{Conditional Parallel Trend Assumption (PTA)}: $$ \mathbb{E}\left[Y_1(0)-Y_0(0)\mid D=1,X\right] \overset{a.s.}{=} \mathbb{E}\left[Y_1(0)-Y_0(0)\mid D=1,X\right] $$
+        \item[2] \textbf{Conditional Parallel Trend Assumption (PTA)}\footnote{It allows for covariate-specific time trends but not unit specific trends.}: $$ \mathbb{E}\left[Y_1(0)-Y_0(0)\mid D=1,X\right] \overset{a.s.}{=} \mathbb{E}\left[Y_1(0)-Y_0(0)\mid D=1,X\right] $$
         \item[3] $\exists \epsilon>0$, $\mathbb{P}\left(D=1\right)>\epsilon$ and $\mathbb{P}\left(D=1\mid X\right)\leq 1-\epsilon$ a.s.
     \end{itemize}
 \end{assumption}
