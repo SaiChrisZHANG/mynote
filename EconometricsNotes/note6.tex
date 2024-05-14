@@ -416,7 +416,18 @@ Under Assumption \ref{assump:santanna_zhao}, there are 2 main flexible estimatio
     \item with proper panel data, let $\Delta Y= Y_1-Y_0$ and define $\mu^p_{d,\Delta}(X)\equiv \mu^p_{d,1}(X)-\mu^p_{d,0}(X)$ being a model for the true, unknown outcome regression $m^p_{d,t}(x)\equiv \mathbb{E}\left[Y_t\mid D=d,X=x\right]$, $d,t=0,1$. 
     \item with repeated cross-section data, let $\mu_{d,t}^{rc}(x)$ be an arbitrary model for the true, unknown regression $m^{rc}_{d,t}(x)\equiv \mathbb{E}\left[Y\mid D=d,T=t,X=x\right], d,t=0,1$, $\mu_{d,Y}^{rc}(T,X)\equiv T\cdot \mu^{rc}_{d,1}(X)+(1-T)\cdot \mu^{rc}_{d,0}(X)$, and $\mu^{rc}_{d,\Delta}(X)\equiv \mu^{rc}_{d,1}(X)-\mu^{rc}_{d,0}(X)$.
 \end{itemize}
-Then, consider 
+Then, consider the estimand 
+\begin{itemize}
+    \item for proper panel data: 
+    \begin{equation*}
+        \tau^{dr,p} = \mathbb{E}\left[ \left(w^p_1(D)-w^p_0\left(D,X;\pi\right)\right) \left(\Delta Y-\mu^p_{0,\Delta}(X)\right) \right]
+    \end{equation*}
+    where, for a generic $g$,
+    \begin{align*}
+        w^p_1(D) &= \frac{D}{\mathbb{E}\left[D\right]} & w^p_0\left(D,X;g\right)
+    \end{align*}
+    \item for repeated cross-section data:
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
