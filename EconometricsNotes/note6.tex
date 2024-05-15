@@ -428,8 +428,9 @@ Then, consider the estimand
     \end{align*}
     \item for repeated cross-section data, consider 2 different estimands
     \begin{align*}
-        \tau_1^{dr,rc} &= \mathbb{E}\left[\left(w^{rc}_1(D,T)-w_0^{rc}\left(D,T,X;\pi\right)\right) \cdot \left(Y-\mu^{rc}_{0,Y}(T,X)\right)\right] \\
-        \tau^{dr,rc}_2 &= \tau^{dr,rc}_1
+        \tau_1^{dr,rc} =& \mathbb{E}\left[\left(w^{rc}_1(D,T)-w_0^{rc}\left(D,T,X;\pi\right)\right) \cdot \left(Y-\mu^{rc}_{0,Y}(T,X)\right)\right] \\
+        \tau^{dr,rc}_2 =& \tau^{dr,rc}_1 + \left(\mathbb{E}\left[\mu^{rc}_{1,1}(X)-\mu^{rc}_{0,1}(X)\mid D=1\right] -\mathbb{E}\left[\mu^{rc}_{1,1}(X)-\mu^{rc}_{0,1}(X)\mid D=1,T=1\right] \right)\\
+        &- \left( \mathbb{E}\left[\mu^{rc}_{1,0}(X)-\mu^{rc}_{0,0}(X)\mid D=1\right] \right)
     \end{align*}
 \end{itemize}
 
