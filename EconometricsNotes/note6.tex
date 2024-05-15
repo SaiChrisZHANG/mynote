@@ -436,6 +436,11 @@ Then, consider the estimand
     \begin{align*}
         w^{rc}_1(D,T)&=w^{rc}_{1,1}(D,T)-w^{rc}_{1,0}(D,T) & w^{rc}_0\left(D,T,X;g\right) &=w^{rc}_{0,1}\left(D,T,X;g\right) - w^{rc}_{0,0}\left(D,T,X;g\right) 
     \end{align*}
+    and for $t=0,1$
+    \begin{align*}
+        w^{rc}_{1,t}\left(D,T\right) &= \frac{D\cdot 1\left\{T=t\right\}}{\mathbb{E} \left[D\cdot 1\left\{T=t\right\}\right]}\\
+        w^{rc}_{0,t}\left(D,T,X;g\right) &= \frac{g(X)\left(1-D\right)\cdot 1\left\{T=t\right\}}{1-g(X)} \left(\mathbb{E}\left[\frac{g(X)\left(1-D\right)\cdot 1\left\{T=t\right\}}{1-g(X)}\right]\right)^{-1}
+    \end{align*}
 \end{itemize}
 
 \newpage
