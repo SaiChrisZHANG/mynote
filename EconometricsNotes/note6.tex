@@ -426,7 +426,11 @@ Then, consider the estimand
     \begin{align*}
         w^p_1(D) &= \frac{D}{\mathbb{E}\left[D\right]} & w^p_0\left(D,X;g\right)&= \frac{g(X)(1-D)}{1-g(X)}\cdot \left(\mathbb{E}\left[\frac{g(X)(1-D)}{1-g(X)}\right]\right)^{-1}
     \end{align*}
-    \item for repeated cross-section data:
+    \item for repeated cross-section data, consider 2 different estimands
+    \begin{align*}
+        \tau_1^{dr,rc} &= \mathbb{E}\left[\left(w^{rc}_1(D,T)-w_0^{rc}\left(D,T,X;\pi\right)\right) \cdot \left(Y-\mu^{rc}_{0,Y}(T,X)\right)\right] \\
+        \tau^{dr,rc}_2 &= \tau^{dr,rc}_1
+    \end{align*}
 \end{itemize}
 
 \newpage
