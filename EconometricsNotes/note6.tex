@@ -463,7 +463,12 @@ Let $m^p_{0,\Delta} \equiv m^p_{0,1}(x)-m^p_{0,0}(x)$ and $m^{rc}_{d,\Delta}(X)\
         \mathbb{E}\left[\eta^{e,p}\left(Y_1,Y_0,D,X\right)\right]^2 =& \frac{1}{\mathbb{E}\left[D\right]^2} \left[ D\left(m^p_{1,\Delta}(X)-m^p_{0,\Delta}(X)-\tau\right)^2 \right. \\
         & \left. + D\left(\Delta-m^p_{1,\Delta}(X)\right)^2 + \frac{(1-D)p(X)^2}{\left(1-p(X)\right)^2} \left(\Delta Y-m^p_{0,\Delta}(X)\right)^2 \right]
     \end{align*}
-    \item for \textbf{repeated cross-section} data
+    \item for \textbf{repeated cross-section} data, the \textbf{efficient influence function} for the ATT is
+    \begin{align*}
+        \eta^{e,p}\left(Y_1,Y_0,D,X\right) =& \frac{D}{\mathbb{E}[D]}\left(m^{rc}_{1,\Delta}(X)-m^{rc}_{0,\Delta}(X)-\tau\right) \\
+        &+\left( w^{rc}_{1,1}(D,T)\left(Y-m^{rc}_{1,1}(X)\right)-w^{rc}_{1,0}(D,T)\left(Y-m^{rc}_{1,0}(X)\right) \right)\\
+        &- 
+    \end{align*}
 \end{itemize}
 
 \newpage
