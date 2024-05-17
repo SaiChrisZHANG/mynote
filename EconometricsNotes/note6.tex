@@ -478,6 +478,7 @@ Let $m^p_{0,\Delta} \equiv m^p_{0,1}(x)-m^p_{0,0}(x)$ and $m^{rc}_{d,\Delta}(X)\
 \end{itemize}
 
 Both $\eta^{e,p}$ and $\eta^{e,rc}$ depends on the true, unknown, outcome regression functions for the treated group, $m_{1,1}(\cdot)$ and $m_{1,0}(\cdot)$ in an asymmetric manner.
+
 The key difference between the two estimators is that for panel data, 
 \begin{align*}
     \eta^{e,p}\left(Y_1,Y_0,D,X\right) =& w^p_1(D)\left(m^p_{1,\Delta}(X) - m^p_{0,\Delta}(X) -\tau \right) \\
@@ -492,6 +493,8 @@ Comparing the efficiency bound of the two cases, we have, if $T$ is independent 
     =& \frac{1}{\mathbb{E}\left[D\right]^2} \left[ D\left(\sqrt{\frac{1-\lambda}{\lambda}}\left(Y_1-m_{1,1}(X)\right) + \sqrt{\frac{\lambda}{1-\lambda}}\left(Y_0-m_{1,0}(X)\right)\right)^2 \right.\\
     & \left. + \frac{(1-D)P(X)^2}{\left(1-p(X)\right)^2} \left(\sqrt{\frac{1-\lambda}{\lambda}}\left(Y_1-m_{0,1}(X)\right)+\sqrt{\frac{\lambda}{1-\lambda}}\left(Y_0-m_{0,0}(X)\right)  \right)^2 \right] \geq 0
 \end{align*}
+which gives that under the DiD framework, it is possible to form more efficient estimators for the ATT when the panel data are available.
+
 
 \newpage
 \bibliographystyle{plainnat}
