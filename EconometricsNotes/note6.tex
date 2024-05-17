@@ -499,6 +499,7 @@ This result also gives an efficiency-loss-minimizing $\lambda$:
 \begin{align*}
     \lambda &= \frac{\tilde{\sigma}_1}{\tilde{\sigma}_0+ \tilde{\sigma}_1} & \text{where }\tilde{\sigma}^2_t &=\mathbb{E}\left[D\left(Y_t-m_{1,t}(X)\right)^2 + \frac{(1-D)p(X)^2}{\left(1-p(X)\right)^2}\left(Y_t-m_{0,t}(X)\right)^2 \right], t=0,1
 \end{align*}
+hence, in principle, one may benefit from \textit{oversampling} from either the pre- or post-treamtent period. But it's generally infeasible to do so during the design stage since $\tilde{\sigma}_1^2$ depends on post-treatment data. \citet{sant2020doubly} recommand $\lambda=0.5$ for DiD with repeated cross-section units as a reasonable choice.
 
 \newpage
 \bibliographystyle{plainnat}
