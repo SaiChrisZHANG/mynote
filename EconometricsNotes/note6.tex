@@ -477,8 +477,12 @@ Let $m^p_{0,\Delta} \equiv m^p_{0,1}(x)-m^p_{0,0}(x)$ and $m^{rc}_{d,\Delta}(X)\
     \end{align*}
 \end{itemize}
 
-Both $\eta^{e,p}$ and $\eta^{e,rc}$ depends on the true, unknown, outcome regression functions for the treated group, $m_{1,1}(\cdot)$ and $m_{1,0}(\cdot)$ in an asymmetric manner
-The key difference between the two estimators is that 
+Both $\eta^{e,p}$ and $\eta^{e,rc}$ depends on the true, unknown, outcome regression functions for the treated group, $m_{1,1}(\cdot)$ and $m_{1,0}(\cdot)$ in an asymmetric manner.
+The key difference between the two estimators is that for panel data, 
+\begin{align*}
+    \eta^{e,p}\left(Y_1,Y_0,D,X\right) =& w^p_1(D)\left(m^p_{1,\Delta}(X) - m^p_{0,\Delta}(X) -\tau \right) \\
+    &+ w_1^p(D)\left(\Delta Y-m^p_{1,\Delta}(X)\right) - w^p_0(D,X;p)\left(\Delta Y-m^p_{0,\Delta}(X)\right)
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
