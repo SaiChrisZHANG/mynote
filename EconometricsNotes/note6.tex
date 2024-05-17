@@ -484,6 +484,14 @@ The key difference between the two estimators is that for panel data,
     &+ w_1^p(D)\left(\Delta Y-m^p_{1,\Delta}(X)\right) - w^p_0(D,X;p)\left(\Delta Y-m^p_{0,\Delta}(X)\right) \\
     =& \left[w^p_1(D) - w^p_0(D,X;p)\right] Y \left[\Delta Y - m_{0,\Delta}(X)\right] - w_1^p(D)\cdot\tau 
 \end{align*}
+which ends up \textbf{not} depending are $m_{1,1}(\cdot)$ or $m_{1,0}(\cdot)$. 
+
+Comparing the efficiency bound of the two cases, we have, if $T$ is independent of $\left(Y_1,Y_0,D,X\right)$,
+\begin{align*}
+    &\mathbb{E}\left[\eta^{e,rc}\left(Y,D,T,X\right)^2\right] - \mathbb{E}\left[\eta^{e,p}\left(Y_1,Y_0,D,X\right)^2\right]\\
+    =& \frac{1}{\mathbb{E}\left[D\right]^2} \left[ D\left(\sqrt{\frac{1-\lambda}{\lambda}}\left(Y_1-m_{1,1}(X)\right) + \sqrt{\frac{\lambda}{1-\lambda}}\left(Y_0-m_{1,0}(X)\right)\right)^2 \right.\\
+    & \left. + \frac{(1-D)P(X)^2}{\left(1-p(X)\right)^2} \left(\sqrt{\frac{1-\lambda}{\lambda}}\left(Y_1-m_{0,1}(X)\right)+\sqrt{\frac{\lambda}{1-\lambda}}\left(Y_0-m_{0,0}(X)\right)  \right)^2 \right] \geq 0
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
