@@ -507,7 +507,11 @@ hence, in principle, one may benefit from \textit{oversampling} from either the 
     \item first, estimate the true, unknown $p(\cdot)$ with $\pi(\cdot)$, the true unknown $m^p_{d,t}(\cdot)$ and $m^{rc}_{d,t}(\cdot)$ with $\mu^p_{d,t}(\cdot)$ and $\mu^{rc}_{d,t}(\cdot)$, $d,t=0,1$
     \item second, plug the fitted values of the estimated propensity score and regression models into the sample analogue of $\tau^{dr,p}$, $\tau^{dr,rc}_1$, $\tau^{dr,rc}_2$
 \end{itemize}
-
+instead of using semi-parametric estimators as \citet{abadie2005semiparametric}, \citet{sant2020doubly} use generic parametric estimators for the first step, assuming:
+\begin{itemize}
+    \item $\pi\left(x;\gamma^*\right)$ is a parametric model for $p(x)$ s.t. $\pi(\cdot)$ is known up to the \textbf{finite} dimensional pseudo-true $\gamma^*$
+    \item for $d,t=0,1,$, $\mu^p_{d,t}\left(x;\beta^{*,p}_{d,t}\right)$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
