@@ -501,6 +501,13 @@ This result also gives an efficiency-loss-minimizing $\lambda$:
 \end{align*}
 hence, in principle, one may benefit from \textit{oversampling} from either the pre- or post-treamtent period. But it's generally infeasible to do so during the design stage since $\tilde{\sigma}_1^2$ depends on post-treatment data. \citet{sant2020doubly} recommand $\lambda=0.5$ for DiD with repeated cross-section units as a reasonable choice.
 
+\paragraph*{Estimation and inference} 
+\citet{sant2020doubly} proposed a two-step procedure for estimation:
+\begin{itemize}
+    \item first, estimate the true, unknown $p(\cdot)$ with $\pi(\cdot)$, the true unknown $m^p_{d,t}(\cdot)$ and $m^{rc}_{d,t}(\cdot)$ with $\mu^p_{d,t}(\cdot)$ and $\mu^{rc}_{d,t}(\cdot)$, $d,t=0,1$
+    \item second
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
