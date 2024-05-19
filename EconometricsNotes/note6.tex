@@ -518,6 +518,15 @@ this approach is most suitable when the sample size is moderate and the dimensio
     \begin{equation*}
         \hat{\tau}^{dr,p} = \mathbb{E}_n\left[\left(\hat{w}^p_1(D)-\hat{w}^p_0\left(D,X;\hat{\gamma}\right)\right) \left(\Delta Y- \mu^p_{0,\Delta}\left(X;\hat{\beta}^p_{0,0},\hat{\beta}^p_{0,1}\right)\right) \right]
     \end{equation*}
+    where 
+    \begin{align*}
+        \hat{w}^p_1(D)&=\frac{D}{\mathbb{E}_n[D]} & \hat{w}^p_0\left(D,X;\gamma\right)&= \frac{\pi(X;\gamma)(1-D)}{1-\pi(X;\gamma)} \left(\mathbb{E}_n\left[\frac{\pi(X;\gamma)(1-D)}{1-\pi(X;\gamma)}\right]\right)^{-1}
+    \end{align*}
+    \item for repeated cross-section data,
+    \begin{equation*}
+        \hat{\tau}^{dr,rc}_1 = \mathbb{E}_n \left[ \left(\hat{w}^{rc}_1(D,T)\right) - \hat{w}_0^{rc}(D,T,X;\hat{\gamma})\left(Y-\mu^{rc}_{0,Y}\left(T,X;\hat{\beta}^{rc}_{0,0},\hat{\beta}^{rc}_{0,1}\right)\right) \right]
+    \end{equation*}
+    where $\mu^{rc}_{0,Y}\left(Y,X;\beta^{rc}_{0,0},\beta^{rc}_{0,1}\right) = T\cdot \mu^{rc}_{0,1}\left(\cdot;\beta^{rc}_{0,1}\right)+(1-T)\mu^{rc}_{0,0}\cdot \left(\cdot; \beta^{rc}_{0,0}\right)$.
 \end{itemize}
 
 \newpage
