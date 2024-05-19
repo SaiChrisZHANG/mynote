@@ -512,8 +512,13 @@ instead of using semi-parametric estimators as \citet{abadie2005semiparametric},
     \item $\pi\left(x;\gamma^*\right)$ is a parametric model for $p(x)$ s.t. $\pi(\cdot)$ is known up to the \textbf{finite} dimensional pseudo-true $\gamma^*$
     \item for $d,t=0,1$, $\mu^p_{d,t}\left(x;\beta^{*,p}_{d,t}\right)$ and $\mu^{rc}_{d,t}\left(x;\beta^{*,rc}_{d,t}\right)$ s.t. they are known up to the finite dimensional pseudo-true parameter $\beta^{*,p}_{d,t}$ and $\beta^{*,rc}_{d,t}$
 \end{itemize}
-this approach is most suitable when the sample size is moderate and the dimension of covariates is high.
-
+this approach is most suitable when the sample size is moderate and the dimension of covariates is high. The estimations are 
+\begin{itemize}
+    \item for \textbf{panel data}
+    \begin{equation*}
+        \hat{\tau}^{dr,p} = \mathbb{E}_n\left[\left(\hat{w}^p_1(D)-\hat{w}^p_0\left(D,X;\hat{\gamma}\right)\right) \left(\Delta Y- \mu^p_{0,\Delta}\left(X;\hat{\beta}^p_{0,0},\hat{\beta}^p_{0,1}\right)\right) \right]
+    \end{equation*}
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
