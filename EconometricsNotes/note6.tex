@@ -510,8 +510,9 @@ hence, in principle, one may benefit from \textit{oversampling} from either the 
 instead of using semi-parametric estimators as \citet{abadie2005semiparametric}, \citet{sant2020doubly} use generic parametric estimators for the first step, assuming:
 \begin{itemize}
     \item $\pi\left(x;\gamma^*\right)$ is a parametric model for $p(x)$ s.t. $\pi(\cdot)$ is known up to the \textbf{finite} dimensional pseudo-true $\gamma^*$
-    \item for $d,t=0,1$, $\mu^p_{d,t}\left(x;\beta^{*,p}_{d,t}\right)$ and $\mu^{rc}_{d,t}\left(x;\beta^{*,rc}_{d,t}\right)$
+    \item for $d,t=0,1$, $\mu^p_{d,t}\left(x;\beta^{*,p}_{d,t}\right)$ and $\mu^{rc}_{d,t}\left(x;\beta^{*,rc}_{d,t}\right)$ s.t. they are known up to the finite dimensional pseudo-true parameter $\beta^{*,p}_{d,t}$ and $\beta^{*,rc}_{d,t}$
 \end{itemize}
+
 
 \newpage
 \bibliographystyle{plainnat}
