@@ -551,10 +551,12 @@ which are more stringent than the generic DR DiD estimators, but weaker than TWF
     \begin{align*}
         \hat{\gamma}^{ipt} &= \arg\max_{\gamma\in \Gamma}\mathbb{E}_n\left[DX'\gamma -(1-D)\exp(X'\gamma)\right], & \hat{\beta}^{wls,p}_{0,\Delta} & \arg\min_{b\in\Theta}\mathbb{E}_n \left[ \frac{\Lambda\left(X'\hat{\gamma}^{ipt}\right)}{1-\Lambda\left(X'\hat{\gamma}^{ipt}\right)} \left(\Delta Y-X'b\right)^2 \mid D=0 \right]
     \end{align*}
-    then plug the fitted value of the working models for the nuisance functions are 
+    where $\hat{\gamma}^{ipt}$ is the inverse probability tilting estimator, $\hat{\beta}^{wls,p}_{0,\Delta}$ is the weighted least squares estimator for $\beta^{*,p}_{0,\Delta}$.
+    In the last step, plug the fitted value of the working models for the nuisance functions 
     \begin{align*}
         \pi(X,\gamma) &= \Lambda\left(X'\gamma\right) \equiv \frac{\exp(X'\gamma)}{1+\exp (X'\gamma)} & \mu^p_{0,\Delta}\left(X;\beta^p_{0,1},\beta^p_{0,1}\right)&= \mu^{lin,p}_{0,\Delta}\left(X;\beta^p_{0,\Delta}\right)\equiv X'\beta^p_{0,\Delta}
     \end{align*}
+    into the sample analogue of $\tau^{dr,p}$.
     \item for \textbf{repeated cross-section data}
 \end{itemize}
 
