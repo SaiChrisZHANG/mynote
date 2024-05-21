@@ -543,7 +543,15 @@ For the improvement, \citet{sant2020doubly} assume, in addition,
 \end{itemize}
 which are more stringent than the generic DR DiD estimators, but weaker than TWFE estimators. Under such assumptions, we have the improved DR DiD estimators 
 \begin{itemize}
-    \item 
+    \item for \textbf{panel data}, the 3-step estimator is given as 
+    \begin{equation*}
+        \hat{\tau}^{dr,p}_{imp} = \mathbb{E}_n\left[ \left(\hat{w}^p_1(D)-\hat{w}^p_0 \left(D,X;\hat{\gamma}^{ipt}\right)\right) \left( \Delta Y-\mu^{lin,p}_{0,\Delta} \left(X;\hat{\beta}^{wls,p}_{0,\Delta}\right) \right) \right]
+    \end{equation*}
+    where the working models for the nuisance functions are 
+    \begin{align*}
+        \pi(X,\gamma) &= \Lambda\left(X'\gamma\right) \equiv \frac{\exp(X'\gamma)}{1+\exp (X'\gamma)} & \mu^p_{0,\Delta}\left(X;\beta^p_{0,1},\beta^p_{0,1}\right)&= \mu^{lin,p}_{0,\Delta}\left(X;\beta^p_{0,\Delta}\right)\equiv X'\beta^p_{0,\Delta}
+    \end{align*}
+    \item for \textbf{repeated cross-section data}
 \end{itemize}
 
 
