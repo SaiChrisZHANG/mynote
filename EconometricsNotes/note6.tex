@@ -558,8 +558,9 @@ which are more stringent than the generic DR DiD estimators, but weaker than TWF
     \end{align*}
     into the sample analogue of $\tau^{dr,p}$. \citet{sant2020doubly} show that if 
     \begin{align*}
-        \mathbb{E}\left[ \left(\frac{D}{\mathbb{E}\left[D\right]} - \frac{\exp(X'\gamma^*)(1-D)}{\mathbb{E}\left[\exp(X'\gamma^*)(1-D)\right]}\right) X \right] &= 0
+        \mathbb{E}\left[ \left(\frac{D}{\mathbb{E}\left[D\right]} - \frac{\exp(X'\gamma^*)(1-D)}{\mathbb{E}\left[\exp(X'\gamma^*)(1-D)\right]}\right) X \right] &= 0 & \mathbb{E}\left[\exp (X'\gamma^*) \left(\Delta Y-\mu^{lin,p}_{0,\Delta}\left(X;\beta^*_{0,\Delta}\right)\right)X \mid D=0 \right] &=0
     \end{align*}
+    there will be no estimation effect from the first stage, with the linear outcome models and logistic propensity score models assumed 
     \item for \textbf{repeated cross-section data}
 \end{itemize}
 
