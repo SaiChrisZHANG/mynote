@@ -562,9 +562,18 @@ which are more stringent than the generic DR DiD estimators, but weaker than TWF
     \end{align*}
     there will be no estimation effect from the first stage, with the linear outcome models and logistic propensity score models assumed. 
     
-    As $n\rightarrow \infty$, these 2 moment conditions follow from the first-order conditions of the optimization problems associated with $\hat{\gamma}^{ipt}$ and $\hat{\beta}^{wls,p}_{0,\Delta}$, even when the working models are misspecified. Hence, replacing the pseudo-true parameters $\gamma^{*,ipt}$ and $\beta^{*,wls,p}_{0,\Delta}$ with their estimators $\hat{\gamma}^{ipt}$ and $\hat{\beta}^{wls,p}_{0,\Delta}$ guarantee that $\hat{\tau}^{dr,p}_{imp}$ is doubly robust.
-
-    As for inference, $\hat{\tau}^{dr,p}_{imp}$ is $\sqrt{n}-$consistent and asymptotically normal, therefore, it
+    As $n\rightarrow \infty$, these 2 moment conditions follow from the first-order conditions of the optimization problems associated with $\hat{\gamma}^{ipt}$ and $\hat{\beta}^{wls,p}_{0,\Delta}$, even when the working models are misspecified. Hence, replacing the pseudo-true parameters $\gamma^{*,ipt}$ and $\beta^{*,wls,p}_{0,\Delta}$ with their estimators $\hat{\gamma}^{ipt}$ and $\hat{\beta}^{wls,p}_{0,\Delta}$ guarantee that $\hat{\tau}^{dr,p}_{imp}$ is doubly robust:
+    $$
+    \hat{\tau}^{dr,p}_{imp} \xrightarrow{p} \tau,\ \  \text{ if \textbf{either} $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{or} $X'\beta^{*,wls,p}_{0,\Delta}\overset{a.s.}{=}m^p_{0,\Delta}(X)$}
+    $$
+    As for inference, $\hat{\tau}^{dr,p}_{imp}$ is $\sqrt{n}-$consistent and asymptotically normal
+    \begin{align*}
+        \sqrt{n}\left(\hat{\tau}^{dr,p}_{imp}-\tau^{dr,p}_{imp}\right) &= \frac{1}{\sqrt{n}} \sum^n_{i=1}\eta^{dr,p}_{imp} \left(W; \gamma^{*,ipt},\beta^{*,wls,p}_{0,\Delta},\tau^{dr,p}_{imp}\right) + o_p(1) \xrightarrow{d} \mathcal{N}\left(0,V^p_{imp}\right)
+    \end{align*}
+    and if \textbf{both}  $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{and} $X'\beta^{*,wls,p}_{0,\Delta}\overset{a.s.}{=}m^p_{0,\Delta}(X)$, $V^p_{imp}$ equals to the semiparametrically efficiency bound, and it can be estimated as 
+    \begin{equation*}
+        \hat{V}^p_{imp} = \mathbb{E}_n\left[\eta^{dr,p}_{imp}\left(W;\hat{\gamma}^{ipt},\hat{\beta}^{wls,p}_{0,\Delta},\hat{\tau}^{dr,p}_{imp}\right)^2\right]
+    \end{equation*}
     \item for \textbf{repeated cross-section data}
 \end{itemize}
 
