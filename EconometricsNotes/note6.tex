@@ -580,7 +580,7 @@ which are more stringent than the generic DR DiD estimators, but weaker than TWF
     \end{align*}
     then the two improved estimators are given as 
     \begin{align*}
-        \hat{\tau}^{dr,rc}_{1,imp} =& \mathbb{E}_n \left[ \left(\hat{w}^{rc}_1(D,T) - \hat{w}_0^{rc}(D,T,X;\hat{\gamma}^{ipt}) \right) \left(Y-\mu^{lin,rc}_{0,Y}\left(X;\hat{\beta}^{wls,rc}_{0,0},\hat{\beta}^{wls,rc}_{0,1}\right)\right) \right] \\
+        \hat{\tau}^{dr,rc}_{1,imp} =& \mathbb{E}_n \left[ \left(\hat{w}^{rc}_1(D,T) - \hat{w}_0^{rc}\left(D,T,X;\hat{\gamma}^{ipt}\right) \right) \left(Y-\mu^{lin,rc}_{0,Y}\left(X;\hat{\beta}^{wls,rc}_{0,0},\hat{\beta}^{wls,rc}_{0,1}\right)\right) \right] \\
         \hat{\tau}^{dr,rc}_{2,imp} =& \hat{\tau}_1^{dr,rc} + \left(\mathbb{E}_n \left[ \left( \frac{D}{\mathbb{E}_n[D]} -\hat{w}^{rc}_{1,1}(D,T) \right) \left(\mu^{rc}_{1,1}\left(X;\hat{\beta}^{rc}_{1,1}\right) - \mu^{rc}_{0,1}\left(X;\hat{\beta}^{rc}_{0,1}\right)\right) \right]\right) \\
         & - \left(\mathbb{E}_n \left[ \left( \frac{D}{\mathbb{E}_n[D]} -\hat{w}^{rc}_{1,0}(D,T) \right) \left(\mu^{rc}_{1,0}\left(X;\hat{\beta}^{rc}_{1,0}\right) - \mu^{rc}_{0,1}\left(X;\hat{\beta}^{rc}_{0,0}\right)\right) \right]\right)
     \end{align*}
