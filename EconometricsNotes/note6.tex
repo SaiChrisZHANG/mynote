@@ -590,7 +590,29 @@ which are more stringent than the generic DR DiD estimators, but weaker than TWF
         \hat{\beta}^{wls,rc}_{0,t} &= \arg\min_{b\in\Theta} \mathbb{E}_n \left[ \frac{\Lambda \left(X'\hat{\gamma}^{ipt}\right)}{1-\Lambda \left(X'\hat{\gamma}^{ipt}\right)} (Y-X'b)^2 \mid D=0,T=t \right]\\
         \hat{\beta}^{ols,rc}_{1,t} &= \arg\min_{b\in\Theta} \mathbb{E}_n \left[ (Y-X'b)^2 \mid D=1, T=t \right]
     \end{align*}
-    OLS is adopted to estimate $\beta^{*,rc}_{1,t},t=0,1$ as no estimation effect 
+    OLS is adopted to estimate $\beta^{*,rc}_{1,t},t=0,1$ as there is no estimation effect. 
+    
+    Let 
+    \begin{equation*}
+        \tau^{dr,rc}_{imp} = \mathbb{E}\left[ \left(w^{rc}_1(D,T) - w^{rc}_0 \left(D,T,X;\gamma^{*,ipt}\right)\right) \left(Y-\mu^{lin,rc}_{0,Y}\left(T,X;\beta^{*,wls,rc}_{0,1},\beta^{*,wls,rc}_{0,0}\right)\right) \right]
+    \end{equation*}
+    and for $\beta^{*,rc}_{imp}=\left(\beta^{*,wls,rc}_{0,1},\beta^{*,wls,rc}_{0,0},\beta^{*,ols,rc}_{1,1},\beta^{*,ols,rc}_{1,0}\right)$, define 
+    \begin{align*}
+        \eta^{dr,rc}_{1,imp}
+    \end{align*}
+    
+    Again, replacing the pseudo-true parameters $\gamma^{*,ipt}$ and $\beta^{*,wls,p}_{0,\Delta}$ with their estimators $\hat{\gamma}^{ipt}$ and $\hat{\beta}^{wls,p}_{0,\Delta}$ guarantee that $\hat{\tau}^{dr,p}_{imp}$ is doubly robust:
+    $$
+    \hat{\tau}^{dr,p}_{imp} \xrightarrow{p} \tau,\ \  \text{ if \textbf{either} $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{or} $X'\beta^{*,wls,p}_{0,\Delta}\overset{a.s.}{=}m^p_{0,\Delta}(X)$}
+    $$
+    As for inference, $\hat{\tau}^{dr,p}_{imp}$ is $\sqrt{n}-$consistent and asymptotically normal
+    \begin{align*}
+        \sqrt{n}\left(\hat{\tau}^{dr,p}_{imp}-\tau^{dr,p}_{imp}\right) &= \frac{1}{\sqrt{n}} \sum^n_{i=1}\eta^{dr,p}_{imp} \left(W; \gamma^{*,ipt},\beta^{*,wls,p}_{0,\Delta},\tau^{dr,p}_{imp}\right) + o_p(1) \xrightarrow{d} \mathcal{N}\left(0,V^p_{imp}\right)
+    \end{align*}
+    and if \textbf{both}  $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{and} $X'\beta^{*,wls,p}_{0,\Delta}\overset{a.s.}{=}m^p_{0,\Delta}(X)$, $V^p_{imp}$ equals to the semiparametrically efficiency bound, and it can be estimated as 
+    \begin{equation*}
+        \hat{V}^p_{imp} = \mathbb{E}_n\left[\eta^{dr,p}_{imp}\left(W;\hat{\gamma}^{ipt},\hat{\beta}^{wls,p}_{0,\Delta},\hat{\tau}^{dr,p}_{imp}\right)^2\right]
+    \end{equation*}
 \end{itemize}
 
 
