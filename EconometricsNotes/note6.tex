@@ -602,17 +602,17 @@ which are more stringent than the generic DR DiD estimators, but weaker than TWF
         \eta^{dr,rc}_{2,imp}\left(W;\gamma^{*,ipt},\beta^{*,rc}_{imp}\right) &= \eta^{rc,2}_1 \left(W;\beta^{*,rc}_{imp}\right) - \eta^{rc,1}_1 \eta^{rc,2}_0\left(W;\gamma^{*,ipt},\beta^{*,wls,rc}_{0,1},\beta^{*,wls,rc}_{0,0}\right)
     \end{align*}
     
-    Again, replacing the pseudo-true parameters $\gamma^{*,ipt}$ and $\beta^{*,wls,p}_{0,\Delta}$ with their estimators $\hat{\gamma}^{ipt}$ and $\hat{\beta}^{wls,p}_{0,\Delta}$ guarantee that $\hat{\tau}^{dr,p}_{imp}$ is doubly robust:
+    Let $n=n_1+n_0$, where $n_1$ and $n_0$ are the sample sizes of the post- and pre-treatment periods respectively. If $n_1/n\xrightarrow{p}\lambda\in(0,1)$ as $n_0,n_1\rightarrow\infty$, then
     $$
-    \hat{\tau}^{dr,p}_{imp} \xrightarrow{p} \tau,\ \  \text{ if \textbf{either} $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{or} $X'\beta^{*,wls,p}_{0,\Delta}\overset{a.s.}{=}m^p_{0,\Delta}(X)$}
+    \hat{\tau}^{dr,rc}_{j,imp} \xrightarrow{p} \tau,\ \  \text{ if \textbf{either} $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{or} $X'\beta^{*,wls,rc}_{0,1}-X'\beta^{*,wls,rc}_{0,0}\overset{a.s.}{=}m^{rc}_{0,\Delta}(X)$}
     $$
     As for inference, $\hat{\tau}^{dr,p}_{imp}$ is $\sqrt{n}-$consistent and asymptotically normal
     \begin{align*}
-        \sqrt{n}\left(\hat{\tau}^{dr,p}_{imp}-\tau^{dr,p}_{imp}\right) &= \frac{1}{\sqrt{n}} \sum^n_{i=1}\eta^{dr,p}_{imp} \left(W; \gamma^{*,ipt},\beta^{*,wls,p}_{0,\Delta},\tau^{dr,p}_{imp}\right) + o_p(1) \xrightarrow{d} \mathcal{N}\left(0,V^p_{imp}\right)
+        \sqrt{n}\left(\hat{\tau}^{dr,rc}_{j,imp}-\tau\right) &= \frac{1}{\sqrt{n}} \sum^n_{i=1}\eta^{dr,rc}_{j,imp} \left(W; \gamma^{*,ipt},\beta^{*,rc}_{imp}\right) + o_p(1) \xrightarrow{d} \mathcal{N}\left(0,V^{rc}_{j,imp}\right)
     \end{align*}
-    and if \textbf{both}  $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{and} $X'\beta^{*,wls,p}_{0,\Delta}\overset{a.s.}{=}m^p_{0,\Delta}(X)$, $V^p_{imp}$ equals to the semiparametrically efficiency bound, and it can be estimated as 
+    and if \textbf{both}  $\Lambda(X'\gamma^{*,ipt})\overset{a.s.}{=}p(X)$ \textbf{and} $X'\beta^{*,wls,rc}_{d,t}\overset{a.s.}{=}m^{rc}_{d,t}(X)$, $\eta^{dr,rc}_{2,imp}\left(W;\gamma^{*,ipt},\beta^{*,rc}_{imp}\right) \overset{a.s.}{=} \eta^{e,rc}\left(Y,D,T,X\right)$, $V^{rc}_{2,imp}$ equals to the semiparametrically efficiency bound, $V^{rc}_{1,imp}$ does \textbf{not}, where
     \begin{equation*}
-        \hat{V}^p_{imp} = \mathbb{E}_n\left[\eta^{dr,p}_{imp}\left(W;\hat{\gamma}^{ipt},\hat{\beta}^{wls,p}_{0,\Delta},\hat{\tau}^{dr,p}_{imp}\right)^2\right]
+        {V}^{rc}_{j,imp} = \mathbb{E}_n\left[\eta^{dr,rc}_{j,imp}\left(W;\gamma^{*,ipt},\beta^{*,rc}_{imp}\right)^2\right]
     \end{equation*}
 \end{itemize}
 
