@@ -614,7 +614,10 @@ which are more stringent than the generic DR DiD estimators, but weaker than TWF
     \begin{equation*}
         {V}^{rc}_{j,imp} = \mathbb{E}_n\left[\eta^{dr,rc}_{j,imp}\left(W;\gamma^{*,ipt},\beta^{*,rc}_{imp}\right)^2\right]
     \end{equation*}
-    and the efficiency loss of using $\hat{\tau}^{dr,rc}_{1,imp}$ instaed of $\hat{\tau}^{dr,rc}_{2,imp}$
+    and the efficiency loss of using $\hat{\tau}^{dr,rc}_{1,imp}$ instaed of $\hat{\tau}^{dr,rc}_{2,imp}$ is 
+    \begin{align*}
+        V^{rc}_{1,imp} - V^{rc}_{2,imp} = \mathbb{E} [D]^{-1} \cdot \mathrm{Var} \left[ \sqrt{\frac{1-\lambda}{\lambda}} \left(m^{rc}_{1,1}(X)-m^{rc}_{0,1}(X)\right) + \sqrt{\frac{\lambda}{1-\lambda}} \left(m^{rc}_{1,0}(X)-m^{rc}_{0,0}(X)\right) \mid D=1\right]\geq 0
+    \end{align*}
 \end{itemize}
 
 
