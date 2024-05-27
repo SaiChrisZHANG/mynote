@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,6 +15,13 @@ Alberto Abadie.
 Dmitry Arkhangelsky and Guido Imbens.
 \newblock Causal models for longitudinal and panel data: A survey.
 \newblock Technical report, National Bureau of Economic Research, 2023.
+
+\bibitem[Imbens(2004)]{imbens2004nonparametric}
+Guido~W Imbens.
+\newblock Nonparametric estimation of average treatment effects under
+  exogeneity: A review.
+\newblock \emph{Review of Economics and statistics}, 86\penalty0 (1):\penalty0
+  4--29, 2004.
 
 \bibitem[Sant'Anna and Zhao(2020)]{sant2020doubly}
 Pedro~HC Sant'Anna and Jun Zhao.
