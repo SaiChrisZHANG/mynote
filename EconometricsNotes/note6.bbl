@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,6 +15,26 @@ Alberto Abadie.
 Dmitry Arkhangelsky and Guido Imbens.
 \newblock Causal models for longitudinal and panel data: A survey.
 \newblock Technical report, National Bureau of Economic Research, 2023.
+
+\bibitem[Athey et~al.(2018)Athey, Imbens, and Wager]{athey2018approximate}
+Susan Athey, Guido~W Imbens, and Stefan Wager.
+\newblock Approximate residual balancing: debiased inference of average
+  treatment effects in high dimensions.
+\newblock \emph{Journal of the Royal Statistical Society Series B: Statistical
+  Methodology}, 80\penalty0 (4):\penalty0 597--623, 2018.
+
+\bibitem[Bang and Robins(2005)]{bang2005doubly}
+Heejung Bang and James~M Robins.
+\newblock Doubly robust estimation in missing data and causal inference models.
+\newblock \emph{Biometrics}, 61\penalty0 (4):\penalty0 962--973, 2005.
+
+\bibitem[Chernozhukov et~al.(2017)Chernozhukov, Chetverikov, Demirer, Duflo,
+  Hansen, and Newey]{chernozhukov2017double}
+Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian
+  Hansen, and Whitney Newey.
+\newblock Double/debiased/neyman machine learning of treatment effects.
+\newblock \emph{American Economic Review}, 107\penalty0 (5):\penalty0 261--265,
+  2017.
 
 \bibitem[Imbens(2004)]{imbens2004nonparametric}
 Guido~W Imbens.
