@@ -636,7 +636,8 @@ under this assumption, one can apply the large literature of treatment effect es
     \item even when agents choose their treatment optimally, two agents with the same values for observed characteristics may differ in their treatment choices without invalidating the unconfoundedness assumption if the difference in their choices is driven by differences in unobserved characteristics that are themselves unrelated to the outcomes of interest.
 \end{itemize}
 
-\citet{imbens2004nonparametric} proposes that is is sufficient to assume a weaker version of unconfoundedness $$ \mathbb{E}\left[Y_{iT}(0),Y_{iT}(1) \mid Y_{i1},\cdots,Y_{iT-1}\right] $$
+\citet{imbens2004nonparametric} proposes that is is sufficient to assume a weaker version of unconfoundedness $$ \mathbb{E}\left[Y_{iT}(0),Y_{iT}(1) \mid D_i, Y_{i1},\cdots,Y_{iT-1}\right] = \mathbb{E}\left[ Y_{iT}(0),Y_{iT}(1) \mid Y_{i1},\cdots,Y_{iT-1} \right] $$
+
 
 \newpage
 \bibliographystyle{plainnat}
