@@ -639,9 +639,11 @@ under this assumption, one can apply the large literature of treatment effect es
 \citet{imbens2004nonparametric} proposes that is is sufficient to assume a weaker version of unconfoundedness, \textbf{mean independence} $$ \mathbb{E}\left[Y_{iT}(0),Y_{iT}(1) \mid D_i, Y_{i1},\cdots,Y_{iT-1}\right] = \mathbb{E}\left[ Y_{iT}(0),Y_{iT}(1) \mid Y_{i1},\cdots,Y_{iT-1} \right] $$
 for population ATE. 
 
-\citet{imbens2004nonparametric} reviews 5 groups of estimation for ATEs under unconfoundedness, 
+Denote 
+$$\mu_d = \mathbb{E}_d(Y_{i1},\cdots,Y_{iT-1}) = \mathbb{E}\left[Y\mid D_i=d,Y_{i1},\cdots,Y_{iT-1} \right]$$
+for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for ATEs under unconfoundedness, 
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{regression}}
+    \item \myhl[myblue]{\textbf{regression}} 
     \item \myhl[myblue]{\textbf{matching}}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
