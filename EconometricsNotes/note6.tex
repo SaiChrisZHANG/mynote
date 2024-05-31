@@ -643,7 +643,10 @@ Denote
 $$\mu_d = \mathbb{E}_d(Y_{i1},\cdots,Y_{iT-1}) = \mathbb{E}\left[Y\mid D_i=d,Y_{i1},\cdots,Y_{iT-1} \right]$$
 for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for ATEs under unconfoundedness, 
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{regression}} 
+    \item \myhl[myblue]{\textbf{regression}} for population/sample/conditional ATE, we have the estimand
+    \begin{equation*}
+        \hat{\tau}_{reg} = \frac{1}{N} \sum^N_{i=1}\left[\hat{\mu}_1-\hat{\mu}_0\right]
+    \end{equation*}
     \item \myhl[myblue]{\textbf{matching}}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
