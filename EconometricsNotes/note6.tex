@@ -645,7 +645,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
 \begin{itemize}
     \item \myhl[myblue]{\textbf{regression}} for population/sample/conditional ATE, we have the estimand
     \begin{equation*}
-        \hat{\tau}_{reg} = \frac{1}{N} \sum^N_{i=1}\left[\hat{\mu}_1-\hat{\mu}_0\right]
+        \hat{\tau}_{reg} = \frac{1}{N} \sum^N_{i=1}\left(\hat{\mu}_1-\hat{\mu}_0\right) = \frac{1}{N}\sum^N_{i=1}D_i\cdot\left(Y_i - \hat{\mu}_0\right) + (1-D_i)\cdot\left(\hat{\mu}_1-Y_i\right)
     \end{equation*}
     \item \myhl[myblue]{\textbf{matching}}
     \item \myhl[myblue]{\textbf{propensity score}}
