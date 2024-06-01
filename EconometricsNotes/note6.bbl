@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -41,6 +41,19 @@ Jinyong Hahn.
 \newblock On the role of the propensity score in efficient semiparametric
   estimation of average treatment effects.
 \newblock \emph{Econometrica}, pages 315--331, 1998.
+
+\bibitem[Heckman et~al.(1998{\natexlab{a}})Heckman, Ichimura, Smith, and
+  Todd]{heckman1998characterizing}
+James Heckman, Hidehiko Ichimura, Jeffrey Smith, and Petra Todd.
+\newblock Characterizing selection bias using experimental data.
+\newblock \emph{Econometrica}, pages 1017--1098, 1998{\natexlab{a}}.
+
+\bibitem[Heckman et~al.(1998{\natexlab{b}})Heckman, Ichimura, and
+  Todd]{heckman1998matching}
+James~J Heckman, Hidehiko Ichimura, and Petra Todd.
+\newblock Matching as an econometric evaluation estimator.
+\newblock \emph{The review of economic studies}, 65\penalty0 (2):\penalty0
+  261--294, 1998{\natexlab{b}}.
 
 \bibitem[Imbens(2004)]{imbens2004nonparametric}
 Guido~W Imbens.
