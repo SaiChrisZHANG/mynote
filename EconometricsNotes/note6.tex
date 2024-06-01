@@ -662,8 +662,12 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             \begin{align*}
                 \hat{\mu}_1(x) &= \frac{\hat{g}_1(x)}{\hat{e}(x)} & \hat{\mu}_0(x) &= \frac{\hat{g}_0(x)}{1-\hat{e}(x)}
             \end{align*}
-            and show that the estimators for population ATE and ATT achieve the semiparametric efficiency bounds. Alternatively, one can use this series approach to directly estimate $mu_d$.
-            \item \citet{heckman1998characterizing,heckman1998matching} propose (local-linear) kernel methods,
+            and show that the estimators for population ATE and ATT achieve the semiparametric efficiency bounds. Alternatively, one can use this series approach to directly estimate $\mu_d$.
+            \item \citet{heckman1998characterizing,heckman1998matching} propose (local-linear) kernel methods, one simple form is 
+            \begin{equation*}
+                \hat{\mu}_d = \sum_{i:D_i=d} Y_{iT}\cdot K\left(\frac{X_i-x}{h}\right)/\sum_{i:D_i=d}K\left(\frac{X_i-x}{h}\right)
+            \end{equation*}
+            with kernel $K(\cdot)$ and bandwidth $h$.
         \end{itemize}
     \end{itemize}
     \item \myhl[myblue]{\textbf{matching}}
