@@ -654,7 +654,10 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
         \underline{\textit{cons}}: the regression estimators may rely heavily on extrapolation, hence sensitive to changes in the specification of the models.
         \item \textbf{non-parametric estimators}
         \begin{itemize}
-            \item \citet{hahn1998role} proposes to 
+            \item \citet{hahn1998role} proposes to estimate first the 3 conditional expectations
+            \begin{align*}
+                g_1(x) &= \mathbb{E}\left[DY_t\mid Y_{1},\cdots,Y_{T-1}\right] & g_0(x) &= \mathbb{E}\left[(1-D)Y_t\mid Y_{1},\cdots,Y_{T-1}\right]
+            \end{align*}
         \end{itemize}
     \end{itemize}
     \item \myhl[myblue]{\textbf{matching}}
