@@ -656,7 +656,11 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
         \begin{itemize}
             \item \citet{hahn1998role} proposes to estimate first the 3 conditional expectations
             \begin{align*}
-                g_1(x) &= \mathbb{E}\left[DY_t\mid Y_{1},\cdots,Y_{T-1}\right] & g_0(x) &= \mathbb{E}\left[(1-D)Y_t\mid Y_{1},\cdots,Y_{T-1}\right]
+                g_1(x) &= \mathbb{E}\left[DY_t\mid Y_{1},\cdots,Y_{T-1}\right] & g_0(x) &= \mathbb{E}\left[(1-D)Y_t\mid Y_{1},\cdots,Y_{T-1}\right] & e(x)&= \mathbb{E}\left[D\mid Y_{1},\cdots,Y_{T-1}\right]
+            \end{align*}
+            nonparametrically using series methods, then estimate 
+            \begin{align*}
+                \hat{\mu}_1(x) &= \frac{\hat{g}_1(x)}{\hat{e}(x)} & \hat{\mu}_0(x) &= \frac{\hat{g}_0(x)}{1-\hat{e}(x)}
             \end{align*}
         \end{itemize}
     \end{itemize}
