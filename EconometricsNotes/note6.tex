@@ -671,7 +671,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             \begin{equation*}
                 \min_{\beta_0,\beta_1} \sum_{i:D_i=d} \left[Y_i-\beta_0-\beta_1'(X_i-x)\right]^2 \cdot K\left(\frac{X_i-x}{h}\right)
             \end{equation*}
-            for bias control, the order of the kernel should be at least as large as the dimension of the covariates 
+            for bias control, the order of the kernel should be at least as large as the dimension of the covariates: $\int_z z^{r}K(z)\mathrm{d}z=0$, for $r\leq \mathrm{dim}(X)$.
         \end{itemize}
     \end{itemize}
     \item \myhl[myblue]{\textbf{matching}}
