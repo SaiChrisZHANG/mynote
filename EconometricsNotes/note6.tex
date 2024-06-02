@@ -658,7 +658,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             \begin{align*}
                 g_1(x) &= \mathbb{E}\left[DY_t\mid Y_{1},\cdots,Y_{T-1}\right] & g_0(x) &= \mathbb{E}\left[(1-D)Y_t\mid Y_{1},\cdots,Y_{T-1}\right] & e(x)&= \mathbb{E}\left[D\mid Y_{1},\cdots,Y_{T-1}\right]
             \end{align*}
-            nonparametrically using series methods, then estimate\footnote{For simplicity, let $X_i \left(Y_{i1},\cdots,Y_{iT-1}\right)$}
+            nonparametrically using series methods, then estimate\footnote{For simplicity, let $X_i \equiv \left(Y_{i1},\cdots,Y_{iT-1}\right)$.}
             \begin{align*}
                 \hat{\mu}_1(x) &= \frac{\hat{g}_1(x)}{\hat{e}(x)} & \hat{\mu}_0(x) &= \frac{\hat{g}_0(x)}{1-\hat{e}(x)}
             \end{align*}
@@ -678,6 +678,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
     \begin{equation*}
         \tilde{\tau}_{reg,T} = \frac{\sum^N_{i=1}e(X_i)\cdot \left[\hat{\mu}_1 - \hat{\mu}_0\right]}{\sum^N_{i=1}e(X_i)}
     \end{equation*}
+    this allows one to exploit the control observations to adjust for imbalances in the sampling of the covariates.
     \item \myhl[myblue]{\textbf{matching}}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
