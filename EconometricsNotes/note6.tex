@@ -667,7 +667,11 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             \begin{equation*}
                 \hat{\mu}_d = \sum_{i:D_i=d} Y_{iT}\cdot K\left(\frac{X_i-x}{h}\right)/\sum_{i:D_i=d}K\left(\frac{X_i-x}{h}\right)
             \end{equation*}
-            with kernel $K(\cdot)$ and bandwidth $h$.
+            with kernel $K(\cdot)$ and bandwidth $h$. In the local linear kernel regression, $\mu_d$ is estimated as the intercept $\beta_0$ in the minimization problem 
+            \begin{equation*}
+                \min_{\beta_0,\beta_1} \sum_{i:D_i=d} \left[Y_i-\beta_0-\beta_1'(X_i-x)\right]^2 \cdot K\left(\frac{X_i-x}{h}\right)
+            \end{equation*}
+            for bias control, the order of the kernel should be at least as large as the dimension of the covariates 
         \end{itemize}
     \end{itemize}
     \item \myhl[myblue]{\textbf{matching}}
