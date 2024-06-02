@@ -674,6 +674,10 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             for bias control, the order of the kernel should be at least as large as the dimension of the covariates: $\int_z z^{r}K(z)\mathrm{d}z=0$, for $r\leq \mathrm{dim}(X)$.
         \end{itemize}
     \end{itemize}
+    for the population ATT, it is important to note that with the propensity score known, the average $\sum D_iY_i/N_T$ is not efficient for the population expectation $\mathbb{E}\left[Y(1)\mid D=1\right]$. The efficient estimator can instead be obtained by weighting all the estimated treatment effects $\hat{\mu}_1-\hat{\mu}_0$ by the probability of receiving treatment:
+    \begin{equation*}
+        \tilde{\tau}_{reg,T} = 
+    \end{equation*}
     \item \myhl[myblue]{\textbf{matching}}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
