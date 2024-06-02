@@ -658,7 +658,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             \begin{align*}
                 g_1(x) &= \mathbb{E}\left[DY_t\mid Y_{1},\cdots,Y_{T-1}\right] & g_0(x) &= \mathbb{E}\left[(1-D)Y_t\mid Y_{1},\cdots,Y_{T-1}\right] & e(x)&= \mathbb{E}\left[D\mid Y_{1},\cdots,Y_{T-1}\right]
             \end{align*}
-            nonparametrically using series methods, then estimate 
+            nonparametrically using series methods, then estimate\footnote{For simplicity, let $X_i \left(Y_{i1},\cdots,Y_{iT-1}\right)$}
             \begin{align*}
                 \hat{\mu}_1(x) &= \frac{\hat{g}_1(x)}{\hat{e}(x)} & \hat{\mu}_0(x) &= \frac{\hat{g}_0(x)}{1-\hat{e}(x)}
             \end{align*}
@@ -676,7 +676,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
     \end{itemize}
     for the population ATT, it is important to note that with the propensity score known, the average $\sum D_iY_i/N_T$ is not efficient for the population expectation $\mathbb{E}\left[Y(1)\mid D=1\right]$. The efficient estimator can instead be obtained by weighting all the estimated treatment effects $\hat{\mu}_1-\hat{\mu}_0$ by the probability of receiving treatment:
     \begin{equation*}
-        \tilde{\tau}_{reg,T} = 
+        \tilde{\tau}_{reg,T} = \frac{\sum^N_{i=1}e(X_i)\cdot \left[\hat{\mu}_1 - \hat{\mu}_0\right]}{\sum^N_{i=1}e(X_i)}
     \end{equation*}
     \item \myhl[myblue]{\textbf{matching}}
     \item \myhl[myblue]{\textbf{propensity score}}
