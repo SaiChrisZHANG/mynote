@@ -679,7 +679,11 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
         \tilde{\tau}_{reg,T} = \frac{\sum^N_{i=1}e(X_i)\cdot \left[\hat{\mu}_1 - \hat{\mu}_0\right]}{\sum^N_{i=1}e(X_i)}
     \end{equation*}
     this allows one to exploit the control observations to adjust for imbalances in the sampling of the covariates.
-    \item \myhl[myblue]{\textbf{matching}}: similar to nonparametric kernel regression methods, matching estimators also impute the missing potential outcomes, but using \textbf{only} the outcomes of \textbf{nearest neighbors} of the opposite treatment group. What makes matching estimators more attractive is that the researcher only has to choose the \textbf{number of matches}.
+    \item \myhl[myblue]{\textbf{matching}}: similar to nonparametric kernel regression methods, matching estimators also impute the missing potential outcomes, but using \textbf{only} the outcomes of \textbf{nearest neighbors} of the opposite treatment group\footnote{What makes matching estimators more attractive is that the researcher only has to choose the \textbf{number of matches}, instead of smoothing parameters.}. Matching estimators often apply in settings where 
+    \begin{itemize}
+        \item the interest is in the ATT
+        \item there is a large reservoir of potential controls
+    \end{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
     \item \myhl[myblue]{\textbf{Bayesian}}
