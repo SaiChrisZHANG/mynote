@@ -691,7 +691,14 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
         \begin{equation*}
             \sum_{j\mid D_j\neq D_i} \mathbf{1} \left\{ \left\Vert X_j-X_i \right\Vert \leq \left\Vert X_l-X_i \right\Vert \right\} = m
         \end{equation*}
-        then $l_m(i)$ is the index of the unit in the opposite treatment group that is the $m^{th}$ closest to unit $i$ based on norm $\left\Vert \cdot \right\Vert$ distance.
+        then $l_m(i)$ is the index of the unit in the opposite treatment group that is the $m^{th}$ closest to unit $i$ based on norm $\left\Vert \cdot \right\Vert$ distance, and $l_1(i)$ is the nearest match. Let the set of indices for the first $M$ matches for unit $i$ be $\mathcal{L}_M(i) = \left\{l_1(i),\cdots,l_M(i)\right\}$, then define the imputed potential outcomes as 
+        \begin{align*}
+            \hat{Y}_i(0) &= \begin{cases}
+                Y_i, & D_0=0\\
+                \frac{1}{M} \sum_{j\in\mathcal{L}_M(i)} Y_j, & D_i=1
+            \end{cases}
+            & \hat{Y}_i(1) &= 
+        \end{align*}
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
