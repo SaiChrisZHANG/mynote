@@ -697,7 +697,10 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
                 Y_i, & D_0=0\\
                 \frac{1}{M} \sum_{j\in\mathcal{L}_M(i)} Y_j, & D_i=1
             \end{cases}
-            & \hat{Y}_i(1) &= 
+            & \hat{Y}_i(1) &= \begin{cases}
+                \frac{1}{M} \sum_{j\in\mathcal{L}_M(i)} Y_j, & D_i=0 \\
+                Y_i, & D_i=1
+            \end{cases}
         \end{align*}
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
