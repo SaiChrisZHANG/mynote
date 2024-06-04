@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,11 @@ Alberto Abadie.
 \newblock Semiparametric difference-in-differences estimators.
 \newblock \emph{The review of economic studies}, 72\penalty0 (1):\penalty0
   1--19, 2005.
+
+\bibitem[Abadie and Imbens(2002)]{abadie2002simple}
+Alberto Abadie and Guido Imbens.
+\newblock Simple and bias-corrected matching estimators for average treatment
+  effects, 2002.
 
 \bibitem[Arkhangelsky and Imbens(2023)]{arkhangelsky2023causal}
 Dmitry Arkhangelsky and Guido Imbens.

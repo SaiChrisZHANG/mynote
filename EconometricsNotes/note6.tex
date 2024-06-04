@@ -687,7 +687,11 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
     the estimator is essentially the difference between 2 sample means, the variance is calculated using standard methods for differences in means or paired randomized experiments. The biggest challenge mostly comes from computation.
 
     \begin{itemize}
-        \item 
+        \item \citet{abadie2002simple}: again, for a sample $\left\{ \left(Y_i,X_i,D_i\right) \right\}^N_{i=1}$, let $l_m(i)$ be the index that satisfies $D_l\neq D_i$, and 
+        \begin{equation*}
+            \sum_{j\mid D_j\neq D_i} \mathbf{1} \left\{ \left\Vert X_j-X_i \right\Vert \leq \left\Vert X_l-X_i \right\Vert \right\} = m
+        \end{equation*}
+        then $l_m(i)$ is the index of the unit in the opposite treatment group that is the $m^{th}$ closest to unit $i$ based on norm $\left\Vert \cdot \right\Vert$ distance.
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
