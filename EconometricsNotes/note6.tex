@@ -708,7 +708,9 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
         \end{equation*}
         the bias of this estimator is $O\left(N^{-1/k}\right)$, where $k$ is the dimension of the covariates. \citet{imbens2004nonparametric} listed 3 caveats to \cite{abadie2002simple}'s result:
         \begin{itemize}
-            \item[1] only continuous covariates should be counted in $k$: matching with discrete covariates will be exact in large samples
+            \item[\textbf{1}] only continuous covariates should be counted in $k$: matching with discrete covariates will be exact in large samples
+            \item[\textbf{2}] if only matching the treated and the number of potential controls is much larger, the bias can be ignored asymptotically 
+            \item[\textbf{3}] the order of the bias may be high, but the actual bias may be small if the coefficients in the leading term are small
         \end{itemize}
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
