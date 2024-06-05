@@ -686,8 +686,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
     \end{itemize}
     the estimator is essentially the difference between 2 sample means, the variance is calculated using standard methods for differences in means or paired randomized experiments. The biggest challenge mostly comes from computation.
 
-    \begin{itemize}
-        \item \citet{abadie2002simple}: again, for a sample $\left\{ \left(Y_i,X_i,D_i\right) \right\}^N_{i=1}$, let $l_m(i)$ be the index that satisfies $D_l\neq D_i$, and 
+    \citet{abadie2002simple} propose that: again, for a sample $\left\{ \left(Y_i,X_i,D_i\right) \right\}^N_{i=1}$, let $l_m(i)$ be the index that satisfies $D_l\neq D_i$, and 
         \begin{equation*}
             \sum_{j\mid D_j\neq D_i} \mathbf{1} \left\{ \left\Vert X_j-X_i \right\Vert \leq \left\Vert X_l-X_i \right\Vert \right\} = m
         \end{equation*}
@@ -713,7 +712,8 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             \item[\textbf{3}] the order of the bias may be high, but the actual bias may be small if the coefficients in the leading term are small\footnote{One such case is that biases for different units are at least partially offsetting.}
         \end{itemize}
         and these matching estimators are generally not efficient.
-    \end{itemize}
+    
+    One key aspect of matching is the choice of distance metrics.
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
     \item \myhl[myblue]{\textbf{Bayesian}}
