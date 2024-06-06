@@ -716,6 +716,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
     One key aspect of matching is the choice of distance metrics, one can choose 
     \begin{itemize}
         \item standard Euclidean metric: $d_E\left(x,z\right)=\left(x-z\right)'\left(x-z\right)$
+        \item the diagonal matrix of the inverse of the covariate variances $d_{AI}\left(x,z\right) = \left(x-z\right)'\mathrm{diag}\left(\Sigma^{-1}_X\right)\left(x-z\right)$
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
