@@ -642,89 +642,93 @@ for population ATE.
 Denote 
 $$\mu_d = \mathbb{E}_d(Y_{i1},\cdots,Y_{iT-1}) = \mathbb{E}\left[Y\mid D_i=d,Y_{i1},\cdots,Y_{iT-1} \right]$$
 for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for ATEs under unconfoundedness, 
+
+\paragraph*{1. Regression for population/sample/conditional ATE}
+we have the estimand
+\begin{equation*}
+    \hat{\tau}_{reg} = \frac{1}{N} \sum^N_{i=1}\left(\hat{\mu}_1-\hat{\mu}_0\right) = \frac{1}{N}\sum^N_{i=1}D_i\cdot\left(Y_i - \hat{\mu}_0\right) + (1-D_i)\cdot\left(\hat{\mu}_1-Y_i\right)
+\end{equation*}
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{regression}} for population/sample/conditional ATE, we have the estimand
-    \begin{equation*}
-        \hat{\tau}_{reg} = \frac{1}{N} \sum^N_{i=1}\left(\hat{\mu}_1-\hat{\mu}_0\right) = \frac{1}{N}\sum^N_{i=1}D_i\cdot\left(Y_i - \hat{\mu}_0\right) + (1-D_i)\cdot\left(\hat{\mu}_1-Y_i\right)
-    \end{equation*}
-    \begin{itemize}
-        \item \textbf{early estimators} for $\mu_d$ included parametric regression functions including least-square estimators with the regression function $\mu_d = \beta x+\tau\cdot d$, then one can use the regression $$ Y_i =\alpha + \beta'\left(Y_{i1},\cdots,Y_{iT-1}\right) + \tau W_i +\epsilon_i $$
-        more generally, one can specify separate regressions for the two regimes $\mu_d = \beta_d x$, and estimate the two regressions separately.
+    \item \textbf{early estimators} for $\mu_d$ included parametric regression functions including least-square estimators with the regression function $\mu_d = \beta x+\tau\cdot d$, then one can use the regression $$ Y_i =\alpha + \beta'\left(Y_{i1},\cdots,Y_{iT-1}\right) + \tau W_i +\epsilon_i $$
+    more generally, one can specify separate regressions for the two regimes $\mu_d = \beta_d x$, and estimate the two regressions separately.
 
-        \underline{\textit{cons}}: the regression estimators may rely heavily on extrapolation, hence sensitive to changes in the specification of the models.
-        \item \textbf{non-parametric estimators}
-        \begin{itemize}
-            \item \citet{hahn1998role} proposes to estimate first the 3 conditional expectations
-            \begin{align*}
-                g_1(x) &= \mathbb{E}\left[DY_t\mid Y_{1},\cdots,Y_{T-1}\right] & g_0(x) &= \mathbb{E}\left[(1-D)Y_t\mid Y_{1},\cdots,Y_{T-1}\right] & e(x)&= \mathbb{E}\left[D\mid Y_{1},\cdots,Y_{T-1}\right]
-            \end{align*}
-            nonparametrically using series methods, then estimate\footnote{For simplicity, let $X_i \equiv \left(Y_{i1},\cdots,Y_{iT-1}\right)$.}
-            \begin{align*}
-                \hat{\mu}_1(x) &= \frac{\hat{g}_1(x)}{\hat{e}(x)} & \hat{\mu}_0(x) &= \frac{\hat{g}_0(x)}{1-\hat{e}(x)}
-            \end{align*}
-            and show that the estimators for population ATE and ATT achieve the semiparametric efficiency bounds. Alternatively, one can use this series approach to directly estimate $\mu_d$.
-            \item \citet{heckman1998characterizing,heckman1998matching} propose (local-linear) kernel methods, one simple form is 
-            \begin{equation*}
-                \hat{\mu}_d = \sum_{i:D_i=d} Y_{iT}\cdot K\left(\frac{X_i-x}{h}\right)/\sum_{i:D_i=d}K\left(\frac{X_i-x}{h}\right)
-            \end{equation*}
-            with kernel $K(\cdot)$ and bandwidth $h$. In the local linear kernel regression, $\mu_d$ is estimated as the intercept $\beta_0$ in the minimization problem 
-            \begin{equation*}
-                \min_{\beta_0,\beta_1} \sum_{i:D_i=d} \left[Y_i-\beta_0-\beta_1'(X_i-x)\right]^2 \cdot K\left(\frac{X_i-x}{h}\right)
-            \end{equation*}
-            for bias control, the order of the kernel should be at least as large as the dimension of the covariates: $\int_z z^{r}K(z)\mathrm{d}z=0$, for $r\leq \mathrm{dim}(X)$.
-        \end{itemize}
-    \end{itemize}
-    for the population ATT, it is important to note that with the propensity score known, the average $\sum D_iY_i/N_T$ is not efficient for the population expectation $\mathbb{E}\left[Y(1)\mid D=1\right]$. The efficient estimator can instead be obtained by weighting all the estimated treatment effects $\hat{\mu}_1-\hat{\mu}_0$ by the probability of receiving treatment:
-    \begin{equation*}
-        \tilde{\tau}_{reg,T} = \frac{\sum^N_{i=1}e(X_i)\cdot \left[\hat{\mu}_1 - \hat{\mu}_0\right]}{\sum^N_{i=1}e(X_i)}
-    \end{equation*}
-    this allows one to exploit the control observations to adjust for imbalances in the sampling of the covariates.
-    \item \myhl[myblue]{\textbf{matching}}: similar to nonparametric kernel regression methods, matching estimators also impute the missing potential outcomes, but using \textbf{only} the outcomes of \textbf{nearest neighbors} of the opposite treatment group\footnote{What makes matching estimators more attractive is that the researcher only has to choose the \textbf{number of matches}, instead of smoothing parameters.}. Matching estimators often apply in settings where 
+    \underline{\textit{cons}}: the regression estimators may rely heavily on extrapolation, hence sensitive to changes in the specification of the models.
+    \item \textbf{non-parametric estimators}
     \begin{itemize}
-        \item the interest is in the ATT
-        \item there is a large reservoir of potential controls
-    \end{itemize}
-    the estimator is essentially the difference between 2 sample means, the variance is calculated using standard methods for differences in means or paired randomized experiments. The biggest challenge mostly comes from computation.
-
-    \citet{abadie2002simple} propose that: again, for a sample $\left\{ \left(Y_i,X_i,D_i\right) \right\}^N_{i=1}$, let $l_m(i)$ be the index that satisfies $D_l\neq D_i$, and 
-        \begin{equation*}
-            \sum_{j\mid D_j\neq D_i} \mathbf{1} \left\{ \left\Vert X_j-X_i \right\Vert \leq \left\Vert X_l-X_i \right\Vert \right\} = m
-        \end{equation*}
-        then $l_m(i)$ is the index of the unit in the opposite treatment group that is the $m^{th}$ closest to unit $i$ based on norm $\left\Vert \cdot \right\Vert$ distance, and $l_1(i)$ is the nearest match. Let the set of indices for the first $M$ matches for unit $i$ be $\mathcal{L}_M(i) = \left\{l_1(i),\cdots,l_M(i)\right\}$, then define the imputed potential outcomes as 
+        \item \citet{hahn1998role} proposes to estimate first the 3 conditional expectations
         \begin{align*}
-            \hat{Y}_i(0) &= \begin{cases}
-                Y_i, & D_i=0\\
-                \frac{1}{M} \sum_{j\in\mathcal{L}_M(i)} Y_j, & D_i=1
-            \end{cases}
-            & \hat{Y}_i(1) &= \begin{cases}
-                \frac{1}{M} \sum_{j\in\mathcal{L}_M(i)} Y_j, & D_i=0 \\
-                Y_i, & D_i=1
-            \end{cases}
+            g_1(x) &= \mathbb{E}\left[DY_t\mid Y_{1},\cdots,Y_{T-1}\right] & g_0(x) &= \mathbb{E}\left[(1-D)Y_t\mid Y_{1},\cdots,Y_{T-1}\right] & e(x)&= \mathbb{E}\left[D\mid Y_{1},\cdots,Y_{T-1}\right]
         \end{align*}
-        the simple matching estimator is 
+        nonparametrically using series methods, then estimate\footnote{For simplicity, let $X_i \equiv \left(Y_{i1},\cdots,Y_{iT-1}\right)$.}
+        \begin{align*}
+            \hat{\mu}_1(x) &= \frac{\hat{g}_1(x)}{\hat{e}(x)} & \hat{\mu}_0(x) &= \frac{\hat{g}_0(x)}{1-\hat{e}(x)}
+        \end{align*}
+        and show that the estimators for population ATE and ATT achieve the semiparametric efficiency bounds. Alternatively, one can use this series approach to directly estimate $\mu_d$.
+        \item \citet{heckman1998characterizing,heckman1998matching} propose (local-linear) kernel methods, one simple form is 
         \begin{equation*}
-            \hat{\tau}^{sm}_M = \frac{1}{N} \sum^N_{i=1} \left[hat{Y}_i(1) - \hat{Y}_i(0)\right]
+            \hat{\mu}_d = \sum_{i:D_i=d} Y_{iT}\cdot K\left(\frac{X_i-x}{h}\right)/\sum_{i:D_i=d}K\left(\frac{X_i-x}{h}\right)
         \end{equation*}
-        the bias of this estimator is $O\left(N^{-1/k}\right)$, where $k$ is the dimension of the covariates. \citet{imbens2004nonparametric} listed 3 caveats to \cite{abadie2002simple}'s result:
-        \begin{itemize}
-            \item[\textbf{1}] only continuous covariates should be counted in $k$: matching with discrete covariates will be exact in large samples
-            \item[\textbf{2}] if only matching the treated and the number of potential controls is much larger, the bias can be ignored asymptotically 
-            \item[\textbf{3}] the order of the bias may be high, but the actual bias may be small if the coefficients in the leading term are small\footnote{One such case is that biases for different units are at least partially offsetting.}
-        \end{itemize}
-        and these matching estimators are generally not efficient.
-    
-    One key aspect of matching is the choice of distance metrics, one can choose 
-    \begin{itemize}
-        \item standard Euclidean metric: $d_E\left(x,z\right)=\left(x-z\right)'\left(x-z\right)$
-        \item the diagonal matrix of the inverse of the covariate variances $d_{AI}\left(x,z\right) = \left(x-z\right)'\mathrm{diag}\left(\Sigma^{-1}_X\right)\left(x-z\right)$
-        \item Mahalanobis metric: $d_M(x,z) = \left(x-z\right)' \Sigma^{-1}_X \left(x-z\right)$, which reduces differences in covariates within matched pairs in all directions
-        \item metrics depending on the correlation between covariates, treatment assignemnt and outcomes:
-        \begin{itemize}
-            \item weighting absolute differences by the coefficients in the propensity score $$d_{Z1}\left(x,z\right) = \sum^K_{k=1}\left\vert x_k-z_k \right\vert \cdot \left\vert \gamma_k \right\vert$$ where the propensity score has a logistic form $e(x) = \frac{\exp(x'\gamma)}{1+\exp(x'\gamma)}$
-            \item weighting absolute differences by the coefficients in the regression function $$ d_{Z2}\left(x,z\right) = \sum^K_{k=1} \left\vert x_k-z_k \right\vert \left\vert \beta_k \right\vert $$ where the regression functions are linear $\mu_{d}(x) = \alpha_d  +x'\beta $
-        \end{itemize}
-        \citet{imbens2004nonparametric} comments that when the regression function is misspecified, matching with the particular metrics may lead to inconsistency.
+        with kernel $K(\cdot)$ and bandwidth $h$. In the local linear kernel regression, $\mu_d$ is estimated as the intercept $\beta_0$ in the minimization problem 
+        \begin{equation*}
+            \min_{\beta_0,\beta_1} \sum_{i:D_i=d} \left[Y_i-\beta_0-\beta_1'(X_i-x)\right]^2 \cdot K\left(\frac{X_i-x}{h}\right)
+        \end{equation*}
+        for bias control, the order of the kernel should be at least as large as the dimension of the covariates: $\int_z z^{r}K(z)\mathrm{d}z=0$, for $r\leq \mathrm{dim}(X)$.
     \end{itemize}
+\end{itemize}
+for the population ATT, it is important to note that with the propensity score known, the average $\sum D_iY_i/N_T$ is not efficient for the population expectation $\mathbb{E}\left[Y(1)\mid D=1\right]$. The efficient estimator can instead be obtained by weighting all the estimated treatment effects $\hat{\mu}_1-\hat{\mu}_0$ by the probability of receiving treatment:
+\begin{equation*}
+    \tilde{\tau}_{reg,T} = \frac{\sum^N_{i=1}e(X_i)\cdot \left[\hat{\mu}_1 - \hat{\mu}_0\right]}{\sum^N_{i=1}e(X_i)}
+\end{equation*}
+this allows one to exploit the control observations to adjust for imbalances in the sampling of the covariates.
+
+\paragraph*{2. Matching}
+similar to nonparametric kernel regression methods, matching estimators also impute the missing potential outcomes, but using \textbf{only} the outcomes of \textbf{nearest neighbors} of the opposite treatment group\footnote{What makes matching estimators more attractive is that the researcher only has to choose the \textbf{number of matches}, instead of smoothing parameters.}. Matching estimators often apply in settings where 
+\begin{itemize}
+    \item the interest is in the ATT
+    \item there is a large reservoir of potential controls
+\end{itemize}
+the estimator is essentially the difference between 2 sample means, the variance is calculated using standard methods for differences in means or paired randomized experiments. The biggest challenge mostly comes from computation.
+
+\citet{abadie2002simple} propose that: again, for a sample $\left\{ \left(Y_i,X_i,D_i\right) \right\}^N_{i=1}$, let $l_m(i)$ be the index that satisfies $D_l\neq D_i$, and 
+    \begin{equation*}
+        \sum_{j\mid D_j\neq D_i} \mathbf{1} \left\{ \left\Vert X_j-X_i \right\Vert \leq \left\Vert X_l-X_i \right\Vert \right\} = m
+    \end{equation*}
+    then $l_m(i)$ is the index of the unit in the opposite treatment group that is the $m^{th}$ closest to unit $i$ based on norm $\left\Vert \cdot \right\Vert$ distance, and $l_1(i)$ is the nearest match. Let the set of indices for the first $M$ matches for unit $i$ be $\mathcal{L}_M(i) = \left\{l_1(i),\cdots,l_M(i)\right\}$, then define the imputed potential outcomes as 
+    \begin{align*}
+        \hat{Y}_i(0) &= \begin{cases}
+            Y_i, & D_i=0\\
+            \frac{1}{M} \sum_{j\in\mathcal{L}_M(i)} Y_j, & D_i=1
+        \end{cases}
+        & \hat{Y}_i(1) &= \begin{cases}
+            \frac{1}{M} \sum_{j\in\mathcal{L}_M(i)} Y_j, & D_i=0 \\
+            Y_i, & D_i=1
+        \end{cases}
+    \end{align*}
+    the simple matching estimator is 
+    \begin{equation*}
+        \hat{\tau}^{sm}_M = \frac{1}{N} \sum^N_{i=1} \left[hat{Y}_i(1) - \hat{Y}_i(0)\right]
+    \end{equation*}
+    the bias of this estimator is $O\left(N^{-1/k}\right)$, where $k$ is the dimension of the covariates. \citet{imbens2004nonparametric} listed 3 caveats to \cite{abadie2002simple}'s result:
+    \begin{itemize}
+        \item[\textbf{1}] only continuous covariates should be counted in $k$: matching with discrete covariates will be exact in large samples
+        \item[\textbf{2}] if only matching the treated and the number of potential controls is much larger, the bias can be ignored asymptotically 
+        \item[\textbf{3}] the order of the bias may be high, but the actual bias may be small if the coefficients in the leading term are small\footnote{One such case is that biases for different units are at least partially offsetting.}
+    \end{itemize}
+    and these matching estimators are generally not efficient.
+
+One key aspect of matching is the choice of distance metrics, one can choose 
+\begin{itemize}
+    \item standard Euclidean metric: $d_E\left(x,z\right)=\left(x-z\right)'\left(x-z\right)$
+    \item the diagonal matrix of the inverse of the covariate variances $d_{AI}\left(x,z\right) = \left(x-z\right)'\mathrm{diag}\left(\Sigma^{-1}_X\right)\left(x-z\right)$
+    \item Mahalanobis metric: $d_M(x,z) = \left(x-z\right)' \Sigma^{-1}_X \left(x-z\right)$, which reduces differences in covariates within matched pairs in all directions
+    \item metrics depending on the correlation between covariates, treatment assignemnt and outcomes:
+    \begin{itemize}
+        \item weighting absolute differences by the coefficients in the propensity score $$d_{Z1}\left(x,z\right) = \sum^K_{k=1}\left\vert x_k-z_k \right\vert \cdot \left\vert \gamma_k \right\vert$$ where the propensity score has a logistic form $e(x) = \frac{\exp(x'\gamma)}{1+\exp(x'\gamma)}$
+        \item weighting absolute differences by the coefficients in the regression function $$ d_{Z2}\left(x,z\right) = \sum^K_{k=1} \left\vert x_k-z_k \right\vert \left\vert \beta_k \right\vert $$ where the regression functions are linear $\mu_{d}(x) = \alpha_d  +x'\beta $
+    \end{itemize}
+    \citet{imbens2004nonparametric} comments that when the regression function is misspecified, matching with the particular metrics may lead to inconsistency.
+\end{itemize}
+\begin{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
     \item \myhl[myblue]{\textbf{Bayesian}}
