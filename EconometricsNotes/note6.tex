@@ -723,6 +723,7 @@ for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for 
             \item weighting absolute differences by the coefficients in the propensity score $$d_{Z1}\left(x,z\right) = \sum^K_{k=1}\left\vert x_k-z_k \right\vert \cdot \left\vert \gamma_k \right\vert$$ where the propensity score has a logistic form $e(x) = \frac{\exp(x'\gamma)}{1+\exp(x'\gamma)}$
             \item weighting absolute differences by the coefficients in the regression function $$ d_{Z2}\left(x,z\right) = \sum^K_{k=1} \left\vert x_k-z_k \right\vert \left\vert \beta_k \right\vert $$ where the regression functions are linear $\mu_{d}(x) = \alpha_d  +x'\beta $
         \end{itemize}
+        \citet{imbens2004nonparametric} comments that when the regression function is misspecified, matching with the particular metrics may lead to inconsistency.
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity score}}
     \item \myhl[myblue]{\textbf{mixed}}
