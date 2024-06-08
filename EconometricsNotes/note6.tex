@@ -643,7 +643,7 @@ Denote
 $$\mu_d = \mathbb{E}_d(Y_{i1},\cdots,Y_{iT-1}) = \mathbb{E}\left[Y\mid D_i=d,Y_{i1},\cdots,Y_{iT-1} \right]$$
 for $d=0,1$, \citet{imbens2004nonparametric} reviews 5 groups of estimation for ATEs under unconfoundedness, 
 
-\paragraph*{1. Regression for population/sample/conditional ATE}
+\paragraph*{A. Regression for population/sample/conditional ATE}
 we have the estimand
 \begin{equation*}
     \hat{\tau}_{reg} = \frac{1}{N} \sum^N_{i=1}\left(\hat{\mu}_1-\hat{\mu}_0\right) = \frac{1}{N}\sum^N_{i=1}D_i\cdot\left(Y_i - \hat{\mu}_0\right) + (1-D_i)\cdot\left(\hat{\mu}_1-Y_i\right)
@@ -681,7 +681,7 @@ for the population ATT, it is important to note that with the propensity score k
 \end{equation*}
 this allows one to exploit the control observations to adjust for imbalances in the sampling of the covariates.
 
-\paragraph*{2. Matching}
+\paragraph*{B. Matching}
 similar to nonparametric kernel regression methods, matching estimators also impute the missing potential outcomes, but using \textbf{only} the outcomes of \textbf{nearest neighbors} of the opposite treatment group\footnote{What makes matching estimators more attractive is that the researcher only has to choose the \textbf{number of matches}, instead of smoothing parameters.}. Matching estimators often apply in settings where 
 \begin{itemize}
     \item the interest is in the ATT
@@ -729,12 +729,13 @@ One key aspect of matching is the choice of distance metrics, one can choose
     \citet{imbens2004nonparametric} comments that when the regression function is misspecified, matching with the particular metrics may lead to inconsistency.
 \end{itemize}
 
-\paragraph*{3. Propensity scores}
+\paragraph*{C. Propensity scores}
+There are 3 main ways to 
 
 
-\paragraph*{4. Mixed}
+\paragraph*{D. Mixed}
 
-\paragraph*{5. Bayesian}
+\paragraph*{E. Bayesian}
 
 
 
