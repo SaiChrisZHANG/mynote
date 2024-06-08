@@ -730,7 +730,18 @@ One key aspect of matching is the choice of distance metrics, one can choose
 \end{itemize}
 
 \paragraph*{C. Propensity scores}
-There are 3 main ways to 
+There are 3 main ways to use propensity scores in estimation:
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{weighting}}
+    \item \myhl[myblue]{\textbf{blocking}}
+    \item \myhl[myblue]{\textbf{propensity scores as regressors}}
+\end{itemize}
+
+There are 2 cases in practice when considering propensity score approaches:
+\begin{itemize}
+    \item \textbf{propensity scores known}: all 3 methods are efficient, do not rely on high-dimensional nonparametric regressions, have attractive finite-sample properties
+    \item \textbf{propensity scores unknown}: require high-dimensional nonparametric regression of the treatment indicator on the covariates. The relative merits of the 3 approaches will depend on whether the propensity score is more or less smooth than the regression functions, and whether additional information is available about either the propensity score or the regression functions.
+\end{itemize}
 
 
 \paragraph*{D. Mixed}
