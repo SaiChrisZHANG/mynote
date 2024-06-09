@@ -736,6 +736,15 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{align*}
         \mathbb{E} \left[\frac{DY}{e(X)}\right] = \mathbb{E} \left[\frac{DY(1)}{e(X)}\right] = \underbrace{\mathbb{E}\left[\mathbb{E}\left[ \frac{DY(1)}{e(X)} \mid X \right]\right] = \mathbb{E} \left[ \frac{e(X)\cdot \mathbb{E}\left[Y(1)\mid X\right]}{e(X)} \right]}_{\text{unconfoundedness}} = \mathbb{E}\left[Y(1)\right]
     \end{align*}
+    and similarly $\mathbb{E}\left[\frac{(1-D)Y}{1-e(X)}\right]=\mathbb{E}\left[Y(0)\right]$, which imply 
+    \begin{equation*}
+        \tau^p = \mathbb{E} \left[\frac{D\cdot Y}{e(X)} - \frac{\left(1-D\right)\cdot Y}{1-e(X)}\right]
+    \end{equation*} 
+    it can be directly estimated as 
+    \begin{equation*}
+        \tilde{\tau} = \frac{1}{N} \sum^N_{i=1} \left[ \frac{D_i Y_i}{e(X_i)} - \frac{(1-D_i)\cdot Y_i}{1-e(X_i)} \right]
+    \end{equation*}
+    here, the weights do not necessarily add to 1\footnote{For the treated units, the weights added up to $\frac{1}{N}\sum^N_{i=1}W_i/e(X_i)$, which equals to 1 in expectation, but not so in any given sample.}
     \item \myhl[myblue]{\textbf{blocking}}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
