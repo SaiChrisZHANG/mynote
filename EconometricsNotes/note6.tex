@@ -744,7 +744,19 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{equation*}
         \tilde{\tau} = \frac{1}{N} \sum^N_{i=1} \left[ \frac{D_i Y_i}{e(X_i)} - \frac{(1-D_i)\cdot Y_i}{1-e(X_i)} \right]
     \end{equation*}
-    here, the weights do not necessarily add to 1\footnote{For the treated units, the weights added up to $\frac{1}{N}\sum^N_{i=1}W_i/e(X_i)$, which equals to 1 in expectation, but not so in any given sample.}. One can normalize the weights within subpopulations, which in the limits leads to the estimator proposed by
+    here, the weights do not necessarily add to 1\footnote{For the treated units, the weights added up to $\frac{1}{N}\sum^N_{i=1}W_i/e(X_i)$, which equals to 1 in expectation, but not so in any given sample.}. One can normalize the weights within subpopulations, which in the limits leads to the estimator proposed by \citet{hirano2003efficient}
+    \begin{equation*}
+        \hat{\tau}_{weight} = \frac{\sum^N_{i=1} \frac{D_i\cdot Y_i}{\hat{e}(X_i)}}{\sum^N_{i=1}\frac{D_i}{\hat{e}(X_i)}} - \frac{\sum^N_{i=1} \frac{(1-D_i)\cdot Y_i}{1-\hat{e}(X_i)} }{\sum^N_{i=1} \frac{1-D_i}{1-\hat{e}(X_i)}}
+    \end{equation*}
+    where they specify a sequence of functions of the covariates, such as power series $h_l(x),l=1,\cdots,\infty$, and choose a number of terms $L(N)$ as a function of the sample size, then esitmate the $L-$dimensional vector $\gamma_L$ in 
+    \begin{equation*}
+        \Pr \left(D=1\mid X=x\right) = \frac{\exp \left[ \left(h_1(x),\cdots,h_L(x)\right) \gamma_L \right]}{1+\exp \left[ \left(h_1(x),\cdots,h_L(x)\right) \gamma_L \right]}
+    \end{equation*}
+    by maximizing the associated likelihood function, and calculate the estimated propensity score as 
+    \begin{equation*}
+        \hat{e}(x) = \frac{\exp \left[ \left(h_1(x),\cdots,h_L(x)\right) \hat{\gamma}_L \right]}{1+\exp \left[ \left(h_1(x),\cdots,h_L(x)\right) \hat{\gamma}_L \right]}
+    \end{equation*}
+    a nonparametric estimator for $e(x)$ is efficient, ignoring the 2 regression functions.
     \item \myhl[myblue]{\textbf{blocking}}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}

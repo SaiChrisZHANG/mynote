@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -59,6 +59,12 @@ James~J Heckman, Hidehiko Ichimura, and Petra Todd.
 \newblock Matching as an econometric evaluation estimator.
 \newblock \emph{The review of economic studies}, 65\penalty0 (2):\penalty0
   261--294, 1998{\natexlab{b}}.
+
+\bibitem[Hirano et~al.(2003)Hirano, Imbens, and Ridder]{hirano2003efficient}
+Keisuke Hirano, Guido~W Imbens, and Geert Ridder.
+\newblock Efficient estimation of average treatment effects using the estimated
+  propensity score.
+\newblock \emph{Econometrica}, 71\penalty0 (4):\penalty0 1161--1189, 2003.
 
 \bibitem[Imbens(2004)]{imbens2004nonparametric}
 Guido~W Imbens.
