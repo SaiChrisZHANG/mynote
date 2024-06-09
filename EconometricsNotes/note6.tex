@@ -744,7 +744,7 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{equation*}
         \tilde{\tau} = \frac{1}{N} \sum^N_{i=1} \left[ \frac{D_i Y_i}{e(X_i)} - \frac{(1-D_i)\cdot Y_i}{1-e(X_i)} \right]
     \end{equation*}
-    here, the weights do not necessarily add to 1\footnote{For the treated units, the weights added up to $\frac{1}{N}\sum^N_{i=1}W_i/e(X_i)$, which equals to 1 in expectation, but not so in any given sample.}
+    here, the weights do not necessarily add to 1\footnote{For the treated units, the weights added up to $\frac{1}{N}\sum^N_{i=1}W_i/e(X_i)$, which equals to 1 in expectation, but not so in any given sample.}. One can normalize the weights within subpopulations, which in the limits leads to the estimator proposed by
     \item \myhl[myblue]{\textbf{blocking}}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
