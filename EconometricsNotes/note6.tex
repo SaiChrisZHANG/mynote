@@ -732,7 +732,10 @@ One key aspect of matching is the choice of distance metrics, one can choose
 \paragraph*{C. Propensity scores}
 There are 3 main ways to use propensity scores in estimation:
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{weighting}}
+    \item \myhl[myblue]{\textbf{weighting}} the units by the reciprocal of the probability of receiving the treatment can undo the imbalance of the covariate distributions conditional on the treatment assignment. Formally,
+    \begin{align*}
+        \mathbb{E} \left[\frac{DY}{e(X)}\right] = \mathbb{E} \left[\frac{DY(1)}{e(X)}\right] = \mathbb{E}\left[\mathbb{E}\left[ \frac{DY(1)}{e(X)} \mid X \right]\right]
+    \end{align*}
     \item \myhl[myblue]{\textbf{blocking}}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
