@@ -756,7 +756,7 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{equation*}
         \hat{e}(x) = \frac{\exp \left[ \left(h_1(x),\cdots,h_L(x)\right) \hat{\gamma}_L \right]}{1+\exp \left[ \left(h_1(x),\cdots,h_L(x)\right) \hat{\gamma}_L \right]}
     \end{equation*}
-    a nonparametric estimator for $e(x)$ is efficient, ignoring the 2 regression functions.
+    a nonparametric estimator for $e(x)$ is efficient, ignoring the 2 regression functions\footnote{The finite-sample properties of the two approaches (nonparametrically estimating propensity scores versus regression functions) may be different, except for when there are only discrete covariates.}.
     \item \myhl[myblue]{\textbf{blocking}}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
