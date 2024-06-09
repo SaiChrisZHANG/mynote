@@ -734,7 +734,7 @@ There are 3 main ways to use propensity scores in estimation:
 \begin{itemize}
     \item \myhl[myblue]{\textbf{weighting}} the units by the reciprocal of the probability of receiving the treatment can undo the imbalance of the covariate distributions conditional on the treatment assignment. Formally,
     \begin{align*}
-        \mathbb{E} \left[\frac{DY}{e(X)}\right] = \mathbb{E} \left[\frac{DY(1)}{e(X)}\right] = \mathbb{E}\left[\mathbb{E}\left[ \frac{DY(1)}{e(X)} \mid X \right]\right] = \mathbb{E} \left[ \frac{e(X)\cdot \mathbb{E}\left[Y(1)\mid X\right]}{e(X)} \right] = \mathbb{E}\left[Y(1)\right]
+        \mathbb{E} \left[\frac{DY}{e(X)}\right] = \mathbb{E} \left[\frac{DY(1)}{e(X)}\right] = \underbrace{\mathbb{E}\left[\mathbb{E}\left[ \frac{DY(1)}{e(X)} \mid X \right]\right] = \mathbb{E} \left[ \frac{e(X)\cdot \mathbb{E}\left[Y(1)\mid X\right]}{e(X)} \right]}_{\text{unconfoundedness}} = \mathbb{E}\left[Y(1)\right]
     \end{align*}
     \item \myhl[myblue]{\textbf{blocking}}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
