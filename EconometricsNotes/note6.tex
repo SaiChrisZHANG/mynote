@@ -760,7 +760,8 @@ There are 3 main ways to use propensity scores in estimation:
     
     For the treatment effects of the treated, weight the contribution for unit $i$ by the propensity score $e(x_i)$,
     \begin{align*}
-        \hat{\tau}_{weight,tr} &= \frac{\sum^N_{i=1} D_i\cdot Y_i\cdot \frac{e(X_i)}{\hat{e}(X_i)} }{ \sum^N_{i=1} D_i \frac{e(X_i)}{\hat{e}(X_i)} } - \frac{\sum^N_{i=1} (1-D_i)\cdot Y_i\cdot \frac{e(X_i)}{\left(1-\hat{e}(X_i)\right)} }{ \sum^N_{i=1} (1-D_i) \frac{e(X_i)}{ \left(1-\hat{e}(X_i)\right) } }
+        \hat{\tau}_{weight,tr} &= \frac{\sum^N_{i=1} D_i\cdot Y_i\cdot \frac{e(X_i)}{\hat{e}(X_i)} }{ \sum^N_{i=1} D_i \frac{e(X_i)}{\hat{e}(X_i)} } - \frac{\sum^N_{i=1} (1-D_i)\cdot Y_i\cdot \frac{e(X_i)}{\left(1-\hat{e}(X_i)\right)} }{ \sum^N_{i=1} (1-D_i) \frac{e(X_i)}{ \left(1-\hat{e}(X_i)\right) } } & \text{propensity score known} \\
+        \hat{\tau}_{weight,tr} &= \left[\frac{1}{N_1} \sum_{D_i=1}Y_i \right] - \left[ \frac{\sum_{i:D_i=0} Y_i \cdot \frac{\hat{e}(X_i)}{\left(1-\hat{e}(X_i)\right)} }{ \sum_{i:D_i=0} \frac{\hat{e}(X_i)}{\left(1-\hat{e}(X_i)\right)} }  \right]
     \end{align*}
     \item \myhl[myblue]{\textbf{blocking}}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
