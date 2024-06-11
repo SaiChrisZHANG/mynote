@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -72,6 +72,12 @@ Guido~W Imbens.
   exogeneity: A review.
 \newblock \emph{Review of Economics and statistics}, 86\penalty0 (1):\penalty0
   4--29, 2004.
+
+\bibitem[Rosenbaum and Rubin(1983)]{rosenbaum1983central}
+Paul~R Rosenbaum and Donald~B Rubin.
+\newblock The central role of the propensity score in observational studies for
+  causal effects.
+\newblock \emph{Biometrika}, 70\penalty0 (1):\penalty0 41--55, 1983.
 
 \bibitem[Sant'Anna and Zhao(2020)]{sant2020doubly}
 Pedro~HC Sant'Anna and Jun Zhao.
