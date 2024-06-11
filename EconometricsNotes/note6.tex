@@ -766,8 +766,11 @@ There are 3 main ways to use propensity scores in estimation:
 
     \underline{\textbf{CAUTIOUS}}: the problem of choosing the smoothing parameters is relevant here too\footnote{\citet*{hirano2003efficient}'s series estimators require choosing the \textbf{number of terms} in the series, a kernel-version alternative requires choosing a bandwidth.}, but here one want to use nonparametric regression methods even if the propensity scores are known.
     
-    \item \myhl[myblue]{\textbf{blocking}} \citet{rosenbaum1983central} suggest using the (estimated) propsensity score divide the sample into $M$ blocks of units of approximately equal probability of treatment, letting $J_{im}$ be an indicator for unit $i$ being in block $m$. 
- 
+    \item \myhl[myblue]{\textbf{blocking}} \citet{rosenbaum1983central} suggest using the (estimated) propsensity score divide the sample into $M$ blocks of units of approximately equal probability of treatment, letting $J_{im}$ be an indicator for unit $i$ being in block $m$. One way of implementing this is by dividing the unit interval into $M$ blocks with boundary values equal to $m/M$ for $m=1,\cdots,M-1$, s.t. 
+    \begin{equation*}
+        J_{im} = \mathbf{1} \left\{ \frac{m-1}{M} < e(X_i) < \leq \frac{m}{M} \right\},\ m=1,\cdots,M 
+    \end{equation*}
+    
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
 
