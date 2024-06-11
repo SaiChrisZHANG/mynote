@@ -774,6 +774,14 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{equation*}
         \hat{\tau}_m = \frac{1}{N_{1m}} \sum^N_{i=1} J_{im}W_iY_i - \frac{1}{N_{0m}}\sum^N_{i=1} J_{im}\left(1-D_i\right)Y_i
     \end{equation*}
+    then estimate the overall average treatment effect as 
+    \begin{equation*}
+        \hat{\tau}_{block} = \sum^M_{m=1}\hat{\tau}_m \cdot \frac{N_{1m}+N_{0m}}{N}
+    \end{equation*}
+    for the treatment effect of the treated, one can weight the within-block average treatment effects by the number of treated units: 
+    \begin{equation*}
+        \hat{\tau}_{T,block} = \sum^M_{m=1} \hat{\tau}_m \cdot \frac{N_{1m}}{N_T}
+    \end{equation*}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
 
