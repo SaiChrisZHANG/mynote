@@ -770,7 +770,10 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{equation*}
         J_{im} = \mathbf{1} \left\{ \frac{m-1}{M} < e(X_i) < \leq \frac{m}{M} \right\},\ m=1,\cdots,M 
     \end{equation*}
-    
+    within each block there are $N_{dm}$ observations with treatment equal to $d$, $N_{dm}=\sum_i \mathbf{1}\left\{D_i=d, J_{im}=1\right\}$. Within each block, estimate the average treatment effect as if random assignment held:
+    \begin{equation*}
+        \hat{\tau}_m = \frac{1}{N_{1m}} \sum^N_{i=1} J_{im}W_iY_i - \frac{1}{N_{0m}}\sum^N_{i=1} J_{im}\left(1-D_i\right)Y_i
+    \end{equation*}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
 
