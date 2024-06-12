@@ -782,7 +782,12 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{equation*}
         \hat{\tau}_{T,block} = \sum^M_{m=1} \hat{\tau}_m \cdot \frac{N_{1m}}{N_T}
     \end{equation*}
-    \underline{\textbf{CAUTIOUS}}: The asymptotic properties of such estimators require establishing the relative relationship between the number of blocks and the sample size. 
+    \underline{\textbf{CAUTIOUS}}: The asymptotic properties of such estimators require establishing the relative relationship between the number of blocks and the sample size, so choosing the number of blocks becomes essential 
+    \begin{itemize}
+        \item \textit{starting point}: a single covariate, assuming normality, \textbf{5 blocks} removes $\geq 95\%$ of the bias
+        \item \textit{balance check}: covariates whould be balanced within blocks 
+        \item \textit{unbalanced blocks}: if the distributions of the covariates among treated and controled are different, one can either split the blocks into a number of subblocks, or generalize the specification of the propensity score
+    \end{itemize}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
 
