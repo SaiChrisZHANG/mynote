@@ -786,7 +786,11 @@ There are 3 main ways to use propensity scores in estimation:
     \begin{itemize}
         \item \textit{starting point}: a single covariate, assuming normality, \textbf{5 blocks} removes $\geq 95\%$ of the bias
         \item \textit{balance check}: covariates whould be balanced within blocks 
-        \item \textit{unbalanced blocks}: if the distributions of the covariates among treated and controled are different, one can either split the blocks into a number of subblocks, or generalize the specification of the propensity score
+        \item \textit{unbalanced blocks}: if the distributions of the covariates among treated and controled are different, one can 
+        \begin{itemize}
+            \item split the blocks into a number of subblocks if the propensity score itself is unbalanced.
+            \item generalize the specification of the propensity score
+        \end{itemize}
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
