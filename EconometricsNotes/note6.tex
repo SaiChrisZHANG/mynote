@@ -800,7 +800,7 @@ There are 3 main ways to use propensity scores in estimation:
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}: estimate the conditional expectation of $Y$ given $D$ and $e(X)$, define $$ v_d(e) = \mathbb{E}\left[ Y(d) \mid e(X)=e \right] \overset{\text{unconfoundedness}}{=} \mathbb{E}\left[Y \mid D=d, e(X)=e\right] $$
     given an estimator $\hat{v}_w(e)$, one can estimate the ATE as 
     \begin{equation*}
-        \hat{\tau}_{regprop}
+        \hat{\tau}_{regprop} = \frac{1}{N} \sum^N_{i=1} \left[ \hat{v}_1\left(e(X_i)\right) - \hat{v}_0 \left(e(X_i)\right) \right]
     \end{equation*}
 \end{itemize}
 
