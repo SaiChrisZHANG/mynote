@@ -795,7 +795,7 @@ There are 3 main ways to use propensity scores in estimation:
         \begin{equation*}
             \tilde{e}(x) = \frac{1}{M} \sum^M_{m=1} \sum^M_{m=1} \mathbf{1} \left\{ \frac{m}{M} \leq \hat{e}(x) \right\}
         \end{equation*}
-        then use $\tilde{e}(x)$ as the propensity score in the weighting estimator leads to an estimator for the ATE \textbf{identical} to that obtained by using the blocking estimator with $\hat{e}(x)$ as the propensity score and $M$ blocks.
+        then use $\tilde{e}(x)$ as the propensity score in the weighting estimator leads to an estimator for the ATE \textbf{identical} to that obtained by using the blocking estimator with $\hat{e}(x)$ as the propensity score and $M$ blocks\footnote{With sufficiently large $M$, the blocking estimator is sufficiently close to the oiriginal weighting estimator, sharing first-order asymptotic properties. Hence a large number of blocks does little harm, with regard to asymptotic properties.}. 
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
