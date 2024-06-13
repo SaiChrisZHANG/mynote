@@ -791,7 +791,11 @@ There are 3 main ways to use propensity scores in estimation:
             \item split the blocks into a number of subblocks if the propensity score itself is unbalanced.
             \item generalize the specification of the propensity score, if the score is balanced but covariates not
         \end{itemize}
-        \item \textit{weighting with modified propensity score estimators}: discretize $\hat{e}(x)$
+        \item \textit{weighting with modified propensity score estimators}: discretize $\hat{e}(x)$ to 
+        \begin{equation*}
+            \tilde{e}(x) = \frac{1}{M} \sum^M_{m=1} \sum^M_{m=1} \mathbf{1} \left\{ \frac{m}{M} \leq \hat{e}(x) \right\}
+        \end{equation*}
+        then use $\tilde{e}(x)$ as the propensity score in the weighting estimator leads to an estimator for the ATE \textbf{identical} to that obtained by using the blocking estimator with $\hat{e}(x)$ as the propensity score and $M$ blocks.
     \end{itemize}
     \item \myhl[myblue]{\textbf{propensity scores as regressors}}
 \end{itemize}
