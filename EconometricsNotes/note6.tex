@@ -812,6 +812,10 @@ There are 2 cases in practice when considering propensity score approaches
 
 \paragraph*{D. Mixed} Neither matching nor the propensity score methods directly address the correlation between the covariates and the outcome, incorporating the regression method may eliminate remaining bias and improve precision.
 
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Weighting and Regression}}: estimating $$ Y_i = \alpha + \tau\cdot D_i + \epsilon_i $$ with weights $$ \lambda_i = \sqrt{ \frac{D_i}{e(X_i)} + \frac{1-D_i}{1-e(X_i)} } $$
+\end{itemize}
+
 \paragraph*{E. Bayesian}
 
 
