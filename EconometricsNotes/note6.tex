@@ -814,6 +814,7 @@ There are 2 cases in practice when considering propensity score approaches
 
 \begin{itemize}
     \item \myhl[myblue]{\textbf{Weighting and Regression}}: estimating $$ Y_i = \alpha + \tau\cdot D_i + \epsilon_i $$ with weights $$ \lambda_i = \sqrt{ \frac{D_i}{e(X_i)} + \frac{1-D_i}{1-e(X_i)} } $$
+    the covariates are uncorrelated with the treatment indicator, making the weighted estimator consistent.
 \end{itemize}
 
 \paragraph*{E. Bayesian}
