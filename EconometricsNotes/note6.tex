@@ -820,7 +820,18 @@ There are 2 cases in practice when considering propensity score approaches
     \item \myhl[myblue]{\textbf{Blocking and Regression}}: least square estimator in block $m$ as $$ Y_i = \alpha_m + \tau_m\cdot D_i + \epsilon_i $$ using only units in block $m$. One can again add covariates and estimate $Y_i = \alpha_m + \beta_m' X_i + \tau_m\cdot D_i + \epsilon_i$.
     \item \myhl[myblue]{\textbf{Matching and Regression}}: the bias of the simple matching estimator can dominate the variance if the dimension of the covariates is too large, regression can help in this situation.
     
-    Let $\hat{Y}_i(0)$ and $\hat{Y}_i(1)$ be the observed or imputed potential outcomes for unit $i$, the \textit{estimated potential} outcomes equal the \textit{observed} outcomes for some unit $i$
+    Let $\hat{Y}_i(0)$ and $\hat{Y}_i(1)$ be the observed or imputed potential outcomes for unit $i$, the \textit{estimated potential} outcomes equal the \textit{observed} outcomes for some unit $i$ for its match $l(i)$, the bias $$ \mathbb{E}\left[\hat{Y}_i(1) - \hat{Y}_i(0)\right] - \left[Y_i(1)-Y_i(0)\right] $$
+    arises from the fact that the covariates $X_i$ and $X_[l(i)]$ for units $i$ and $l(i)$ are not equal, although they are close because of the matching process. Focusing on the single-match case, define for unit $i$ 
+    \begin{align*}
+        \hat{X_i}(0) &= \begin{cases}
+            X_i &D_i=0\\
+            X_{l_1(i)}&D_1=1
+        \end{cases} &
+        \hat{X_i}(1) &= \begin{cases}
+            X_{l_1(i)} &D_i=0\\
+            X_i &D_1=1
+        \end{cases}
+    \end{align*}
 \end{itemize}
 
 \paragraph*{E. Bayesian}
