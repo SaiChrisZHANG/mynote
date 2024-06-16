@@ -835,7 +835,10 @@ There are 2 cases in practice when considering propensity score approaches
     if the matching is exact, $\hat{X}_i(0)=\hat{X}_i(1)$ for each unit $i$. Suppose $D_1=1$, then $\hat{Y}_i(1)=Y_i(1)$, and $\hat{Y}_i(0)$ is an imputed value for $Y_i(0)$. This value is unbiased for $\mu_0\left(X_{l_1(i)}\right)$, but not necessarily for $\mu_0\left(X_i\right)$. Hence, $\hat{Y}_i(0)$ should be adjusted by an estimate of $\mu_0\left(X_i\right) - \mu_0\left(X_{l_1(i)}\right)$. Typically, these corrections are taken be to linear in the difference in the covariates for unit $i$ and its match, of the form $$\beta_0'\left[\hat{X}_i(1)-\hat{X}_i(0)\right] = \beta'_0\left(X_i - X_{l_1(i)}\right)$$
     then \citet{rubin1973use} proposed 3 modifications
     \begin{itemize}
-        \item[1] estimating $$ \hat{Y}_i\left(1\right) -\hat{Y}_(0) = \tau+\left[\hat{X}_i(1)-\hat{X}_i(0)\right]'\beta + \epsilon_i $$
+        \item[1] using least squares, estimate $$ \hat{Y}_i\left(1\right) -\hat{Y}_(0) = \tau+\left[\hat{X}_i(1)-\hat{X}_i(0)\right]'\beta + \epsilon_i $$
+        \item[2] estimate $\mu_0(x)$ directly by taking all control units and use lease squares to estimate $$ Y_i = \alpha_0 + \beta_0'X_i + \epsilon_i $$
+        if unit $i$ is a control unit, or $Y_i=\alpha_1+\beta_1'X_i+\epsilon_i$ for the treated units. If the correction is done nonparametrically, the resulting matching estimator is consistent and asymptotically normal, with its bias dominated by the variance.
+        \item[3] 
     \end{itemize}
 \end{itemize}
 
