@@ -818,7 +818,7 @@ There are 2 cases in practice when considering propensity score approaches
     $$ Y_i = \alpha + \beta'X_i + \tau\cdot D_i + \epsilon_i $$
     which is doubly robust: consistent if either the regression model or the propensity score are specified correctly.
     \item \myhl[myblue]{\textbf{Blocking and Regression}}: least square estimator in block $m$ as $$ Y_i = \alpha_m + \tau_m\cdot D_i + \epsilon_i $$ using only units in block $m$. One can again add covariates and estimate $Y_i = \alpha_m + \beta_m' X_i + \tau_m\cdot D_i + \epsilon_i$.
-    \item 
+    \item \myhl[myblue]{\textbf{Matching and Regression}}: the bias of the simple matching estimator can dominate the variance if the dimension of the covariates is too large, regression can help in this situation
 \end{itemize}
 
 \paragraph*{E. Bayesian}
