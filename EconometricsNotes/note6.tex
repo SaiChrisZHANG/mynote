@@ -838,7 +838,7 @@ There are 2 cases in practice when considering propensity score approaches
         \item[1] using least squares, estimate $$ \hat{Y}_i\left(1\right) -\hat{Y}_(0) = \tau+\left[\hat{X}_i(1)-\hat{X}_i(0)\right]'\beta + \epsilon_i $$
         \item[2] estimate $\mu_0(x)$ directly by taking all control units and use lease squares to estimate $$ Y_i = \alpha_0 + \beta_0'X_i + \epsilon_i $$
         if unit $i$ is a control unit, or $Y_i=\alpha_1+\beta_1'X_i+\epsilon_i$ for the treated units\footnote{If the correction is done nonparametrically, the resulting matching estimator is consistent and asymptotically normal, with its bias dominated by the variance.}.
-        \item[3] 
+        \item[3] estimate the same regression function for the controls, but using \textit{only those that are used as matches} for the treated units with weights corresponding to the number of times a control observation is used as a match.
     \end{itemize}
 \end{itemize}
 
