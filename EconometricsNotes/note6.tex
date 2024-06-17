@@ -838,11 +838,18 @@ There are 2 cases in practice when considering propensity score approaches
         \item[1] using least squares, estimate $$ \hat{Y}_i\left(1\right) -\hat{Y}_(0) = \tau+\left[\hat{X}_i(1)-\hat{X}_i(0)\right]'\beta + \epsilon_i $$
         \item[2] estimate $\mu_0(x)$ directly by taking all control units and use lease squares to estimate $$ Y_i = \alpha_0 + \beta_0'X_i + \epsilon_i $$
         if unit $i$ is a control unit, or $Y_i=\alpha_1+\beta_1'X_i+\epsilon_i$ for the treated units\footnote{If the correction is done nonparametrically, the resulting matching estimator is consistent and asymptotically normal, with its bias dominated by the variance.}.
-        \item[3] estimate the same regression function for the controls, but using \textbf{only those that are used as matches} for the treated units with weights corresponding to the number of times a control observation is used as a match. \textbf{\underline{CAUTIOUS}}: This approach can be less efficient due to dropping some control observations, but can likely avoid including outliners. 
+        \item[3] estimate the same regression function for the controls, but using \textbf{only those that are used as matches} for the treated units with weights corresponding to the number of times a control observation is used as a match.
+        
+        \textbf{\underline{CAUTIOUS}}: This approach can be less efficient due to dropping some control observations, but can likely avoid including outliners. 
     \end{itemize}
 \end{itemize}
 
 \paragraph*{E. Bayesian}
+Bayesian approaches have not been applied in estimating ATE under unconfoundedness. They can be useful for a number of reasons,
+\begin{itemize}
+    \item \textbf{high-dimensionality}: Bayesian methods would allow researchers to include covariates with more or less informative prior distributions.
+    \item \textbf{missing-at-random (MAR)}: multiple imputation methods often rely on a Bayesian approach for missing data.
+\end{itemize}
 
 
 
