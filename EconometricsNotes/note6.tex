@@ -864,7 +864,12 @@ Bayesian approaches have not been applied in estimating ATE under unconfoundedne
     which can be estimated by 
     \begin{itemize}
         \item[1] estimating the conditional moments of the outcome distributions, with the accompanying inherent difficulties.
-        \item[2] matching variance estimator\footnote{The idea is that one need not actually estimate this variance consistently at all values of the covariates. One needs only the average of this variance over the distribution, weighted by the inverse of either $e(x)$ ot its complement $1-e(x)$.}: the key is to obtain a close-to-unbiased estimator for $\sigma^2_w(x)$  
+        \item[2] matching variance estimator\footnote{The idea is that one need not actually estimate this variance consistently at all values of the covariates. One needs only the average of this variance over the distribution, weighted by the inverse of either $e(x)$ ot its complement $1-e(x)$.}: the key is to obtain a close-to-unbiased estimator for $\sigma^2_w(x)$. Suppose units $i$ and $j$ have $X=x$, then an unbiased estimator for $\sigma^2_1(x)$ is $$ \hat{\sigma}^2_1(x) = \frac{1}{2}(Y_i-Y_j)^2 $$
+        this matching doesn't need to be exact, one can use the closest match within the set of units with the same treatment indicator. Let $v_m(i)$ be the $m$-th closest unit to $i$ with the same treatment indicator $W_{v_m(i)}=W_i$ and 
+        $$
+        \sum_{l\mid W_l=l,l\neq i} \mathbf{1} \left\{ \left\Vert X_l-x \right\Vert \leq \left\Vert X_{v_m(i)}-x \right\Vert \right\} = m
+        $$
+        which gives $M$ units with the same treatment indicator and approximately the same values for the covariates.
     \end{itemize}
 \end{itemize}
 
