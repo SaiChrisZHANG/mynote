@@ -851,7 +851,10 @@ Bayesian approaches have not been applied in estimating ATE under unconfoundedne
     \item \textbf{missing-at-random (MAR)}: multiple imputation methods often rely on a Bayesian approach for missing data.
 \end{itemize}
 
-
+\paragraph*{Estimating variances}
+\begin{itemize}
+    \item for population ATE, the variance of efficient estamators is $$ V^P = \mathbb{E} \left[ \frac{\sigma^2_1(X)}{e(X)} + \frac{\sigma^2_0(X)}{1-e(X)} + \left(\mu_1(X)-\mu_0(X)-\tau\right)^2 \right] $$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
