@@ -858,7 +858,7 @@ Bayesian approaches have not been applied in estimating ATE under unconfoundedne
     \begin{itemize}
         \item[1] brute force: estimate all 5 components $\sigma^2_0(x)$, $\sigma^2_1(x)$, $\mu_0(x)$, $\mu_1(x)$ and $e(x)$ using kernel methods or series.
         \item[2] either estimate regression functions $\mu_0(x),\mu_1(x)$ or the propensity score $e(x)$ using series/sieves. This can be interpreted as parametric estimators
-        \item[3] 
+        \item[3] bootstrapping: given the asymptotic linearity of the estimators, bootstrapping will lead to valid standard errors and CIs at least for the regression and propensity score methods. For matching, it's more complicated since bootstrapping introduces discreteness in the distribution, which will lead to ties.
     \end{itemize}
 \end{itemize}
 
