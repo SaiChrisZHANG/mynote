@@ -869,7 +869,11 @@ Bayesian approaches have not been applied in estimating ATE under unconfoundedne
         $$
         \sum_{l\mid W_l=l,l\neq i} \mathbf{1} \left\{ \left\Vert X_l-x \right\Vert \leq \left\Vert X_{v_m(i)}-x \right\Vert \right\} = m
         $$
-        which gives $M$ units with the same treatment indicator and approximately the same values for the covariates. The sample variance of the outcome variable for these $M$ units can then be used to estimate $\sigma^2_1(x)$, and similarly for the control variance function $\sigma^2_0(x)$.
+        which gives $M$ units with the same treatment indicator and approximately the same values for the covariates. The sample variance of the outcome variable for these $M$ units can then be used to estimate $\sigma^2_1(x)$, and similarly for the control variance function $\sigma^2_0(x)$. 
+        \item[3] estimate the variance of the ATE as
+        \begin{equation*}
+            \hat{V}^S = \frac{1}{N} \sum^N_{i=1}\left( \frac{\hat{\sigma}^2_1(X_i)}{\hat{e}(X_i)} + \frac{\hat{\sigma^2_{0}(X_i)}}{1-\hat{e}(X_i)} \right)
+        \end{equation*}
     \end{itemize}
 \end{itemize}
 
