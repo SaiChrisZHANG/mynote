@@ -885,7 +885,11 @@ Bayesian approaches have not been applied in estimating ATE under unconfoundedne
 \paragraph*{Assessing the assumptions}
 There assumption of unconfoundedness is not directly testable, since the distribution of $Y(0)$ for those who received the treatment and of $Y(1)$ for those who received the control are never in the data. But there are still 2 groups of ways to indirectly test the assumption:
 \begin{itemize}
-    \item estimating the casual effect of a treatment that is known \textbf{not to have} an effect.
+    \item estimating the casual effect of a treatment that is known \textbf{not to have} an effect: postulate a three-valued indicator $T_i\in\left\{-1,0,1\right\}$ for the groups of ineligibles, eligible non-participants and participants, and treatment indicator $W_i=\mathbf{1}\left\{T_i=1\right\}$. The extended unconfoundedness assumption is 
+    $$ Y_i(0),Y_i(1) \dot T_i\mid X_i $$
+    and a testable implication is 
+    $$Y_i \bot \mathbf{1}\left\{T_i=0 \right\} \mid X_i,T_i\leq 0 $$
+    \item estimating the casual effect of the treatment on a variable known to be \textbf{unaffected} by it, typically a pre-determined variable,
 \end{itemize}
 
 \newpage
