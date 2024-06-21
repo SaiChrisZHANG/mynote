@@ -890,7 +890,8 @@ There assumption of unconfoundedness is not directly testable, since the distrib
     and a testable implication is 
     $$Y_i \bot \mathbf{1}\left\{T_i=0 \right\} \mid X_i,T_i\leq 0 $$
     \item estimating the casual effect of the treatment on a variable known to be \textbf{unaffected} by it, typically a pre-determined variable, which could eitehr me time-invariant, or more interestingly, a lagged outcome. One can test 
-    $$ Y_i(1),Y_i(0)\bot W_i\mid Y_{i,-1},\cdots,Y_{i,-(T-1)},Z_i $$
+    $$ Y_{i,-1}\bot W_i\mid Y_{i,-2},\cdots,Y_{i,-T},Z_i $$
+    which not only depends on 
 \end{itemize}
 
 \newpage
