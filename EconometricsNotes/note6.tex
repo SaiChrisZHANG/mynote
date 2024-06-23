@@ -900,7 +900,7 @@ There assumption of unconfoundedness is not directly testable, since the distrib
 
 next, the important question is how to \textbf{choose the covariates}, some concerns are 
 \begin{itemize}
-    \item some variables should not be adjusted for 
+    \item some variables should not be adjusted for: the unconfoundedness assumption may apply with one set of covariates, but \textbf{not} with an expanded set. A covariate measured before the treatment was chosen should be safe to include in theory, but in practice, the covariates are often recorded as the same time as the outcomes
     \item the expected mean squared error may be reduced by ignoring those covariates that have only weak correlation with the treatment indicator and the outcomes: including a covariate in teh adjustment procedure will not lower the asymptotically precision of ATE but could reduce precision \textbf{in finite samples} if the covariates are not or only weakly correlated with outcomes and treatment indicators.
 \end{itemize}
 
