@@ -909,6 +909,7 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
     \item[\textbf{1}] \myhl[myblue]{\textbf{detect} the lack of overlapping}: there are several methods popularly used
     \begin{itemize}
         \item plot distributions of covariates by treatment groups: can be very difficult in \textbf{high-dimensional} cases
+        \item non-parametrically estimate the distribution of the propensity score: in practice, one may wish to undersmooth the estimation by choosing a bandwidth smaller than optimal or including higher-order terms
     \end{itemize}
     \item[\textbf{2}] \myhl[myblue]{\textbf{address} the lack of overlapping}
 \end{itemize}
