@@ -922,7 +922,7 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
             \begin{align*}
                 \frac{1}{N\cdot \left[1-e(X_i)\right]}, &\text{ for treated units} & \frac{1}{N\cdot e(X_i)}, &\text{ for control units}
             \end{align*}
-            and make sure the weights of all units are \textbf{upper-bounded} by a reasonable number\footnote{For example, set the cutoff as 0.05, s.t. no unit will have a weight of more than 5\% in the average.}
+            and make sure the weights of all units are \textbf{upper-bounded} by a reasonable number\footnote{For example, set the cutoff as 0.05, s.t. no unit will have a weight of more than 5\% in the average. In a sample with 1000 units, with such a cutoff, only units with a propensity score outside $[0.02,0.98]$ will be ignored.}
         \end{itemize}
     \end{itemize}
 \end{itemize}
