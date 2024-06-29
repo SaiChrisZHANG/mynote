@@ -917,6 +917,13 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
     \begin{itemize}
         \item conclude the ATE \textbf{cannot} be estimated with sufficient precision 
         \item focus on an average treatment effect that is estimable with greater accuracy
+        \begin{itemize}
+            \item \textit{\underline{drop observations by a \textbf{cutoff} of propensity scores}}: one principle is to evaluate the weight of each unit as
+            \begin{align*}
+                \frac{1}{N\cdot \left[1-e(X_i)\right]}, &\text{ for treated units} & \frac{1}{N\cdot e(X_i)}, &\text{ for control units}
+            \end{align*}
+            and make sure the weights of all units are \textbf{upper-bounded} by a reasonable number\footnote{For example, set the cutoff as 0.05, s.t. no unit will have a weight of more than 5\% in the average.}
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 
