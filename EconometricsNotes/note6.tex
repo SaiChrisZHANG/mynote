@@ -913,7 +913,11 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
         \item inspect the \textbf{worst} matches: for each component $k$ of the covariate vector, check $$\max_i\left\vert x_{i,k} - x_{l_1(i),k} \right\vert$$
         the maximum over all observations of the matching discrepancy. If it's large relative to the \textbf{sample standard deviation} of the $k$-th component of the coviarates, there would be a lack of overlapping.
     \end{itemize}
-    \item[\textbf{2}] \myhl[myblue]{\textbf{address} the lack of overlapping}
+    \item[\textbf{2}] \myhl[myblue]{\textbf{address} the lack of overlapping}: given a lack of overlap, one can 
+    \begin{itemize}
+        \item conclude the ATE \textbf{cannot} be estimated with sufficient precision 
+        \item focus on an average treatment effect that is estimable with greater accuracy
+    \end{itemize}
 \end{itemize}
 
 
