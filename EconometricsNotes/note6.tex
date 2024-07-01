@@ -923,6 +923,9 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
         and make sure the weights of all units are \textbf{upper-bounded} by a reasonable number\footnote{For example, set the cutoff as 0.05, s.t. no unit will have a weight of more than 5\% in the average. In a sample with 1000 units, with such a cutoff, only units with a propensity score outside $[0.02,0.98]$ will be ignored.}.
     \end{itemize}
     \item[\textbf{3}] \myhl[myblue]{\textbf{comparing} the 3 approaches}: in general, variance estimates \textbf{increase} when adding treated observations to a sufficiently-overlapping data set, approximately \textbf{unchanged} when adding control observations.
+    \begin{itemize}
+        \item \textbf{regression}: in general, adding observations with outlier values of the regressors leads to higher precision
+    \end{itemize}
 \end{itemize}
 
 
