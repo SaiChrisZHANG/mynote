@@ -928,6 +928,7 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
         \item \textbf{matching}: adding \textbf{control} observations with outlier covariate values will likely not change the results, such they won't be useed as matches; but adding \textbf{treated} will bias the estimates, while the standard error would largely unaffected.
         \item \textbf{propensity-score}: if the propensity score of a \textbf{control} unit is \textbf{close to 0}, adding it would not cause much trouble; but adding a \textbf{control} unit with a propensity score \textbf{close to 1} would increase variance of an ATE estimator
     \end{itemize}
+    over all, \textbf{matching} and \textbf{propensity-score}, as well as \textbf{kernel-based} regression methods, are better in coping with limited overlap.
 \end{itemize}
 
 
