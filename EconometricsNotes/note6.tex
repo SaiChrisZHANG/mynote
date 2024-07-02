@@ -926,6 +926,7 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
     \begin{itemize}
         \item \textbf{regression}: in general, adding observations with outlier values of the regressors leads to more precise estimates. If the added observations are \textbf{treated} units, the precision of the estimated control regression at thes outlier values will be lower; if in \textbf{control} units, such precision will increase.
         \item \textbf{matching}: adding \textbf{control} observations with outlier covariate values will likely not change the results, such they won't be useed as matches; but adding \textbf{treated} will bias the estimates, while the standard error would largely unaffected.
+        \item \textbf{propensity-score}: if the propensity score of a \textbf{control} unit is \textbf{close to 0}, adding it would not cause much trouble; but adding a \textbf{control} unit with a propensity score \textbf{close to 1} would increase variance of an ATE estimator
     \end{itemize}
 \end{itemize}
 
