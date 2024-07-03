@@ -932,6 +932,10 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
 \end{itemize}
 
 \citet{chernozhukov2017double} propose to a machine-learning based approach. They consider the case where treatment effects are fully heterogeneous, and the treatment variable $D\in \left\{0,1\right\}$, and model random vector $\left(Y,D,Z\right)$ as 
+\begin{align*}
+    Y&= g_0\left(D,Z\right)+\zeta & \mathbb{E}\left[\zeta \mid Z,D\right]&=0 & \text{outcome variable}\\
+    D&= m_0\left(Z\right) + \nu & \mathbb{E}\left[\nu\mid Z\right] &=0 & \text{treatment assignment}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
