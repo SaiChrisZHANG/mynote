@@ -941,6 +941,11 @@ which allows for general heterogeneity in treatment effect. Then the ATE or ATT 
     \theta_0 &= \mathbb{E}\left[g_0\left(1,Z\right),g_0\left(0,Z\right)\right] & \text{ATE}\\
     \theta_0 &= \mathbb{E}\left[g_0\left(1-Z\right)-g_0\left(0,Z\right)\mid D=1\right] & \text{ATT}
 \end{align*}
+conisder a score $\psi(W;\theta,\eta)$ that satisfies
+\begin{align*}
+    \mathbb{E}\psi \left(W;\theta_0,\eta_0\right) &=0 & \text{identification condition}\\
+    \mathbb{E}\left.\partial_n\mathbb{E}\psi \left(W;\theta_0,\eta\right)\right\vert_{\eta=\eta_0} &=0 & \text{Neyman orthogonality condition}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
