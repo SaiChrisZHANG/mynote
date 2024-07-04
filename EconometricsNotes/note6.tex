@@ -965,6 +965,11 @@ conisder a score $\psi(W;\theta,\eta)$ that satisfies
 \end{itemize}
 where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consisting of $P-$square integrable functions, mapping the support of $Z$ to $\mathbb{R}\times \mathbb{R} \times\left(\epsilon,1-\epsilon \right)$ for ATE and to $\mathbb{R}\times \mathbb{R} \times\left(\epsilon,1-\epsilon \right) \times\left(\epsilon,1-\epsilon\right)$ for ATT\footnote{All semiparametrically efficient scores satisfy Neyman orthogonality, but not vice versa. In some problems, one may consider inefficient orthogonal scores for robustness.}. 
 
+\citet{chernozhukov2017double} propose an algorithm with cross-fitting to avoid overfitting and the use of the Neyman orthogonality to reduce regularization and modeling biases of ML estimators $\hat{\eta}_0$, hence, \textbf{double debiasing}
+\begin{algorithm}{Estimation with Orthogonal Scores by $K-$fold Cross-Fitting}{chernozhukov_doublyrobust_alg}
+    
+\end{algorithm}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
