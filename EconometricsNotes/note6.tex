@@ -936,7 +936,9 @@ the second key assumption is the \textbf{overlapping}: the propensity score, i.e
     Y&= g_0\left(D,Z\right)+\zeta & \mathbb{E}\left[\zeta \mid Z,D\right]&=0 & \text{outcome variable}\\
     D&= m_0\left(Z\right) + \nu & \mathbb{E}\left[\nu\mid Z\right] &=0 & \text{treatment assignment}
 \end{align*}
-which allows for general heterogeneity in treatment effect. Then the ATE or ATT are 
+which allows for general heterogeneity in treatment effect. The confounding factors $Z$ affect the treatment variable $D$ via propensity score $m_0(Z)\coloneq \mathbb{E}\left[D\mid Z\right]$, and the outcome variable via function $g_0(D,Z)$, both of these functions will be estimated via ML methods.
+
+Then the ATE or ATT are 
 \begin{align*}
     \theta_0 &= \mathbb{E}\left[g_0\left(1,Z\right),g_0\left(0,Z\right)\right] & \text{ATE}\\
     \theta_0 &= \mathbb{E}\left[g_0\left(1-Z\right)-g_0\left(0,Z\right)\mid D=1\right] & \text{ATT}
@@ -944,8 +946,16 @@ which allows for general heterogeneity in treatment effect. Then the ATE or ATT 
 conisder a score $\psi(W;\theta,\eta)$ that satisfies
 \begin{align*}
     \mathbb{E}\psi \left(W;\theta_0,\eta_0\right) &=0 & \text{identification condition}\\
-    \mathbb{E}\left.\partial_n\mathbb{E}\psi \left(W;\theta_0,\eta\right)\right\vert_{\eta=\eta_0} &=0 & \text{Neyman orthogonality condition}
+    \left.\partial_n\mathbb{E}\psi \left(W;\theta_0,\eta\right)\right\vert_{\eta=\eta_0} &=0 & \text{Neyman orthogonality condition}
 \end{align*}
+\citet{chernozhukov2017double} suggest employing 
+\begin{itemize}
+    \item for \myhl[myblue]{\textbf{ATE}}
+    \begin{align*}
+        \psi\left(W;\theta,\eta\right)&= \frac{D\left(Y-g(0,Z)\right)}{m} - \frac{m(Z)(1-D)\left(Y-g(0,Z)\right)}{\left(1-m(Z)\right)m} - \theta\frac{D}{m}
+    \end{align*}
+    \item for \myhl[myblue]{\textbf{ATT}}
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
