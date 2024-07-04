@@ -957,8 +957,13 @@ conisder a score $\psi(W;\theta,\eta)$ that satisfies
         \eta_0(Z) &\coloneq \left(g_0(0,Z),g_0(1,Z),m_0(Z)\right)
     \end{align*}
     \item for \myhl[myblue]{\textbf{ATT}}
+    \begin{align*}
+        \psi\left(W;\theta,\eta\right) &= \frac{D\left(Y-g(0,Z)\right)}{m} - \frac{m(Z)(1-D)\left(Y-g(0,Z)\right)}{\left(1-m(Z)\right)m} - \theta\frac{D}{m} \\
+        \eta(Z) &\coloneq \left(g(0,Z),g(1,Z),m(Z),m\right)\\
+        \eta_0(Z) &\coloneq \left(g_0(0,Z),g_0(1,Z),m_0(Z),\mathbb{E}[D]\right)
+    \end{align*}
 \end{itemize}
-where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consisting of $P-$square integrable functions, mapping the support of $Z$ to $\mathbb{R}\times \mathbb{R} \times\left(\epsilon,1-\epsilon \right)$
+where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consisting of $P-$square integrable functions, mapping the support of $Z$ to $\mathbb{R}\times \mathbb{R} \times\left(\epsilon,1-\epsilon \right)$ for ATE and to $\mathbb{R}\times \mathbb{R} \times\left(\epsilon,1-\epsilon \right) \times\left(\epsilon,1-\epsilon\right)$ for ATT. 
 
 \newpage
 \bibliographystyle{plainnat}
