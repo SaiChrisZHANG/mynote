@@ -965,7 +965,7 @@ conisder a score $\psi(W;\theta,\eta)$ that satisfies
 \end{itemize}
 where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consisting of $P-$square integrable functions, mapping the support of $Z$ to $\mathbb{R}\times \mathbb{R} \times\left(\epsilon,1-\epsilon \right)$ for ATE and to $\mathbb{R}\times \mathbb{R} \times\left(\epsilon,1-\epsilon \right) \times\left(\epsilon,1-\epsilon\right)$ for ATT\footnote{All semiparametrically efficient scores satisfy Neyman orthogonality, but not vice versa. In some problems, one may consider inefficient orthogonal scores for robustness.}. 
 
-\citet{chernozhukov2017double} propose an algorithm with cross-fitting to avoid overfitting and the use of the Neyman orthogonality to reduce regularization and modeling biases of ML estimators $\hat{\eta}_0$, hence, \textbf{double debiasing}
+\citet{chernozhukov2017double} propose to use cross-fitting to avoid overfitting and the Neyman orthogonality to reduce regularization and modeling biases of ML estimators $\hat{\eta}_0$, hence, \textbf{double debiasing}
 \begin{algorithm}{Estimation with Orthogonal Scores by $K-$fold Cross-Fitting}{chernozhukov_doublyrobust_alg}
     \begin{itemize}
         \item[\textbf{S1}] Let $K$ be a fixed integer. Form a $K-$fold random partition of $\left\{1,\cdots,N\right\}$ by dividing it into equal parts $\left(I_k\right)^K_{k=1}$, each of size $n\coloneq N/K$. For each $I_k$, let $I^C_k$ denote all indices that are \textbf{not} in $I_k$
@@ -982,12 +982,24 @@ where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consist
         for the score $\psi$ for ATE and ATT respectively.
         \item{\textbf{S3}} Average the $K$ estimators to obtain the final estimator $$ \tilde{\theta}_0 = \frac{1}{K}\sum^K_{k=1}\check{\theta}_0\left(I_k,I^C_k\right) $$
         and an approximate standard error for this estimator is $\hat{\sigma}/\sqrt{N}$, where
-        \begin{align*}
-            \hat{\sigma}^2 &= \frac{1}{N}\sum^N_{i=1}\hat{\psi}^2_i & \hat{\psi}&\coloneq \psi\left(W_i;\tilde{\theta}_0,\hat{\eta}_0\left(I^C_{k(i)}\right)\right) & k(i) & \coloneq \left\{k\in \left\{1,\cdots,K\right\}:i\in I_k\right\}
-        \end{align*}
+        $\hat{\sigma}^2 = \frac{1}{N}\sum^N_{i=1}\hat{\psi}^2_i$, $\hat{\psi}\coloneq \psi\left(W_i;\tilde{\theta}_0,\hat{\eta}_0\left(I^C_{k(i)}\right)\right)$, $k(i) \coloneq \left\{k\in \left\{1,\cdots,K\right\}:i\in I_k\right\}$
         an approximate $\left(1-\alpha\right)\times 100\%$ Confidence interval is $$ \mathrm{CI}_n \coloneq \left[\tilde{\theta}_0 \pm \Phi^{-1}\left(1-\frac{\alpha}{2}\right)\frac{\hat{\sigma}}{\sqrt{N}} \right] $$
     \end{itemize}
+    The \textbf{key assumptions} on the rate of estimating are 
+    \begin{itemize}
+        \item $\forall d\in\left\{0,1\right\}$, $\left\Vert \zeta \right\Vert _{P,2}\geq c$, $\left\Vert v \right\Vert _{P,2}\geq c$, and
+        \begin{align*}
+            \left\Vert g(d,Z) \right\Vert _{P,q} &\leq C & \left\Vert Y \right\Vert _{P,q} &\leq C & P\left(\epsilon \leq m_0 (Z) \leq 1-\epsilon\right) &=1 & P\left(\mathbb{E}_P\left[\zeta^2\mid Z\right]\leq C\right)&=1 
+        \end{align*}
+        \item the ML estimators based on a random subset $I^C_k$ of $\left\{1,\cdots,N\right\}$ of size $N-n$, $\forall N\geq 2K, d\in\left\{0,1\right\}$
+        \begin{align*}
+            \left\Vert \hat{g}_0\left(d,Z;I^C_k\right)-g_0(d,Z) \right\Vert _{P,2}\cdot \left\Vert \hat{m}_0\left(Z;I^C_k\right) -m_0(Z) \right\Vert _{P,2} &\leq \frac{\delta_n}{\sqrt{n}} \\
+            \left\Vert \hat{g}_0\left(d,Z;I^C_k\right)-g_0(d,Z) \right\Vert _{P,2} + \left\Vert \hat{m}_0\left(Z;I^C_k\right) -m_0(Z) \right\Vert _{P,2} &\leq \delta_n
+        \end{align*}
+        and $P\left(\epsilon\leq \hat{m}_0\left(Z;I^C_k\right)\leq 1-\epsilon\right)=1$ with $P_P-$probability no less than $1-\Delta_n$.
+    \end{itemize}
 \end{algorithm}
+
 
 \newpage
 \bibliographystyle{plainnat}
