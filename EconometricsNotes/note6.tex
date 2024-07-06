@@ -968,7 +968,11 @@ where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consist
 \citet{chernozhukov2017double} propose an algorithm with cross-fitting to avoid overfitting and the use of the Neyman orthogonality to reduce regularization and modeling biases of ML estimators $\hat{\eta}_0$, hence, \textbf{double debiasing}
 \begin{algorithm}{Estimation with Orthogonal Scores by $K-$fold Cross-Fitting}{chernozhukov_doublyrobust_alg}
     \begin{itemize}
-        \item[\textbf{S1}] Let $K$ be a fixed integer. Form a $K-$fold random partition of $\left\{1,\cdots,N\right\}$ by dividing it into equal parts $\left(I_k\right)^K_{k=1}$, each of size $n\coloneq N/K$. For each $I_k$, let $I^C_k$ denote all observation indices that are \textbf{not} in $I_k$
+        \item[\textbf{S1}] Let $K$ be a fixed integer. Form a $K-$fold random partition of $\left\{1,\cdots,N\right\}$ by dividing it into equal parts $\left(I_k\right)^K_{k=1}$, each of size $n\coloneq N/K$. For each $I_k$, let $I^C_k$ denote all indices that are \textbf{not} in $I_k$
+        \item[\textbf{S2}] Construct $K$ estimators
+        \begin{align*}
+            \check{\theta}_0&\left(I_k,I^C_k\right) ,& k=1,\cdots,K
+        \end{align*}
     \end{itemize}
 \end{algorithm}
 
