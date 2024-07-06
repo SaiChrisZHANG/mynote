@@ -980,6 +980,11 @@ where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consist
         of the nuisance parameters $$ \eta_0(Z) = \left(g_0(0,Z),g_0(1,Z),m_0(Z),\mathbb{E}\left[D\right]\right)' $$
         and where each estimator $\check{\theta}_0\left(I_k,I^C_k\right)$ is defined as the root $\theta$ of $$ \frac{1}{n}\sum_{i\in I_k}\psi \left(W;\theta,\hat{\eta}_0\left(I^C_k\right)\right) =0 $$
         for the score $\psi$ for ATE and ATT respectively.
+        \item{\textbf{S3}} Average the $K$ estimators to obtain the final estimator $$ \tilde{\theta}_0 = \frac{1}{K}\sum^K_{k=1}\check{\theta}_0\left(I_k,I^C_k\right) $$
+        and an approximate standard error for this estimator is $\hat{\sigma}/\sqrt{N}$, where
+        \begin{align*}
+            \hat{\sigma}^2 &= \frac{1}{N}\sum^N_{i=1}\hat{\psi}^2_i & \hat{\psi}&\coloneq \psi\left(W_i;\tilde{\theta}_0,\hat{\eta}_0\left(I^C_{k(i)}\right)\right) & k(i) & \coloneq \left\{k\in \left\{1,\cdots,K\right\}:i\in I_k\right\}
+        \end{align*}
     \end{itemize}
 \end{algorithm}
 
