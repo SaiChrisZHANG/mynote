@@ -996,12 +996,12 @@ where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consist
             \left\Vert \hat{g}_0\left(d,Z;I^C_k\right)-g_0(d,Z) \right\Vert _{P,2}\cdot \left\Vert \hat{m}_0\left(Z;I^C_k\right) -m_0(Z) \right\Vert _{P,2} &\leq \frac{\delta_n}{\sqrt{n}} \\
             \left\Vert \hat{g}_0\left(d,Z;I^C_k\right)-g_0(d,Z) \right\Vert _{P,2} + \left\Vert \hat{m}_0\left(Z;I^C_k\right) -m_0(Z) \right\Vert _{P,2} &\leq \delta_n
         \end{align*}
-        and $P\left(\epsilon\leq \hat{m}_0\left(Z;I^C_k\right)\leq 1-\epsilon\right)=1$ with $P_P-$probability no less than $1-\Delta_n$\footnote{The conditions are fairly sharp, in the sense that for a sparse regression function $g_0$ and a propsensity function $m_0$ with sparsity indices $s^g\ll n,s^m\ll n$, and estimators $\hat{g}_0$ and $\hat{m}_0$ have sparsity indices of order $s^g$ and $s^m$, converging to $g_0$ and $m_0$ at the rates $\sqrt{s^g/n}$ and $\sqrt{s^m/n}$. The rate conditions in the assumption require $$ \sqrt{s^g/n} \cdot \sqrt{s^m/n} \Leftrightarrow s^gs^m\ll \sqrt{n} $$}.
+        and $P\left(\epsilon\leq \hat{m}_0\left(Z;I^C_k\right)\leq 1-\epsilon\right)=1$ with $P_P-$probability no less than $1-\Delta_n$\footnote{The conditions are fairly sharp, in the sense that for a sparse regression function $g_0$ and a propsensity function $m_0$ with sparsity indices $s^g\ll n,s^m\ll n$, and estimators $\hat{g}_0$ and $\hat{m}_0$ have sparsity indices of order $s^g$ and $s^m$, converging to $g_0$ and $m_0$ at the rates $\sqrt{s^g/n}$ and $\sqrt{s^m/n}$. The rate conditions in the assumption require $$ \sqrt{s^g/n} \cdot \sqrt{s^m/n} \Leftrightarrow s^gs^m\ll \sqrt{n} $$ which is much weaker than the without-sample-splitting condition $\left(s^g\right)^2 + \left(s^m\right)^2\ll n$}.
     \end{itemize}
 \end{algorithm}
 
 the estimator from Algorithm \ref{algm:chernozhukov_doublyrobust_alg} achieves asymptotic normality:
-$\sigma^{-1}\sqrt{N}\left(\tilde{\theta}_0-\theta_0\right) \rightarrow \mathcal{N}\left(0,1\right)$, where $\sigma^2 = \mathbb{E}_P\left[\psi^2\left(W;\theta_0,\eta_0\left(Z\right)\right)\right]$
+$\sigma^{-1}\sqrt{N}\left(\tilde{\theta}_0-\theta_0\right) \rightarrow \mathcal{N}\left(0,1\right)$, where $\sigma^2 = \mathbb{E}_P\left[\psi^2\left(W;\theta_0,\eta_0\left(Z\right)\right)\right]$, the results hold with $\hat{\sigma}^2$. The confidence regions based upon $\tilde{\theta}_0$ have uniform asymptotic validity $$ \sup_{P\in \mathcal{P}}\left\vert P\left(\theta_0\in CI_n\right)-\left(1-\alpha\right) \right\vert \rightarrow 0$$
 
 
 \newpage
