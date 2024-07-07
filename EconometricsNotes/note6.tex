@@ -1001,8 +1001,9 @@ where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consist
 \end{algorithm}
 
 the estimator from Algorithm \ref{algm:chernozhukov_doublyrobust_alg} achieves asymptotic normality:
-$\sigma^{-1}\sqrt{N}\left(\tilde{\theta}_0-\theta_0\right) \rightarrow \mathcal{N}\left(0,1\right)$, where $\sigma^2 = \mathbb{E}_P\left[\psi^2\left(W;\theta_0,\eta_0\left(Z\right)\right)\right]$, the results hold with $\hat{\sigma}^2$. The confidence regions based upon $\tilde{\theta}_0$ have uniform asymptotic validity $$ \sup_{P\in \mathcal{P}}\left\vert P\left(\theta_0\in CI_n\right)-\left(1-\alpha\right) \right\vert \rightarrow 0$$
+$\sigma^{-1}\sqrt{N}\left(\tilde{\theta}_0-\theta_0\right) \rightarrow \mathcal{N}\left(0,1\right)$, where $\sigma^2 = \mathbb{E}_P\left[\psi^2\left(W;\theta_0,\eta_0\left(Z\right)\right)\right]$, the results hold with $\hat{\sigma}^2$. The confidence regions based upon $\tilde{\theta}_0$ have uniform asymptotic validity $$ \sup_{P\in \mathcal{P}}\left\vert P\left(\theta_0\in CI_n\right)-\left(1-\alpha\right) \right\vert \rightarrow 0$$.
 
+\textbf{Uncertainty due to sample-splitting}: although sample partitions have no impact on estimation results asymptotically, but may be important in finite samples. \citet{chernozhukov2017double} proposes to repeat the procedure $S$ times and repartition each time, get a set of estimates $\tilde{\theta}^s_0$.
 
 \newpage
 \bibliographystyle{plainnat}
