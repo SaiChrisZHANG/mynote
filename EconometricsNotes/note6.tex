@@ -970,9 +970,7 @@ where $\eta(Z)$ is the nuisance parameter with true value of $\eta_0(Z)$ consist
     \begin{itemize}
         \item[\textbf{S1}] Let $K$ be a fixed integer. Form a $K-$fold random partition of $\left\{1,\cdots,N\right\}$ by dividing it into equal parts $\left(I_k\right)^K_{k=1}$, each of size $n\coloneq N/K$. For each $I_k$, let $I^C_k$ denote all indices that are \textbf{not} in $I_k$
         \item[\textbf{S2}] Construct $K$ estimators
-        \begin{align*}
-            \check{\theta}_0&\left(I_k,I^C_k\right) ,& k=1,\cdots,K
-        \end{align*}
+        $\check{\theta}_0\left(I_k,I^C_k\right)$, $k=1,\cdots,K$
         that employ the machine learning estimators 
         $$
         \hat{\eta}_0\left(I^C_k\right) = \left( \hat{g}_0\left(0,Z;I^C_k\right),\hat{g}_0\left(1,Z;I^C_k\right),\hat{m}_0\left(Z;I^C_k\right),\frac{1}{N-n}\sum_{i=\in I^C_k}D_i \right)'
@@ -1010,6 +1008,10 @@ Then, consider 2 quantities:
     \item sample \textbf{median} of the $S$ estimates: $\tilde{\theta}_0^{\text{median}}$
 \end{itemize}
 $\tilde{\theta}_0^{\text{median}}$ is less affected by extreme estimates, hence more robust. But asymptotically, the specific random partition is irrelevant, hence $\tilde{\theta}_0^{\text{mean}}$ and $\tilde{\theta}_0^{\text{median}}$ should be close.
+\citet{chernozhukov2017double} also introduce the repsective standard error measures:
+\begin{align*}
+    \hat{\sigma}^{\text{mean}} &= \sqrt{\frac{1}{S}\sum^S_{s=1}\left(\hat{\sigma}^2_s+\underbrace{\left(\tilde{\theta}_0^s-\frac{1}{S}\sum^S_{j=1}\tilde{\theta}^j_0\right)^2}_{\text{variation of sample splitting}}\right)} & \hat{\sigma}^{\text{median}} &= \text{median} \left\{ \sqrt{\hat{\sigma}^2_i + \underbrace{\left(\hat{\theta}_i-\hat{\theta}^{\text{median}}\right)^2}_{\text{variation of sample splitting}} } \right\}^S_{i=1}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
