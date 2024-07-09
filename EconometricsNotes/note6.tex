@@ -1016,7 +1016,8 @@ $\tilde{\theta}_0^{\text{median}}$ is less affected by extreme estimates, hence 
 \textbf{In practice}, one might want to consider the following
 \begin{itemize}
     \item for \textbf{extreme propensity score}, set cutoffs close to 0 and 1 
-    \item for \textbf{nuisance function estimation}, some typical methods are tree-based methods (Random Forest, Regression Tree, Boosting), or $l_1-$penalization method (Lasso), or neural network, 
+    \item for \textbf{nuisance function estimation}, some typical methods are tree-based methods (Random Forest, Regression Tree, Boosting), or $l_1-$penalization method (Lasso), or neural network.
+    One can also use the weighted averages of these methods s.t. the average gives the lowest mean squared out-of-sample prediction errors.
 \end{itemize}
 
 \newpage
