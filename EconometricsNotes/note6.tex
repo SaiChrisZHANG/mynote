@@ -1027,6 +1027,13 @@ $\tilde{\theta}_0^{\text{median}}$ is less affected by extreme estimates, hence 
 \end{itemize}
 \citet{athey2018approximate} showed that it is often possible to achieve approximate balance under reasonable assumptions and that approximate balance suffices for eliminating bias due to regularization, combined with a lasso regression adjustment.
 
+There are 3 key features of this algorithm:
+\begin{itemize}
+    \item[(a)] direct covariance adjustment based on the outcome data with regularization to deal with the \textbf{high dimensionality}
+    \item[(b)] weighting using the relationship between the treatment and the features
+    \item[(c)] the weights are based on direct measures of imbalance rather than on propensity score estimates
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
