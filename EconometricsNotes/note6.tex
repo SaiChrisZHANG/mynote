@@ -1022,7 +1022,8 @@ $\tilde{\theta}_0^{\text{median}}$ is less affected by extreme estimates, hence 
 
 \citet{athey2018approximate} proposed a similar framework, focusing on high dimensional linear models. They showed that in linear models, it is enough to correct for linear biases in two steps:
 \begin{itemize}
-    \item[\textbf{B1}]  
+    \item[\textbf{S1}] Fit a regularized linear model for the outcome given the features separately in the 2 treatment groups 
+    \item[\textbf{S2}] reweight the first-stage residuals by using weights that approximately balance all the features between the treatment and control groups
 \end{itemize}
 
 \newpage
