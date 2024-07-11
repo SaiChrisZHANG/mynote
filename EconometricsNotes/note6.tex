@@ -1027,6 +1027,20 @@ $\tilde{\theta}_0^{\text{median}}$ is less affected by extreme estimates, hence 
 \end{itemize}
 \citet{athey2018approximate} showed that it is often possible to achieve approximate balance under reasonable assumptions and that approximate balance suffices for eliminating bias due to regularization, combined with a lasso regression adjustment.
 
+Consider the conditional ATE for the treated sample
+\begin{equation*}
+    \tau = \frac{1}{n_t} \sum_{i:D_i=1} \mathbb{E}\left[Y_i(0)-Y_i(1)\mid X_i\right]
+\end{equation*}
+In addition to unconfoundedness, they also assume \textbf{linearity}:
+\begin{align*}
+\mu_c(x) &= \mathbb{E}\left[Y_i(0)\mid X=x\right] = x\beta_c & \mu_t(x) = \mathbb{E}\left[Y_i(1)\mid X=x\right] = x\beta_t
+\end{align*}
+for all $x\in \mathbb{R}^p$. This assumption is strong, but generally used in high-dimension cases. Given linearity, we have 
+\begin{align*}
+    \tau &=\mu_t-\mu_c & \mu_t &=\bar{X}_t\beta_t & \mu_c&=\bar{X}_t\beta_c &\bar{X}_t &= \frac{1}{n_t}\sum^n_{i=1}\mathbf{1}\left\{D_i=1\right\}X_i
+\end{align*}
+the main focus of this paper is to estimate $\mu_c$ when $p$ is large.
+
 There are 3 key features of this algorithm:
 \begin{itemize}
     \item[(a)] direct covariance adjustment based on the outcome data with regularization to deal with the \textbf{high dimensionality}
