@@ -1039,7 +1039,13 @@ for all $x\in \mathbb{R}^p$. This assumption is strong, but generally used in hi
 \begin{align*}
     \tau &=\mu_t-\mu_c & \mu_t &=\bar{X}_t\beta_t & \mu_c&=\bar{X}_t\beta_c &\bar{X}_t &= \frac{1}{n_t}\sum^n_{i=1}\mathbf{1}\left\{D_i=1\right\}X_i
 \end{align*}
-the main focus of this paper is to estimate $\mu_c$ when $p$ is large.
+the main focus of this paper is to estimate $\mu_c$ when $p$ is large, combining two approaches:
+\begin{itemize}
+    \item \textbf{weighted} estimation: weighting control to mimic treatment
+    \item \textbf{regression} adjustment: estimate $\beta_c$ using control observations and get $\hat{\mu}_c=\bar{X}_t\hat{\beta}_c$
+\end{itemize}
+
+
 
 There are 3 key features of this algorithm:
 \begin{itemize}
