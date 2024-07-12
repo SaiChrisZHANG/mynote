@@ -1044,7 +1044,10 @@ the main focus of this paper is to estimate $\mu_c$ when $p$ is large, combining
     \item \textbf{weighted} estimation: weighting control to mimic treatment
     \item \textbf{regression} adjustment: estimate $\beta_c$ using control observations and get $\hat{\mu}_c=\bar{X}_t\hat{\beta}_c$
 \end{itemize}
-both of them perform poorly in high-dimension setting alone.
+both of them perform poorly in high-dimension setting alone. \citet{athey2018approximate} propose a meta-algorithm that estimate 
+\begin{equation*}
+    \hat{\mu}_c = \bar{X}_t \hat{\beta}_c + \sum_{i:W_i=0}\gamma_i \left(Y_i^{obs}-X_i\hat{\beta}_c\right)
+\end{equation*}
 
 
 
