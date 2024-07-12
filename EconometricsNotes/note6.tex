@@ -1050,8 +1050,13 @@ both of them perform poorly in high-dimension setting alone. \citet{athey2018app
 \end{equation*}
 where $\bar{X}_t \hat{\beta}_c$ captures the strong signals, and $\gamma_i$ rebalance the residuals and effectively extract left-over signals. It satisfies 
 \begin{equation*}
-    \left\vert \hat{\mu}_c-\mu_c \right\vert \leq \left\Vert \bar{X}_t-X^T_c\gamma \right\Vert _{\infty}\left\Vert \hat{\beta}_c-\beta_c \right\Vert _1 + \left\vert \Sigma_{i:W_i=0}\gamma_i\epsilon_i \right\vert 
+    \left\vert \hat{\mu}_c-\mu_c \right\vert \leq \underbrace{\left\Vert \bar{X}_t-X^T_c\gamma \right\Vert _{\infty}\left\Vert \hat{\beta}_c-\beta_c \right\Vert _1}_{\text{dimensionality bias}} + \underbrace{\left\vert \Sigma_{i:W_i=0}\gamma_i\epsilon_i \right\vert}_{\text{variance}} 
 \end{equation*}
+the dimensionality bias should be expected to scale as 
+\begin{align*}
+    \left\Vert \bar{X}_t-X^T_c\gamma \right\Vert _{\infty} &=O\left(\sqrt{\log (p)/n}\right) & \left\Vert \hat{\beta}_c-\beta_c \right\Vert _1 &=O\left(k\cdot \sqrt{\log (p)/n} \right)
+\end{align*}
+then in a sufficiently sparse setting, i.e., $k$ is sufficiently small
 
 There are 3 key features of this algorithm:
 \begin{itemize}
