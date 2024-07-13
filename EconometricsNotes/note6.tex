@@ -1056,7 +1056,13 @@ the dimensionality bias should be expected to scale as
 \begin{align*}
     \left\Vert \bar{X}_t-X^T_c\gamma \right\Vert _{\infty} &=O\left(\sqrt{\log (p)/n}\right) & \left\Vert \hat{\beta}_c-\beta_c \right\Vert _1 &=O\left(k\cdot \sqrt{\log (p)/n} \right)
 \end{align*}
-then in a sufficiently sparse setting, i.e., $k$ is sufficiently small, the bias could be \textbf{variance dominated}
+then in a sufficiently sparse setting, i.e., $k$ is sufficiently small, the bias could be \textbf{variance dominated}. The estimation procedure is 
+\begin{itemize}
+    \item[S1] compute the \textbf{positive} approximately balancing weights $\gamma$ to make the mean of the reweighted control sample $X^T_c\gamma$ match the treated sample mean $\bar{X}_t$ as closely as possible, 
+    \begin{equation*}
+        \gamma = \arg\min_{\tilde{\gamma}} \left\{ \left(1-\zeta\right)\left\Vert \tilde{\gamma} \right\Vert^2_2 \right\}
+    \end{equation*}
+\end{itemize}
 
 There are 3 key features of this algorithm:
 \begin{itemize}
