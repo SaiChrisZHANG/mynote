@@ -1072,6 +1072,10 @@ then in a sufficiently sparse setting, i.e., $k$ is sufficiently small, the bias
         \hat{\tau} = \bar{Y}_t - \left\{ \bar{X}_t\hat{\beta}_c + \sum_{i:W_i=0} \gamma_i\left(Y^{obs}_i-X_i\hat{\beta}_c\right) \right\}
     \end{equation*}
 \end{itemize}
+an analogous estimator for the ATE $\mathbb{E}\left[Y(1)-Y(0)\right]$ can also be constructed as 
+\begin{equation*}
+    \hat{tau}_{ATE} = \bar{X}\left(\hat{\beta}_t-\hat{\beta}_c\right) + \sum_{i:W_i=1} \gamma_{t,i}\left(Y^{obs}_i-X_i\hat{\beta}_t\right) -\sum_{i:W_i=0} \gamma_{c,i}\left(Y_i^{obs}-X_i\hat{\beta}_c\right)
+\end{equation*}
 
 There are 3 key features of this algorithm:
 \begin{itemize}
