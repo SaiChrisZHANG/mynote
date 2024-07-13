@@ -1060,7 +1060,7 @@ then in a sufficiently sparse setting, i.e., $k$ is sufficiently small, the bias
 \begin{itemize}
     \item[S1] compute the \textbf{positive} approximately balancing weights $\gamma$ to make the mean of the reweighted control sample $X^T_c\gamma$ match the treated sample mean $\bar{X}_t$ as closely as possible, 
     \begin{equation*}
-        \gamma = \arg\min_{\tilde{\gamma}} \left\{ \left(1-\zeta\right)\left\Vert \tilde{\gamma} \right\Vert^2_2 \right\}
+        \gamma = \arg\min_{\tilde{\gamma}} \left\{ \left(1-\zeta\right)\left\Vert \tilde{\gamma} \right\Vert^2_2 + \zeta \left\Vert \bar{X}_t- X^T_c\tilde{\gamma} \right\Vert^2_{\infty}\text{ s.t. }\sum_{i:W_i=0}\tilde{\gamma}_i=1,0\leq \tilde{\gamma}_i\leq n_c^{-2/3} \right\}
     \end{equation*}
 \end{itemize}
 
