@@ -1067,7 +1067,10 @@ then in a sufficiently sparse setting, i.e., $k$ is sufficiently small, the bias
     \begin{equation*}
         \hat{\beta}_c = \arg \min_{\beta} \left[ \sum_{i:W_i=0} \left(Y_i^{obs}-X_i\beta\right)^2 + \lambda\left\{(1-\alpha)\left\Vert \beta \right\Vert^2_2 + \alpha\left\Vert \beta \right\Vert _1 \right\} \right]
     \end{equation*}
-    
+    \item[S3] estimate the ATE as 
+    \begin{equation*}
+        \hat{\tau} = \bar{Y}_t - \left\{ \bar{X}_t\hat{\beta}_c + \sum_{i:W_i=0} \gamma_i\left(Y^{obs}_i-X_i\hat{\beta}_c\right) \right\}
+    \end{equation*}
 \end{itemize}
 
 There are 3 key features of this algorithm:
