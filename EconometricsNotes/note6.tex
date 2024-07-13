@@ -1074,8 +1074,13 @@ then in a sufficiently sparse setting, i.e., $k$ is sufficiently small, the bias
 \end{itemize}
 an analogous estimator for the ATE $\mathbb{E}\left[Y(1)-Y(0)\right]$ can also be constructed as 
 \begin{equation*}
-    \hat{tau}_{ATE} = \bar{X}\left(\hat{\beta}_t-\hat{\beta}_c\right) + \sum_{i:W_i=1} \gamma_{t,i}\left(Y^{obs}_i-X_i\hat{\beta}_t\right) -\sum_{i:W_i=0} \gamma_{c,i}\left(Y_i^{obs}-X_i\hat{\beta}_c\right)
+    \hat{\tau}_{ATE} = \bar{X}\left(\hat{\beta}_t-\hat{\beta}_c\right) + \sum_{i:W_i=1} \gamma_{t,i}\left(Y^{obs}_i-X_i\hat{\beta}_t\right) -\sum_{i:W_i=0} \gamma_{c,i}\left(Y_i^{obs}-X_i\hat{\beta}_c\right)
 \end{equation*}
+where 
+\begin{equation*}
+    \gamma_t = \arg\min_{\tilde{\gamma}} \left\{ \left(1-\zeta\right)\left\Vert \tilde{\gamma} \right\Vert^2_2 + \zeta \left\Vert \bar{X}- X^T_t\tilde{\gamma} \right\Vert^2_{\infty}\text{ s.t. }\sum_{i:W_i=0}\tilde{\gamma}_i=1,0\leq \tilde{\gamma}_i\leq n_c^{-2/3} \right\}
+\end{equation*}
+and $\gamma_c$ is constructed similarly.
 
 There are 3 key features of this algorithm:
 \begin{itemize}
