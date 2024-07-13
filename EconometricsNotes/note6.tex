@@ -1062,6 +1062,12 @@ then in a sufficiently sparse setting, i.e., $k$ is sufficiently small, the bias
     \begin{equation*}
         \gamma = \arg\min_{\tilde{\gamma}} \left\{ \left(1-\zeta\right)\left\Vert \tilde{\gamma} \right\Vert^2_2 + \zeta \left\Vert \bar{X}_t- X^T_c\tilde{\gamma} \right\Vert^2_{\infty}\text{ s.t. }\sum_{i:W_i=0}\tilde{\gamma}_i=1,0\leq \tilde{\gamma}_i\leq n_c^{-2/3} \right\}
     \end{equation*}
+    $\gamma$ is constrained to be positive to prevent aggresive extrapolating.
+    \item[S2] fit $\beta_c$ in the linear model by using a lasso or an elastic net to achieve sufficiently good risk bounds under $L_1-$risk
+    \begin{equation*}
+        \hat{\beta}_c = \arg \min_{\beta} \left[ \sum_{i:W_i=0} \left(Y_i^{obs}-X_i\beta\right)^2 + \lambda\left\{(1-\alpha)\left\Vert \beta \right\Vert^2_2 + \alpha\left\Vert \beta \right\Vert _1 \right\} \right]
+    \end{equation*}
+    
 \end{itemize}
 
 There are 3 key features of this algorithm:
