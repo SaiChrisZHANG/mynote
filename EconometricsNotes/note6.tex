@@ -1096,6 +1096,13 @@ In comparison with doubly robust estimators,
     \item this method is not estimating propensity score, but just balancing, hence substantially easier
 \end{itemize}
 
+\paragraph{Unconfoundedness versus DiD/TWFE}
+The unconfoundedness assumption and TWFE model validate different non-nested comparisons:
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{TWFE}} model assumes: the treated differs from the control in unobserved characteristics that are potentially \textbf{correlated} with a persistent component of the outcomes (the fixed effects $\alpha_i$)
+    \item \myhl[myblue]{\textbf{Unconfoundedness}} assumes: the selection is based \textbf{solely on past} rather than future outcomes
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
