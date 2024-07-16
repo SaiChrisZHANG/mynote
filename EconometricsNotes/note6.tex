@@ -1114,7 +1114,12 @@ when the control group changes over time, and the control group and treatment gr
     \begin{align*}
         Y_{it} =& a_i+\beta D_{it}+\epsilon_{it} & Y_{it-1} &=a_i + \epsilon_{it-1}
     \end{align*}
-    where $\epsilon_{it}$ is serially uncorrelated, and uncorrelated with $a_i$ and $D_{it}$. If one controls for $Y_{it-1}$ but ignore fixed effects, that is, estimate $Y_{it}$ on the residual from a regression of $D_{it}$ on $Y_{it-1}$, 
+    where $\epsilon_{it}$ is serially uncorrelated, and uncorrelated with $a_i$ and $D_{it}$. If one controls for $Y_{it-1}$ but ignore fixed effects, that is, estimate $Y_{it}$ on the residual from a regression of $D_{it}$ on $Y_{it-1}$, the resulting estimator is $\frac{\mathrm{Cov}\left(Y_{it},D_{it}-\gamma Y_{it-1}\right)}{\mathrm{Var}\left(D_{it}-\gamma Y_{it-1}\right)}$.
+    Substituting $a_i\equiv Y_{it-1}-\epsilon_{it-1}$, get the real $$ Y_{it} = Y_{it-1} + \beta D_{it}+\epsilon_{it}-\epsilon_{it-1} $$
+    then the estimator controlling unconfoundedness only is 
+    \begin{align*}
+        \frac{\mathrm{Cov}\left(Y_{it},D_{it}-\gamma Y_{it-1}\right)}{\mathrm{Var}\left(D_{it}-\gamma Y_{it-1}\right)} = 
+    \end{align*}
 \end{itemize}
 
 
