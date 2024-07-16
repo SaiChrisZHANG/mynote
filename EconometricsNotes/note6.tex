@@ -1103,14 +1103,19 @@ The unconfoundedness assumption and TWFE model validate different non-nested com
     \item \myhl[myblue]{\textbf{Unconfoundedness}} assumes: the selection is based \textbf{solely on past} rather than future outcomes
 \end{itemize}
 The literature in general does not provide a lot of guidance on the choice between the two strategies\footnote{\citet{xu2023causal} touches on this topic by comparing \textbf{strict exogeneity} (TWFE) and \textbf{sequential ignorability} (unconfoundedness).}.
-
 In two cases, unconfoundedness and TWFE lead to similar results:
 \begin{itemize}
     \item the averages of previous period outcomes are similar for the control and the treatment group 
     \item the avearge in the control group does not change much over time
 \end{itemize}
-when the control group changes over time, and the control group and treatment group differ in the initial period, then TWFE and unconfoundedness give different results.
-
+when the control group changes over time, and the control group and treatment group differ in the initial period, then TWFE and unconfoundedness give different results. The differences can be bounded under additional assumptions. Consider the case of 2 periods, where everyone in the first period with treatment equal to $0$, and a positive true treatment effect $\beta$. 
+\begin{itemize}
+    \item If treatment is correlated with an unobserved individual fixed effects $a_i$, and outcomes are 
+    \begin{align*}
+        Y_{it} =& a_i+\beta D_{it}+\epsilon_{it} & Y_{it-1} &=a_i + \epsilon_{it-1}
+    \end{align*}
+    where $\epsilon_{it}$ is serially uncorrelated, and uncorrelated with $a_i$ and $D_{it}$. If one controls for $Y_{it-1}$ but ignore fixed effects, that is, estimate $Y_{it}$ on the residual from a regression of $D_{it}$ on $Y_{it-1}$, 
+\end{itemize}
 
 
 \newpage
