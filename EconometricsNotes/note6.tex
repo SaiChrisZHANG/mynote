@@ -1118,8 +1118,15 @@ when the control group changes over time, and the control group and treatment gr
     Substituting $a_i\equiv Y_{it-1}-\epsilon_{it-1}$, get the real $$ Y_{it} = Y_{it-1} + \beta D_{it}+\epsilon_{it}-\epsilon_{it-1} $$
     then the estimator controlling unconfoundedness only is 
     \begin{align*}
-        \frac{\mathrm{Cov}\left(Y_{it},D_{it}-\gamma Y_{it-1}\right)}{\mathrm{Var}\left(D_{it}-\gamma Y_{it-1}\right)} = 
+        \frac{\mathrm{Cov}\left(Y_{it},D_{it}-\gamma Y_{it-1}\right)}{\mathrm{Var}\left(D_{it}-\gamma Y_{it-1}\right)} = \beta - \frac{\mathrm{Cov}\left( \epsilon_{it-1},D_{it}-\gamma Y_{it-1} \right)}{\mathrm{Var}\left(D_{it}-\gamma Y_{it-1}\right)} = \beta + \gamma\cdot \frac{\sigma^2_{\epsilon}}{\mathrm{Var}\left(D_{it}-\gamma Y_{it-1}\right)}
     \end{align*}
+    if $ Y_{it-1} $ is larger in the control group, meaning that $\gamma<0$, just assumming unconfoundedness and adjusting for the lagged outcome will overestimate the true effects.
+    \item If the correct specification is instead $$ Y_{it}=\alpha + \theta Y_{it-1}+\beta D_{it}+\epsilon_{it} $$
+    where $\epsilon_{it}$ is serially uncorrelated. Just run a TWFE (in this case, first-difference) model, get an estimator $ \frac{\mathrm{Cov}\left(Y_{it}-Y_{it-1},D_{it}\right)}{\mathrm{Var}\left(D_{it}\right)} $, plug in $Y_{it}-Y_{it-1}=\alpha + \left(\theta-1\right)Y_{it-1}+\beta D_{it}+\epsilon_{it}$, get 
+    \begin{align*}
+        \frac{\mathrm{Cov}\left(Y_{it}-Y_{it-1},D_{it}\right)}{\mathrm{Var}\left(D_{it}\right)} = \beta + \left(\theta-1\right)\cdot \frac{\mathrm{Cov}\left(Y_{it-1},D_{it}\right)}{\mathrm{Var}\left(D_{it}\right)}
+    \end{align*}
+    in general $\theta\in \left(0,1\right)$ for stationary, if $Y_{it-1}$ is larger in control group, TWFE will overestimate the true effects.
 \end{itemize}
 
 
