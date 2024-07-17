@@ -1129,6 +1129,12 @@ when the control group changes over time, and the control group and treatment gr
     in general $\theta\in \left(0,1\right)$ for stationary, if $Y_{it-1}$ is larger in control group, TWFE will overestimate the true effects.
 \end{itemize}
 
+In the more general setting, to estimate $\mu_0 = \mathbb{E}\left[Y_{i,t+1}(0)\mid G_i=1\right]$, 
+we are comparing 
+\begin{align*}
+    \tilde{\mu}_{0,TWFE} &= \mathbb{E}\left(Y_{it}\mid G_i=1\right) + \mathbb{E}\left(Y_{i,t+1}\mid G_i=0\right) - \mathbb{E}\left(Y_it\mid G_i=0\right)
+\end{align*}
+
 
 \newpage
 \bibliographystyle{plainnat}
