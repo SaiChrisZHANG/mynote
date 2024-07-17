@@ -1132,9 +1132,10 @@ when the control group changes over time, and the control group and treatment gr
 In the more general setting, to estimate $\mu_0 = \mathbb{E}\left[Y_{i,t+1}(0)\mid G_i=1\right]$, 
 we are comparing 
 \begin{align*}
-    \tilde{\mu}_{0,TWFE} &= \mathbb{E}\left(Y_{it}\mid G_i=1\right) + \mathbb{E}\left(Y_{i,t+1}\mid G_i=0\right) - \mathbb{E}\left(Y_it\mid G_i=0\right)
+    \tilde{\mu}_{0,TWFE} &= \mathbb{E}\left(Y_{it}\mid G_i=1\right) + \mathbb{E}\left(Y_{i,t+1}\mid G_i=0\right) - \mathbb{E}\left(Y_it\mid G_i=0\right) & \text{TWFE}\\
+    \tilde{\mu}_{0,uncf} &= \mathbb{E}\left[\mathbb{E}\left(Y_{t+1}\mid G=0,Y_t\right)\mid G=1\right] = \int \mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)F_{Y_t}\left(\mathrm{d}y\mid G=1\right) & \text{unconfoundedness}
 \end{align*}
-
+the difference between the two is then 
 
 \newpage
 \bibliographystyle{plainnat}
