@@ -1148,8 +1148,10 @@ where $\Delta (y)=\mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)-y = \mathbb{E}\le
 Assuming stationarity, $$ \frac{\partial \mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)}{\partial y}<1,\forall y $$we have
 \begin{itemize}
     \item if $Y_t \bot G $, or equivalently, $F_{Y_t}\left(y\mid G=1\right) = F_{Y_t}\left(y\mid G=0\right)$
-    \item if $F_{Y_t}(y\mid G=1)\geq F_{Y_t}(y\mid G=0), \forall y$, $\tilde{\mu}_{0,TWFE}\leq \tilde{\mu}_{0,uncf}$, thus 
+    \item if $F_{Y_t}(y\mid G=1)\geq F_{Y_t}(y\mid G=0), \forall y$, $\tilde{\mu}_{0,TWFE}\leq \tilde{\mu}_{0,uncf}$, thus $\tilde{\tau}_{TWFE}\geq \tilde{\tau}_{uncf}$
+    \item if $F_{Y_t}(y\mid G=1)\leq F_{Y_t}(y\mid G=0), \forall y$, $\tilde{\mu}_{0,TWFE}\geq \tilde{\mu}_{0,uncf}$, thus $\tilde{\tau}_{TWFE}\leq \tilde{\tau}_{uncf}$
 \end{itemize}
+and both estimation could be biased for the true ${\tau}_{ATT}$. 
 
 \newpage
 \bibliographystyle{plainnat}
