@@ -1140,14 +1140,15 @@ the difference between the two is then
     \tilde{\mu}_{0,uncf}-\tilde{\mu}_{0,TWFE} = \int \Delta (y) F_{Y_t}\left(\mathrm{d}y\mid =1\right) - \int \Delta(y)F_{Y_t}\left(\mathrm{d}y\mid G=0\right)
 \end{equation*}
 where $\Delta (y)=\mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)-y = \mathbb{E}\left(Y_{t+1}-Y_t\mid G=0,Y_t=y\right)$ equals the expectation of change in the outcome conditioning on the lagged outcome in the \textbf{control} group.
-Assuming stationarity, $$ \frac{\partial \mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)}{\partial y}<1,\forall y $$
-then \citet{ding2019bracketing} establishes that the relative magnitude of $\tilde{\mu}_{0,uncf}$ and $\tilde{\mu}_{0,TWFE}$ depends 
+\citet{ding2019bracketing} establishes that the relative magnitude of $\tilde{\mu}_{0,uncf}$ and $\tilde{\mu}_{0,TWFE}$ depends 
 \begin{itemize}
     \item[(a)] $\mathbb{E}\left(Y_{t+1}-Y_t\right)$ conditional on $Y_t$ in the \textbf{control} group: the dependence of the outcome on the lagged outcome
     \item[(b)] difference between the distribution of $Y_t$ in the \textbf{treated} versus \textbf{control} group: the dependence of the treatment assignment on the lagged outcome
 \end{itemize}
+Assuming stationarity, $$ \frac{\partial \mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)}{\partial y}<1,\forall y $$, we have
 \begin{itemize}
     \item if $Y_t \bot G $, or equivalently, $F_{Y_t}\left(y\mid G=1\right) = F_{Y_t}\left(y\mid G=0\right)$
+    \item 
 \end{itemize}
 
 \newpage
