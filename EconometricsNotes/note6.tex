@@ -1135,7 +1135,11 @@ we are comparing
     \tilde{\mu}_{0,TWFE} &= \mathbb{E}\left(Y_{it}\mid G_i=1\right) + \mathbb{E}\left(Y_{i,t+1}\mid G_i=0\right) - \mathbb{E}\left(Y_it\mid G_i=0\right) & \text{TWFE}\\
     \tilde{\mu}_{0,uncf} &= \mathbb{E}\left[\mathbb{E}\left(Y_{t+1}\mid G=0,Y_t\right)\mid G=1\right] = \int \mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)F_{Y_t}\left(\mathrm{d}y\mid G=1\right) & \text{unconfoundedness}
 \end{align*}
-the difference between the two is then 
+the difference between the two is then
+\begin{equation*}
+    \tilde{\mu}_{0,uncf}-\tilde{\mu}_{0,TWFE} = \int \Delta (y) F_{Y_t}\left(\mathrm{d}y\mid =1\right) - \int \Delta(y)F_{Y_t}\left(\mathrm{d}y\mid G=0\right)
+\end{equation*}
+where $\Delta (y)=\mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)-y = \mathbb{E}\left(Y_{t+1}-Y_t\mid G=0,Y_t=y\right)$ equals the expectation of change in the outcome conditioning on the lagged outcome in the \textbf{control} group.
 
 \newpage
 \bibliographystyle{plainnat}
