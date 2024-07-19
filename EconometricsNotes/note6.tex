@@ -1153,7 +1153,14 @@ Assuming stationarity, $$ \frac{\partial \mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\r
 \end{itemize}
 and both estimation could be biased for the true ${\tau}_{ATT}$\footnote{Stationary can be tested by estimating the derivative of the conditional mean function $\mathbb{E}\left(Y_{t+1}\mid G=0,Y_t=y\right)$; $F_{Y_t}\left(y\mid G=1\right)$ and $F_{Y_t}\left(y\mid G=0\right)$ can be visually compared via the empirical CDF of the outcomes in the treatment and control groups.}.
 
-
+For the semiparametric inverse probability weighting estimator proposed by \citet{abadie2005semiparametric},
+\begin{equation*}
+    \tilde{\mu}'_{0,TWFE} = \mathbb{E} \left[GY_t + \frac{e(1-G)\left(Y_{t+1}-Y_t\right)}{1-e}\right]/\Pr\left(G=1\right)
+\end{equation*}
+and the semiparametric estimator under unconfoundedness
+\begin{equation*}
+    \tilde{\mu}'_{0,uncf} = \mathbb{E} \left[\frac{e(Y_t)}{1-e(Y_t)}\right]
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
