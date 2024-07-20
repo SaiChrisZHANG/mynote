@@ -1166,7 +1166,8 @@ the comparison results still hold.
 \citet{imai2023matching} propose a TWFE/DID mixed method by conditioning on lagged outcomes other than the most recent one, which is differenced out by TWFE. For each treated observation, 
 \begin{itemize}
     \item[1] find a set of control observations that have the idential treatment history up to the prespecified number of periods
-    \item[2] refine the \textit{matched set} by adjusting for observed confounding via standard matching 
+    \item[2] refine the \textit{matched set} by adjusting for observed confounding via standard matching and weighting techniques s.t. the treated and matched control observations have similar covariate values 
+    \item[3] apply a DiD estimator to account for an underlying time trend
 \end{itemize}
 
 \newpage
