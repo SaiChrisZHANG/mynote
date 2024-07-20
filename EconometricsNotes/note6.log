@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  20 JUL 2024 09:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  20 JUL 2024 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1268,14 +1268,14 @@ LaTeX Font Info:    Font shape `T1/zpltlf/b/it' will be
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27] [28] [29] [30] [31] [32] (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.bbl) [33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1177.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1177.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1178.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1178.
  (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1177.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1178.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1178.
 Package rerunfilecheck Info: File `note6.out' has not changed.
 (rerunfilecheck)             Checksum: 7965C54BF0591D1E3C97884C5FC2A33E;1685.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1177.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1178.
  ) 
 Here is how much of TeX's memory you used:
  36749 strings out of 492649
