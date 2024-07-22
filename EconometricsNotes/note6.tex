@@ -1180,7 +1180,12 @@ assuming no spillover effect, the ATT is defined as
     \delta\left(F,L\right) = \mathbb{E}&\left[ Y_{i,t+F}\left(D_{it}=1,D_{i,t-1}=0,\left\{D_{i,t-l}\right\}^L_{l=2}\right) \right.\\
     &\left. - Y_{i,t+F}\left(D_{it}=0,D_{i,t-1}=0,\left\{D_{i,t-l}\right\}^L_{l=2}\right) \mid D_{it}=1,D_{i,t-1}=0 \right]
 \end{align*}
-here, the treatment status can go back to the control condition before the outcome is measures, that is $D_{i,t+l}$ for some $l\in\left[1,F\right]$
+here, the treatment status can go back to the control condition before the outcome is measures, that is $D_{i,t+l}$ for some $l\in\left[1,F\right]$.
+Researchers choose the value of $L$ and $F$ based on:
+\begin{itemize}
+    \item $L$: large $L$ improves the credibility of the carryover effect assumption, but reduce the number of matches
+    \item $F$: larger $F$ reveals long-term casual effects, but hard to interpret if many units switch the treatment status during the $F$ leading periods
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
