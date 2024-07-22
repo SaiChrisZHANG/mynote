@@ -1192,7 +1192,12 @@ unconfoundedness in this setting is defined as
     & \left\vert D_{i,t-1}=0,\left\{D_{i,t-l}\right\}^L_{l=2},\left\{Y_{i,t-l}\right\}^L_{l=1},\left\{\mathbf{X}_{i,t-l}\right\}^L_{l=0} \right.
 \end{align*}
 where $\mathbf{X}_{it}$ is a vector of observed time-varying confounders for unit $i$ at period $t$. But if there exist \textbf{unobserved} confounders, or further histories before $t-L$ confound the casual relationship between $X_{it}$ and $Y_{i,t+F}$, this assumption will be violated.
-
+Therefore, \citet{imai2023matching} propose to adopt the TWFE (DiD) design, and assumme \textbf{parallel trend} assumption after conditioning on the treatment, outcome, covariate histories:
+\begin{align*}
+    &\mathbb{E}\left[ Y_{i,t+F} \left(D_{it}=0,D_{i,t-1}=0,\left\{D_{i,t-l}\right\}^L_{l=2}\right) - Y_{i,t-1} \mid D_{it}=1, D_{i,t-1}=0,\left\{D_{i,t-l},Y_{i,t-l}\right\}^L_{l=2},\left\{\mathbf{X}_{i,t-l}\right\}^L_{l=0} \right]\\
+    =&\mathbb{E}\left[ Y_{i,t+F} \left(D_{it}=0,D_{i,t-1}=0,\left\{D_{i,t-l}\right\}^L_{l=2}\right) - Y_{i,t-1} \mid D_{it}=0, D_{i,t-1}=0,\left\{D_{i,t-l},Y_{i,t-l}\right\}^L_{l=2},\left\{\mathbf{X}_{i,t-l}\right\}^L_{l=0} \right]
+\end{align*}
+the conditioning set includes the \textbf{treatment history}, \textbf{covariate history}, and \textbf{lagged outcomes}, except the \textbf{immediate lag} $Y_{i,t-1}$.
 
 \newpage
 \bibliographystyle{plainnat}
