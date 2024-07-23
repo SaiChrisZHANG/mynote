@@ -1200,6 +1200,11 @@ Therefore, \citet{imai2023matching} propose to adopt the TWFE (DiD) design, and 
 the conditioning set includes the \textbf{treatment history}, \textbf{covariate history}, and \textbf{lagged outcomes}, except the \textbf{immediate lag} $Y_{i,t-1}$.
 The parallel trend assumption cannot account for unobserved timing-varying confounders, so one must examine the pretrends of the treated and matched control units.
 
+\citet{imai2023matching} construct the matched control sets as:
+\begin{equation*}
+    \mathcal{M}_{it} = \left\{ i': i'\neq i,D_{i't}=0,D_{i't'}=D_{it'},\forall t'=t-1,\cdots,t-L \right\}
+\end{equation*}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
