@@ -1212,6 +1212,7 @@ There are several methods to adjust for other confounders for the parallel pre-t
     \begin{equation*}
         S_{it}\left(i'\right) = \frac{1}{L} \sum^L_{l=1}\sqrt{ \left( \mathbf{V}_{i,t-l}-\mathbf{V}_{i',t-l}\right)'\boldsymbol{\Sigma}^{-1}_{i,t-l} \left( \mathbf{V}_{i,t-l}-\mathbf{V}_{i',t-l} \right) }
     \end{equation*}
+    for a matched control unit $i'\in \mathcal{M}_{it}$ where $\mathbf{V}_{it'}$ represents the time-varying covariates one wishes to adjust for and $\boldsymbol{\Sigma}_{it'}$ is the sample covariance matrix of $\mathbf{V}_{it'}$.
 \end{itemize}
 
 \newpage
