@@ -1216,8 +1216,13 @@ There are several methods to adjust for other confounders for the parallel pre-t
 
     One can also use the estimated propensity scores to compute the distance measure. One can 
     \begin{itemize}
-        \item[S1] create a subset of the data consisting all treated observations 
+        \item[S1] create a subset of the data consisting all treated observations and their matched observations from the same period
+        \item[S2] fit a treatment assignment model and estimate the propensity scores $$\hat{e}_{it}\left(\left\{\left(D_{i,t-l},\mathbf{V}_{i,t-l}'\right)'_{i,t-l}\right\}^L_{l=1}\right)$$ 
     \end{itemize}
+    then adjust for the lagged covariates by matching on the estimated propensity score,
+    \begin{equation*}
+        S_{it}\left(i'\right) = \left\vert \mathrm{logit} \left\{ \hat{e}_{it}\left(\left\{\left(D_{i,t-l},\mathbf{V}_{i,t-l}'\right)'_{i,t-l}\right\}^L_{l=1}\right) \right\} -\mathrm{logit} \left\{ \hat{e}_{it}\left(\left\{\left(D_{i',t-l},\mathbf{V}_{i',t-l}'\right)'_{i',t-l}\right\}^L_{l=1}\right) \right\} \right\vert 
+    \end{equation*}
 \end{itemize}
 
 \newpage
