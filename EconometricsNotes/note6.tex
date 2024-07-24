@@ -1206,6 +1206,14 @@ The parallel trend assumption cannot account for unobserved timing-varying confo
 \end{equation*}
 for the treated observations with $D_{i,t}=1$ and $D_{i,t-1}=0$. Unlike staggered adoption, units are allowed to switch treatment status multiple times over time.
 
+There are several methods to adjust for other confounders for the parallel pre-trend assumption,
+\begin{itemize}
+    \item \textbf{matching}: suppose $\left\vert \mathcal{M}_{it} \right\vert \leq J$, that is, each treated observation is matched with at most $J$ control units from the mathced set with replacement. Then one can compute
+    \begin{equation*}
+        S_{it}\left(i'\right) = \frac{1}{L} \sum^L_{l=1}
+    \end{equation*}
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
