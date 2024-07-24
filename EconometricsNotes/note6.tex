@@ -1223,6 +1223,11 @@ There are several methods to adjust for other confounders for the parallel pre-t
     \begin{equation*}
         S_{it}\left(i'\right) = \left\vert \mathrm{logit} \left\{ \hat{e}_{it}\left(\left\{\left(D_{i,t-l},\mathbf{V}_{i,t-l}'\right)'_{i,t-l}\right\}^L_{l=1}\right) \right\} -\mathrm{logit} \left\{ \hat{e}_{it}\left(\left\{\left(D_{i',t-l},\mathbf{V}_{i',t-l}'\right)'_{i',t-l}\right\}^L_{l=1}\right) \right\} \right\vert 
     \end{equation*}
+    After computing the distance measure $S_{it}(i')$ for all control units, we can refine $\mathcal{M}_{it}$ by selecting the $J$ most similar control units:
+    \begin{equation*}
+        \mathcal{M}^*_{it} = \left\{ i':i'\in\mathcal{M}_{it},S_{it}(i')<C,S_{it}(i')\leq S^{(J)}_{it} \right\}
+    \end{equation*}
+    where $S^{J}_{it}$ is the $J$th-order statistic of $S_{it}(i')$ among control units in the original $\mathcal{M}_{it}$.
 \end{itemize}
 
 \newpage
