@@ -1228,6 +1228,7 @@ There are several methods to adjust for other confounders for the parallel pre-t
         \mathcal{M}^*_{it} = \left\{ i':i'\in\mathcal{M}_{it},S_{it}(i')<C,S_{it}(i')\leq S^{(J)}_{it} \right\}
     \end{equation*}
     where $S^{J}_{it}$ is the $J$th-order statistic of $S_{it}(i')$ among control units in the original $\mathcal{M}_{it}$.
+    \item \textbf{weighting}: construct a weight for each control unit $i'$ within a matched set of a given treated observation $(i,t)$ where a greater weight is assigned to a more similar unit.
 \end{itemize}
 
 \newpage
