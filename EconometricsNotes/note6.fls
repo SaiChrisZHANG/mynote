@@ -643,6 +643,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexas.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsya.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb

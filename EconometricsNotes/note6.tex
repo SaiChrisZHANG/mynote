@@ -1229,6 +1229,11 @@ There are several methods to adjust for other confounders for the parallel pre-t
     \end{equation*}
     where $S^{J}_{it}$ is the $J$th-order statistic of $S_{it}(i')$ among control units in the original $\mathcal{M}_{it}$.
     \item \textbf{weighting}: construct a weight for each control unit $i'$ within a matched set of a given treated observation $(i,t)$ where a greater weight is assigned to a more similar unit.
+    One can use the inverse propensity score weighting method of \citet{hirano2003efficient}, where 
+    \begin{align*}
+        w^{i'}_{it} &\varpropto \frac{ \hat{e}_{it}\left(\left\{\left(D_{i,t-l},\mathbf{V}_{i,t-l}'\right)'_{i,t-l}\right\}^L_{l=1}\right) }{ 1- \hat{e}_{it}\left(\left\{\left(D_{i,t-l},\mathbf{V}_{i,t-l}'\right)'_{i,t-l}\right\}^L_{l=1}\right) } & \text{s.t. } \sum_{i'\in\mathcal{M}_{it}} w^{i'}_{it} &=1 
+    \end{align*}
+    
 \end{itemize}
 
 \newpage
