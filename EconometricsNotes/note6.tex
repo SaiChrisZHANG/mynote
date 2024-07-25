@@ -1236,6 +1236,11 @@ There are several methods to adjust for other confounders for the parallel pre-t
     this model should be fitted to the \textbf{entire} sample of treated and control observations.
 \end{itemize}
 
+After constructing the refined matched sets, then we can compute the DiD estimate as 
+\begin{align*}
+    \hat{\delta}\left(F,L\right) &= \frac{1}{\sum^N_{i=1}\sum^{T-F}_{t=L+1}D_{it}}\sum^N_{i=1}\sum^{T-F}_{t=L+1}D_{it} \left\{ \left(Y_{i,t+F}-Y_{i,t-1} \right) - \sum_{i'\in\mathcal{M}_{it}}w^{i'}_{it}\left(Y_{i',t+F}-Y_{i',t-1}\right) \right\}
+\end{align*}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
