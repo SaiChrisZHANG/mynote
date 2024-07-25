@@ -1241,6 +1241,7 @@ After constructing the refined matched sets, then we can compute the DiD estimat
     \hat{\delta}\left(F,L\right) &= \frac{1}{\sum^N_{i=1}\sum^{T-F}_{t=L+1}D_{it}}\sum^N_{i=1}\sum^{T-F}_{t=L+1}D_{it} \left\{ \left(Y_{i,t+F}-Y_{i,t-1} \right) - \sum_{i'\in\mathcal{M}_{it}}w^{i'}_{it}\left(Y_{i',t+F}-Y_{i',t-1}\right) \right\}
 \end{align*}
 where the counterfactual outcome is $$ Y_{i,t+F}\left(X_{it}=0,X_{i,t-1}=0,X_{i,t-2},\cdots,X_{i,t-L}\right) $$
+and $D_{it}=X_{it}\left(1-X_{i,t-1}\right)\cdot \mathbf{1}\left\{\left\vert \mathcal{M}_{it} \right\vert>0\right\}$, $w^{i'}_{it}$ is nonnegative normalized weight.
 
 \newpage
 \bibliographystyle{plainnat}
