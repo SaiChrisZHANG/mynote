@@ -1247,8 +1247,9 @@ If $F>0$, that is, we are interested in carryover effects, the matched control u
 
 One must check the balance of \textbf{the lagged outcome variables} and \textbf{time-varying covariates} over multiple pretreatment periods. For each treated observation $(i,t)$ with $D_{it}=1$, define the balance for variable $j$ at the period $t-l$ as 
 \begin{equation*}
-    B_{it}\left(j,l\right) = \frac{ C_{i,t-l} -\sum_{i'\in\mathcal{M}_{it}} w^{i'}_{it}C_{i',t-l,j} }{ \sqrt{ \frac{1}{N_1-1} \sum^N_{i'=1}\sum^{T-F}_{t'=L+1}D_{i't'}\left(V_{i',t'-l,j} - \bar{V}_{t'-l,j} \right)^2 } }
+    B_{it}\left(j,l\right) = \frac{ V_{i,t-l} -\sum_{i'\in\mathcal{M}_{it}} w^{i'}_{it}V_{i',t-l,j} }{ \sqrt{ \frac{1}{N_1-1} \sum^N_{i'=1}\sum^{T-F}_{t'=L+1}D_{i't'}\left(V_{i',t'-l,j} - \bar{V}_{t'-l,j} \right)^2 } }
 \end{equation*}
+where $N_\equiv \frac{1}{N_1-1} \sum^N_{i'=1}\sum^{T-F}_{t'=L+1}D_{i't'}$ is the total number of treated observations, and $\bar{V}_{t-l,j}=\sum^N_{i,t-l,j}/N$.
 
 \newpage
 \bibliographystyle{plainnat}
