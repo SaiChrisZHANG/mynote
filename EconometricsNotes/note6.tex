@@ -1243,7 +1243,7 @@ After constructing the refined matched sets, then we can compute the DiD estimat
 where the counterfactual outcome is $$ Y_{i,t+F}\left(X_{it}=0,X_{i,t-1}=0,X_{i,t-2},\cdots,X_{i,t-L}\right) $$
 and $D_{it}=X_{it}\left(1-X_{i,t-1}\right)\cdot \mathbf{1}\left\{\left\vert \mathcal{M}_{it} \right\vert>0\right\}$, $D_{it}=1$ only if observation $(i,t)$ changes the treatment status from the control condition at $t-1$ to treatment at $t$, with at least 1 matched control unit, $w^{i'}_{it}$ is nonnegative normalized weight.
 
-If $F>0$, that is, we are interested in carryover effects, the matched control units may include those units that receive the treatment after $t$ but before the outcome is measured at $t+F$
+If $F>0$, that is, we are interested in carryover effects, the matched control units may include those units that receive the treatment after $t$ but before the outcome is measured at $t+F$, some treated units may return to control before $t+F$
 
 \newpage
 \bibliographystyle{plainnat}
