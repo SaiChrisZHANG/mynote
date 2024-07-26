@@ -1249,7 +1249,11 @@ One must check the balance of \textbf{the lagged outcome variables} and \textbf{
 \begin{equation*}
     B_{it}\left(j,l\right) = \frac{ V_{i,t-l} -\sum_{i'\in\mathcal{M}_{it}} w^{i'}_{it}V_{i',t-l,j} }{ \sqrt{ \frac{1}{N_1-1} \sum^N_{i'=1}\sum^{T-F}_{t'=L+1}D_{i't'}\left(V_{i',t'-l,j} - \bar{V}_{t'-l,j} \right)^2 } }
 \end{equation*}
-where $N_\equiv \frac{1}{N_1-1} \sum^N_{i'=1}\sum^{T-F}_{t'=L+1}D_{i't'}$ is the total number of treated observations, and $\bar{V}_{t-l,j}=\sum^N_{i,t-l,j}/N$.
+where $N_\equiv \frac{1}{N_1-1} \sum^N_{i'=1}\sum^{T-F}_{t'=L+1}D_{i't'}$ is the total number of treated observations, and $\bar{V}_{t-l,j}=\sum^N_{i,t-l,j}/N$. Then aggregate it across all treated observations for each covariate and pretreatment time period, get 
+\begin{equation*}
+    \bar{B} \left(j,l\right) = \frac{1}{N_1} \sum^N_{i=1} \sum^{T-F}_{t=L+1} D_{it} B_{it} (j,l)
+\end{equation*}
+
 
 \newpage
 \bibliographystyle{plainnat}
