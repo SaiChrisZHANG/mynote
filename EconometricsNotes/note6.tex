@@ -1260,6 +1260,13 @@ Assuming at least one treat and control unit, $0<\sum^N_{i=1}\sum^T_{t=1}X_{it}<
     \begin{align*}
         \hat{\beta}_{TWFE} = & \arg\min_{\beta} \sum^N_{i=1}\sum^T_{t=1}W_{it}\left\{ \left(Y_{it}-\bar{Y}^*_i-\bar{Y}^*_t+\bar{Y}^* - \beta \left( X_{it}-\bar{X}^*_i-\bar{X}^*_t+\bar{X}^* \right) \right) \right\}
     \end{align*}
+    where $\bar{\square}^*$ is the weighted average of $\square$ by $W$, where the weight is 
+    \begin{align*}
+        W_{it}&= \sum^N_{i'=1}\sum^T_{t'=1} D_{i't'}\cdot \nu^{i't'}_{it}, & \nu^{i't'}_{it}&= \begin{cases}
+            1, & (i,t)=(i',t'+F)\\
+            1, & (i,t)=(i',t'-1)
+        \end{cases}
+    \end{align*}
 \end{theorem}
 
 \newpage
