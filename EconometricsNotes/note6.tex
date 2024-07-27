@@ -1256,7 +1256,10 @@ where $N_\equiv \frac{1}{N_1-1} \sum^N_{i'=1}\sum^{T-F}_{t'=L+1}D_{i't'}$ is the
 
 Assuming at least one treat and control unit, $0<\sum^N_{i=1}\sum^T_{t=1}X_{it}<NT$, and at least one unit with $D_{it}=1$, $0<\sum^N_{i=1}\sum^T_{t=1}D_{it}$, \citet{imai2023matching}'s DiD estimate $\hat{\delta}\left(F,L\right)$ is equivalent to a \textbf{weighted} TWFE estimate:
 \begin{theorem}{\citet{imai2023matching}'s DiD estimate and weighted TWFE equivalance}{imai_2wfeequiv}
-    $\hat{\delta}(F,L)$
+    $\hat{\delta}(F,L)$ is equivalent to 
+    \begin{align*}
+        \hat{\beta}_{TWFE} = & \arg\min_{\beta} \sum^N_{i=1}\sum^T_{t=1}W_{it}\left\{ \left(Y_{it}-\bar{Y}^*_i-\bar{Y}^*_t+\bar{Y}^* - \beta \left( X_{it}-\bar{X}^*_i-\bar{X}^*_t+\bar{X}^* \right) \right) \right\}
+    \end{align*}
 \end{theorem}
 
 \newpage
