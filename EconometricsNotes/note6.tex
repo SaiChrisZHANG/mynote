@@ -1273,6 +1273,17 @@ Assuming at least one treat and control unit, $0<\sum^N_{i=1}\sum^T_{t=1}X_{it}<
     in many cases, $W_{it}$ can take a negative value, implying the TWFE estimator relies heavily on its parametric assumption.
 \end{theorem}
 
+To computate the standard errors of $\hat{\delta}(F,L)$, we use an observation-specific weight 
+\begin{align*}
+    W_{it}&= \sum^N_{i'=1}\sum^T_{t'=1} D_{i't'}\cdot \nu^{i't'}_{it}, & \nu^{i't'}_{it}&= \begin{cases}
+        1, & (i,t)=(i',t'+F)\\
+        -1, & (i,t)=(i',t'-1)\\
+        -w^i_{i't'}, & i\in\mathcal{M}_{i't'},t=t'+F\\
+        w^i_{i't'}, & i\in\mathcal{M}_{i't'},t=t'-1\\
+        0,&\text{otherwise}
+    \end{cases}
+\end{align*}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
