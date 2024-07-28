@@ -1287,7 +1287,13 @@ and calculate the \textbf{conditional standard errors} as
 \begin{align*}
     \mathbb{V}\left(\hat{\delta}(F,L)\mid \mathbf{D}\right) = \frac{N^* \cdot \mathbb{V}\left( \sum^N_{i=1}\sum^T_{t=1}W^*_{it} Y_{it} \right)}{\left(\sum^N_{i=1}\sum^T_{t=1}D_{it}\right)^2}
 \end{align*}
-where $N^*$ is the total number of units with at least one nonzero weight.
+where $N^*$ is the total number of units with at least one nonzero weight; and the \textbf{unconditional standard errors} as
+\begin{align*}
+    \mathbb{V}\left(\hat{\delta}(F,L)\right) =& \frac{1}{\mathbb{E}\left[\sum^N_{i=1}\sum^T_{t=1}D_{it}\right]^2}\cdot \\
+    & \left\{ N\cdot \mathbb{E}\left[\sum^T_{t=1}D_{it}\right] - 2\frac{\mathbb{E}\left(\sum^N_{i=1}\sum^T_{t=1}W^*_{it} Y_{it}\right)}{\sum^N_{i=1}\sum^T_{t=1}D_{it}} \cdot N\cdot \mathrm{Cov}\left(\sum^T_{t=1}W^*_{it} Y_{it},\sum^T_{t=1}D_{it}\right)\right.\\
+    & \left. + \frac{\mathbb{E}\left[\sum^N_{i=1}\sum^T_{t=1}W^*_{it} Y_{it}\right]}{\mathbb{E}\left[\sum^N_{i=1}\sum^T_{t=1}D_{it}\right]^2}\cdot N\cdot\mathbb{V}\left(\sum^T_{t=1}D_{it}\right) \right\}
+\end{align*}
+one can also apply the block boostrap procedure for within-unit time dependence.
 
 \newpage
 \bibliographystyle{plainnat}
