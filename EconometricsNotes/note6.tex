@@ -1285,8 +1285,9 @@ To computate the standard errors of $\hat{\delta}(F,L)$, we use an observation-s
 \end{align*}
 and calculate the \textbf{conditional standard errors} as 
 \begin{align*}
-    \mathbb{V}\left(\hat{\delta}(F,L)\mid \mathbf{D}\right) = \frac{N^* \cdot \mathbb{V}\left( \sum^N_{i=1}\sum^T_{t=1}W^*_{it} Y_{it} \right)}{}
+    \mathbb{V}\left(\hat{\delta}(F,L)\mid \mathbf{D}\right) = \frac{N^* \cdot \mathbb{V}\left( \sum^N_{i=1}\sum^T_{t=1}W^*_{it} Y_{it} \right)}{\left(\sum^N_{i=1}\sum^T_{t=1}D_{it}\right)^2}
 \end{align*}
+where $N^*$ is the total number of units with at least one nonzero weight.
 
 \newpage
 \bibliographystyle{plainnat}
