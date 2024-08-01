@@ -1298,7 +1298,20 @@ one can also apply the block boostrap procedure for within-unit time dependence.
 \subsubsection{Distributional effects}
 Heterogeneity in treatment effects does not creat problems for the DiD estimator, but the distributional effects might be of interest.
 
-\paragraph*{\citet{bonhomme2011recover}}
+\paragraph*{\citet{bonhomme2011recover}} consider the 2 period case, where in period 1 (pre-treatment), the realized outcome is denoted as $Y_{i1}$; in period 2 (post-treatment), the observed outcome $Y_{i2} = D_iY^1_{i2} + (1-D_i)Y^0_{i2}$ where $Y_{i2}^0$ is the potential outcome if not treated, $Y_{i2}^1$ is the potential outcome if treated.
+
+The outcomes are model as 
+\begin{align*}
+    Y_{i2}^0 &= f_2^0\left(X_i\right) + \beta_2^0\eta_i + \nu^0_{i2} & Y_{i1} &= f_1\left(X_i\right) + \beta_1\eta_i + \nu_{i1}
+\end{align*}
+where outcomes depend on observed covariates $X_i$ and initial endowment $\eta_i$. For a special case of this model with no covariates and equal returns to the endowment
+\begin{align*}
+    Y_{i2}^0 &= \alpha_2^0 + \eta_i + \nu^0_{i2} & Y_{i1} &= \alpha_1 + \eta_i+\nu_{i1}
+\end{align*}
+\citet{bonhomme2011recover} made the following assumptions to identify the \textbf{distribution} of $Y^0_{i2}$ given $D_i=1$:
+\begin{itemize}
+    \item[1] 
+\end{itemize}
 
 \paragraph*{\citet{callaway2018quantile,callaway2019quantile}}
 
