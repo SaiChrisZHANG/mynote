@@ -1314,6 +1314,10 @@ where outcomes depend on observed covariates $X_i$ and initial endowment $\eta_i
     \item[A2] \textbf{fixed effects} $\nu_{i1}$ and $\nu_{i2}^0$ are independent of $\eta_i$ given $D_i$
     \item[A3] \textbf{characteristic function}: the characteristic function of $Y_{i1}$ given $D_i=0$ is nonvanishing on $\mathbb{R}$, where the function is $ \Psi_W(t) = \mathbb{E}\left[\exp( it W)\right] $\footnote{This is a common assumption in the nonparametrically deconvolution literature. Many usual parametric distribution (normal, gamma) satisfiy this condiditon.}. 
 \end{itemize}
+Under A1-A3, the characteristic function of $Y^0_{i2}$ given $D_i=1$ is identified as 
+\begin{equation*}
+    \Psi _{Y^0_{i2}\mid D_i=1}(t) = \frac{\Psi _{Y_{i1}\mid D_i=1}(t)}{\Psi _{Y_{i1}\mid D_i=0}(t)} \Psi _{Y_{i2}\mid D_i=0}(t)
+\end{equation*}
 
 \paragraph*{\citet{callaway2018quantile,callaway2019quantile}}
 
