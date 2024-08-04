@@ -1311,7 +1311,7 @@ where outcomes depend on observed covariates $X_i$ and initial endowment $\eta_i
 \citet{bonhomme2011recover} made the following assumptions to identify the \textbf{distribution} of $Y^0_{i2}$ given $D_i=1$:
 \begin{itemize}
     \item[A1] \textbf{consistent DiD}: $\nu_{i1}$ and $\nu_{i2}^0$ are independent of $D_i$
-    \item[A2] \textbf{fixed effects} $\nu_{i1}$ and $\nu_{i2}^0$ are independent of $\eta_i$ given $D_i$
+    \item[A2] \textbf{fixed effects}: $\nu_{i1}$ and $\nu_{i2}^0$ are independent of $\eta_i$ given $D_i$
     \item[A3] \textbf{characteristic function}: the characteristic function of $Y_{i1}$ given $D_i=0$ is nonvanishing on $\mathbb{R}$, where the function is $ \Psi_W(t) = \mathbb{E}\left[\exp( it W)\right] $\footnote{This is a common assumption in the nonparametrically deconvolution literature. Many usual parametric distribution (normal, gamma) satisfiy this condiditon.}. 
 \end{itemize}
 Under A1-A3, the characteristic function of $Y^0_{i2}$ given $D_i=1$ is identified as 
@@ -1335,17 +1335,24 @@ Notice that the distribution of $\left(v_{i1},v^0_{i2}\right)$ is not restricted
 
 In the general case, where covariates enter as $f_2^0(X_i)$ and $f_1(X_i)$, and the initial endowment to effect different periods differently with $\beta_1,\beta_2\neq 1$, \citet{bonhomme2011recover} make two extra assumptions
 \begin{itemize}
-    \item[A4] overlapping: $p_D>0$ and $p_D(X_i)<1$ with probability 1, where the propensity scores are $p_D=P(D_i=1)$, $P_D(x)=P\left(D_i=1\mid X_i=x\right)$
-    \item[A5] instrument: $\exists \tilde{Y}_{i0}$ s.t. $v_{i1}$ and $v_{i2}^0$ are uncorrelated with $\tilde{Y}_{i0}$ given $D_i=0$, $Y_{i1}$ and $\tilde{Y}_{i0}$ are correlated given $D_i=0$. $\tilde{Y}_{i0}$ is essentially like the linear panel data instruments, not orthogonal to fixed effects.
+    \item[A4] \textbf{overlapping}: $p_D>0$ and $p_D(X_i)<1$ with probability 1, where the propensity scores are $p_D=P(D_i=1)$, $P_D(x)=P\left(D_i=1\mid X_i=x\right)$
+        This assumption do not restrict the correlations between $\eta_i,v_{i1},v^0_{i2}$ and $X_i$. Then we get 
+    \begin{align*}
+        \Psi_{Y^0_{i2}\mid D_i=1,X_i}(t\mid x) &= \frac{\Psi_{Y_{i1}\mid D_i=1,X_i}(t\mid x)}{ \Psi_{Y_{i1}\mid D_i=0,X_i}(t\mid x) } \Psi_{Y_{i2}\mid D_i=0,X_i}(t\mid x) & \Psi_{Y^0_{i2}\mid D_i=1}(t) &= \frac{1}{p_D}\mathbb{E}\left[ \omega (t\mid X_i)(1-D_i)\exp(itY_{i2}) \right]
+    \end{align*}
+    where
+    \begin{equation*}
+        \omega(t\mid X_i) \equiv \frac{p_D(X_i)}{1-p_D(X_i)} \cdot \frac{\Psi_{Y_{i1}\mid D_i=1,X_i}(t\mid X_i)}{\Psi_{Y_{i1}\mid D_i=0,X_i}(t\mid X_i)} = \frac{\mathbb{E} \left[D_i\exp(itY_{i1})\mid X_i\right]}{ \mathbb{E}\left[(1-D_i)\exp(itY_{i1})\mid X_i\right] }
+    \end{equation*}
+    \item[A5] \textbf{instrument}: $\exists \tilde{Y}_{i0}$ s.t. $v_{i1}$ and $v_{i2}^0$ are uncorrelated with $\tilde{Y}_{i0}$ given $D_i=0$, $Y_{i1}$ and $\tilde{Y}_{i0}$ are correlated given $D_i=0$. $\tilde{Y}_{i0}$ is essentially like the linear panel data instruments, not orthogonal to fixed effects. 
+    For example, consider 
+    \begin{align*}
+        Y^0_{i2} &= \alpha^0_2 + \beta^0_2\eta_i + v_{i2}^0 & Y_{i1} &= \alpha_1 + \beta_1\eta_i + v_{i1}
+    \end{align*}
+    where $Y_{i1}$ is endogenous: $$ Y_{i2}^0 = \alpha^0_2 - \rho\alpha_1 + \rho Y_{i1} + v^0_{i2}- \rho v_{i1}$$
+    with the instrument $\tilde{Y_{i0}}$, we can identify $\rho$ as $$ \rho = \frac{\mathrm{Cov}\left(\tilde{Y}_{i0},Y_{i2}\mid D_i=0\right)}{\mathrm{Cov}\left(\tilde{Y}_{i0},Y_{i1}\mid D_i=0\right)} $$
 \end{itemize}
-These assumptions do not restrict the correlations between $\eta_i,v_{i1},v^0_{i2}$ and $X_i$. Then we get 
-\begin{align*}
-    \Psi_{Y^0_{i2}\mid D_i=1,X_i}(t\mid x) &= \frac{\Psi_{Y_{i1}\mid D_i=1,X_i}(t\mid x)}{ \Psi_{Y_{i1}\mid D_i=0,X_i}(t\mid x) }\cdot \Psi_{Y_{i2}\mid D_i=0,X_i}(t\mid x) & \Psi_{Y^0_{i2}\mid D_i=1}(t) &= \frac{1}{p_D}\mathbb{E}\left[ \omega (t\mid X_i)(1-D_i)\exp(itY_{i2}) \right]
-\end{align*}
-where
-\begin{equation*}
-    \omega(t\mid X_i) \equiv \frac{p_D(X_i)}{1-p_D(X_i)} \cdot \frac{\Psi_{Y_{i1}\mid D_i=1,X_i}(t\mid X_i)}{\Psi_{Y_{i1}\mid D_i=0,X_i}(t\mid X_i)} = \frac{\mathbb{E} \left[D_i\exp(itY_{i1})\mid X_i\right]}{ \mathbb{E}\left[(1-D_i)\exp(itY_{i1})\mid X_i\right] }
-\end{equation*}
+
 
 
 \paragraph*{\citet{callaway2018quantile,callaway2019quantile}}
