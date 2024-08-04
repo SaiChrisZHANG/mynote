@@ -1351,6 +1351,10 @@ In the general case, where covariates enter as $f_2^0(X_i)$ and $f_1(X_i)$, and 
     \end{align*}
     where $Y_{i1}$ is endogenous: $$ Y_{i2}^0 = \alpha^0_2 - \rho\alpha_1 + \rho Y_{i1} + v^0_{i2}- \rho v_{i1}$$
     with the instrument $\tilde{Y_{i0}}$, we can identify $\rho$ as $$ \rho = \frac{\mathrm{Cov}\left(\tilde{Y}_{i0},Y_{i2}\mid D_i=0\right)}{\mathrm{Cov}\left(\tilde{Y}_{i0},Y_{i1}\mid D_i=0\right)} $$
+    which gives the identification of the entire distribution 
+    \begin{equation*}
+        f_{Y^0_{i2}\mid D_i=1}(y) = \frac{1}{2\pi} \int \exp\left(-ity\right) \left[\frac{\Psi_{Y_{i1}\mid D_i=1}(\rho t)}{\Psi_{Y_{i1}\mid D_i=0} (\rho t)} \Psi_{Y_{i2}\mid D_i=0}(t) \right]\mathrm{d}t
+    \end{equation*}
 \end{itemize}
 
 
