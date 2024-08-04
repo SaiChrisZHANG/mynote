@@ -1336,6 +1336,7 @@ Notice that the distribution of $\left(v_{i1},v^0_{i2}\right)$ is not restricted
 In the general case, where covariates enter as $f_2^0(X_i)$ and $f_1(X_i)$, and the initial endowment to effect different periods differently with $\beta_1,\beta_2\neq 1$, \citet{bonhomme2011recover} make two extra assumptions
 \begin{itemize}
     \item[A4] overlapping: $p_D>0$ and $p_D(X_i)<1$ with probability 1, where the propensity scores are $p_D=P(D_i=1)$, $P_D(x)=P\left(D_i=1\mid X_i=x\right)$
+    \item[A5] instrument: $\exists \tilde{Y}_{i0}$ s.t. $v_{i1}$ and $v_{i2}^0$ are uncorrelated with $\tilde{Y}_{i0}$ given $D_i=0$, $Y_{i1}$ and $\tilde{Y}_{i0}$ are correlated given $D_i=0$
 \end{itemize}
 These assumptions do not restrict the correlations between $\eta_i,v_{i1},v^0_{i2}$ and $X_i$. Then we get 
 \begin{align*}
