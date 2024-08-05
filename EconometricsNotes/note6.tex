@@ -1357,7 +1357,10 @@ In the general case, where covariates enter as $f_2^0(X_i)$ and $f_1(X_i)$, and 
     \end{equation*}
 \end{itemize}
 
-
+This identification strategy yields the estimation for a random sample $\left(Y_{i2},Y_{i1},D_i\right),i=1,\cdots,N$:
+\begin{itemize}
+    \item No covariates, $\eta_i$'s effects are the same in both periods, $$ \hat{f}_{Y^0_{i2}\mid D_i=1}(y) = \frac{1}{2\pi} \int^{T_N}_{-T_N} \exp\left(-ity\right) \times \left[ \frac{\hat{\Psi}_{Y_{i1}\mid D_i=1}(t)}{\hat{\Psi}_{Y_{i1}\mid D_i=0}(t)}\hat{\Psi}_{Y_{i2}\mid D_i=0}(t) \right] \mathrm{d}t $$
+\end{itemize}
 
 \paragraph*{\citet{callaway2018quantile,callaway2019quantile}}
 
