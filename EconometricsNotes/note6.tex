@@ -1371,7 +1371,8 @@ where $\hat{\Psi}_W$ denotes the empirical characteristic function of $W$\footno
 
 For a panel data where at least 3 periods, $t,t-1,t-2$, of data of all individuals in the sample are available, treatment takes place at $t$. Define the $\tau-$quantile of a random variable $W$ as 
 $$ \omega_{\tau} = F^{-1}_W(\tau) \coloneq \inf \left\{\omega: F_W(\omega)\geq \tau \right\} $$
-denote the 
+denote the distributions of potential outcomes of treated and control units $Y_{1t},Y_{0t}$ as $F_{Y_{1t}\mid D=1},F_{Y_{0t}\mid D=1}$, and define the \textbf{Quantile Treatment Effect on the Treated} (QTT) as 
+$$ QTT(\tau) = F^{-1}_{Y_{1t}\mid D=1}(\tau) - F^{-1}_{Y_{0t}\mid D=1}(\tau ) $$
 
 \newpage
 \bibliographystyle{plainnat}
