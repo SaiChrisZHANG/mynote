@@ -1373,6 +1373,11 @@ For a panel data where at least 3 periods, $t,t-1,t-2$, of data of all individua
 $$ \omega_{\tau} = F^{-1}_W(\tau) \coloneq \inf \left\{\omega: F_W(\omega)\geq \tau \right\} $$
 denote the distributions of potential outcomes of treated and control units $Y_{1t},Y_{0t}$ as $F_{Y_{1t}\mid D=1},F_{Y_{0t}\mid D=1}$, and define the \textbf{Quantile Treatment Effect on the Treated} (QTT) as 
 $$ QTT(\tau) = F^{-1}_{Y_{1t}\mid D=1}(\tau) - F^{-1}_{Y_{0t}\mid D=1}(\tau ) $$
+the identification relies on the assumptions 
+\begin{itemize}
+    \item[A1] \textbf{Mean DiD}: denote difference in untreated potential outcomes as $\Delta Y_{0t}=Y_{0t}-Y_{0t-1}$, then $$ \mathbb{E}\left[\Delta Y_{0t}\mid D=1\right] = \mathbb{E}\left[\Delta Y_{0t}\mid D=0\right] $$ This is just the parallel trend assumption commonly used.
+    \item[A2] \textbf{Distribution DiD}:  
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
