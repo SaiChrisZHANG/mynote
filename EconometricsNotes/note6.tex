@@ -1378,7 +1378,7 @@ the identification relies on the assumptions
     \item[A1] \textbf{Mean DiD}: denote difference in untreated potential outcomes as $\Delta Y_{0t}=Y_{0t}-Y_{0t-1}$, then $$ \mathbb{E}\left[\Delta Y_{0t}\mid D=1\right] = \mathbb{E}\left[\Delta Y_{0t}\mid D=0\right] $$ This is just the parallel trend assumption commonly used.
     \item[A2] \textbf{Distribution DiD}: the distribution of the change in untreated potential outcomes does not depend on whether or not the individual belongs to the treated or the untreated group $$ \Delta Y_{0t} \bot D $$ which is a gneralization of the parallel trend assumption.
     \item[A3] \textbf{Copula stability}: denote a copula function as $ C_{\Delta Y_{0t},Y_{0t-1}\mid D=1}\left(\cdot,\cdot\right) $, then $$ C_{\Delta Y_{0t},Y_{0t-1}\mid D=1}\left(\cdot,\cdot\right) = C_{\Delta Y_{0t-1},Y_{0t-2}\mid D=1}\left(\cdot,\cdot\right) $$
-    which assumes the stability of the dependence between the \textbf{change in untreated potential outcomes for the treated}, and the \textbf{initial level of untreated potential outcomes for the treated}\footnote{This assumption is about how to identify $F_{\Delta Y_{0t},Y_{t-1}\mid D=1}$}.
+    which assumes the stability of the dependence between the \textbf{change in untreated potential outcomes for the treated}, and the \textbf{initial level of untreated potential outcomes for the treated}\footnote{This assumption is about how to identify $F_{\Delta Y_{0t},Y_{t-1}\mid D=1}$}, i.e., the joint distribution $\left(\Delta Y_{0t},Y_{0t-1}\mid D=1\right)$.
 \end{itemize}
 
 \newpage
