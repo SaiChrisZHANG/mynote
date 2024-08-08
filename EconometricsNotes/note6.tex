@@ -1392,6 +1392,11 @@ There are two additional assumptions for identification:
     \item \textbf{panel data, treatment only happens at $t$}: The observed data $\left\{ Y_{it},Y_{it-1},Y_{it-2},X_i,D_i \right\}^n_{i=1}$ are i.i.d. draws from the joint distribution $F_{Y_t,Y_{t-1},Y_{t-2},X,D}$ and $Y_{it}=D_iY_{1it}+(1-D_i)Y_{0it}$, $Y_{it-1}=Y_{0it-1}$ and $Y_{it-2}=Y_{0it-2}$
 \end{itemize}
 
+then \citet{callaway2019quantile}'s identification result is given as 
+$$ F_{Y_{0t}\mid D=1}(y) = \mathbb{E}\left[\mathbf{1}\left\{ F^{-1}_{\Delta Y_t\mid D=0} \left(D_{\Delta Y_{t-1}\mid D=1} \left(\Delta Y_{t-1}\right)\right) \leq y-F^{-1}_{Y_{t-1}\mid D=1}\left(D_{Y_{t-2}\mid D=1}(Y_{t-2})\right) \right\} \mid D=1 \right] $$
+and 
+$$ \mathrm{QTT}(\tau) = F^{-1}_{Y_t\mid D=1}(\tau) - F^{-1}_{Y_{0t}\mid D=1}(\tau) $$
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
