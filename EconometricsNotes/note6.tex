@@ -1399,9 +1399,10 @@ $$ \mathrm{QTT}(\tau) = F^{-1}_{Y_t\mid D=1}(\tau) - F^{-1}_{Y_{0t}\mid D=1}(\ta
 Consider the case of TWFE models $Y_{0it} = \theta_t + \eta_i + \nu_{it}$, where time fixed effects $\theta_t$ are common for the treated and untreated groups, individual effects $\eta_i$ may be distributed differently across the treated and untreated. For the identification of ATT, it requires $\mathbb{E}\left[\Delta \nu_t\mid D=1\right] = \mathbb{E}\left[\Delta \nu_t\mid D=0\right]$, and to identify QTT, 
 it is additionally required that 
 \begin{align*}
-    \Delta \nu_t &\bot D & C_{\Delta \nu_t,\eta+\nu_{t-1}\mid D=1}\text{ (distribution DiD)} &= C_{\Delta v_{t-1},\eta+\nu_{t-2}\mid D=1}\text{ Copula stability}
+    \Delta \nu_t &\bot D \text{ (distribution DiD)}  & C_{\Delta \nu_t,\eta+\nu_{t-1}\mid D=1} &= C_{\Delta v_{t-1},\eta+\nu_{t-2}\mid D=1}\text{ (Copula stability)}
 \end{align*}
 
+One can check sufficient condition $\left(\nu_t,\nu_{t-1}\mid \eta,D=1\right)$ and $\left(\nu_{t-1},\nu_{t-2}\mid \eta,D=1\right)$ following the same distribution,
 
 
 \newpage
