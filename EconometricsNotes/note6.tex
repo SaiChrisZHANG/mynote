@@ -1396,6 +1396,12 @@ then \citet{callaway2019quantile}'s identification result is given as
 $$ F_{Y_{0t}\mid D=1}(y) = \mathbb{E}\left[\mathbf{1}\left\{ F^{-1}_{\Delta Y_t\mid D=0} \left(D_{\Delta Y_{t-1}\mid D=1} \left(\Delta Y_{t-1}\right)\right) \leq y-F^{-1}_{Y_{t-1}\mid D=1}\left(D_{Y_{t-2}\mid D=1}(Y_{t-2})\right) \right\} \mid D=1 \right] $$
 and 
 $$ \mathrm{QTT}(\tau) = F^{-1}_{Y_t\mid D=1}(\tau) - F^{-1}_{Y_{0t}\mid D=1}(\tau) $$
+Consider the case of TWFE models $Y_{0it} = \theta_t + \eta_i + \nu_{it}$, where time fixed effects $\theta_t$ are common for the treated and untreated groups, individual effects $\eta_i$ may be distributed differently across the treated and untreated. For the identification of ATT, it requires $\mathbb{E}\left[\Delta \nu_t\mid D=1\right] = \mathbb{E}\left[\Delta \nu_t\mid D=0\right]$, and to identify QTT, 
+it is additionally required that 
+\begin{align*}
+    \Delta \nu_t &\bot D & C_{\Delta \nu_t,\eta+\nu_{t-1}\mid D=1} &= C_{\Delta v_{t-1},\eta+\nu_{t-2}\mid D=1}
+\end{align*}
+
 
 \newpage
 \bibliographystyle{plainnat}
