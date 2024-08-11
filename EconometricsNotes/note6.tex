@@ -1424,6 +1424,24 @@ $$ F^p_{\Delta Y_{0t}\mid D=1}(\delta) = \mathbb{E}\left[ \frac{1-D}{p}\frac{p(X
 and the QTT $$ \mathrm{QTT}(\tau) = F^{-1}_{Y_{1t}\mid D=1}(\tau) - F^{-1}_{Y_{0t}\mid D=1}(\tau) $$
 is identified.
 
+The difference from the unconditional results is: $F_{\Delta Y_{0t}\mid D=1}$ is not identified by the distribution of untreated potential outcomes for the untreated, but the weighted distribution $F^p_{\Delta Y_{0t}\mid D=1}(\delta)$
+
+For the case of \textbf{conditional} copula stability, assume 
+\begin{equation*}
+    C_{\Delta Y_{0t},Y_{0t-1}\mid X,D=1}\left(\cdot,\cdot \mid x\right) = C_{\Delta Y_{0t-1},Y_{0t-2}\mid X,D=1}\left(\cdot,\cdot \mid x\right)
+\end{equation*}
+then 
+\begin{align*}
+    P \left( Y_{0t}\leq y \mid X=x,D=1 \right) =& \mathbb{E} \left[ \mathbf{1} \left\{F^{-1}_{\Delta Y_{0t}\mid X,D=0} \left(F_{\Delta Y_{0t-1}\mid X,D=1} \left(\Delta Y_{0t-1}\mid x\right)\right)\right. \right.\\
+    & \left.\left.\leq y-F^{-1}_{Y_{0t-1}\mid X,D=1}\left( F_{Y0t-2\mid X,D=1} (Y_{0t-2}\mid x) \right)\right\} \mid X=x,D=1 \right]
+\end{align*}
+and $$ \mathrm{QTT}\left(\tau;x\right) = F^{-1}_{Y_{1t}\mid X,D=1}(\tau\mid x) - F^{-1}_{Y_{0t}\mid X,D=1}(\tau\mid x) $$
+also 
+\begin{equation*}
+    P\left(Y_{0t}\leq y \mid D=1 \right) = \int_{\mathcal{X}} P\left(Y_{0t}\leq y \mid X=x,D=1\right)\mathrm{d}F_{X\mid D=1}(x)
+\end{equation*}
+and $$ \mathrm{QTT}(\tau) = F^{-1}_{Y_{1t}\mid D=1}(\tau) - F^{-1}_{Y_{0t}\mid D=1}(\tau) $$
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
