@@ -1460,6 +1460,11 @@ but this robustness does \textbf{not} extend outside of block assignment setting
     \end{pmatrix}
 \end{equation*}
 Let $A_i\equiv T+1-\sum^T_{t=1}W_{it}$ be the adoption date (the first time unit $i$ is treated), with $A_i\equiv \infty$ for never adopters, and $N_a$ is the number of units with adoption date $A_i=a$.
+Define the ATE by time and adoption date as 
+\begin{equation*}
+    \tau_{t\mid a} \equiv \mathbb{E} \left[Y_{it}(1)-Y_{it}(0)\mid A_i=a \right]
+\end{equation*}
+which can vary \textbf{both} time and adoption date.
 
 \newpage
 \bibliographystyle{plainnat}
