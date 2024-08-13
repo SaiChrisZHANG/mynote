@@ -1474,6 +1474,10 @@ then for all pairs of time periods $t,t'$ and pairs of adoption dates $a,a'$ suc
     \hat{\tau}^{a,a'}_{t,t'} \equiv \left( \bar{Y}_{t\mid a}-\bar{Y}_{t'\mid a} \right) - \left( \bar{Y}_{t\mid a'}-\bar{Y}_{t'\mid a'} \right)
 \end{equation*}
 
+\begin{itemize}
+    \item For group $a$ ($t'< a \leq t$), $\bar{Y}_{t,a}-\bar{Y}_{t',a}$ reflects a change in treatment but the treatment effect is contaminated by the time trend in control $$ \mathbb{E}\left[\bar{Y}_{t\mid a}-\bar{Y}_{t'\mid a'}\right] =\beta_t-\beta_{t'}+\tau_{t\mid a} $$
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
