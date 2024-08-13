@@ -1479,7 +1479,7 @@ then for all pairs of time periods $t,t'$ and pairs of adoption dates $a,a'$ suc
     \item For group $a'$, there are 2 cases:
     \begin{itemize}
         \item $t'<t<a'$: group $a'$ never get treated, then $\hat{\tau}^{a,a'}_{t,t'}$ is the standard DiD 
-        \item $a'<t'<t$: group $a'$ always get treated, then in the presence of treatment effect heterogeneity, the expected difference in average outcomes under the treatment is $ \mathbb{E}\left[\bar{Y}_{t\mid a'}-\bar{Y}_{t'\mid a'}\right] = \beta_t - \beta_{t'} + \left(\tau_{t\mid a'}-\tau_{t'\mid a'}\right) $, which leads to $$ \mathbb{E}\left[\hat{\tau}^{a,a'}_{t,t'}\right] =\tau_{t\mid a} - \left(\tau_{t\mid a'}-\tau_{t'\mid a'}\right) $$
+        \item $a'<t'<t$: group $a'$ always get treated, then in the presence of treatment effect heterogeneity, the expected difference in average outcomes under the treatment is $ \mathbb{E}\left[\bar{Y}_{t\mid a'}-\bar{Y}_{t'\mid a'}\right] = \beta_t - \beta_{t'} + \left(\tau_{t\mid a'}-\tau_{t'\mid a'}\right) $, which leads to $$ \mathbb{E}\left[\hat{\tau}^{a,a'}_{t,t'}\right] =\tau_{t\mid a} - \left(\tau_{t\mid a'}-\tau_{t'\mid a'}\right) $$ it is a weighted average of treatment effects, with weights adding up to 1 and some negative weights under heterogeneous treatment effects.
     \end{itemize}
 \end{itemize}
 
