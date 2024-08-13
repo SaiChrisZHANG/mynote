@@ -1468,7 +1468,11 @@ which can vary \textbf{both} time and adoption date.
 
 \subsubsection{Decompositions of the TWFE estimator}
 Consider the TWFE estimate $\hat{\tau}$ based on the least squares regression $$ \min_{\alpha,\beta,\tau}\sum^N_{i=1}\sum^T_{t=1}\left(Y_{it}-\alpha_i-\beta_t-\tau W_{it}\right)^2 $$
-define for all time-periods $t$ and all adoption dates $a$ the average outcome in period $t$ for units with adoption date $a$
+define for all time-periods $t$ and all adoption dates $a$ the average outcome in period $t$ for units with adoption date $a$ as $$ \bar{Y}_{t\mid a} \equiv \frac{1}{N_a}\sum_{i:A_i=a}Y_{i,t} $$
+then for all pairs of time periods $t,t'$ and pairs of adoption dates $a,a'$ such that $t'<a\leq t$ and either $a'\leq t'$ or $t < a'$, define the building block for the TWFE estimator
+\begin{equation*}
+    \hat{\tau}^{a,a'}_{t,t'} \equiv \left( \bar{Y}_{t\mid a}-\bar{Y}_{t'\mid a} \right) - \left( \bar{Y}_{t\mid a'}-\bar{Y}_{t'\mid a'} \right)
+\end{equation*}
 
 \newpage
 \bibliographystyle{plainnat}
