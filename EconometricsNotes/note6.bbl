@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -49,6 +49,12 @@ Brantly Callaway and Tong Li.
   panel data.
 \newblock \emph{Quantitative Economics}, 10\penalty0 (4):\penalty0 1579--1618,
   2019.
+
+\bibitem[Callaway and Sant’Anna(2021)]{callaway2021difference}
+Brantly Callaway and Pedro~HC Sant’Anna.
+\newblock Difference-in-differences with multiple time periods.
+\newblock \emph{Journal of econometrics}, 225\penalty0 (2):\penalty0 200--230,
+  2021.
 
 \bibitem[Callaway et~al.(2018)Callaway, Li, and Oka]{callaway2018quantile}
 Brantly Callaway, Tong Li, and Tatsushi Oka.
