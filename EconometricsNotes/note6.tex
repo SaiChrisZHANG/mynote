@@ -1501,7 +1501,9 @@ then for all pairs of time periods $t,t'$ and pairs of adoption dates $a,a'$ suc
 \begin{assumption}{\citet{callaway2021difference}'s assumptions}{cs21assumptions}
     \begin{itemize}
         \item[1] \textbf{Irreversibility of Treatment}: $D_1=0$ a.s.; for $t=2,\cdots,T$, $D_{t-1}=1\Rightarrow D_t=1$ a.s.
-        \item[2] \textbf{Random Sampling}: $\left\{Y_{i,1},\cdots,Y_{i,\mathcal{T}},X_i,D_{i,1} \cdots, D_{i,\mathcal{T}}\right\}^n_{i=1}$ is i.i.d.. This implies the availability of panel data.
+        \item[2] \textbf{Random Sampling}: $\left\{Y_{i,1},\cdots,Y_{i,\mathcal{T}},X_i,D_{i,1} \cdots, D_{i,\mathcal{T}}\right\}^n_{i=1}$ is i.i.d.. This implies the availability of panel data
+        \item[3] \textbf{Limited Treatment Anticipation}: $\exists \delta \geq 0$ s.t. $$ \mathbb{E}\left[Y_{t,a}\mid X \right] = \mathbb{E}\left[Y_{0,a}\mid X\right] \text{ a.s. }\forall t< a-\delta $$
+        that is, for group $a$ who get treated at $a$, 
     \end{itemize}
 \end{assumption}
 
