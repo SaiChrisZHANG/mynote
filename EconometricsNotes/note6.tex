@@ -1491,7 +1491,10 @@ then for all pairs of time periods $t,t'$ and pairs of adoption dates $a,a'$ suc
 
 \subsubsection{Alternative DiD Estimators}
 
-\paragraph*{\citet{callaway2021difference}}
+\paragraph*{\citet{callaway2021difference}} propose 2 ways of dealing with the negative weights: 
+\begin{itemize}
+    \item never-adopters as control: $\hat{\tau}_{t,a-1}^{a,\infty} = \left(\bar{Y}_{t,a}-\bar{Y}_{a-1,a}\right) - \left(\bar{Y}_{t,\infty},\bar{Y}_{a-1,\infty}\right) $
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
