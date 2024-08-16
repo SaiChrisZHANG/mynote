@@ -1504,6 +1504,7 @@ then for all pairs of time periods $t,t'$ and pairs of adoption dates $a,a'$ suc
         \item[2] \textbf{Random Sampling}: $\left\{Y_{i,1},\cdots,Y_{i,\mathcal{T}},X_i,D_{i,1} \cdots, D_{i,\mathcal{T}}\right\}^n_{i=1}$ is i.i.d.. This implies the availability of panel data
         \item[3] \textbf{Limited Treatment Anticipation}: $\exists \delta \geq 0$ s.t. $$ \mathbb{E}\left[Y_{t,a}\mid X \right] = \mathbb{E}\left[Y_{0,a}\mid X\right] \text{ a.s. }\forall t< a-\delta $$
         where $\delta$ captures the anticipation horizon.
+        \item[4] \textbf{Conditional Parallel Trends, \textit{Never-Treated}}: $\forall a, t\in\left\{2,\cdots,T\right\}$ s.t. $t\geq g-\delta$, $$ \mathbb{E}\left[Y_{t,a}-Y_{t-1,a}\mid X\right] = \mathbb{E}\left[ Y_{t,\infty}-Y_{t-1,\infty}\mid X \right] \text{ a.s.}$$
     \end{itemize}
 \end{assumption}
 
