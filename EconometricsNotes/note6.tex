@@ -1505,6 +1505,7 @@ then for all pairs of time periods $t,t'$ and pairs of adoption dates $a,a'$ suc
         \item[3] \textbf{Limited Treatment Anticipation}: $\exists \delta \geq 0$ s.t. $$ \mathbb{E}\left[Y_{t,a}\mid X \right] = \mathbb{E}\left[Y_{0,a}\mid X\right] \text{ a.s. }\forall t< a-\delta $$
         where $\delta$ captures the anticipation horizon.
         \item[4] \textbf{Conditional Parallel Trends, \textit{Never-Treated}}: $\forall a, t\in\left\{2,\cdots,T\right\}$ s.t. $t\geq g-\delta$, $$ \mathbb{E}\left[Y_{t,a}-Y_{t-1,a}\mid X\right] = \mathbb{E}\left[ Y_{t,\infty}-Y_{t-1,\infty}\mid X \right] \text{ a.s.}$$
+        \item[5] \textbf{Conditional Parallel Trends, \textit{Later-Treated}}: $\forall a, (s,t)\in\left\{2,\cdots,T\right\}\times \left\{2,\cdots,T\right\}$ s.t. $t\geq g-\delta$ and $t+\delta\leq s< \bar{g}$, $$ \mathbb{E}\left[Y_{t,a}-Y_{t-1,a}\mid X\right] = \mathbb{E}\left[ Y_{t,s}-Y_{t-1,s} \mid X, \right] \text{ a.s.} $$
     \end{itemize}
 \end{assumption}
 
