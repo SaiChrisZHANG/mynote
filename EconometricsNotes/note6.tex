@@ -1523,7 +1523,8 @@ There are several remarks:
 \begin{itemize}
     \item the time period $t=a-\delta -1$ is used as an appropriate reference time: the most recent time period when untreated potential outcomes are observed in group $a$
     \item never-treated units can be used as a fixed comparision group for all treated units, but under A5, the ATT for the last treated group can not be estimated since there is no control group for it.
-    \item 
+    \item when A3 and A4 hold \textbf{unconditionally} and there is no-anticipation, then one can subset the data to \textbf{only} contain observations at $t$ and $a-1$, from group $a$ and never-treated units, then run on ths subset $$ Y =\alpha_1^{a,t}+\alpha_2^{a,t}\cdot \mathbf{1}(a) + \alpha^{a,t}_3 \cdot \mathbf{1}(T) + \beta^{a,t}\cdot \mathbf{1}(a)\times \mathbf{1}(T) + \epsilon^{a,t} $$ where $\beta^{a,t} = ATT(a,t)$
+    \item when there are covariates, control them in the model yields $\tilde{\beta}^{a,t}$ 
 \end{itemize}
 
 \newpage
