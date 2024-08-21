@@ -1545,8 +1545,13 @@ where $\omega(a,t)$ are weighting functions and focus on three questions
 And one can aggregate group-time ATE into an overall effect of treatment:
 \begin{itemize}
     \item \textbf{navie} aggregation, weighted by group size $$ \theta_W^O = \frac{ \sum_a\sum^{\mathcal{T}}_{t=2}\mathbf{1}\left\{t\geq a\right\} ATT(a,t)P(a\mid a\leq \mathcal{T}) }{ \sum_a\sum^{\mathcal{T}}_{t=2}\mathbf{1}\left\{t\geq a\right\} P(a\mid a\leq \mathcal{T}) } $$ which guarantees non-negative weights unlike TWFE. But mechanically, more weights are put on groups that participate in the treatment for longer.
-    \item \textbf{}
+    \item \textbf{across time within group, then across group} aggregation $$ \theta^O_{sel} = \sum_a\theta_{sel}(a) P(a\mid  a\leq \mathcal{T}) $$ which is recommended by \citet{callaway2021difference}, resembling the interpretation of the canonical DiD.
+    \item \textbf{across group, then across time} aggregation
+    \begin{align*}
+        \theta^O_{es} &= \frac{1}{\mathcal{T}-1}\sum^{\mathcal{T}-2}_{e=0}\theta_es(e) & \theta^O_{c} &= \frac{1}{\mathcal{T}-1}\sum^{\mathcal{T}}_{t=2}\theta_c(t) & \theta^{O,bal}_{es}(e') &= \frac{1}{e'+1}\sum^{e'}_{e=0}\theta^{bal}_{es}(e,e')
+    \end{align*}
 \end{itemize}
+and in general, these aggregations give different results, unless $ATT(a,t)$ is homogeneous across all $a$ and $t$
 
 
 \newpage
