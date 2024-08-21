@@ -1538,7 +1538,8 @@ where $\omega(a,t)$ are weighting functions and focus on three questions
         \item composition-constant aggregation $$ \theta_{es}^{bal}(e;e') = \sum_a \mathbf{1}\left\{a+e'\leq \mathcal{T}\right\}P\left(a\mid a+e'\leq \mathcal{T}\right)\cdot ATT(a,a+e) $$ which limits the aggregation to the groups participate in the treatment for at least $e'$ periods. This aggregation use fewer groups for estimate, hence the inference is \textbf{noisier}.
     \end{itemize}
     \item[b] how earlier-treated groups are different from the later-treated groups: consider $$ \theta_{sel}\left(\tilde{a}\right) = \frac{1}{\mathcal{T}-\tilde{a}+1} \sum^{\mathcal{T}}_{t=\tilde{a}} ATT\left(\tilde{a},t\right) $$ this averages the treatment effect for group $\tilde{a}$ across \textbf{all} post-treatment periods
-    \item[c] the cumulative ATE across all groups
+    \item[c] the calendar-time ATE and cumulative ATE across all groups: for treatmented groups in period $t$ that have treated by $t$, $$ \theta_c\left(\tilde{t}\right) = \sum_{a}\mathbf{1}\left\{\tilde{t}\geq a\right\} P\left(a\mid a\leq \tilde{t}\right) ATT\left(a,t\right)$$
+    and cumulatively, the ATE among units that have been treated by $\tilde{t}$ is $$ \theta_c^{cum}\left(\tilde{t}\right) =\sum^{\tilde{t}}_{t=2}\theta_c (t) $$
 \end{itemize}
 
 
