@@ -1537,7 +1537,7 @@ where $\omega(a,t)$ are weighting functions and focus on three questions
         \item composition-changing aggregation $$ \theta_{es}(e) = \sum_{a}\mathbf{1}\left\{a+e\leq \mathcal{T}\right\} P\left(a\mid a+e\leq \mathcal{T}\right)\cdot ATT(a,a+e) $$ which is the average effect of participating in the treatment $e$ periods after the treatment across all groups observed to have participated in the treatment for $e$ periods. $\theta_{es}(e)$ across different $e$ can not be interpreted as the actual dynamic effects unless $ATT(a,a+e)$ is homogeneous across groups for all $e$, which is too strong of an assumption
         \item composition-constant aggregation $$ \theta_{es}^{bal}(e;e') = \sum_a \mathbf{1}\left\{a+e'\leq \mathcal{T}\right\}P\left(a\mid a+e'\leq \mathcal{T}\right)\cdot ATT(a,a+e) $$ which limits the aggregation to the groups participate in the treatment for at least $e'$ periods. This aggregation use fewer groups for estimate, hence the inference is \textbf{noisier}.
     \end{itemize}
-    \item[b] how earlier-treated groups are different from the later-treated groups
+    \item[b] how earlier-treated groups are different from the later-treated groups: consider $$ \theta_{sel}\left(\tilde{a}\right) = \frac{1}{\mathcal{T}-\tilde{a}+1} \sum^{\mathcal{T}}_{t=\tilde{a}} ATT\left(\tilde{a},t\right) $$ this averages the treatment effect for group $\tilde{a}$ across \textbf{all} post-treatment periods
     \item[c] the cumulative ATE across all groups
 \end{itemize}
 
