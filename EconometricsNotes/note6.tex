@@ -1554,6 +1554,10 @@ And one can aggregate group-time ATE into an overall effect of treatment:
 and in general, these aggregations give different results, unless $ATT(a,t)$ is homogeneous across all $a$ and $t$
 
 For inference, \citet{callaway2021difference} focuses on the doubly-robust (DR) approach, and get the estimators
+\begin{align*}
+    \hat{ATT}^{nev}_{DR}\left(a,t;\delta\right) &= \mathbb{E}_n \left[ \left(\hat{w}^{treat}_a-\hat{w}^{comp,nev}_a\right) \left(Y_{t}-Y_{a-\delta-1} -\hat{m}^{nev}_{a,t,\delta} \left(X;\hat{\beta}^{nev}_{a,t,\delta}\right) \right) \right] \\
+    \hat{ATT}^{ny}_{DR}\left(a,t;\delta\right) &= \mathbb{E}_n \left[ \left(\hat{w}^{treat}_a-\hat{w}^{comp,nev}_a\right) \left(Y_{t}-Y_{a-\delta-1} -\hat{m}^{nev}_{a,t,\delta} \left(X;\hat{\beta}^{nev}_{a,t,\delta}\right) \right) \right]
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
