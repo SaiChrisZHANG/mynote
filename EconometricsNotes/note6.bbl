@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -139,6 +139,13 @@ Pedro~HC Sant'Anna and Jun Zhao.
 \newblock Doubly robust difference-in-differences estimators.
 \newblock \emph{Journal of econometrics}, 219\penalty0 (1):\penalty0 101--122,
   2020.
+
+\bibitem[Sun and Abraham(2021)]{sun2021estimating}
+Liyang Sun and Sarah Abraham.
+\newblock Estimating dynamic treatment effects in event studies with
+  heterogeneous treatment effects.
+\newblock \emph{Journal of econometrics}, 225\penalty0 (2):\penalty0 175--199,
+  2021.
 
 \bibitem[Xu(2023)]{xu2023causal}
 Yiqing Xu.
