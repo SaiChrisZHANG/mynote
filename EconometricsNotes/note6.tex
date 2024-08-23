@@ -1555,10 +1555,20 @@ and in general, these aggregations give different results, unless $ATT(a,t)$ is 
 
 \paragraph*{\citet{sun2021estimating}}
 
-\citet{sun2021estimating} propose to compare the change for a group that adopted in period $t$, $\bar{Y}_{t,a}-\bar{Y}_{a-1,a}$, relative to the chagne for the never-adopters over the same period 
+\citet{sun2021estimating} propose to compare the change for a group that adopted in period $t$, $\bar{Y}_{t,a}-\bar{Y}_{a-1,a}$, relative to the change for the never-adopters over the same period 
 $$ \hat{\tau}^{a,\infty}_{t,a-1} = \left(\bar{Y}_{t,a}-\bar{Y}_{a-1,a}\right) - \left(\bar{Y}_{t,\infty},\bar{Y}_{a-1,\infty}\right) $$
 and a simple unweighted average over the periods $t$ after the first period
 $$ \hat{\tau} = \sum^T_{t=2}\sum^t_{a=2}\hat{\tau}^{a,\infty}_{t,a-1} \cdot \frac{\Pr \left(A_i=a\mid 2\leq A_i \leq t\right)\cdot \mathbf{1}_{2\leq a\leq t\leq T} }{T-1} $$
+
+\begin{assumption}{\citet{sun2021estimating}'s assumptions}{sa2021assump}
+    \begin{itemize}
+        \item[A1] parallel trend
+        \item[A2] no anticipation
+        \item[A3] homogeneous treatment effect path across $a$   
+    \end{itemize}
+\end{assumption}
+
+The main issue discussed by \citet{sun2021estimating} is the contamination that treatment effects from other periods affect the estimate for agiven $\beta_a$
 
 \newpage
 \bibliographystyle{plainnat}
