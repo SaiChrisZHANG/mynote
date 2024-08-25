@@ -1572,7 +1572,8 @@ The main issue discussed by \citet{sun2021estimating} is the contamination that 
 For units $l$ periods aways from treatment adoption $a$ at period $t$, define $D^l_t \coloneq \mathbf{1}\left(t-a=l\right)$, then the relative period bin indicator is $$ \mathbf{1}(t-a\in L) = \sum_{l\in L}\mathbf{1}(t-a=l) = \sum_{l\in L}D^l_{t} $$
 and 3 specifications can be represented as:
 \begin{align*}
-    Y_{t} 
+    Y_{i,t} &= \alpha_i + \lambda_t + \mu_l \sum_{l\geq 0} D^l_{i,t} + \nu_{i,t} & \text{static} \\
+    Y_{i,t} &= \alpha_i + \lambda_t + \sum^{-2}_{l=-\underbar{l}} \mu_l D^l_{i,t} + \sum^{\bar{l}}_{l=0}\mu_l D^l_{i,t} + \nu_{i,t} & \text{full dynamic}
 \end{align*}
 
 \newpage
