@@ -1573,8 +1573,10 @@ For units $l$ periods aways from treatment adoption $a$ at period $t$, define $D
 and 3 specifications can be represented as:
 \begin{align*}
     Y_{i,t} &= \alpha_i + \lambda_t + \mu_l \sum_{l\geq 0} D^l_{i,t} + \nu_{i,t} & \text{static} \\
-    Y_{i,t} &= \alpha_i + \lambda_t + \sum^{-2}_{l=-\underbar{l}} \mu_l D^l_{i,t} + \sum^{\bar{l}}_{l=0}\mu_l D^l_{i,t} + \nu_{i,t} & \text{full dynamic}
+    Y_{i,t} &= \alpha_i + \lambda_t + \sum^{-2}_{l=-\underline{l}} \mu_l D^l_{i,t} + \sum^{\bar{l}}_{l=0}\mu_l D^l_{i,t} + \nu_{i,t} & \text{full dynamic} \\
+    Y_{i,t} &= \alpha_i + \lambda_t + \beta\cdot \sum_{l< -\underline{l}} D^l_{i,t} + \sum^{-2}_{l=-\underline{l}} \mu_l D^l_{i,t} + \sum^{\bar{l}}_{l=0}\mu_l D^l_{i,t} + \gamma \cdot \sum_{l>\bar{l}} D^l_{i,t} + \nu_{i,t} & \text{binned dynamic}
 \end{align*}
+
 
 \newpage
 \bibliographystyle{plainnat}
