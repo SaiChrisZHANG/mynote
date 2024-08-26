@@ -1579,7 +1579,8 @@ and 3 specifications can be represented as:
 then the population regression coefficient on relative period bin $L$ is a linear combination of differences in trends from its own relative period $l\in L$, from relative periods $l\in L'$ in other bins, and from relative periods excluded from the specification $l\in L^{excl}$
 \begin{align*}
     \mu_L = & \sum_{l\in L}\sum_a \omega^{L}_{a,l}\left( \mathbb{E}\left[Y_{i,a+l}-Y^{\infty}_{i,0}\mid a \right] - \mathbb{E} \left[Y^{\infty}_{i,a+l}-Y^{\infty}_{i,0}\right] \right) \\
-    &+ \sum_{L'\neq L} \sum_{l\in L'}\sum_a \omega^{L}_{a,l} \left( \mathbb{E}\left[Y_{i,a+l}-Y^{\infty}_{i,0}\mid a\right] \right)
+    &+ \sum_{L'\neq L} \sum_{l\in L'}\sum_a \omega^{L}_{a,l} \left( \mathbb{E}\left[Y_{i,a+l}-Y^{\infty}_{i,0}\mid a\right] - \mathbb{E}\left[Y^{\infty}_{i,a+l}-Y^{\infty}_{i,0}\right] \right) \\
+    &+ \sum_{l\in L^{excl}} \sum_a \omega^{L}_{a,l} \left(\mathbb{E}\left[Y_{i,a+l}-Y^{\infty}_{i,0}\mid a \right] - \mathbb{E}\left[Y^{\infty}_{i,a+l}-Y^{\infty}_{i,0}\right] \right)
 \end{align*}
 
 
