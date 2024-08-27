@@ -1594,6 +1594,10 @@ $$ \mu_L = \sum_{l\in L}\sum_a \omega^{L}_{a,l} CATT_{a,l} + \sum_{L'\neq L} \su
 since we have $$ \mathbb{E}\left[Y_{i,a+l}-Y^{\infty}_{i,0}\mid a \right] - \mathbb{E} \left[Y^{\infty}_{i,a+l}-Y^{\infty}_{i,0}\right] = CATT_{a,l} + \underbrace{\mathbb{E}\left[Y_{i,a+l}-Y^{\infty}_{i,0}\mid a \right] - \mathbb{E} \left[Y^{\infty}_{i,a+l}-Y^{\infty}_{i,0}\right]}_{=0} $$
 there are still two issues: (1) $\mu_L$ is an average of not only $CATT_{a,l}$ of own bin $l\in L$, but also from other periods.
 
+And under \textbf{A1 (parallel trend)} and \textbf{A2 (no anticipation)} of Assumption \ref{assump:sa2021assump}, 
+$$ \mu_L = \sum_{l\in L,l>0}\sum_a \omega^{L}_{a,l} CATT_{a,l} + \sum_{L'\neq L} \sum_{l\in L',l>0}\sum_a \omega^{L}_{a,l} CATT_{a,l} + \sum_{l\in L^{excl},l>0} \sum_a \omega^{L}_{a,l} CATT_{a,l} $$
+where only post-treatment $CATT$s enter. This challenges the pre-trend testing since all pre-treatment effects are zero $CATT_{a,l<0}=0$.
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
