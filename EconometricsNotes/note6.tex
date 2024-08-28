@@ -1599,17 +1599,19 @@ $$ \mu_L = \sum_{l\in L,l>0}\sum_a \omega^{L}_{a,l} CATT_{a,l} + \sum_{L'\neq L}
 where only post-treatment $CATT$s enter. This challenges the pre-trend testing since all pre-treatment effects are zero $CATT_{a,l<0}=0$.
 
 Under \textbf{A1 (parallel trend)} and \textbf{A3 (treatment effect homogeneity)}, then $CATT_{a,l}=ATT_l$ is constant across $a$ for given $l$, then 
-$$ \mu_g = \sum_{l\in L}\omega^L_l ATT_l + \sum_{L'\neq L}\sum_{l\in L'}\omega^L_{l}ATT_l + \sum_{l\in L^{excl}}\omega^L_{l}ATT_l $$
+$$ \mu_L = \sum_{l\in L}\omega^L_l ATT_l + \sum_{L'\neq L}\sum_{l\in L'}\omega^L_{l}ATT_l + \sum_{l\in L^{excl}}\omega^L_{l}ATT_l $$
 
 These results show that even under the strong assumption of homogeneity, the contamination of treatments from other periods still exists. To tackle this issue, \citet{sun2021estimating} propose to estimate a weighted average of $CATT_{a,l}$ with reasonable weights (sum to 1 and non-negative) that are shares of cohorts that experience at least $l$ periods relative to treatment, normalized by the size of $L$ 
 \begin{align*}
-    v_g = \frac{1}{\left\vert g \right\vert } \sum_{l\in L}\sum_a CATT{a,l} \Pr \left\{a \mid a \in [-l,T-l] \right\}
+    v_L = \frac{1}{\left\vert L \right\vert } \sum_{l\in L}\sum_a CATT_{a,l} \Pr \left\{a \mid a \in [-l,T-l] \right\}
 \end{align*}
 the estimation procedure is 
 \begin{itemize}
     \item[1] estimate $CATT_{a,l}$ with TWFE that interacts relative period indicators with cohort indicators, excluding cohort indicators from some set $C$
     $$ Y_{i,t} = \alpha_i + \lambda_t + \sum_{a\not \in C}\sum_{l\neq -1} \delta_{a,l}\left(\mathbf{1}\left\{a\right\}\cdot D^l_{i,t}\right) + \epsilon_{i,t} $$
     $C=\left\{\infty\right\}$ if a never-treated cohort is available.
+    \item[2] estimate weights $\Pr \left\{a\mid a \in [-l,T-l]\right\}$ by sample shares of each cohort in the relevant periods $l\in L$
+    \item[3] form the IW estimator as $$ \hat{v}_L = \frac{1}{\left\vert L \right\vert } \sum_{l\in L}\sum_a \hat{\delta}_{a,l} \hat{\Pr} \left\{a \mid a \in [-l,T-l] \right\} $$
 \end{itemize}
 
 \newpage
