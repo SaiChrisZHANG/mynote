@@ -1607,7 +1607,9 @@ These results show that even under the strong assumption of homogeneity, the con
 \end{align*}
 the estimation procedure is 
 \begin{itemize}
-    \item[1] estimate $CATT_{a,l}$ with TWFE, 
+    \item[1] estimate $CATT_{a,l}$ with TWFE that interacts relative period indicators with cohort indicators, excluding cohort indicators from some set $C$
+    $$ Y_{i,t} = \alpha_i + \lambda_t + \sum_{a\not \in C}\sum_{l\neq -1} \delta_{a,l}\left(\mathbf{1}\left\{a\right\}\cdot D^l_{i,t}\right) + \epsilon_{i,t} $$
+    $C=\left\{\infty\right\}$ if a never-treated cohort is available.
 \end{itemize}
 
 \newpage
