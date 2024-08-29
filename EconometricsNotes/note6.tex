@@ -1613,6 +1613,10 @@ the estimation procedure is
     \item[2] estimate weights $\Pr \left\{a\mid a \in [-l,T-l]\right\}$ by sample shares of each cohort in the relevant periods $l\in L$
     \item[3] form the IW estimator as $$ \hat{v}_L = \frac{1}{\left\vert L \right\vert } \sum_{l\in L}\sum_a \hat{\delta}_{a,l} \hat{\Pr} \left\{a \mid a \in [-l,T-l] \right\} $$
 \end{itemize}
+One can also estimate $CATT_{a,l}$ via a DiD approach: assume $\exists$ pre-period $s<a$, then DiD estimate of $CATT_{a,l}$ can be defined as 
+\begin{align*}
+    \hat{\delta}_{a,l} = 
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
