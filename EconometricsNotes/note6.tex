@@ -1621,6 +1621,7 @@ where $C\subseteq \left\{c:a+l< c\leq T\right\}$ are non-empty control cohorts. 
 Under A1 and A2 of Assumption \ref{assump:sa2021assump}, the DiD estimator using any pre-period $s<a$ and non-empty control cohorts $C$ is unbiased and consistent, there is a trade-off between A1 and A2:
 \begin{itemize}
     \item if A2 is more likely to hold: choose any $s<a$ and include not-yet-treated units in control cohorts $C=\left\{c:c>a+l\right\}$, which relaxes the parallel trend assumption to be $$ \mathbb{E}\left[Y^{\infty}_{i,a+l},Y^{\infty}_{i,0} \mid a \right] = \mathbb{E}\left[Y^{\infty}_{i,a+l},Y^{\infty}_{i,0} \mid >a+l \right] $$
+    \item if A2 is relaxed, the the parallel trend assumption needs to hold
 \end{itemize}
 
 \newpage
