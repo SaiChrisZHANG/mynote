@@ -1618,6 +1618,7 @@ One can also estimate $CATT_{a,l}$ via a DiD approach: assume $\exists$ pre-peri
     \hat{\delta}_{a,l} = \frac{\mathbb{E}_N \left[ \left(Y_{i,a+l}-Y_{i,s}\cdot \mathbf{1}\left\{a\right\}\right) \right]}{\mathbb{E}_N\left[\mathbf{1}\left\{a\right\}\right]} - \frac{\mathbb{E}_N \left[ \left(Y_{i,a+l}-Y_{i,s}\cdot \mathbf{1}\left\{C\right\}\right) \right]}{\mathbb{E}_N\left[\mathbf{1}\left\{C\right\}\right]}
 \end{align*}
 where $C\subseteq \left\{c:a+l< c\leq T\right\}$ are non-empty control cohorts. If $s=a-1$, then the DiD estimator is equivalent to the Step 1 estimator.
+Under A1 and A2 of Assumption \ref{assump:sa2021assump}, the DiD estimator using any pre-period $s<a$ and non-empty control cohorts $C$ is unbiased and consistent.
 
 \newpage
 \bibliographystyle{plainnat}
