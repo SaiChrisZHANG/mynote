@@ -1627,7 +1627,7 @@ Under A1 and A2 of Assumption \ref{assump:sa2021assump}, the DiD estimator using
 \paragraph*{\citet{de2020two}} focus on one-period ahead double differences, with control groups that adopt later $a>t$: $$ \hat{\tau}^{t,a}_{t,t-1} = \left(\bar{Y}_{t,t}-\bar{Y}_{t-1,t}\right) - \left(\bar{Y}_{t,a}-\bar{Y}_{t-1,a}\right) $$
 and aggregate these by averaging over all groups that adopt later: $$\hat{\tau}_{+,t} = \frac{1}{T-(a-1)} \sum_{a>t} \hat{\tau}^{t,a}_{t-1,t} $$
 and then average over time periods, weighted by the fraction of adopters in each period $$ \hat{\tau} = \sum^T_{t=2} \hat{\tau}_{+,t} \cdot \Pr \left(A_i=a\mid A_i\geq 2\right) $$
-by limiting the comparsons to those that are separated by \textbf{a single period}, the standard errors may be larger.
+by limiting the comparsons to those that are separated by \textbf{a single period}, the standard errors may be larger. The additivity assumption is more likely over such short horizons, but it also increases sensitivity to dynamic effects.
 
 \newpage
 \bibliographystyle{plainnat}
