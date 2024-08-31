@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex note6"] 1724856020 "note6.aux" "note6.bbl" "note6" 1725019172
+["bibtex note6"] 1725102610 "note6.aux" "note6.bbl" "note6" 1725102611
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "note6.aux" 1725019172 8731 63ea918ff57a1dffec3a4504235a95b6 ""
-  "ref.bib" 1724339310 39123 b1b03c115aa525d8bddc54906d717b4c ""
+  "ref.bib" 1725102610 39493 b2dfe63e8fb47ed5de8ec91bb19721ee ""
   (generated)
-  "note6.bbl"
   "note6.blg"
-["pdflatex"] 1725019169 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf" "note6" 1725019172
+  "note6.bbl"
+["pdflatex"] 1725019169 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf" "note6" 1725102611
   "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.aux" 1725019172 8731 63ea918ff57a1dffec3a4504235a95b6 ""
   "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.tex" 1725019168 151807 d86352fc68bc444a7a1b077f4a1a910a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -325,14 +325,14 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "note6.aux" 1725019172 8731 63ea918ff57a1dffec3a4504235a95b6 ""
-  "note6.bbl" 1724856020 6630 22155ea6fb00c04a3760a38d4e711617 "bibtex note6"
+  "note6.bbl" 1725102611 6630 22155ea6fb00c04a3760a38d4e711617 "bibtex note6"
   "note6.out" 1725019172 2017 3f9a42e3f29eb635d4fb7751e013b30c ""
   "note6.tex" 1725019168 151807 d86352fc68bc444a7a1b077f4a1a910a ""
   "settings.tex" 1700144582 7783 b7a2004fb544200f8d413ab7ddfd0b8a ""
   (generated)
-  "note6.log"
   "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf"
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.log"
+  "note6.log"
   "note6.aux"
-  "note6.out"
   "note6.pdf"
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.log"
+  "note6.out"
