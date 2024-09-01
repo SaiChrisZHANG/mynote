@@ -1630,7 +1630,9 @@ and then average over time periods, weighted by the fraction of adopters in each
 by limiting the comparsons to those that are separated by \textbf{a single period}, the standard errors may be larger. The additivity assumption is more likely over such short horizons, but it also increases sensitivity to dynamic effects.
 
 \paragraph*{\citet{borusyak2024revisiting}} focus on a model richer than TWFE model: $$ Y_{it}(0) = A^T_{it}\lambda_i + X_{it}^T\delta +\epsilon_{it} $$
-where $A_{it}$ and $X_{it}$ are observed covariates, leading to a factor-type structure\footnote{For $A_{it}\equiv 1$ and $X_{it}\equiv \left(\mathbf{1}_{t=1},\cdots,\mathbf{1}_{t=T}\right)$}.
+where $A_{it}$ and $X_{it}$ are observed covariates, leading to a factor-type structure\footnote{For $A_{it}\equiv 1$ and $X_{it}\equiv \left(\mathbf{1}_{t=1},\cdots,\mathbf{1}_{t=T}\right)$}. 
+\citet{borusyak2024revisiting} propose estimating $\lambda_i$ and $\delta$ by least squares using observations for control units only, and later construct \textbf{unit-time} specific imputations for treated units $$ \hat{\tau}_{it} = Y_{it} - A^T_{it}\hat{\lambda}_{i} + X^{T}_{it}\hat{\delta} $$
+which can then be aggregated into an estimator of interest. Even each unit-time specific treatment effect estimator $\hat{\tau}_{it}$ might be inconsistent, the aggregated estimator is well-behaved.
 
 \newpage
 \bibliographystyle{plainnat}
