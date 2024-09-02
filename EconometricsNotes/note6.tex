@@ -1634,6 +1634,9 @@ where $A_{it}$ and $X_{it}$ are observed covariates, leading to a factor-type st
 \citet{borusyak2024revisiting} propose estimating $\lambda_i$ and $\delta$ by least squares using observations for control units only, and later construct \textbf{unit-time} specific imputations for treated units $$ \hat{\tau}_{it} = Y_{it} - A^T_{it}\hat{\lambda}_{i} + X^{T}_{it}\hat{\delta} $$
 which can then be aggregated into an estimator of interest. Even each unit-time specific treatment effect estimator $\hat{\tau}_{it}$ might be inconsistent, the aggregated estimator is well-behaved.
 
+\subsubsection{Comparision of Estimators}
+Out of the four alternatives: \citet{callaway2021difference}'s $\hat{\tau}^{CS}$, \citet{sun2021estimating}'s $\hat{\tau}^{SA}$, \citet{de2020two}'s $\hat{\tau}^{CH}$ and \citet{borusyak2024revisiting}'s $\hat{\tau}^{BJS}$, which should we use?
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
