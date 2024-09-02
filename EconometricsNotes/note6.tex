@@ -1636,6 +1636,14 @@ which can then be aggregated into an estimator of interest. Even each unit-time 
 
 \subsubsection{Comparision of Estimators}
 Out of the four alternatives: \citet{callaway2021difference}'s $\hat{\tau}^{CS}$, \citet{sun2021estimating}'s $\hat{\tau}^{SA}$, \citet{de2020two}'s $\hat{\tau}^{CH}$ and \citet{borusyak2024revisiting}'s $\hat{\tau}^{BJS}$, which should we use?
+One should consider the four arguments:
+\begin{itemize}
+    \item[i] how different is the never-adopter group 
+    \item[ii] for long differences, how additive and stable over time are the differences between units
+    \item[iii] dynamic effect: how one-period differences are different from multiple-period differences 
+    \item[iv] efficiency 
+\end{itemize}
+\citet{arkhangelsky2023causal} recommended to text the presence of sysmteric variation in $\hat{\tau}^{a,a'}_{t,s}$ by adoption date $a$, by the length of the period between before and after $t-s$, and the time since adoption $t-a$, instead of reporting all four.
 
 \newpage
 \bibliographystyle{plainnat}
