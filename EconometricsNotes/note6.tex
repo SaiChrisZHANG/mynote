@@ -1658,10 +1658,16 @@ where $Y^{I}_{1t}$ is the observed treated outcome, $Y^{N}_{1t}$ is the unobserv
 and the weights $\omega_j$ are nonnegative and summing to 1, excluding extrapolation and generally grant sparsity.
 One way to choose $\mathbf{W}$ to resemble the pre-intervention values for the treated unit of predictors of the outcome variable. 
 That is, for nonnegative $v_1,\cdots,v_k$, to \textbf{minimize}
-\begin{equation*}
-    \mathbf{W}^* = \arg\max_{\mathbf{W}} \left\Vert \mathbf{X}_1 - \mathbf{X}_0\mathbf{W} \right\Vert = \arg\max_{\omega_{j}} \sqrt{ \sum^k_{h=1}v_h \left(X_{h1}-\omega_2 X_{h2} - \cdots - \omega_{J+1} X_{hJ+1} \right)^2 }
-\end{equation*}
-then the estimated treatment effect is
+\begin{equation}\label{eq:synthetic_control_weight}
+    \mathbf{W}^* = \arg\min_{\mathbf{W}} \left\Vert \mathbf{X}_1 - \mathbf{X}_0\mathbf{W} \right\Vert = \arg\min_{\omega_{j}} \sqrt{ \sum^k_{h=1}v_h \left(X_{h1}-\omega_2 X_{h2} - \cdots - \omega_{J+1} X_{hJ+1} \right)^2 }
+\end{equation}
+then the estimated treatment effect at $t=T_0+1,\cdots,T$ is $$ \hat{\tau}_{1t} = Y_{1t} - \sum^{J+1}_{j=2}\omega^*_j Y_{jt} $$
+the positive constants $v_1,\cdots,v_k$ reflect the relative importance of the synthetic control reproducing the values of each of the $k$ predictors for the treated unit $X_{11},\cdots,X_{k1}$.
+This is essentially a double-minimizing procedure: 
+\begin{itemize}
+    \item for each given set of weights $\mathbf{V}=\left(v_1,\cdots,v_k\right)$, there is a $\mathbf{W}^*\left(\mathbf{V}\right)$ that solves Equation \ref{eq:synthetic_control_weight}
+    \item choose the $\mathbf{V}^*$ among all possible $\mathbf{V}$, 
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
