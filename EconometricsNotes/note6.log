@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  3 SEP 2024 04:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.7)  4 SEP 2024 04:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1275,28 +1275,28 @@ File: t1npxtt.fd 2000/12/14 v1.0
 LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
 (Font)              scaled to size 10.0pt on input line 44.
  [47]) [48]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1655.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1655.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1656.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1656.
  (/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1655.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1655.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1656.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1656.
 Package rerunfilecheck Info: File `note6.out' has not changed.
-(rerunfilecheck)             Checksum: B703E7965A5BF3535A6656C06FFCB5AC;2177.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1655.
+(rerunfilecheck)             Checksum: 70670B3D7DE51EB7EAE21386AFB1AA7D;2244.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1656.
  ) 
 Here is how much of TeX's memory you used:
- 36885 strings out of 492649
- 866295 string characters out of 6129623
+ 36887 strings out of 492649
+ 866335 string characters out of 6129623
  1077612 words of memory out of 5000000
- 39892 multiletter control sequences out of 15000+600000
+ 39893 multiletter control sequences out of 15000+600000
  140589 words of font info for 228 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,21n,136p,1070b,1214s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ecth-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxbmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/pxmia.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexas.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplbi.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplri.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/newpx/zplx-regular.pfb>
-Output written on /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf (48 pages, 397216 bytes).
+Output written on /Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf (48 pages, 397802 bytes).
 PDF statistics:
- 718 PDF objects out of 1000 (max. 8388607)
- 643 compressed objects within 7 object streams
- 145 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 722 PDF objects out of 1000 (max. 8388607)
+ 647 compressed objects within 7 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 
