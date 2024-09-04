@@ -1647,7 +1647,11 @@ One should consider the four arguments:
 
 \subsection{Synthetic Control Methods}
 \subsubsection{Setting}
-Consider data for $J+1$ units over $T$ periods: $j=1,2,\cdots,J+1$, w.l.o.g., assume the first unit $(j=1)$ is the treated unit, and the first $T_0$ periods are before the intervention. For each unit $j$, we observe outcome $Y_{jt}$ and predictor vector $\mathbf{X}_{j}$
+Consider data for $J+1$ units over $T$ periods: $j=1,2,\cdots,J+1$, w.l.o.g., assume the first unit $(j=1)$ is the treated unit, and the first $T_0$ periods are before the intervention. For each unit $j$, we observe outcome $Y_{jt}$ and predictor vector $\mathbf{X}_{j}$, define the true treatment effect as 
+\begin{align*}
+    \tau_{1t} = Y^I_{1t} - Y^N_{1t}
+\end{align*}
+where $Y^{I}_{1t}$ is the observed treated outcome, $Y^{N}_{1t}$ is the unobservable counterfactual outcome. A synthetic control can then be presented by a $J\times 1$ vector of weights $\mathbf{W}=\left(\omega_2,\cdots,\omega_{J+1}\right)'$,
 
 \newpage
 \bibliographystyle{plainnat}
