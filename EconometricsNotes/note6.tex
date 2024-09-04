@@ -1651,7 +1651,10 @@ Consider data for $J+1$ units over $T$ periods: $j=1,2,\cdots,J+1$, w.l.o.g., as
 \begin{align*}
     \tau_{1t} = Y^I_{1t} - Y^N_{1t}
 \end{align*}
-where $Y^{I}_{1t}$ is the observed treated outcome, $Y^{N}_{1t}$ is the unobservable counterfactual outcome. A synthetic control can then be presented by a $J\times 1$ vector of weights $\mathbf{W}=\left(\omega_2,\cdots,\omega_{J+1}\right)'$,
+where $Y^{I}_{1t}$ is the observed treated outcome, $Y^{N}_{1t}$ is the unobservable counterfactual outcome. A synthetic control can then be presented by a $J\times 1$ vector of weights $\mathbf{W}=\left(\omega_2,\cdots,\omega_{J+1}\right)'$, and the synthetic control estimators are then 
+\begin{align*}
+    \hat{Y}^N_{1t} &= \sum^{J+1}_{j=2}\omega_j Y_{jt} & \hat{\tau} &= Y_{1t}-\hat{Y}^N_{1t}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
