@@ -1668,7 +1668,11 @@ This is essentially a double-minimizing procedure:
     \item for each given set of weights $\mathbf{V}=\left(v_1,\cdots,v_k\right)$, there is a $\mathbf{W}^*\left(\mathbf{V}\right)$ that solves Equation \ref{eq:synthetic_control_weight}
     \item choose the $\mathbf{V}^*$ among all possible $\mathbf{V}$:
     \begin{itemize}
-        \item 
+        \item simple selector: $v_h$ as the \textbf{inverse} of the variance of $X_{h1},\cdots,X_{hJ+1}$, which rescales all rows of to have unit variance
+        \item mean squared prediction error (\textbf{MSPE}) selector:
+        \begin{equation*}
+            \mathbf{V}^* = \arg\min_{\mathbf{V}} \sum_{t\in\mathcal{T}_0}
+        \end{equation*}
     \end{itemize}
 \end{itemize}
 
