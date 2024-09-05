@@ -1671,8 +1671,9 @@ This is essentially a double-minimizing procedure:
         \item simple selector: $v_h$ as the \textbf{inverse} of the variance of $X_{h1},\cdots,X_{hJ+1}$, which rescales all rows of to have unit variance
         \item mean squared prediction error (\textbf{MSPE}) selector:
         \begin{equation*}
-            \mathbf{V}^* = \arg\min_{\mathbf{V}} \sum_{t\in\mathcal{T}_0}
+            \mathbf{V}^* = \arg\min_{\mathbf{V}} \sum_{t\in\mathcal{T}_0} \left( Y_{1t}-\omega_2\left(\mathbf{V}\right)Y_{2t} - \cdots - \omega_{J+1}\left(\mathbf{V}\right)Y_{J+1t} \right)^2
         \end{equation*}
+        for some set $\mathcal{T}_0\subseteq \left\{1,2,\cdots,T_0\right\}$ of the pre-treatment periods.
     \end{itemize}
 \end{itemize}
 
