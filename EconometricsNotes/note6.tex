@@ -1674,6 +1674,11 @@ This is essentially a double-minimizing procedure:
             \mathbf{V}^* = \arg\min_{\mathbf{V}} \sum_{t\in\mathcal{T}_0} \left( Y_{1t}-\omega_2\left(\mathbf{V}\right)Y_{2t} - \cdots - \omega_{J+1}\left(\mathbf{V}\right)Y_{J+1t} \right)^2
         \end{equation*}
         for some set $\mathcal{T}_0\subseteq \left\{1,2,\cdots,T_0\right\}$ of the pre-treatment periods.
+        \item out-of-sample validation selector: 
+        \begin{itemize}
+            \item[1] divide the pre-treatment periods into a \textit{training} period $\{1,\cdots,t_0\}$ and a \textit{validation} periods $\{t_0+1,\cdots,T_0\}$
+            \item[2] for a $\mathbf{V}$, let $\tilde{\omega}_2\left(\mathbf{V}\right),\cdots,\tilde{\omega}_{J+1}\left(\mathbf{V}\right)$ be the weights computed with training period data, apply the MSPE selector on the validation period data as $$ \mathbf{V}^* = \arg\min_{\mathbf{V}} \sum_{t\in\mathcal{T}_0} \left( Y_{1t}-\tilde{\omega}_2\left(\mathbf{V}\right)Y_{2t} - \cdots - \tilde{\omega}_{J+1}\left(\mathbf{V}\right)Y_{J+1t} \right)^2 $$
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 
