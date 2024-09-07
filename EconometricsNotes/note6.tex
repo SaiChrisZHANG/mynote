@@ -1687,6 +1687,9 @@ This is essentially a double-minimizing procedure:
 Consider the linear factor model (a generalization of DiD) for $Y_{jt}^N$: $$ Y_{jt}^N = \delta_t + \boldsymbol{\theta}_t\mathbf{Z}_j + \boldsymbol{\lambda}_t \boldsymbol{\mu}_j + \epsilon_{jt} $$
 where $\delta_t$ is a time trend; $\mathbf{Z}_j$ and $\boldsymbol{\mu}_j$ are vectors of observed and unobserved predictors of $Y^N_{jt}$\footnote{If restricting $\boldsymbol{\lambda}_t\equiv \boldsymbol{\lambda}$, it reduces to DiD/TWFE.}.
 
+When the synthetic control reproduces the characteristics of the treated unit, let $\mathbf{X}_1$ be the vector that includes $\mathbf{Z}_1$ and the pre-intervention outcomes for the treated unit, and let $\mathbf{X}_0$ be the matrix that collects the same variables for the untreated units, and suppose $\mathbf{X}_1=\mathbf{X}_0\mathbf{X}^*$,
+then the bias of $\hat{\tau}_{it}$ is controled by $\epsilon_{it}$ and $T_0$.
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
