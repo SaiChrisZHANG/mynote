@@ -1697,6 +1697,7 @@ In practice, one should
 \begin{itemize}
     \item \myhl[myblue]{check the fitting}: if $\mathbf{X}_1 - \mathbf{X}_0\mathbf{W}^*$ is \textbf{large}, synthetic is substantially biased 
     \item \myhl[myblue]{check the $T_0$}: if the fitting is good, increasing $T_0$ reduces the bias, but if the fitting is bad, infinite $T_0$ won't eliminate bias
+    \item \myhl[myblue]{check the size of pool}: a larger $J$ increase the risk of over-fitting since it gets easier to fit pretreatment outcomes\footnote{In high-dimensional setting $J\rightarrow\infty$ and $T_0\rightarrow \infty$, synthetic control estimators may be asymptotically unbiased.}
 \end{itemize}
 
 \newpage
