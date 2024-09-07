@@ -1688,7 +1688,11 @@ Consider the linear factor model (a generalization of DiD) for $Y_{jt}^N$: $$ Y_
 where $\delta_t$ is a time trend; $\mathbf{Z}_j$ and $\boldsymbol{\mu}_j$ are vectors of observed and unobserved predictors of $Y^N_{jt}$\footnote{If restricting $\boldsymbol{\lambda}_t\equiv \boldsymbol{\lambda}$, it reduces to DiD/TWFE.}.
 
 When the synthetic control reproduces the characteristics of the treated unit, let $\mathbf{X}_1$ be the vector that includes $\mathbf{Z}_1$ and the pre-intervention outcomes for the treated unit, and let $\mathbf{X}_0$ be the matrix that collects the same variables for the untreated units, and suppose $\mathbf{X}_1=\mathbf{X}_0\mathbf{X}^*$,
-then the bias of $\hat{\tau}_{it}$ is controled by $\epsilon_{it}$ and $T_0$.
+then the bias of $\hat{\tau}_{it}$ is controled by $\epsilon_{it}$ and $T_0$:
+\begin{itemize}
+    \item small $\epsilon_{it}$ or large $T_0$: smaller bias
+    \item large $\epsilon_{it}$ or small $T_0$: larger bias\footnote{The intuition: The synthetic control matches $\mathbf{Z}_1$, on the other hand, $\boldsymbol{\mu}_1$ cannot be matched (unobserved), only when differences in the values of the individual transitory shocks between the treated and the synthetic cnotrols compensate for the differences in unobserved factor loadings $\boldsymbol{\mu}_j$.} 
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
