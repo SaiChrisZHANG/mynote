@@ -1684,7 +1684,8 @@ This is essentially a double-minimizing procedure:
 \end{itemize}
 
 \subsubsection{Bias bounds}
-Consider the linear factor model (a generalization of DiD) for $Y_{jt}^N$: $$ Y_{jt}^N = \delta_t + \boldsymbol{theta}_t\mathbf{Z}_j + \boldsymbol{\lambda}_t \boldsymbol{\mu}_j $$
+Consider the linear factor model (a generalization of DiD) for $Y_{jt}^N$: $$ Y_{jt}^N = \delta_t + \boldsymbol{\theta}_t\mathbf{Z}_j + \boldsymbol{\lambda}_t \boldsymbol{\mu}_j + \epsilon_{jt} $$
+where $\delta_t$ is a time trend; $\mathbf{Z}_j$ and $\boldsymbol{\mu}_j$ are vectors of observed and unobserved predictors of $Y^N_{jt}$.
 
 \newpage
 \bibliographystyle{plainnat}
