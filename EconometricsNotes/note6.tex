@@ -1698,7 +1698,9 @@ In practice, one should
     \item \myhl[myblue]{check the fitting}: if $\mathbf{X}_1 - \mathbf{X}_0\mathbf{W}^*$ is \textbf{large}, synthetic is substantially biased 
     \item \myhl[myblue]{check the $T_0$}: if the fitting is good, increasing $T_0$ reduces the bias, but if the fitting is bad, infinite $T_0$ won't eliminate bias
     \item \myhl[myblue]{check the size of pool}: a larger $J$ increase the risk of over-fitting since it gets easier to fit pretreatment outcomes\footnote{In high-dimensional setting $J\rightarrow\infty$ and $T_0\rightarrow \infty$, synthetic control estimators may be asymptotically unbiased.}
+    \item \myhl[myblue]{check linearity}: if $Y^N_{it}$ is determined nonlinearly, even a good fit cannot rule out bias
 \end{itemize}
+\citet{abadie2010synthetic} derived the bias bound as $$ C(p)^{1/p} \left( \frac{\bar{\lambda}^2 F}{\underline{\xi}} \right) J^{1/p} \max  \left\{ \frac{\bar{m}^{1/p}_p}{T^{1-1/p}_0},\frac{\bar{\sigma}}{T^{1/2}_0} \right\} $$
 
 \newpage
 \bibliographystyle{plainnat}
