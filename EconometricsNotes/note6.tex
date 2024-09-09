@@ -1707,8 +1707,9 @@ which also increases with the number of components in $\boldsymbol{\mu}_j$ (the 
 How to choose the predictors $\mathbf{X}_1$ and $\mathbf{X}_0$ is a fundamental task for the synthetic control method. Typically, $\mathbf{X}_1$ and $\mathbf{X}_0$ include 
 \begin{itemize}
     \item pre-intervention values of outcome variable $\mathbf{Y}$
-    \item other predictors $\mathbf{Z}_j$
+    \item other predictors $\mathbf{Z}_j$: excluded $\mathbf{Z}_j$ become part of $\boldsymbol{\mu}_j$, which increase the bound of bias
 \end{itemize}
+one can use data-driven methods for variable selection by measuring the predictive power of alternative sets of variables on the pre-intervention training and validation periods.
 
 \newpage
 \bibliographystyle{plainnat}
