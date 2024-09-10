@@ -1713,6 +1713,11 @@ one can use data-driven methods for variable selection by measuring the predicti
 
 \subsubsection{Inference}
 Consider the test statistic that measures the ratio of the post-intervention fit relative to the pre-intervention fit. For $0\leq t_1\leq t_2\leq T$ and $j=\left\{1,\cdots,J+1\right\}$, let 
+\begin{equation*}
+    R_j\left(t_1,t_2\right) = \sqrt{\frac{1}{t_2-t_1+1}\sum^{t_2}_{t=t_1} \left(Y_{jt}-\hat{Y}^N_{jt}\right)^2}
+\end{equation*}
+where $\hat{Y}^N_{jt}$ is the outcome on $t$ produced by a synthetic control when unit $j$ is coded as treated and using all other $J$ units to construct the donor pool\footnote{This is the root mean squared prediction error (RMSPE) of the synthetic control estimator for unit $j$ and time periods $t_1,\cdots,t_2$.}. The ratio between the post-intervention RMSPE and pre-intervention RMSPE for unit $j$ is 
+$$ r_j = \frac{R_j(T_0+1,T)}{R_j(1,T_0)} $$
 
 \newpage
 \bibliographystyle{plainnat}
