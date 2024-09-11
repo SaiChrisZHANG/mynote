@@ -1720,7 +1720,7 @@ where $\hat{Y}^N_{jt}$ is the outcome on $t$ produced by a synthetic control whe
 $$ r_j = \frac{R_j(T_0+1,T)}{R_j(1,T_0)} $$
 $r_j$ measures the quality of the fit of a synthetic control for unit $j$ in the post-treatment period, relative to the quality of the fit in the pre-treatment period. One then use the permutation distribution of $r_j$ for inference. the $p-$value for the inferential procedure based on the permutation distribution of $r_j$ is given by $$ p = \frac{1}{J+1}\sum^{J+1}_{j=1}I_{+}\left(r_j-r_1\right) $$ 
 where $I_{+}(\cdot)$ is an indicator function that returns one for nonnegative arguments and 0 otherwise\footnote{Replace $Y_{jt}-\hat{Y}_{jt}^N$ in $R(T_0+1,T)$ with their positive or negative parts $\left(Y_{jt}-\hat{Y}_{jt}^N\right)^+$ or $\left(Y_{jt}-\hat{Y}_{jt}^N\right)^-$, leads to one-sided inference, this may increase the power substantially, very important in many cases where samples are considerably small.}.
-This permutation method is not trying to approximate the sampling distributions of test statistics, 
+This permutation method is not trying to approximate the sampling distributions of test statistics, instead, the design-based inference focuses on the variation in the test statistic induced by the assignment mechanism.
 
 \newpage
 \bibliographystyle{plainnat}
