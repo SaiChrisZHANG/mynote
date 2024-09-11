@@ -1718,7 +1718,8 @@ Consider the test statistic that measures the ratio of the post-intervention fit
 \end{equation*}
 where $\hat{Y}^N_{jt}$ is the outcome on $t$ produced by a synthetic control when unit $j$ is coded as treated and using all other $J$ units to construct the donor pool\footnote{This is the root mean squared prediction error (RMSPE) of the synthetic control estimator for unit $j$ and time periods $t_1,\cdots,t_2$.}. The ratio between the post-intervention RMSPE and pre-intervention RMSPE for unit $j$ is 
 $$ r_j = \frac{R_j(T_0+1,T)}{R_j(1,T_0)} $$
-$r_j$ measures the quality of the fit of a synthetic control for unit $j$ in the post-treatment period, relative to the quality of the fit in the pre-treatment period. One then use the permutation distribution of $r_j$ for inference. 
+$r_j$ measures the quality of the fit of a synthetic control for unit $j$ in the post-treatment period, relative to the quality of the fit in the pre-treatment period. One then use the permutation distribution of $r_j$ for inference. the $p-$value for the inferential procedure based on the permutation distribution of $r_j$ is given by $$ p = \frac{1}{J+1}\sum^{J+1}_{j=1}I_{+}\left(r_j-r_1\right) $$ 
+where $I_{+}(\cdot)$ is an indicator function that returns one for nonnegative arguments and 0 otherwise.
 
 \newpage
 \bibliographystyle{plainnat}
