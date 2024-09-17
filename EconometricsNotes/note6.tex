@@ -1753,7 +1753,10 @@ One can apply \myhl[myblue]{\textbf{backdating}} as a diagnostic check to valida
 \subsubsection{Extensions}
 The recent synthetic control literature has extended the original method greatly:
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{Multiple treated units}}: this is more of a practical than conceptual extension, 
+    \item \myhl[myblue]{\textbf{Multiple treated units}}: this is more of a practical than conceptual extension
+    \begin{itemize}
+        \item challenge: optimal weight might not be unique, and typically \textbf{infinite}; if to choose one among the infinite minimizers, large interpolation bias can arise.
+    \end{itemize}
 \end{itemize}
 
 
