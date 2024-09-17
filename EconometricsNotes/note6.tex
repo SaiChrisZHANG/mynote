@@ -1756,7 +1756,8 @@ The recent synthetic control literature has extended the original method greatly
     \item \myhl[myblue]{\textbf{Multiple treated units}}: this is more of a practical than conceptual extension
     \begin{itemize}
         \item challenge: optimal weight might not be unique, and typically \textbf{infinite}; if to choose one among the infinite minimizers, large interpolation bias can arise; the dimensionality curse 
-        \item solution: \citet{abadie2021penalized} propose a synthetic control estimator penalizing pairwise matching discrepancies between the treated units and each of the donor units.
+        \item solution: \citet{abadie2021penalized} propose a synthetic control estimator penalizing pairwise matching discrepancies between the treated units (indexed by $i=1,\cdots,I$) and each of the donor units (indexed by $j=1,\cdots,J$): for each $i=1,\cdots,I$, solve $$ \tilde{\mathbf{W}}^* = \arg\min \left\Vert \mathbf{X}_i-\mathbf{X}_0\mathbf{W} \right\Vert +\lambda \sum^{I+J}_{j=I+1}\omega_i\left\Vert \mathbf{X}_i - \mathbf{X}_j \right\Vert ^2 ,\ \text{s.t. }  \sum^{I+J}_{j=I+1}\omega_j =1,\omega_j\geq 0 $$
+        where the penalizing parameter $\lambda>0$ reduces interpolation biases and gives unique and sparse minimizer, $\lambda \rightarrow \infty$ converges to one-to-one matching, $\lambda\rightarrow 0$ gives an aggregate minimizer. 
     \end{itemize}
 \end{itemize}
 
