@@ -1755,7 +1755,8 @@ The recent synthetic control literature has extended the original method greatly
 \begin{itemize}
     \item \myhl[myblue]{\textbf{Multiple treated units}}: this is more of a practical than conceptual extension
     \begin{itemize}
-        \item challenge: optimal weight might not be unique, and typically \textbf{infinite}; if to choose one among the infinite minimizers, large interpolation bias can arise.
+        \item challenge: optimal weight might not be unique, and typically \textbf{infinite}; if to choose one among the infinite minimizers, large interpolation bias can arise; the dimensionality curse 
+        \item solution: \citet{abadie2021penalized} propose a synthetic control estimator penalizing pairwise matching discrepancies between the treated units and each of the donor units.
     \end{itemize}
 \end{itemize}
 
