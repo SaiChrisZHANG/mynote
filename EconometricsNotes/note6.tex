@@ -1761,7 +1761,7 @@ The recent synthetic control literature has extended the original method greatly
     \end{itemize}
     \item \myhl[myblue]{\textbf{Bias correction}}: some of the treated units just may not be closely reproduced by a synthetic control, but these ill-fitted units have to be included for interpretation of the estimate. In this case, first regress untreated outcomes $Y_{I+1,t},\cdots,Y_{I+J,t}$ on the values of the predictors for the untreated units $\mathbf{X}_{I+1},\cdots,\mathbf{Y}_{I+J}$ to get $\hat{\mu}_{0t}$, then the bias-corrected synthetic control estimator for unit $i$ is 
     $$ \hat{\tau}_{it} = \left( Y_{it} - \sum^{I+J}_{j=I+1}\omega^*_{ij}Y_{jt} \right) - \sum^{I+J}_{j=I+1}\omega^*_{ij}\left(\hat{\mu}_{0t}\left(\mathbf{X}_i\right)-\hat{\mu}_{0t}\left(\mathbf{X}_j\right)\right) $$ alternatively 
-    $$ \hat{\tau}_{it} =  $$
+    $$ \hat{\tau}_{it} = \left(Y_{it}-\hat{\mu}_{0t}\left(\mathbf{X}_i\right)\right) - \sum^{I+J}_{j=I+1}\omega^*_{ij}\left(Y_{jt}-\hat{\mu}_{0t}\left(\mathbf{X}_j\right)\right) $$
 \end{itemize}
 
 
