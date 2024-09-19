@@ -1763,7 +1763,10 @@ The recent synthetic control literature has extended the original method greatly
     $$ \hat{\tau}_{it} = \left( Y_{it} - \sum^{I+J}_{j=I+1}\omega^*_{ij}Y_{jt} \right) - \sum^{I+J}_{j=I+1}\omega^*_{ij}\left(\hat{\mu}_{0t}\left(\mathbf{X}_i\right)-\hat{\mu}_{0t}\left(\mathbf{X}_j\right)\right) $$ alternatively 
     $$ \hat{\tau}_{it} = \left(Y_{it}-\hat{\mu}_{0t}\left(\mathbf{X}_i\right)\right) - \sum^{I+J}_{j=I+1}\omega^*_{ij}\left(Y_{jt}-\hat{\mu}_{0t}\left(\mathbf{X}_j\right)\right) $$
     one can also use a pre-trend type test on the pre-treatment sample to estimate any potential bias.
-    \item \myhl[myblue]{\textbf{Regression-based methods and extrapolation}}
+    \item \myhl[myblue]{\textbf{Regression-based methods and extrapolation}}: \citet{doudchenko2016balancing} propose a non-convex combination (negative weights, not summing to 1) with elastic net regularization:
+    \begin{align*}
+        \hat{\alpha},\hat{\mathbf{W}} = \arg\max_{\alpha,\omega_2,\cdots,\omega_{J+1}} \sum^{T_0}_{t=1} \left( Y_{1t} - \alpha - \sum^{J+1}_{j=2}\omega_jY_{jt} \right)^2 + \lambda_1 \left(\frac{1-\lambda_2}{2}\sum^{J+1}_{j=2}\omega^2_j + \lambda_2 \sum^{J+1}_{j=2}\left\vert \omega_j \right\vert\right)
+    \end{align*}
 \end{itemize}
 
 
