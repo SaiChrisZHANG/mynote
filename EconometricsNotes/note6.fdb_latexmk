@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex note6"] 1726761229 "note6.aux" "note6.bbl" "note6" 1726761352
+["bibtex note6"] 1726761229 "note6.aux" "note6.bbl" "note6" 1726761439
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1480098435 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "note6.aux" 1726761352 10508 f6e03fd2d5ade589c542d4ff54ad770b ""
+  "note6.aux" 1726761438 10508 f6e03fd2d5ade589c542d4ff54ad770b ""
   "ref.bib" 1726760829 41750 6cc58fd0ac54ceedaa2003830672c502 ""
   (generated)
-  "note6.blg"
   "note6.bbl"
-["pdflatex"] 1726761348 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf" "note6" 1726761352
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.aux" 1726761352 10508 f6e03fd2d5ade589c542d4ff54ad770b ""
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.tex" 1726761348 170234 0e1393b8aa351814174cb347e13d6f9e ""
+  "note6.blg"
+["pdflatex"] 1726761435 "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.tex" "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf" "note6" 1726761439
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.aux" 1726761438 10508 f6e03fd2d5ade589c542d4ff54ad770b ""
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.tex" 1726761434 170301 fd5d9df68d31c52b0253ec2a7649cb1e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/ecsups.enc" 1480098668 6292 5f5eff34c010300454c6de629a3dbaf4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/newpx/tgpdiff.enc" 1480098668 2578 b708622871ecc9a6e7e3801756bb26ff ""
@@ -330,15 +330,15 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1546876434 4220279 03775d5b636d111d69743b04dcd76273 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "note6.aux" 1726761352 10508 f6e03fd2d5ade589c542d4ff54ad770b ""
+  "note6.aux" 1726761438 10508 f6e03fd2d5ade589c542d4ff54ad770b ""
   "note6.bbl" 1726761229 8158 8e94c121a29e5afa52333cb03d1a4613 "bibtex note6"
-  "note6.out" 1726761352 2613 a7f4f3279a58508eeb156a8b8411657a ""
-  "note6.tex" 1726761348 170234 0e1393b8aa351814174cb347e13d6f9e ""
+  "note6.out" 1726761438 2613 a7f4f3279a58508eeb156a8b8411657a ""
+  "note6.tex" 1726761434 170301 fd5d9df68d31c52b0253ec2a7649cb1e ""
   "settings.tex" 1700144582 7783 b7a2004fb544200f8d413ab7ddfd0b8a ""
   (generated)
-  "note6.log"
   "note6.pdf"
   "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.pdf"
-  "note6.out"
-  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.log"
   "note6.aux"
+  "note6.out"
+  "note6.log"
+  "/Users/admin/Library/CloudStorage/Dropbox/MyPresentations/mynote/EconometricsNotes/note6.log"
