@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -35,6 +35,12 @@ Muhammad Amjad, Devavrat Shah, and Dennis Shen.
 \newblock Robust synthetic control.
 \newblock \emph{Journal of Machine Learning Research}, 19\penalty0
   (22):\penalty0 1--51, 2018.
+
+\bibitem[Amjad et~al.(2019)Amjad, Misra, Shah, and Shen]{amjad2019mrsc}
+Muhammad Amjad, Vishal Misra, Devavrat Shah, and Dennis Shen.
+\newblock mrsc: Multi-dimensional robust synthetic control.
+\newblock \emph{Proceedings of the ACM on Measurement and Analysis of Computing
+  Systems}, 3\penalty0 (2):\penalty0 1--27, 2019.
 
 \bibitem[Arkhangelsky and Imbens(2023)]{arkhangelsky2023causal}
 Dmitry Arkhangelsky and Guido Imbens.
