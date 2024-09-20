@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,6 +29,12 @@ Alberto Abadie, Alexis Diamond, and Jens Hainmueller.
   the effect of california’s tobacco control program.
 \newblock \emph{Journal of the American statistical Association}, 105\penalty0
   (490):\penalty0 493--505, 2010.
+
+\bibitem[Amjad et~al.(2018)Amjad, Shah, and Shen]{amjad2018robust}
+Muhammad Amjad, Devavrat Shah, and Dennis Shen.
+\newblock Robust synthetic control.
+\newblock \emph{Journal of Machine Learning Research}, 19\penalty0
+  (22):\penalty0 1--51, 2018.
 
 \bibitem[Arkhangelsky and Imbens(2023)]{arkhangelsky2023causal}
 Dmitry Arkhangelsky and Guido Imbens.
