@@ -1770,6 +1770,7 @@ The recent synthetic control literature has extended the original method greatly
     the 2 regularization parameters $\lambda_1\geq 0$ and $0\leq \lambda_2\leq 1$ are selected by cross-validation. $Y_{jt}$ should be residualized first w.r.t. any other covariates.
     \item \myhl[myblue]{\textbf{Matrix completion/estimation methods}}: \citet{amjad2018robust} posit a nonlinear factor structure model for the untreated $$ Y^N_{jt} = f\left(\mu_j,\lambda_t\right) +\epsilon_{jt},\ \ ,j=2,\cdots,J+1;t=1,\cdots,T$$
     and estimate a low-rank approximation $\left\{\hat{M}_{jt}\right\}$ to the true matrix $\left\{M_{jt}\right\} = \left\{f(\mu_j,\lambda_t)\right\}$, and the $\hat{M}_{jt}$ are used to de-noise the outcomes $Y^N_{jt}$ and to impute missing values, and obtain synthetic controls as linear combinations of $\hat{M}_{jt}$, with coefficients estimated by ridge regression of $Y_{1t}$ on $\hat{M}_{2t},\cdots,\hat{M}_{J+1t}$ in the pre-intervention periods. \citet{amjad2019mrsc} extended this framework to allow covariates.
+    \item \myhl[myblue]{\textbf{Inference}}
 \end{itemize}
 
 
