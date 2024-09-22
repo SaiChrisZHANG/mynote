@@ -1772,7 +1772,8 @@ The recent synthetic control literature has extended the original method greatly
     and estimate a low-rank approximation $\left\{\hat{M}_{jt}\right\}$ to the true matrix $\left\{M_{jt}\right\} = \left\{f(\mu_j,\lambda_t)\right\}$, and the $\hat{M}_{jt}$ are used to de-noise the outcomes $Y^N_{jt}$ and to impute missing values, and obtain synthetic controls as linear combinations of $\hat{M}_{jt}$, with coefficients estimated by ridge regression of $Y_{1t}$ on $\hat{M}_{2t},\cdots,\hat{M}_{J+1t}$ in the pre-intervention periods. \citet{amjad2019mrsc} extended this framework to allow covariates.
     \item \myhl[myblue]{\textbf{Inference}}: \citet{chernozhukov2017double} propose a sampling-based inference procedure, assuming a DGP $$ Y^N_{1t} = P^N_t+u_t,\ \ u_1,\cdots,u_T\text{ are stationary, weakly dependent with mean 0} $$
     Let $\tau_{T_0+1},\cdots,\tau_T$ be the effects of the treatment on the treated unit, then the potential outcome under the intervention is $$ Y^I_{1t}=P^N_{t}+\tau_t+u_t, t>T_0$$
-    assume $u_t$ to be i.i.d., then the post-intervention distribution of $u_t$ 
+    assume $u_t$ to be i.i.d., then the post-intervention distribution of $u_t$ survive any random permutation. Suppose $P^N_t$ known, under a null hypothesis $$ H_0:\tau_{T_0+1}=a_{T_0+1},\cdots,\tau_T=a_T $$
+    then, we can compute $u_t = Y_{1t}-P^N_t-a_t$ where $a_t=0$ for $1\leq t\leq T_0$, then $H_0$ can be tested by comparing the distibution $S\left(u_{T_0+1},\cdots,u_T\right)$ to its permutation distribution $S\left(u_{\pi(T_0+1)},\cdots,u_{\pi(T)}\right)$, which can be directly computed in the data. 
 \end{itemize}
 
 
