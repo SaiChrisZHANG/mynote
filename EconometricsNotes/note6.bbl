@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{31}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -100,6 +100,13 @@ Brantly Callaway, Tong Li, and Tatsushi Oka.
   \url{https://www.sciencedirect.com/science/article/pii/S0304407618301027}.
 \newblock Special issue on Advances in Econometric Theory: Essays in honor of
   Takeshi Amemiya.
+
+\bibitem[Chernozhukov et~al.(2019)Chernozhukov, Wuthrich, and
+  Zhu]{chernozhukov2019practical}
+V~Chernozhukov, K~Wuthrich, and Y~Zhu.
+\newblock Practical and robust t-test based inference for synthetic control and
+  related methods. arxiv e-prints.
+\newblock \emph{arXiv preprint arXiv:1812.10820}, 2019.
 
 \bibitem[Chernozhukov et~al.(2017)Chernozhukov, Chetverikov, Demirer, Duflo,
   Hansen, and Newey]{chernozhukov2017double}

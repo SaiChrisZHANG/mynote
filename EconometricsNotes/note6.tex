@@ -1775,6 +1775,8 @@ The recent synthetic control literature has extended the original method greatly
     assume $u_t$ to be i.i.d., then the post-intervention distribution of $u_t$ survive any random permutation. Suppose $P^N_t$ known, under a null hypothesis $$ H_0:\tau_{T_0+1}=a_{T_0+1},\cdots,\tau_T=a_T $$
     then, we can compute $u_t = Y_{1t}-P^N_t-a_t$ where $a_t=0$ for $1\leq t\leq T_0$, then $H_0$ can be tested by comparing the distibution $S\left(u_{T_0+1},\cdots,u_T\right)$ to its permutation distribution $S\left(u_{\pi(T_0+1)},\cdots,u_{\pi(T)}\right)$, which can be directly computed in the data. For synthetic control method, \citet{chernozhukov2021exact} adopt the model $$ P^N_t=\sum^{J+1}_{j=2}\omega_jY_{jt},\ \ \text{where }\omega_j\geq 0,\sum^{J+1}_{j=2}\omega_j=1\text{ and }\mathbb{E}\left[u_tY_{jt}\right]=0,j=2,\cdots,J+1 $$
     and apply the text on constrained least squares residuals $\hat{u}_1,\cdots,\hat{u}_T$. \citet{chernozhukov2021exact} do not assume a linear factor model, but restrict $\mathbb{E}\left[u_tY_{jt}\right]=0$ to estimate $P^N_t$; the synthetic control weights are estimated under $\tau_{T_0+1}=a_{T_0+1},\cdots,\tau_T=a_T$ using data on $Y^N_{it}=Y_{it}-a_t$ for all periods, including post intervention periods.
+
+    Similarly, \citet{chernozhukov2019practical} propose bias-corrected estimation and CIs for the post-treatment ATE, $ \left(\tau_{T_0+1}+\cdots+\tau_T\right)/(T-T_0) $ in settings when both $T_0$ and $T-T_0$ are large.
 \end{itemize}
 
 
