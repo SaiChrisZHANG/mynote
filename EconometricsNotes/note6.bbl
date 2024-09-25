@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -53,6 +53,14 @@ Susan Athey, Guido~W Imbens, and Stefan Wager.
   treatment effects in high dimensions.
 \newblock \emph{Journal of the Royal Statistical Society Series B: Statistical
   Methodology}, 80\penalty0 (4):\penalty0 597--623, 2018.
+
+\bibitem[Athey et~al.(2021)Athey, Bayati, Doudchenko, Imbens, and
+  Khosravi]{athey2021matrix}
+Susan Athey, Mohsen Bayati, Nikolay Doudchenko, Guido Imbens, and Khashayar
+  Khosravi.
+\newblock Matrix completion methods for causal panel data models.
+\newblock \emph{Journal of the American Statistical Association}, 116\penalty0
+  (536):\penalty0 1716--1730, 2021.
 
 \bibitem[Bang and Robins(2005)]{bang2005doubly}
 Heejung Bang and James~M Robins.
