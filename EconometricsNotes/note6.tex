@@ -1790,6 +1790,10 @@ and the matrix $\mathbf{L}$ with typical element $L_{it}$ is a low-rank matrix.
 In practice, it improves the performance of the estimator substantially to keep these fixed effect components in the specification separately from the low-rank component $\mathbf{L}$. \citet{athey2021matrix} propose estimating $\mathbf{L},\boldsymbol{\alpha,\beta}$ by
 $$ \mathbf{L}^*,\boldsymbol{\alpha}^*,\boldsymbol{\beta}^* = \arg\min_{L_{it},\alpha_{i},\beta_{t}} \sum^N_{i=1}\sum^T_{t=1}\left(1-W_{it}\right)\left(Y_{it}-L_{it}-\alpha_i-\beta_t\right)^2 + \lambda \left\Vert \mathbf{L} \right\Vert _* $$
 where the nuclear norm $\left\Vert \mathbf{L} \right\Vert _*$ is the sum of the singular values $\sigma_l\left(\mathbf{L}\right)$ of the matrix $\mathbf{L}$, based on the singular value decomposition $$\mathbf{L}=\underbrace{\mathbf{S}}_{N\times N} \underbrace{\boldsymbol{\Sigma}}_{N\times T} \underbrace{\mathbf{R}}_{T\times T}$$
+and the penalty parameter $\lambda$ is chosen through crossvalidation.
+
+\subsubsection*{Robust synthetic control}
+
 
 \newpage
 \bibliographystyle{plainnat}
