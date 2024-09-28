@@ -1796,7 +1796,10 @@ and the penalty parameter $\lambda$ is chosen through crossvalidation.
 Consider a setup where
 $$ Y_{it}(0) = \theta_{G_i,t} + \epsilon_{it} $$
 where the group membership and the number of groups $G$ are both unknown.
-\citet{bonhomme2022discretizing}
+\citet{bonhomme2022discretizing} write the model as a factor model with $G$ factors $\lambda_{rt}$ and the loadings equal to indicators $\alpha_{ir}=\mathbf{1}_{G_i=r}$, such that $$ Y_{it}(0) = \theta_{G_i,t}+\epsilon_{it} = \sum^G_{r=1}\alpha_{ir}\lambda_{rt} + \epsilon_{it} $$
+
+\subsubsection*{Tuning}
+How to specify the tuning parameters is a common challenge for the methods mentioned above, 
 
 \newpage
 \bibliographystyle{plainnat}
