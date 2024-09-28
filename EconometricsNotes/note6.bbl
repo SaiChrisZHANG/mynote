@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -66,6 +66,12 @@ Susan Athey, Mohsen Bayati, Nikolay Doudchenko, Guido Imbens, and Khashayar
 Heejung Bang and James~M Robins.
 \newblock Doubly robust estimation in missing data and causal inference models.
 \newblock \emph{Biometrics}, 61\penalty0 (4):\penalty0 962--973, 2005.
+
+\bibitem[Bonhomme et~al.(2022)Bonhomme, Lamadon, and
+  Manresa]{bonhomme2022discretizing}
+St{\'e}phane Bonhomme, Thibaut Lamadon, and Elena Manresa.
+\newblock Discretizing unobserved heterogeneity.
+\newblock \emph{Econometrica}, 90\penalty0 (2):\penalty0 625--643, 2022.
 
 \bibitem[Bonhomme and Sauder(2011)]{bonhomme2011recover}
 Stéphane Bonhomme and Ulrich Sauder.
