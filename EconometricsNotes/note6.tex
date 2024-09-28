@@ -1792,7 +1792,9 @@ $$ \mathbf{L}^*,\boldsymbol{\alpha}^*,\boldsymbol{\beta}^* = \arg\min_{L_{it},\a
 where the nuclear norm $\left\Vert \mathbf{L} \right\Vert _*$ is the sum of the singular values $\sigma_l\left(\mathbf{L}\right)$ of the matrix $\mathbf{L}$, based on the singular value decomposition $$\mathbf{L}=\underbrace{\mathbf{S}}_{N\times N} \underbrace{\boldsymbol{\Sigma}}_{N\times T} \underbrace{\mathbf{R}}_{T\times T}$$
 and the penalty parameter $\lambda$ is chosen through crossvalidation.
 
-\subsubsection*{Robust synthetic control}
+\subsubsection*{Grouped Panel Data}
+Consider a setup where
+$$ Y_{it}(0) = \theta_{G_i,t} + epsilon_{it} $$
 
 
 \newpage
