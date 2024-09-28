@@ -1798,8 +1798,10 @@ $$ Y_{it}(0) = \theta_{G_i,t} + \epsilon_{it} $$
 where the group membership and the number of groups $G$ are both unknown.
 \citet{bonhomme2022discretizing} write the model as a factor model with $G$ factors $\lambda_{rt}$ and the loadings equal to indicators $\alpha_{ir}=\mathbf{1}_{G_i=r}$, such that $$ Y_{it}(0) = \theta_{G_i,t}+\epsilon_{it} = \sum^G_{r=1}\alpha_{ir}\lambda_{rt} + \epsilon_{it} $$
 
-\subsubsection*{Tuning}
-How to specify the tuning parameters is a common challenge for the methods mentioned above, 
+\subsubsection*{Synthetic DiD}
+Once the synthetic control weights are calculated, the SC estimator can be characterized as $$ \min_{\beta,\tau}\sum^N_{i=1}\sum^T_{t=1}\hat{\omega}_i\left( Y_{it} -\beta_t -\tau W_{it}\right)^2 $$
+the TWFE estimator is based on a slightly different LS regression $$ \min_{beta,\alpha,\tau}\sum^N_{i=1}\sum^T_{t=1}\left(Y_{it}-\alpha_i-\beta_t -\tau W_{it}\right)^2 $$
+
 
 \newpage
 \bibliographystyle{plainnat}
