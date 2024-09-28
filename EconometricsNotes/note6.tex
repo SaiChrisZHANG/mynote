@@ -1800,8 +1800,9 @@ where the group membership and the number of groups $G$ are both unknown.
 
 \subsubsection*{Synthetic DiD}
 Once the synthetic control weights are calculated, the SC estimator can be characterized as $$ \min_{\beta,\tau}\sum^N_{i=1}\sum^T_{t=1}\hat{\omega}_i\left( Y_{it} -\beta_t -\tau W_{it}\right)^2 $$
-the TWFE estimator is based on a slightly different LS regression $$ \min_{beta,\alpha,\tau}\sum^N_{i=1}\sum^T_{t=1}\left(Y_{it}-\alpha_i-\beta_t -\tau W_{it}\right)^2 $$
-
+the TWFE estimator is based on a slightly different LS regression $$ \min_{\beta,\alpha,\tau}\sum^N_{i=1}\sum^T_{t=1}\left(Y_{it}-\alpha_i-\beta_t -\tau W_{it}\right)^2 $$
+The SC method ignores individual fixed effects $\alpha_i$, one way to deal with this is the Synthetic DiD estimator $$ \min_{\beta,\alpha,\tau}\sum^N_{i=1}\sum^T_{t=1}\hat{\omega}_i\hat{\lambda}_t\left(Y_{it}-\alpha_i-\beta_t -\tau W_{it}\right)^2 $$
+where an analogous time weights $\hat{\lambda}_t$ are calculated  as $$ \min_{\lambda} \sum^{N-1}_{i=1}\left(Y_{it}-\sum^{T-1}_{s=1}\lambda_sY_{is}\right)^2 $$ s.t. $\lambda_s\geq 0$ and $\sum^{T-1}_{s=1}\lambda_s=1$.
 
 \newpage
 \bibliographystyle{plainnat}
