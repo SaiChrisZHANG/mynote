@@ -1805,6 +1805,16 @@ The SC method ignores individual fixed effects $\alpha_i$, one way to deal with 
 where an analogous time weights $\hat{\lambda}_t$ are calculated  as $$ \min_{\lambda} \sum^{N-1}_{i=1}\left(Y_{it}-\sum^{T-1}_{s=1}\lambda_sY_{is}\right)^2 $$ s.t. $\lambda_s\geq 0$ and $\sum^{T-1}_{s=1}\lambda_s=1$.
 
 \subsubsection{Augmented Synthetic Control}
+\citet{ben2021augmented} augment the SC estimator by regressing the outcomes in the treatment period on the lagged outcomes using data for the control units. Using ridge regression for this step:
+\begin{equation*}
+    \hat{\eta} = \arg\min_{\eta} \sum^{N-1}_{i=1} \left( Y_{iT} - \eta_0 - \sum^{T-1}_{s=1}\eta_sY_{is} \right)^2 + \lambda \sum^{T-1}_{s=1}\eta^2_s
+\end{equation*}
+a standard unconfoundedness approach predicts the potential control outcome for the treated unit/time period pair as $$ \hat{Y}_{NT} = \hat{\eta}_0 + \sum^{T-1}_{s=1}\hat{\eta}_s Y_{Ns} $$
+and augmented SC estimator modifies this in a bias-adjustment way:
+\begin{align*}
+    \hat{Y}_{NT} &= \hat{\eta}_0 + \sum^{T-1}_{s=1}\hat{\eta}_s Y_{Ns} + \sum^{T-1}_{i=1}\omega_i \left(Y_{iT}-\hat{\eta}_0 - \sum^{T-1}_{s=1}\hat{\eta}_s Y_{is}\right) \\
+    & = \sum^{N-1}_{i=1}\omega_i Y_{iT} + \sum^{T-1}_{s=1}\hat{\eta}_s \left(Y_{Ns}-\sum^{N-1}_{j=1}\omega Y_{js}\right)
+\end{align*}
 
 
 \newpage

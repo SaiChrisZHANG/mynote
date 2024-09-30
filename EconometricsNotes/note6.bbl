@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -66,6 +66,13 @@ Susan Athey, Mohsen Bayati, Nikolay Doudchenko, Guido Imbens, and Khashayar
 Heejung Bang and James~M Robins.
 \newblock Doubly robust estimation in missing data and causal inference models.
 \newblock \emph{Biometrics}, 61\penalty0 (4):\penalty0 962--973, 2005.
+
+\bibitem[Ben-Michael et~al.(2021)Ben-Michael, Feller, and
+  Rothstein]{ben2021augmented}
+Eli Ben-Michael, Avi Feller, and Jesse Rothstein.
+\newblock The augmented synthetic control method.
+\newblock \emph{Journal of the American Statistical Association}, 116\penalty0
+  (536):\penalty0 1789--1803, 2021.
 
 \bibitem[Bonhomme et~al.(2022)Bonhomme, Lamadon, and
   Manresa]{bonhomme2022discretizing}
