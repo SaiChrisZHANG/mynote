@@ -33,6 +33,7 @@
 \BOOKMARK [3][-]{subsubsection.1.7.6}{Extensions}{subsection.1.7}% 33
 \BOOKMARK [2][-]{subsection.1.8}{Matrix Completion Methods and Factor Models}{section.1}% 34
 \BOOKMARK [3][-]{subsubsection.1.8.1}{Matrix completion with nuclear norm regularization}{subsection.1.8}% 35
-\BOOKMARK [3][-]{subsubsection.1.8.2}{Synthetic DiD}{subsection.1.8}% 36
-\BOOKMARK [3][-]{subsubsection.1.8.3}{Augmented Synthetic Control}{subsection.1.8}% 37
-\BOOKMARK [2][-]{subsection.1.9}{Unconfoundedness, DiD, SC and Matrix Completion}{section.1}% 38
+\BOOKMARK [3][-]{subsubsection.1.8.2}{Grouped Panel Data}{subsection.1.8}% 36
+\BOOKMARK [3][-]{subsubsection.1.8.3}{Synthetic DiD}{subsection.1.8}% 37
+\BOOKMARK [3][-]{subsubsection.1.8.4}{Augmented Synthetic Control}{subsection.1.8}% 38
+\BOOKMARK [2][-]{subsection.1.9}{Unconfoundedness, DiD, SC and Matrix Completion}{section.1}% 39

@@ -1792,7 +1792,7 @@ $$ \mathbf{L}^*,\boldsymbol{\alpha}^*,\boldsymbol{\beta}^* = \arg\min_{L_{it},\a
 where the nuclear norm $\left\Vert \mathbf{L} \right\Vert _*$ is the sum of the singular values $\sigma_l\left(\mathbf{L}\right)$ of the matrix $\mathbf{L}$, based on the singular value decomposition $$\mathbf{L}=\underbrace{\mathbf{S}}_{N\times N} \underbrace{\boldsymbol{\Sigma}}_{N\times T} \underbrace{\mathbf{R}}_{T\times T}$$
 and the penalty parameter $\lambda$ is chosen through crossvalidation.
 
-\subsubsection*{Grouped Panel Data}
+\subsubsection{Grouped Panel Data}
 Consider a setup where
 $$ Y_{it}(0) = \theta_{G_i,t} + \epsilon_{it} $$
 where the group membership and the number of groups $G$ are both unknown.
@@ -1817,7 +1817,14 @@ and augmented SC estimator modifies this in a bias-adjustment way:
 \end{align*}
 
 \subsection{Unconfoundedness, DiD, SC and Matrix Completion}
-
+For the case with a single treated unit-period pair, unit $N$ in period $T$, the observed ccontrol outcomes are $\mathbf{Y}$, partitioned as 
+$$
+\mathbf{Y} = \begin{pmatrix}
+    \mathbf{Y}_0 & \mathbf{y}_1\\
+    \mathbf{y}_2' & ?
+\end{pmatrix}
+$$
+where the $(N,T)$ entry is missing.
 
 \newpage
 \bibliographystyle{plainnat}
