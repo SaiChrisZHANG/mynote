@@ -1825,7 +1825,10 @@ $$
 \end{pmatrix}
 $$
 where the $(N,T)$ entry is missing. In some cases, linear versions of all four estimators can all be characterized as solutions to the same optimization problem, s.t. different restrictions on parameters of that optimization problem.
-
+For a positive integer $R$, an $N\times R$ matrix $\mathbf{U}$, an $T\times R$ matrix $\mathbf{V}$, an $N-$vector $\boldsymbol{\alpha}$ and a $T-$vector $\boldsymbol{\beta}$, and a scalar $\lambda$, the objective function 
+\begin{align*}
+    Q \left(R, \mathbf{U,V}, \boldsymbol{\alpha},\boldsymbol{\beta},\lambda\right) \equiv &= \sum^N_{i=1}\sum^T_{t=1} \left(1-W_{it}\right) \left(Y_{it}\sum^R_{r=1}U_{ir}V_{ir}-\alpha_i-\beta_t\right)^2 + \lambda \left(\sum^N_{i=1}\sum^R_{r=1}U^2_{ir}\right)
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
