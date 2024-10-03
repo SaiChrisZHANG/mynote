@@ -1832,7 +1832,14 @@ For a positive integer $R$, an $N\times R$ matrix $\mathbf{U}$, an $T\times R$ m
 optimizing this over $R, \mathbf{U,V}, \boldsymbol{\alpha},\boldsymbol{\beta}$ given $\lambda=0$ does not lead to a unique solution without more structure added:
 \begin{itemize}
     \item \textbf{nuclear norm matrix completetion}: choose $\lambda$ via cross-validation 
-    \item \textbf{unconfoundedness}: 
+    \item \textbf{unconfoundedness}: the unconfoundedness regression can be characterized as the solution to minize the objective function with restrictions 
+    \begin{align*}
+        R&=T-1 & \mathbf{U}&= \begin{pmatrix}
+            \mathbf{Y}_0 \\
+            \mathbf{y}_2'
+        \end{pmatrix}\\
+        \alpha &=0 & \beta_1&=\beta_2=\cdots=\beta_{T-1}=0 &\lambda&=0
+    \end{align*}
 \end{itemize}
 
 \newpage
