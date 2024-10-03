@@ -1838,8 +1838,17 @@ optimizing this over $R, \mathbf{U,V}, \boldsymbol{\alpha},\boldsymbol{\beta}$ g
             \mathbf{Y}_0 \\
             \mathbf{y}_2'
         \end{pmatrix}\\
-        \alpha &=0 & \beta_1&=\beta_2=\cdots=\beta_{T-1}=0 &\lambda&=0
+        \boldsymbol{\alpha} &=\mathbf{0} & \beta_1&=\beta_2=\cdots=\beta_{T-1}=0 &\lambda&=0
     \end{align*}
+    \item \textbf{synthetic control}: the SC estimator imposes the restrictions s.t.
+    \begin{align*}
+        R&=N-1 & \mathbf{V}&= \begin{pmatrix}
+            \mathbf{Y}_0' \\
+            \mathbf{y}_1'
+        \end{pmatrix} & U_{iT}&\geq 0, \sum^{N-1}_{i=1}A_{iT}=1,\forall i\\
+        \boldsymbol{\alpha} &=\mathbf{0} &  \boldsymbol{\beta} &=\mathbf{0} &\lambda&=0
+    \end{align*}
+    \item \textbf{DiD}: restriction is just $R=0$.
 \end{itemize}
 
 \newpage
