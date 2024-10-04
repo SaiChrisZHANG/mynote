@@ -1856,7 +1856,13 @@ Outside of a few special cases, to justify the conventional parallel trends assu
 
 Consider a model of $$ Y_{it}(0) = \alpha_i + \beta_t + \epsilon_{it} $$ where $\epsilon_{it}\bot \alpha_i$ and $\tau=Y_{it}(1)-Y_{it}(0)$. If
 \begin{itemize}
-    \item 
+    \item $D_i$ is mean-independent from $\left(\epsilon_{i1},\cdots,\epsilon_{iT_0+1}\right)$: both DiD and SC estimators work fine.
+    \item $D_i$ is correlated with $\left(\epsilon_{i1},\cdots,\epsilon_{iT_0+1}\right)$:
+    \begin{itemize}
+        \item worse scenario: correlation completely unrestricted, no method can identify the treatment effect 
+        \item natural selection assumption: assuming selection on fixed effects and unconfoundedness $$ D_i\bot Y_{iT_0+1}\mid \alpha_i,Y_{i1},\cdots,Y_{iT_0}(0) $$
+        if $\epsilon_{it}$ are autocorrelated, the DiD estimator is inconsistent, even when $T_0\rightarrow\infty$, since $\epsilon_{iT_0+1}-\frac{1}{T_0}\sum_{t\leq T_0}\epsilon_{it}$ remains correlated with $D_i$, but the SC estimator would be consistent if $T_0\rightarrow\infty$.
+    \end{itemize}
 \end{itemize} 
 
 \newpage
