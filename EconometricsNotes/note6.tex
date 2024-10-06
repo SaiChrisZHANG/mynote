@@ -1869,7 +1869,9 @@ Consider a model of $$ Y_{it}(0) = \alpha_i + \beta_t + \epsilon_{it} $$ where $
 The nonlinear models do not assume linearity in parameters for the conditional means. They are developed for cases where standard TWFE models do no justice to the data, and probit/logit models are not consistent.
 
 \subsubsection{Changes-in-Changes}
-
+For two-period two-group cases, \citet{athey2006identification} show that the standard TWFE speicifcation 
+$$ Y_i(0) = \mu + \alpha\mathbf{1}_{C_i=1} + \beta\mathbf{1}_{T_i=1} + \epsilon_i $$
+\textbf{cannot} hold in levels.
 
 \newpage
 \bibliographystyle{plainnat}
