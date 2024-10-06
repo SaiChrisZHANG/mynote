@@ -1875,7 +1875,11 @@ $$ Y_i(0) = \mu + \alpha\mathbf{1}_{C_i=1} + \beta\mathbf{1}_{T_i=1} + \epsilon_
 $$ Y_i = g(U_i,T_i) $$
 where $U_i$ is an unobserved component that has a different distribution in the treated and the controls, but not changing over time. The expected control outcomes can be written in the TWFE form as 
 $$ \mathbb{E}\left[Y_i(0)\mid T_i=t,G_i=g\right] = \beta_0+\beta_1t + \alpha\mathbb{E}\left[U_i\mid G_i=g\right] - \mathbb{E}\left[U_i\mid G_i=1\right]$$
-\citet{athey2006identification} show that if $U_i$ is a scalar, and $g(u,t)$ is strictly monotone in $u$,
+\citet{athey2006identification} show that if $U_i$ is a scalar, and $g(u,t)$ is strictly monotone in $u$, one can infer the second-period distribution of the control potential outcome in the treated as 
+\begin{equation*}
+    F_{Y_i(0)\mid T_i=2,G_i(2)}(y) = F_{Y_i(0)\mid T_i=1,G_i=2} \left( F^{-1}_{Y_i(0)\mid T_i=1,G_1=1}\left(F_{Y_i(0)\mid T_i=2,G_i=1}(y)\right) \right)
+\end{equation*}
+which can then be used to estimate the ATE for the treatment group. This expression has an analog in the literature on wage decompositions.
 
 \newpage
 \bibliographystyle{plainnat}
