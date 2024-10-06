@@ -1871,7 +1871,11 @@ The nonlinear models do not assume linearity in parameters for the conditional m
 \subsubsection{Changes-in-Changes}
 For two-period two-group cases, \citet{athey2006identification} show that the standard TWFE speicifcation 
 $$ Y_i(0) = \mu + \alpha\mathbf{1}_{C_i=1} + \beta\mathbf{1}_{T_i=1} + \epsilon_i $$
-\textbf{cannot} hold in levels.
+\textbf{cannot} hold in levels. Instead, they propose a scale-free changes-in-changes (CIC) model for the potential control outcomes 
+$$ Y_i = g(U_i,T_i) $$
+where $U_i$ is an unobserved component that has a different distribution in the treated and the controls, but not changing over time. The expected control outcomes can be written in the TWFE form as 
+$$ \mathbb{E}\left[Y_i(0)\mid T_i=t,G_i=g\right] = \beta_0+\beta_1t + \alpha\mathbb{E}\left[U_i\mid G_i=g\right] - \mathbb{E}\left[U_i\mid G_i=1\right]$$
+\citet{athey2006identification} show that if $U_i$ is a scalar, and $g(u,t)$ is strictly monotone in $u$,
 
 \newpage
 \bibliographystyle{plainnat}
