@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -233,6 +233,13 @@ Liyang Sun and Sarah Abraham.
   heterogeneous treatment effects.
 \newblock \emph{Journal of econometrics}, 225\penalty0 (2):\penalty0 175--199,
   2021.
+
+\bibitem[Wooldridge(2023)]{wooldridge2023simple}
+Jeffrey~M Wooldridge.
+\newblock Simple approaches to nonlinear difference-in-differences with panel
+  data.
+\newblock \emph{The Econometrics Journal}, 26\penalty0 (3):\penalty0 C31--C66,
+  2023.
 
 \bibitem[Xu(2023)]{xu2023causal}
 Yiqing Xu.

@@ -1881,6 +1881,9 @@ $$ \mathbb{E}\left[Y_i(0)\mid T_i=t,G_i=g\right] = \beta_0+\beta_1t + \alpha\mat
 \end{equation*}
 which can then be used to estimate the ATE for the treatment group. This expression has an analog in the literature on wage decompositions.
 
+\citet{wooldridge2023simple} proposes to assume a known function $$ g:\mathbb{R} \mapsto \mathbb{R}, \text{ s.t. }\mathbb{E}\left[Y_{it}(0)\mid D_i\right] = g(\mu+\alpha D+\gamma_t) $$
+such that there is a parallel trend \textbf{inside} the known transformation $g(\cdot)$, which can be the exponential function $g(a)=\exp(a)$ in case of non-negative outcomes, or the logistic function $g(a)=\exp(a)/(1+\exp(a))$ for binary outcomes.
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
