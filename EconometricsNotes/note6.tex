@@ -1851,7 +1851,7 @@ optimizing this over $R, \mathbf{U,V}, \boldsymbol{\alpha},\boldsymbol{\beta}$ g
     \item \textbf{DiD}: restriction is just $R=0$.
 \end{itemize}
 
-\subsection{Selection Mechanism}
+\subsubsection{Selection Mechanism}
 Outside of a few special cases, to justify the conventional parallel trends assumption, one needs to assume that the treatment is \textbf{unrelated to time-varying components} of the outcomes\footnote{This is most challenging to the DiD estimator.}.
 
 Consider a model of $$ Y_{it}(0) = \alpha_i + \beta_t + \epsilon_{it} $$ where $\epsilon_{it}\bot \alpha_i$ and $\tau=Y_{it}(1)-Y_{it}(0)$. If
@@ -1864,6 +1864,9 @@ Consider a model of $$ Y_{it}(0) = \alpha_i + \beta_t + \epsilon_{it} $$ where $
         if $\epsilon_{it}$ are autocorrelated, the DiD estimator is inconsistent, even when $T_0\rightarrow\infty$, since $\epsilon_{iT_0+1}-\frac{1}{T_0}\sum_{t\leq T_0}\epsilon_{it}$ remains correlated with $D_i$, but the SC estimator would be consistent if $T_0\rightarrow\infty$.
     \end{itemize}
 \end{itemize} 
+
+\subsection{Nonlinaer Models}
+
 
 \newpage
 \bibliographystyle{plainnat}
