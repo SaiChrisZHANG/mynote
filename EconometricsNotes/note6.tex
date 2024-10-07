@@ -1886,7 +1886,15 @@ such that there is a parallel trend \textbf{inside} the known transformation $g(
 
 \subsubsection{Distributional Synthetic Controls}
 
-\citet{gunsilius2023distributional} chooses weights on the control groups s.t. the \textbf{marginal distribution} for the weighted controls matches that for the treated group.
+\citet{gunsilius2023distributional} chooses weights on the control groups s.t. the \textbf{marginal distribution} for the weighted controls matches that for the treated group. The metric is based on the quantile function $F^{-1}_{Y_{gt}}(\nu)$ for group $g$ and period $t$:
+First, choose weights as 
+\begin{equation*}
+    \hat{\omega}_{gt} = \arg \min_{\boldsymbol{\omega}:\boldsymbol{\omega}\geq \mathbf{0},\sum^{G-1}_{g=1}\omega_{gt}=1} \frac{1}{M} \sum^M_{m=1}\left( \sum^{G-1}_{g=1}\omega_{gt}\hat{F}^{-1}_{Y_{gt}}(V_m) - \hat{F}^{-1}_{Y_{gt}}(V_m) \right)^2
+\end{equation*}
+where the quantile functions are evaluated at $M$ \textbf{randomly} choosing values $\nu_1,\cdots,\nu_M$. Then calculate
+$$ \hat{\omega}_g = \frac{1}{T-1}\sum^{T-1}_{t=1}\hat{\omega}_{gt} $$
+and estimate the synthetic control quantiles function as 
+$$ \hat{F}^{-1}_{GT}(\nu) = \sum^{G-1}_{g=1}\hat{\omega}_g \hat{F}_{gT}^{-1}(\nu) $$
 
 \newpage
 \bibliographystyle{plainnat}
