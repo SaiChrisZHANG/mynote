@@ -41,3 +41,5 @@
 \BOOKMARK [2][-]{subsection.1.10}{Nonlinaer Models}{section.1}% 41
 \BOOKMARK [3][-]{subsubsection.1.10.1}{Changes-in-Changes}{subsection.1.10}% 42
 \BOOKMARK [3][-]{subsubsection.1.10.2}{Distributional Synthetic Controls}{subsection.1.10}% 43
+\BOOKMARK [3][-]{subsubsection.1.10.3}{Balancing Statistics to Control for Unit Differences}{subsection.1.10}% 44
+\BOOKMARK [3][-]{subsubsection.1.10.4}{Negative Controls, Proxies and Deconvolution}{subsection.1.10}% 45
