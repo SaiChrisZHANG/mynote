@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -46,6 +46,12 @@ Muhammad Amjad, Vishal Misra, Devavrat Shah, and Dennis Shen.
 Dmitry Arkhangelsky and Guido Imbens.
 \newblock Causal models for longitudinal and panel data: A survey.
 \newblock Technical report, National Bureau of Economic Research, 2023.
+
+\bibitem[Arkhangelsky and Imbens(2022)]{arkhangelsky2022doubly}
+Dmitry Arkhangelsky and Guido~W Imbens.
+\newblock Doubly robust identification for causal panel data models.
+\newblock \emph{The Econometrics Journal}, 25\penalty0 (3):\penalty0 649--674,
+  2022.
 
 \bibitem[Athey and Imbens(2006)]{athey2006identification}
 Susan Athey and Guido~W Imbens.
