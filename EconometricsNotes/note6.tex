@@ -1902,7 +1902,9 @@ Consider a simpler setting based on the specification $$ Y_i = \alpha_{C_i} + \t
 where $C_i$ is the cluster indicator for unit $i$. Estimating $\tau$ by least squares is the same as estimating $$ Y_i = \mu + \tau W_i + \gamma \bar{W}_{C_i} + \beta X_i + \delta \bar{X}_{C_i} + \eta_i $$
 where $\bar{\cdot}_c$ is the cluster average for cluster $c$. Assuming unconfoundedness
 $$ W_i \bot \left(Y_i(0),Y_i(1)\right) \mid X_i,\bar{X}_{C_i},\bar{W}_{C_i} $$
-using $\bar{X}_{C_i}$ and $\bar{W}_{C_i}$ as proxies for the differences between clusters.
+using $\bar{X}_{C_i}$ and $\bar{W}_{C_i}$ as proxies for the differences between clusters. A generalized version is 
+$$ W_i \bot \left(Y_i(0),Y_i(1)\right)\mid X_i,S_{C_i} $$
+where $S_c$ is the sufficient statistic capturing the relevant features of the cluster.
 
 \subsubsection{Negative Controls, Proxies and Deconvolution}
 
