@@ -1909,7 +1909,7 @@ consider the least square regression $$ Y_{it} = \tau \ddot{W}_{it}+\epsilon_{it
 where $\ddot{W}_{it}$ is the double difference $$ \ddot{W}_{it} = W_{it} - \bar{W}_{i\cdot} -\bar{W}_{\cdot t} + \bar{\bar{W}} $$
 with
 \begin{align*}
-    \bar{W}_{i\cdot} = \frac{1}{T}\sum^T_{t=1}W_{it}
+    \bar{W}_{i\cdot} &= \frac{1}{T}\sum^T_{t=1}W_{it} & \bar{W}_{\cdot t} &= \frac{1}{N}\sum^N_{i=1}W_{it} & \bar{\bar{W}} &= \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1}W_{it}
 \end{align*}
 
 \subsubsection{Negative Controls, Proxies and Deconvolution}
