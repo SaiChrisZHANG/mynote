@@ -1913,7 +1913,7 @@ with
 \end{align*}
 same estimator can be obtained via $$ Y_{it} = \tau W_{it} + \gamma \bar{W}_{i\cdot} + \delta\bar{W}_{\cdot t} + \epsilon_{it} $$
 \citet{arkhangelsky2022doubly} postulate the existence of a known function $S_i\left(W_{i1},\cdots,W_{iT}\right)$ that captures all the relevant components of the assignment vector $\underline{W}_i = \left(W_{i1},\cdots,W_{iT}\right)$ (and possibly other covariates). Given this balancing statistic $S_i$, assume $$ \underline{W}_i \bot Y_{it}(w) \mid S_i $$
-
+the estimator has a built-in robustness property: if the two-way model is correctly specified or the unconfoundedness given $S_i$ holds, the esimtator remains \textbf{consistent}.
 
 \subsubsection{Negative Controls, Proxies and Deconvolution}
 
