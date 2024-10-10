@@ -1906,6 +1906,11 @@ using $\bar{X}_{C_i}$ and $\bar{W}_{C_i}$ as proxies for the differences between
 $$ W_i \bot \left(Y_i(0),Y_i(1)\right)\mid X_i,S_{C_i} $$
 where $S_c$ is the sufficient statistic capturing the relevant features of the cluster. \citet{arkhangelsky2022doubly} extend these ideas from the clustered cross-section to the panel data, 
 consider the least square regression $$ Y_{it} = \tau \ddot{W}_{it}+\epsilon_{it} $$
+where $\ddot{W}_{it}$ is the double difference $$ \ddot{W}_{it} = W_{it} - \bar{W}_{i\cdot} -\bar{W}_{\cdot t} + \bar{\bar{W}} $$
+with
+\begin{align*}
+    \bar{W}_{i\cdot} = \frac{1}{T}\sum^T_{t=1}W_{it}
+\end{align*}
 
 \subsubsection{Negative Controls, Proxies and Deconvolution}
 
