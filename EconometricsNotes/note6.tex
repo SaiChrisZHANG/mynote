@@ -1918,7 +1918,9 @@ the estimator has a built-in robustness property: if the two-way model is correc
 \subsubsection{Negative Controls, Proxies and Deconvolution}
 One can also choose to use a panel to construct a set of proxy measures for the unobservables. It the proxy measures do not directly affect either outcomes or treatments, then this restriction can be used for identification.
 
-Similarly, one can assume a proxy variable that is affect by an unobserved confounder but \textbf{not} related to the treatment.
+Similarly, one can assume a proxy variable that is affect by an unobserved confounder but \textbf{not} related to the treatment, then one can eliminate the unobservables by subtracting a scaled proxy variable from the outcome of interest, where the scaling can be approximated using the pre-treatment data.
+
+The key aspect of the negative control literature is to isolate and eliminate the unobserved confounders rather than identify causal effects conditional on unobservables.
 
 \newpage
 \bibliographystyle{plainnat}
