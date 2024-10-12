@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -176,6 +176,13 @@ Nikolay Doudchenko and Guido~W Imbens.
   control methods: A synthesis.
 \newblock Technical report, National Bureau of Economic Research, 2016.
 
+\bibitem[Freyaldenhoven et~al.(2019)Freyaldenhoven, Hansen, and
+  Shapiro]{freyaldenhoven2019pre}
+Simon Freyaldenhoven, Christian Hansen, and Jesse~M Shapiro.
+\newblock Pre-event trends in the panel event-study design.
+\newblock \emph{American Economic Review}, 109\penalty0 (9):\penalty0
+  3307--3338, 2019.
+
 \bibitem[Gunsilius(2023)]{gunsilius2023distributional}
 Florian~F Gunsilius.
 \newblock Distributional synthetic controls.
@@ -256,5 +263,12 @@ Jeffrey~M Wooldridge.
 Yiqing Xu.
 \newblock Causal inference with time-series cross-sectional data: a reflection.
 \newblock \emph{Available at SSRN 3979613}, 2023.
+
+\bibitem[Ying et~al.(2023)Ying, Miao, Shi, and
+  Tchetgen~Tchetgen]{ying2023proximal}
+Andrew Ying, Wang Miao, Xu~Shi, and Eric~J Tchetgen~Tchetgen.
+\newblock Proximal causal inference for complex longitudinal studies.
+\newblock \emph{Journal of the Royal Statistical Society Series B: Statistical
+  Methodology}, 85\penalty0 (3):\penalty0 684--704, 2023.
 
 \end{thebibliography}
