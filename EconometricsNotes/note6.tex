@@ -1931,8 +1931,13 @@ Design-based perspective has interesting connections with econometric panel data
 \end{itemize}
 In summary, tranditional anlaysis fixes the \textbf{covariates} and focuses on the \textbf{distribution} of the \textbf{unit-level heterogeneity}; the design-based analysis does the opposite.
 
-\subsubsection{TWFE estimator wiht random adoption dates}
-
+\subsubsection{TWFE estimator with random adoption dates}
+\citet{athey2022design} derive the randomization-based distribution of the TWFE estimator under the random assignment assumption alone and present an interpretation for the estimand corresponding to that estimator.
+They show that as long as the adoption date is randomly assigned, the estimand can be wrriten as a linear combination of average causal effects on the outcome in period $t$ if assigned adoption date $a'$ relative to being assigned adoption date $a$:
+\begin{equation*}
+    \tau_t^{a,a'} = \frac{1}{N}\sum^N_{i=1}\left( Y_{it}(a') - Y_{it}(a) \right)
+\end{equation*}
+with the weights summing to 1 but generally with negative weights.
 
 \newpage
 \bibliographystyle{plainnat}
