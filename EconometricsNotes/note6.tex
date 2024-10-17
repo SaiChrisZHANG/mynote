@@ -1943,6 +1943,11 @@ with the weights summing to 1 but generally with negative weights.
 \citet{bojinov2023design} consider a \textit{switchback} experiment, with individual units potentially switching between treatment and control groups. Such experiments were originally used in agricultural settings.
 Using each unit as its own control can substantially improve the precision of estimators compared to assigning each unit to the treatment or control group for the entire period, hence becoming popular in tech company settings.
 
+\paragraph{Application} there are 2 classes of applications of switchback experiments:
+\begin{itemize}
+    \item when units interfere with each other (via network or other complicated structures)
+    \item the number of experimental units is limited, and the effects are likely to be heterogeneous
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
