@@ -1952,11 +1952,17 @@ Using each unit as its own control can substantially improve the precision of es
 let $\left\{t,t'\right\} = \left\{t,t+1,\cdots,t'\right\}$, $\forall t<t'\in[T]$
 \begin{assumption}{Assumptions of \citet{bojinov2023design}}{assump_bojinov}
     \begin{itemize}
-        \item \myhl[myblue]{\textbf{Non-anticipating potential outcomes}}: $\forall t\in[T]$, $\mathbf{w}_{1:t}\in\left\{0,11\right\}^t$, and $\forall \mathbf{w}'_{t+1:T},\mathbf{w}''_{t+1:T}\in\left\{0,1\right\}^{T-t}$, $$ Y_t\left(\mathbf{w}_{1:t},\mathbf{w}'_{t+1,T}\right) = Y_t\left(\mathbf{w}_{1:t},\mathbf{w}''_{t+1,T}\right) $$
-        \item \myhl[myblue]{$m-$\textbf{-Carryover Effects}}: $\exists m$ s.t. $\mathbf{w}_{t-m:T}\in\left\{0,1\right\}^{T-t+m+1}$, $\forall \mathbf{w}'_{1:t-m-1},\mathbf{w}''_{1:t-m-1}\in \left\{0,1\right\}^{t-m-1}$, $t\in \left\{m+1,m+2,\cdots,T\right\}$, $$ Y_t \left(\mathbf{w}'_{1:t-m-1},\mathbf{w}_{t-m:T}\right) = Y_t \left(\mathbf{w}''_{1:t-m-1},\mathbf{w}_{t-m:T}\right) $$
-        its validity depends on the setting and requires practitioners to use their domain knowledge to choose an appropriate $m$.
+        \item[\textbf{A1}] \myhl[myblue]{\textbf{Non-anticipating potential outcomes}}: $\forall t\in[T]$, $\mathbf{w}_{1:t}\in\left\{0,11\right\}^t$, and $\forall \mathbf{w}'_{t+1:T},\mathbf{w}''_{t+1:T}\in\left\{0,1\right\}^{T-t}$, $$ Y_t\left(\mathbf{w}_{1:t},\mathbf{w}'_{t+1,T}\right) = Y_t\left(\mathbf{w}_{1:t},\mathbf{w}''_{t+1,T}\right) $$
+        \item[\textbf{A2}] \myhl[myblue]{$m-$\textbf{-Carryover Effects}}: $\exists m$ s.t. $\mathbf{w}_{t-m:T}\in\left\{0,1\right\}^{T-t+m+1}$, $\forall \mathbf{w}'_{1:t-m-1},\mathbf{w}''_{1:t-m-1}\in \left\{0,1\right\}^{t-m-1}$, $t\in \left\{m+1,m+2,\cdots,T\right\}$, $$ Y_t \left(\mathbf{w}'_{1:t-m-1},\mathbf{w}_{t-m:T}\right) = Y_t \left(\mathbf{w}''_{1:t-m-1},\mathbf{w}_{t-m:T}\right) $$
+        its validity depends on the setting and requires practitioners to use their domain knowledge to choose an appropriate $m$. 
     \end{itemize}
 \end{assumption}
+
+\begin{itemize}
+    \item under Assumption 1, an example is $Y_3\left(1,1,1,1\right) = Y_3 \left(1,1,1,0\right)$
+    \item under Assumption 1 and 2, $\forall t\in \left\{m+1,\cdots,T\right\}$ and any 2 paths $\mathbf{w}_{1:T},\mathbf{w}'_{1:T} \in \left\{0,1\right\}^{m+1}$, $$ \mathbf{w}_{t-m:t} = \mathbf{w}'_{t-m:t} \Rightarrow Y_{t}\left(\mathbf{w}_{1:T}\right) = Y_t\left(\mathbf{w}'_{1:T}\right) $$
+    then one can rewrite $Y_t\left(\mathbf{w}_{t-m:t}\right) \coloneq Y_t \left(\mathbf{w}_{1:T}\right)$, an example is $Y_3(1,1)\coloneq Y_3\left(1,1,1,1\right) = Y_3(1,1,1,0) = Y_3(0,1,1,1) = Y_3(0,1,1,0)$
+\end{itemize}
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
