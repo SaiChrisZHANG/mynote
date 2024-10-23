@@ -1966,7 +1966,7 @@ let $\left\{t,t'\right\} = \left\{t,t+1,\cdots,t'\right\}$, $\forall t<t'\in[T]$
 
 for any $p\in\left\{0,1,\cdots,T-1\right\}$, let $\mathbf{1}_{p+1}=\left({1,\cdots,1}\right)$ be a vector of $p+1$ 1s and $\mathbf{0}_{p+1}=\left(0,\cdots,0\right)$ a vector of $p+1$ 0s. The the average lag-$p$ causal effect of consecutive treatments on the outcome is 
 \begin{equation*}
-    \tau_p\left(\mathbb{Y}\right) = 
+    \tau_p\left(\mathbb{Y}\right) = \frac{1}{T-p} \sum^T_{t=p+1} \left[Y_t\left(\mathbf{1}_{p+1}\right)-Y_t\left(\mathbf{0}_{p+1}\right)\right]
 \end{equation*}
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
