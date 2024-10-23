@@ -1971,8 +1971,13 @@ for any $p\in\left\{0,1,\cdots,T-1\right\}$, let $\mathbf{1}_{p+1}=\left({1,\cdo
 where $p$ reflects the designers' knowledge of the order of the \textbf{carryover} effect:
 in the perfect knowledge case, $p=m$; in the \textit{misspecified} case, $p\neq m$. To link the observed and potential outcomes, \citet{bojinov2023design} assume that there is only one version of the treatment, and there is no non-compliance.
 
+The design of switchback experiment induces a probabilistic distribution over assignment paths $\mathbf{w}_{1:T}\in \left\{0,1\right\}'$: $\forall \eta: \left\{0,1\right\}^T \mapsto [0,1]$ s.t. 
+\begin{align*}
+    \sum_{\mathbb{w}_{1:T}\in\left\{0,1\right\}^T} \eta\left(\mathbf{w}_{1:T}\right) &=1 & \eta\left(\mathbf{w}_{1:T}\right)\geq 0,\forall \mathbf{w}_{1:T}\in\left\{0,1\right\}^T
+\end{align*}
+
 \begin{definition}{Regular Switchback Experiments}{regular_sb_exp}
-    
+    $\forall \mathbb{T}=\left\{t_0=1<t_1<\cdots<t_K\right\}\subseteq [T]$, $\mathbb{Q}=\left\{q_0,q_1,\cdots,q_K\right\}\in \left(0,1\right)^{K+1}$
 \end{definition}
 
 
