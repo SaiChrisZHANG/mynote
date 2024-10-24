@@ -1977,9 +1977,18 @@ The design of switchback experiment induces a probabilistic distribution over as
 \end{align*}
 
 \begin{definition}{Regular Switchback Experiments}{regular_sb_exp}
-    $\forall \mathbb{T}=\left\{t_0=1<t_1<\cdots<t_K\right\}\subseteq [T]$, $\mathbb{Q}=\left\{q_0,q_1,\cdots,q_K\right\}\in \left(0,1\right)^{K+1}$, a regular switchback experiment $\left(\mathbb{T,Q}\right)$ administers a probabilistic treatment at $t$, given by\footnote{Think about a biased coin-flip experiment: the designer jointly decides on a collection of randomization points, }
+    $\forall \mathbb{T}=\left\{t_0=1<t_1<\cdots<t_K\right\}\subseteq [T]$, $\mathbb{Q}=\left\{q_0,q_1,\cdots,q_K\right\}\in \left(0,1\right)^{K+1}$, a regular switchback experiment $\left(\mathbb{T,Q}\right)$ administers a probabilistic treatment at $t$, given by\footnote{Think about a biased coin-flip experiment: the designer jointly decides on a collection of randomization points, at each period $t\in\left\{t_0,\cdots,t_K\right\}$ and a collection of \textit{head} probabilities of the coins $\left(q_0,\cdots,q_K\right)$. If \textit{head} at $t_k$, the unit is assigned to treatment during $\left(t_k,t_k+1,\cdots,t_{k+1}-1\right)$, if \textit{tail}, the unit is assigned to control during these periods.}
     $$ \Pr\left(W_t=1\right)=q_k \text{ if }t_k\leq t\leq t_{k+1}-1 $$
 \end{definition}
+Here, \citet{bojinov2023design} do not consider adaptive treatment assignments as most firms desig nthe entire experiment before the experiment is launched, and the assignments not updated based on the observed outcomes.
+
+Denote the underlying probability distribution using $\eta_{\mathbb{T,Q}}(\cdot)$, for any $\mathbb{T,Q}$, the distribution has a total of $2^{K+1}$ many supports, the assignment path is random, and follows 
+\begin{equation*}
+    \eta_{\mathbb{T,Q}}\left(\mathbf{w}_{1:T}\right) = \begin{cases}
+        \prod^K_{k=0} \frac{\mathbf{1}\left\{w_{t_k}=1\right\}}{q_{t_k}}\cdot \frac{\mathbf{1}\left\{w_{t_k}=0\right\}}{\bar{q}_{t_k}}, & \forall k\in \left\{0,1\cdots,K\right\}, w_{t_k}=w_{t_k+1}=\cdots=w_{t_{k+1}-1} \\
+        0, &\text{otherwise}
+    \end{cases}
+\end{equation*}
 
 
 
