@@ -1989,7 +1989,10 @@ Denote the underlying probability distribution using $\eta_{\mathbb{T,Q}}(\cdot)
         0, &\text{otherwise}
     \end{cases}
 \end{equation*}
-
+use the Horvitz-Thompson estimator to estiamte the casual effect:
+\begin{equation*}
+    \hat{\tau}_p\left(\eta_{\mathbb{T,Q}},w_{1:T},\mathbb{Y}\right) = \frac{1}{T-p} \sum^T_{t=p+1} \left\{ Y^{obs}_t  \right\}
+\end{equation*}
 
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
