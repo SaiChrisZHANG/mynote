@@ -1991,7 +1991,7 @@ Denote the underlying probability distribution using $\eta_{\mathbb{T,Q}}(\cdot)
 \end{equation*}
 use the Horvitz-Thompson estimator to estiamte the casual effect:
 \begin{equation*}
-    \hat{\tau}_p\left(\eta_{\mathbb{T,Q}},w_{1:T},\mathbb{Y}\right) = \frac{1}{T-p} \sum^T_{t=p+1} \left\{ Y^{obs}_t  \right\}
+    \hat{\tau}_p\left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) = \frac{1}{T-p} \sum^T_{t=p+1} \left\{ Y^{obs}_t \frac{\mathbb{1}\left\{\mathbf{w}_{t-p:t}=\mathbf{1}_{p+1}\right\}}{\Pr\left(\mathbf{W}_{t-p:t}=\mathbf{1}_{p+1}\right)} -  \right\}
 \end{equation*}
 
 
