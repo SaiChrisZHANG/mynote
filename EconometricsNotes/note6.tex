@@ -1994,7 +1994,7 @@ use the Horvitz-Thompson estimator to estiamte the casual effect:
     \hat{\tau}_p\left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) = \frac{1}{T-p} \sum^T_{t=p+1} \left\{ Y^{obs}_t \frac{\mathbf{1}\left\{\mathbf{w}_{t-p:t}=\mathbf{1}_{p+1}\right\}}{\Pr\left(\mathbf{W}_{t-p:t}=\mathbf{1}_{p+1}\right)} - Y^{obs}_t \frac{\mathbf{1}\left\{\mathbf{w}_{t-p:t}=\mathbf{0}_{p+1}\right\}}{\Pr\left(\mathbf{W}_{t-p:t}=\mathbf{0}_{p+1}\right)}  \right\}
 \end{equation*}
 this estimator depends on the \textbf{assignmetn path} $\eta_{\mathbb{T,Q}}$, the realization of the path $\mathbf{w}_{1:T}$ and the set of potential outcomes $\mathbb{Y}$.
-Since $\mathbf{W}_{1:T}$ is random, the Horvitz-Thompson estimator is also random, when the assignment path satisfies a regular switchback, the probabilities in the denominator are known.
+Since $\mathbf{W}_{1:T}$ is random, the Horvitz-Thompson estimator\footnote{The Horvitz-Thompson estimator is unbiased if treatment and control probabilities are both non-zero.} is also random, when the assignment path satisfies a regular switchback, the probabilities in the denominator are known.
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
