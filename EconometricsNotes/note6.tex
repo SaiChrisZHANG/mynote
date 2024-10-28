@@ -2000,10 +2000,15 @@ Since $\mathbf{W}_{1:T}$ is random, the Horvitz-Thompson estimator\footnote{The 
     In a regular swtichback experiment, under Assumption \ref{assump:assump_bojinov}, the estimator is unbiased for the average lag$-p$ causal effect of consecutive treatments on outcome, i.e., $$\mathbb{E}\left[ \hat{\tau}_p\left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) \right] = \tau_p\left(\mathbb{Y}\right)$$
 \end{proposition}
 
-To evaluate teh quality of a design, define the loss function 
+To evaluate the quality of a design, define the loss function 
 $$ L \left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) = \left(\hat{\tau}_p \left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) - \tau_p (\mathbb{Y})\right)^2 $$
-and the risk function 
+and the least-square type risk function (also the variance of the estimator since it's unbiased)
 $$ r\left(\eta_{\mathbb{T,Q}},\mathbb{Y}\right) = \sum_{\mathbf{w}_{1:T}\in \left\{0,1\right\}^T} \eta_{\mathbb{T,Q}}(\mathbf{w}_{1:T})\cdot \left(\hat{\tau}_p\left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) - \tau_p(\mathbb{Y})\right)^2 $$
+The optimal design problem can then be written as a minmax problem minimizing \textbf{worst-case risk} against an adversarial selection of potential outcomes 
+\begin{equation*}
+    \min_{\mathbb{T,Q}}\max_{\mathbb{Y}} r\left(\eta_{\mathbb{T,Q}},\mathbb{Y}\right) = \min_{\mathbb{T,Q}}\max_{\mathbb{Y}} \sum_{\mathbf{w}_{1:T}\in\left\{0,1\right\}^T} \eta_{\mathbb{T,Q}}(\mathbf{w}_{1:T})\cdot \left( \hat{\tau}_p\left(\mathbf{w}_{1:T},\mathbb{Y}\right) - \tau_p\left(\mathbb{Y}\right) \right)^2
+\end{equation*}
+
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
