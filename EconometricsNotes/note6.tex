@@ -2000,6 +2000,11 @@ Since $\mathbf{W}_{1:T}$ is random, the Horvitz-Thompson estimator\footnote{The 
     In a regular swtichback experiment, under Assumption \ref{assump:assump_bojinov}, the estimator is unbiased for the average lag$-p$ causal effect of consecutive treatments on outcome, i.e., $$\mathbb{E}\left[ \hat{\tau}_p\left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) \right] = \tau_p\left(\mathbb{Y}\right)$$
 \end{proposition}
 
+To evaluate teh quality of a design, define the loss function 
+$$ L \left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) = \left(\hat{\tau}_p \left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) - \tau_p (\mathbb{Y})\right)^2 $$
+and the risk function 
+$$ r\left(\eta_{\mathbb{T,Q}},\mathbb{Y}\right) = \sum_{\mathbf{w}_{1:T}\in \left\{0,1\right\}^T} \eta_{\mathbb{T,Q}}(\mathbf{w}_{1:T})\cdot \left(\hat{\tau}_p\left(\eta_{\mathbb{T,Q}},\mathbf{w}_{1:T},\mathbb{Y}\right) - \tau_p(\mathbb{Y})\right)^2 $$
+
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
     \item when units interfere with each other (via network or other complicated structures)
