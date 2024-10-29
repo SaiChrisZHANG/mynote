@@ -2008,6 +2008,7 @@ The optimal design problem can then be written as a minmax problem minimizing \t
 \begin{equation*}
     \min_{\mathbb{T,Q}}\max_{\mathbb{Y}} r\left(\eta_{\mathbb{T,Q}},\mathbb{Y}\right) = \min_{\mathbb{T,Q}}\max_{\mathbb{Y}} \sum_{\mathbf{w}_{1:T}\in\left\{0,1\right\}^T} \eta_{\mathbb{T,Q}}(\mathbf{w}_{1:T})\cdot \left( \hat{\tau}_p\left(\mathbf{w}_{1:T},\mathbb{Y}\right) - \tau_p\left(\mathbb{Y}\right) \right)^2
 \end{equation*}
+an addition assumption on the support of $\mathbb{Y}$ is imposed s.t. the absolute values are bounded from above: $\exists B>0$ s.t.$\forall t \in [T], \mathbf{w}\in \left\{0,1\right\}^T, \left\vert Y_t\left(\mathbf{w}\right) \right\vert \leq B$ , and the bound is attainable at every time period.
 
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
