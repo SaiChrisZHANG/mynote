@@ -2011,9 +2011,19 @@ The optimal design problem can then be written as a minmax problem minimizing \t
 an addition assumption on the support of $\mathbb{Y}$ is imposed s.t. the absolute values are bounded from above: $\exists B>0$ s.t.$\forall t \in [T], \mathbf{w}\in \left\{0,1\right\}^T, \left\vert Y_t\left(\mathbf{w}\right) \right\vert \leq B$ , and the bound is attainable at every time period.
 
 Under Assumption \ref{assump:assump_bojinov} and the bound assumption, we have 
-\begin{theorem}{Optimality of Fair Coin Flipping}{optimal_design_bojinov}
+\begin{theorem}{Optimality of Fair Coin Flipping}{optimal_coinflip_bojinov}
     Any optimal design of experiments $\left(\mathbb{T,Q}\right)$ must satisfy $q_0=q_1=\cdots = q_K = 1/2$
 \end{theorem}
+For the optimal experiments (fair coin-flipping), the trade-off is between too many randomization points (large $K$)\footnote{Decreasing the probability of observing consecutive treatments $\mathbf{1}_{m+1}$ or controls $\mathbf{0}_{m+1}$, which decreases the amount of useful data.} and two few randomization points (small $K$)\footnote{Decreasing the number of independent observations and reduces the reliability of the results.}.
+\begin{theorem}{Optimal Design of Switchback Experiments}{optimal_design_bojinov}
+    The optimal solution to the design of regular switchback experiment is then the solution of the subset selection problem
+    $$ \min_{\mathbb{T}\subset [T]} \left\{ 4\sum^K_{k=0}\left(t_{k+1}-t_k\right)^2 + 8m\left(t_K-t_1\right) + 4m^2K-4m^2 + 4\sum^{K-1}_{k=1}\left[\left(m-t_{k+1}+t_k\right)^+\right]^2 \right\} $$
+\end{theorem}
+This gives 
+\begin{itemize}
+    \item when $m=0$: $\mathbb{T}^* = \left\{1,2,3,\cdots,T\right\}$
+    \item when $m>0$: if $\exists n\geq 4\in\mathbb{N}$ s.t. $T=nm$, then $\mathbb{T}^*=\left\{1,2m+1,3m+1,\cdots,(n-2)m+1\right\}$
+\end{itemize}
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
