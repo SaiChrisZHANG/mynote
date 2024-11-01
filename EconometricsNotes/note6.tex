@@ -2030,7 +2030,11 @@ That is, \myhl[myblue]{\textbf{randomize every} $m$ periods}. This result has tw
     \item when there are no carryover effects $(m=0)$ or very little $(m=1)$, the optimal designs are almost the same: when the granularity is set to be the same as the suspected order of the carryover effect
 \end{itemize}
 
-\paragraph*{Inference and testing} given the observed assignment path $\mathbf{w}^{obs}_{1:T}$ and the corresponding observed outcomes $\mathbf{Y}^{obs}_{1:T}$, \citet{bojinov2023design} propose an exact non-parametric test
+\paragraph*{Inference and testing} given the observed assignment path $\mathbf{w}^{obs}_{1:T}$ and the corresponding observed outcomes $\mathbf{Y}^{obs}_{1:T}$, \citet{bojinov2023design} propose an exact non-parametric test for the sharp null at every time point 
+\begin{align*}
+    H_0:Y_t(\mathbf{w}_{t-m:t})-Y_t(\mathbf{w}'_{t-m:t}) &=0, & \forall \mathbf{w}_{t-m:t},\mathbf{w}'_{t-m:t},t\in\left\{m+1:T\right\}
+\end{align*}
+The sharp null hypothesis implies that $Y_t(\mathbf{w}^{obs}_{t-m:t}) = Y_t(\mathbf{w}_{t-m:t})$, $\forall \mathbf{w}_{t-m:t}\in\left\{0,1\right\}^t$.
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
