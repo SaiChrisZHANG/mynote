@@ -2036,6 +2036,11 @@ That is, \myhl[myblue]{\textbf{randomize every} $m$ periods}. This result has tw
 \end{align*}
 The sharp null hypothesis implies that $Y_t(\mathbf{w}^{obs}_{t-m:t}) = Y_t(\mathbf{w}_{t-m:t})$, $\forall \mathbf{w}_{t-m:t}\in\left\{0,1\right\}^t$, that is, same outcomes regardless of the asignment path $\mathbf{w}_{t-m:t}$.
 
+\citet{bojinov2023design} propose an algorithm, which depends on the observation that under the shape null hypothesis of no treatment effect, any path $\mathbf{w}_{1:T}^{[i]}$ leads to the same observed outcomes: 
+\begin{algorithm}{Sharp-null Hypothesis Test Algorithm}{Bojinov_sharpnull_test}
+    
+\end{algorithm}
+
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
     \item when units interfere with each other (via network or other complicated structures)
