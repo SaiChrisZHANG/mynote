@@ -2044,6 +2044,7 @@ The sharp null hypothesis implies that $Y_t(\mathbf{w}^{obs}_{t-m:t}) = Y_t(\mat
         \item sample a new assignment path $\mathbf{w}_{1:T}^{[i]}$ according to the assignment mechanism 
         \item Hold $Y^{obs}_{p+1:T}$ unchanged, compute $\hat{\tau}^{[i]}$ according to the Horvitz estimator \ref{eq:bojinov_htestimator}
     \end{itemize}
+    then compute $$ \hat{p}_F = \frac{1}{I} \sum^I_{i=1}\mathbf{1}\left\{\left\vert\hat{\tau}^{[i]}\right\vert > \left\vert \hat{\tau} \right\vert \right\} $$. For large $I$, this is the exact $p-$value.
 \end{algorithm}
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
