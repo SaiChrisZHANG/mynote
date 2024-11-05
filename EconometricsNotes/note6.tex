@@ -2056,6 +2056,10 @@ a finite population CLT is then
     \end{equation*}
     and $\mathrm{Var}(\hat{\tau}_m)$ does not need to converge.
 \end{theorem}
+the variance of the Horvitz-Thompson estimator is 
+\begin{align*}
+    \mathrm{Var}(\hat{\tau}_m) &= \frac{1}{(T-m)^2} \left\{ \bar{Y}_0(\mathbf{1}_{m+1})^2 + \bar{Y}_0(\mathbf{0}_{m+1})^2 + 2\bar{Y}_0(\mathbf{1}_{m+1})\bar{Y}_0(\mathbf{0}_{m+1}) \right.
+\end{align*}
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
