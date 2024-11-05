@@ -2063,6 +2063,7 @@ the variance of the Horvitz-Thompson estimator is
     & + \bar{Y}_{n-2}(\mathbf{1}_{m+1})^2 + \bar{Y}_{n-2}(\mathbf{0}_{m+1})^2 + 2 \bar{Y}_{n-2}(\mathbf{1}_{m+1})\bar{Y}_{n-2}(\mathbf{0}_{m+1}) \\
     & + \sum^{n-3}_{k=0} 2 \left[\bar{Y}_k(\mathbf{1}_{m+1})+ \bar{Y}_k(\mathbf{0}_{m+1})\right] \cdot \left[\bar{Y}_{k+1}(\mathbf{1}_{m+1})+ \bar{Y}_{k+1}(\mathbf{0}_{m+1})\right] 
 \end{align*}
+where $\bar{Y}_k(\mathbf{1}_{m+1}) = \sum^{(k+2)m}_{t=(k+1)m+1} Y_t(\mathbf{1}_{m+1})$ and $\bar{Y}_k(\mathbf{0}_{m+1}) = \sum^{(k+2)m}_{t=(k+1)m+1}Y_t(\mathbf{0}_{m+1})$.
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
