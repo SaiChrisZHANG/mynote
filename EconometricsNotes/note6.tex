@@ -2048,6 +2048,14 @@ The sharp null hypothesis implies that $Y_t(\mathbf{w}^{obs}_{t-m:t}) = Y_t(\mat
 \end{algorithm}
 based on this algorithm, a conservative test for the null of no average treatment effect is 
 $$ H_0: \tau_m = \frac{1}{T-m} \sum^T_{t=m+1}\left[Y_t(\mathbf{1}_{m+1}) - Y_t(\mathbf{0}_{m+1}) \right] = 0 $$
+a finite population CLT is then 
+\begin{theorem}{Asymptotic Normality}{bojinov_anormality}
+    For a fixed $m$, $\forall n\geq 4 \in \mathbb{N}$, define a n-replica experiment s.t. there are $T=nm$ time periods, for an optimal design where randomization points are at $\mathbb{T}^* =\left\{1,2m+1,3m+1,\cdots,(n-2)m+1\right\}$, the limiting distribution of the Horvitz-Thompson estimator in the n-replica experiment has an asymptotic normal distribution as $n\rightarrow +\infty$
+    \begin{equation*}
+        \frac{\hat{\tau}_m-\tau_m}{\sqrt{\mathrm{Var}\left(\hat{\tau}_m\right)}} \xrightarrow{d} \mathcal{N}(0,1)
+    \end{equation*}
+    and $\mathrm{Var}(\hat{\tau}_m)$ does not need to converge.
+\end{theorem}
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
