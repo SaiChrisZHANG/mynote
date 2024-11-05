@@ -2046,6 +2046,8 @@ The sharp null hypothesis implies that $Y_t(\mathbf{w}^{obs}_{t-m:t}) = Y_t(\mat
     \end{itemize}
     then compute $$ \hat{p}_F = \frac{1}{I} \sum^I_{i=1}\mathbf{1}\left\{\left\vert\hat{\tau}^{[i]}\right\vert > \left\vert \hat{\tau} \right\vert \right\} $$. For large $I$, this is the exact $p-$value.
 \end{algorithm}
+based on this algorithm, a conservative test for the null of no average treatment effect is 
+$$ H_0: \tau_m = \frac{1}{T-m} \sum^T_{t=m+1}\left[Y_t(\mathbf{1}_{m+1}) - Y_t(\mathbf{0}_{m+1}) \right] = 0 $$
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
