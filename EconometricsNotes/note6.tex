@@ -2058,7 +2058,10 @@ a finite population CLT is then
 \end{theorem}
 the variance of the Horvitz-Thompson estimator is 
 \begin{align*}
-    \mathrm{Var}(\hat{\tau}_m) &= \frac{1}{(T-m)^2} \left\{ \bar{Y}_0(\mathbf{1}_{m+1})^2 + \bar{Y}_0(\mathbf{0}_{m+1})^2 + 2\bar{Y}_0(\mathbf{1}_{m+1})\bar{Y}_0(\mathbf{0}_{m+1}) \right.
+    \mathrm{Var}(\hat{\tau}_m) = \frac{1}{(T-m)^2} & \left\{ \bar{Y}_0(\mathbf{1}_{m+1})^2 + \bar{Y}_0(\mathbf{0}_{m+1})^2 + 2\bar{Y}_0(\mathbf{1}_{m+1})\bar{Y}_0(\mathbf{0}_{m+1}) \right. \\
+    & + \sum^{n-3}_{k=1}\left[ 3\bar{Y}_k(\mathbf{1}_{m+1})^2 + 3 \bar{Y}_k(\mathbf{0}_{m+1})^2 + 2 \bar{Y}(\mathbf{1}_{m+1}) \bar{Y}_k(\mathbf{0}_{m+1}) \right] \\
+    & + \bar{Y}_{n-2}(\mathbf{1}_{m+1})^2 + \bar{Y}_{n-2}(\mathbf{0}_{m+1})^2 + 2 \bar{Y}_{n-2}(\mathbf{1}_{m+1})\bar{Y}_{n-2}(\mathbf{0}_{m+1}) \\
+    & + \sum^{n-3}_{k=0} 2 \left[\bar{Y}_k(\mathbf{1}_{m+1})+ \bar{Y}_k(\mathbf{0}_{m+1})\right] \cdot \left[\bar{Y}_{k+1}(\mathbf{1}_{m+1})+ \bar{Y}_{k+1}(\mathbf{0}_{m+1})\right] 
 \end{align*}
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
