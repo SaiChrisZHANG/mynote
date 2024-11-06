@@ -2061,13 +2061,14 @@ the variance of the Horvitz-Thompson estimator is
     \mathrm{Var}(\hat{\tau}_m) = \frac{1}{(T-m)^2} & \left\{ \bar{Y}_0(\mathbf{1}_{m+1})^2 + \bar{Y}_0(\mathbf{0}_{m+1})^2 + 2\bar{Y}_0(\mathbf{1}_{m+1})\bar{Y}_0(\mathbf{0}_{m+1}) \right. \\
     & + \sum^{n-3}_{k=1}\left[ 3\bar{Y}_k(\mathbf{1}_{m+1})^2 + 3 \bar{Y}_k(\mathbf{0}_{m+1})^2 + 2 \bar{Y}(\mathbf{1}_{m+1}) \bar{Y}_k(\mathbf{0}_{m+1}) \right] \\
     & + \bar{Y}_{n-2}(\mathbf{1}_{m+1})^2 + \bar{Y}_{n-2}(\mathbf{0}_{m+1})^2 + 2 \bar{Y}_{n-2}(\mathbf{1}_{m+1})\bar{Y}_{n-2}(\mathbf{0}_{m+1}) \\
-    & + \sum^{n-3}_{k=0} 2 \left[\bar{Y}_k(\mathbf{1}_{m+1})+ \bar{Y}_k(\mathbf{0}_{m+1})\right] \cdot \left[\bar{Y}_{k+1}(\mathbf{1}_{m+1})+ \bar{Y}_{k+1}(\mathbf{0}_{m+1})\right] 
+    & + \sum^{n-3}_{k=0} 2 \left[\bar{Y}_k(\mathbf{1}_{m+1})+ \bar{Y}_k(\mathbf{0}_{m+1})\right] \cdot \left[\bar{Y}_{k+1}(\mathbf{1}_{m+1})+ \bar{Y}_{k+1}(\mathbf{0}_{m+1})\right] \geq \Omega(n^{-1})
 \end{align*}
 where $\bar{Y}_k(\mathbf{1}_{m+1}) = \sum^{(k+2)m}_{t=(k+1)m+1} Y_t(\mathbf{1}_{m+1})$ and $\bar{Y}_k(\mathbf{0}_{m+1}) = \sum^{(k+2)m}_{t=(k+1)m+1}Y_t(\mathbf{0}_{m+1})$. This variance has an upper bound $\mathrm{Var}^u(\hat{\tau}_m)$, which can be estimated by $\hat{\sigma}^2_u$ as 
 \begin{equation*}
     \hat{\sigma}^2_u = \frac{1}{(T-m)^2} \left\{8 \left(\bar{Y}^{obs}_0\right)^2 + \sum^{n-3}_{k=1}32\left(\bar{Y}^{obs}_k\right)\mathbb{1}\left\{W_{km+1}=W_{(k+1)m+1}\right\} + 8 \left(\bar{Y}^{obs}_{n-2}\right)^2 \right\}
 \end{equation*}
 where $\bar{Y}^{obs}_k = \sum^{(k+2)m}_{t=(k+1)m+1}Y_t^{obs},\forall k\in\left\{0,1,\cdots,n-2\right\}$. This estimation is unbiased $\mathbb{E}\left[\hat{\sigma}^2_u\right] = \mathrm{Var}\left(\hat{\tau}_m\right)$.
+Hence, the test statistic can be calculated as $z= \left\vert \hat{\tau}_m \right\vert / \sqrt{\hat{\sigma}^2_u}$.
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
