@@ -2070,6 +2070,12 @@ where $\bar{Y}_k(\mathbf{1}_{m+1}) = \sum^{(k+2)m}_{t=(k+1)m+1} Y_t(\mathbf{1}_{
 where $\bar{Y}^{obs}_k = \sum^{(k+2)m}_{t=(k+1)m+1}Y_t^{obs},\forall k\in\left\{0,1,\cdots,n-2\right\}$. This estimation is unbiased $\mathbb{E}\left[\hat{\sigma}^2_u\right] = \mathrm{Var}\left(\hat{\tau}_m\right)$.
 Hence, the test statistic can be calculated as $z= \left\vert \hat{\tau}_m \right\vert / \sqrt{\hat{\sigma}^2_u}$.
 
+When the order of the carryover effect $m$ is misspecified, specifically, consider 
+\begin{itemize}
+    \item \myhl[myblue]{$p>m$}: by Assumption \ref{assump:assump_bojinov}, $Y_t(\mathbf{1}_{p+1}) = Y_t(\mathbf{1}_{m+1})$, $\forall t\in\left\{p+1:T\right\}$, the lag-$p$ causal effect is essentially the lag-$m$ casual effect, all the estimation and inference results still hold 
+    \item 
+\end{itemize}
+
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
     \item when units interfere with each other (via network or other complicated structures)
