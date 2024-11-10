@@ -2082,7 +2082,9 @@ Consider 2 comparable experimental units\footnote{separate or non-overlapping ti
 design an optimal experiment $p=p_1$ for the first unit, get the sampling average $\hat{\tau}_{p_1}$, the conservative sampling variance $\hat{\sigma}^2_{p_1}$; and design $p=p_2$, calculate $\hat{\tau}_{p_2}$ and $\hat{\sigma}^2_{p_2}$ for the second.
 
 Under the null hypothesis: $$ H_0: m\leq p_1 $$
-$\tau_{p_1}=\tau_{p_2}=\tau_m$, both $\hat{\tau}_{p_1}$ and $\hat{\tau}_{p_2}$ are unbiased estimators of $\tau_m$
+$\tau_{p_1}=\tau_{p_2}=\tau_m$, both $\hat{\tau}_{p_1}$ and $\hat{\tau}_{p_2}$ are unbiased estimators of $\tau_m$. Since both estimators are asymptotic normal and independent, we should have 
+$$ \frac{\hat{\tau}_{p_1}-\hat{\tau}_{p_2}}{\sqrt{ \mathrm{Var}(\tau_{p_1}) + \mathrm{Var}(\tau_{p_2}) }} \xrightarrow{d} \mathcal{N}(0,1) $$
+which can be used to test the null hypothesis. This procedure can then be combined with any search method to identify $m$.
 
 \paragraph{Application} there are 2 classes of applications of switchback experiments:
 \begin{itemize}
