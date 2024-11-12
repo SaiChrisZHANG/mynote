@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -271,6 +271,12 @@ Jeffrey~M Wooldridge.
   data.
 \newblock \emph{The Econometrics Journal}, 26\penalty0 (3):\penalty0 C31--C66,
   2023.
+
+\bibitem[Xiong et~al.(2024)Xiong, Athey, Bayati, and Imbens]{xiong2024optimal}
+Ruoxuan Xiong, Susan Athey, Mohsen Bayati, and Guido Imbens.
+\newblock Optimal experimental design for staggered rollouts.
+\newblock \emph{Management Science}, 70\penalty0 (8):\penalty0 5317--5336,
+  2024.
 
 \bibitem[Xu(2023)]{xu2023causal}
 Yiqing Xu.
