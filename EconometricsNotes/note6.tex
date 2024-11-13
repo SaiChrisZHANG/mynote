@@ -2100,6 +2100,8 @@ which can be used to test the null hypothesis. This procedure can then be combin
 Let $z_{it}\in \left\{-1,+1\right\}$ be the treatment variable for unit $i$ at time $t$:
 \begin{itemize}
     \item treatment is not applied to any unit before the experiment starts: $z_{it}\equiv -1,\forall i,t\leq 0$
+    \item designer chooses the treatment assignment: choose $z_{it}$ for $i=1,\cdots,N;t=1,\cdots,T$
+    \item the decision variables are written as $Z=[z_{it}]_{(i,t)\in[N]\times [T]}$, corresponding to an observed outcome $Y=[Y_{it}]_{(i,t)\in[N]\times[T]}$
 \end{itemize}
 
 \newpage
