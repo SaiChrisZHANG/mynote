@@ -2111,7 +2111,8 @@ Consider 2 types of panel experiments: \textbf{nonadaptive} and \textbf{adaptive
 
 \begin{assumption}{Assumptions of \citet{xiong2024optimal}}{xiongetal2024}
     \begin{itemize}
-        \item[A1] \myhl[violet!60!white]{\textbf{Irreversible Treatment Adoption}}:  
+        \item[A1] \myhl[violet!60!white]{\textbf{Irreversible Treatment Adoption}}: $\forall (i,t)\in[N]\times [T]$, $z_{it}\leq z_{i,t+1}$
+        \item[A2] \myhl[violet!60!white]{\textbf{Potential Outcome Model}}: the potential outcomes for unit $i$ at time $t$ can be written as $$ Y_{it}(z_{i,t-l},\cdots,z_{i,t-1},z_{it}) $$ 
     \end{itemize}
 \end{assumption}
 
