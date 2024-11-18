@@ -2119,6 +2119,11 @@ Consider 2 types of panel experiments: \textbf{nonadaptive} and \textbf{adaptive
 \begin{align*}
     \tau_j \coloneq \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1} \frac{1}{2} & \left[ Y_{it}\left(-1,\cdots,-1,\underbrace{+1}_{z_{i,t-j}}, +1,\cdots,+1\right) -Y_{it}\left( -1,\cdots,-1,\underbrace{-1}_{z_{i,t-j}},+1,\cdots,+1 \right) \right]
 \end{align*}
+$\tau_j$ is the average over individuals and time periods of individual-time specific treatment effects that can be heterogeneous in both units and time periods.
+
+\paragraph*{nonadaptive experiments} Consider the GLS estimator for $\tau_0,\tau_1,\cdots,\tau_l$ based on the following specification:
+$$ Y_{it} = \alpha_i + \beta_t + \mathbf{X}'_i\boldsymbol{\theta}_t + \tau_0z_{it} + \tau_1z_{i,t-1} + \cdots + \tau_lz_{i,t-l} + \underbrace{\mathbf{u}'_i\mathbf{v}_t + \epsilon_{it}}_{e_{it}} $$
+where $\alpha_i$ and $\beta$ are unobserved unit and time FEs, 
 
 \newpage
 \bibliographystyle{plainnat}
