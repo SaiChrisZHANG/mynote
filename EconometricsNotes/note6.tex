@@ -2115,7 +2115,7 @@ Consider 2 types of panel experiments: \textbf{nonadaptive} and \textbf{adaptive
         \item[A2] \myhl[violet!60!white]{\textbf{Potential Outcome Model}}: the potential outcomes for unit $i$ at time $t$ can be written as $$ Y_{it}(z_{i,t-l},\cdots,z_{i,t-1},z_{it}) $$ for a known integer $l\geq 0$\footnote{This rules out the spillover effects and anticipation effects.}
     \end{itemize}
 \end{assumption}
-\citet{xiong2024optimal} allow for carryover effects up to $l$ periods in the past, the average instantaneous effect $tau_0$ and lagged effects $\tau_1,\cdots,\tau_l$ are defined as 
+\citet{xiong2024optimal} allow for carryover effects up to $l$ periods in the past, the average instantaneous effect $tau_0$ and lagged effects $\tau_1,\cdots,\tau_l$ are defined as, $\forall j \in \{0\}\cup [l]$,
 \begin{align*}
     \tau_j \coloneq \frac{1}{NT}\sum^N_{i=1}\sum^T_{t=1} \frac{1}{2} & \left[ Y_{it}\left(-1,\cdots,-1,\underbrace{+1}_{z_{i,t-j}}, +1,\cdots,+1\right) -Y_{it}\left( -1,\cdots,-1,\underbrace{-1}_{z_{i,t-j}},+1,\cdots,+1 \right) \right]
 \end{align*}
