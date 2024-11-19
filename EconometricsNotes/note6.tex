@@ -2123,7 +2123,13 @@ $\tau_j$ is the average over individuals and time periods of individual-time spe
 
 \paragraph*{nonadaptive experiments} Consider the GLS estimator for $\tau_0,\tau_1,\cdots,\tau_l$ based on the following specification:
 $$ Y_{it} = \alpha_i + \beta_t + \mathbf{X}'_i\boldsymbol{\theta}_t + \tau_0z_{it} + \tau_1z_{i,t-1} + \cdots + \tau_lz_{i,t-l} + \underbrace{\mathbf{u}'_i\mathbf{v}_t + \epsilon_{it}}_{e_{it}} $$
-where $\alpha_i$ and $\beta$ are unobserved unit and time FEs, $\mathbf{X}_i\in\mathbb{R}^{d_x}$ are observed covariates, $\mathbf{u}_i\in\mathbb{R}^{d_u}$ are latent covariates.
+where $\alpha_i$ and $\beta$ are unobserved unit and time FEs, $\mathbf{X}_i\in\mathbb{R}^{d_x}$ are time-invariant observed covariates, $\mathbf{u}_i\in\mathbb{R}^{d_u}$ are latent covariates.
+
+Assuming the error structure to be: 
+\begin{itemize}
+    \item $\mathbf{v}_t\in\mathbb{R}^{d_u}$ is i.i.d. in $t$, with $\mathbb{E}\left[\mathbf{v}_t\mid \boldsymbol{\xi}_{it}\right]=0$ and $\mathbb{E}\left[\mathbf{v}_t\mathbf{v}_s'\mid \boldsymbol{\xi_{it},\xi_{js}}\right] = \boldsymbol{\Sigma}_v\cdot\mathbf{1}_{t=s}$
+\end{itemize}
+The GLS estimateor is the best linear unbiased estimator, it has the smallest variance, and there is an explicit formula for the variance and precision of GLS in terms of $z_{it}$.
 
 \newpage
 \bibliographystyle{plainnat}
