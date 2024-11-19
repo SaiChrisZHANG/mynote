@@ -2127,7 +2127,9 @@ where $\alpha_i$ and $\beta$ are unobserved unit and time FEs, $\mathbf{X}_i\in\
 
 Assuming the error structure to be: 
 \begin{itemize}
-    \item $\mathbf{v}_t\in\mathbb{R}^{d_u}$ is i.i.d. in $t$, with $\mathbb{E}\left[\mathbf{v}_t\mid \boldsymbol{\xi}_{it}\right]=0$ and $\mathbb{E}\left[\mathbf{v}_t\mathbf{v}_s'\mid \boldsymbol{\xi_{it},\xi_{js}}\right] = \boldsymbol{\Sigma}_v\cdot\mathbf{1}_{t=s}$
+    \item $\mathbf{v}_t\in\mathbb{R}^{d_u}$ is i.i.d. in $t$, with $\mathbb{E}\left[\mathbf{v}_t\mid \boldsymbol{\xi}_{it}\right]=0$ and $\mathbb{E}\left[\mathbf{v}_t\mathbf{v}_s'\mid \boldsymbol{\xi}_{it},\boldsymbol{\xi}_{js}\right] = \boldsymbol{\Sigma}_v\cdot\mathbf{1}_{t=s}$, $\forall i,j,t,s$, where $\boldsymbol{\xi}_{it}=\left(\mathbf{X}_i,z_{it},\cdots,z_{i-l,t}\right)$.
+    \item $\epsilon_{it}$ is i.i.d. in $i$ and $t$, with $\mathbb{E}\left[\epsilon_{it}\mid\boldsymbol{\xi}_{it}\right]=0$ and $\mathbb{E}[\epsilon_{it}\epsilon_{js}\mid\boldsymbol{\xi}_{it},\boldsymbol{\xi}_{js}]=\sigma^2_{\epsilon}\cdot\mathbf{1}_{i=j,t=s}$, $\forall i,j,t,s$.
+    \item $\epsilon_{it}$ is independent of $\mathbf{v}_s$, $\forall i,t,s$.
 \end{itemize}
 The GLS estimateor is the best linear unbiased estimator, it has the smallest variance, and there is an explicit formula for the variance and precision of GLS in terms of $z_{it}$.
 
