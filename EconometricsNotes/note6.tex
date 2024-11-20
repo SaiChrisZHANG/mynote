@@ -2131,7 +2131,11 @@ Assuming the error structure to be:
     \item $\epsilon_{it}$ is i.i.d. in $i$ and $t$, with $\mathbb{E}\left[\epsilon_{it}\mid\boldsymbol{\xi}_{it}\right]=0$ and $\mathbb{E}[\epsilon_{it}\epsilon_{js}\mid\boldsymbol{\xi}_{it},\boldsymbol{\xi}_{js}]=\sigma^2_{\epsilon}\cdot\mathbf{1}_{i=j,t=s}$, $\forall i,j,t,s$.
     \item $\epsilon_{it}$ is independent of $\mathbf{v}_s$, $\forall i,t,s$.
 \end{itemize}
-The GLS estimateor is the best linear unbiased estimator, it has the smallest variance, and there is an explicit formula for the variance and precision of GLS in terms of $z_{it}$.
+then $\mathbb{E}\left[\mathbf{v}_t\right]=0$ holds w.l.o.g., and 
+\begin{align*}
+    \mathbb{E}[e_{it}]&=0 & \mathbb{E}\left[e^2_{it}\right]&=\mathbf{u}'_i\boldsymbol{\Sigma}_v\mathbf{u}_i + \sigma^2_{\epsilon}
+\end{align*}
+The GLS estimator is the best linear unbiased estimator, it has the smallest variance, and there is an explicit formula for the variance and precision of GLS in terms of $z_{it}$.
 
 \newpage
 \bibliographystyle{plainnat}
