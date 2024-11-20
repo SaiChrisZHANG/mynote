@@ -2133,9 +2133,12 @@ Assuming the error structure to be:
 \end{itemize}
 then $\mathbb{E}\left[\mathbf{v}_t\right]=0$ holds w.l.o.g., and 
 \begin{align*}
-    \mathbb{E}[e_{it}]&=0 & \mathbb{E}\left[e^2_{it}\right]&=\mathbf{u}'_i\boldsymbol{\Sigma}_v\mathbf{u}_i + \sigma^2_{\epsilon}
+    \mathbb{E}[e_{it}]&=0 & \mathbb{E}\left[e^2_{it}\right]&=\mathbf{u}'_i\boldsymbol{\Sigma}_v\mathbf{u}_i + \sigma^2_{\epsilon} & \mathbb{E}\left[e_{it}e_{jt}\right]&=\mathbf{u}'_i\boldsymbol{\Sigma}\mathbf{u}_j &\mathbb{E}[e_{it}e_{js}]&=0,t\neq s
 \end{align*}
+that is, $e_{it}$ is only correlated in the unit dimension.
+
 The GLS estimator is the best linear unbiased estimator, it has the smallest variance, and there is an explicit formula for the variance and precision of GLS in terms of $z_{it}$.
+The GLS weight matrix $\mathbf{W}$ is optimal when $\mathbf{W}\propto$
 
 \newpage
 \bibliographystyle{plainnat}
