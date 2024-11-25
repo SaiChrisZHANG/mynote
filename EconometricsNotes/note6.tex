@@ -2155,7 +2155,12 @@ To solve the optimal $Z$ based on the statistical properties of GLS. To estimate
 \end{itemize}
 
 Consider the T-optimal design: $$ \max_A\mathrm{tr}\left(\mathrm{Prec}\left(\hat{\boldsymbol{\tau}};A\right)\right) $$
-where $\mathrm{Prec}\left(\hat{\boldsymbol{\tau}};A\right)$ is the precision matrix of $\boldsymbol{\tau}$ (the matrix inverse of the var-cov matrix of $\boldsymbol{\tau}$) when $A$ is used.
+where $\mathrm{Prec}\left(\hat{\boldsymbol{\tau}};A\right)$ is the precision matrix of $\boldsymbol{\tau}$ (the matrix inverse of the var-cov matrix of $\boldsymbol{\tau}$) when $A$ is used\footnote{Each entry in $\mathrm{Var}\left(\hat{\boldsymbol{\tau}}\right)$ is a ratio of two polynomial function of $z_{it}$, where the degrees of numerator and denominator are $2l$ and $2(l+1)$, respectively, for $l\geq 1$. The objective of 
+\begin{itemize}
+    \item A-optimal design is sums of entries in $\mathrm{Var}\left(\hat{\boldsymbol{\tau}}\right)$
+    \item D-optimal design is the inverse of a $2(l+1)$th order polynomial function of $z_{it}$
+\end{itemize}
+both are non-convex, hence, FOC generally is generally not sufficient to solve the global optimal solution. }.
 
 \newpage
 \bibliographystyle{plainnat}
