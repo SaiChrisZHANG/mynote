@@ -2154,7 +2154,10 @@ To solve the optimal $Z$ based on the statistical properties of GLS. To estimate
     \end{itemize}
 \end{itemize}
 
-Consider the T-optimal design: $$ \max_A\mathrm{tr}\left(\mathrm{Prec}\left(\hat{\boldsymbol{\tau}};A\right)\right) $$
+Consider the T-optimal design: 
+\begin{equation}\label{eq3-2:xiongetal2024}
+    \max_A\mathrm{tr}\left(\mathrm{Prec}\left(\hat{\boldsymbol{\tau}};A\right)\right)
+\end{equation}
 where $\mathrm{Prec}\left(\hat{\boldsymbol{\tau}};A\right)$ is the precision matrix of $\boldsymbol{\tau}$ (the matrix inverse of the var-cov matrix of $\boldsymbol{\tau}$) when $A$ is used\footnote{Each entry in $\mathrm{Var}\left(\hat{\boldsymbol{\tau}}\right)$ is a ratio of two polynomial function of $z_{it}$, where the degrees of numerator and denominator are $2l$ and $2(l+1)$, respectively, for $l\geq 1$. The objective of 
 \begin{itemize}
     \item A-optimal design is sums of entries in $\mathrm{Var}\left(\hat{\boldsymbol{\tau}}\right)$
@@ -2165,7 +2168,7 @@ both are non-convex, hence, FOC generally is generally not sufficient to solve t
 \subparagraph*{Optimal solutions}
 THe optimality conditions disentagle the effect of different components (2WFEs, observed covars, latent covars) on the optimal treatment assignments, 
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{TWFE} and $l=0$} 
+    \item \myhl[myblue]{\textbf{TWFE} and $l=0$}: suppose $Y_{it}=\alpha_i + \beta_t + \tau_0z_{it} + \epsilon_{it}$, then the objective function in \ref{eq3-2:xiongetal2024} is $$ \mathrm{Prec}\left(\hat{\tau}_0;A\right) = \frac{N}{\sigma^2_{\epsilon}} \left[ -2\mathbf{b}'_T \boldsymbol{\omega} - \boldsymbol{\omega}'\mathbf{P}_{\mathbf{1}_T}  \boldsymbol{\omega} \right] $$
 \end{itemize}
 
 
