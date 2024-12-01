@@ -2171,7 +2171,7 @@ THe optimality conditions disentagle the effect of different components (2WFEs, 
     \item \myhl[myblue]{\textbf{TWFE} and $l=0$}: suppose $Y_{it}=\alpha_i + \beta_t + \tau_0z_{it} + \epsilon_{it}$, then the objective function in \ref{eq3-2:xiongetal2024} is $$ \mathrm{Prec}\left(\hat{\tau}_0;A\right) = \frac{N}{\sigma^2_{\epsilon}} \left[ -2\mathbf{b}'_T \boldsymbol{\omega} - \boldsymbol{\omega}'\mathbf{P}_{\mathbf{1}_T}  \boldsymbol{\omega} \right] $$
     where $\boldsymbol{\omega}=\left[\omega_t\right]_{t\in[T]}$ with $w_t=\frac{1}{N}\sum^N_{i=1}z_{it}$, $\mathbf{P}_{\mathbf{1}_T}=\mathbf{I}_T-\mathbf{1}_T\mathbf{1}_T'/T$ and $\mathbf{b}_T=\left[b_t\right]$ with $b_t=(T+1-2t)/T$. Solving the FOC, get the optimal design $\omega^*_t = -b_t$.
     \item \myhl[myblue]{$l>0$, without $\mathbf{X}_i$ or $\mathbf{u}_i$}: the objective function is still quadratic and concave in $\boldsymbol{\omega}$ but more complicated, the optimal treated fraction is non-linear: 
-    \begin{equation*}
+    \begin{equation}\label{eq3-4:xiong2024optimal}
         \omega^*_{l,t} = \begin{cases}
             -1 & t\leq \lfloor l/2 \rfloor\\
             a^{(l)}_{t- \lfloor l/2 \rfloor} & \lfloor l/2 \rfloor<t\leq l \\
@@ -2179,7 +2179,7 @@ THe optimality conditions disentagle the effect of different components (2WFEs, 
             -\omega^*_{l,T+1-t} & T-l<t\leq T-\lfloor l/2 \rfloor\\
             1 & T-\lfloor l/2 \rfloor<t
         \end{cases}
-    \end{equation*}
+    \end{equation}
     This is a 5-stage S-shaped curve in $t$:
     \begin{itemize}
         \item[S1] $t\leq \lfloor l/2 \rfloor$: all units under control
@@ -2188,6 +2188,12 @@ THe optimality conditions disentagle the effect of different components (2WFEs, 
         \item[S4] $\omega^*_t$ grows nonlinearly in time 
         \item[S5] all units are under treatment  
     \end{itemize}
+\end{itemize}
+More generally, consider the solution concepts: 
+\begin{itemize}
+    \item let $\mathbb{A}_l = \left\{ A: \frac{1}{N}\sum^N_{i=1}\mathbf{1}_{A_i\leq t} = (1+\omega^*_{l,t})/2,\forall t \right\}$ be the set of designs satisfying \ref{eq3-4:xiong2024optimal}
+    \item let $\mathbb{A}_{\mathbf{X}} = \left\{ A:\frac{1}{N}\sum^N_{i=1}\mathbf{X}_i\mathbf{1}_{A_i=t}=\mathbf{0}_{d_x},\forall t\in \left\{2,\cdots,T\right\} \right\}$ be the set of designs satisfying covariates balancing conditions 
+    \item let $\mathbb{A}_{\mathbf{U}}$ defined similarly as $\mathbb{A}_{\mathbf{X}}$
 \end{itemize}
 
 
