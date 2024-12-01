@@ -2170,6 +2170,21 @@ THe optimality conditions disentagle the effect of different components (2WFEs, 
 \begin{itemize}
     \item \myhl[myblue]{\textbf{TWFE} and $l=0$}: suppose $Y_{it}=\alpha_i + \beta_t + \tau_0z_{it} + \epsilon_{it}$, then the objective function in \ref{eq3-2:xiongetal2024} is $$ \mathrm{Prec}\left(\hat{\tau}_0;A\right) = \frac{N}{\sigma^2_{\epsilon}} \left[ -2\mathbf{b}'_T \boldsymbol{\omega} - \boldsymbol{\omega}'\mathbf{P}_{\mathbf{1}_T}  \boldsymbol{\omega} \right] $$
     where $\boldsymbol{\omega}=\left[\omega_t\right]_{t\in[T]}$ with $w_t=\frac{1}{N}\sum^N_{i=1}z_{it}$, $\mathbf{P}_{\mathbf{1}_T}=\mathbf{I}_T-\mathbf{1}_T\mathbf{1}_T'/T$ and $\mathbf{b}_T=\left[b_t\right]$ with $b_t=(T+1-2t)/T$. Solving the FOC, get the optimal design $\omega^*_t = -b_t$.
+    \item \myhl[myblue]{$l>0$, without $\mathbf{X}_i$ or $\mathbf{u}_i$}: the objective function is still quadratic and concave in $\boldsymbol{\omega}$ but more complicated, the optimal treated fraction is non-linear: 
+    \begin{equation*}
+        \omega^*_{l,t} = \begin{cases}
+            -1 & t\leq \lfloor l/2 \rfloor\\
+            a^{(l)}_{t- \lfloor l/2 \rfloor} & \lfloor l/2 \rfloor<t\leq l \\
+            -1+\frac{2t-(l+1)}{T-l} & l<t\leq T-l\\
+            -\omega^*_{l,T+1-t} & T-l<t\leq T-\lfloor l/2 \rfloor\\
+            1 & T-\lfloor l/2 \rfloor<t
+        \end{cases}
+    \end{equation*}
+    This is a 5-stage S-shaped curve in $t$:
+    \begin{itemize}
+        \item[S1] $t\leq \lfloor l/2 \rfloor$: all units under control
+        \item[S2] $\lfloor l/2 \rfloor t\leq l$: treated fraction grows nonlinearly 
+    \end{itemize}
 \end{itemize}
 
 
