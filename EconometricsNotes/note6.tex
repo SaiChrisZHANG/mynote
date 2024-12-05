@@ -2195,6 +2195,11 @@ More generally, consider the solution concepts:
     \item let $\mathbb{A}_{\mathbf{X}} = \left\{ A:\frac{1}{N}\sum^N_{i=1}\mathbf{X}_i\mathbf{1}_{A_i=t}=\mathbf{0}_{d_x},\forall t\in \left\{2,\cdots,T\right\} \right\}$ be the set of designs satisfying covariates balancing conditions 
     \item let $\mathbb{A}_{\mathbf{U}}$ defined similarly as $\mathbb{A}_{\mathbf{X}}$
 \end{itemize}
+then the optimal condition is given as 
+\begin{theorem}{\citet{xiong2024optimal}'s optimality conditions: nonadaptive experiments}{thoerem3-1_xiongetal2024}
+    Under Assumption \ref{assump:xiongetal2024}, $\hat{\boldsymbol{\tau}}$ is estimated from the infeasible GLS with $\mathbf{W} \propto \left( \mathbf{U}\boldsymbol{\Sigma}\mathbf{U}'+\sigma^2_{\epsilon}\mathbf{I}_N \right)^{-1} $, rows in $\mathbf{X}$ and $\mathbf{U}$ are centered\footnote{$\sum^N_{i=1}\mathbf{X}_i=\mathbf{0}_{d_x}$ and $\sum^N_{i=1}\mathbf{u}_i=\mathbf{0}_{d_u}$},
+    and $\mathbf{X,U}$ are orthogonal ($\sum^N_{i=1}\mathbf{X}_i\mathbf{u}_i'=\mathbf{0}_{d_x\times d_u}$), $\boldsymbol{\Sigma}_v=\sigma^2_{\epsilon}\cdot \mathbf{I}_{d_u}$, and $T>\left(l^3+13l^2+7l+3\right)/(8l)$, the set of optimal treatment designs are $$ \mathbb{A}_{opt} = \mathbb{A}_l\cap \mathbb{A}_{\mathbf{X}}\cap \mathbb{A}_{\mathbf{U}} $$
+\end{theorem}
 
 \newpage
 \bibliographystyle{plainnat}
