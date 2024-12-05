@@ -2197,9 +2197,14 @@ More generally, consider the solution concepts:
 \end{itemize}
 then the optimal condition is given as 
 \begin{theorem}{\citet{xiong2024optimal}'s optimality conditions: nonadaptive experiments}{thoerem3-1_xiongetal2024}
-    Under Assumption \ref{assump:xiongetal2024}, $\hat{\boldsymbol{\tau}}$ is estimated from the infeasible GLS with $\mathbf{W} \propto \left( \mathbf{U}\boldsymbol{\Sigma}\mathbf{U}'+\sigma^2_{\epsilon}\mathbf{I}_N \right)^{-1} $, rows in $\mathbf{X}$ and $\mathbf{U}$ are centered\footnote{$\sum^N_{i=1}\mathbf{X}_i=\mathbf{0}_{d_x}$ and $\sum^N_{i=1}\mathbf{u}_i=\mathbf{0}_{d_u}$},
+    Under Assumption \ref{assump:xiongetal2024}, $\hat{\boldsymbol{\tau}}$ is estimated from the infeasible GLS with $\mathbf{W} \propto \left( \mathbf{U}\boldsymbol{\Sigma}\mathbf{U}'+\sigma^2_{\epsilon}\mathbf{I}_N \right)^{-1} $, rows in $\mathbf{X}$ and $\mathbf{U}$ are centered\footnote{$\sum^N_{i=1}\mathbf{X}_i=\mathbf{0}_{d_x}$ and $\sum^N_{i=1}\mathbf{u}_i=\mathbf{0}_{d_u}$, $\mathbf{X}_i$ and $\mathbf{u}_i$ impose additional covariate balancing conditions (strata).},
     and $\mathbf{X,U}$ are orthogonal ($\sum^N_{i=1}\mathbf{X}_i\mathbf{u}_i'=\mathbf{0}_{d_x\times d_u}$), $\boldsymbol{\Sigma}_v=\sigma^2_{\epsilon}\cdot \mathbf{I}_{d_u}$, and $T>\left(l^3+13l^2+7l+3\right)/(8l)$, the set of optimal treatment designs are $$ \mathbb{A}_{opt} = \mathbb{A}_l\cap \mathbb{A}_{\mathbf{X}}\cap \mathbb{A}_{\mathbf{U}} $$
 \end{theorem}
+
+When $\mathbf{X}_i$ and $\mathbf{u}_i$ are both discrete, then 
+\begin{align*}
+\mathbb{A}^{\mathrm{disc}}_{opt} &= \left\{ A:\frac{1}{\left\vert \mathcal{O}_g \right\vert } \sum_{i\in \mathcal{O}_g}\mathbf{1}_{A_i\leq t}=\frac{1+\omega^*_{l,t}}{2},\forall t,g  \right\} & \mathcal{O}_g & \left\{ i: \left(\mathbf{X}_i,\mathbf{u}_i\right) = (x_g,u_g) \right\}
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
