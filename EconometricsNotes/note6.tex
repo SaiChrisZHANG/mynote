@@ -2206,7 +2206,11 @@ When $\mathbf{X}_i$ and $\mathbf{u}_i$ are both discrete, then
 \mathbb{A}^{\mathrm{disc}}_{opt} &= \left\{ A:\frac{1}{\left\vert \mathcal{O}_g \right\vert } \sum_{i\in \mathcal{O}_g}\mathbf{1}_{A_i\leq t}=\frac{1+\omega^*_{l,t}}{2},\forall t,g  \right\} & \mathcal{O}_g & \left\{ i: \left(\mathbf{X}_i,\mathbf{u}_i\right) = (x_g,u_g) \right\}
 \end{align*}
 
-The optimal treatment designs $\mathbb{A}_{opt}$ do \textbf{not} depend on the value of $\boldsymbol{\tau}$, due to the fact that the estimation error $\hat{\boldsymbol{\tau}}-\boldsymbol{\tau}$ from GLS does not depend on the value of $\boldsymbol{\tau}$.
+The optimal treatment designs $\mathbb{A}_{opt}$ do \textbf{not} depend on the value of $\boldsymbol{\tau}$, due to the fact that the estimation error $\hat{\boldsymbol{\tau}}-\boldsymbol{\tau}$ from GLS does not depend on the value of $\boldsymbol{\tau}$. Some examples of the optimal treated fractions are 
+\begin{itemize}
+    \item $l=0$ and only time fixed effects: $Y_{it}=\beta_t+\tau_0z_{it}+\epsilon_{it}$, then $\mathrm{Prec}\left(\hat{\tau}_0\right) = N/\sigma^2_{\epsilon} \cdot \left[T-\sum^T_{t=1}\omega^2_t\right] $
+\end{itemize}
+
 
 \newpage
 \bibliographystyle{plainnat}
