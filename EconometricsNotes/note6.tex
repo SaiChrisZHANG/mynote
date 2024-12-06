@@ -2208,8 +2208,8 @@ When $\mathbf{X}_i$ and $\mathbf{u}_i$ are both discrete, then
 
 The optimal treatment designs $\mathbb{A}_{opt}$ do \textbf{not} depend on the value of $\boldsymbol{\tau}$, due to the fact that the estimation error $\hat{\boldsymbol{\tau}}-\boldsymbol{\tau}$ from GLS does not depend on the value of $\boldsymbol{\tau}$. Some examples of the optimal treated fractions are 
 \begin{itemize}
-    \item $l=0$ and only time fixed effects: $Y_{it}=\beta_t+\tau_0z_{it}+\epsilon_{it}$, then $\mathrm{Prec}\left(\hat{\tau}_0\right) = N/\sigma^2_{\epsilon} \cdot \left[T-\sum^T_{t=1}\omega^2_t\right] $. Any treatment design is optimal if $\omega^*_t=0,\forall t$ and $z_{it}\leq z_{i,t+1},\forall i,t$ (50-50 split for all time periods).
-    \item 
+    \item $l=0$ and only time fixed effects, $Y_{it}=\beta_t+\tau_0z_{it}+\epsilon_{it}$: then $\mathrm{Prec}\left(\hat{\tau}_0\right) = N/\sigma^2_{\epsilon} \cdot \left[T-\sum^T_{t=1}\omega^2_t\right] $. Any treatment design is optimal if $\omega^*_t=0,\forall t$ and $z_{it}\leq z_{i,t+1},\forall i,t$ (50-50 split for all time periods).
+    \item $l=0$ and only unit fixed effects, $Y_{it}=\alpha_t+\tau_0z_{it}+\epsilon_{it}$: then $\mathrm{Prec}\left(\hat{\tau}_0\right) = T/\sigma^2_{\epsilon} \cdot \left[N-\sum^N_{i=1}\xi^2_t\right] $ where $\xi_i=\sum^T_{t=1}z_{it}/T$. Any treatment design is optimal if $\omega^*_t=-1,\forall t<(T+1)/2$ and $\omega^*_t=1,forall t>(T+1)/2$ (treatment to all units at halftime).
 \end{itemize}
 
 
