@@ -2218,6 +2218,11 @@ The optimal treatment designs $\mathbb{A}_{opt}$ do \textbf{not} depend on the v
 Since the objective function in \ref{eq3-2:xiongetal2024} is a \textbf{sum} of $l+1$ quadratic functions, one for each $\mathrm{Prec}\left(\hat{\tau}_j\right),j=0,1,\cdots,l$. Let $\omega^*_{l,t}(j)$ be the unit average of $z_{it}$ the maximizes $\mathrm{Prec}\left(\hat{\tau}_j\right)$ at time $t$ when the lagged effect duration is $l$.
 So the $\omega^*_{l,t}$ in \ref{eq3-4:xiong2024optimal} is a convex combination of $\omega^*_{l,t}(j)$ for all $j$ and $t$. Each $\omega^*_{l,t}(j)$ maximizes the precision of $\hat{\tau}_j$, so it should grow linearly in $t$, except during the first $l$  (truncated to 0) or last $l$ periods (truncated to 1), which generate the S-shaped growing the treatment size.
 
+\subparagraph*{Guidance} on choosing a treatment design
+\begin{itemize}
+    \item no covariates $d_x=d_u=0$ and $\mathbb{A}_l$ not empty: randomly choose one from $\mathbb{A}_l$ with equal probability
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
