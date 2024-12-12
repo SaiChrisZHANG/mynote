@@ -2221,6 +2221,9 @@ So the $\omega^*_{l,t}$ in \ref{eq3-4:xiong2024optimal} is a convex combination 
 \subparagraph*{Guidance} on choosing a treatment design
 \begin{itemize}
     \item no covariates $d_x=d_u=0$ and $\mathbb{A}_l$ not empty: randomly choose one from $\mathbb{A}_l$ with equal probability
+    \item when discrete-valued covariates $d_x\neq 0$ and $\mathbb{A}^{disc}_{opt}$ not empty: randomly choose one from $\mathbb{A}^{disc}_l$ with equal probability 
+    \item if $\left\vert \mathcal{O}_g \right\vert(1+\omega^*_{l,t})/(2T)$ is not an integer for each stratum, $\mathbb{A}^{disc}_{opt}$ empty 
+    \item if observed covariates are continuous: partition units into a small number of strata and then randomly choose a design that satisfies the treated fraction conditions for each stratum
 \end{itemize}
 
 \newpage
