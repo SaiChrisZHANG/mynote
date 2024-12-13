@@ -2229,7 +2229,12 @@ So the $\omega^*_{l,t}$ in \ref{eq3-4:xiong2024optimal} is a convex combination 
 \end{itemize}
 
 \paragraph*{Adaptive experiments}
+In adaptive experiments, experiments can be terminated early to reduce the cost, instead of running $T_{\max}$ periods. Consider a fixed $N$ and a varying duration $\tilde{T}\in\left[T_{\max}\right]$. At any $t$, the experimenter decides whether to terminate the experiment, if the experiment stops, $\tilde{T}$ is realized as $t$; otherwise the experimenter makes treatment decisions for $t+1$.
 
+For the specification of the observed outcome of unit $i$ at time $s$:
+\begin{align*}
+    Y_{is}&= \alpha_i+\beta_s +\tau z_{is}+\epsilon_{is} & \forall i\in[N],s\in [\tilde{T}]
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
