@@ -2237,6 +2237,13 @@ For the specification of the observed outcome of unit $i$ at time $s$:
 \end{align*}
 and the instantaneous effect denoted as $\tau$. Consider the criterion to terminate the experiment of the precision exceeds a target threshold $c$ at $t$:
 $$ \mathrm{Prec}\left(\hat{\tau};\boldsymbol{\omega}\right) = \frac{Nt}{\sigma^2_{\epsilon}}\cdot \underbrace{\frac{-2\mathbf{b}'_t\boldsymbol{\omega}_{1:t} - \boldsymbol{\omega}_{1:t}'\mathbf{P}_{\mathbf{1}_t}\boldsymbol{\omega}_{1:t}}{t}}_{g_{\tau}\left(\boldsymbol{\omega},t\right)} \geq c$$
+\citet{xiong2024optimal} develops a precision-based rule to terminate the experiment to tackle 3 challenges:
+\begin{itemize}
+    \item in nonadaptive experiments, $\omega^*_s = (2s-1-\tilde{T})/\tilde{T}$, in adaptive experiments, $\tilde{T}$ is unknown.
+    \item estimating $\sigma^2_{\epsilon}$ is difficult: having the precision indeed exceed $c$ when terminated; post-experiment inference
+    \item efficient estimation of $\tau$ post-experiment
+\end{itemize}
+3 estimators,
 
 \newpage
 \bibliographystyle{plainnat}
