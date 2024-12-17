@@ -2247,6 +2247,7 @@ $$ \mathrm{Prec}\left(\hat{\tau};\boldsymbol{\omega}\right) = \frac{Nt}{\sigma^2
 \begin{itemize}
     \item \myhl[myblue]{\textbf{Within} estimator}: $\hat{\tau}_{\mathcal{S},t}$ is estimated from running $\dot{Y} = \tau\dot{z}_{is}+\dot{\epsilon}_{is}$, where the within transformation is $$ \dot{x}_{is} = x_is - \bar{x}_{i}-\bar{x}_{s} + \bar{x} $$
     \item \myhl[myblue]{\textbf{Plugin} estimator}: ${\sigma}^2_{\epsilon}$ can be estimated as $$ \hat{\sigma}^2_{\mathcal{S},t}=\frac{1}{\left\vert\mathcal{S}\right\vert\cdot (t-1)} \sum_{i\in\mathcal{S}}\sum^t_{s=1}\left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot\dot{z}_{is}\right)^2 $$
+    \item estimate the variance of $\epsilon^2_{is}$, that is $\xi^2_{\epsilon}\coloneq \mathbb{E}\left[\left(\epsilon^2_{is}-\sigma^2_{\epsilon}\right)^2\right]$,
 \end{itemize}
 
 \newpage
