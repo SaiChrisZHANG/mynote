@@ -2243,7 +2243,10 @@ $$ \mathrm{Prec}\left(\hat{\tau};\boldsymbol{\omega}\right) = \frac{Nt}{\sigma^2
     \item estimating $\sigma^2_{\epsilon}$ is difficult: having the precision indeed exceed $c$ when terminated; post-experiment inference
     \item efficient estimation of $\tau$ post-experiment
 \end{itemize}
-3 estimators,
+3 estimators are most common. Suppose the estimators use the data of units in a set $\mathcal{S}$ over $t$ periods so far, $t$ is small but the set size $\left\vert\mathcal{S}\right\vert$ can be large:
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{Within} estimator}: $\hat{\tau}_{\mathcal{S},t}$ is estimated from running $\dot{Y} = \tau\dot{z}_{is}+\dot{\epsilon}_{is}$
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
