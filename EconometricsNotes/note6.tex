@@ -2249,6 +2249,7 @@ $$ \mathrm{Prec}\left(\hat{\tau};\boldsymbol{\omega}\right) = \frac{Nt}{\sigma^2
     \item \myhl[myblue]{\textbf{Plugin} estimator}: ${\sigma}^2_{\epsilon}$ can be estimated as $$ \hat{\sigma}^2_{\mathcal{S},t}=\frac{1}{\left\vert\mathcal{S}\right\vert\cdot (t-1)} \sum_{i\in\mathcal{S}}\sum^t_{s=1}\left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot\dot{z}_{is}\right)^2 $$
     \item estimate the variance of $\epsilon^2_{is}$, that is $\xi^2_{\epsilon}\coloneq \mathbb{E}\left[\left(\epsilon^2_{is}-\sigma^2_{\epsilon}\right)^2\right]$, which quantifies the uncertainty of the estimated $\sigma^2_{\epsilon}$, as $$ \hat{\xi}^2_{\mathcal{S},t} = \underbrace{\frac{t^2}{(t-1)^2}}_{\text{correction multiplier}}\cdot \underbrace{ \frac{1}{\left\vert \mathcal{S} \right\vert \cdot t} \sum_{i\in\mathcal{S}}\left(\sum^t_{s=1} \left[ \left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot\dot{z}_{is}\right)^2 - \hat{\sigma}^2_{\mathcal{S},t}\right] \right)^2 }_{\text{plug-in estimator of }\xi^2_{\epsilon}} - \underbrace{\frac{3t-2}{(t-1)^2} \cdot \left(\hat{\sigma}^2_{\mathcal{S},t}\right)^2}_{\text{correction term}} $$
 \end{itemize}
+the plug-in estimator is biased since $\left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot \dot{z}_{is}\right)^2$ is biased. The bias is squared and cannot be averaged out over $i$.
 
 \newpage
 \bibliographystyle{plainnat}
