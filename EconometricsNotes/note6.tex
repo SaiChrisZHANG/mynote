@@ -2251,6 +2251,13 @@ $$ \mathrm{Prec}\left(\hat{\tau};\boldsymbol{\omega}\right) = \frac{Nt}{\sigma^2
 \end{itemize}
 the plug-in estimator is biased since $\left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot \dot{z}_{is}\right)^2$ is biased. The bias is squared and cannot be averaged out over $i$.
 
+\citet{xiong2024optimal} propose PGAE via dynamic programming by partitioning units into 3 mutually disjoint subsets:
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{nonadaptive treatment untis (NTU)}}: $\mathcal{S}_{ntu}$
+    \item \myhl[myblue]{\textbf{two adaptive treatment units (ATU)}}: $\mathcal{S}_{atu,1}$ and $\mathcal{S}_{atu,2}$
+\end{itemize}
+the fractions of the 3 sets are: $p_{ntu}=\left\vert \mathcal{S}_{ntu} \right\vert/N$, $p_{atu,1}=\left\vert \mathcal{S}_{atu,1} \right\vert/N$, $p_{atu,2}=\left\vert \mathcal{S}_{atu,2} \right\vert/N$, the sets are selected s.t. $p_{ntu}$ is small, $p_{atu,1}=p_{atu,2}$ and $p_{ntu}+p_{atu,1}+p_{atu,2}=1$.
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
