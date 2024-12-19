@@ -2258,6 +2258,15 @@ the plug-in estimator is biased since $\left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S
 \end{itemize}
 the fractions of the 3 sets are: $p_{ntu}=\left\vert \mathcal{S}_{ntu} \right\vert/N$, $p_{atu,1}=\left\vert \mathcal{S}_{atu,1} \right\vert/N$, $p_{atu,2}=\left\vert \mathcal{S}_{atu,2} \right\vert/N$, the sets are selected s.t. $p_{ntu}$ is small, $p_{atu,1}=p_{atu,2}$ and $p_{ntu}+p_{atu,1}+p_{atu,2}=1$.
 
+The basic logic is: 
+\begin{itemize}
+    \item[1] before the experiment starts: initialize the treatment design of $\mathcal{S}_{ntu},\mathcal{S}_{atu,1},\mathcal{S}_{atu,2}$ by the optimal design of a $T_{\max}-$period nonadaptive experiment (benchmark, without early stopping)
+    the average of $z_{is}$ over $i$ in each set satisfies $\omega_{bm,s}=(2s-1-T_{\max})/T_{\max},\forall s\in[T_{\max}]$.
+    \item[2] the treatment design of $NTU$ does not change during the experiment, stays equal to $\boldsymbol{\omega}_{bm}$, the observed data from NTU is used to update thte treatment assignments of ATU for subsequent periods.
+    \item[3] $\mathcal{S}_{atu,1}$ is used to estimate $\sigma^2_{\epsilon}$ and decide whether to terminate the experiment 
+    \item[4] $\mathcal{S}_{atu,2}$ is used to provide another estimate of $\sigma^2_{\epsilon}$ for experiment inference
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
