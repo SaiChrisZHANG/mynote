@@ -2236,7 +2236,9 @@ For the specification of the observed outcome of unit $i$ at time $s$:
     Y_{is}&= \alpha_i+\beta_s +\tau z_{is}+\epsilon_{is} & \forall i\in[N],s\in [\tilde{T}]
 \end{align*}
 and the instantaneous effect denoted as $\tau$. Consider the criterion to terminate the experiment of the precision exceeds a target threshold $c$ at $t$:
-$$ \mathrm{Prec}\left(\hat{\tau};\boldsymbol{\omega}\right) = \frac{Nt}{\sigma^2_{\epsilon}}\cdot \underbrace{\frac{-2\mathbf{b}'_t\boldsymbol{\omega}_{1:t} - \boldsymbol{\omega}_{1:t}'\mathbf{P}_{\mathbf{1}_t}\boldsymbol{\omega}_{1:t}}{t}}_{g_{\tau}\left(\boldsymbol{\omega},t\right)} \geq c$$
+\begin{equation}\label{eq:stoppingrule_precision_xiong2024}
+    \mathrm{Prec}\left(\hat{\tau};\boldsymbol{\omega}\right) = \frac{Nt}{\sigma^2_{\epsilon}}\cdot \underbrace{\frac{-2\mathbf{b}'_t\boldsymbol{\omega}_{1:t} - \boldsymbol{\omega}_{1:t}'\mathbf{P}_{\mathbf{1}_t}\boldsymbol{\omega}_{1:t}}{t}}_{g_{\tau}\left(\boldsymbol{\omega},t\right)} \geq c
+\end{equation}
 \citet{xiong2024optimal} develops a precision-based rule to terminate the experiment to tackle 3 challenges:
 \begin{itemize}
     \item in nonadaptive experiments, $\omega^*_s = (2s-1-\tilde{T})/\tilde{T}$, in adaptive experiments, $\tilde{T}$ is unknown.
@@ -2265,6 +2267,11 @@ The basic logic is:
     \item[2] the treatment design of $NTU$ does not change during the experiment, stays equal to $\boldsymbol{\omega}_{bm}$, the observed data from NTU is used to update thte treatment assignments of ATU for subsequent periods.
     \item[3] $\mathcal{S}_{atu,1}$ is used to estimate $\sigma^2_{\epsilon}$ and decide whether to terminate the experiment 
     \item[4] $\mathcal{S}_{atu,2}$ is used to provide another estimate of $\sigma^2_{\epsilon}$ for experiment inference
+\end{itemize}
+
+PGAE addresses 3 main challenges:
+\begin{itemize}
+    \item \myhl[myblue]{\textbf{choosing a treatment design}}: $\sigma^2_{\epsilon}$ is unknown in practice, construct the belief distribution of $\sigma^2_{\epsilon}$ instead, and draw sample $\sigma^2$, plug it into the stopping rule \ref{eq:stoppingrule_precision_xiong2024}, repeat this procedure over sampled $\sigma^2$s, obtain an empirical distribution of $\tilde{P}$ as $P_t(\tilde{T})$ 
 \end{itemize}
 
 \newpage
