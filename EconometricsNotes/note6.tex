@@ -2271,7 +2271,10 @@ The basic logic is:
 
 PGAE addresses 3 main challenges:
 \begin{itemize}
-    \item \myhl[myblue]{\textbf{choosing a treatment design}}: $\sigma^2_{\epsilon}$ is unknown in practice, construct the belief distribution of $\sigma^2_{\epsilon}$ instead, and draw sample $\sigma^2$, plug it into the stopping rule \ref{eq:stoppingrule_precision_xiong2024}, repeat this procedure over sampled $\sigma^2$s, obtain an empirical distribution of $\tilde{P}$ as $P_t(\tilde{T})$ 
+    \item \myhl[myblue]{\textbf{choosing a treatment design}}: $\sigma^2_{\epsilon}$ is unknown in practice, construct the belief distribution of $\sigma^2_{\epsilon}$ instead, and draw sample $\sigma^2$, plug it into the stopping rule \ref{eq:stoppingrule_precision_xiong2024}, repeat this procedure over sampled $\sigma^2$s, obtain an empirical distribution of $\tilde{P}$ as $P_t(\tilde{T})$.
+    
+    To construct the distribution of $\sigma^2_{\epsilon}$, first estimate $\hat{\sigma}^2_{ntu,t}$ with the plug-in estimator using $NTU$ data for $t$ periods, it is an consistent estimator of $\sigma^2_{\epsilon}$ and asymptotically normal: $$ \sqrt{\left\vert \mathcal{S}_{ntu}\right\vert\cdot t} \cdot \frac{\hat{\sigma}^2_{ntu,t}-\sigma^2_{\epsilon}}{\hat{\xi}^{+}_{ntu,t}} \xrightarrow{d} \mathcal{N}(0,1) $$
+    where $\hat{\xi}^+_{ntu,t} = \sqrt{\hat{\xi}^2_{ntu,t}+\left(\hat{\sigma}^2_{ntu,t}\right)^2/(t-1)} $ and $\hat{\xi}^2_{ntu,t}$ is estimated following the bias-corrected estimator.
 \end{itemize}
 
 \newpage
