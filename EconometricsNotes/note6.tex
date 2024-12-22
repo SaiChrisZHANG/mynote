@@ -2283,7 +2283,7 @@ PGAE addresses 3 main challenges:
         \item \textbf{decision variable}: the treated fraction of the next period $\omega_{t+1}$
         \item \textbf{terminate cost}: $-\tilde{T}\cdot g_{\tau}\left(\left(\boldsymbol{\omega}_{atu,1:t},\boldsymbol{\omega}_{t+1:\tilde{T}}\right),\tilde{T}\right)$
     \end{itemize}
-    the problem is to solve $\omega_{t+1}$ that minimizers the expected terminat cost, given the random experiment duration $\tilde{T}$:$$ \omega_t = \arg\min_{\omega_t} \mathbb{E}_{\tilde{T}\sim P_t\left(\tilde{T}\right)} $$
+    the problem is to solve $\omega_{t+1}$ that minimizers the expected terminat cost, given the random experiment duration $\tilde{T}$:$$ \omega_t = \arg\min_{\omega_t} \mathbb{E}_{\tilde{T}\sim P_t\left(\tilde{T}\right)} \left[-\tilde{T}\cdot g_{\tau}\left(\left( \boldsymbol{\omega}_{atu,1:t},\boldsymbol{\omega}_{t+1:\tilde{T}} \right),\tilde{T}\right)\right] \text{ s.t. } \omega_{atu,t}\leq \omega_{t+1}\leq \omega_{t+1}\leq \cdots\leq \omega_{T_{\max}}$$
 \end{itemize}
 
 \newpage
