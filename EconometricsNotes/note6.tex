@@ -2249,7 +2249,7 @@ and the instantaneous effect denoted as $\tau$. Consider the criterion to termin
 \begin{itemize}
     \item \myhl[myblue]{\textbf{Within} estimator}: $\hat{\tau}_{\mathcal{S},t}$ is estimated from running $\dot{Y} = \tau\dot{z}_{is}+\dot{\epsilon}_{is}$, where the within transformation is $$ \dot{x}_{is} = x_is - \bar{x}_{i}-\bar{x}_{s} + \bar{x} $$
     \item \myhl[myblue]{\textbf{Plugin} estimator}: ${\sigma}^2_{\epsilon}$ can be estimated as $$ \hat{\sigma}^2_{\mathcal{S},t}=\frac{1}{\left\vert\mathcal{S}\right\vert\cdot (t-1)} \sum_{i\in\mathcal{S}}\sum^t_{s=1}\left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot\dot{z}_{is}\right)^2 $$
-    \item estimate the variance of $\epsilon^2_{is}$, that is $\xi^2_{\epsilon}\coloneq \mathbb{E}\left[\left(\epsilon^2_{is}-\sigma^2_{\epsilon}\right)^2\right]$, which quantifies the uncertainty of the estimated $\sigma^2_{\epsilon}$, as $$ \hat{\xi}^2_{\mathcal{S},t} = \underbrace{\frac{t^2}{(t-1)^2}}_{\text{correction multiplier}}\cdot \underbrace{ \frac{1}{\left\vert \mathcal{S} \right\vert \cdot t} \sum_{i\in\mathcal{S}}\left(\sum^t_{s=1} \left[ \left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot\dot{z}_{is}\right)^2 - \hat{\sigma}^2_{\mathcal{S},t}\right] \right)^2 }_{\text{plug-in estimator of }\xi^2_{\epsilon}} - \underbrace{\frac{3t-2}{(t-1)^2} \cdot \left(\hat{\sigma}^2_{\mathcal{S},t}\right)^2}_{\text{correction term}} $$
+    \item \myhl[myblue]{\textbf{Bias-corrected} estimator}: estimate the variance of $\epsilon^2_{is}$, that is $\xi^2_{\epsilon}\coloneq \mathbb{E}\left[\left(\epsilon^2_{is}-\sigma^2_{\epsilon}\right)^2\right]$, which quantifies the uncertainty of the estimated $\sigma^2_{\epsilon}$, as $$ \hat{\xi}^2_{\mathcal{S},t} = \underbrace{\frac{t^2}{(t-1)^2}}_{\text{correction multiplier}}\cdot \underbrace{ \frac{1}{\left\vert \mathcal{S} \right\vert \cdot t} \sum_{i\in\mathcal{S}}\left(\sum^t_{s=1} \left[ \left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot\dot{z}_{is}\right)^2 - \hat{\sigma}^2_{\mathcal{S},t}\right] \right)^2 }_{\text{plug-in estimator of }\xi^2_{\epsilon}} - \underbrace{\frac{3t-2}{(t-1)^2} \cdot \left(\hat{\sigma}^2_{\mathcal{S},t}\right)^2}_{\text{correction term}} $$
 \end{itemize}
 the plug-in estimator is biased since $\left(\dot{y}_{is}-\hat{\tau}_{\mathcal{S},t}\cdot \dot{z}_{is}\right)^2$ is biased. The bias is squared and cannot be averaged out over $i$.
 
@@ -2274,7 +2274,16 @@ PGAE addresses 3 main challenges:
     \item \myhl[myblue]{\textbf{choosing a treatment design}}: $\sigma^2_{\epsilon}$ is unknown in practice, construct the belief distribution of $\sigma^2_{\epsilon}$ instead, and draw sample $\sigma^2$, plug it into the stopping rule \ref{eq:stoppingrule_precision_xiong2024}, repeat this procedure over sampled $\sigma^2$s, obtain an empirical distribution of $\tilde{P}$ as $P_t(\tilde{T})$.
     
     To construct the distribution of $\sigma^2_{\epsilon}$, first estimate $\hat{\sigma}^2_{ntu,t}$ with the plug-in estimator using $NTU$ data for $t$ periods, it is an consistent estimator of $\sigma^2_{\epsilon}$ and asymptotically normal: $$ \sqrt{\left\vert \mathcal{S}_{ntu}\right\vert\cdot t} \cdot \frac{\hat{\sigma}^2_{ntu,t}-\sigma^2_{\epsilon}}{\hat{\xi}^{+}_{ntu,t}} \xrightarrow{d} \mathcal{N}(0,1) $$
-    where $\hat{\xi}^+_{ntu,t} = \sqrt{\hat{\xi}^2_{ntu,t}+\left(\hat{\sigma}^2_{ntu,t}\right)^2/(t-1)} $ and $\hat{\xi}^2_{ntu,t}$ is estimated following the bias-corrected estimator.
+    where $\hat{\xi}^+_{ntu,t} = \sqrt{\hat{\xi}^2_{ntu,t}+\left(\hat{\sigma}^2_{ntu,t}\right)^2/(t-1)} $ and $\hat{\xi}^2_{ntu,t}$ is estimated following the bias-corrected estimator. Let $\sqrt{\left\vert \mathcal{S}_{ntu}\right\vert\cdot t} \cdot \frac{\hat{\sigma}^2_{ntu,t}-\sigma^2_{\epsilon}}{\hat{\xi}^{+}_{ntu,t}}\equiv w$, then $$ \sigma^2_{\epsilon} = \hat{\sigma}^2_{ntu,t}-w \cdot \hat{\xi}^+_{ntu,t}/\sqrt{\left\vert \mathcal{S}_{ntu}\right\vert\cdot t}$$
+    then repeat this formula with samples of $w$ from $\mathcal{N}(0,1)$ to construct the belief distribution of $\sigma^2_{\epsilon}$. 
+
+    The treatment decision for ATU is then solved by a dynamic program problem:
+    \begin{itemize}
+        \item \textbf{state variable}: the treated fractions up to $t$, $\boldsymbol{\omega}_{atu,1:t}$
+        \item \textbf{decision variable}: the treated fraction of the next period $\omega_{t+1}$
+        \item \textbf{terminate cost}: $-\tilde{T}\cdot g_{\tau}\left(\left(\boldsymbol{\omega}_{atu,1:t},\boldsymbol{\omega}_{t+1:\tilde{T}}\right),\tilde{T}\right)$
+    \end{itemize}
+    the problem is to solve $\omega_{t+1}$ that minimizers the expected terminat cost, given the random experiment duration $\tilde{T}$:$$ \omega_t = \arg\min_{\omega_t} \mathbb{E}_{\tilde{T}\sim P_t\left(\tilde{T}\right)} $$
 \end{itemize}
 
 \newpage
