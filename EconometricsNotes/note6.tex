@@ -2284,6 +2284,12 @@ PGAE addresses 3 main challenges:
         \item \textbf{terminate cost}: $-\tilde{T}\cdot g_{\tau}\left(\left(\boldsymbol{\omega}_{atu,1:t},\boldsymbol{\omega}_{t+1:\tilde{T}}\right),\tilde{T}\right)$
     \end{itemize}
     the problem is to solve $\omega_{t+1}$ that minimizers the expected terminat cost, given the random experiment duration $\tilde{T}$:$$ \omega_t = \arg\min_{\omega_t} \mathbb{E}_{\tilde{T}\sim P_t\left(\tilde{T}\right)} \left[-\tilde{T}\cdot g_{\tau}\left(\left( \boldsymbol{\omega}_{atu,1:t},\boldsymbol{\omega}_{t+1:\tilde{T}} \right),\tilde{T}\right)\right] \text{ s.t. } \omega_{atu,t}\leq \omega_{t+1}\leq \omega_{t+1}\leq \cdots\leq \omega_{T_{\max}}$$
+    \item \myhl[myblue]{\textbf{implementing the termination rule}}: 
+    \begin{itemize}
+        \item use data in $\mathcal{S}_{atu,1}$ to estimate $\sigma^2_{\epsilon}$ at time $t$ as $\hat{\sigma}^2_{atu,1,t}$
+        \item plug $\hat{\sigma}^2_{atu,1,t}$ and $\boldsymbol{\omega}_{bm,1:t}$ into the termination rule to estimate the precision
+    \end{itemize}
+    $\boldsymbol{\omega}_{bm,1:t}$ underestimate the precision, so the termination is conservative
 \end{itemize}
 
 \newpage
