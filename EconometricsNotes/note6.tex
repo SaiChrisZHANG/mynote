@@ -2302,7 +2302,8 @@ PGAE addresses 3 main challenges:
     \begin{itemize}
         \item[1] $\mathtt{partition\_initialize}(N,p_{ntu},T_{\max}) \rightarrow Z_{ntu},Z_{atu,1},Z_{atu,2}$
         \item[2] run the experiment for $t_0$ time periods 
-        \item[3] $\mathtt{estimate\_var\_prec}(Z_{atu,1,1:t},Y_{atu,1,1:t},\boldsymbol{\omega}_{bm},N,n_{atu},t)$
+        \item[3] $\mathtt{estimate\_var\_prec}(Z_{atu,1,1:t},Y_{atu,1,1:t},\boldsymbol{\omega}_{bm},N,n_{atu},t) \rightarrow \hat{\sigma}^2_{atu,1,t},\widehat{Prec}_{atu,1,t}$
+        \item[4] \textbf{while} $\widehat{Prec}_{atu,1,t} < c$ and $t<T_{\max}$ \textbf{do}
     \end{itemize}
 \end{algorithm}
 
