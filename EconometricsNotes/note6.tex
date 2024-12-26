@@ -2290,7 +2290,12 @@ PGAE addresses 3 main challenges:
         \item plug $\hat{\sigma}^2_{atu,1,t}$ and $\boldsymbol{\omega}_{bm,1:t}$ into the termination rule to estimate the precision
     \end{itemize}
     $\boldsymbol{\omega}_{bm,1:t}$ underestimate the precision, so the termination is conservative
-    \item \myhl[myblue]{\textbf{efficient estimation and valid inference for $\tau$}}: $\tau$ is estimated using all NTU data and ATU over $\tilde{T}$ periods.
+    \item \myhl[myblue]{\textbf{efficient estimation and valid inference for $\tau$}}: 
+    \begin{itemize}
+        \item estimate $\tau$ using all NTU data and ATU over $\tilde{T}$ periods: $\hat{\tau}_{all,\tilde{T}}$ is efficient and achieves the optimal convergence rate
+        \item estimate $\sigma^2_{\epsilon}$ using $\mathcal{S}_{atu,2}$: $\hat{\sigma}^2_{atu,2,\tilde{T}}$ is consistent, can be use to estimate $\mathrm{var}(\hat{\tau})$ and sufficient to construct valid CIs for $\tau$
+        \item tradeoff: CIs are estimated less precisely with a larger second order error term with a smaller sample size
+    \end{itemize}
 \end{itemize}
 
 \newpage
