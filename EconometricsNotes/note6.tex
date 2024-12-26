@@ -2299,6 +2299,11 @@ PGAE addresses 3 main challenges:
 \end{itemize}
 \begin{algorithm}{PGAE \citep{xiong2024optimal}}{xiong2024optimal_algorithm}
     \textbf{algorithm} $\mathtt{pgae}(N,T_{\max},\boldsymbol{\omega}_{bm},c,p_{ntu},m,t_0)$:
+    \begin{itemize}
+        \item[1] $\mathtt{partition\_initialize}(N,p_{ntu},T_{\max}) \rightarrow Z_{ntu},Z_{atu,1},Z_{atu,2}$
+        \item[2] run the experiment for $t_0$ time periods 
+        \item[3] $\mathtt{estimate\_var\_prec}(Z_{atu,1,1:t},Y_{atu,1,1:t},\boldsymbol{\omega}_{bm},N,n_{atu},t)$
+    \end{itemize}
 \end{algorithm}
 
 \newpage
