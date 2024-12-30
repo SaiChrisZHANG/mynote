@@ -2311,8 +2311,10 @@ PGAE addresses 3 main challenges:
             \item $\mathtt{estimate\_var\_prec}\left(Z_{atu,1,1:t},Y_{atu,1,1:t},\boldsymbol{\omega}_{bm},N,n_{atu},t\right) \rightarrow \hat{\sigma}^2_{atu,1,t},\widehat{Prec}_{atu,1,t}$
         \end{itemize}
         \textbf{end}
-        \item[5] 
+        \item[5] \textit{within} estimator of $\tau$ from both NTU and ATU $\rightarrow \hat{\tau}_{all,\tilde{T}}$, $t\rightarrow \tilde{T}$
+        \item[6] $\mathtt{estimate\_var\_prec}\left(Z_{atu,2,1:\tilde{T}},Y_{atu,2,1:\tilde{T}},\boldsymbol{\omega}_{bm},N,n_{atu},\tilde{T}\right) \rightarrow \hat{\tau}_{all,\tilde{T}},\hat{\sigma}^2_{atu,2,\tilde{T}}$
     \end{itemize}
+    \textbf{return}: $\tilde{T},\hat{\tau}_{all,\tilde{T}},\hat{\sigma}^2_{atu,2,\tilde{T}}$
 \end{algorithm}
 
 \newpage
