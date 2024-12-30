@@ -2304,6 +2304,14 @@ PGAE addresses 3 main challenges:
         \item[2] run the experiment for $t_0$ time periods 
         \item[3] $\mathtt{estimate\_var\_prec}(Z_{atu,1,1:t},Y_{atu,1,1:t},\boldsymbol{\omega}_{bm},N,n_{atu},t) \rightarrow \hat{\sigma}^2_{atu,1,t},\widehat{Prec}_{atu,1,t}$
         \item[4] \textbf{while} $\widehat{Prec}_{atu,1,t} < c$ and $t<T_{\max}$ \textbf{do}
+        \begin{itemize}
+            \item $\mathtt{estimate\_belief}\left(Z_{ntu,1:t},Y_{ntu,1:t},N,\boldsymbol{\omega}_{bm},T_{\max},t,m,c\right) \rightarrow P_t(\cdot)$
+            \item $\mathtt{update\_treatment\_design}\left(Z_{atu,1,1:t},Z_{atu,2,1:t},\omega_{atu,1:t},T_{\max},t\right)\rightarrow Z_{atu,1,t+1},Z_{atu,2,t+1}$
+            \item run the experiment for $t+1$
+            \item $\mathtt{estimate\_var\_prec}\left(Z_{atu,1,1:t},Y_{atu,1,1:t},\boldsymbol{\omega}_{bm},N,n_{atu},t\right) \rightarrow \hat{\sigma}^2_{atu,1,t},\widehat{Prec}_{atu,1,t}$
+        \end{itemize}
+        \textbf{end}
+        \item[5] 
     \end{itemize}
 \end{algorithm}
 
