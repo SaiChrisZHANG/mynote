@@ -2322,8 +2322,18 @@ And assuming $\epsilon_{is}$ i.i.d., with $\mathbb{E}\left[\epsilon_{is}\right]=
     \sqrt{\left\vert \mathcal{S}_{ntu} \right\vert} \left( \begin{bmatrix}
         \hat{\tau}_{ntu,t}\\
         \hat{\sigma}^2_{ntu,t}
+    \end{bmatrix} - \begin{bmatrix}
+        {\tau} \\
+        {\sigma}^2_{\epsilon}
+    \end{bmatrix} \right) \xrightarrow{\mathrm{d}} \mathcal{N} \left( \begin{bmatrix}
+        0\\
+        0
+    \end{bmatrix}, \begin{bmatrix}
+        \sigma^2_{\epsilon}/\left(t\cdot g_{\tau}\left(\boldsymbol{\omega}_{ntu,1:t},t\right)\right) & 0 \\
+        0 & \xi^{+2}_{\epsilon,t}/t
     \end{bmatrix}  \right)
 \end{align}
+where $\xi^{+2}_{\epsilon,t}/t = \xi^2_{\epsilon} + 2 (\sigma^2_{\epsilon})^2/(t-1)$, and $\sqrt{\left\vert \mathcal{S}_{ntu} \right\vert} \left(\hat{\xi}^2_{ntu,t}-\xi^2_{\epsilon}\right) = O_p(1) $
 
 \newpage
 \bibliographystyle{plainnat}
