@@ -2317,6 +2317,14 @@ PGAE addresses 3 main challenges:
     \textbf{return}: $\tilde{T},\hat{\tau}_{all,\tilde{T}},\hat{\sigma}^2_{atu,2,\tilde{T}}$
 \end{algorithm}
 
+And assuming $\epsilon_{is}$ i.i.d., with $\mathbb{E}\left[\epsilon_{is}\right]=0,\mathbb{E}\left[\epsilon_{is}^2\right]=\sigma^2_{\epsilon},\mathbb{E}\left[\epsilon_{is}^3\right]=0$, $\mathbb{E}\left[\left( \epsilon^2_{is}-\sigma^2_{\epsilon} \right)^2\right] = \xi^2_{\epsilon}$, then as $\left\vert \mathcal{S}_{ntu} \right\vert \rightarrow \infty ,\forall t$, conditional on $Z_{ntu}$, we have 
+\begin{align}
+    \sqrt{\left\vert \mathcal{S}_{ntu} \right\vert} \left( \begin{bmatrix}
+        \hat{\tau}_{ntu,t}\\
+        \hat{\sigma}^2_{ntu,t}
+    \end{bmatrix}  \right)
+\end{align}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
