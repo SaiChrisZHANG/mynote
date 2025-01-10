@@ -2344,6 +2344,12 @@ $$
 $$
 and $\hat{\tau}_{all,\tilde{T}}$ is consistent with optimal convergence rate $\sqrt{N}$\footnote{$\hat{\tau}_{all,\tilde{T}}$ depends on treatment designs, hence $\hat{\sigma}^2_{ntu,t}$ and $\hat{\xi}^2_{ntu,t}$, and $\epsilon_{is}$ for $i\in\mathcal{S}_{ntu}$. In addition, $\hat{\tau}_{all,\tilde{T}}$ depends on $\tilde{T}$, which depends on $\hat{\sigma}^2_{atu,1,t}$, hence $\epsilon_i$ for $i\in \mathcal{S}_{atu,1}$. But the $\hat{\tau}_{all,\tilde{T}}$ is still consistent since $\hat{\sigma}^2_{ntu,t}$, $\hat{\xi}^2_{ntu,t}$ and $\hat{\sigma}^2_{atu,1,t}$ are all \textbf{even} moments of $\epsilon_{is}$.}.
 
+\subparagraph*{Carryover model with covariates} for speicifications with $l>0$ and $\mathbf{X}_i$, one can 
+\begin{itemize}
+    \item use within estimator for $\tau_0,\cdot,\tau_l$ by regressing $\dot{Y}_{it}$ on $\dot{z}_{it},\cdots,\dot{z}_{i,t-l},\cdot{\mathbf{X}}_i$ 
+    \item for the experiment termination rule: generalize \ref{eq:stoppingrule_precision_xiong2024} to $\mathrm{tr}\left(\mathrm{Prec}\left(\hat{\boldsymbol{\tau}}\right)\right) \geq c$
+\end{itemize}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
