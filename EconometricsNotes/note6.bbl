@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{44}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -92,6 +92,14 @@ Eli Ben-Michael, Avi Feller, and Jesse Rothstein.
 \newblock The augmented synthetic control method.
 \newblock \emph{Journal of the American Statistical Association}, 116\penalty0
   (536):\penalty0 1789--1803, 2021.
+
+\bibitem[Bojinov et~al.(2021)Bojinov, Rambachan, and
+  Shephard]{bojinov2021panel}
+Iavor Bojinov, Ashesh Rambachan, and Neil Shephard.
+\newblock Panel experiments and dynamic causal effects: A finite population
+  perspective.
+\newblock \emph{Quantitative Economics}, 12\penalty0 (4):\penalty0 1171--1196,
+  2021.
 
 \bibitem[Bojinov et~al.(2023)Bojinov, Simchi-Levi, and Zhao]{bojinov2023design}
 Iavor Bojinov, David Simchi-Levi, and Jinglong Zhao.
