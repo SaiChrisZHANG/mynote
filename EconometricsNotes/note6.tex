@@ -2359,6 +2359,15 @@ for specifications with $\mathbf{u}_i$, one can
 
 \subsubsection{Design with dynamic effects}
 \paragraph*{\citet{bojinov2021panel}} allow for dynamics in the treatment effects and essentially unrestricted heterogeneity: consider a panel where $N$ units are observed over $T$ periods,
+for each unit $i\in[N]$ and period $t\in [T]$, allocate an assignment $W_{i,t}\in\mathcal{W}$, where $\left\vert \mathcal{W} \right\vert<\infty$, for a binary assignment, $\mathcal{W}=\left\{0,1\right\}$. 
+Then, define
+\begin{itemize}
+    \item \textbf{assignment path}: $W_{i,1:T}\coloneq \left(W_{i,1},\cdots,W_{i,T}\right)'\in \mathcal{W}^T$ the sequence of assignments allocated to unit $i$
+    \item \textbf{cross-sectional assignment} at $t$: $W_{1:N,t}\coloneq \left(W_{1,t},\cdots,W_{N,t}\right)' \in \mathcal{W}^N$
+    \item \textbf{assignment panel} of all units over the sample period: $W_{1:N,1:T}\in \mathcal{W}^{N\times T} \coloneq \left(W_{1:N,1},\cdots W_{1:N,T}\right) = \left(W'_{1,1:T},\cdot,W'_{N,1:T}\right)'$
+\end{itemize}
+
+
 
 \paragraph*{\citet{bojinov2023design}}
 
