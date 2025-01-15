@@ -2365,7 +2365,11 @@ Then, define
     \item \textbf{assignment path}: $W_{i,1:T}\coloneq \left(W_{i,1},\cdots,W_{i,T}\right)'\in \mathcal{W}^T$ the sequence of assignments allocated to unit $i$
     \item \textbf{cross-sectional assignment} at $t$: $W_{1:N,t}\coloneq \left(W_{1,t},\cdots,W_{N,t}\right)' \in \mathcal{W}^N$
     \item \textbf{assignment panel} of all units over the sample period: $W_{1:N,1:T}\in \mathcal{W}^{N\times T} \coloneq \left(W_{1:N,1},\cdots W_{1:N,T}\right) = \left(W'_{1,1:T},\cdot,W'_{N,1:T}\right)'$
-    \item \textbf{potnetial outcome} along path $w_{i,1:T}\in \mathcal{W}^T$: $Y_{i,t}\left(w_{i,1:T}\right)$ (no spillovers)
+    \item \textbf{potential outcome} along path $w_{i,1:T}\in \mathcal{W}^T$: $Y_{i,t}\left(w_{i,1:T}\right)$ (no spillovers)
+    \item \textbf{sequentially randomized assignments}: $\forall t\in [T],w_{1:N,1:t-1}\in\mathcal{W}^{N\times(t-1)}$, 
+    \begin{align*}
+        \Pr \left(W_{1:N,t}\mid W_{1:N,1:t-1} = w_{1:N,1:t-1},\mathbf{Y}_{1:N,1:T}\right) = \Pr \left(W_{1:N,t}\mid W_{1:N,1:t-1} = w_{1:N,1:t-1},{Y}_{1:N,1:t-1}\left(w_{1:N,1:t-1}\right)\right)
+    \end{align*}
 \end{itemize}
 
 
