@@ -2374,6 +2374,10 @@ Then, define
     \item \textbf{individualistic assignments} for $i$: if $\forall t\in [T], w_{1:N,1:t-1}\in \mathcal{W}^{N\times (t-1)}$, $$ \Pr \left(W_{i,t}\mid W_{-i,t}, \mathcal{F}_{1:N,t-1,T}\right) = \Pr \left( W_{i,t}\mid W_{1:t-1} = w_{i,1:t-1},Y_{i,1:t-1}(w_{i,1:t-1}) \right) $$
     the assignment for $i$ at $t$ is independent of the past assignments, outcomes of all other units, all other contemporaneous assignments
 \end{itemize}
+and non-anticipating is assumed 
+\begin{assumption}{\citet{bojinov2021panel} Assumption 1}{bojinov2021panel_ass1}
+   The potential outcomes are nonparticipating if $\forall i \in [N],t\in [T]$, and $w_{i,1:T},\tilde{w}_{i,1:T}\in \mathcal{W}^T$, $Y_{i,t}(w_{i,1:T})= Y_{i,t}(\tilde{w}_{i,1:T})$ whenever $w_{i,1:t} = \tilde{w}_{i,1:t}$.  
+\end{assumption}
 
 
 \paragraph*{\citet{bojinov2023design}}
