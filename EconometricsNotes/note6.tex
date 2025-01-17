@@ -2391,6 +2391,10 @@ Dynamic causal effects compare the potential outcomes for $i$ at $t$ along diffe
         \end{cases}
     \end{equation*}
     it measures the difference between the outcomes from following assignment path $\mathbf{w}$ from period $t-p$ to $t$ compared to the alternative path $\tilde{\mathbf{w}}$, fixing the assignments for unit $t$ to follow the observed path up to $t-p-1$, when $N\gg T$, $p=t-1$ is recommended (remove the dependence on the observed path).
+
+    For integers $p,q$ satisfying $0\leq p <t,0<q\leq p+1$, the weighted average $i,t$th lag-$p,q$ dynamic causal effect is
+    $$ \tau_{i,t}^+\left(\mathbf{w},\tilde{\mathbf{w}};p,q\right) \coloneq \sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}} \tau_{i,t}\left((\mathbf{w},\mathbf{v}),(\tilde{\mathbf{w}},\mathbf{v}); p \right) $$
+    where $\mathbf{w},\tilde{\mathbf{w}}\in \mathcal{W}^q$ and $\left\{a_{\mathbf{v}}\right\}$ are nonstochastic weights satisfying $\sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}}=1$, and $a_{\mathbf{v}}\geq 0$ for all $\mathbf{v}\in\mathcal{W}^{p-q+1}$.
 \end{definition}
 
 \paragraph*{\citet{bojinov2023design}}
