@@ -2383,18 +2383,20 @@ Under Assumption \ref{assump:bojinov2021panel_ass1}, the potential outcome for $
 Dynamic causal effects compare the potential outcomes for $i$ at $t$ along different assignment paths, \citet{bojinov2021panel} focus on \textbf{lag-$p$ dynamic causal effects},
 
 \begin{definition}{lag-$p$ dynamic causal effect}{bojinov2021panel_lagp}
-    For $0\leq p <t$ and $\mathbf{w},\tilde{\mathbf{w}}\in\mathcal{W}^{p+1}$, the $i,t$th lag-$p$ dynamic causal effect is 
-    \begin{equation*}
-        \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \begin{cases}
-            \tau_{i,t}\left( \left\{w^{obs}_{i,1:t-p-1},\mathbf{w}\right\}, \left\{w^{obs}_{i,1:t-p-1},\tilde{\mathbf{w}}\right\} \right), & p<t-1\\
-            \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}}\right), & \text{otherwise}
-        \end{cases}
-    \end{equation*}
-    it measures the difference between the outcomes from following assignment path $\mathbf{w}$ from period $t-p$ to $t$ compared to the alternative path $\tilde{\mathbf{w}}$, fixing the assignments for unit $t$ to follow the observed path up to $t-p-1$, when $N\gg T$, $p=t-1$ is recommended (remove the dependence on the observed path).
-
-    For integers $p,q$ satisfying $0\leq p <t,0<q\leq p+1$, the weighted average $i,t$th lag-$p,q$ dynamic causal effect is
-    $$ \tau_{i,t}^+\left(\mathbf{w},\tilde{\mathbf{w}};p,q\right) \coloneq \sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}} \tau_{i,t}\left((\mathbf{w},\mathbf{v}),(\tilde{\mathbf{w}},\mathbf{v}); p \right) $$
-    where $\mathbf{w},\tilde{\mathbf{w}}\in \mathcal{W}^q$ and $\left\{a_{\mathbf{v}}\right\}$ are nonstochastic weights satisfying $\sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}}=1$, and $a_{\mathbf{v}}\geq 0$ for all $\mathbf{v}\in\mathcal{W}^{p-q+1}$.
+    \begin{itemize}
+        \item For $0\leq p <t$ and $\mathbf{w},\tilde{\mathbf{w}}\in\mathcal{W}^{p+1}$, the $i,t$th lag-$p$ dynamic causal effect is 
+        \begin{equation*}
+            \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \begin{cases}
+                \tau_{i,t}\left( \left\{w^{obs}_{i,1:t-p-1},\mathbf{w}\right\}, \left\{w^{obs}_{i,1:t-p-1},\tilde{\mathbf{w}}\right\} \right), & p<t-1\\
+                \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}}\right), & \text{otherwise}
+            \end{cases}
+        \end{equation*}
+        it measures the difference between the outcomes from following assignment path $\mathbf{w}$ from period $t-p$ to $t$ compared to the alternative path $\tilde{\mathbf{w}}$, fixing the assignments for unit $t$ to follow the observed path up to $t-p-1$, when $N\gg T$, $p=t-1$ is recommended (remove the dependence on the observed path).
+        \item For integers $p,q$ satisfying $0\leq p <t,0<q\leq p+1$, the weighted average $i,t$th lag-$p,q$ dynamic causal effect is
+        $$ \tau_{i,t}^+\left(\mathbf{w},\tilde{\mathbf{w}};p,q\right) \coloneq \sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}} \tau_{i,t}\left((\mathbf{w},\mathbf{v}),(\tilde{\mathbf{w}},\mathbf{v}); p \right) $$
+        where $\mathbf{w},\tilde{\mathbf{w}}\in \mathcal{W}^q$ and $\left\{a_{\mathbf{v}}\right\}$ are nonstochastic weights satisfying $\sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}}=1$, and $a_{\mathbf{v}}\geq 0$ for all $\mathbf{v}\in\mathcal{W}^{p-q+1}$. It summarizes the ceteris paribus average causal effect of switching the assignment path between $t-p$ and $t-p+q$ from $\mathbf{w}$ to $\tilde{\mathbf{w}}$ on outcomes at time $t$. It is a finite-population causal generalization of an impulse response function.
+        \item For $p<T$ and $\mathbf{w},\tilde{\mathbf{w}}\in \mathcal{W}^{p+1}$, 
+    \end{itemize} 
 \end{definition}
 
 \paragraph*{\citet{bojinov2023design}}
