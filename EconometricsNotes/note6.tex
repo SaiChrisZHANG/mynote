@@ -2396,6 +2396,11 @@ Dynamic causal effects compare the potential outcomes for $i$ at $t$ along diffe
         $$ \tau_{i,t}^+\left(\mathbf{w},\tilde{\mathbf{w}};p,q\right) \coloneq \sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}} \tau_{i,t}\left((\mathbf{w},\mathbf{v}),(\tilde{\mathbf{w}},\mathbf{v}); p \right) $$
         where $\mathbf{w},\tilde{\mathbf{w}}\in \mathcal{W}^q$ and $\left\{a_{\mathbf{v}}\right\}$ are nonstochastic weights satisfying $\sum_{\mathbf{v}\in \mathcal{W}^{p-q+1}} a_{\mathbf{v}}=1$, and $a_{\mathbf{v}}\geq 0$ for all $\mathbf{v}\in\mathcal{W}^{p-q+1}$. It summarizes the ceteris paribus average causal effect of switching the assignment path between $t-p$ and $t-p+q$ from $\mathbf{w}$ to $\tilde{\mathbf{w}}$ on outcomes at time $t$. It is a finite-population causal generalization of an impulse response function.
         \item For $p<T$ and $\mathbf{w},\tilde{\mathbf{w}}\in \mathcal{W}^{p+1}$, 
+        \begin{itemize}
+            \item time $t$ lag-$p$ average dynamic causal effect is $\bar{\tau}_{\cdot t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \frac{1}{N}\sum^N_{i=1}\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$
+            \item unit $i$ lag-$p$ average dynamic causal effect is $\bar{\tau}_{i\cdot} \left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \frac{1}{T-p} \sum^T_{t=p+1}\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$
+            \item total lag-$p$ average dynamic causal effect is $ \bar{\tau}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \frac{1}{N(T-p)} \sum^T_{t=p+1}\sum^N_{i=1}\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) $ 
+        \end{itemize}
     \end{itemize} 
 \end{definition}
 
