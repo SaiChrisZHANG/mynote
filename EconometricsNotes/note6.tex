@@ -2405,7 +2405,8 @@ Dynamic causal effects compare the potential outcomes for $i$ at $t$ along diffe
     \end{itemize} 
 \end{definition}
 
-
+For each $i,t$ and any $\mathbf{w} = \left(w_1,\cdots,w_{p+1}\right)\in\mathcal{W}^{p+1}$, the \textbf{adapted propensity score} summarizes the conditional probability of a given assignment path and is given by $$ p_{i,t-p}\left(\mathbf{w}\right) = \Pr \left(W_{i,t-p:t}=\mathbf{w} \mid W_{i,1:t-p-1},Y_{i,1:t}\left(W_{i,1:t-p-1},\mathbf{w}\right)\right) $$
+the assignment mechanism is known, by only outcomes along the realized path $Y_{i,1:t}(w^{obs}_{i,1:t})$ are observed.
 
 \paragraph*{\citet{bojinov2023design}}
 
