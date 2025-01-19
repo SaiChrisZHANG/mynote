@@ -2401,8 +2401,11 @@ Dynamic causal effects compare the potential outcomes for $i$ at $t$ along diffe
             \item unit $i$ lag-$p$ average dynamic causal effect is $\bar{\tau}_{i\cdot} \left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \frac{1}{T-p} \sum^T_{t=p+1}\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$
             \item total lag-$p$ average dynamic causal effect is $ \bar{\tau}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \frac{1}{N(T-p)} \sum^T_{t=p+1}\sum^N_{i=1}\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) $ 
         \end{itemize}
+        these can be augmented by incorporating nonstochastic weights.
     \end{itemize} 
 \end{definition}
+
+
 
 \paragraph*{\citet{bojinov2023design}}
 
