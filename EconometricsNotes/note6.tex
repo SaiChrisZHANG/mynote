@@ -2414,6 +2414,15 @@ and all expectations $\mathbb{E}\left(\cdot\right)$ are computed w.r.t. the prob
 
 \begin{theorem}{Estimation of $\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$}{bojinov2021panel_thm3}
     $\forall \mathbf{w},\tilde{\mathbf{w}}\in\mathcal{W}^{p+1}$, the nonparametric estimator of $\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ is 
+    \begin{equation*}
+        \hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \coloneq \left\{ \frac{Y_{i,t}\left(w^{obs}_{i,1:t-p-1},\mathbf{w}\right)\mathbf{1}\left(w^{obs}_{i,t-p:t}=\mathbf{w}\right)}{p_{i,t-p}(\mathbf{w})} - \frac{Y_{i,t}\left(w^{obs}_{i,1:t-p-1},\tilde{\mathbf{w}}\right)\mathbf{1}\left(w^{obs}_{i,t-p:t}=\tilde{\mathbf{w}}\right)}{p_{i,t-p}(\tilde{\mathbf{w}})} \right\}
+    \end{equation*}
+    under individualistic assignments, the estimator simplifies to $$ \hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) = \frac{y^{obs}_{i,t}\left\{\mathbf{1}\left(w^{obs}_{i,t-p:t}=\mathbf{w}\right) - \mathbf{1}\left(w^{obs}_{i,t-p:t}=\tilde{\mathbf{w}}\right) \right\}}{p_{i,t-p}\left(w^{obs}_{i,t-p:t}\right)} $$
+    for a potential outcome panel with an assignment that is both individualistic and probabilistic, $\forall \mathbf{w},\tilde{\mathbf{w}}\in\mathbf{W}^{p+1}$, we have 
+    \begin{align*}
+        \mathbb{E}\left[\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\mid \mathcal{F}_{i,t-p-1}\right] &= \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\\
+        \mathrm{Var}\left(\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\mid \mathcal{F}_{i,t-p-1}\right) &= \gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}}\right) - \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)^2 \coloneq \sigma^2_{i,t}
+    \end{align*}
 \end{theorem}
 
 
