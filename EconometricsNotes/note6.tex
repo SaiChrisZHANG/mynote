@@ -2425,9 +2425,11 @@ and all expectations $\mathbb{E}\left(\cdot\right)$ are computed w.r.t. the prob
     \end{align*}
     where $$ \gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) = \frac{Y_{i,t}\left(w^{obs}_{i,1:t-p-1},\mathbf{w}\right)^2}{p_{i,t-p}(\mathbf{w})} + \frac{Y_{i,t}\left(w^{obs}_{i,1:t-p-1},\tilde{\mathbf{w}}\right)}{p_{i,t-p}\left(\tilde{\mathbf{w}}\right)} $$
     for distinct $\mathbf{w},\tilde{\mathbf{w}},\bar{\mathbf{w}},\hat{\mathbf{w}}\in\mathcal{W}^{p+1}$, $$ \mathrm{Cov}\left(\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right), \hat{\tau}_{i,t}\left(\bar{\mathbf{w}},\hat{\mathbf{w}};p\right) \mid \mathcal{F}_{i,t-p-1}\right) = -\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \tau_{i,t}\left(\bar{\mathbf{w}},\hat{\mathbf{w}};p\right) $$
+    and $\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}}\right)$ and $\hat{\tau}_{j,t}\left(\mathbf{w},\tilde{\mathbf{w}}\right)$ are independent for $i\neq j$ conditional on $\mathcal{F}_{1:N,t-p-1}$.
 \end{theorem}
-
-
+Theorem \ref{thm:bojinov2021panel_thm3} states that $\forall i,t$, the error in estimating $\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ is a martingale difference sequence through time and conditionally independent across units.
+$\mathrm{Var}\left(\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\mid \mathcal{F}_{i,t-p-1}\right)$ depends on both $\mathbf{w}$ and $\tilde{\mathbf{w}}$ and generally can not be estimated, its upper bound $\gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ can be estimated as $$ \hat{\gamma}^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) = \frac{\left(y^{obs}_{i,t}\right)^2 \left\{\mathbf{1} \left(w^{obs}_{i,t-p:t}=\mathbf{w}\right) + \mathbf{1}\left(w^{obs}_{i,t-p:t}=\tilde{\mathbf{w}}\right) \right\}}{ p_{i,t-p}\left(w^{obs}_{i,t-p:t}\right)^2 } $$
+the estimator is unbiased.
 
 \paragraph*{\citet{bojinov2023design}}
 
