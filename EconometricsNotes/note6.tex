@@ -2429,7 +2429,7 @@ and all expectations $\mathbb{E}\left(\cdot\right)$ are computed w.r.t. the prob
 \end{theorem}
 Theorem \ref{thm:bojinov2021panel_thm3} states that $\forall i,t$, the error in estimating $\tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ is a martingale difference sequence through time and conditionally independent across units.
 $\mathrm{Var}\left(\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\mid \mathcal{F}_{i,t-p-1}\right)$ depends on both $\mathbf{w}$ and $\tilde{\mathbf{w}}$ and generally can not be estimated, its upper bound $\gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ can be estimated as $$ \hat{\gamma}^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) = \frac{\left(y^{obs}_{i,t}\right)^2 \left\{\mathbf{1} \left(w^{obs}_{i,t-p:t}=\mathbf{w}\right) + \mathbf{1}\left(w^{obs}_{i,t-p:t}=\tilde{\mathbf{w}}\right) \right\}}{ p_{i,t-p}\left(w^{obs}_{i,t-p:t}\right)^2 } $$
-the estimator is unbiased.
+the estimator is unbiased\footnote{$\gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ is different from the typical Neyman variance bound in a completely randomized experiment, where there is a negative correlation between any two units' assignments since the total number of units assigned to each treatment is fixed. Here, all units' assignments are conditionally independent under individualistic assignments.}.
 
 \paragraph*{\citet{bojinov2023design}}
 
