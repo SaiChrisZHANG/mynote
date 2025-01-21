@@ -2423,6 +2423,7 @@ and all expectations $\mathbb{E}\left(\cdot\right)$ are computed w.r.t. the prob
         \mathbb{E}\left[\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\mid \mathcal{F}_{i,t-p-1}\right] &= \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\\
         \mathrm{Var}\left(\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)\mid \mathcal{F}_{i,t-p-1}\right) &= \gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}}\right) - \tau_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)^2 \coloneq \sigma^2_{i,t}
     \end{align*}
+    where $$ \gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) = \frac{Y_{i,t}\left(w^{obs}_{i,1:t-p-1},\mathbf{w}\right)^2}{p_{i,t-p}(\mathbf{w})} + \frac{Y_{i,t}\left(w^{obs}_{i,1:t-p-1},\tilde{\mathbf{w}}\right)}{p_{i,t-p}\left(\tilde{\mathbf{w}}\right)} $$
 \end{theorem}
 
 
