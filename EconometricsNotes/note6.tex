@@ -2433,8 +2433,17 @@ the estimator is unbiased\footnote{$\gamma^2_{i,t}\left(\mathbf{w},\tilde{\mathb
 
 The martingale difference properties of the nonparametric estimator means that the averaged plug-in estimators
 \begin{align*}
-    \hat{\bar{\tau}}_{\cdot t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) &\coloneq \frac{1}{N}\sum^N_{i=1}\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)
+    \hat{\bar{\tau}}_{\cdot t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) &\coloneq \frac{1}{N}\sum^N_{i=1}\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \\
+    \hat{\bar{\tau}}_{i,\cdot}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) &\coloneq \frac{1}{T-p}\sum^T_{t=p+1}\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \\
+    \hat{\bar{\tau}}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) &\coloneq \frac{1}{N(T-p)}\sum^N_{i=1}\sum^T_{t=p+1}\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)
 \end{align*}
+are all unbiased. Then the CLT are given as 
+\begin{theorem}{CLT of $\hat{\bar{\tau}}$}{bojinov2021panel-thm3_2}
+    For a potential outcome panel with an individualistic and probabilistic assignment mechanism. Assume the potential outcomes are bounded, then $\forall \mathbf{w},\tilde{\mathbf{w}}\in\mathcal{W}^{p+1}$, 
+    \begin{align*}
+        \frac{ \sqrt{N}\left\{\hat{\bar{\tau}}_{\cdot t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) - {\bar{\tau}}_{\cdot t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right) \right\} }{\sigma_{\cdot t}} &\xrightarrow{d} N(0,1) & \text{as }&N\rightarrow \infty 
+    \end{align*}
+\end{theorem}
 
 \paragraph*{\citet{bojinov2023design}}
 
