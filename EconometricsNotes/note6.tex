@@ -2471,6 +2471,9 @@ here is an important trade-off: increasing the lag $p$ increases the estimator's
 With CLT in Thm.\ref{thm:bojinov2021panel-thm3_2}, one can conduct conservative inference for $\bar{\tau}_{\cdot t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$, $\bar{\tau}_{i \cdot}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ and $\bar{\tau}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$, alternatively, one can construct \textbf{exact} tests for sharp null hypothesis, for example, $H_0:\bar{\tau}_{i, t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)=0,\forall \mathbf{w},\tilde{\mathbf{w}},i\in[N]$ and specific $t=4$. 
 Here, all potential outcomes are known under such sharp null hypotheses, one can simulate the assignment path $W_{i,t-p:t}\mid W^{obs}_{i,1:t-p-1},y^{obs}_{i,1:t-p-1}$ for all $i$ and compute $\hat{\tau}_{i,t}\left(\mathbf{w},\tilde{\mathbf{w}};p\right)$ at each draw and simulate the exact distribution of any test statistics.
 
+Now, focus on commonly used \textbf{linear} estimators (canomical unit fixed-effects estimator, two-way fixed effects estimator) under the potential outcomes panel model.
+For the linear potential outcome panel
+$$ Y_{i,t}\left(w_{i,1:t}\right) = \beta_{i,t,0}w_{i,t} + \cdots + \beta_{i,t,t-1}w_{i,1} + \epsilon_{i,t},\forall t\in [T],i\in[N] $$
 
 \paragraph*{\citet{bojinov2023design}}
 
