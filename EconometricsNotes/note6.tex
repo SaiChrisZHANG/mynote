@@ -2489,7 +2489,7 @@ Denote the within-period transformed variable as $\dot{A}_{i,t}=A_{i,t}-\bar{A}_
     \begin{itemize}
         \item ${\sum^T_{t=1}\ddot{\kappa}_{W,\beta,t,t}}/{\sum^T_{t=1}\ddot{\sigma}^2_{W,t}}$: how contemporaneous dynamic causal coefficients covary with the within-unit transformed assignments
         \item ${\sum^T_{t=1}\sum^{t-1}_{s=1}\ddot{\kappa}_{W,\beta,t,s}}/{\sum^T_{t=1}\ddot{\sigma}^2_{W,t}}$: how past causal coefficients covary with the within-unit transformed treatments due to dynamic causal effects
-        \item ${\sum^T_{t=1}\ddot{\delta}_t}/{\sum^T_{t=1}\ddot{\sigma}^2_{W,t}}$: error due to the possible relationship between the demaned counterfactual $\ddot{Y}_{i,t}(\mathbf{0})$ and the demeaned treatment assignment
+        \item ${\sum^T_{t=1}\ddot{\delta}_t}/{\sum^T_{t=1}\ddot{\sigma}^2_{W,t}}$: error due to the possible relationship between the demaned counterfactual $\ddot{Y}_{i,t}(\mathbf{0})$ and the demeaned treatment assignment\footnote{$Y_{i,t}(\mathbf{0})=\alpha_i \Rightarrow \ddot{Y}_{i,t}(\mathbf{0})=0,\forall i\in [N],t\in[T] $, hence the error term is 0 when unit FEs correctly summarize the variation in the ``control-only'' counterfactual outcomes across units and time. }
     \end{itemize}
 \end{itemize}
 
