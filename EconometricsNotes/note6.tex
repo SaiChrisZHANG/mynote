@@ -2491,10 +2491,14 @@ Denote the within-period transformed variable as $\dot{A}_{i,t}=A_{i,t}-\bar{A}_
         \item ${\sum^T_{t=1}\sum^{t-1}_{s=1}\mathring{\kappa}_{W,\beta,t,s}}/{\sum^T_{t=1}\mathring{\sigma}^2_{W,t}}$: how past causal coefficients covary with the within-unit transformed treatments due to dynamic causal effects
         \item ${\sum^T_{t=1}\mathring{\delta}_t}/{\sum^T_{t=1}\mathring{\sigma}^2_{W,t}}$: error due to the possible relationship between the demaned counterfactual $\ddot{Y}_{i,t}(\mathbf{0})$ and the demeaned treatment assignment\footnote{$Y_{i,t}(\mathbf{0})=\alpha_i \Rightarrow \ddot{Y}_{i,t}(\mathbf{0})=0,\forall i\in [N],t\in[T] $, hence the error term is 0 when unit FEs correctly summarize the variation in the ``control-only'' counterfactual outcomes across units and time.}
     \end{itemize}
-    \item \myhl[myblue]{\textbf{TWFE estimator}} $\hat{\beta}_{TWFE}=\sum^N_{i=1}\sum^T_{t=1}\ddot{Y}_{i,t}\ddot{W}_{i,t}/sum^N_{i=1}\sum^T_{t=1}\ddot{W}^2_{i,t}$: Define $\mathbb{E}(\ddot{W}_{i,t}\mid \mathcal{F}_{1:N,0,T} )\coloneq \ddot{\mu}_{i,t}$, $\mathrm{Var}(\ddot{W}_{i,t}\mid\mathcal{F}_{1:N,0,T})\coloneq \ddot{\sigma}^2_{W,i,t}<\infty$, $\mathrm{Cov}(\ddot{W}_{i,t},\ddot{W}_{i,s})\coloneq \ddot{\sigma}_{W,i,t,s}$, $\forall i\in [N],t\in[T]$. Then as $N\rightarrow\infty$,
+    \item \myhl[myblue]{\textbf{TWFE estimator}} $\hat{\beta}_{TWFE}=\sum^N_{i=1}\sum^T_{t=1}\ddot{Y}_{i,t}\ddot{W}_{i,t}/sum^N_{i=1}\sum^T_{t=1}\ddot{W}^2_{i,t}$: Define $\mathbb{E}(\ddot{W}_{i,t}\mid \mathcal{F}_{1:N,0,T} )\coloneq \ddot{\mu}_{i,t}$, $\mathrm{Var}(\ddot{W}_{i,t}\mid\mathcal{F}_{1:N,0,T})\coloneq \ddot{\sigma}^2_{W,i,t}<\infty$, $\mathrm{Cov}(\ddot{W}_{i,t},\ddot{W}_{i,s})\coloneq \ddot{\sigma}_{W,i,t,s}$, $\forall i\in [N],t\in[T]$, and assume that
     \begin{align*}
         \frac{1}{N}\sum^N_{i=1}\beta_{i,t,s}\ddot{\sigma}_{W,i,t,s} &\rightarrow \ddot{\kappa}_{W,\beta,t,s} & \frac{1}{N}\sum^N_{i=1}\ddot{\sigma}^2_{W,i,t} &\rightarrow\ddot{\sigma}^2_{W,t} & \frac{1}{N}\sum^N_{i=1}\ddot{Y}_{i,t}(\mathbf{0})\ddot{\mu}_{i,t}\rightarrow \ddot{\delta}_t, \forall t\in [T], s\leq t
     \end{align*}
+    then as $N\rightarrow\infty$
+    \begin{equation*}
+        \hat{\beta}_{UFE}\xrightarrow{p} \frac{\sum^T_{t=1}\ddot{\kappa}_{W,\beta,t,t}}{\sum^T_{t=1}\ddot{\sigma}^2_{W,t}} + \frac{\sum^T_{t=1}\sum^{t-1}_{s=1}\ddot{\kappa}_{W,\beta,t,s}}{\sum^T_{t=1}\ddot{\sigma}^2_{W,t}} + \frac{\sum^T_{t=1}\ddot{\delta}_t}{\sum^T_{t=1}\ddot{\sigma}^2_{W,t}}
+    \end{equation*}
 \end{itemize}
 
 
