@@ -2505,6 +2505,12 @@ Denote the within-period transformed variable as $\dot{A}_{i,t}=A_{i,t}-\bar{A}_
 \subsubsection{Robust methods}
 In practice, one might want to use conventional panel data methods (TWFE, etc.) even with experimental data, since the experiment implementation might be problematic, or the TWFE estimator could be more precise, especially in quasi-experimental settings.
 
+\paragraph*{\citet{borusyak2020non}} developed tools for estimating the causal effects of treatments/instruments that combine multiple sources of variation, according to a known formula\footnote{
+    Some examples are: \textbf{spillover from an intervention} (the number of an individual's neighbors who were selected for the intervention, which combines variation in who was selected and who neighbors whom); 
+    \textbf{transportation infrastructure effects} (combination of the location and timing of transportation upgrades and the spatial distribution of economic activity);
+    \textbf{linear shift-share} $z_l=\sum_nw_{ln}g_n$ (average a set of national shocks $g_n$ with a set of local employment share weights $w_{ln}$;
+    \textbf{eligibility of a public program} (jointly determiend by eligibility policy in an individual's state and demographics.))
+}.
 
 \newpage
 \bibliographystyle{plainnat}

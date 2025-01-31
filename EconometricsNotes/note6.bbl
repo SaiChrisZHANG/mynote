@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{45}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -122,6 +122,11 @@ Stéphane Bonhomme and Ulrich Sauder.
 \newblock ISSN 0034-6535.
 \newblock \doi{10.1162/REST_a_00164}.
 \newblock URL \url{https://doi.org/10.1162/REST\_a\_00164}.
+
+\bibitem[Borusyak and Hull(2020)]{borusyak2020non}
+Kirill Borusyak and Peter Hull.
+\newblock Non-random exposure to exogenous shocks: Theory and applications.
+\newblock Technical report, National Bureau of Economic Research, 2020.
 
 \bibitem[Borusyak et~al.(2024)Borusyak, Jaravel, and
   Spiess]{borusyak2024revisiting}
