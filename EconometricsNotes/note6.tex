@@ -2518,6 +2518,11 @@ This estimation solves the omitted variable bias (OVB) where different observati
     where $V_t$ is a regional outcome, $\epsilon_l$ captures unobserved shocks to local productivity and amenities in region $l$ between 2 periods.
 \end{example}
 Even when the treatment is random in place, some regions will see systematically higher $MA$ growth due to their position in the country's economic geography: $\Delta\log MA_l$ and $\epsilon_l$ are not orthogonal.
+\citet{borusyak2020non} propose that 
+\begin{itemize}
+    \item simulate $MA$ growth across counterfactual draws of RCT to compute the expected MA growth $\mu_l$ of each region, and recenter $MA$ growth by substracting the expected growth: $\tilde{z}_l = \Delta \log MA_l - \mu_l$, $\tilde{z}_l$ can then be used as an instrument for $\Delta \log MA_l$
+    \item 
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
