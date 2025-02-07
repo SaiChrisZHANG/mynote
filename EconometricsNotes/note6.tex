@@ -2535,7 +2535,7 @@ where $g$ summarizes variation from exogenous shocks, $w$ are predetermined vari
 
 Consider an IV regression of $y_l$ on $x_l$ with $z_l$ as an instrument: $z_l$ is related to the treatment and orthogonal to the structural residual:
 \begin{align*}
-    \mathbb{E}\left[\frac{1}{L}\sum_l z_lx_l\right]&\neq 0 & \mathbb{E}\left[\frac{1}{L}\sum_l\right]
+    \mathbb{E}\left[\frac{1}{L}\sum_l z_lx_l\right]&\neq 0 & \mathbb{E}\left[\frac{1}{L}\sum_lz_l\epsilon_l\right] &= \mathbb{E}\left[\frac{1}{L}\sum_l z_ly_l\right] - \beta \cdot \mathbb{E}\left[\frac{1}{L} \sum_lz_l x_l \right] =0 
 \end{align*}
 
 \newpage
