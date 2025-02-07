@@ -2526,7 +2526,17 @@ Even when the treatment is random in place, some regions will see systematically
 
 Suppose the outcome $y_l$ and treatment $x_l$ are observed for $l=1,\cdots,L$, and the treatment effect of interest $\beta$ gives $$ y_l = \beta x_l + \epsilon_l $$
 where $\epsilon_l$ is an unobserved residual. Here, $\left(y_l,x_l\right)$ are not assumed to be i.i.d. To estimate $\beta$, one can construct a candidate instrument $$z_l = f_l(g;w)$$
-where $g$ summarizes variation from exogenous shocks, $w$ are predetermined variables related to shock exposure, $\{f_l(\cdot)\}^L_{l=1}$ is a set of known non-stochastic functions.
+where $g$ summarizes variation from exogenous shocks, $w$ are predetermined variables related to shock exposure, $\{f_l(\cdot)\}^L_{l=1}$ is a set of known non-stochastic functions. Then, 
+\begin{assumption}{\citet{borusyak2020non}'s Assumptions}{borusyak2020non_assump1}
+    \begin{itemize}
+        \item[\textbf{A1}] \myhl[myblue]{Shock exogeneity}: $g\bot \epsilon\mid w$\footnote{The shock exogeneity combines two conditions: exclusion restriction that the realization of shocks affect outcomes via $x_l$ only; the as-good-as-random assignment of shocks w.r.t. $\epsilon$.}
+    \end{itemize}
+\end{assumption}
+
+Consider an IV regression of $y_l$ on $x_l$ with $z_l$ as an instrument: $z_l$ is related to the treatment and orthogonal to the structural residual:
+\begin{align*}
+    \mathbb{E}\left[\frac{1}{L}\sum_l z_lx_l\right]&\neq 0 & \mathbb{E}\left[\frac{1}{L}\sum_l\right]
+\end{align*}
 
 \newpage
 \bibliographystyle{plainnat}
