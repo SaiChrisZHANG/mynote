@@ -2547,7 +2547,8 @@ is biased due to the OVB problem: exogeneity of the shocks underlying $z_l$ is g
     \mathbb{E}\left[\frac{1}{L}\sum_l z_l\epsilon_l\right] &= \mathbb{E}\left[\frac{1}{L}\sum_l \mathbb{E}\left[f_l(g;w)\epsilon_l\mid w\right]\right] = \mathbb{E}\left[\frac{1}{L}\sum_l\mu_l \mathbb{E}\left[\epsilon_l\mid w\right]\right] = \mathbb{E}\left[\frac{1}{L}\sum_l \mu_l\epsilon_l\right]
 \end{align*}
 therefore, when $\mu_l$ is endogenous, $\beta$ cannot be identified just by the instrument $z_l$.
-Under both strong and weak exogeneity assumption (\ref{assump:borusyak2020non_assump1})
+Under both strong and weak exogeneity assumption (\ref{assump:borusyak2020non_assump1}), let $\tilde{z}_l = z_l-\mu_l$, then $$ \mathbb{E}\left[\frac{1}{L}\sum_l \tilde{z}_l \epsilon_l \right] =0 $$
+s.t. $\beta$ is identified by the re-centered instrument $\tilde{z}_l$ provided $\mathbb{E}\left[\frac{1}{L}\sum_l \tilde{z}_l x_l \right]$
 
 
 
