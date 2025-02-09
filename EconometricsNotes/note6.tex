@@ -2537,10 +2537,15 @@ Consider an IV regression of $y_l$ on $x_l$ with $z_l$ as an instrument: $z_l$ i
 \begin{align*}
     \mathbb{E}\left[\frac{1}{L}\sum_l z_lx_l\right]&\neq 0 & \mathbb{E}\left[\frac{1}{L}\sum_lz_l\epsilon_l\right] &= \mathbb{E}\left[\frac{1}{L}\sum_l z_ly_l\right] - \beta \cdot \mathbb{E}\left[\frac{1}{L} \sum_lz_l x_l \right] =0 
 \end{align*}
-and the IV estimator is
+and the IV estimator
 \begin{equation*}
     \hat{\beta} = \frac{1/L \sum_lz_ly_l}{1/L \sum_l z_l x_l}
 \end{equation*}
+is biased due to the OVB problem: exogeneity of the shocks underlying $z_l$ is governed by the expected instrument $\mu_l$: 
+\begin{align*}
+    \mathbb{E}\left[\frac{1}{L}\sum_l z_l\epsilon_l\right] &= \mathbb{E}\left[\frac{1}{L}\sum_l \mathbb{E}\left[f_l(g;w)\epsilon_l\mid w\right]\right] = \mathbb{E}\left[\frac{1}{L}\sum_l\mu_l \mathbb{E}\left[\epsilon_l\mid w\right]\right] = \mathbb{E}\left[\frac{1}{L}\sum_l \mu_l\epsilon_l\right]
+\end{align*}
+therefore, when $\mu_l$ is endogenous, $\beta$ cannot be identified just by the instrument $z_l$.
 
 \newpage
 \bibliographystyle{plainnat}
