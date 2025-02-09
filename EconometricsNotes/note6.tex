@@ -2530,6 +2530,7 @@ where $g$ summarizes variation from exogenous shocks, $w$ are predetermined vari
 \begin{assumption}{\citet{borusyak2020non}'s Assumptions}{borusyak2020non_assump1}
     \begin{itemize}
         \item[\textbf{A1}] \myhl[myblue]{Shock exogeneity}: $g\bot \epsilon\mid w$\footnote{The shock exogeneity combines two conditions: exclusion restriction that the realization of shocks affect outcomes via $x_l$ only; the as-good-as-random assignment of shocks w.r.t. $\epsilon$.}
+        \item[\textbf{A2}] \myhl[myblue]{Weak shock exogeneity}: $\mathbb{E}\left[\epsilon_l\mid g,w\right]=\mathbb{E}\left[\epsilon_l\mid w\right]$ a.s. $\forall l$; $\mathbb{E}\left[\epsilon_l\epsilon_m\mid g,w\right] = \mathbb{E}\left[\epsilon_l\epsilon_m\mid w\right]$ a.s. $\forall l,m$
     \end{itemize}
 \end{assumption}
 
@@ -2546,6 +2547,9 @@ is biased due to the OVB problem: exogeneity of the shocks underlying $z_l$ is g
     \mathbb{E}\left[\frac{1}{L}\sum_l z_l\epsilon_l\right] &= \mathbb{E}\left[\frac{1}{L}\sum_l \mathbb{E}\left[f_l(g;w)\epsilon_l\mid w\right]\right] = \mathbb{E}\left[\frac{1}{L}\sum_l\mu_l \mathbb{E}\left[\epsilon_l\mid w\right]\right] = \mathbb{E}\left[\frac{1}{L}\sum_l \mu_l\epsilon_l\right]
 \end{align*}
 therefore, when $\mu_l$ is endogenous, $\beta$ cannot be identified just by the instrument $z_l$.
+Under both strong and weak exogeneity assumption (\ref{assump:borusyak2020non_assump1})
+
+
 
 \newpage
 \bibliographystyle{plainnat}
