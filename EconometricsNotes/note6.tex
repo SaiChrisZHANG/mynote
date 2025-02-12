@@ -2549,8 +2549,12 @@ is biased due to the OVB problem: exogeneity of the shocks underlying $z_l$ is g
 therefore, when $\mu_l$ is endogenous, $\beta$ cannot be identified just by the instrument $z_l$.
 Under both strong and weak exogeneity assumption (\ref{assump:borusyak2020non_assump1}), let $\tilde{z}_l = z_l-\mu_l$, then $$ \mathbb{E}\left[\frac{1}{L}\sum_l \tilde{z}_l \epsilon_l \right] =0 $$
 s.t. $\beta$ is identified by the re-centered instrument $\tilde{z}_l$ provided $\mathbb{E}\left[\frac{1}{L}\sum_l \tilde{z}_l x_l \right]$. To measure this expected instrument, \citet{borusyak2020non} propose the speicifcation of counterfactual shocks:
-denote the shock assignmetn process by the conditional distribution of $G(g\mid w)$,
-
+denote the shock assignmetn process by the conditional distribution of $G(g\mid w)$, if assume 
+\begin{assumption}{\citet{borusyak2020non}'s Assumption}{borusyak2020non_assump2}
+    $G(g\mid w)$ is known in the support of $w$
+\end{assumption}
+then the expected instrument can be calculated as $$ \mu_l = \int f_l \left(\gamma;w\right)\mathrm{d}G(\gamma \mid w) $$
+when the shocks are determined by a known randomization protocol (RCT), $G(\cdot)$ is straight forward; when randomization of shocks occurs naturally, $G(\cdot)$ can come from the knowledge.
 
 \newpage
 \bibliographystyle{plainnat}
