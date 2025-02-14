@@ -2573,6 +2573,11 @@ The inference results can also be used to perform falsification tests:
     \end{itemize}
 \end{itemize}
 
+To minimize the asymptotic variance of the recentered IV, one can use the following instrument:
+\begin{equation*}
+    z^* = \mathbb{E}\left[\epsilon\epsilon'\mid w\right]^{-1} \left(\mathbb{E}[x\mid g,w]-\mathbb{E}[x\mid w]\right)
+\end{equation*}
+
 \newpage
 \bibliographystyle{plainnat}
 \bibliography{ref.bib}
