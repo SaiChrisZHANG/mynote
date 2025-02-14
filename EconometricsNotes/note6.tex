@@ -2564,6 +2564,14 @@ To make meaningful inferences, consider a $\mathcal{T}(g,y-bx,w)$ rationalized b
 That is, the recentered IV estimator of $\beta$ equates the sample covariance between the recentered instrument $\tilde{z}_l$ and implied residiual $y_l-bx_l$ with the expectation of its randomization distribution.
 
 The inference results can also be used to perform falsification tests:
+\begin{itemize}
+    \item for any variable $r_l$ satisfying $g\bot r\mid w$, $\tilde{z}_l$ is orthogonal to $r_l$: one can check if the sample covariance $\frac{1}{L}\sum_l\tilde{z}_l r_l$ is sufficiently close to 0
+    \item falsification tests are useful that 
+    \begin{itemize}
+        \item when $r_l$ is a lagged outcome or a proxy for $\epsilon_l$, one can use RI for placebo and covariate balance tests of A1 \ref{assump:borusyak2020non_assump1}
+        \item RI test will have power to reject false specifications of the shock assignment process (\ref{assump:borusyak2020non_assump2})
+    \end{itemize}
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
