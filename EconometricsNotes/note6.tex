@@ -2573,9 +2573,13 @@ The inference results can also be used to perform falsification tests:
     \end{itemize}
 \end{itemize}
 
-To minimize the asymptotic variance of the recentered IV, one can use the following instrument:
+To minimize the asymptotic variance of the recentered IV, one can use the following instrument\footnote{Such optimal instument may not be feasible in practice, but still provides guidance for constructing recentered instrument.}:
 \begin{equation*}
     z^* = \mathbb{E}\left[\epsilon\epsilon'\mid w\right]^{-1} \left(\mathbb{E}[x\mid g,w]-\mathbb{E}[x\mid w]\right)
+\end{equation*}
+This optimal instrument satisfies
+\begin{equation*}
+    z^* = \left(\mathrm{Var}\left[\epsilon\mid w\right]\right)^{-1}\left[ \left(  \mathbb{E}\left[x\mid g,w\right] - \mathbb{E}\left[x\mid w\right] \right) - \nu\rho \mathbb{E}\left[\epsilon\mid w\right]  \right]
 \end{equation*}
 
 \newpage
