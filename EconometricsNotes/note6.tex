@@ -2581,6 +2581,15 @@ This optimal instrument satisfies
 \begin{equation*}
     z^* = \left(\mathrm{Var}\left[\epsilon\mid w\right]\right)^{-1}\left[ \left(  \mathbb{E}\left[x\mid g,w\right] - \mathbb{E}\left[x\mid w\right] \right) - \nu\rho \mathbb{E}\left[\epsilon\mid w\right]  \right]
 \end{equation*}
+where 
+\begin{align*}
+    \rho &= \frac{ \mathbb{E}\left[\epsilon\mid w\right]' \Omega \tilde{z} }{\mathbb{E}\left[\epsilon\mid w\right]' \Omega^{-1} \mathbb{E}\left[\epsilon\mid w\right]} & \nu & = \frac{\mathbb{E}\left[\epsilon\mid w\right] \Omega^{-1} \mathbb{E}\left[\epsilon\mid w\right]}{ 1+ \mathbb{E}\left[\epsilon\mid w\right]'\Omega^{-1} \mathbb{E}\left[\epsilon\mid w\right]}
+\end{align*}
+$\rho \mathbb{E}\left[\epsilon\mid w\right]$ is the $\Omega^{-1}$-weighted projection of $\tilde{z}$ on $\mathbb{E}\left[\epsilon\mid w\right]$. This gives an intuitive 4-step description of $z^*$:
+\begin{itemize}
+    \item[1] take the best predictor of treatment given by the shocks and predetermined variables $\mathbb{E}\left[x\mid g,w\right]$ 
+    \item[2] 
+\end{itemize}
 
 \newpage
 \bibliographystyle{plainnat}
