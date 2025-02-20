@@ -2588,8 +2588,11 @@ where
 $\rho \mathbb{E}\left[\epsilon\mid w\right]$ is the $\Omega^{-1}$-weighted projection of $\tilde{z}$ on $\mathbb{E}\left[\epsilon\mid w\right]$. This gives an intuitive 4-step description of $z^*$:
 \begin{itemize}
     \item[1] take the best predictor of treatment given by the shocks and predetermined variables $\mathbb{E}\left[x\mid g,w\right]$ 
-    \item[2] 
+    \item[2] receter this predictor by $\mathbb{E}\left[x\mid w\right]$ to remove the potential OVB from non-random shock exposure, get $\tilde{z}$
+    \item[3] partially residualizes the recentered instrument on the predictable component of the residual $\mathbb{E}\left[x\mid w\right]$
+    \item[4] adjust for the residual variance $\Omega$, as in GLS.
 \end{itemize}
+where Step 2 and 3 are new to address the potential endogeneity of $w$.
 
 \newpage
 \bibliographystyle{plainnat}
